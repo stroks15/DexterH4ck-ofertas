@@ -1,30 +1,14 @@
-import requests
-import json
 import os
+import json
+import requests
 from datetime import datetime
+from scrapers.tiendas_mexico import buscar_todas
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-MIN_DESCUENTO = 40  # %
-MAX_DESCUENTO = 99  # %
-
-# Palabras clave o categorías a monitorear en Mercado Libre.
-# Agrega o quita las que quieras. Entre más genéricas, más resultados
-# revisa (pero también tarda más y es más fácil toparte con "ofertas"
-# falsas, como accesorios sueltos de un producto caro).
-KEYWORDS_ML = [
-    "iphone",
-    "laptop",
-    "television",
-    "smartphone",
-    "juguetes",
-    "consola videojuegos",
-    "tenis",
-    "smartwatch",
-    "bocina bluetooth",
-]
-
+MIN_DESCUENTO = 60
+MAX_DESCUENTO = 99
 CACHE_FILE = "vistos.json"
 
 
@@ -40,74 +24,52 @@ def guardar_vistos(vistos):
         json.dump(list(vistos), f)
 
 
-def enviar_telegram(mensaje):
+def enviar_telegram(texto):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
-        print("Falta configurar TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
+        print("Faltan secretos de Telegram")
         return
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": mensaje,
-        "parse_mode": "HTML",
-        "disable_web_page_preview": False,
-    }
-    r = requests.post(url, data=payload, timeout=15)
-    if r.status_code != 200:
-        raise RuntimeError(f"Error enviando a Telegram: HTTP {r.status_code} - {r.text}")
-    print("Aviso enviado correctamente a Telegram.")
+
+    requests.post(
+        f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
+        data={
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": texto,
+            "parse_mode": "HTML"
+        },
+        timeout=15
+    )
 
 
-def calcular_descuento(precio_original, precio_actual):
-    if not precio_original or precio_original <= precio_actual:
-        return 0
-    return round((1 - precio_actual / precio_original) * 100)
+def revisar_tiendas(vistos):
+    avisos = []
 
+    for item in buscar_todas():
+        clave = item["tienda"] + item["titulo"]
 
-def revisar_mercado_libre(vistos):
-    nuevos_avisos = []
-    for kw in KEYWORDS_ML:
-        url = "https://api.mercadolibre.com/sites/MLM/search"
-        params = {"q": kw, "limit": 50}
-        try:
-            resp = requests.get(url, params=params, timeout=15)
-            resp.raise_for_status()
-            data = resp.json()
-        except Exception as e:
-            print(f"Error consultando ML para '{kw}':", e)
-            continue
+        if item["descuento"] >= MIN_DESCUENTO and clave not in vistos:
+            mensaje = (
+                f"🔥 <b>{item['descuento']}% DESCUENTO</b>\n\n"
+                f"🏪 {item['tienda']}\n"
+                f"{item['titulo']}\n\n"
+                f"Antes: ${item['precio_anterior']:,} MXN\n"
+                f"Ahora: ${item['precio_actual']:,} MXN\n\n"
+                f"{item['url']}"
+            )
+            avisos.append(mensaje)
+            vistos.add(clave)
 
-        for item in data.get("results", []):
-            item_id = item.get("id")
-            precio_actual = item.get("price")
-            precio_original = item.get("original_price")
-
-            descuento = calcular_descuento(precio_original, precio_actual)
-
-            if MIN_DESCUENTO <= descuento <= MAX_DESCUENTO and item_id not in vistos:
-                titulo = item.get("title")
-                link = item.get("permalink")
-                mensaje = (
-                    f"🔥 <b>{descuento}% de descuento</b> en Mercado Libre\n\n"
-                    f"{titulo}\n"
-                    f"Antes: ${precio_original:,.0f} MXN\n"
-                    f"Ahora: ${precio_actual:,.0f} MXN\n\n"
-                    f"{link}"
-                )
-                nuevos_avisos.append(mensaje)
-                vistos.add(item_id)
-
-    return nuevos_avisos
+    return avisos
 
 
 def main():
     vistos = cargar_vistos()
-    avisos = revisar_mercado_libre(vistos)
+    avisos = revisar_tiendas(vistos)
 
     for aviso in avisos:
         enviar_telegram(aviso)
 
     guardar_vistos(vistos)
-    print(f"[{datetime.now()}] Revisión completa. {len(avisos)} avisos enviados.")
+    print(datetime.now(), len(avisos), "ofertas enviadas")
 
 
 if __name__ == "__main__":
