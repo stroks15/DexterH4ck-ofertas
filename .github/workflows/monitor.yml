@@ -1,8 +1,6 @@
 name: Monitor de descuentos
 
 on:
-  push:
-    branches: ["main"]
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
@@ -16,7 +14,6 @@ concurrency:
 
 jobs:
   revisar:
-    if: github.event_name != 'push' || github.event.head_commit.message == 'PRUEBA BOT TELEGRAM'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
