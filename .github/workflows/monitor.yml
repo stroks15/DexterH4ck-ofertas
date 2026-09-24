@@ -81,9 +81,12 @@ jobs:
               exit 0
             fi
 
-            echo "Push/rebase falló; reintentando ($intento/3)..."
-            git rebase --abort 2>/dev/null || true
+            echo "Push falló; sincronizando con origin/main ($intento/3)..."
             git fetch origin main
+            git rebase origin/main || {
+              git rebase --abort 2>/dev/null || true
+              echo "::warning::No se pudo hacer rebase; se reintentará."
+            }
             sleep 2
           done
 
