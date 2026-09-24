@@ -63,8 +63,8 @@ def revisar_tiendas(vistos):
             f"🔥 <b>{descuento}% DESCUENTO</b>\n\n"
             f"🏪 {item['tienda']}\n"
             f"{item['titulo']}\n\n"
-            f"Antes: $\{item['precio_anterior']:,} MXN\n"
-            f"Ahora: $\{item['precio_actual']:,} MXN\n\n"
+            f"Antes: ${item['precio_anterior']:,} MXN\n"
+            f"Ahora: ${item['precio_actual']:,} MXN\n\n"
             f"{item['url']}"
         )
         avisos.append((clave, mensaje))
