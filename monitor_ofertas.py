@@ -51,7 +51,8 @@ def enviar_telegram(mensaje):
     }
     r = requests.post(url, data=payload, timeout=15)
     if r.status_code != 200:
-        print("Error enviando a Telegram:", r.text)
+        raise RuntimeError(f"Error enviando a Telegram: HTTP {r.status_code} - {r.text}")
+    print("Aviso enviado correctamente a Telegram.")
 
 
 def calcular_descuento(precio_original, precio_actual):
