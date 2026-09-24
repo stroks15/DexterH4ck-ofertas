@@ -1,1 +1,35 @@
-bmFtZTogTW9uaXRvciBkZSBkZXNjdWVudG9zCgpvbjoKICBzY2hlZHVsZToKICAgIC0gY3JvbjogIiovMTUgKiAqICogKiIKICB3b3JrZmxvd19kaXNwYXRjaDoKCmpvYnM6CiAgcmV2aXNhcjoKICAgIHJ1bnMtb246IHVidW50dS1sYXRlc3QKICAgIHBlcm1pc3Npb25zOgogICAgICBjb250ZW50czogd3JpdGUKICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAAQ==
+name: Monitor de descuentos
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar monitor
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python monitor_ofertas.py
+
+      - name: Guardar historial de artículos ya avisados
+        run: |
+          git config user.name "bot-ofertas"
+          git config user.email "bot@ofertas.local"
+          git add vistos.json
+          git diff --staged --quiet || git commit -m "Actualiza vistos.json"
+          git push
