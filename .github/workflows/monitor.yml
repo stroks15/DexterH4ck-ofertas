@@ -16,9 +16,12 @@ jobs:
   revisar:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -27,7 +30,9 @@ jobs:
           cache: pip
 
       - name: Instalar dependencias
-        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Verificar secretos de Telegram
         env:
@@ -44,13 +49,39 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python monitor_ofertas.py
 
-      - name: Guardar historial de artículos avisados
+      - name: Guardar historial sin perder cambios remotos
+        shell: bash
         run: |
-          if [ -f vistos.json ]; then
-            git config user.name "bot-ofertas"
-            git config user.email "bot-ofertas@users.noreply.github.com"
-            git add vistos.json
-            git diff --cached --quiet || git commit -m "Actualiza historial de ofertas"
-            git pull --rebase origin main
-            git push origin main
+          set -euo pipefail
+
+          if [ ! -f vistos.json ]; then
+            echo "No existe vistos.json; no hay historial que guardar."
+            exit 0
           fi
+
+          git config user.name "bot-ofertas"
+          git config user.email "bot-ofertas@users.noreply.github.com"
+
+          git add vistos.json
+
+          if git diff --cached --quiet; then
+            echo "El historial no cambió."
+            exit 0
+          fi
+
+          git commit -m "Actualiza historial de ofertas"
+
+          for intento in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Historial actualizado correctamente."
+              exit 0
+            fi
+
+            echo "Push/rebase falló; reintentando ($intento/3)..."
+            git rebase --abort 2>/dev/null || true
+            git fetch origin main
+            sleep 2
+          done
+
+          echo "::error::No se pudo actualizar vistos.json después de 3 intentos."
+          exit 1
