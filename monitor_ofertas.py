@@ -6,7 +6,7 @@ from datetime import datetime
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-MIN_DESCUENTO = 80  # %
+MIN_DESCUENTO = 40  # %
 MAX_DESCUENTO = 99  # %
 
 # Palabras clave o categorías a monitorear en Mercado Libre.
@@ -17,6 +17,8 @@ KEYWORDS_ML = [
     "iphone",
     "laptop",
     "television",
+    "smartphone",
+    "juguetes",
     "consola videojuegos",
     "tenis",
     "smartwatch",
