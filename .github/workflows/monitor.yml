@@ -1,94 +1,73 @@
 name: Monitor de descuentos
-
 on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: monitor-ofertas
   cancel-in-progress: false
-
 jobs:
   revisar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-
+    timeout-minutes: 15
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+          clean: true
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
-
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
       - name: Verificar secretos de Telegram
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_TOKEN: \${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: \${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           test -n "$TELEGRAM_TOKEN" || { echo "::error::Falta el secret TELEGRAM_TOKEN"; exit 1; }
           test -n "$TELEGRAM_CHAT_ID" || { echo "::error::Falta el secret TELEGRAM_CHAT_ID"; exit 1; }
           echo "Secretos de Telegram detectados correctamente."
-
       - name: Ejecutar monitor
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_TOKEN: \${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: \${{ secrets.TELEGRAM_CHAT_ID }}
         run: python monitor_ofertas.py
-
-      - name: Guardar historial sin perder cambios remotos
+      - name: Guardar historial sin rebase sobre cambios sin preparar
         shell: bash
         run: |
           set -euo pipefail
-
-          if [ ! -f vistos.json ]; then
-            echo "No existe vistos.json; no hay historial que guardar."
+          if [ ! -f historial_ofertas.json ]; then
+            echo "No se generó historial_ofertas.json; no hay cambios que guardar."
             exit 0
           fi
-
           git config user.name "bot-ofertas"
           git config user.email "bot-ofertas@users.noreply.github.com"
-
-          # Sincroniza antes de crear el commit para evitar non-fast-forward.
-          git fetch origin main
-          git rebase origin/main
-
-          git add vistos.json
-
+          git add historial_ofertas.json
           if git diff --cached --quiet; then
             echo "El historial no cambió."
             exit 0
           fi
-
           git commit -m "Actualiza historial de ofertas"
-
           for intento in 1 2 3; do
-            if git push origin HEAD:main; then
-              echo "Historial actualizado correctamente."
-              exit 0
-            fi
-
-            echo "Push falló; sincronizando con origin/main ($intento/3)..."
             git fetch origin main
-            git rebase origin/main || {
-              git rebase --abort 2>/dev/null || true
-              echo "::warning::No se pudo hacer rebase; se reintentará."
-            }
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                echo "Historial actualizado correctamente."
+                exit 0
+              fi
+            else
+              echo "::warning::Rebase falló en intento $intento; abortando rebase."
+              git rebase --abort || true
+            fi
             sleep 2
           done
-
-          echo "::error::No se pudo actualizar vistos.json después de 3 intentos."
+          echo "::error::No se pudo actualizar historial_ofertas.json después de 3 intentos."
           exit 1
