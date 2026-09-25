@@ -541,11 +541,11 @@
   },
   "c8e9a51b3a7eacde89a449ed1c5ae5fa406196d82a3af379db83a86105a825cb": {
     "tienda": "Soriana",
-    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito Pza(s) Agregar Agregar Refrigerador Top Mount Mabe RME360FGMRM0 No Frost 14 pies cúbicos $11,",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito Pza(s) Agregar Agregar Refrigerador Top Mount Mabe RME360FGMRM0 No Frost 14 pies cúbicos $10,",
     "url": "https://www.soriana.com/refrigerador-top-mount-mabe-rme360fgmrm0-no-frost-14-pies-cubicos/11735928.html",
-    "precio_actual": 11490.0,
+    "precio_actual": 10690.0,
     "precio_maximo": 15285.0,
-    "ultima_actualizacion": "2026-09-25T03:10:08.277520+00:00",
+    "ultima_actualizacion": "2026-09-25T04:05:37.800999+00:00",
     "precio_alertado": null
   },
   "684da36fae515931fb5dccd8119e369808dbb7c90af28d5b0e5e9de13f8a5ab4": {
@@ -835,5 +835,224 @@
     "precio_maximo": 2199.0,
     "ultima_actualizacion": "2026-09-25T03:29:56.568698+00:00",
     "precio_alertado": null
+  },
+  "__meta__": {
+    "rearmado_alertas_2026_09_25": true
+  },
+  "88d5c95b0f95f678058986e0c8115d76d0bb8eb17aea56810381054f14bef077": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Refrigerador Top Mount Mabe RMS510IVMRM0 No Frost 19 pies cúbicos $8,6",
+    "url": "https://www.soriana.com/refrigerador-top-mount-mabe-rms510ivmrm0-no-frost-19-pies-cubicos/11740291.html",
+    "precio_actual": 8690.0,
+    "precio_maximo": 12490.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801034+00:00",
+    "precio_alertado": null
+  },
+  "890a7a035934942c6e6097de3e92a4722992f8225545630923cdf54824519b7e": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito Pza(s) Agregar Agregar Refrigerador Bottom Mount LG Inverter 17 Pies Cúbicos GB45SPP $16,490.",
+    "url": "https://www.soriana.com/refrigerador-bottom-mount-lg-inverter-17-pies-cubicos-gb45spp/11926978.html",
+    "precio_actual": 16490.0,
+    "precio_maximo": 17999.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801044+00:00",
+    "precio_alertado": null
+  },
+  "2c241a0794fe509e7f028bbfa2b775d7a23436cd589f691e03f65cb91739e4e8": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Refrigerador Top Mount LG GT24BS No Frost 24 pies cúbicos $15,490.00 $",
+    "url": "https://www.soriana.com/refrigerador-top-mount-lg-gt24bs-no-frost-24-pies-cubicos/11798338.html",
+    "precio_actual": 15490.0,
+    "precio_maximo": 23999.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801049+00:00",
+    "precio_alertado": null
+  },
+  "1ebaa30aeb7de4eed298631b7c62f2f735205bf9a919713747580e32d2f11e70": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Aspiradora Robot Klin Höm $990.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar con 'FALABELLA'",
+    "url": "https://www.soriana.com/aspiradora-robot-klin-h%C3%B6m/11678618.html",
+    "precio_actual": 990.0,
+    "precio_maximo": 990.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801140+00:00",
+    "precio_alertado": 990.0
+  },
+  "45a29017fa251292bf02edb95a067ded08b9463d6dc7b1bb832f4ccceaf51ea4": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Xiaomi Redmi Buds 3 Negro $2,999.00 Puntos 'dobles' al pagar con 'FA",
+    "url": "https://www.soriana.com/audifonos-xiaomi-redmi-buds-3-negro/11663050.html",
+    "precio_actual": 2999.0,
+    "precio_maximo": 2999.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801167+00:00",
+    "precio_alertado": 2999.0
+  },
+  "1c0749ce3efb10c2090308164c3bf17d1c501dea19067730f05aabaa1b8e8ecd": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Barra de Sonido FOL FS-M235 Recargable 3000mAh $1,390.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al",
+    "url": "https://www.soriana.com/barra-de-sonido-fol-fs-m235-recargable-3000mah/11690226.html",
+    "precio_actual": 1390.0,
+    "precio_maximo": 1390.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801177+00:00",
+    "precio_alertado": 1390.0
+  },
+  "b2ebc4d3b3f34b363484faef0d6be664cdb7d250457372b4614785b22e0cf5e8": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Samsung Galaxy Buds2 Pro Violeta $4,599.00 Puntos 'dobles' al pagar",
+    "url": "https://www.soriana.com/audifonos-samsung-galaxy-buds2-pro-violeta/11669028.html",
+    "precio_actual": 4599.0,
+    "precio_maximo": 4599.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801186+00:00",
+    "precio_alertado": 4599.0
+  },
+  "0e05a16187baa9985806e0c96b7031800f9c40a5a93005b0a0f403b053001d83": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Samsung Galaxy Buds Live Negro $3,499.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar",
+    "url": "https://www.soriana.com/audifonos-samsung-galaxy-buds-live-negro/11650638.html",
+    "precio_actual": 3499.0,
+    "precio_maximo": 3499.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801194+00:00",
+    "precio_alertado": 3499.0
+  },
+  "f432abbdde1bfad2521ae9e7e9f26acaadcda1a20d5c17ff985e3c4dd9421408": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Xiaomi Redmi Buds 3 Pro Negro $1,699.00 Puntos 'dobles' al pagar con",
+    "url": "https://www.soriana.com/audifonos-xiaomi-redmi-buds-3-pro-negro/11663048.html",
+    "precio_actual": 1699.0,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801202+00:00",
+    "precio_alertado": 1699.0
+  },
+  "f45a106860dc0e86e2bea74523f5609b8b3b458a22f81d29a332153e79a4f8fe": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Purificador de Aire Xiaomi Mi Air Purifer 3H $4,999.00 Puntos 'dobles' al pagar con 'FALABELLA'",
+    "url": "https://www.soriana.com/purificador-de-aire-xiaomi-mi-air-purifer-3h/11663028.html",
+    "precio_actual": 4999.0,
+    "precio_maximo": 4999.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801209+00:00",
+    "precio_alertado": 4999.0
+  },
+  "bca2729e116f8a081df094579c53f5b5d797df2425847e394e011dfd38c709d2": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Deportivos JBL Endurance Peak Negro $3,299.00 Puntos 'dobles' al pag",
+    "url": "https://www.soriana.com/audifonos-deportivos-jbl-endurance-peak-negro/11570929.html",
+    "precio_actual": 3299.0,
+    "precio_maximo": 3299.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801217+00:00",
+    "precio_alertado": 3299.0
+  },
+  "f087c764c11ab09486755b55f53ca884f91930880839339c444180b1624728ec": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos In-Ear Xiaomi Mi Basic Negro $169.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar con",
+    "url": "https://www.soriana.com/audifonos-in-ear-xiaomi-mi-basic-negro/11663025.html",
+    "precio_actual": 169.0,
+    "precio_maximo": 169.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801224+00:00",
+    "precio_alertado": 169.0
+  },
+  "3d3bbb1c2222f4feab9841950de177a416f6aa576cc97ef3067bab9f4b82b8ad": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Samsung Galaxy Buds2 Pro Negro $4,599.00 Puntos 'dobles' al pagar co",
+    "url": "https://www.soriana.com/audifonos-samsung-galaxy-buds2-pro-negro/11669027.html",
+    "precio_actual": 4599.0,
+    "precio_maximo": 4599.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801231+00:00",
+    "precio_alertado": 4599.0
+  },
+  "61b28e4627bab64fd1b912fe67b847531b1743f5efb877e353430a5f984652cd": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Samsung Galaxy Buds Live Bronce $3,499.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al paga",
+    "url": "https://www.soriana.com/audifonos-samsung-galaxy-buds-live-bronce/11650639.html",
+    "precio_actual": 3499.0,
+    "precio_maximo": 3499.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801238+00:00",
+    "precio_alertado": 3499.0
+  },
+  "e34bbc44ba3521b3fbee438e64aca0d28f633721fde7be6460a50aec610a50ae": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Barra de Sonido TCL TS6110 2.1CH 240W Negro $4,590.00 Puntos 'dobles' al pagar",
+    "url": "https://www.soriana.com/barra-de-sonido-tcl-ts6110-2.1ch-240w-negro/11694663.html",
+    "precio_actual": 4590.0,
+    "precio_maximo": 4590.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801245+00:00",
+    "precio_alertado": 4590.0
+  },
+  "7091bf8549f277deade4fcbdab7466578a8e2bdad9f86b6f4f5e9401ce91b2e6": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Wafflera Oster Antiadhetente 8 Pulg CKSTWF2000 $799.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al p",
+    "url": "https://www.soriana.com/wafflera-oster-antiadhetente-8-pulg-ckstwf2000/11741041.html",
+    "precio_actual": 799.0,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801252+00:00",
+    "precio_alertado": 799.0
+  },
+  "4e9085bddc5d24830636585cd60f984d26ac1828d52a95e42f6b74f3d8c60e98": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Tostador Retro Daewoo Breakfast 2 Rebanadas $899.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al paga",
+    "url": "https://www.soriana.com/tostador-retro-daewoo-breakfast-2-rebanadas/11736358.html",
+    "precio_actual": 899.0,
+    "precio_maximo": 899.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801259+00:00",
+    "precio_alertado": 899.0
+  },
+  "f3eb9ad179eb36ebe393b3395028b92d39c4ad22ebe4b3128eb261339a601d6a": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agregar Agregar Máquina Palomera Collezioni CZ-PC125MX 12Tz Roja $590.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar con 'FALABE",
+    "url": "https://www.soriana.com/maquina-palomera-collezioni-cz-pc125mx-12tz-roja/11662699.html",
+    "precio_actual": 590.0,
+    "precio_maximo": 590.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801266+00:00",
+    "precio_alertado": 590.0
+  },
+  "75d81cdde81a0b1320e30599de9f85190b859063ef45e8f5351d2eef7a0c343f": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Inalámbricos Samsung Galaxy Buds Live Titanio $3,499.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'd",
+    "url": "https://www.soriana.com/audifonos-inalambricos-samsung-galaxy-buds-live-titanio/11650640.html",
+    "precio_actual": 3499.0,
+    "precio_maximo": 3499.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801273+00:00",
+    "precio_alertado": 3499.0
+  },
+  "6f6eb512c3e8defb7d6d4c6d87523bac22d6912eb0a62b1651cf08729cc5e598": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Control Inalámbrico Sony DualSense Midnight Negro $1,690.00 Puntos 'dobles' al",
+    "url": "https://www.soriana.com/control-inalambrico-sony-dualsense-midnight-negro/11631961.html",
+    "precio_actual": 1690.0,
+    "precio_maximo": 1690.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801280+00:00",
+    "precio_alertado": 1690.0
+  },
+  "6b47d29b64f0e00e5879780ef7329d73a1d641cb6d67e4096414bdc8ec4a85e4": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Cafetera Daewoo DCM-1897 10 tazas Beige $1,290.00 Puntos 'dobles' al pagar con 'FALABELLA' Punto",
+    "url": "https://www.soriana.com/cafetera-daewoo-dcm-1897-10-tazas-beige/11736343.html",
+    "precio_actual": 1290.0,
+    "precio_maximo": 1290.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801286+00:00",
+    "precio_alertado": 1290.0
+  },
+  "e13f9b0bf25666b09febed0e9839e73914cc1c587941f26fdac7f7972a9d9123": {
+    "tienda": "Soriana",
+    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Inalámbricos Xiaomi Redmi Buds 3T Pro Negro $3,999.00 Puntos 'dobles",
+    "url": "https://www.soriana.com/audifonos-inalambricos-xiaomi-redmi-buds-3t-pro-negro/11663052.html",
+    "precio_actual": 3999.0,
+    "precio_maximo": 3999.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801293+00:00",
+    "precio_alertado": 3999.0
+  },
+  "5d1a2fd6facd452ba770e42aa67e1550d4b8317a4583c397551e8470ca140149": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Fire TV Stick Lite Amazon Alexa Voice Remote $890.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pag",
+    "url": "https://www.soriana.com/fire-tv-stick-lite-amazon-alexa-voice-remote/11681784.html",
+    "precio_actual": 890.0,
+    "precio_maximo": 890.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801299+00:00",
+    "precio_alertado": 890.0
+  },
+  "6bc643995067ec4376078755edc737727036d591a0017bbf274fc81e7570808a": {
+    "tienda": "Soriana",
+    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Audífonos Samsung Galaxy Buds2 Negro $2,999.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar con",
+    "url": "https://www.soriana.com/audifonos-samsung-galaxy-buds2-negro/11650624.html",
+    "precio_actual": 2999.0,
+    "precio_maximo": 2999.0,
+    "ultima_actualizacion": "2026-09-25T04:05:37.801306+00:00",
+    "precio_alertado": 2999.0
   }
 }
