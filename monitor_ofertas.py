@@ -118,13 +118,22 @@ def revisar():
         avisos.append((clave, actual, mensaje))
 
     enviados = 0
+    errores_telegram = 0
     for clave, actual, mensaje in avisos:
-        enviar_telegram(mensaje)
-        historial[clave]["precio_alertado"] = actual
-        enviados += 1
+        try:
+            enviar_telegram(mensaje)
+            historial[clave]["precio_alertado"] = actual
+            enviados += 1
+        except Exception as error:
+            errores_telegram += 1
+            print(f"ERROR enviando a Telegram para {clave}: {error}")
 
     guardar_historial(historial)
-    print(f"[{datetime.now().isoformat()}] Candidatos: {len(vistos_en_esta_revision)} | Avisos enviados: {enviados}")
+    print(
+        f"[{datetime.now().isoformat()}] Candidatos: {len(vistos_en_esta_revision)} "
+        f"| Candidatos de alerta: {len(avisos)} | Avisos enviados: {enviados} "
+        f"| Errores Telegram: {errores_telegram}"
+    )
 
 if __name__ == "__main__":
     revisar()
