@@ -70,15 +70,23 @@ def revisar():
         if actual <= 0:
             continue
 
-        historial[clave] = {
-            "tienda": tienda,
-            "titulo": titulo,
-            "url": url,
-            "precio_actual": actual,
-            "precio_maximo": max(actual, referencia),
-            "ultima_actualizacion": datetime.now(timezone.utc).isoformat(),
-            "precio_alertado": anterior_hist.get("precio_alertado"),
-        }
+        registro = historial.get(clave)
+        if not registro or float(registro.get("precio_actual", 0)) != actual:
+            historial[clave] = {
+                "tienda": tienda,
+                "titulo": titulo,
+                "url": url,
+                "precio_actual": actual,
+                "precio_maximo": max(actual, referencia),
+                "ultima_actualizacion": datetime.now(timezone.utc).isoformat(),
+                "precio_alertado": anterior_hist.get("precio_alertado"),
+            }
+        else:
+            historial[clave]["precio_maximo"] = max(
+                float(historial[clave].get("precio_maximo", 0)),
+                actual,
+                referencia,
+            )
 
         if not (MIN_DESCUENTO <= dcto <= MAX_DESCUENTO):
             continue
