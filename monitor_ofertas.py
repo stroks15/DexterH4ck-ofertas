@@ -1,30 +1,14 @@
 import os
-import json
 import requests
 from datetime import datetime
 from scrapers.tiendas_mexico import buscar_todas
+from database import inicializar, debe_alertar, guardar
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
 MIN_DESCUENTO = 60
 MAX_DESCUENTO = 99
-CACHE_FILE = "vistos.json"
-
-
-def cargar_vistos():
-    if os.path.exists(CACHE_FILE):
-        with open(CACHE_FILE, "r", encoding="utf-8") as f:
-            try:
-                return set(json.load(f))
-            except (json.JSONDecodeError, TypeError):
-                return set()
-    return set()
-
-
-def guardar_vistos(vistos):
-    with open(CACHE_FILE, "w", encoding="utf-8") as f:
-        json.dump(sorted(vistos), f, ensure_ascii=False, indent=2)
 
 
 def enviar_telegram(texto):
@@ -41,48 +25,51 @@ def enviar_telegram(texto):
         },
         timeout=20,
     )
-    if not response.ok:
-        raise RuntimeError(
-            f"Telegram rechazó el mensaje: HTTP {response.status_code} - {response.text}"
-        )
+    response.raise_for_status()
 
 
-def revisar_tiendas(vistos):
+def revisar_tiendas():
     avisos = []
 
     for item in buscar_todas():
         descuento = int(item.get("descuento", 0))
+
         if not (MIN_DESCUENTO <= descuento <= MAX_DESCUENTO):
             continue
 
-        clave = f"{item.get('tienda', '')}|{item.get('titulo', '')}"
-        if clave in vistos:
+        tienda = item.get("tienda", "Desconocida")
+        titulo = item.get("titulo", "Sin titulo")
+        url = item.get("url", "")
+        precio = float(item.get("precio_actual", 0))
+
+        clave = f"{tienda}|{titulo}"
+
+        if not debe_alertar(clave, precio):
             continue
 
         mensaje = (
             f"🔥 <b>{descuento}% DESCUENTO</b>\n\n"
-            f"🏪 {item['tienda']}\n"
-            f"{item['titulo']}\n\n"
-            f"Antes: ${item['precio_anterior']:,} MXN\n"
-            f"Ahora: ${item['precio_actual']:,} MXN\n\n"
-            f"{item['url']}"
+            f"🏪 <b>{tienda}</b>\n"
+            f"{titulo}\n\n"
+            f"💰 Precio liquidación: ${precio:,.2f} MXN\n"
+            f"🔗 {url}"
         )
-        avisos.append((clave, mensaje))
+
+        avisos.append((clave, tienda, titulo, precio, url, mensaje))
 
     return avisos
 
 
 def main():
-    vistos = cargar_vistos()
-    avisos = revisar_tiendas(vistos)
+    inicializar()
+    avisos = revisar_tiendas()
     enviados = 0
 
-    for clave, aviso in avisos:
-        enviar_telegram(aviso)
-        vistos.add(clave)
+    for clave, tienda, titulo, precio, url, mensaje in avisos:
+        enviar_telegram(mensaje)
+        guardar(clave, tienda, titulo, precio, url)
         enviados += 1
 
-    guardar_vistos(vistos)
     print(f"[{datetime.now()}] Revisión completa. {enviados} avisos enviados.")
 
 
