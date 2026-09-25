@@ -100,8 +100,8 @@ def revisar():
             f"{etiqueta} <b>{dcto}% DE DESCUENTO</b>\n\n"
             f"🏪 <b>{html.escape(tienda)}</b>\n"
             f"🛒 {html.escape(titulo)}\n\n"
-            f"💰 Ahora: <b>\${actual:,.2f} MXN</b>\n"
-            f"💵 Antes/referencia: \${referencia:,.2f} MXN\n"
+            f"💰 Ahora: <b>${actual:,.2f} MXN</b>\n"
+            f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
             f"🔗 {html.escape(url)}"
         )
         avisos.append((clave, actual, mensaje))
