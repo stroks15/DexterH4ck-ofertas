@@ -799,5 +799,41 @@
     "precio_maximo": 2490.0,
     "ultima_actualizacion": "2026-09-25T03:10:08.277661+00:00",
     "precio_alertado": null
+  },
+  "43ece7277cd7520cc1facfeb854aad3651fd9e9e612d117ad19f43e40777d506": {
+    "tienda": "Amazon MX",
+    "titulo": "- 67% Promoción $399.00 $1,199.00",
+    "url": "https://www.amazon.com.mx/dp/B0DVJX97PM?pd_rd_w=i2EXJ&content-id=amzn1.sym.9e461a11-0d90-4a1f-abd4-517bf4a42fc4%3Aamzn1.sym.9e461a11-0d90-4a1f-abd4-517bf4a42fc4&pf_rd_p=9e461a11-0d90-4a1f-abd4-517bf4a42fc4&pf_rd_r=667V8BGC65MFNSQE5041&pd_rd_wg=8s905&pd_rd_r=7b403300-1c55-4b67-ae40-3c1b82a41366&pd_rd_i=B0DVJX97PM&ref_=febr_l_p_r0_img",
+    "precio_actual": 399.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-09-25T03:29:56.568623+00:00",
+    "precio_alertado": 399.0
+  },
+  "5eef2cfc7565d57932a057c1316ebd3be9920c87e4f038c0fc125d4a00984d53": {
+    "tienda": "Amazon MX",
+    "titulo": "$399.00 $1,199.00",
+    "url": "https://www.amazon.com.mx/s?k=smart+tv",
+    "precio_actual": 399.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-09-25T03:29:56.568678+00:00",
+    "precio_alertado": 399.0
+  },
+  "0289fc6362b0dcd3634721bd54352f726a65e23858112728ac2d8145e52805fb": {
+    "tienda": "Amazon MX",
+    "titulo": "- 53% Promoción $749.00 $1,599.00",
+    "url": "https://www.amazon.com.mx/dp/B0F7Z3CBVF?pd_rd_w=i2EXJ&content-id=amzn1.sym.9e461a11-0d90-4a1f-abd4-517bf4a42fc4%3Aamzn1.sym.9e461a11-0d90-4a1f-abd4-517bf4a42fc4&pf_rd_p=9e461a11-0d90-4a1f-abd4-517bf4a42fc4&pf_rd_r=667V8BGC65MFNSQE5041&pd_rd_wg=8s905&pd_rd_r=7b403300-1c55-4b67-ae40-3c1b82a41366&pd_rd_i=B0F7Z3CBVF&ref_=febr_l_p_r1_img",
+    "precio_actual": 749.0,
+    "precio_maximo": 1599.0,
+    "ultima_actualizacion": "2026-09-25T03:29:56.568691+00:00",
+    "precio_alertado": null
+  },
+  "21b2d52ea826dfcc88fadf8737d4f481a0635b16fa1ed9154b7dc84cd69ba664": {
+    "tienda": "Amazon MX",
+    "titulo": "- 45% Promoción $1,199.00 $2,199.00",
+    "url": "https://www.amazon.com.mx/dp/B0BXLZXP8D?pd_rd_w=i2EXJ&content-id=amzn1.sym.9e461a11-0d90-4a1f-abd4-517bf4a42fc4%3Aamzn1.sym.9e461a11-0d90-4a1f-abd4-517bf4a42fc4&pf_rd_p=9e461a11-0d90-4a1f-abd4-517bf4a42fc4&pf_rd_r=667V8BGC65MFNSQE5041&pd_rd_wg=8s905&pd_rd_r=7b403300-1c55-4b67-ae40-3c1b82a41366&pd_rd_i=B0BXLZXP8D&ref_=febr_l_p_r2_img",
+    "precio_actual": 1199.0,
+    "precio_maximo": 2199.0,
+    "ultima_actualizacion": "2026-09-25T03:29:56.568698+00:00",
+    "precio_alertado": null
   }
 }
