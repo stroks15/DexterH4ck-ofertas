@@ -7,7 +7,7 @@ from scrapers.tiendas_mexico import buscar_todas
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
-MIN_DESCUENTO = 80
+MIN_DESCUENTO = 60
 MAX_DESCUENTO = 99
 CACHE_FILE = "vistos.json"
 
