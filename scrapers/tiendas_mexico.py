@@ -58,7 +58,9 @@ def es_url_producto(url, base):
     if not parsed.netloc or parsed.netloc != base_host:
         return False
     u = url.lower()
-    if any(x in u for x in ("/search", "/buscar?", "/tienda?s=", "/ofertas")):
+    if any(x in u for x in ("/search?", "/buscar?", "/tienda?s=", "/listado/")):
+        return False
+    if u.endswith("/ofertas") or "/ofertas?" in u:
         return False
     return True
 
@@ -100,9 +102,11 @@ def extraer_json_ld(soup, tienda, base_url):
                 actual = anterior = None
             if not actual:
                 continue
+            if not es_url_producto(url, base_url):
+                continue
             if anterior and anterior <= actual:
                 anterior = None
-            resultados.append({"tienda": tienda,"titulo": titulo[:180],"precio_actual": actual,"precio_anterior": anterior,"descuento": calcular_descuento(anterior, actual) if anterior else 0,"url": url or base_url,"liquidacion": any(k in titulo.lower() for k in KEYWORDS_LIQUIDACION)})
+            resultados.append({"tienda": tienda,"titulo": titulo[:180],"precio_actual": actual,"precio_anterior": anterior,"descuento": calcular_descuento(anterior, actual) if anterior else 0,"url": url,"liquidacion": any(k in titulo.lower() for k in KEYWORDS_LIQUIDACION)})
     return resultados
 
 def extraer_tarjetas(soup, tienda, base_url):
@@ -146,9 +150,21 @@ def buscar_tienda(nombre, plantilla, session):
     for q in BUSQUEDAS:
         url = plantilla.format(q=quote_plus(q))
         try:
-            response = session.get(url, timeout=30)
-            if response.status_code >= 400:
-                print(f"{nombre}: HTTP {response.status_code} para {q}")
+            response = None
+            for intento in range(3):
+                response = session.get(url, timeout=20)
+                if response.status_code == 404:
+                    print(f"{nombre}: HTTP 404 para {q}; se omite esa búsqueda.")
+                    break
+                if response.status_code == 429 or response.status_code >= 500:
+                    espera = 2 ** intento
+                    print(f"{nombre}: HTTP {response.status_code} para {q}; reintento en {espera}s.")
+                    if intento < 2:
+                        time.sleep(espera)
+                        continue
+                break
+
+            if response is None or response.status_code >= 400:
                 continue
             soup = BeautifulSoup(response.text, "html.parser")
             candidatos = extraer_json_ld(soup, nombre, url)
