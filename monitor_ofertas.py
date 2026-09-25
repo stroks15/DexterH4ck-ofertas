@@ -13,19 +13,25 @@ MAX_DESCUENTO = 99
 
 def enviar_telegram(texto):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
-        raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
+        raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID en Secrets de GitHub")
 
-    response = requests.post(
-        f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
-        data={
-            "chat_id": TELEGRAM_CHAT_ID,
-            "text": texto,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": False,
-        },
-        timeout=20,
-    )
-    response.raise_for_status()
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+
+    payload = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": texto,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": False,
+    }
+
+    response = requests.post(url, data=payload, timeout=20)
+
+    if not response.ok:
+        print("Error Telegram:", response.status_code)
+        print(response.text)
+        return False
+
+    return True
 
 
 def revisar_tiendas():
@@ -66,9 +72,9 @@ def main():
     enviados = 0
 
     for clave, tienda, titulo, precio, url, mensaje in avisos:
-        enviar_telegram(mensaje)
-        guardar(clave, tienda, titulo, precio, url)
-        enviados += 1
+        if enviar_telegram(mensaje):
+            guardar(clave, tienda, titulo, precio, url)
+            enviados += 1
 
     print(f"[{datetime.now()}] Revisión completa. {enviados} avisos enviados.")
 
