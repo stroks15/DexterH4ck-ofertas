@@ -1,60 +1,60 @@
+import hashlib
+import re
 import requests
 from bs4 import BeautifulSoup
-import re
 
 BUSQUEDAS = ["iphone", "laptop", "smart tv", "playstation", "xbox", "tenis", "refrigerador"]
 
 TIENDAS = {
-    "Liverpool": "https://www.liverpool.com.mx/tienda?s={q}",
-    "Walmart": "https://www.walmart.com.mx/search?q={q}",
-    "Bodega Aurrera": "https://www.bodegaaurrera.com.mx/search?q={q}",
+    "Amazon MX": "https://www.amazon.com.mx/s?k={q}",
+    "Mercado Libre MX": "https://listado.mercadolibre.com.mx/{q}",
+    "Walmart MX": "https://www.walmart.com.mx/search?q={q}",
     "Chedraui": "https://www.chedraui.com.mx/search?q={q}",
 }
 
+KEYWORDS = ["remate", "liquidacion", "liquidación", "outlet", "caja abierta", "oferta"]
 
-def limpiar_precio(valor):
-    if not valor:
-        return None
-    numeros = re.sub(r"[^0-9]", "", valor)
-    return int(numeros) if numeros else None
+
+def precio(texto):
+    m = re.search(r"\$\s?([0-9,]+(?:\.[0-9]{2})?)", texto or "")
+    return float(m.group(1).replace(',', '')) if m else None
+
+
+def identificador(tienda, titulo):
+    return hashlib.sha256(f"{tienda}-{titulo}".encode()).hexdigest()
+
+
+def validar(tienda, titulo, actual):
+    texto = titulo.lower()
+    if tienda in ["Walmart MX", "Chedraui"]:
+        return bool(re.search(r"\.(01|02|03)$", str(actual)))
+    return any(k in texto for k in KEYWORDS)
 
 
 def buscar_tienda(nombre, url):
-    ofertas = []
-    headers = {"User-Agent": "Mozilla/5.0"}
-
+    resultados=[]
     try:
-        html = requests.get(url, headers=headers, timeout=20).text
-        soup = BeautifulSoup(html, "html.parser")
-
-        for item in soup.find_all(["article", "div"], limit=80):
-            texto = item.get_text(" ", strip=True)
-            precios = re.findall(r"\$[0-9,]+", texto)
-
-            if len(precios) >= 2:
-                actual = limpiar_precio(precios[0])
-                anterior = limpiar_precio(precios[1])
-
-                if actual and anterior and anterior > actual:
-                    descuento = round((1-(actual/anterior))*100)
-                    if descuento >= 60:
-                        ofertas.append({
-                            "tienda": nombre,
-                            "titulo": texto[:120],
-                            "precio_actual": actual,
-                            "precio_anterior": anterior,
-                            "descuento": descuento,
-                            "url": url
-                        })
+        r=requests.get(url,headers={"User-Agent":"Mozilla/5.0"},timeout=25)
+        soup=BeautifulSoup(r.text,"html.parser")
+        for bloque in soup.find_all(["article","div"],limit=120):
+            texto=bloque.get_text(" ",strip=True)
+            p=precio(texto)
+            if p and validar(nombre,texto,p):
+                resultados.append({
+                    "id": identificador(nombre,texto[:150]),
+                    "tienda": nombre,
+                    "titulo": texto[:150],
+                    "precio_actual": p,
+                    "url": url
+                })
     except Exception as e:
-        print(nombre, e)
-
-    return ofertas
+        print(nombre,e)
+    return resultados
 
 
 def buscar_todas():
-    resultados = []
-    for nombre, plantilla in TIENDAS.items():
+    salida=[]
+    for tienda,url in TIENDAS.items():
         for q in BUSQUEDAS:
-            resultados.extend(buscar_tienda(nombre, plantilla.format(q=q)))
-    return resultados
+            salida.extend(buscar_tienda(tienda,url.format(q=q)))
+    return salida
