@@ -29,16 +29,16 @@ jobs:
           pip install -r requirements.txt
       - name: Verificar secretos de Telegram
         env:
-          TELEGRAM_TOKEN: \${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: \${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           test -n "$TELEGRAM_TOKEN" || { echo "::error::Falta el secret TELEGRAM_TOKEN"; exit 1; }
           test -n "$TELEGRAM_CHAT_ID" || { echo "::error::Falta el secret TELEGRAM_CHAT_ID"; exit 1; }
           echo "Secretos de Telegram detectados correctamente."
       - name: Ejecutar monitor
         env:
-          TELEGRAM_TOKEN: \${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: \${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python monitor_ofertas.py
       - name: Guardar historial sin rebase sobre cambios sin preparar
         shell: bash
