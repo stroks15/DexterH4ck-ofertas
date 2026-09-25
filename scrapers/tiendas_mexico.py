@@ -92,7 +92,7 @@ def extraer_json_ld(soup, tienda, base_url):
             if not isinstance(offers, dict):
                 offers = {}
             actual = offers.get("price") or offers.get("lowPrice")
-            anterior = offers.get("highPrice")
+            anterior = None
             try:
                 actual = float(str(actual).replace(",", "")) if actual else None
                 anterior = float(str(anterior).replace(",", "")) if anterior else None
