@@ -21,8 +21,33 @@ def inicializar():
         )
         """)
 
+        # Migración para bases creadas con versiones anteriores
+        columnas = [
+            row[1] for row in conn.execute("PRAGMA table_info(productos)").fetchall()
+        ]
+
+        if "clave" not in columnas:
+            conn.execute("ALTER TABLE productos ADD COLUMN clave TEXT")
+
+        if "precio" not in columnas:
+            conn.execute("ALTER TABLE productos ADD COLUMN precio REAL")
+
+        if "tienda" not in columnas:
+            conn.execute("ALTER TABLE productos ADD COLUMN tienda TEXT")
+
+        if "titulo" not in columnas:
+            conn.execute("ALTER TABLE productos ADD COLUMN titulo TEXT")
+
+        if "url" not in columnas:
+            conn.execute("ALTER TABLE productos ADD COLUMN url TEXT")
+
+        if "fecha" not in columnas:
+            conn.execute("ALTER TABLE productos ADD COLUMN fecha TEXT")
+
 
 def debe_alertar(clave, precio_actual):
+    inicializar()
+
     with conectar() as conn:
         fila = conn.execute(
             "SELECT precio FROM productos WHERE clave=?",
@@ -36,6 +61,8 @@ def debe_alertar(clave, precio_actual):
 
 
 def guardar(clave, tienda, titulo, precio, url):
+    inicializar()
+
     with conectar() as conn:
         conn.execute(
             """INSERT OR REPLACE INTO productos
