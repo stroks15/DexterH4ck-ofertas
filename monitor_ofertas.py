@@ -53,6 +53,16 @@ def revisar():
     avisos = []
     vistos_en_esta_revision = set()
 
+    # Migración única: permite volver a enviar las ofertas que ya estaban
+    # marcadas como alertadas antes de esta corrección. Después de la primera
+    # ejecución se guarda una marca para que no se repitan en cada 15 minutos.
+    meta = historial.get("__meta__", {})
+    rearmar_alertas = not bool(meta.get("rearmado_alertas_2026_09_25"))
+    if rearmar_alertas:
+        meta["rearmado_alertas_2026_09_25"] = True
+        historial["__meta__"] = meta
+        print("Rearmado único de alertas activado: se volverán a enviar las ofertas vigentes.")
+
     for item in buscar_todas():
         titulo = str(item.get("titulo", "")).strip()
         url = str(item.get("url", "")).strip()
@@ -89,7 +99,7 @@ def revisar():
             )
 
         ultimo_alertado = anterior_hist.get("precio_alertado")
-        if ultimo_alertado is not None and actual >= float(ultimo_alertado):
+        if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado):
             continue
 
         es_descuento_real = MIN_DESCUENTO <= dcto <= MAX_DESCUENTO
