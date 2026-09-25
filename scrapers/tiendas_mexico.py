@@ -2,11 +2,11 @@ import hashlib
 import json
 import re
 import time
-from urllib.parse import quote_plus, urljoin
+from urllib.parse import quote_plus, urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-BUSQUEDAS = ["iphone","laptop","smart tv","playstation","xbox","nintendo switch","audifonos","smartwatch","tenis","refrigerador","lavadora","pantalla","celular"]
+BUSQUEDAS = ["iphone","laptop","smart tv","playstation","xbox","nintendo switch","audifonos","smartwatch","tenis","refrigerador","lavadora","pantalla","celular","liquidacion","liquidación","remate","outlet"]
 
 TIENDAS = {
     "Walmart MX": "https://www.walmart.com.mx/search?q={q}",
@@ -53,10 +53,14 @@ def producto_id(tienda, titulo, url):
 def es_url_producto(url, base):
     if not url:
         return False
+    parsed = urlparse(url)
+    base_host = urlparse(base).netloc
+    if not parsed.netloc or parsed.netloc != base_host:
+        return False
     u = url.lower()
     if any(x in u for x in ("/search", "/buscar?", "/tienda?s=", "/ofertas")):
         return False
-    return url.startswith(base) or url == base
+    return True
 
 def recorrer_json(obj):
     if isinstance(obj, dict):
