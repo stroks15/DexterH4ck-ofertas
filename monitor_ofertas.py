@@ -88,20 +88,31 @@ def revisar():
                 referencia,
             )
 
-        if not (MIN_DESCUENTO <= dcto <= MAX_DESCUENTO):
-            continue
-
         ultimo_alertado = anterior_hist.get("precio_alertado")
         if ultimo_alertado is not None and actual >= float(ultimo_alertado):
             continue
 
-        etiqueta = "🔥 LIQUIDACIÓN" if item.get("liquidacion") else "🚨 OFERTA"
+        es_descuento_real = MIN_DESCUENTO <= dcto <= MAX_DESCUENTO
+        es_liquidacion_sin_referencia = bool(item.get("liquidacion")) and referencia <= actual
+        if not (es_descuento_real or es_liquidacion_sin_referencia):
+            continue
+
+        if es_descuento_real:
+            etiqueta = "🔥 LIQUIDACIÓN" if item.get("liquidacion") else "🚨 OFERTA"
+            bloque_descuento = f"<b>{dcto}% DE DESCUENTO</b>\n"
+            referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
+        else:
+            etiqueta = "🔥 LIQUIDACIÓN DETECTADA"
+            bloque_descuento = "<b>Precio de liquidación detectado</b>\n"
+            referencia_texto = ""
+
         mensaje = (
-            f"{etiqueta} <b>{dcto}% DE DESCUENTO</b>\n\n"
+            f"{etiqueta}\n"
+            f"{bloque_descuento}\n"
             f"🏪 <b>{html.escape(tienda)}</b>\n"
             f"🛒 {html.escape(titulo)}\n\n"
             f"💰 Ahora: <b>${actual:,.2f} MXN</b>\n"
-            f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
+            f"{referencia_texto}"
             f"🔗 {html.escape(url)}"
         )
         avisos.append((clave, actual, mensaje))
