@@ -73,7 +73,7 @@ def recorrer_json(obj):
         for valor in obj:
             yield from recorrer_json(valor)
 
-def extraer_json_ld(soup, tienda, base_url):
+def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
     resultados = []
     for script in soup.find_all("script", type="application/ld+json"):
         try:
@@ -109,7 +109,7 @@ def extraer_json_ld(soup, tienda, base_url):
             resultados.append({"tienda": tienda,"titulo": titulo[:180],"precio_actual": actual,"precio_anterior": anterior,"descuento": calcular_descuento(anterior, actual) if anterior else 0,"url": url,"liquidacion": any(k in titulo.lower() for k in KEYWORDS_LIQUIDACION)})
     return resultados
 
-def extraer_tarjetas(soup, tienda, base_url):
+def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
     resultados = []
     selectores = ["article","[data-testid*='product']","[data-testid*='Product']","[class*='product-card']","[class*='ProductCard']","[class*='product-tile']","[class*='ProductTile']","li[class*='product']"]
     vistos_nodos = set()
@@ -136,7 +136,7 @@ def extraer_tarjetas(soup, tienda, base_url):
             actual = precios[0]
             anterior = next((p for p in precios[1:] if p > actual), None)
             dcto = calcular_descuento(anterior, actual) if anterior else 0
-            es_liq = any(k in texto.lower() for k in KEYWORDS_LIQUIDACION)
+            es_liq = liquidacion_contexto or any(k in texto.lower() for k in KEYWORDS_LIQUIDACION)
             if not anterior and not es_liq:
                 continue
             if not es_url_producto(url, base_url):
@@ -167,8 +167,9 @@ def buscar_tienda(nombre, plantilla, session):
             if response is None or response.status_code >= 400:
                 continue
             soup = BeautifulSoup(response.text, "html.parser")
-            candidatos = extraer_json_ld(soup, nombre, url)
-            candidatos.extend(extraer_tarjetas(soup, nombre, url))
+            liquidacion_contexto = any(k in q.lower() for k in KEYWORDS_LIQUIDACION)
+            candidatos = extraer_json_ld(soup, nombre, url, liquidacion_contexto)
+            candidatos.extend(extraer_tarjetas(soup, nombre, url, liquidacion_contexto))
             unicos = {}
             for item in candidatos:
                 actual = item.get("precio_actual") or 0
