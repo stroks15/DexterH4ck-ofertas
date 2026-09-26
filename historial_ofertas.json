@@ -775,11 +775,11 @@
   },
   "a10e401d0a9beec9c4d292897bd4dcba50064bb17ac0ea51ffb745d2b87ae549": {
     "tienda": "Soriana",
-    "titulo": "Cantidad en tu carrito PZA(s) Agregar Agregar Samsung Galaxy A17 6.7 Pulgadas 4GB 128GB Negro Desbloqueado $3,490.00 $4,490.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobl",
+    "titulo": "Cantidad en tu carrito PZA(s) Agregar Agregar Samsung Galaxy A17 6.7 Pulgadas 4GB 128GB Negro Desbloqueado $2,990.00 $4,490.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobl",
     "url": "https://www.soriana.com/samsung-galaxy-a17-6.7-pulgadas-4gb-128gb-negro-desbloqueado/11897525.html",
-    "precio_actual": 3490.0,
+    "precio_actual": 2990.0,
     "precio_maximo": 4490.0,
-    "ultima_actualizacion": "2026-09-25T09:05:32.832870+00:00",
+    "ultima_actualizacion": "2026-09-26T00:31:41.143037+00:00",
     "precio_alertado": null
   },
   "8901e105c66c0b5704f763b1a6cf7459b1720190b779d36cfe756b1fd13873fe": {
@@ -841,11 +841,11 @@
   },
   "88d5c95b0f95f678058986e0c8115d76d0bb8eb17aea56810381054f14bef077": {
     "tienda": "Soriana",
-    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Refrigerador Top Mount Mabe RMS510IVMRM0 No Frost 19 pies cúbicos $12,",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Refrigerador Top Mount Mabe RMS510IVMRM0 No Frost 19 pies cúbicos $17,",
     "url": "https://www.soriana.com/refrigerador-top-mount-mabe-rms510ivmrm0-no-frost-19-pies-cubicos/11740291.html",
-    "precio_actual": 12490.0,
-    "precio_maximo": 12490.0,
-    "ultima_actualizacion": "2026-09-25T18:56:26.104612+00:00",
+    "precio_actual": 17790.0,
+    "precio_maximo": 17790.0,
+    "ultima_actualizacion": "2026-09-26T00:31:41.143053+00:00",
     "precio_alertado": 12490.0
   },
   "890a7a035934942c6e6097de3e92a4722992f8225545630923cdf54824519b7e": {
@@ -1243,5 +1243,32 @@
     "precio_maximo": 6999.0,
     "ultima_actualizacion": "2026-09-25T18:56:26.104700+00:00",
     "precio_alertado": 6999.0
+  },
+  "9192a8ea54037b00fd5f3931c0ed289d7d75312c2d74f8bd82d9ee1a82bba872": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Lavadora Mabe LMA71214VBAB0 Carga Superior 21 kg 1 Tina $8,990.00 $13,",
+    "url": "https://www.soriana.com/lavadora-mabe-lma71214vbab0-carga-superior-21-kg-1-tina/11319912.html",
+    "precio_actual": 8990.0,
+    "precio_maximo": 13699.0,
+    "ultima_actualizacion": "2026-09-26T00:31:41.142942+00:00",
+    "precio_alertado": null
+  },
+  "358ee44e16dd8ae07c7d69ad426c72a4b9ab03a358d29278e7793ab87252b0eb": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Pantalla 50\" RCA UHD Google TV TC-LE50K-GO2401 $6,190.00 $7,290.00 Com",
+    "url": "https://www.soriana.com/pantalla-50-rca-uhd-google-tv-tc-le50k-go2401/11917673.html",
+    "precio_actual": 6190.0,
+    "precio_maximo": 7290.0,
+    "ultima_actualizacion": "2026-09-26T00:31:41.143017+00:00",
+    "precio_alertado": null
+  },
+  "3ca562cd38be5d53a555d5d27bf69406ba0dc8c6275dbe5ec34311d5e6b01936": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Pantalla Hisense 85 Pulgadas 4K LED VIDAA TV 85A65NV $19,990.00 $22,99",
+    "url": "https://www.soriana.com/pantalla-hisense-85-pulgadas-4k-led-vidaa-tv-85a65nv/11903628.html",
+    "precio_actual": 19990.0,
+    "precio_maximo": 22990.0,
+    "ultima_actualizacion": "2026-09-26T00:31:41.143024+00:00",
+    "precio_alertado": null
   }
 }
