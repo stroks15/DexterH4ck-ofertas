@@ -1594,5 +1594,59 @@
     "precio_maximo": 2199.0,
     "ultima_actualizacion": "2026-09-26T20:49:01.580770+00:00",
     "precio_alertado": null
+  },
+  "9dc3371c46133d09af95850949deb82a4efe6cd021bc3a77fa7bb31ea8132365": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick HD (modelo más reciente): Control remoto por voz Alexa que recibe alimentación a través de la televisión y se configura fácilmente 4.2 4.2 (1569) Promoción - 6",
+    "url": "https://www.amazon.com.mx/dp/B0DVJX97PM?pd_rd_w=Pdujg&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=W16GBPKB5Q3DE955TP9H&pd_rd_wg=j98Po&pd_rd_r=572f968e-e0f8-4e32-8412-df566ee2d65a&pd_rd_i=B0DVJX97PM&ref_=febr_c_p_r0_img",
+    "precio_actual": 399.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-09-27T01:41:00.300696+00:00",
+    "precio_alertado": 399.0
+  },
+  "ce139a088d3afba12016afa716068f5d9026d179ecae795ce1aec2f7fd577e0e": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick HD (modelo más reciente): Control remoto por voz Alexa que recibe alimentación a través de la televisión y se configura fácilmente",
+    "url": "https://www.amazon.com.mx/dp/B0DVJX97PM?pd_rd_w=Pdujg&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=W16GBPKB5Q3DE955TP9H&pd_rd_wg=j98Po&pd_rd_r=572f968e-e0f8-4e32-8412-df566ee2d65a&pd_rd_i=B0DVJX97PM&ref_=febr_c_p_r0_ttl",
+    "precio_actual": 399.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-09-27T01:41:00.300750+00:00",
+    "precio_alertado": 399.0
+  },
+  "5151cc59d5b1379135d1157d4f907a220aad6d312656b2d22fa6a45415694f0d": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K Plus (modelo más reciente), compatible con Wi-Fi 6, Dolby Vision/Atmos 4.7 4.7 (5248) Promoción - 53% $ 749 . 00 $ 749 . 00 Precio de lista: $ 1,599 . 00 $",
+    "url": "https://www.amazon.com.mx/dp/B0F7Z3CBVF?pd_rd_w=Pdujg&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=W16GBPKB5Q3DE955TP9H&pd_rd_wg=j98Po&pd_rd_r=572f968e-e0f8-4e32-8412-df566ee2d65a&pd_rd_i=B0F7Z3CBVF&ref_=febr_c_p_r1_img",
+    "precio_actual": 749.0,
+    "precio_maximo": 1599.0,
+    "ultima_actualizacion": "2026-09-27T01:41:00.300784+00:00",
+    "precio_alertado": null
+  },
+  "9deebb4a8b464e8e51386083ffe02758068dda6927c3eb4a2b62c229c08ef3b5": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K Plus (modelo más reciente), compatible con Wi-Fi 6, Dolby Vision/Atmos",
+    "url": "https://www.amazon.com.mx/dp/B0F7Z3CBVF?pd_rd_w=Pdujg&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=W16GBPKB5Q3DE955TP9H&pd_rd_wg=j98Po&pd_rd_r=572f968e-e0f8-4e32-8412-df566ee2d65a&pd_rd_i=B0F7Z3CBVF&ref_=febr_c_p_r1_ttl",
+    "precio_actual": 749.0,
+    "precio_maximo": 1599.0,
+    "ultima_actualizacion": "2026-09-27T01:41:00.300791+00:00",
+    "precio_alertado": null
+  },
+  "2c782a00fe06c7b9572801ee7276b5a62f86d9006c709898ccbb4ae402282af1": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K Max (modelo más reciente), compatible con Wi-Fi 6E, fondo ambiental 4.7 4.7 (4595) Promoción - 45% $ 1,199 . 00 $ 1,199 . 00 Precio de lista: $ 2,199 . 00 $",
+    "url": "https://www.amazon.com.mx/dp/B0BXLZXP8D?pd_rd_w=Pdujg&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=W16GBPKB5Q3DE955TP9H&pd_rd_wg=j98Po&pd_rd_r=572f968e-e0f8-4e32-8412-df566ee2d65a&pd_rd_i=B0BXLZXP8D&ref_=febr_c_p_r2_img",
+    "precio_actual": 1199.0,
+    "precio_maximo": 2199.0,
+    "ultima_actualizacion": "2026-09-27T01:41:00.300796+00:00",
+    "precio_alertado": null
+  },
+  "a01883f1f65ffa68872a6baf0ed9f56c2fd3cd51fe71461953a2abde03d0e2e2": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K Max (modelo más reciente), compatible con Wi-Fi 6E, fondo ambiental",
+    "url": "https://www.amazon.com.mx/dp/B0BXLZXP8D?pd_rd_w=Pdujg&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=W16GBPKB5Q3DE955TP9H&pd_rd_wg=j98Po&pd_rd_r=572f968e-e0f8-4e32-8412-df566ee2d65a&pd_rd_i=B0BXLZXP8D&ref_=febr_c_p_r2_ttl",
+    "precio_actual": 1199.0,
+    "precio_maximo": 2199.0,
+    "ultima_actualizacion": "2026-09-27T01:41:00.300801+00:00",
+    "precio_alertado": null
   }
 }
