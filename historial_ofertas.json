@@ -1828,5 +1828,32 @@
     "precio_maximo": 2199.0,
     "ultima_actualizacion": "2026-09-28T08:15:40.718283+00:00",
     "precio_alertado": null
+  },
+  "f28d3e3c590b5161c01e3476cb04696ffbfd31d4ba0464fb4c324d0d43136cad": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Lavadora 2 Tinas Koblenz LDM-22B 22 Kg Blanca $6,990.00 $8,790.00 Comp",
+    "url": "https://www.soriana.com/lavadora-2-tinas-koblenz-ldm-22b-22-kg-blanca/11881373.html",
+    "precio_actual": 6990.0,
+    "precio_maximo": 8790.0,
+    "ultima_actualizacion": "2026-09-28T16:49:13.997157+00:00",
+    "precio_alertado": null
+  },
+  "58659fba3e259e9f77df358c18347dfaafcb62b326693e7551fc67532ef5edaf": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Aplica cupón Cantidad en tu carrito Pza(s) Agregar Agregar Pantalla LG 50 Pulg 4K UHD Ai ThinQ 50UR7800PSB $6,990.00",
+    "url": "https://www.soriana.com/pantalla-lg-50-pulg-4k-uhd-ai-thinq-50ur7800psb/11718957.html",
+    "precio_actual": 6990.0,
+    "precio_maximo": 9990.0,
+    "ultima_actualizacion": "2026-09-28T16:49:13.997210+00:00",
+    "precio_alertado": null
+  },
+  "5dc77f07547f26d5687674d63dd28d91eea710c064347feeb0921ba3828b4a06": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Aplica cupón Cantidad en tu carrito PZA(s) Agregar Agregar Pantalla Vios 50 pulgadas Smart TV LED UHD VI-50T232 $5,2",
+    "url": "https://www.soriana.com/pantalla-vios-50-pulgadas-smart-tv-led-uhd-vi-50t232/11802214.html",
+    "precio_actual": 5290.0,
+    "precio_maximo": 7899.0,
+    "ultima_actualizacion": "2026-09-28T16:49:13.997223+00:00",
+    "precio_alertado": null
   }
 }
