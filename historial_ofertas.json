@@ -4603,7 +4603,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.858501+00:00",
-    "precio_alertado": null
+    "precio_alertado": 52.9
   },
   "47e89b04c6353d480f01ffac61dab6977b966779067ebea1fa67cf9731ea3f8e": {
     "tienda": "Soriana",
@@ -4616,7 +4616,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.859287+00:00",
-    "precio_alertado": null
+    "precio_alertado": 194.9
   },
   "d3f3dcb035cfc580dae54be43a0238adf1e65dd520e50a917897e9bac53f59d0": {
     "tienda": "Soriana",
@@ -4629,7 +4629,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.860103+00:00",
-    "precio_alertado": null
+    "precio_alertado": 119.9
   },
   "03c73f214b97c77a8c2d8af370a992533543d250199d20153dca2f8e07125aea": {
     "tienda": "Soriana",
@@ -4642,7 +4642,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.860911+00:00",
-    "precio_alertado": null
+    "precio_alertado": 22.5
   },
   "4e5d256c1580871321e68d375f9ae46fd894d1a86185213ca32a3fe806ba0c61": {
     "tienda": "Soriana",
@@ -4668,7 +4668,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.862205+00:00",
-    "precio_alertado": null
+    "precio_alertado": 8.5
   },
   "b77f18105b2b40d166bb3c762fd53af94f6002ae352f57fc8bc3f435966764e6": {
     "tienda": "Soriana",
@@ -4681,7 +4681,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.863007+00:00",
-    "precio_alertado": null
+    "precio_alertado": 239.0
   },
   "89ae6886ba8d8e3c787487d2054c545a8a5d20537dbeb898a65e5ca0726aa81a": {
     "tienda": "Soriana",
@@ -4694,7 +4694,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.863824+00:00",
-    "precio_alertado": null
+    "precio_alertado": 99.9
   },
   "c56afa8db92201bfb35c43de934d0af8a7f734bd2a4a645476c6fe86a38f62b5": {
     "tienda": "Soriana",
@@ -4707,7 +4707,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.864616+00:00",
-    "precio_alertado": null
+    "precio_alertado": 34.0
   },
   "5b72d8be762d14ab6fff2bb111196489fea4702829611ffcb9530846d2cfa5ed": {
     "tienda": "Soriana",
@@ -4720,7 +4720,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.865427+00:00",
-    "precio_alertado": null
+    "precio_alertado": 22.0
   },
   "62ae94b624457c7b41c0cdcac7ce16582594c7f2cba6b792bb885a68a1b08864": {
     "tienda": "Soriana",
@@ -5222,12 +5222,12 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.suburbia.com.mx/",
-    "precio_actual": 249.0,
-    "precio_maximo": 499.0,
-    "descuento": 50,
+    "precio_actual": 149.0,
+    "precio_maximo": 599.0,
+    "descuento": 75,
     "puntuacion": 50,
-    "ultima_actualizacion": "2026-09-29T18:09:37.728578+00:00",
-    "precio_alertado": 249.0
+    "ultima_actualizacion": "2026-09-29T20:03:14.226091+00:00",
+    "precio_alertado": 149.0
   },
   "23f4ecb010743e3ecc35266cd2b90d66e397149b6e6d1f8c18f26c9ffe527fc6": {
     "tienda": "Suburbia",
@@ -5430,11 +5430,11 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.suburbia.com.mx/",
-    "precio_actual": 249.0,
-    "precio_maximo": 349.0,
+    "precio_actual": 349.0,
+    "precio_maximo": 489.0,
     "descuento": 29,
     "puntuacion": 29,
-    "ultima_actualizacion": "2026-09-29T18:09:37.736142+00:00",
+    "ultima_actualizacion": "2026-09-29T20:03:14.241421+00:00",
     "precio_alertado": null
   },
   "498f450febef17ee5efedcaf6f21b182ec414da47d1bb9937efce9febdf2a138": {
@@ -5552,7 +5552,7 @@
     "descuento": 50,
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T18:09:37.740345+00:00",
-    "precio_alertado": null
+    "precio_alertado": 174.0
   },
   "11e3a958e180f839ae8098220256a25a5fed24439915e8652a0005bdc78caf75": {
     "tienda": "Suburbia",
@@ -5565,7 +5565,7 @@
     "descuento": 50,
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T18:09:37.740828+00:00",
-    "precio_alertado": null
+    "precio_alertado": 174.0
   },
   "77f0a1f9c9c2080098767a77ea35573f775aad9ccdbf389e156f977c4c0d6c8a": {
     "tienda": "Suburbia",
@@ -5708,7 +5708,7 @@
     "descuento": 73,
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T18:09:37.745957+00:00",
-    "precio_alertado": null
+    "precio_alertado": 134.0
   },
   "7270904c76ac79b510ce2718c5d84bfb51fc601e4ad70ef491b2973000627113": {
     "tienda": "Suburbia",
@@ -5721,7 +5721,7 @@
     "descuento": 73,
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T18:09:37.746422+00:00",
-    "precio_alertado": null
+    "precio_alertado": 134.0
   },
   "892bba3b0edb856c1549c9a9bc50a891c26c725282a69a10789b14cd9a6837fe": {
     "tienda": "Suburbia",
@@ -5747,19 +5747,97 @@
     "descuento": 50,
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T18:09:37.747367+00:00",
-    "precio_alertado": null
+    "precio_alertado": 350.0
   },
   "b6c478bb187b6ad4e07d78f391e2c70832ccabf466aca595cbda7888a703fe46": {
     "tienda": "Suburbia",
-    "titulo": "NON STOP",
+    "titulo": "WEEKEND",
     "marca": "",
     "categoria": "",
     "url": "https://www.suburbia.com.mx/tienda/home",
-    "precio_actual": 134.0,
-    "precio_maximo": 499.0,
-    "descuento": 73,
+    "precio_actual": 149.0,
+    "precio_maximo": 599.0,
+    "descuento": 75,
     "puntuacion": 50,
-    "ultima_actualizacion": "2026-09-29T18:09:37.747828+00:00",
+    "ultima_actualizacion": "2026-09-29T20:03:14.249755+00:00",
+    "precio_alertado": 149.0
+  },
+  "24ba6fcf7dc30ecbd545888a9ea7cd83d0061387f306e9b92cd1085920fd0b6d": {
+    "tienda": "Suburbia",
+    "titulo": "$ 149 . 00 - $ 599 . 00 $ 299 . 00 - $ 599 . 00",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 149.0,
+    "precio_maximo": 599.0,
+    "descuento": 75,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-09-29T20:03:14.230229+00:00",
+    "precio_alertado": 149.0
+  },
+  "26500a98e268a88fad5f2cf07de827a99d4e68aa1e69e376d7607e91eccb9e40": {
+    "tienda": "Suburbia",
+    "titulo": "$ 299 . 00 - $ 599 . 00",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 299.0,
+    "precio_maximo": 599.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-09-29T20:03:14.230766+00:00",
+    "precio_alertado": 299.0
+  },
+  "7636c661628825e85bd34183fc33f815c06e0efa108f0a130ad8a7f986125ce6": {
+    "tienda": "Suburbia",
+    "titulo": "OH POMP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 324.0,
+    "precio_maximo": 649.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-09-29T20:03:14.231279+00:00",
+    "precio_alertado": 324.0
+  },
+  "6eccab186c331d7e877ed32fb57d6ea1e1ef01dc43a3762439748d4f0e4de963": {
+    "tienda": "Suburbia",
+    "titulo": "$ 324 . 00 $ 649 . 00",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 324.0,
+    "precio_maximo": 649.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-09-29T20:03:14.231814+00:00",
+    "precio_alertado": 324.0
+  },
+  "78b8fcb1a7d33d930e62dff8974f8d5913fa051db8e084eb40ac05b8ae39fbe6": {
+    "tienda": "Suburbia",
+    "titulo": "GLOBAL MERCHANDISING",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 199.0,
+    "precio_maximo": 199.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "ultima_actualizacion": "2026-09-29T20:03:14.236870+00:00",
+    "precio_alertado": null
+  },
+  "f5eece600a8d1023f8f601cb41f472dd583c67f3da531582beca6a9e9acf4a2c": {
+    "tienda": "Suburbia",
+    "titulo": "$ 15,999 . 00 $ 22,499 . 00",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 15999.0,
+    "precio_maximo": 22499.0,
+    "descuento": 29,
+    "puntuacion": 29,
+    "ultima_actualizacion": "2026-09-29T20:03:14.249259+00:00",
     "precio_alertado": null
   }
 }
