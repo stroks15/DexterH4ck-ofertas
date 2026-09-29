@@ -3,10 +3,18 @@ import json
 import re
 import time
 from urllib.parse import quote_plus, urljoin, urlparse
+
 import requests
 from bs4 import BeautifulSoup
 
-BUSQUEDAS = ["iphone","laptop","smart tv","playstation","xbox","nintendo switch","audifonos","smartwatch","tenis","refrigerador","lavadora","pantalla","celular","liquidacion","liquidación","remate","outlet"]
+from core.liquidation_engine import detect_priority_brand, infer_category
+
+BUSQUEDAS = [
+    "iphone", "laptop", "smart tv", "playstation", "xbox", "nintendo switch",
+    "audifonos", "smartwatch", "tenis", "refrigerador", "lavadora", "pantalla",
+    "celular", "juguetes", "belleza", "bebe", "hogar", "liquidacion", "liquidación",
+    "remate", "outlet"
+]
 
 TIENDAS = {
     "Walmart MX": "https://www.walmart.com.mx/search?q={q}",
@@ -18,7 +26,11 @@ TIENDAS = {
     "Amazon MX": "https://www.amazon.com.mx/s?k={q}",
 }
 
-KEYWORDS_LIQUIDACION = ("liquidacion","liquidación","remate","outlet","ultima pieza","última pieza","ultimas piezas","últimas piezas","saldo","saldos","caja abierta","open box","precio especial")
+KEYWORDS_LIQUIDACION = (
+    "liquidacion", "liquidación", "remate", "outlet", "ultima pieza",
+    "última pieza", "ultimas piezas", "últimas piezas", "saldo", "saldos",
+    "caja abierta", "open box", "precio especial", "clearance", "warehouse"
+)
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
@@ -31,7 +43,10 @@ def normalizar_texto(texto):
     return re.sub(r"\s+", " ", texto or "").strip()
 
 def extraer_precios(texto):
-    encontrados = re.findall(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)", texto or "")
+    encontrados = re.findall(
+        r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)",
+        texto or "",
+    )
     salida = []
     for valor in encontrados:
         try:
@@ -48,20 +63,35 @@ def calcular_descuento(anterior, actual):
     return round((1 - actual / anterior) * 100)
 
 def producto_id(tienda, titulo, url):
-    return hashlib.sha256(f"{tienda}|{url or titulo}".encode("utf-8")).hexdigest()
+    parsed = urlparse(url or "")
+    host = parsed.netloc.lower()
+    path = parsed.path.rstrip("/")
+    if "amazon.com.mx" in host:
+        match = re.search(r"/dp/([A-Z0-9]{10})", path, re.I)
+        canonical = f"/dp/{match.group(1).upper()}" if match else path
+    else:
+        canonical = path
+    return hashlib.sha256(f"{tienda}|{canonical or titulo}".encode("utf-8")).hexdigest()
 
 def es_url_producto(url, base):
     if not url:
         return False
     parsed = urlparse(url)
-    base_host = urlparse(base).netloc
-    if not parsed.netloc or parsed.netloc != base_host:
+    base_host = urlparse(base).netloc.lower()
+    host = parsed.netloc.lower()
+    if not host or host != base_host:
         return False
-    u = url.lower()
-    if any(x in u for x in ("/search?", "/buscar?", "/tienda?s=", "/listado/")):
+    path = parsed.path.lower()
+    full = url.lower()
+    if any(x in full for x in ("/search?", "/buscar?", "/tienda?s=", "/listado/")):
         return False
-    if u.endswith("/ofertas") or "/ofertas?" in u:
+    if path.endswith("/ofertas") or "/ofertas?" in full:
         return False
+    if "chedraui.com.mx" in host:
+        if re.search(r"/p/?$", path) or re.search(r"/[^/]+/p/?$", path):
+            return True
+        if re.search(r"/\d{4,}(?:/)?$", path):
+            return True
     return True
 
 def recorrer_json(obj):
@@ -72,6 +102,16 @@ def recorrer_json(obj):
     elif isinstance(obj, list):
         for valor in obj:
             yield from recorrer_json(valor)
+
+def valor_brand(brand):
+    if isinstance(brand, dict):
+        return brand.get("name") or ""
+    return brand or ""
+
+def valor_category(value):
+    if isinstance(value, list):
+        return value[0] if value else ""
+    return value or ""
 
 def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
     resultados = []
@@ -95,23 +135,43 @@ def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
                 offers = {}
             actual = offers.get("price") or offers.get("lowPrice")
             anterior = None
+            price_spec = offers.get("priceSpecification")
+            if isinstance(price_spec, dict):
+                anterior = price_spec.get("priceBeforeDiscount") or price_spec.get("listPrice")
             try:
                 actual = float(str(actual).replace(",", "")) if actual else None
                 anterior = float(str(anterior).replace(",", "")) if anterior else None
-            except ValueError:
+            except (ValueError, TypeError):
                 actual = anterior = None
-            if not actual:
+            if not actual or not es_url_producto(url, base_url):
                 continue
-            if not es_url_producto(url, base_url):
-                continue
-            if anterior and anterior <= actual:
-                anterior = None
-            resultados.append({"tienda": tienda,"titulo": titulo[:180],"precio_actual": actual,"precio_anterior": anterior,"descuento": calcular_descuento(anterior, actual) if anterior else 0,"url": url,"liquidacion": any(k in titulo.lower() for k in KEYWORDS_LIQUIDACION)})
+            marca = normalizar_texto(valor_brand(obj.get("brand")))
+            categoria = normalizar_texto(valor_category(obj.get("category")))
+            texto_contexto = f"{titulo} {marca} {categoria}"
+            es_liq = liquidacion_contexto or any(k in texto_contexto.lower() for k in KEYWORDS_LIQUIDACION)
+            marca_detectada, _ = detect_priority_brand({"titulo": titulo, "marca": marca})
+            categoria_detectada = infer_category({"titulo": titulo, "marca": marca, "categoria": categoria})
+            resultados.append({
+                "tienda": tienda,
+                "titulo": titulo[:180],
+                "marca": marca_detectada or marca,
+                "categoria": categoria_detectada or categoria,
+                "precio_actual": actual,
+                "precio_anterior": anterior if anterior and anterior > actual else None,
+                "descuento": calcular_descuento(anterior, actual) if anterior else 0,
+                "url": url,
+                "liquidacion": es_liq,
+                "outlet": any(k in texto_contexto.lower() for k in ("outlet", "clearance", "open box", "warehouse")),
+            })
     return resultados
 
 def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
     resultados = []
-    selectores = ["article","[data-testid*='product']","[data-testid*='Product']","[class*='product-card']","[class*='ProductCard']","[class*='product-tile']","[class*='ProductTile']","li[class*='product']"]
+    selectores = [
+        "article", "[data-testid*='product']", "[data-testid*='Product']",
+        "[class*='product-card']", "[class*='ProductCard']",
+        "[class*='product-tile']", "[class*='ProductTile']", "li[class*='product']"
+    ]
     vistos_nodos = set()
     for selector in selectores:
         for nodo in soup.select(selector)[:250]:
@@ -133,15 +193,32 @@ def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
                 titulo = normalizar_texto(enlace.get_text(" ", strip=True))
             if not titulo:
                 titulo = texto[:180]
+            marca_attr = nodo.select_one("[itemprop='brand'], [data-brand], [class*='brand']")
+            marca = normalizar_texto(marca_attr.get("content") if marca_attr and marca_attr.get("content") else marca_attr.get_text(" ", strip=True) if marca_attr else "")
+            categoria_attr = nodo.select_one("[itemprop='category'], [data-category], [class*='category']")
+            categoria = normalizar_texto(categoria_attr.get("content") if categoria_attr and categoria_attr.get("content") else categoria_attr.get_text(" ", strip=True) if categoria_attr else "")
             actual = precios[0]
             anterior = next((p for p in precios[1:] if p > actual), None)
-            dcto = calcular_descuento(anterior, actual) if anterior else 0
+            dcto = calcular_descuento(anterior, actual)
             es_liq = liquidacion_contexto or any(k in texto.lower() for k in KEYWORDS_LIQUIDACION)
             if not anterior and not es_liq:
                 continue
             if not es_url_producto(url, base_url):
                 continue
-            resultados.append({"tienda": tienda,"titulo": titulo[:180],"precio_actual": actual,"precio_anterior": anterior,"descuento": dcto,"url": url,"liquidacion": es_liq})
+            marca_detectada, _ = detect_priority_brand({"titulo": titulo, "marca": marca})
+            categoria_detectada = infer_category({"titulo": titulo, "marca": marca, "categoria": categoria})
+            resultados.append({
+                "tienda": tienda,
+                "titulo": titulo[:180],
+                "marca": marca_detectada or marca,
+                "categoria": categoria_detectada or categoria,
+                "precio_actual": actual,
+                "precio_anterior": anterior,
+                "descuento": dcto,
+                "url": url,
+                "liquidacion": es_liq,
+                "outlet": any(k in texto.lower() for k in ("outlet", "clearance", "open box", "warehouse")),
+            })
     return resultados
 
 def buscar_tienda(nombre, plantilla, session):
@@ -163,7 +240,6 @@ def buscar_tienda(nombre, plantilla, session):
                         time.sleep(espera)
                         continue
                 break
-
             if response is None or response.status_code >= 400:
                 continue
             soup = BeautifulSoup(response.text, "html.parser")

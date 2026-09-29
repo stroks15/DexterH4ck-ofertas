@@ -1,8 +1,10 @@
-# Motor de liquidaciones V2
+# Motor de liquidaciones V3
 
-Objetivo: convertir DexterH4ck-ofertas en un cazador de ofertas con historial real de precios.
+## Objetivo
 
-## Tiendas integradas
+Detectar oportunidades desde 50% hasta 99%, conservar contexto de producto y priorizar las alertas más relevantes.
+
+## Tiendas
 
 - Walmart México
 - Bodega Aurrera
@@ -13,31 +15,39 @@ Objetivo: convertir DexterH4ck-ofertas en un cazador de ofertas con historial re
 - Mercado Libre México
 - Amazon México
 
-## Flujo
+## Puntuación
 
-1. Scrapers obtienen productos.
-2. Normalizador unifica nombre, precio, tienda y URL.
-3. Motor de liquidación calcula:
-   - descuento real
-   - caída contra historial
-   - palabras clave
-   - disponibilidad
-4. Supabase guarda historial.
-5. Telegram recibe únicamente oportunidades nuevas.
+- Descuento: hasta 50 puntos.
+- Marca prioritaria: +20.
+- Categoría de alta demanda: +15.
+- Palabra \`liquidación\`: +10.
+- Última pieza/outlet: +10.
+- Máximo: 100.
 
-## Reglas
+La puntuación sirve para ordenar las alertas; el umbral de descuento real sigue siendo 50% salvo la ruta de liquidación sin referencia histórica.
 
-No usar terminaciones .01/.02/.03 como única prueba.
+## Normalización
 
-Priorizar:
-- descuento >= 60%
-- caída histórica importante
-- palabras de liquidación
-- producto repetible y verificable
+Cada candidato intenta conservar:
+- nombre
+- marca
+- categoría
+- precio actual
+- precio anterior/referencia
+- descuento
+- URL
+- indicador de liquidación/outlet
 
-## Próximos módulos
+También se normalizan catálogos con campos equivalentes a \`nombre\`, \`precio\`, \`precio_original\`, \`descuento_pct\`, \`categoria\`, \`marca\`, \`stock\` y \`outlet\`, como los encontrados en el ZIP analizado.
 
-- supabase_client.py
-- price_history.py
-- liquidation_engine.py
-- telegram_formatter.py
+## Chedraui
+
+Se reconocen URLs de ficha que terminan en \`/p\` y otras variantes de producto. Se evita tratarlas como URLs de búsqueda.
+
+## Fuentes externas
+
+Los canales de Telegram y Oferstock quedan registrados en \`fuentes_liquidaciones.json\` para una futura integración. No se intenta leerlos automáticamente únicamente a partir del enlace.
+
+## Deduplicación
+
+Se conserva el historial por producto y se prioriza la URL del producto. El motor ordena los avisos por puntuación antes del envío.

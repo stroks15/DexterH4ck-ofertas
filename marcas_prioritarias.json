@@ -1,0 +1,6 @@
+{
+  "Juguetes": ["Hasbro", "Mattel", "Fisher Price", "Barbie", "Hot Wheels", "Nerf", "LEGO"],
+  "Belleza": ["Maybelline", "NYX", "L'Oréal"],
+  "Bebé": ["Pampers", "Huggies", "Fisher Price"],
+  "Hogar": ["Nooz", "Calorex", "Continental"]
+}

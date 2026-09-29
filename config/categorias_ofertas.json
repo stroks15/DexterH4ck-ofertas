@@ -1,0 +1,16 @@
+{
+  "categorias": ["Celulares","Laptops","Tablets","TV","Consolas","Videojuegos","Audio","Línea blanca","Lavadoras","Refrigeradores","Microondas","Colchones","Muebles","Ropa","Calzado","Bebés","Pañales","Cunas","Carriolas","Juguetes","Belleza","Maquillaje","Mascotas","Herramientas","Hogar"],
+  "alta_demanda": ["Celulares","Laptops","TV","Consolas","Videojuegos","Audio","Lavadoras","Refrigeradores","Juguetes","Belleza","Bebés","Hogar"],
+  "aliases": {
+    "celular":"Celulares","celulares":"Celulares","iphone":"Celulares","smartphone":"Celulares",
+    "laptop":"Laptops","laptops":"Laptops","portatil":"Laptops","computadora portatil":"Laptops",
+    "tablet":"Tablets","tablets":"Tablets","tv":"TV","television":"TV","pantalla":"TV","smart tv":"TV",
+    "consola":"Consolas","consolas":"Consolas","playstation":"Consolas","xbox":"Consolas","nintendo switch":"Consolas",
+    "videojuego":"Videojuegos","videojuegos":"Videojuegos","juego":"Videojuegos",
+    "audio":"Audio","audifonos":"Audio","bocina":"Audio","bocinas":"Audio","soundbar":"Audio",
+    "linea blanca":"Línea blanca","lavadora":"Lavadoras","lavadoras":"Lavadoras","refrigerador":"Refrigeradores","refrigeradores":"Refrigeradores","microondas":"Microondas",
+    "colchon":"Colchones","colchones":"Colchones","mueble":"Muebles","muebles":"Muebles","ropa":"Ropa","calzado":"Calzado",
+    "bebe":"Bebés","bebé":"Bebés","pañales":"Pañales","panales":"Pañales","cuna":"Cunas","cunas":"Cunas","carriola":"Carriolas","carriolas":"Carriolas",
+    "juguete":"Juguetes","juguetes":"Juguetes","belleza":"Belleza","maquillaje":"Maquillaje","mascota":"Mascotas","mascotas":"Mascotas","herramienta":"Herramientas","herramientas":"Herramientas","hogar":"Hogar"
+  }
+}

@@ -2,10 +2,13 @@ import html
 import json
 import os
 from datetime import datetime, timezone
+
 import requests
+
+from core.liquidation_engine import evaluate_product
 from scrapers.tiendas_mexico import buscar_todas
 
-MIN_DESCUENTO = 60
+MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
 HISTORIAL_FILE = "historial_ofertas.json"
 MAX_HISTORIAL = 10000
@@ -42,7 +45,7 @@ def enviar_telegram(texto):
         raise RuntimeError(f"Telegram rechazó el mensaje: HTTP {response.status_code} - {response.text}")
 
 def calcular_datos(item, anterior_hist):
-    actual = float(item.get("precio_actual") or 0)
+    actual = float(item.get("precio_actual") or item.get("price") or 0)
     listado = float(item["precio_anterior"]) if item.get("precio_anterior") else None
     referencia = max([x for x in (listado, anterior_hist.get("precio_maximo")) if x], default=0)
     dcto = round((1 - actual / referencia) * 100) if referencia > actual else 0
@@ -53,9 +56,6 @@ def revisar():
     avisos = []
     vistos_en_esta_revision = set()
 
-    # Migración única: permite volver a enviar las ofertas que ya estaban
-    # marcadas como alertadas antes de esta corrección. Después de la primera
-    # ejecución se guarda una marca para que no se repitan en cada 15 minutos.
     meta = historial.get("__meta__", {})
     rearmar_alertas = not bool(meta.get("rearmado_alertas_2026_09_25"))
     if rearmar_alertas:
@@ -64,9 +64,9 @@ def revisar():
         print("Rearmado único de alertas activado: se volverán a enviar las ofertas vigentes.")
 
     for item in buscar_todas():
-        titulo = str(item.get("titulo", "")).strip()
-        url = str(item.get("url", "")).strip()
-        tienda = str(item.get("tienda", "Desconocida")).strip()
+        titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
+        url = str(item.get("url") or "").strip()
+        tienda = str(item.get("tienda") or item.get("store") or "Desconocida").strip()
         if not titulo or not url:
             continue
 
@@ -80,23 +80,35 @@ def revisar():
         if actual <= 0:
             continue
 
+        enriched = dict(item)
+        enriched["precio_actual"] = actual
+        enriched["precio_anterior"] = referencia or item.get("precio_anterior")
+        scoring = evaluate_product({**enriched, "precio_anterior": referencia})
+        scoring["descuento"] = dcto
+
         registro = historial.get(clave)
         if not registro or float(registro.get("precio_actual", 0)) != actual:
             historial[clave] = {
                 "tienda": tienda,
                 "titulo": titulo,
+                "marca": scoring.get("marca") or item.get("marca", ""),
+                "categoria": scoring.get("categoria") or item.get("categoria", ""),
                 "url": url,
                 "precio_actual": actual,
                 "precio_maximo": max(actual, referencia),
+                "descuento": dcto,
+                "puntuacion": scoring["puntuacion"],
                 "ultima_actualizacion": datetime.now(timezone.utc).isoformat(),
                 "precio_alertado": anterior_hist.get("precio_alertado"),
             }
         else:
-            historial[clave]["precio_maximo"] = max(
-                float(historial[clave].get("precio_maximo", 0)),
-                actual,
-                referencia,
-            )
+            historial[clave]["precio_maximo"] = max(float(historial[clave].get("precio_maximo", 0)), actual, referencia)
+            historial[clave]["descuento"] = dcto
+            historial[clave]["puntuacion"] = scoring["puntuacion"]
+            if scoring.get("marca"):
+                historial[clave]["marca"] = scoring["marca"]
+            if scoring.get("categoria"):
+                historial[clave]["categoria"] = scoring["categoria"]
 
         ultimo_alertado = anterior_hist.get("precio_alertado")
         if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado):
@@ -110,22 +122,42 @@ def revisar():
         if es_descuento_real:
             etiqueta = "🔥 LIQUIDACIÓN" if item.get("liquidacion") else "🚨 OFERTA"
             bloque_descuento = f"<b>{dcto}% DE DESCUENTO</b>\n"
-            referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
+            referencia_texto = f"💵 Antes/referencia: $" + f"{referencia:,.2f} MXN\n"
         else:
             etiqueta = "🔥 LIQUIDACIÓN DETECTADA"
             bloque_descuento = "<b>Precio de liquidación detectado</b>\n"
             referencia_texto = ""
 
+        marca = scoring.get("marca") or item.get("marca")
+        categoria = scoring.get("categoria") or item.get("categoria")
+        puntuacion = scoring.get("puntuacion", 0)
+        extras = []
+        if scoring.get("marca_prioritaria"):
+            extras.append("⭐ marca prioritaria")
+        if scoring.get("categoria_alta_demanda"):
+            extras.append("📈 categoría alta demanda")
+        if "liquidacion" in scoring.get("indicadores", []):
+            extras.append("🔥 palabra liquidación")
+        if "ultima_pieza_outlet" in scoring.get("indicadores", []):
+            extras.append("🏷️ última pieza/outlet")
+
         mensaje = (
             f"{etiqueta}\n"
             f"{bloque_descuento}\n"
             f"🏪 <b>{html.escape(tienda)}</b>\n"
-            f"🛒 {html.escape(titulo)}\n\n"
-            f"💰 Ahora: <b>${actual:,.2f} MXN</b>\n"
-            f"{referencia_texto}"
-            f"🔗 {html.escape(url)}"
+            f"🛒 {html.escape(titulo)}\n"
+            + (f"🏷️ Marca: <b>{html.escape(str(marca))}</b>\n" if marca else "")
+            + (f"📂 Categoría: {html.escape(str(categoria))}\n" if categoria else "")
+            + f"⭐ Puntuación: <b>{puntuacion}/100</b>\n"
+            + (f"✨ {' · '.join(extras)}\n" if extras else "")
+            + "\n"
+            + "💰 Ahora: <b>$" + f"{actual:,.2f} MXN</b>\n"
+            + referencia_texto
+            + f"🔗 {html.escape(url)}"
         )
         avisos.append((clave, actual, mensaje))
+
+    avisos.sort(key=lambda row: historial.get(row[0], {}).get("puntuacion", 0), reverse=True)
 
     enviados = 0
     errores_telegram = 0

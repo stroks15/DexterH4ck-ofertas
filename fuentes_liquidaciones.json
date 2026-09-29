@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "nota": "Los enlaces a canales o grupos no son por sí mismos una autorización ni un mecanismo de lectura automática. Estas fuentes quedan registradas para futuras integraciones.",
+  "fuentes": [
+    {"nombre":"Ofertones México","tipo":"telegram_canal","url":"https://t.me/OfertonesMexico","autolectura":false,"estado":"pendiente_integracion"},
+    {"nombre":"LiquidAhorros Oficial Ofertones México","tipo":"telegram_canal","url":"https://t.me/LiquidAhorrosOficialOfertonesMexico","autolectura":false,"estado":"pendiente_integracion"},
+    {"nombre":"Outlet y Reacondicionados","tipo":"telegram_canal","url":"https://t.me/outletyreacondicionados","autolectura":false,"estado":"pendiente_integracion","nota":"Incluye referencias a ofertas reacondicionadas/outlet y afiliación de Amazon EU."},
+    {"nombre":"Oferstock","tipo":"web","url":"https://www.oferstock.com.mx/#","autolectura":false,"estado":"pendiente_integracion"}
+  ],
+  "whatsapp": []
+}
