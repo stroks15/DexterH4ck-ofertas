@@ -221,6 +221,162 @@ def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
             })
     return resultados
 
+
+GOOGLE_HEADERS = {
+    **HEADERS,
+    "Referer": "https://www.google.com/",
+}
+
+SORiana_GOOGLE_QUERIES = [
+    "site:soriana.com pantallas oferta",
+    "site:soriana.com celulares oferta",
+    "site:soriana.com laptop oferta",
+    "site:soriana.com consola oferta",
+    "site:soriana.com videojuegos oferta",
+    "site:soriana.com audio oferta",
+    "site:soriana.com lavadora oferta",
+    "site:soriana.com refrigerador oferta",
+    "site:soriana.com microondas oferta",
+    "site:soriana.com juguetes oferta",
+    "site:soriana.com belleza oferta",
+    "site:soriana.com bebe oferta",
+    "site:soriana.com hogar oferta",
+    "site:soriana.com liquidacion",
+    "site:soriana.com remate",
+]
+
+def extraer_url_soriana_google(href):
+    if not href:
+        return ""
+    href = href.strip()
+    if href.startswith("/url?q="):
+        href = href.split("/url?q=", 1)[1].split("&", 1)[0]
+    href = urljoin("https://www.google.com", href)
+    parsed = urlparse(href)
+    if parsed.netloc.lower() not in ("www.soriana.com", "soriana.com"):
+        return ""
+    if any(x in parsed.path.lower() for x in ("/buscar", "/marcas/", "/marcas-propias", "/despensa/", "/especiales/", "/ofertas/")):
+        return ""
+    return href
+
+def buscar_soriana_desde_google(session):
+    """Fallback para obtener enlaces públicos indexados cuando Soriana bloquea al runner."""
+    resultados = []
+    vistos = set()
+
+    for consulta in SORiana_GOOGLE_QUERIES:
+        try:
+            response = session.get(
+                "https://www.google.com/search",
+                params={"q": consulta, "hl": "es", "gl": "mx", "num": 10},
+                headers=GOOGLE_HEADERS,
+                timeout=20,
+            )
+            if response.status_code >= 400:
+                print(f"Soriana/Google: HTTP {response.status_code} para {consulta}")
+                continue
+
+            soup = BeautifulSoup(response.text, "html.parser")
+            for enlace in soup.select("a[href]"):
+                url = extraer_url_soriana_google(enlace.get("href"))
+                if not url or url in vistos:
+                    continue
+
+                texto = normalizar_texto(enlace.get_text(" ", strip=True))
+                if len(texto) < 8:
+                    continue
+
+                padre = enlace.find_parent()
+                contexto = normalizar_texto(padre.get_text(" ", strip=True) if padre else texto)
+                precios = extraer_precios(contexto)
+                actual = precios[0] if precios else None
+                anterior = next((p for p in precios[1:] if p > actual), None) if actual else None
+
+                titulo = texto[:180]
+                if titulo.lower() in ("soriana", "comprar en soriana", "soriana en línea"):
+                    continue
+
+                marca, _ = detect_priority_brand({"titulo": titulo})
+                categoria = infer_category({"titulo": titulo})
+                contexto_lower = contexto.lower()
+                liquidacion = any(k in contexto_lower for k in KEYWORDS_LIQUIDACION)
+
+                resultados.append({
+                    "tienda": "Soriana",
+                    "titulo": titulo,
+                    "marca": marca,
+                    "categoria": categoria,
+                    "precio_actual": actual or 0,
+                    "precio_anterior": anterior,
+                    "descuento": calcular_descuento(anterior, actual) if actual and anterior else 0,
+                    "url": url,
+                    "liquidacion": liquidacion,
+                    "outlet": any(k in contexto_lower for k in ("outlet", "clearance", "open box", "warehouse")),
+                    "origen_link": "Google",
+                })
+                vistos.add(url)
+
+        except requests.RequestException as error:
+            print(f"Soriana/Google: error de red para {consulta}: {error}")
+        except Exception as error:
+            print(f"Soriana/Google: error procesando {consulta}: {error}")
+
+        time.sleep(0.4)
+
+    print(f"Soriana/Google: {len(resultados)} enlaces públicos indexados encontrados")
+    return resultados
+
+def buscar_soriana(session):
+    """
+    Soriana puede bloquear el endpoint de búsqueda con una página de protección.
+    Primero intenta páginas oficiales; si la respuesta es bloqueada, usa enlaces
+    públicos indexados por Google como fallback, sin intentar evadir el bloqueo.
+    """
+    resultados = []
+    urls_oficiales = [
+        "https://www.soriana.com/",
+        "https://www.soriana.com/ofertas/",
+        "https://www.soriana.com/marcas/",
+    ]
+
+    bloqueado = False
+    for url in urls_oficiales:
+        try:
+            response = session.get(url, timeout=20)
+            if response.status_code in (403, 429) or ("sorry" in response.text.lower() and "blocked" in response.text.lower()):
+                bloqueado = True
+                print(f"Soriana: acceso bloqueado en {url}; activando fallback Google.")
+                continue
+            if response.status_code >= 400:
+                print(f"Soriana: HTTP {response.status_code} en {url}")
+                continue
+
+            soup = BeautifulSoup(response.text, "html.parser")
+            candidatos = extraer_json_ld(soup, "Soriana", url, True)
+            candidatos.extend(extraer_tarjetas(soup, "Soriana", url, True))
+            resultados.extend(candidatos)
+        except requests.RequestException as error:
+            bloqueado = True
+            print(f"Soriana: {error}; activando fallback Google.")
+        time.sleep(0.5)
+
+    if bloqueado or not resultados:
+        resultados.extend(buscar_soriana_desde_google(session))
+
+    unicos = {}
+    for item in resultados:
+        url = item.get("url", "")
+        if not url:
+            continue
+        clave = producto_id("Soriana", item.get("titulo", ""), url)
+        anterior = unicos.get(clave)
+        if not anterior or item.get("descuento", 0) > anterior.get("descuento", 0):
+            item["id"] = clave
+            unicos[clave] = item
+
+    print(f"Soriana: {len(unicos)} productos/enlaces candidatos")
+    return list(unicos.values())
+
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
     base_url = plantilla.split("{q}", 1)[0]
@@ -270,5 +426,8 @@ def buscar_todas():
     session.headers.update(HEADERS)
     salida = []
     for nombre, plantilla in TIENDAS.items():
-        salida.extend(buscar_tienda(nombre, plantilla, session))
+        if nombre == "Soriana":
+            salida.extend(buscar_soriana(session))
+        else:
+            salida.extend(buscar_tienda(nombre, plantilla, session))
     return salida
