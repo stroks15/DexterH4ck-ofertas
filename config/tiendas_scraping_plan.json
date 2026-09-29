@@ -1,0 +1,14 @@
+{
+  "tiendas": [
+    "Walmart Mexico",
+    "Bodega Aurrera",
+    "Soriana",
+    "Chedraui",
+    "Coppel",
+    "Liverpool",
+    "Mercado Libre Mexico",
+    "Amazon Mexico"
+  ],
+  "prioridad": "liquidaciones",
+  "objetivo": "detectar descuentos reales y evitar duplicados"
+}
