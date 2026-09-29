@@ -1,0 +1,52 @@
+{
+  "tiendas": [
+    {
+      "nombre": "Walmart México",
+      "activo": true,
+      "tipo": "retail",
+      "liquidaciones": ["liquidacion", "remate", "ultima pieza", "clearance", "outlet"]
+    },
+    {
+      "nombre": "Bodega Aurrera",
+      "activo": true,
+      "tipo": "retail",
+      "liquidaciones": ["liquidacion", "remate", "saldo", "ultima pieza"]
+    },
+    {
+      "nombre": "Soriana",
+      "activo": true,
+      "tipo": "supermercado",
+      "liquidaciones": ["oferta especial", "remate", "liquidacion"]
+    },
+    {
+      "nombre": "Chedraui",
+      "activo": true,
+      "tipo": "supermercado",
+      "liquidaciones": ["liquidacion", "descuento", "remate"]
+    },
+    {
+      "nombre": "Coppel",
+      "activo": true,
+      "tipo": "departamental",
+      "liquidaciones": ["outlet", "liquidacion", "ultima pieza"]
+    },
+    {
+      "nombre": "Liverpool",
+      "activo": true,
+      "tipo": "departamental",
+      "liquidaciones": ["outlet", "remate", "liquidacion"]
+    },
+    {
+      "nombre": "Mercado Libre México",
+      "activo": true,
+      "tipo": "marketplace",
+      "liquidaciones": ["oferta", "descuento", "ultima pieza"]
+    },
+    {
+      "nombre": "Amazon México",
+      "activo": true,
+      "tipo": "marketplace",
+      "liquidaciones": ["oferta relampago", "warehouse", "open box", "descuento"]
+    }
+  ]
+}
