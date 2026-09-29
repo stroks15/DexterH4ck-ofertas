@@ -24,6 +24,9 @@ TIENDAS = {
     "Soriana": "https://www.soriana.com/buscar?q={q}",
     "Liverpool": "https://www.liverpool.com.mx/tienda?s={q}",
     "Amazon MX": "https://www.amazon.com.mx/s?k={q}",
+    "Coppel": "https://www.coppel.com/ofertas",
+    "Suburbia": "https://www.suburbia.com.mx/tienda/ofertas/catst62289453",
+    "Oferstock": "https://www.oferstock.com.mx/",
 }
 
 KEYWORDS_LIQUIDACION = (
@@ -421,6 +424,130 @@ def buscar_tienda(nombre, plantilla, session):
             print(f"{nombre}: error procesando {q}: {error}")
     return resultados
 
+
+def _agregar_candidatos(resultados, candidatos, tienda):
+    unicos = {}
+    for item in candidatos:
+        actual = item.get("precio_actual") or 0
+        if actual <= 0:
+            continue
+        url = item.get("url") or ""
+        if not url or not es_url_producto(url, item.get("_base_url", url)):
+            continue
+        clave = producto_id(tienda, item.get("titulo", ""), url)
+        existente = unicos.get(clave)
+        if not existente or item.get("descuento", 0) > existente.get("descuento", 0):
+            item["id"] = clave
+            item.pop("_base_url", None)
+            unicos[clave] = item
+    resultados.extend(unicos.values())
+
+
+def buscar_urls_oficiales(tienda, urls, session, forzar_liquidacion=True):
+    """Extrae productos de páginas públicas oficiales de una tienda."""
+    resultados = []
+    for url in urls:
+        try:
+            response = session.get(url, timeout=25)
+            if response.status_code >= 400:
+                print(f"{tienda}: HTTP {response.status_code} en {url}")
+                continue
+            soup = BeautifulSoup(response.text, "html.parser")
+            candidatos = extraer_json_ld(soup, tienda, url, forzar_liquidacion)
+            candidatos.extend(extraer_tarjetas(soup, tienda, url, forzar_liquidacion))
+            for item in candidatos:
+                item["_base_url"] = url
+            _agregar_candidatos(resultados, candidatos, tienda)
+            print(f"{tienda}: {url} -> {len(candidatos)} candidatos")
+        except requests.RequestException as error:
+            print(f"{tienda}: error de red en {url}: {error}")
+        except Exception as error:
+            print(f"{tienda}: error procesando {url}: {error}")
+        time.sleep(0.5)
+    return resultados
+
+
+def buscar_coppel(session):
+    urls = [
+        "https://www.coppel.com/ofertas",
+        "https://www.coppel.com/l/ofertas",
+        "https://www.coppel.com/l/rebajas-verano",
+    ]
+    return buscar_urls_oficiales("Coppel", urls, session, True)
+
+
+def buscar_suburbia(session):
+    urls = [
+        "https://www.suburbia.com.mx/tienda/ofertas/catst62289453",
+        "https://www.suburbia.com.mx/",
+        "https://www.suburbia.com.mx/tienda/home",
+    ]
+    return buscar_urls_oficiales("Suburbia", urls, session, True)
+
+
+def _url_interna_oferstock(url):
+    parsed = urlparse(url)
+    if parsed.netloc.lower() not in ("oferstock.com.mx", "www.oferstock.com.mx"):
+        return False
+    path = parsed.path.lower()
+    if path in ("", "/"):
+        return False
+    if any(x in path for x in ("/contact", "/contacto", "/aviso", "/privacidad", "/terminos", "/login", "/mi-cuenta", "/carrito")):
+        return False
+    return True
+
+
+def buscar_oferstock(session):
+    """
+    Oferstock: rastreo ligero de la portada y de enlaces internos relacionados
+    con ofertas/liquidación/outlet/stock. No presupone un CMS concreto.
+    """
+    raiz = "https://www.oferstock.com.mx/"
+    resultados = []
+    pendientes = [raiz]
+    visitadas = set()
+
+    while pendientes and len(visitadas) < 12:
+        url = pendientes.pop(0)
+        if url in visitadas:
+            continue
+        visitadas.add(url)
+        try:
+            response = session.get(url, timeout=25)
+            if response.status_code >= 400:
+                print(f"Oferstock: HTTP {response.status_code} en {url}")
+                continue
+
+            soup = BeautifulSoup(response.text, "html.parser")
+            candidatos = extraer_json_ld(soup, "Oferstock", url, True)
+            candidatos.extend(extraer_tarjetas(soup, "Oferstock", url, True))
+            for item in candidatos:
+                item["_base_url"] = url
+                item["origen_link"] = "Oferstock"
+            _agregar_candidatos(resultados, candidatos, "Oferstock")
+
+            for enlace in soup.select("a[href]"):
+                href = urljoin(url, enlace.get("href", ""))
+                if not _url_interna_oferstock(href) or href in visitadas or href in pendientes:
+                    continue
+                texto = normalizar_texto(enlace.get_text(" ", strip=True)).lower()
+                path = urlparse(href).path.lower()
+                if any(k in (texto + " " + path) for k in (
+                    "oferta", "ofertas", "liquid", "remate", "outlet", "stock",
+                    "producto", "productos", "tienda", "catalogo", "categor"
+                )):
+                    pendientes.append(href)
+
+        except requests.RequestException as error:
+            print(f"Oferstock: error de red en {url}: {error}")
+        except Exception as error:
+            print(f"Oferstock: error procesando {url}: {error}")
+        time.sleep(0.4)
+
+    print(f"Oferstock: {len(resultados)} productos candidatos encontrados")
+    return resultados
+
+
 def buscar_todas():
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -428,6 +555,12 @@ def buscar_todas():
     for nombre, plantilla in TIENDAS.items():
         if nombre == "Soriana":
             salida.extend(buscar_soriana(session))
+        elif nombre == "Coppel":
+            salida.extend(buscar_coppel(session))
+        elif nombre == "Suburbia":
+            salida.extend(buscar_suburbia(session))
+        elif nombre == "Oferstock":
+            salida.extend(buscar_oferstock(session))
         else:
             salida.extend(buscar_tienda(nombre, plantilla, session))
     return salida
