@@ -868,11 +868,11 @@
   },
   "1ebaa30aeb7de4eed298631b7c62f2f735205bf9a919713747580e32d2f11e70": {
     "tienda": "Soriana",
-    "titulo": "Cantidad en tu carrito PZA(s) Agotado en línea Agotado en línea Aspiradora Robot Klin Höm $990.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar con 'FALABELLA'",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Cantidad en tu carrito PZA(s) Agregar Agregar Aspiradora Robot Klin Höm $999.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar con 'FAL",
     "url": "https://www.soriana.com/aspiradora-robot-klin-h%C3%B6m/11678618.html",
-    "precio_actual": 990.0,
-    "precio_maximo": 990.0,
-    "ultima_actualizacion": "2026-09-25T04:05:37.801140+00:00",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-09-29T15:05:01.927044+00:00",
     "precio_alertado": 990.0
   },
   "45a29017fa251292bf02edb95a067ded08b9463d6dc7b1bb832f4ccceaf51ea4": {
@@ -1021,11 +1021,11 @@
   },
   "6b47d29b64f0e00e5879780ef7329d73a1d641cb6d67e4096414bdc8ec4a85e4": {
     "tienda": "Soriana",
-    "titulo": "Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Cafetera Daewoo DCM-1897 10 tazas Beige $1,290.00 Puntos 'dobles' al pagar con 'FALABELLA' Punto",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Cafetera Daewoo DCM-1897 10 tazas Beige $1,949.00 Puntos 'dobles' al p",
     "url": "https://www.soriana.com/cafetera-daewoo-dcm-1897-10-tazas-beige/11736343.html",
-    "precio_actual": 1290.0,
-    "precio_maximo": 1290.0,
-    "ultima_actualizacion": "2026-09-25T04:05:37.801286+00:00",
+    "precio_actual": 1949.0,
+    "precio_maximo": 1949.0,
+    "ultima_actualizacion": "2026-09-29T15:05:01.927064+00:00",
     "precio_alertado": 1290.0
   },
   "e13f9b0bf25666b09febed0e9839e73914cc1c587941f26fdac7f7972a9d9123": {
@@ -1957,11 +1957,11 @@
   },
   "d0566ea8d5c00de637de9649c7d6d3aa397b4a051b1f71b7ec489f1d74b8ba60": {
     "tienda": "Soriana",
-    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar FC 24 EA Sports PS5 $890.00 Puntos 'dobles' al pagar con 'FALABELLA' P",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar FC 24 EA Sports PS5 $1,590.00 Puntos 'dobles' al pagar con 'FALABELLA'",
     "url": "https://www.soriana.com/fc-24-ea-sports-ps5/11736145.html",
-    "precio_actual": 890.0,
-    "precio_maximo": 890.0,
-    "ultima_actualizacion": "2026-09-29T08:32:15.892481+00:00",
+    "precio_actual": 1590.0,
+    "precio_maximo": 1590.0,
+    "ultima_actualizacion": "2026-09-29T15:05:01.927103+00:00",
     "precio_alertado": 890.0
   },
   "611f98805c0093a62bb6e1c142d93bc33541ce0e893cd3437b2a954faa236972": {
@@ -2125,5 +2125,23 @@
     "precio_maximo": 10990.0,
     "ultima_actualizacion": "2026-09-29T10:01:46.352924+00:00",
     "precio_alertado": 10990.0
+  },
+  "63422e29aeca49830933a78151a4d6909229b405c718a6e80380e7e5952c8cd3": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Garantía extendida Garantía extendida Cantidad en tu carrito PZA(s) Agregar Agregar Lavadora de 2 Tinas Acros 24Kg Max Spin Dry $7,990.00 $8,990.00 Compar",
+    "url": "https://www.soriana.com/lavadora-de-2-tinas-acros-24kg-max-spin-dry/11923499.html",
+    "precio_actual": 7990.0,
+    "precio_maximo": 8990.0,
+    "ultima_actualizacion": "2026-09-29T15:05:01.926930+00:00",
+    "precio_alertado": null
+  },
+  "92429efe9722caafbffd490c87ca9f8ba1888a64ef470e278ca38dbbb8eb99a8": {
+    "tienda": "Soriana",
+    "titulo": "Hasta 36 MSI Hasta 36 MSI Cantidad en tu carrito PZA(s) Agregar Agregar Audífonos Xiaomi Mi Basic Plata $169.00 Puntos 'dobles' al pagar con 'FALABELLA' Puntos 'dobles' al pagar co",
+    "url": "https://www.soriana.com/audifonos-xiaomi-mi-basic-plata/11663026.html",
+    "precio_actual": 169.0,
+    "precio_maximo": 169.0,
+    "ultima_actualizacion": "2026-09-29T15:05:01.927013+00:00",
+    "precio_alertado": 169.0
   }
 }
