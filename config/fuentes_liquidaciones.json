@@ -1,0 +1,25 @@
+{
+  "fuentes": [
+    {
+      "nombre": "Mega Ofertones MX",
+      "tipo": "whatsapp_channel",
+      "url": "https://whatsapp.com/channel/0029Va5xOuG3rZZdGGV2zv0z"
+    },
+    {
+      "nombre": "PromosTop Mx",
+      "tipo": "whatsapp_channel",
+      "url": "https://whatsapp.com/channel/0029VapjUiSKQuJHimxJvJ3A"
+    },
+    {
+      "nombre": "El Caza Ofertas MX - Mercado Libre",
+      "tipo": "whatsapp_channel",
+      "url": "https://whatsapp.com/channel/0029Vb9AJuN3gvWbKXbeWu44"
+    },
+    {
+      "nombre": "Alertas_OferStock",
+      "tipo": "whatsapp_channel",
+      "url": "https://whatsapp.com/channel/0029VbC71PELI8YQCxKWSi1Z"
+    }
+  ],
+  "nota": "Las fuentes deben integrarse mediante métodos permitidos; el enlace del canal por sí solo no proporciona acceso automático a mensajes."
+}
