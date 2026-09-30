@@ -129,19 +129,32 @@ def revisar():
         if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado):
             continue
 
-        # Todas las alertas deben tener porcentaje comprobable y enlace directo.
+        # VERDE = descuento comprobable; ROJA = liquidación/ocasión sin referencia.
         es_descuento_real = MIN_DESCUENTO <= dcto <= MAX_DESCUENTO
-        if not es_descuento_real or not es_enlace_producto_directo(url):
+        es_enlace = es_enlace_producto_directo(url)
+        tiene_precio = actual > 0
+        tiene_referencia = referencia > actual
+        if not tiene_precio or not es_enlace:
             continue
-
-        etiqueta = "🚨 OFERTA"
-        bloque_descuento = f"<b>{dcto}% DE DESCUENTO</b>\n"
-        referencia_texto = f"💵 Antes/referencia: <b>${referencia:,.2f} MXN</b>\n"
-        ahorro = max(referencia - actual, 0)
 
         marca = scoring.get("marca") or item.get("marca")
         categoria = scoring.get("categoria") or item.get("categoria") or "Otros / Miscelánea"
         puntuacion = scoring.get("puntuacion", 0)
+
+        if es_descuento_real and tiene_referencia:
+            tipo_alerta = "VERDE"
+            etiqueta = "🟢🚨 OFERTA"
+            bloque_descuento = f"{dcto}% DE DESCUENTO\n"
+            referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
+            ahorro = max(referencia - actual, 0)
+            ahorro_texto = f"🤓💲 Ahorrado: ${ahorro:,.2f} MXN\n"
+        else:
+            tipo_alerta = "ROJA"
+            etiqueta = "🔴🔥 LIQUIDACIÓN / OFERTA ESPECIAL"
+            bloque_descuento = "DESCUENTO NO COMPARABLE\n"
+            referencia_texto = ""
+            ahorro = 0
+            ahorro_texto = ""
         extras = []
         if scoring.get("marca_prioritaria"):
             extras.append("⭐ marca prioritaria")
@@ -162,11 +175,10 @@ def revisar():
             + f"⭐ Puntuación: <b>{puntuacion}/100</b>\n"
             + (f"✨ {' · '.join(extras)}\n" if extras else "")
             + "\n"
-            + f"💰 Ahora: <b>${actual:,.2f} MXN</b>\n"
+            + f"💰 Ahora: ${actual:,.2f} MXN\n"
             + referencia_texto
-            + f"🤓💲 Ahorrado: <b>${ahorro:,.2f} MXN</b>\n"
-            + f"🔗 <a href=\"{html.escape(url, quote=True)}\">VER PRODUCTO DIRECTO</a>"
-        )
+            + ahorro_texto
+            + f"🔗 <a href=\"{html.escape(url, quote=True)}\">VER PRODUCTO DIRECTO</a>"        )
         avisos.append((clave, actual, mensaje))
 
     avisos.sort(key=lambda row: historial.get(row[0], {}).get("puntuacion", 0), reverse=True)
