@@ -8,6 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from core.liquidation_engine import detect_priority_brand, infer_category
+from core.ai_reparador import reparar_url
 
 BUSQUEDAS = [
     "iphone", "laptop", "smart tv", "playstation", "xbox", "nintendo switch",
@@ -365,6 +366,8 @@ def buscar_soriana(session):
 
     if bloqueado or not resultados:
         resultados.extend(buscar_soriana_desde_google(session))
+    for item in resultados:
+        item["url"] = reparar_url(item.get("url", ""), "Soriana", item.get("titulo", ""))
 
     unicos = {}
     for item in resultados:
