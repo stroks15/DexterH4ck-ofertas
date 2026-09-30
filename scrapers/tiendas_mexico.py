@@ -528,6 +528,21 @@ def _url_interna_oferstock(url):
     return True
 
 
+# Tiendas físicas / remates de referencia en el radio solicitado.
+# Se usan como fuentes de oportunidades y ubicaciones; no se inventan precios
+# ni se publican como oferta hasta obtener un producto/precio verificable.
+TIENDAS_FISICAS = [
+    {"nombre":"Coppel Remate Los Reyes","zona":"Los Reyes La Paz","tipo":"remate","direccion":"Carretera Federal México-Puebla Km 17.5, Los Reyes La Paz, Edomex"},
+    {"nombre":"Bodega De Remates Los Pepos","zona":"Santa Cruz Meyehualco, Iztapalapa","tipo":"remate","direccion":"Justo Sierra 43, Santa Cruz Meyehualco, Iztapalapa, CDMX"},
+    {"nombre":"Coppel Fernando Arruti","zona":"Santa Martha Acatitla Norte, Iztapalapa","tipo":"saldos","direccion":"Calz. Ignacio Zaragoza 2514, Santa Martha Acatitla Norte, Iztapalapa, CDMX"},
+    {"nombre":"Liverpool Ciudad Jardín","zona":"Ciudad Nezahualcóyotl","tipo":"departamental","direccion":"Av. Bordo de Xochiaca 3, Plaza Ciudad Jardín, Cd. Nezahualcóyotl, Edomex"},
+    {"nombre":"Liverpool Parque Tezontle","zona":"Iztapalapa","tipo":"departamental","direccion":"Av. Canal de Tezontle 851, Iztapalapa, CDMX"},
+    {"nombre":"Coppel Santa Martha","zona":"Santa Martha Acatitla, Iztapalapa","tipo":"departamental","direccion":"Av. Ermita Iztapalapa 4170, Iztapalapa, CDMX"},
+    {"nombre":"Walmart Plaza Oriente","zona":"Iztapalapa","tipo":"supermercado","direccion":"Canal de Tezontle, junto a Parque Tezontle, CDMX"},
+    {"nombre":"Bodega Aurrera El Salado","zona":"El Salado, Iztapalapa","tipo":"remate","direccion":"Zona El Salado, Iztapalapa, CDMX"},
+    {"nombre":"Soriana Híper Plaza Sendero Ixtapaluca","zona":"Ixtapaluca","tipo":"supermercado","direccion":"Plaza Sendero Ixtapaluca, Estado de México"},
+]
+
 def buscar_oferstock(session):
     """
     Oferstock: rastreo ligero de la portada y de enlaces internos relacionados
