@@ -19,7 +19,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 Chrome/140 Safari/537.36", "Accept-Languag
 MAX_TELEGRAM_AI = int(os.environ.get("GEMINI_MAX_TELEGRAM_AI", "18"))
 _ai_calls = 0
 PRICE_RE = re.compile(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)")
-URL_RE = re.compile(r"https?://[^\s<>\]\)"']+")
+URL_RE = re.compile(r"https?://[^\s<>]+")
 
 def _prices(text):
     out = []
