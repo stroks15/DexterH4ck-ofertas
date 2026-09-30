@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 import requests
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash").strip()
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash").strip()
 GEMINI_ENDPOINT = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
 ALLOWED_HOSTS = {"soriana.com","www.soriana.com","coppel.com","www.coppel.com","suburbia.com.mx","www.suburbia.com.mx","oferstock.com.mx","www.oferstock.com.mx","walmart.com.mx","www.walmart.com.mx","bodegaaurrera.com.mx","www.bodegaaurrera.com.mx","chedraui.com.mx","www.chedraui.com.mx","liverpool.com.mx","www.liverpool.com.mx","amazon.com.mx","www.amazon.com.mx","mercadolibre.com.mx","www.mercadolibre.com.mx","meli.la","amzn.to"}
 
