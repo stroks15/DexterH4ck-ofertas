@@ -35,6 +35,9 @@ def guardar_historial(historial):
         json.dump(historial, archivo, ensure_ascii=False, indent=2)
     os.replace(temporal, HISTORIAL_FILE)
 
+def formato_alerta_tipo(tipo):
+    return "🟢" if tipo == "VERDE" else "🔴"
+
 def es_enlace_producto_directo(url):
     host = urlparse(url).netloc.lower()
     path = urlparse(url).path.lower()
