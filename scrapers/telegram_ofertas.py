@@ -60,7 +60,7 @@ def _candidate(source, text, session=None):
     tienda = _store(text + " " + url)
     url = reparar_url(url, tienda, text)
     # Convierte enlaces cortos (amzn.to/meli.la) al enlace final del producto.
-    if session and urlparse_safe(url) in ("amzn.to", "meli.la"):
+    if session and urlparse_safe(url) in ("amzn.to", "meli.la", "mercadolibre.com", "mercadolibre.com", "bit.ly", "tidd.ly", "link.amazon"):
         try:
             r = session.get(url, headers=HEADERS, allow_redirects=True, timeout=12)
             if r.url and not r.url.startswith(("https://t.me/", "https://telegram.me/")):
@@ -138,7 +138,7 @@ def buscar_telegram(session):
             for post in posts[-60:]:
                 node = post.select_one(".tgme_widget_message_text")
                 if node:
-                    candidate = _candidate(source, node.get_text("\n", strip=True))
+                    candidate = _candidate(source, node.get_text("\n", strip=True), session)
                     if candidate:
                         resultados.append(candidate)
             time.sleep(0.5)
