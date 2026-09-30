@@ -4560,9 +4560,9 @@
     "categoria": "Agregar",
     "url": "https://www.soriana.com/salvo-limon-lavatrastes-liquido-1.4-lt/11186057.html",
     "precio_actual": 79.0,
-    "precio_maximo": 92.5,
-    "descuento": 15,
-    "puntuacion": 15,
+    "precio_maximo": 100.0,
+    "descuento": 21,
+    "puntuacion": 21,
     "ultima_actualizacion": "2026-09-29T18:04:42.856322+00:00",
     "precio_alertado": null
   },
@@ -4586,9 +4586,9 @@
     "categoria": "Agregar",
     "url": "https://www.soriana.com/crema-corporal-nivea-regeneracion-intensiva-72h-400-ml/2407157.html",
     "precio_actual": 87.5,
-    "precio_maximo": 117.0,
-    "descuento": 25,
-    "puntuacion": 25,
+    "precio_maximo": 119.0,
+    "descuento": 26,
+    "puntuacion": 26,
     "ultima_actualizacion": "2026-09-29T18:04:42.857712+00:00",
     "precio_alertado": null
   },
@@ -4967,7 +4967,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:04:42.880474+00:00",
-    "precio_alertado": null
+    "precio_alertado": 74.5
   },
   "4d3bf85d07bf06e5615993953deb8b2a36613a9ce050a3f46524db6c614c78a7": {
     "tienda": "Soriana",
@@ -5222,11 +5222,11 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.suburbia.com.mx/",
-    "precio_actual": 149.0,
+    "precio_actual": 249.0,
     "precio_maximo": 599.0,
-    "descuento": 75,
+    "descuento": 58,
     "puntuacion": 50,
-    "ultima_actualizacion": "2026-09-29T20:03:14.226091+00:00",
+    "ultima_actualizacion": "2026-09-30T02:27:51.016835+00:00",
     "precio_alertado": 149.0
   },
   "23f4ecb010743e3ecc35266cd2b90d66e397149b6e6d1f8c18f26c9ffe527fc6": {
@@ -5357,7 +5357,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:09:37.733208+00:00",
-    "precio_alertado": null
+    "precio_alertado": 189.0
   },
   "cbe97f03f5debe5c8c0ff5690516cf0b398373cd3c347346771455bf19aa4b19": {
     "tienda": "Suburbia",
@@ -5656,7 +5656,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:09:37.744125+00:00",
-    "precio_alertado": null
+    "precio_alertado": 549.0
   },
   "336ae841dd0cd0a7b46ecb5c5a8621221d1e3b63b44d1cfff2a0225e49be3c0d": {
     "tienda": "Suburbia",
@@ -5669,7 +5669,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:09:37.744586+00:00",
-    "precio_alertado": null
+    "precio_alertado": 299.0
   },
   "65f6365febf13c6878b26e2efde97feaf679f367fb2a6794f6a05a3b983761d3": {
     "tienda": "Suburbia",
@@ -5682,7 +5682,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-29T18:09:37.745026+00:00",
-    "precio_alertado": null
+    "precio_alertado": 499.0
   },
   "d83b279df61e74f0522cd6bea191b0a003c92203382247b4387abc0b49b343ec": {
     "tienda": "Suburbia",
@@ -5751,16 +5751,16 @@
   },
   "b6c478bb187b6ad4e07d78f391e2c70832ccabf466aca595cbda7888a703fe46": {
     "tienda": "Suburbia",
-    "titulo": "WEEKEND",
+    "titulo": "NON STOP",
     "marca": "",
     "categoria": "",
     "url": "https://www.suburbia.com.mx/tienda/home",
-    "precio_actual": 149.0,
+    "precio_actual": 134.0,
     "precio_maximo": 599.0,
-    "descuento": 75,
+    "descuento": 78,
     "puntuacion": 50,
-    "ultima_actualizacion": "2026-09-29T20:03:14.249755+00:00",
-    "precio_alertado": 149.0
+    "ultima_actualizacion": "2026-09-30T02:27:51.040093+00:00",
+    "precio_alertado": 134.0
   },
   "24ba6fcf7dc30ecbd545888a9ea7cd83d0061387f306e9b92cd1085920fd0b6d": {
     "tienda": "Suburbia",
@@ -5891,5 +5891,31 @@
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T23:41:10.679315+00:00",
     "precio_alertado": 349.0
+  },
+  "b9ca77afcd58628bca2a1faf366d6a21f717e7758fc87c037f92afde995e6a86": {
+    "tienda": "Suburbia",
+    "titulo": "$ 114 . 00 $ 229 . 00",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 114.0,
+    "precio_maximo": 229.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-09-30T02:27:51.025421+00:00",
+    "precio_alertado": 114.0
+  },
+  "826fd8d2bb2ac3107152bf4ea54a7590109cf8f961b503c820dad12900b17787": {
+    "tienda": "Suburbia",
+    "titulo": "$ 237 . 15 $ 279 . 00",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/",
+    "precio_actual": 237.0,
+    "precio_maximo": 279.0,
+    "descuento": 15,
+    "puntuacion": 15,
+    "ultima_actualizacion": "2026-09-30T02:27:51.027880+00:00",
+    "precio_alertado": null
   }
 }
