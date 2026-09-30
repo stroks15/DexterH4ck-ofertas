@@ -7,6 +7,7 @@ import requests
 
 from core.liquidation_engine import evaluate_product
 from scrapers.tiendas_mexico import buscar_todas
+from scrapers.telegram_ofertas import buscar_telegram
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -63,7 +64,10 @@ def revisar():
         historial["__meta__"] = meta
         print("Rearmado único de alertas activado: se volverán a enviar las ofertas vigentes.")
 
-    for item in buscar_todas():
+    candidatos = buscar_todas()
+    candidatos.extend(buscar_telegram(requests.Session()))
+    print(f"Fuentes adicionales Telegram: {len(candidatos)} candidatos totales")
+    for item in candidatos:
         titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
         url = str(item.get("url") or "").strip()
         tienda = str(item.get("tienda") or item.get("store") or "Desconocida").strip()
