@@ -9,6 +9,7 @@ import requests
 from core.liquidation_engine import evaluate_product
 from scrapers.tiendas_mexico import buscar_todas
 from scrapers.telegram_ofertas import buscar_telegram
+from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -80,7 +81,8 @@ def revisar():
 
     candidatos = buscar_todas()
     candidatos.extend(buscar_telegram(requests.Session()))
-    print(f"Fuentes adicionales Telegram: {len(candidatos)} candidatos totales")
+    candidatos.extend(buscar_tiendas_fisicas(requests.Session()))
+    print(f"Fuentes adicionales Telegram + físicas: {len(candidatos)} candidatos totales")
     for item in candidatos:
         titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
         url = str(item.get("url") or "").strip()
@@ -134,7 +136,12 @@ def revisar():
 
         # VERDE = descuento comprobable; ROJA = liquidación/ocasión sin referencia.
         es_descuento_real = MIN_DESCUENTO <= dcto <= MAX_DESCUENTO
+        tipo_fuente = str(item.get("tipo_fuente") or "").upper()
+        es_fisica = tipo_fuente == "FISICA"
         es_enlace = es_enlace_producto_directo(url)
+        if es_fisica:
+            host_evidencia = urlparse(url).netloc.lower()
+            es_enlace = bool(host_evidencia) and host_evidencia not in ("www.google.com", "google.com", "t.me", "telegram.me")
         tiene_precio = actual > 0
         tiene_referencia = referencia > actual
         if not tiene_precio or not es_enlace:
@@ -181,7 +188,14 @@ def revisar():
             + f"💰 Ahora: ${actual:,.2f} MXN\n"
             + referencia_texto
             + ahorro_texto
-            + f"🔗 <a href=\"{html.escape(url, quote=True)}\">VER PRODUCTO DIRECTO</a>"        )
+            + (
+                f"🏪 Sucursal: <b>{html.escape(str(item.get('sucursal') or tienda))}</b>\n"
+                f"📍 {html.escape(str(item.get('direccion') or 'Ubicación de sucursal'))}\n"
+                f"🔎 <a href=\"{html.escape(url, quote=True)}\">VER EVIDENCIA PÚBLICA</a>"
+                if es_fisica
+                else f"🔗 <a href=\"{html.escape(url, quote=True)}\">VER PRODUCTO DIRECTO</a>"
+            )
+        )
         avisos.append((clave, actual, mensaje))
 
     avisos.sort(key=lambda row: historial.get(row[0], {}).get("puntuacion", 0), reverse=True)
