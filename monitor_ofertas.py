@@ -2,6 +2,7 @@ import html
 import json
 import os
 from datetime import datetime, timezone
+from urllib.parse import urlparse
 
 import requests
 
@@ -33,6 +34,16 @@ def guardar_historial(historial):
     with open(temporal, "w", encoding="utf-8") as archivo:
         json.dump(historial, archivo, ensure_ascii=False, indent=2)
     os.replace(temporal, HISTORIAL_FILE)
+
+def es_enlace_producto_directo(url):
+    host = urlparse(url).netloc.lower()
+    path = urlparse(url).path.lower()
+    if not host or host in ("t.me", "telegram.me", "www.google.com"):
+        return False
+    if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home")):
+        return False
+    patrones = ("/dp/", "/gp/product/", "/ip/", "/mlm-", "-p-", "/pdp/", "/producto/", "/product/", "/item/")
+    return any(x in path for x in patrones) or len(path.strip("/")) > 8
 
 def enviar_telegram(texto):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
@@ -118,22 +129,18 @@ def revisar():
         if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado):
             continue
 
+        # Todas las alertas deben tener porcentaje comprobable y enlace directo.
         es_descuento_real = MIN_DESCUENTO <= dcto <= MAX_DESCUENTO
-        es_liquidacion_sin_referencia = bool(item.get("liquidacion")) and referencia <= actual
-        if not (es_descuento_real or es_liquidacion_sin_referencia):
+        if not es_descuento_real or not es_enlace_producto_directo(url):
             continue
 
-        if es_descuento_real:
-            etiqueta = "🔥 LIQUIDACIÓN" if item.get("liquidacion") else "🚨 OFERTA"
-            bloque_descuento = f"<b>{dcto}% DE DESCUENTO</b>\n"
-            referencia_texto = f"💵 Antes/referencia: $" + f"{referencia:,.2f} MXN\n"
-        else:
-            etiqueta = "🔥 LIQUIDACIÓN DETECTADA"
-            bloque_descuento = "<b>Precio de liquidación detectado</b>\n"
-            referencia_texto = ""
+        etiqueta = "🚨 OFERTA"
+        bloque_descuento = f"<b>{dcto}% DE DESCUENTO</b>\n"
+        referencia_texto = f"💵 Antes/referencia: <b>${referencia:,.2f} MXN</b>\n"
+        ahorro = max(referencia - actual, 0)
 
         marca = scoring.get("marca") or item.get("marca")
-        categoria = scoring.get("categoria") or item.get("categoria")
+        categoria = scoring.get("categoria") or item.get("categoria") or "Otros / Miscelánea"
         puntuacion = scoring.get("puntuacion", 0)
         extras = []
         if scoring.get("marca_prioritaria"):
@@ -155,9 +162,10 @@ def revisar():
             + f"⭐ Puntuación: <b>{puntuacion}/100</b>\n"
             + (f"✨ {' · '.join(extras)}\n" if extras else "")
             + "\n"
-            + "💰 Ahora: <b>$" + f"{actual:,.2f} MXN</b>\n"
+            + f"💰 Ahora: <b>${actual:,.2f} MXN</b>\n"
             + referencia_texto
-            + f"🔗 {html.escape(url)}"
+            + f"🤓💲 Ahorrado: <b>${ahorro:,.2f} MXN</b>\n"
+            + f"🔗 <a href=\"{html.escape(url, quote=True)}\">VER PRODUCTO DIRECTO</a>"
         )
         avisos.append((clave, actual, mensaje))
 
