@@ -56,7 +56,8 @@
     "Viajes y Equipaje",
     "Bicicletas y Scooters",
     "Electrodomésticos Pequeños",
-    "Temporada y Fiestas"
+    "Temporada y Fiestas",
+    "Hogar"
   ],
   "alta_demanda": [
     "Celulares",
@@ -130,7 +131,7 @@
     "ps5": "Videojuegos",
     "ps4": "Videojuegos",
     "audio": "Audio",
-    "bocina": "Bocinas",
+    "bocina": "Audio",
     "bocinas": "Audio",
     "soundbar": "Audio",
     "barra de sonido": "Audio",
@@ -256,6 +257,7 @@
     "aspiradora": "Electrodomésticos Pequeños",
     "navidad": "Temporada y Fiestas",
     "halloween": "Temporada y Fiestas",
-    "fiesta": "Temporada y Fiestas"
+    "fiesta": "Temporada y Fiestas",
+    "hogar": "Hogar"
   }
 }
