@@ -52,7 +52,7 @@ def _store(text):
     return "Telegram"
 
 def _candidate(source, text, session=None):
-    urls = [u.rstrip(".,;:!?)]}>\'"") for u in URL_RE.findall(text or "")]
+    urls = [u.rstrip(".,;:!?)]}>'\"") for u in URL_RE.findall(text or "")]
     if not urls:
         return None
     external = [u for u in urls if not u.startswith(("https://t.me/", "https://telegram.me/"))]
