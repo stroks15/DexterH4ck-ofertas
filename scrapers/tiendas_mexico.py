@@ -78,6 +78,7 @@ def producto_id(tienda, titulo, url):
     return hashlib.sha256(f"{tienda}|{canonical or titulo}".encode("utf-8")).hexdigest()
 
 def es_url_producto(url, base):
+    """Acepta únicamente enlaces que parezcan apuntar al producto, no al buscador/tienda."""
     if not url:
         return False
     parsed = urlparse(url)
@@ -85,18 +86,37 @@ def es_url_producto(url, base):
     host = parsed.netloc.lower()
     if not host or host != base_host:
         return False
-    path = parsed.path.lower()
+    path = parsed.path.lower().rstrip("/")
     full = url.lower()
-    if any(x in full for x in ("/search?", "/buscar?", "/tienda?s=", "/listado/")):
+    if not path or path in ("", "/"):
         return False
-    if path.endswith("/ofertas") or "/ofertas?" in full:
+    bloqueadas = ("/search", "/buscar", "/ofertas", "/oferta", "/marcas", "/catalogo", "/catalog", "/home", "/hot-sale", "/tienda?s=", "/listado/")
+    if any(x in full for x in bloqueadas):
         return False
-    if "chedraui.com.mx" in host:
-        if re.search(r"/p/?$", path) or re.search(r"/[^/]+/p/?$", path):
-            return True
-        if re.search(r"/\d{4,}(?:/)?$", path):
-            return True
-    return True
+    # Patrones conocidos de páginas de producto.
+    patrones = (
+        ("amazon.com.mx", ("/dp/", "/gp/product/")),
+        ("mercadolibre.com.mx", ("/mlm-", "-p-")),
+        ("walmart.com.mx", ("/ip/", "/p/")),
+        ("bodegaaurrera.com.mx", ("/ip/", "/p/")),
+        ("chedraui.com.mx", ("/p/", "/p")),
+        ("liverpool.com.mx", ("/pdp/", "/producto/", "/p/")),
+        ("coppel.com", ("/p/", "/producto/")),
+        ("suburbia.com.mx", ("/producto/", "/p/", "/tienda/p/")),
+        ("soriana.com", ("/producto/", "/p/")),
+    )
+    for dominio, rutas in patrones:
+        if dominio in host:
+            return any(r in path for r in rutas) or bool(re.search(r"/\d{5,}(?:/)?$", path))
+    # Oferstock y sitios no normalizados: exigir señales de producto.
+    if "oferstock.com.mx" in host:
+        return any(x in full for x in ("/producto", "/product", "/item", "/p/")) and len(path) > 8
+    return len(path) > 8
+
+def preparar_url_producto(url, tienda, contexto, base_url):
+    """Repara el enlace y exige que siga siendo un enlace directo de producto."""
+    reparada = reparar_url(url, tienda, contexto)
+    return reparada if es_url_producto(reparada, base_url) else ""
 
 def recorrer_json(obj):
     if isinstance(obj, dict):
@@ -132,6 +152,7 @@ def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
                 continue
             url = obj.get("url", "")
             url = urljoin(base_url, url) if url else ""
+            url = preparar_url_producto(url, tienda, titulo, base_url)
             offers = obj.get("offers", {})
             if isinstance(offers, list):
                 offers = offers[0] if offers else {}
@@ -207,7 +228,8 @@ def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
             es_liq = liquidacion_contexto or any(k in texto.lower() for k in KEYWORDS_LIQUIDACION)
             if not anterior and not es_liq:
                 continue
-            if not es_url_producto(url, base_url):
+            url = preparar_url_producto(url, tienda, texto, base_url)
+            if not url:
                 continue
             marca_detectada, _ = detect_priority_brand({"titulo": titulo, "marca": marca})
             categoria_detectada = infer_category({"titulo": titulo, "marca": marca, "categoria": categoria})
