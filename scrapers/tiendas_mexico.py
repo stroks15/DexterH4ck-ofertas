@@ -11,12 +11,16 @@ from core.liquidation_engine import detect_priority_brand, infer_category
 from core.ai_reparador import reparar_url
 
 BUSQUEDAS = [
-    "iphone", "laptop", "smart tv", "playstation", "xbox", "nintendo switch",
-    "audifonos", "smartwatch", "tenis", "refrigerador", "lavadora", "pantalla",
-    "celular", "juguetes", "belleza", "bebe", "hogar", "liquidacion", "liquidación",
-    "remate", "outlet"
+    "celular smartphone", "iphone", "laptop", "computacion", "tablet", "monitor", "impresora",
+    "smart tv", "pantalla oled", "streaming", "playstation", "xbox", "nintendo switch",
+    "audifonos", "bocinas", "camara", "smart home", "lavadora", "refrigerador", "microondas",
+    "aire acondicionado", "colchon", "muebles", "cocina", "herramientas", "jardineria",
+    "ropa", "calzado", "tenis", "bolsas", "deportes fitness", "belleza", "maquillaje",
+    "skincare", "perfumes", "bebe", "pañales", "carriola", "juguetes", "videojuegos",
+    "libros", "mascotas", "automotriz", "llantas", "papeleria oficina", "despensa",
+    "limpieza", "farmacia bienestar", "viajes equipaje", "bicicleta scooter",
+    "electrodomesticos pequeños", "temporada fiestas", "liquidacion", "remate", "outlet"
 ]
-
 TIENDAS = {
     "Walmart MX": "https://www.walmart.com.mx/search?q={q}",
     "Bodega Aurrera": "https://www.bodegaaurrera.com.mx/search?q={q}",
