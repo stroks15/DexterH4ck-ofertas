@@ -341,6 +341,8 @@ def buscar_soriana(session):
         "https://www.soriana.com/",
         "https://www.soriana.com/ofertas/",
         "https://www.soriana.com/marcas/",
+        "https://www.soriana.com/catalogo-extendido.html",
+        "https://www.soriana.com/hot-sale/",
     ]
 
     bloqueado = False
