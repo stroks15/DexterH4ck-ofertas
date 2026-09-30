@@ -1,6 +1,7 @@
 import html
 import re
 import time
+import os
 
 import requests
 from bs4 import BeautifulSoup
@@ -15,6 +16,8 @@ TELEGRAM_CHANNELS = [
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 Chrome/140 Safari/537.36", "Accept-Language": "es-MX,es;q=0.9"}
+MAX_TELEGRAM_AI = int(os.environ.get("GEMINI_MAX_TELEGRAM_AI", "18"))
+_ai_calls = 0
 PRICE_RE = re.compile(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)")
 URL_RE = re.compile(r"https?://[^\s<>\]\)"']+")
 
@@ -70,7 +73,10 @@ def _candidate(source, text):
 
     low = text.lower()
     liquidacion = any(x in low for x in ("liquidación", "liquidacion", "remate", "outlet", "última pieza", "ultima pieza", "saldo", "reacondicionado", "error de precio"))
-    ai = analizar_publicacion(text, url, tienda)
+    global _ai_calls
+    ai = analizar_publicacion(text, url, tienda) if _ai_calls < MAX_TELEGRAM_AI else {}
+    if ai:
+        _ai_calls += 1
     titulo = str(ai.get("titulo") or "").strip()
     marca = str(ai.get("marca") or "").strip()
     categoria = str(ai.get("categoria") or "").strip()
@@ -112,7 +118,7 @@ def buscar_telegram(session):
             soup = BeautifulSoup(response.text, "html.parser")
             posts = soup.select(".tgme_widget_message")
             print(f"Telegram/{source}: {len(posts)} publicaciones visibles")
-            for post in posts[-80:]:
+            for post in posts[-60:]:
                 node = post.select_one(".tgme_widget_message_text")
                 if node:
                     candidate = _candidate(source, node.get_text("\n", strip=True))
