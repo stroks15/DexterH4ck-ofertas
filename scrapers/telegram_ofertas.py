@@ -32,6 +32,13 @@ def _prices(text):
             pass
     return out
 
+def urlparse_safe(url):
+    try:
+        from urllib.parse import urlparse
+        return urlparse(url).netloc.lower().split(":")[0]
+    except Exception:
+        return ""
+
 def _store(text):
     low = (text or "").lower()
     for name, needles in [
@@ -44,7 +51,7 @@ def _store(text):
             return name
     return "Telegram"
 
-def _candidate(source, text):
+def _candidate(source, text, session=None):
     urls = [u.rstrip(".,;:!?)]}>\'"") for u in URL_RE.findall(text or "")]
     if not urls:
         return None
@@ -52,6 +59,16 @@ def _candidate(source, text):
     url = external[0] if external else urls[0]
     tienda = _store(text + " " + url)
     url = reparar_url(url, tienda, text)
+    # Convierte enlaces cortos (amzn.to/meli.la) al enlace final del producto.
+    if session and urlparse_safe(url) in ("amzn.to", "meli.la"):
+        try:
+            r = session.get(url, headers=HEADERS, allow_redirects=True, timeout=12)
+            if r.url and not r.url.startswith(("https://t.me/", "https://telegram.me/")):
+                url = reparar_url(r.url, tienda, text)
+        except requests.RequestException:
+            pass
+    if urlparse_safe(url) in ("t.me", "telegram.me"):
+        return None
 
     prices = _prices(text)
     actual = None
