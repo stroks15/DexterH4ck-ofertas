@@ -6215,7 +6215,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-30T10:08:52.531062+00:00",
-    "precio_alertado": null
+    "precio_alertado": 2599.0
   },
   "Mercado Libre|Zelda Ocarina of Time Nintendo a $1,449|https://www.mercadolibre.com.mx/social/liquid/lists": {
     "tienda": "Mercado Libre",
@@ -6228,7 +6228,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-09-30T10:08:52.531712+00:00",
-    "precio_alertado": null
+    "precio_alertado": 1449.0
   },
   "Telegram|Reloj Fossil fs4736 de $4,199 a $1,500|https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-3ad0e4a2e904f56e&btn_type=ss&btn_ref=srctok-3ad0e4a2e904f56e": {
     "tienda": "Telegram",
@@ -6319,7 +6319,7 @@
     "descuento": 7,
     "puntuacion": 7,
     "ultima_actualizacion": "2026-09-30T10:08:52.534644+00:00",
-    "precio_alertado": null
+    "precio_alertado": 12259.0
   },
   "Mercado Libre|Iphone 17 Pro Max a $21,290 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BCCAs0NWhiwIRoDiyixy3k7l0GczEb%2FrqlC4CkZ68BN4DHOEtNdmqFpbTQoy0SvVt3Q5jHWX94D8MiUaSSCyGCBal1RntN9gA12giKyIpd1%2FXl7tuIr6vaX5g7NQVyxUoa21gDSpQ2uvQ9FXxA4RUrCjyg5z5q%2FVVJy8q8nWScFwvtWykMbkVfHUR2zaybdxPcdiCjE%3D": {
     "tienda": "Mercado Libre",
@@ -6345,7 +6345,7 @@
     "descuento": 7,
     "puntuacion": 7,
     "ultima_actualizacion": "2026-09-30T10:08:52.535507+00:00",
-    "precio_alertado": null
+    "precio_alertado": 14322.0
   },
   "Mercado Libre|Nintendo Switch 2 + Mario + Controles a $9,378 con Banamex|https://www.mercadolibre.com.mx/social/liquid/lists": {
     "tienda": "Mercado Libre",
@@ -7632,7 +7632,7 @@
     "descuento": 0,
     "puntuacion": 0,
     "ultima_actualizacion": "2026-10-01T06:02:16.006102+00:00",
-    "precio_alertado": null
+    "precio_alertado": 499.5
   },
   "Mercado Libre|MercadoLibre: Disfraz De Dinosaurio Inflable Halloween Navidad|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBrggC1Mv458d4yU9vfNtDu2Q0dd0W7X3r2eNTFunBWtOQV5jrv35lxxqv4SJ54OGY%2BX1ryC6J%2FQPBKWq9r7sZIWJNRhASvr84kBjXABXwx%2FipcnU%2FjW9WWiLUhXsTSR3W8%2F6Yx3UeYjrN4k268arkoq%2Bwvy9WkRpUxb%2FEqyY1DU4mOsj69ijBF1JQzild3OUOf7SQ%3D%3D": {
     "tienda": "Mercado Libre",
@@ -7776,5 +7776,135 @@
     "puntuacion": 0,
     "ultima_actualizacion": "2026-10-01T06:02:16.021909+00:00",
     "precio_alertado": null
+  },
+  "Amazon|Amazon: Sony Interactive Entertainment Marvel's Wolverine - Playstation 5|https://www.amazon.com.mx/dp/B0GSX5RJ2B?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Sony Interactive Entertainment Marvel's Wolverine - Playstation 5",
+    "marca": "",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0GSX5RJ2B?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1299.0,
+    "precio_maximo": 1499.0,
+    "descuento": 13,
+    "puntuacion": 28,
+    "ultima_actualizacion": "2026-10-01T12:35:45.326722+00:00",
+    "precio_alertado": 1299.0
+  },
+  "Amazon|-40% de descuento|https://www.amazon.com.mx/dp/B0BYTMZNWW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "-40% de descuento",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BYTMZNWW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 184.0,
+    "precio_maximo": 306.0,
+    "descuento": 40,
+    "puntuacion": 40,
+    "ultima_actualizacion": "2026-10-01T12:35:45.327849+00:00",
+    "precio_alertado": 184.0
+  },
+  "Amazon|-41% de descuento|https://www.amazon.com.mx/dp/B0F4RJXBBS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "-41% de descuento",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F4RJXBBS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 151.0,
+    "precio_maximo": 257.52,
+    "descuento": 41,
+    "puntuacion": 41,
+    "ultima_actualizacion": "2026-10-01T12:35:45.328920+00:00",
+    "precio_alertado": 151.0
+  },
+  "Amazon|Amazon: HUGO BOSS, Fragancia para Hombre, BOSS Bottled Night, Eau de Toilette, Aroma Seductor, Amaderado y Exótico, 100 ML|https://www.amazon.com.mx/dp/B003TNITJO?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: HUGO BOSS, Fragancia para Hombre, BOSS Bottled Night, Eau de Toilette, Aroma Seductor, Amaderado y Exótico, 100 ML",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B003TNITJO?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 533.95,
+    "precio_maximo": 950.0,
+    "descuento": 44,
+    "puntuacion": 44,
+    "ultima_actualizacion": "2026-10-01T12:35:45.329475+00:00",
+    "precio_alertado": 533.95
+  },
+  "Amazon|PRECIO MAS BAJO EN LONCHERA PORTÁTIL|https://www.amazon.com.mx/dp/B0F1TY5DY6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO EN LONCHERA PORTÁTIL",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F1TY5DY6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.0,
+    "precio_maximo": 259.0,
+    "descuento": 62,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-10-01T12:35:45.330645+00:00",
+    "precio_alertado": 99.0
+  },
+  "Amazon|PRECIO MAS BAJO: CABLE INFINITO DE HALO INFINITE MASTER CHIEF|https://www.amazon.com.mx/dp/B08KJHDDRK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO: CABLE INFINITO DE HALO INFINITE MASTER CHIEF",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08KJHDDRK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 349.0,
+    "precio_maximo": 799.0,
+    "descuento": 56,
+    "puntuacion": 50,
+    "ultima_actualizacion": "2026-10-01T12:35:45.331945+00:00",
+    "precio_alertado": 349.0
+  },
+  "Telegram|Reloj Fossil fs4736 de $4,199 a $1,500|https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-11e851dc4e8a49c3&btn_type=ss&btn_ref=srctok-11e851dc4e8a49c3": {
+    "tienda": "Telegram",
+    "titulo": "Reloj Fossil fs4736 de $4,199 a $1,500",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-11e851dc4e8a49c3&btn_type=ss&btn_ref=srctok-11e851dc4e8a49c3",
+    "precio_actual": 4199.0,
+    "precio_maximo": 4199.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "ultima_actualizacion": "2026-10-01T12:35:45.335538+00:00",
+    "precio_alertado": 4199.0
+  },
+  "Telegram|Crema Facial Nivea 200ml de $96 a $29|https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-73b28b6189bacb0f&btn_type=ss&btn_ref=srctok-73b28b6189bacb0f": {
+    "tienda": "Telegram",
+    "titulo": "Crema Facial Nivea 200ml de $96 a $29",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-73b28b6189bacb0f&btn_type=ss&btn_ref=srctok-73b28b6189bacb0f",
+    "precio_actual": 96.0,
+    "precio_maximo": 96.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "ultima_actualizacion": "2026-10-01T12:35:45.336694+00:00",
+    "precio_alertado": 96.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-2397b40c4f3a149e&btn_type=ss&btn_ref=srctok-2397b40c4f3a149e": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-2397b40c4f3a149e&btn_type=ss&btn_ref=srctok-2397b40c4f3a149e",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "ultima_actualizacion": "2026-10-01T12:35:45.338321+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-58f9fc968761e329&btn_type=ss&btn_ref=srctok-58f9fc968761e329": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-58f9fc968761e329&btn_type=ss&btn_ref=srctok-58f9fc968761e329",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "ultima_actualizacion": "2026-10-01T12:35:45.341720+00:00",
+    "precio_alertado": 999.0
   }
 }
