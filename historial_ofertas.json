@@ -6207,15 +6207,26 @@
   "Mercado Libre|Tablet Lenovo del Mundial 2026 a $2,599|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BBmQwYIyK4qWKrOw%2BOCgH%2Bbpfmx%2Ff4Q5fCl47e7VZv3H2XNXM0zNnNcuDD%2FK%2Boj6yaAA0dbpbEyRryJkYF2oZiC5yy5Nekywv4tNbej5povogJIPe1QmPVYVFAwlH648ML4jXjh%2Be74zRnchpEMwlsx8zvalM4kIO%2F9Vi%2FojMt7li3x%2FdvED3xiJ9a7bXoR%2BZ2DOLxU%3D": {
     "tienda": "Mercado Libre",
     "titulo": "Tablet Lenovo del Mundial 2026 a $2,599",
-    "marca": "",
+    "marca": "Lenovo",
     "categoria": "Tablets",
     "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BBmQwYIyK4qWKrOw%2BOCgH%2Bbpfmx%2Ff4Q5fCl47e7VZv3H2XNXM0zNnNcuDD%2FK%2Boj6yaAA0dbpbEyRryJkYF2oZiC5yy5Nekywv4tNbej5povogJIPe1QmPVYVFAwlH648ML4jXjh%2Be74zRnchpEMwlsx8zvalM4kIO%2F9Vi%2FojMt7li3x%2FdvED3xiJ9a7bXoR%2BZ2DOLxU%3D",
     "precio_actual": 2599.0,
     "precio_maximo": 2599.0,
     "descuento": 0,
-    "puntuacion": 0,
+    "puntuacion": 20,
     "ultima_actualizacion": "2026-09-30T10:08:52.531062+00:00",
-    "precio_alertado": 2599.0
+    "precio_alertado": 2599.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Mercado Libre|Zelda Ocarina of Time Nintendo a $1,449|https://www.mercadolibre.com.mx/social/liquid/lists": {
     "tienda": "Mercado Libre",
@@ -6280,20 +6291,42 @@
     "descuento": 5,
     "puntuacion": 20,
     "ultima_actualizacion": "2026-09-30T10:08:52.533488+00:00",
-    "precio_alertado": 22000.0
+    "precio_alertado": 22000.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Mercado Libre|Nintendo Switch 2 + Mario a $8,400 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BEq9UDPO0zIL7o%2FJkWozBnA55hwplsZi1VYAz4HGW%2BLdhV7SCduAz8tYYepb%2BGgSa2kvRb3JTxc6FsgoymYdNMQxu%2FFOE7K9GuvW%2FBmOs6TL4oWbVYA0F5pUok8OvFX77XEmyGbYP54Mern8hd7DDLT7Cgt7gksqzYhnly9fsHmCa5Z57aOwIqbzcTUFo1OLsk6fsjs%3D": {
     "tienda": "Mercado Libre",
     "titulo": "Nintendo Switch 2 + Mario a $8,400 con Banamex",
-    "marca": "",
+    "marca": "Nintendo",
     "categoria": "Consolas",
     "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BEq9UDPO0zIL7o%2FJkWozBnA55hwplsZi1VYAz4HGW%2BLdhV7SCduAz8tYYepb%2BGgSa2kvRb3JTxc6FsgoymYdNMQxu%2FFOE7K9GuvW%2FBmOs6TL4oWbVYA0F5pUok8OvFX77XEmyGbYP54Mern8hd7DDLT7Cgt7gksqzYhnly9fsHmCa5Z57aOwIqbzcTUFo1OLsk6fsjs%3D",
     "precio_actual": 8400.0,
     "precio_maximo": 9389.0,
     "descuento": 11,
-    "puntuacion": 26,
+    "puntuacion": 46,
     "ultima_actualizacion": "2026-09-30T10:08:52.533715+00:00",
-    "precio_alertado": 8400.0
+    "precio_alertado": 8400.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-46ca8fdc2a539212&btn_type=ss&btn_ref=srctok-46ca8fdc2a539212": {
     "tienda": "Telegram",
@@ -6319,7 +6352,18 @@
     "descuento": 7,
     "puntuacion": 7,
     "ultima_actualizacion": "2026-09-30T10:08:52.534644+00:00",
-    "precio_alertado": 12259.0
+    "precio_alertado": 12259.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Mercado Libre|Iphone 17 Pro Max a $21,290 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BCCAs0NWhiwIRoDiyixy3k7l0GczEb%2FrqlC4CkZ68BN4DHOEtNdmqFpbTQoy0SvVt3Q5jHWX94D8MiUaSSCyGCBal1RntN9gA12giKyIpd1%2FXl7tuIr6vaX5g7NQVyxUoa21gDSpQ2uvQ9FXxA4RUrCjyg5z5q%2FVVJy8q8nWScFwvtWykMbkVfHUR2zaybdxPcdiCjE%3D": {
     "tienda": "Mercado Libre",
@@ -6332,7 +6376,18 @@
     "descuento": 4,
     "puntuacion": 19,
     "ultima_actualizacion": "2026-09-30T10:08:52.534875+00:00",
-    "precio_alertado": 21290.0
+    "precio_alertado": 21290.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Mercado Libre|Galaxy S26 Ultra a $14,322 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BMHwa8qhJpAdeGM5c93VQVnwiKm8TKWWxST%2F8nphpBJpFlnYGd0Xd8E26cyAgiTD7aKJ1lbbllo9qlgq7Vuf7zljtEJHhDOdTBZ4vYYgTlGLsPWCnaHVSxmcjQu%2FnCrIUcCo8piLZ%2B6KLv2rh%2Fr%2FPg5RX%2FxB12U6oryFTEzTDcOPIZfhXO0S5j%2F0%2BCbuxZ8m8I41jVc%3D": {
     "tienda": "Mercado Libre",
@@ -6345,7 +6400,18 @@
     "descuento": 7,
     "puntuacion": 7,
     "ultima_actualizacion": "2026-09-30T10:08:52.535507+00:00",
-    "precio_alertado": 14322.0
+    "precio_alertado": 14322.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Mercado Libre|Nintendo Switch 2 + Mario + Controles a $9,378 con Banamex|https://www.mercadolibre.com.mx/social/liquid/lists": {
     "tienda": "Mercado Libre",
@@ -7728,15 +7794,26 @@
   "Mercado Libre|Nintendo Switch 2 + Pro Control a $8,300 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIctpVmNlhRq7z5JtJFbA3R5bWJoHP7nEjqmrSBCRXi68bCI8b9djQecWvcDHzaw0wJYVqPioQSUg6qeLFUmk1gE6tZPT1b8sBzlYkG1Bx4Uu6meoafuj7HrKPWTKMudwCEM2x1moxyyre8aGGkV6peS%2FEdrO6%2BIfPtqJ2ZR1KKz6VeWPz%2FkkR%2B4m6Eq56z4xRiHvdlPUzIdvRBOCg%3D%3D": {
     "tienda": "Mercado Libre",
     "titulo": "Nintendo Switch 2 + Pro Control a $8,300 con Banamex",
-    "marca": "",
+    "marca": "Nintendo",
     "categoria": "Consolas",
     "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIctpVmNlhRq7z5JtJFbA3R5bWJoHP7nEjqmrSBCRXi68bCI8b9djQecWvcDHzaw0wJYVqPioQSUg6qeLFUmk1gE6tZPT1b8sBzlYkG1Bx4Uu6meoafuj7HrKPWTKMudwCEM2x1moxyyre8aGGkV6peS%2FEdrO6%2BIfPtqJ2ZR1KKz6VeWPz%2FkkR%2B4m6Eq56z4xRiHvdlPUzIdvRBOCg%3D%3D",
     "precio_actual": 8300.0,
     "precio_maximo": 9303.0,
     "descuento": 11,
-    "puntuacion": 26,
+    "puntuacion": 46,
     "ultima_actualizacion": "2026-10-01T06:02:16.016684+00:00",
-    "precio_alertado": 8300.0
+    "precio_alertado": 8300.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-36ebf21a1d0aa977&btn_type=ss&btn_ref=srctok-36ebf21a1d0aa977": {
     "tienda": "Telegram",
@@ -7754,15 +7831,26 @@
   "Mercado Libre|Nintendo Switch 2 + Mario + Controles a $9,378 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIctpVmNlhRq7z5JtJFbA3R5bWJoHP7nEjqmrSBCRXi68bCI8b9djQecWvcDHzaw0wJYVqPioQSUg6qeLFUmk1gE6tZPT1b8sBzlYkG1Bx4Uu6meoafuj7HrKPWTKMudwCEM2x1moxyyre8aGGkV6peS%2FEdrO6%2BIfPtqJ2ZR1KKz6VeWPz%2FkkR%2B4m6Eq56z4xRiHvdlPUzIdvRBOCg%3D%3D": {
     "tienda": "Mercado Libre",
     "titulo": "Nintendo Switch 2 + Mario + Controles a $9,378 con Banamex",
-    "marca": "",
+    "marca": "Nintendo",
     "categoria": "Consolas",
     "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIctpVmNlhRq7z5JtJFbA3R5bWJoHP7nEjqmrSBCRXi68bCI8b9djQecWvcDHzaw0wJYVqPioQSUg6qeLFUmk1gE6tZPT1b8sBzlYkG1Bx4Uu6meoafuj7HrKPWTKMudwCEM2x1moxyyre8aGGkV6peS%2FEdrO6%2BIfPtqJ2ZR1KKz6VeWPz%2FkkR%2B4m6Eq56z4xRiHvdlPUzIdvRBOCg%3D%3D",
     "precio_actual": 9378.0,
     "precio_maximo": 10378.0,
     "descuento": 10,
-    "puntuacion": 25,
+    "puntuacion": 45,
     "ultima_actualizacion": "2026-10-01T06:02:16.021430+00:00",
-    "precio_alertado": 9378.0
+    "precio_alertado": 9378.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    }
   },
   "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-2b4fa5c513c0a957&btn_type=ss&btn_ref=srctok-2b4fa5c513c0a957": {
     "tienda": "Telegram",
@@ -9817,5 +9905,903 @@
     "puntuacion": 9,
     "ultima_actualizacion": "2026-10-02T20:05:08.966119+00:00",
     "precio_alertado": 35.0
+  },
+  "Amazon|Amazon: Ninja Foodi Freidora de Aire DualZone 8QT 6 en 1 Gris DZ201|https://www.amazon.com.mx/dp/B089TQWJKK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Ninja Foodi Freidora de Aire DualZone 8QT 6 en 1 Gris DZ201",
+    "marca": "Ninja",
+    "categoria": "Electrodomésticos Pequeños",
+    "url": "https://www.amazon.com.mx/dp/B089TQWJKK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2462.4,
+    "precio_maximo": 4699.0,
+    "descuento": 48,
+    "puntuacion": 68,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.314727+00:00",
+    "precio_alertado": 2462.4
+  },
+  "Amazon|¡DIVERSIÓN Y PROTECCIÓN EN UN SOLO TAPETE RASCADOR!|https://www.amazon.com.mx/dp/B0GVKNBHXV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡DIVERSIÓN Y PROTECCIÓN EN UN SOLO TAPETE RASCADOR!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GVKNBHXV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 242.1,
+    "precio_maximo": 298.0,
+    "descuento": 19,
+    "puntuacion": 19,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.316547+00:00",
+    "precio_alertado": 242.1
+  },
+  "Mercado Libre|MercadoLibre: 2.1m Inflable del Día de los Muertos Decoración Exterior, Cráneo Azúcar, Con Luces LED, Halloween Inflable para Jardín|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGLVQrmXJ09ZfVX3s5rQ4a8jic2UrVUDvaTJWSyhH8UbJkWjO%2BNLOHIQbLHQUpg9P7liqY%2BUK7SVMj3MbUoV11%2BmU6G5TXttDzX6MDOvhqG1a2CIZJXIELcb84qu0qrdw%2F%2F9OKlSa3s9NTJ6SVwJuCAd9BsLhbGVw2zS07afx0KmVF8M3p10IWSYCwEeKJa%2FwAttaGY%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: 2.1m Inflable del Día de los Muertos Decoración Exterior, Cráneo Azúcar, Con Luces LED, Halloween Inflable para Jardín",
+    "marca": "",
+    "categoria": "Decoración",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGLVQrmXJ09ZfVX3s5rQ4a8jic2UrVUDvaTJWSyhH8UbJkWjO%2BNLOHIQbLHQUpg9P7liqY%2BUK7SVMj3MbUoV11%2BmU6G5TXttDzX6MDOvhqG1a2CIZJXIELcb84qu0qrdw%2F%2F9OKlSa3s9NTJ6SVwJuCAd9BsLhbGVw2zS07afx0KmVF8M3p10IWSYCwEeKJa%2FwAttaGY%3D",
+    "precio_actual": 825.26,
+    "precio_maximo": 4000.0,
+    "descuento": 79,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.317506+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: SAMSUNG Galaxy SmartTag2 1 Pack Negro|https://www.amazon.com.mx/dp/B0CL5M3HFV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: SAMSUNG Galaxy SmartTag2 1 Pack Negro",
+    "marca": "Samsung",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CL5M3HFV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 289.0,
+    "precio_maximo": 399.0,
+    "descuento": 28,
+    "puntuacion": 48,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.319035+00:00",
+    "precio_alertado": 289.0
+  },
+  "Amazon|¡RELOJ SKECHERS SR6320 EN ROSA!|https://www.amazon.com.mx/dp/B0DSQP6PF4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡RELOJ SKECHERS SR6320 EN ROSA!",
+    "marca": "Skechers",
+    "categoria": "Relojes",
+    "url": "https://www.amazon.com.mx/dp/B0DSQP6PF4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 319.0,
+    "precio_maximo": 799.0,
+    "descuento": 60,
+    "puntuacion": 70,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.319778+00:00",
+    "precio_alertado": 319.0
+  },
+  "Mercado Libre|MercadoLibre: Esmeril De Banco 5 Pulgadas 120W 3500 RPM Adir 906|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BFj3lzMSsJZ4iDn0Kz0xFwPNPAsEfDKTacpa61HKqHHcjnR9n%2B9yKFMylEifju7tXg3MvaU%2FKV9%2FOxadSalCZNfqU%2BaE6glXopgN9YXFKljaoMro%2FU3gqDUKrHalId8U2FfP9mUw%2BmvbN31lBmcxfaNWsL3ZVIeiIDCoZ9SbH0x2rRthQAQzxMoKkgQbZrqvOvagkS4%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Esmeril De Banco 5 Pulgadas 120W 3500 RPM Adir 906",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BFj3lzMSsJZ4iDn0Kz0xFwPNPAsEfDKTacpa61HKqHHcjnR9n%2B9yKFMylEifju7tXg3MvaU%2FKV9%2FOxadSalCZNfqU%2BaE6glXopgN9YXFKljaoMro%2FU3gqDUKrHalId8U2FfP9mUw%2BmvbN31lBmcxfaNWsL3ZVIeiIDCoZ9SbH0x2rRthQAQzxMoKkgQbZrqvOvagkS4%3D",
+    "precio_actual": 586.0,
+    "precio_maximo": 586.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.321546+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|RUTINA EXPRESS ACLARA DE GARNIER CON 3 PIEZAS|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BIKp%2BDhdElScKWUo8oPolZ3fX79Mcu%2Frj5Bh7rHiGA%2Fp%2BcO3DvewEoaHbgsNkxlvcGh9mtKenKAWYPuANuxax2EgiAsV70q5f1E1L3ls3odIpSDv59nYOiR2uI86AKc1kP6OX43MiCBggfmo8AfjEC6phwP42tXEe32OHrwzyhamxBVdlLdVvKfK5B0VUnNY7OFWTFU%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "RUTINA EXPRESS ACLARA DE GARNIER CON 3 PIEZAS",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BIKp%2BDhdElScKWUo8oPolZ3fX79Mcu%2Frj5Bh7rHiGA%2Fp%2BcO3DvewEoaHbgsNkxlvcGh9mtKenKAWYPuANuxax2EgiAsV70q5f1E1L3ls3odIpSDv59nYOiR2uI86AKc1kP6OX43MiCBggfmo8AfjEC6phwP42tXEe32OHrwzyhamxBVdlLdVvKfK5B0VUnNY7OFWTFU%3D",
+    "precio_actual": 293.0,
+    "precio_maximo": 580.0,
+    "descuento": 49,
+    "puntuacion": 49,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.323180+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡EXCLUSIVA DUFFLEBAG NEGRA DE CLOE PARA MUJER!|https://www.amazon.com.mx/dp/B0H1NFJSY6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡EXCLUSIVA DUFFLEBAG NEGRA DE CLOE PARA MUJER!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H1NFJSY6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1559.0,
+    "precio_maximo": 2599.0,
+    "descuento": 40,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.324813+00:00",
+    "precio_alertado": 1559.0
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE! CORTINA BLACKOUT 4PZS|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAVdZI7Yp8RBna5HkcdO4cjrTykVUZ9C3Er9WsZvZS3Es6nhEEYhyUwx5TlDYhZt%2BTgAtbBSEqeU9n703s0JtG1maRxqdANoxCUOoAPYA5cT4qDXyoSeJSVBfgn9L2ZtsOmT5FSn%2FTR0wNkgOOA8rJCV23CejIdVLrzz0oBVvXRE%2BXOKPn2tPNsn4Tyn2136ZYBDeg%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE! CORTINA BLACKOUT 4PZS",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAVdZI7Yp8RBna5HkcdO4cjrTykVUZ9C3Er9WsZvZS3Es6nhEEYhyUwx5TlDYhZt%2BTgAtbBSEqeU9n703s0JtG1maRxqdANoxCUOoAPYA5cT4qDXyoSeJSVBfgn9L2ZtsOmT5FSn%2FTR0wNkgOOA8rJCV23CejIdVLrzz0oBVvXRE%2BXOKPn2tPNsn4Tyn2136ZYBDeg%3D%3D",
+    "precio_actual": 168.0,
+    "precio_maximo": 298.0,
+    "descuento": 44,
+    "puntuacion": 44,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.326395+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡DISFRUTA DE LOS ICE BREAKERS DE GOMA DE UVA!|https://www.amazon.com.mx/dp/B01J278YIQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡DISFRUTA DE LOS ICE BREAKERS DE GOMA DE UVA!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B01J278YIQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 232.21,
+    "precio_maximo": 338.5,
+    "descuento": 31,
+    "puntuacion": 31,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.328012+00:00",
+    "precio_alertado": 232.21
+  },
+  "Mercado Libre|¡OFERTÓN EN TIRAS DE LED COB 10M!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDSJeVZnrZZWtDPOFFZogL96VKVt8u9YK%2FUEJ1lm%2Bk7lUTf8D7h7R0WrLzgewAezCdHKQ8Jq3rf%2BmADAys7PSeRI%2Bf9HnZm5zNNe%2BJvb8siU0tUPeIElC5rKR3RyfSMWGjGBawmVf1qi1KXtTJnqBiyDukcSKTWi%2BzPynbvlwzG0LqAjDG%2B8QkquBJmV9H3tNm%2FXibk%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTÓN EN TIRAS DE LED COB 10M!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDSJeVZnrZZWtDPOFFZogL96VKVt8u9YK%2FUEJ1lm%2Bk7lUTf8D7h7R0WrLzgewAezCdHKQ8Jq3rf%2BmADAys7PSeRI%2Bf9HnZm5zNNe%2BJvb8siU0tUPeIElC5rKR3RyfSMWGjGBawmVf1qi1KXtTJnqBiyDukcSKTWi%2BzPynbvlwzG0LqAjDG%2B8QkquBJmV9H3tNm%2FXibk%3D",
+    "precio_actual": 297.0,
+    "precio_maximo": 871.0,
+    "descuento": 66,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.329562+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|BALSAMO ULTRA REPARADOR DE LA ROCHE POSAY|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BOT37juyDpJwVkruRPNHPFaCr0csvDKI%2FflUhESuoIFK%2FsJC0dCGmZKgH2JUUZrtYGeUUpwVNGB316tLSX3y2euTUSjIiaNVUaMW0KvMiyq6WsrlK9lrdZINjMq5L7P1Yt9tQmZmJfj2ENRRilw6WI3bdCK6d9Ax93PyIIRgb1yzKwU%2Bb3YAytJTLuBdIA6%2Foa3I%2BZM%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "BALSAMO ULTRA REPARADOR DE LA ROCHE POSAY",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BOT37juyDpJwVkruRPNHPFaCr0csvDKI%2FflUhESuoIFK%2FsJC0dCGmZKgH2JUUZrtYGeUUpwVNGB316tLSX3y2euTUSjIiaNVUaMW0KvMiyq6WsrlK9lrdZINjMq5L7P1Yt9tQmZmJfj2ENRRilw6WI3bdCK6d9Ax93PyIIRgb1yzKwU%2Bb3YAytJTLuBdIA6%2Foa3I%2BZM%3D",
+    "precio_actual": 229.0,
+    "precio_maximo": 399.0,
+    "descuento": 43,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.331154+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|-38% de descuento|https://www.amazon.com.mx/dp/B0034XPHI0?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "-38% de descuento",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0034XPHI0?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 492.8,
+    "precio_maximo": 789.0,
+    "descuento": 38,
+    "puntuacion": 38,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.332612+00:00",
+    "precio_alertado": 492.8
+  },
+  "Mercado Libre|¡ORGANIZADOR DE BAÑO DE 3 NIVELES!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMrgvts7UMpnfHsDV8e4Fzy%2BpKX34jMEb0Sze%2BOUas6uqqq9v%2BFC1GVK4Jzr%2Fnd%2FmC4v5SeFhfS2ma19CBzA3QnErBx7Gi39HELtUn2QsYUtHqVy3orPHsV53rZXEILPew1MQ71R%2FewCAPYB6wGBtnMyZeWZivei3hnRDH7b5GrmewLZv62fDJ3w3ESxlKRRxCHKS2k%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡ORGANIZADOR DE BAÑO DE 3 NIVELES!",
+    "marca": "",
+    "categoria": "Baño",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMrgvts7UMpnfHsDV8e4Fzy%2BpKX34jMEb0Sze%2BOUas6uqqq9v%2BFC1GVK4Jzr%2Fnd%2FmC4v5SeFhfS2ma19CBzA3QnErBx7Gi39HELtUn2QsYUtHqVy3orPHsV53rZXEILPew1MQ71R%2FewCAPYB6wGBtnMyZeWZivei3hnRDH7b5GrmewLZv62fDJ3w3ESxlKRRxCHKS2k%3D",
+    "precio_actual": 439.0,
+    "precio_maximo": 748.0,
+    "descuento": 41,
+    "puntuacion": 41,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.333396+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡CREA UN MUNDO MAGICO CON PLAYMOBIL!|https://www.amazon.com.mx/dp/B0D1XYRRJG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡CREA UN MUNDO MAGICO CON PLAYMOBIL!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D1XYRRJG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 314.5,
+    "precio_maximo": 899.0,
+    "descuento": 65,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.334944+00:00",
+    "precio_alertado": 314.5
+  },
+  "Mercado Libre|MercadoLibre: Inflable Halloween Parca Esqueleto Gigante 1.8m Guadana Led Negro|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLrqF2TM9BaoxTtCkAaoUwLz0zWqzU%2FzrEZ6Ilvr%2BHqcnpZlRRbmaBS1RiM%2FiZUXDIo%2Bj61vGBn72MuJf6LOsMgDjkGf1qCEP9OMM2ftF9YOCBRwezJMYbYLcuaPs%2Bk79uSymU%2BZA3cpaPtFZVbDptavNhb%2B1SEZMb2LeQ9qLOPlfSkDkVpqCiFR59kKQ%2FBobrlg0w%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Inflable Halloween Parca Esqueleto Gigante 1.8m Guadana Led Negro",
+    "marca": "",
+    "categoria": "Halloween",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLrqF2TM9BaoxTtCkAaoUwLz0zWqzU%2FzrEZ6Ilvr%2BHqcnpZlRRbmaBS1RiM%2FiZUXDIo%2Bj61vGBn72MuJf6LOsMgDjkGf1qCEP9OMM2ftF9YOCBRwezJMYbYLcuaPs%2Bk79uSymU%2BZA3cpaPtFZVbDptavNhb%2B1SEZMb2LeQ9qLOPlfSkDkVpqCiFR59kKQ%2FBobrlg0w%3D%3D",
+    "precio_actual": 629.0,
+    "precio_maximo": 629.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.335769+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|OFERTA IMPERDIBLE: SOLDADORA INVERSORA 200A 2 EN 1!|https://www.amazon.com.mx/dp/B0FGT28M93?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "OFERTA IMPERDIBLE: SOLDADORA INVERSORA 200A 2 EN 1!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FGT28M93?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 566.27,
+    "precio_maximo": 682.29,
+    "descuento": 17,
+    "puntuacion": 17,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.337425+00:00",
+    "precio_alertado": 566.27
+  },
+  "Amazon|Amazon: Samsung 50W USB-C Duo Power Adapter + 1.8m USB-C Cable|https://www.amazon.com.mx/dp/B0D45WT7VT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Samsung 50W USB-C Duo Power Adapter + 1.8m USB-C Cable",
+    "marca": "Samsung",
+    "categoria": "Accesorios de Computación",
+    "url": "https://www.amazon.com.mx/dp/B0D45WT7VT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 469.0,
+    "precio_maximo": 999.0,
+    "descuento": 53,
+    "puntuacion": 70,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.338170+00:00",
+    "precio_alertado": 469.0
+  },
+  "Mercado Libre|MercadoLibre: Pokemon TCG: Dominio Delta - Booster Bundle en Español|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKm6VBuWbYUOFnOMJQKCRwYhBJYo6IuAzehFnQVZ%2FT%2FFbiA%2FdsHAIbM3k86h3ah9TkupF51oIF7DHUkMzjIPxDgJhtvmLy1TFHuYxdGjOI2vUO%2BVbgXTHcZ2CLTu%2BT1aGpI7Jt%2F8CctSe3NZcZdc31CIn86f7aBmkkIiNmyPBGOYs1JJF2%2Ftm8oXXYbT5TtWhpTCu5M%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Pokemon TCG: Dominio Delta - Booster Bundle en Español",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKm6VBuWbYUOFnOMJQKCRwYhBJYo6IuAzehFnQVZ%2FT%2FFbiA%2FdsHAIbM3k86h3ah9TkupF51oIF7DHUkMzjIPxDgJhtvmLy1TFHuYxdGjOI2vUO%2BVbgXTHcZ2CLTu%2BT1aGpI7Jt%2F8CctSe3NZcZdc31CIn86f7aBmkkIiNmyPBGOYs1JJF2%2Ftm8oXXYbT5TtWhpTCu5M%3D",
+    "precio_actual": 560.0,
+    "precio_maximo": 560.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.339910+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡LIMPIEZA PROFUNDA CON REDLEMON!|https://www.amazon.com.mx/dp/B0GRCDCH95?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡LIMPIEZA PROFUNDA CON REDLEMON!",
+    "marca": "",
+    "categoria": "Limpieza del Hogar",
+    "url": "https://www.amazon.com.mx/dp/B0GRCDCH95?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1799.0,
+    "precio_maximo": 2599.0,
+    "descuento": 31,
+    "puntuacion": 31,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.340743+00:00",
+    "precio_alertado": 1799.0
+  },
+  "Mercado Libre|Zelda Ocarina of Time Nintendo a $1,449|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Zelda Ocarina of Time Nintendo a $1,449",
+    "marca": "Nintendo",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D",
+    "precio_actual": 1449.0,
+    "precio_maximo": 1449.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.342972+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Reloj Fossil fs4736 de $4,199 a $1,500|https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-782deb35e1da41b9&btn_type=ss&btn_ref=srctok-782deb35e1da41b9": {
+    "tienda": "Telegram",
+    "titulo": "Reloj Fossil fs4736 de $4,199 a $1,500",
+    "marca": "",
+    "categoria": "Relojes",
+    "url": "https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-782deb35e1da41b9&btn_type=ss&btn_ref=srctok-782deb35e1da41b9",
+    "precio_actual": 4199.0,
+    "precio_maximo": 4199.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.343714+00:00",
+    "precio_alertado": 4199.0
+  },
+  "Telegram|Crema Facial Nivea 200ml de $96 a $29|https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-19bdded7a53ccaf5&btn_type=ss&btn_ref=srctok-19bdded7a53ccaf5": {
+    "tienda": "Telegram",
+    "titulo": "Crema Facial Nivea 200ml de $96 a $29",
+    "marca": "Nivea",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-19bdded7a53ccaf5&btn_type=ss&btn_ref=srctok-19bdded7a53ccaf5",
+    "precio_actual": 96.0,
+    "precio_maximo": 96.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.345183+00:00",
+    "precio_alertado": 96.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-4e77aa100878e0fe&btn_type=ss&btn_ref=srctok-4e77aa100878e0fe": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-4e77aa100878e0fe&btn_type=ss&btn_ref=srctok-4e77aa100878e0fe",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.348059+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-63ebea213c007fc5&btn_type=ss&btn_ref=srctok-63ebea213c007fc5": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-63ebea213c007fc5&btn_type=ss&btn_ref=srctok-63ebea213c007fc5",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.353239+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-17ded4b9611293a9&btn_type=ss&btn_ref=srctok-17ded4b9611293a9": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-17ded4b9611293a9&btn_type=ss&btn_ref=srctok-17ded4b9611293a9",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.353940+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-5f987572113ebf7f&btn_type=ss&btn_ref=srctok-5f987572113ebf7f": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-5f987572113ebf7f&btn_type=ss&btn_ref=srctok-5f987572113ebf7f",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.355567+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-6a2bd3b94533e8e6&btn_type=ss&btn_ref=srctok-6a2bd3b94533e8e6": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-6a2bd3b94533e8e6&btn_type=ss&btn_ref=srctok-6a2bd3b94533e8e6",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.357285+00:00",
+    "precio_alertado": 160.0
+  },
+  "Walmart MX|$ 1,995 00 precio actual $1,995.00, Antes $3,990.00 $3,990.00 Ahorra $1,995.00 Hasta 3 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Asador-de-Carbon-Expert-Grill-Cuadrado-de-24-Pulgadas/00060538802437?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 1,995 00 precio actual $1,995.00, Antes $3,990.00 $3,990.00 Ahorra $1,995.00 Hasta 3 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Asador-de-Carbon-Expert-Grill-Cuadrado-de-24-Pulgadas/00060538802437?athbdg=L1300",
+    "precio_actual": 1995.0,
+    "precio_maximo": 3990.0,
+    "descuento": 50,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.359249+00:00",
+    "precio_alertado": 1995.0
+  },
+  "Walmart MX|$ 6,999 00 precio actual $6,999.00 Hasta 24 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/TV-Atvio-50-pulgadas-4K-Ultra-HD-Smart-TV-LED-ATV-50UHDR/00084184810115?athbdg=L6000": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 6,999 00 precio actual $6,999.00 Hasta 24 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/TV-Atvio-50-pulgadas-4K-Ultra-HD-Smart-TV-LED-ATV-50UHDR/00084184810115?athbdg=L6000",
+    "precio_actual": 6999.0,
+    "precio_maximo": 6999.0,
+    "descuento": 0,
+    "puntuacion": 10,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.360982+00:00",
+    "precio_alertado": 6999.0
+  },
+  "Walmart MX|$ 969 00 precio actual $969.00, Antes $1,140.00 $1,140.00 Ahorra $171.00 Hasta 12 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Plancha-para-Asar-Electrica-Oster-Negra/00003426446811?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 969 00 precio actual $969.00, Antes $1,140.00 $1,140.00 Ahorra $171.00 Hasta 12 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Plancha-para-Asar-Electrica-Oster-Negra/00003426446811?athbdg=L1300",
+    "precio_actual": 171.0,
+    "precio_maximo": 969.0,
+    "descuento": 82,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.362890+00:00",
+    "precio_alertado": 171.0
+  },
+  "Walmart MX|$ 3,299 00 precio actual $3,299.00, Antes $5,499.00 $5,499.00 Ahorra $2,200.00 Hasta 3 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/TCL-Soundbar-5-1-Canales-con-Subwoofer-Inalambrico-Dolby-Atmos-Q65H/00084046409413?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 3,299 00 precio actual $3,299.00, Antes $5,499.00 $5,499.00 Ahorra $2,200.00 Hasta 3 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/TCL-Soundbar-5-1-Canales-con-Subwoofer-Inalambrico-Dolby-Atmos-Q65H/00084046409413?athbdg=L1300",
+    "precio_actual": 2200.0,
+    "precio_maximo": 3299.0,
+    "descuento": 33,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.364800+00:00",
+    "precio_alertado": 2200.0
+  },
+  "Walmart MX|$ 5,579 00 precio actual $5,579.00 Hasta 12 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mini-Split-Mabe-On-Off-12000-BTU-s-110-V-MMT12CABWCA32BM1-Solo-Frio/00075763842846?athbdg=L6000": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 5,579 00 precio actual $5,579.00 Hasta 12 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mini-Split-Mabe-On-Off-12000-BTU-s-110-V-MMT12CABWCA32BM1-Solo-Frio/00075763842846?athbdg=L6000",
+    "precio_actual": 5579.0,
+    "precio_maximo": 5579.0,
+    "descuento": 0,
+    "puntuacion": 10,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.366481+00:00",
+    "precio_alertado": 5579.0
+  },
+  "Walmart MX|$ 363 00 precio actual $363.00, Antes $519.00 $519.00 Ahorra $156.00 Hasta 3 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Pizarra-Luminosa-Toy-Story-5-Lily-Pad/00002911611800?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 363 00 precio actual $363.00, Antes $519.00 $519.00 Ahorra $156.00 Hasta 3 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Pizarra-Luminosa-Toy-Story-5-Lily-Pad/00002911611800?athbdg=L1300",
+    "precio_actual": 156.0,
+    "precio_maximo": 363.0,
+    "descuento": 57,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.368351+00:00",
+    "precio_alertado": 156.0
+  },
+  "Walmart MX|$ 859 00 precio actual $859.00, Antes $1,116.70 $1,116.70 Ahorra $257.70 Hasta 12 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Audifonos-True-Wireless-con-cancelacion-de-ruido-JBL-Vibe-Buds-2-Negro/00005003640516?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 859 00 precio actual $859.00, Antes $1,116.70 $1,116.70 Ahorra $257.70 Hasta 12 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Audifonos-True-Wireless-con-cancelacion-de-ruido-JBL-Vibe-Buds-2-Negro/00005003640516?athbdg=L1300",
+    "precio_actual": 257.7,
+    "precio_maximo": 859.0,
+    "descuento": 70,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.370253+00:00",
+    "precio_alertado": 257.7
+  },
+  "Walmart MX|$ 6,299 00 precio actual $6,299.00, Antes $6,799.00 $6,799.00 Ahorra $500.00 Hasta 18 mensualidades fijas|https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mabe-Portatil-On-Off-Solo-Frio-1-Tonelada-12-000-BTU-s-110V-PTM12CABWJM2/00075763838235?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 6,299 00 precio actual $6,299.00, Antes $6,799.00 $6,799.00 Ahorra $500.00 Hasta 18 mensualidades fijas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mabe-Portatil-On-Off-Solo-Frio-1-Tonelada-12-000-BTU-s-110V-PTM12CABWJM2/00075763838235?athbdg=L1300",
+    "precio_actual": 500.0,
+    "precio_maximo": 6299.0,
+    "descuento": 92,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.372186+00:00",
+    "precio_alertado": 500.0
+  },
+  "Walmart MX|$ 849 00 precio actual $849.00, Antes $1,229.00 $1,229.00 Ahorra $380.00 Hasta 18 mensualidades fijas|https://kiosco.www.walmart.com.mx/ip/Hielera-Coleman-Chiller-15-litros-portatil-azul/00007650117108?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 849 00 precio actual $849.00, Antes $1,229.00 $1,229.00 Ahorra $380.00 Hasta 18 mensualidades fijas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Hielera-Coleman-Chiller-15-litros-portatil-azul/00007650117108?athbdg=L1300",
+    "precio_actual": 380.0,
+    "precio_maximo": 849.0,
+    "descuento": 55,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.374138+00:00",
+    "precio_alertado": 380.0
+  },
+  "Walmart MX|$ 17,309 00 precio actual $17,309.00, Antes $29,199.00 $29,199.00 Ahorra $11,890.00 Hasta 18 mensualidades fijas|https://kiosco.www.walmart.com.mx/ip/Lavavajillas-Maytag-Empotrable-Gris-Acero-Power-Bast/00088304953290?athbdg=L1300": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 17,309 00 precio actual $17,309.00, Antes $29,199.00 $29,199.00 Ahorra $11,890.00 Hasta 18 mensualidades fijas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Lavavajillas-Maytag-Empotrable-Gris-Acero-Power-Bast/00088304953290?athbdg=L1300",
+    "precio_actual": 11890.0,
+    "precio_maximo": 17309.0,
+    "descuento": 31,
+    "puntuacion": 41,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-02T22:12:23.376099+00:00",
+    "precio_alertado": 11890.0
   }
 }
