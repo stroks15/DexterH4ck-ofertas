@@ -31,7 +31,7 @@ FUENTES = [
         "tienda": "Chedraui",
         "url": "https://www.chedraui.com.mx/precios-liquidacion",
         "host": "chedraui.com.mx",
-        "patrones": ("/p",),
+        "patrones": ("/p/",),
     },
     {
         "tienda": "Sanborns",
@@ -66,7 +66,7 @@ def _is_product(url, source):
         return False
     if any(x in path for x in ("/search", "/buscar", "/catalogo", "/ofertas", "/marcas", "/home", "/precios-liquidacion")):
         return False
-    return any(p in path for p in source["patrones"])
+    return any(p in path for p in source["patrones"]) or (source["host"] == "chedraui.com.mx" and path.endswith("/p"))
 
 
 def _title_from(node):
