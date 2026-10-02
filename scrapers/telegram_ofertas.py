@@ -16,8 +16,10 @@ TELEGRAM_CHANNELS = [
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 Chrome/140 Safari/537.36", "Accept-Language": "es-MX,es;q=0.9"}
-MAX_TELEGRAM_AI = int(os.environ.get("GEMINI_MAX_TELEGRAM_AI", "18"))
+MAX_TELEGRAM_AI = int(os.environ.get("GEMINI_MAX_TELEGRAM_AI", "10"))
+GEMINI_DELAY = float(os.environ.get("GEMINI_TELEGRAM_DELAY", "1.5"))
 _ai_calls = 0
+_last_ai_call = 0.0
 PRICE_RE = re.compile(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)")
 URL_RE = re.compile(r"https?://[^\s<>]+")
 
@@ -56,7 +58,6 @@ def _condiciones(text):
         condiciones.append("Amazon Prime")
     return condiciones
 
-
 def _store(text):
     low = (text or "").lower()
     for name, needles in [
@@ -69,6 +70,14 @@ def _store(text):
             return name
     return "Telegram"
 
+def _esperar_gemini():
+    global _last_ai_call
+    ahora = time.monotonic()
+    restante = GEMINI_DELAY - (ahora - _last_ai_call)
+    if restante > 0:
+        time.sleep(restante)
+    _last_ai_call = time.monotonic()
+
 def _candidate(source, text, session=None):
     urls = [u.rstrip(".,;:!?)]}>'\"") for u in URL_RE.findall(text or "")]
     if not urls:
@@ -77,7 +86,6 @@ def _candidate(source, text, session=None):
     url = external[0] if external else urls[0]
     tienda = _store(text + " " + url)
     url = reparar_url(url, tienda, text)
-    # Convierte enlaces cortos (amzn.to/meli.la) al enlace final del producto.
     if session and urlparse_safe(url) in ("amzn.to", "meli.la", "mercadolibre.com", "mercadolibre.com", "bit.ly", "tidd.ly", "link.amazon"):
         try:
             r = session.get(url, headers=HEADERS, allow_redirects=True, timeout=12)
@@ -109,6 +117,7 @@ def _candidate(source, text, session=None):
     low = text.lower()
     liquidacion = any(x in low for x in ("liquidación", "liquidacion", "remate", "outlet", "última pieza", "ultima pieza", "saldo", "reacondicionado", "error de precio"))
     global _ai_calls
+    _esperar_gemini()
     ai = analizar_publicacion(text, url, tienda) if _ai_calls < MAX_TELEGRAM_AI else {}
     if ai:
         _ai_calls += 1
