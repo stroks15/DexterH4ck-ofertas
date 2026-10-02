@@ -1,11 +1,65 @@
 {
   "version": 1,
-  "nota": "Los enlaces a canales o grupos no son por sí mismos una autorización ni un mecanismo de lectura automática. Estas fuentes quedan registradas para futuras integraciones.",
+  "nota": "Las comunidades sirven para descubrir candidatos. El bot no las trata como prueba de precio: intenta verificar siempre en la página oficial del producto. Las fuentes de WhatsApp/Facebook no se leen automáticamente solo por su enlace.",
   "fuentes": [
-    {"nombre":"Ofertones México","tipo":"telegram_canal","url":"https://t.me/OfertonesMexico","autolectura":false,"estado":"pendiente_integracion"},
-    {"nombre":"LiquidAhorros Oficial Ofertones México","tipo":"telegram_canal","url":"https://t.me/LiquidAhorrosOficialOfertonesMexico","autolectura":false,"estado":"pendiente_integracion"},
-    {"nombre":"Outlet y Reacondicionados","tipo":"telegram_canal","url":"https://t.me/outletyreacondicionados","autolectura":false,"estado":"pendiente_integracion","nota":"Incluye referencias a ofertas reacondicionadas/outlet y afiliación de Amazon EU."},
-    {"nombre":"Oferstock","tipo":"web","url":"https://www.oferstock.com.mx/#","autolectura":false,"estado":"pendiente_integracion"}
+    {
+      "nombre": "Ofertones México",
+      "tipo": "telegram_canal",
+      "url": "https://t.me/OfertonesMexico",
+      "autolectura": false,
+      "estado": "pendiente_integracion"
+    },
+    {
+      "nombre": "LiquidAhorros Oficial Ofertones México",
+      "tipo": "telegram_canal",
+      "url": "https://t.me/LiquidAhorrosOficialOfertonesMexico",
+      "autolectura": false,
+      "estado": "pendiente_integracion"
+    },
+    {
+      "nombre": "Outlet y Reacondicionados",
+      "tipo": "telegram_canal",
+      "url": "https://t.me/outletyreacondicionados",
+      "autolectura": false,
+      "estado": "pendiente_integracion",
+      "nota": "Incluye referencias a ofertas reacondicionadas/outlet y afiliación de Amazon EU."
+    },
+    {
+      "nombre": "Oferstock",
+      "tipo": "web",
+      "url": "https://www.oferstock.com.mx/#",
+      "autolectura": false,
+      "estado": "pendiente_integracion"
+    }
   ],
-  "whatsapp": []
+  "whatsapp": [
+    {
+      "nombre": "Mega Ofertones MX",
+      "tipo": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029Va5xOuG3rZZdGGV2zv0z",
+      "autolectura": false,
+      "estado": "fuente_descubrimiento"
+    },
+    {
+      "nombre": "PromosTop Mx",
+      "tipo": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029VapjUiSKQuJHimxJvJ3A",
+      "autolectura": false,
+      "estado": "fuente_descubrimiento"
+    },
+    {
+      "nombre": "El Caza Ofertas MX - Mercado Libre",
+      "tipo": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029Vb9AJuN3gvWbKXbeWu44",
+      "autolectura": false,
+      "estado": "fuente_descubrimiento"
+    },
+    {
+      "nombre": "Alertas_OferStock",
+      "tipo": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029VbC71PELI8YQCxKWSi1Z",
+      "autolectura": false,
+      "estado": "fuente_descubrimiento"
+    }
+  ]
 }
