@@ -1,5 +1,6 @@
 """Motor de puntuación y detección de liquidaciones para DexterH4ck-ofertas."""
 
+import builtins
 import json
 import re
 import unicodedata
@@ -162,9 +163,33 @@ def score_product(product, discount=None):
 
 def evaluate_product(product):
     result = score_product(product)
-    result["es_liquidacion"] = bool(result["indicadores"]) or result["descuento"] >= 50
+    result["es_liquidacion"] = bool(result["indicadores"]) or result["descuento"] >= 40
     result["nivel_oportunidad"] = result["puntuacion"]
-    result["recomendado"] = result["puntuacion"] >= 50 or result["descuento"] >= 50
+    result["recomendado"] = result["puntuacion"] >= 50 or result["descuento"] >= 40
+
+    # Compatibilidad con el monitor: expone las señales calculadas para que
+    # las plantillas de alerta no fallen aunque el producto venga de otra fuente.
+    extreme = result.get("extremo") or {}
+    builtins.precio_extremo = bool(extreme.get("es_extremo"))
+    builtins.nivel_extremo = str(extreme.get("nivel") or "")
+    builtins.precio_extremo_verificado = bool(extreme.get("precio_verificado"))
+
+    texto = " ".join(str(product.get(k, "")) for k in (
+        "titulo", "description", "descripcion", "publicacion", "condiciones"
+    )).lower()
+    condiciones = list(product.get("condiciones") or [])
+    for needles, label in (
+        (("cupón", "cupon", "coupon", "código promocional"), "cupón"),
+        (("planea y ahorra", "subscribe & save"), "Planea y Ahorra"),
+        (("seguir la tienda", "seguidor de la tienda"), "seguir la tienda"),
+        (("compra mínima", "mínimo de compra", "minima de compra"), "compra mínima"),
+        (("por volumen", "compra 5", "compra 10"), "cantidad/volumen"),
+        (("prime",), "Amazon Prime"),
+    ):
+        if any(x in texto for x in needles) and label not in condiciones:
+            condiciones.append(label)
+    builtins.condiciones = condiciones
+
     return result
 
 def is_liquidation(product):
