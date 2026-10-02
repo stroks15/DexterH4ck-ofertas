@@ -1,3 +1,4 @@
+import os
 import re
 import time
 from urllib.parse import unquote, urljoin, urlparse
@@ -114,6 +115,9 @@ def _titulo_resultado(node, fallback):
 
 
 def buscar_tiendas_fisicas(session=None):
+    if "Google" in {x.strip() for x in os.environ.get("PREFLIGHT_SKIP_SOURCES", "").split(",") if x.strip()}:
+        print("Tiendas físicas: Google omitido por preflight; no se generan errores 429.")
+        return []
     session = session or requests.Session()
     session.headers.update(HEADERS)
     resultados = []
