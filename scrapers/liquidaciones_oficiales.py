@@ -39,6 +39,12 @@ FUENTES = [
         "host": "sanborns.com.mx",
         "patrones": ("/producto/", "/p/", "/item/"),
     },
+    {
+        "tienda": "Juguetron",
+        "url": "https://www.juguetron.mx/promociones",
+        "host": "juguetron.mx",
+        "patrones": ("/p", ".html"),
+    },
 ]
 
 PRICE_RE = re.compile(
