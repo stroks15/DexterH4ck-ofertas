@@ -51,7 +51,7 @@ def es_enlace_producto_directo(url):
     patrones_por_tienda = {
         "walmart.com.mx": ("/ip/",),
         "bodegaaurrera.com.mx": ("/ip/",),
-        "chedraui.com.mx": ("/p",),
+        "chedraui.com.mx": ("/p/",),
         "coppel.com": ("/pdp/",),
         "amazon.com.mx": ("/dp/", "/gp/product/"),
         "mercadolibre.com.mx": ("/mlm-", "/p/"),
@@ -61,6 +61,8 @@ def es_enlace_producto_directo(url):
     }
     for dominio, patrones in patrones_por_tienda.items():
         if host == dominio or host.endswith("." + dominio):
+            if dominio == "chedraui.com.mx":
+                return "/p/" in path or path.endswith("/p")
             return any(p in path for p in patrones)
     return len(path.strip("/")) > 12
 
