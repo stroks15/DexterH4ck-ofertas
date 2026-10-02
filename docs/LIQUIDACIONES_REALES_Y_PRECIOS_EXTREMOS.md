@@ -51,6 +51,7 @@ Facebook queda como fuente manual hasta disponer de una integración autorizada 
 
 - Walmart: Liquidaciones.
 - Chedraui: Precios de Liquidación.
+- Juguetron: Promociones. Esta fuente fue añadida porque los SKU y precios de la imagen analizada coinciden con fichas públicas de Juguetron; por ejemplo, Barbie Mini BarbieLand 1005HYF38 aparece con precio normal de $189 y promoción a $56.70, y Thomas & Friends JFV72 aparece de $279 a $83.70.
 - Sanborns: categorías con filtros de descuento.
 - Mercado Libre: promociones y campañas de liquidación de stock.
 
