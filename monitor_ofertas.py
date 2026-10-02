@@ -89,12 +89,10 @@ def revisar():
     avisos = []
     vistos_en_esta_revision = set()
 
-    meta = historial.get("__meta__", {})
-    rearmar_alertas = not bool(meta.get("rearmado_alertas_2026_09_25"))
-    if rearmar_alertas:
-        meta["rearmado_alertas_2026_09_25"] = True
-        historial["__meta__"] = meta
-        print("Rearmado único de alertas activado: se volverán a enviar las ofertas vigentes.")
+    # El monitor principal NO reenvía ofertas históricas ni rearma alertas.
+    # La republicación se realiza exclusivamente mediante el workflow manual
+    # reenviar_ofertas_hoy.yml / reenviar_ofertas_hoy.py.
+    rearmar_alertas = False
 
     candidatos = buscar_todas()
     candidatos.extend(buscar_telegram(requests.Session()))
