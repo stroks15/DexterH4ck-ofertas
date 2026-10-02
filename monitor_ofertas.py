@@ -11,6 +11,7 @@ from scrapers.tiendas_mexico import buscar_todas
 from scrapers.telegram_ofertas import buscar_telegram
 from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
+from core.extreme_liquidation import analizar_precio_extremo
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -66,15 +67,35 @@ def es_enlace_producto_directo(url):
             return any(p in path for p in patrones)
     return len(path.strip("/")) > 12
 
+_ultimo_envio_telegram = 0.0
+
 def enviar_telegram(texto):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
-    response = requests.post(
-        f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
-        data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False},
-        timeout=20,
-    )
-    if not response.ok:
+    global _ultimo_envio_telegram
+    import time
+    # Un solo flujo de salida y ~3.2 s entre mensajes evita el límite de grupo.
+    espera = 3.2 - (time.monotonic() - _ultimo_envio_telegram)
+    if espera > 0:
+        time.sleep(espera)
+    for intento in range(2):
+        response = requests.post(
+            f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
+            data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False},
+            timeout=20,
+        )
+        _ultimo_envio_telegram = time.monotonic()
+        if response.ok:
+            return
+        if response.status_code == 429:
+            try:
+                retry_after = int(response.json().get("parameters", {}).get("retry_after", "5"))
+            except (ValueError, TypeError):
+                retry_after = 5
+            print(f"Telegram 429: esperando {retry_after}s antes de reintentar.")
+            if intento == 0:
+                time.sleep(min(max(retry_after, 1), 120) + 0.5)
+                continue
         raise RuntimeError(f"Telegram rechazó el mensaje: HTTP {response.status_code} - {response.text}")
 
 def calcular_datos(item, anterior_hist):
@@ -169,6 +190,12 @@ def revisar():
         marca = scoring.get("marca") or item.get("marca")
         categoria = scoring.get("categoria") or item.get("categoria") or "Otros / Miscelánea"
         puntuacion = scoring.get("puntuacion", 0)
+
+        extremo = analizar_precio_extremo(item)
+        precio_extremo = extremo.get("es_extremo", False)
+        nivel_extremo = extremo.get("nivel", "normal")
+        precio_extremo_verificado = extremo.get("precio_verificado", False)
+        condiciones = item.get("condiciones") or []
 
         if es_descuento_real and tiene_referencia:
             tipo_alerta = "VERDE"
