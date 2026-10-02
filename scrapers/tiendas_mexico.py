@@ -357,59 +357,48 @@ def buscar_soriana_desde_google(session):
     return resultados
 
 def buscar_soriana(session):
-    """
-    Soriana puede bloquear el endpoint de búsqueda con una página de protección.
-    Primero intenta páginas oficiales; si la respuesta es bloqueada, usa enlaces
-    públicos indexados por Google como fallback, sin intentar evadir el bloqueo.
+    """Consulta Soriana directamente con pocas búsquedas de alto valor.
+    Si Soriana responde 403/429, se corta la fuente en este ciclo en lugar de
+    bombardear Google y generar una cascada de errores.
     """
     resultados = []
-    urls_oficiales = [
-        "https://www.soriana.com/",
-        "https://www.soriana.com/ofertas/",
-        "https://www.soriana.com/marcas/",
-        "https://www.soriana.com/catalogo-extendido.html",
-        "https://www.soriana.com/hot-sale/",
+    consultas = [
+        "liquidacion", "ofertas", "pantallas", "celulares", "videojuegos", "hogar"
     ]
-
-    bloqueado = False
-    for url in urls_oficiales:
+    vistos = {}
+    for consulta in consultas:
+        url = "https://www.soriana.com/buscar?q=" + quote_plus(consulta)
         try:
-            response = session.get(url, timeout=20)
-            if response.status_code in (403, 429) or ("sorry" in response.text.lower() and "blocked" in response.text.lower()):
-                bloqueado = True
-                print(f"Soriana: acceso bloqueado en {url}; activando fallback Google.")
-                continue
+            response = session.get(url, timeout=25)
+            if response.status_code in (403, 429):
+                print(f"Soriana: HTTP {response.status_code} para '{consulta}'; fuente pausada hasta el siguiente ciclo.")
+                break
             if response.status_code >= 400:
-                print(f"Soriana: HTTP {response.status_code} en {url}")
+                print(f"Soriana: HTTP {response.status_code} para '{consulta}'")
                 continue
-
             soup = BeautifulSoup(response.text, "html.parser")
             candidatos = extraer_json_ld(soup, "Soriana", url, True)
             candidatos.extend(extraer_tarjetas(soup, "Soriana", url, True))
-            resultados.extend(candidatos)
+            for item in candidatos:
+                actual = item.get("precio_actual") or 0
+                item_url = item.get("url") or ""
+                if actual <= 0 or not item_url:
+                    continue
+                clave = producto_id("Soriana", item.get("titulo", ""), item_url)
+                existente = vistos.get(clave)
+                if not existente or item.get("descuento", 0) > existente.get("descuento", 0):
+                    item["id"] = clave
+                    vistos[clave] = item
+            print(f"Soriana: {consulta} -> {len(candidatos)} candidatos parseados")
+            time.sleep(0.8)
         except requests.RequestException as error:
-            bloqueado = True
-            print(f"Soriana: {error}; activando fallback Google.")
-        time.sleep(0.5)
-
-    if bloqueado or not resultados:
-        resultados.extend(buscar_soriana_desde_google(session))
-    for item in resultados:
-        item["url"] = reparar_url(item.get("url", ""), "Soriana", item.get("titulo", ""))
-
-    unicos = {}
-    for item in resultados:
-        url = item.get("url", "")
-        if not url:
-            continue
-        clave = producto_id("Soriana", item.get("titulo", ""), url)
-        anterior = unicos.get(clave)
-        if not anterior or item.get("descuento", 0) > anterior.get("descuento", 0):
-            item["id"] = clave
-            unicos[clave] = item
-
-    print(f"Soriana: {len(unicos)} productos/enlaces candidatos")
-    return list(unicos.values())
+            print(f"Soriana: error de red en '{consulta}': {error}; fuente pausada.")
+            break
+        except Exception as error:
+            print(f"Soriana: error procesando '{consulta}': {error}")
+    resultados = list(vistos.values())
+    print(f"Soriana: {len(resultados)} productos/enlaces candidatos")
+    return resultados
 
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
