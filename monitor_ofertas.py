@@ -201,6 +201,8 @@ def revisar():
             extras.append("✅ precio comprobado en página oficial")
         elif precio_extremo:
             extras.append("⚠️ comprobación pendiente")
+        if condiciones:
+            extras.append("🎟️ " + ", ".join(str(x) for x in condiciones))
 
         mensaje = (
             f"{etiqueta}\n"
