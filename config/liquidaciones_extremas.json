@@ -6,20 +6,61 @@
   "descuento_extremo": 95,
   "descuento_ultra_extremo": 99,
   "verificar_pagina_producto": true,
-  "terminaciones_walmart_senal": [".01", ".02", ".03"],
+  "terminaciones_walmart_senal": [
+    ".01",
+    ".02",
+    ".03"
+  ],
   "terminaciones_walmart_nota": "Son una señal de liquidación, no una prueba por sí solas. El bot exige además URL de producto y evidencia de precio.",
   "fuentes_oficiales": [
-    {"tienda":"Walmart MX","nombre":"Liquidaciones Walmart","url":"https://kiosco.www.walmart.com.mx/shop/liquidaciones-walmart","tipo":"liquidacion_oficial"},
-    {"tienda":"Chedraui","nombre":"Precios de Liquidación","url":"https://www.chedraui.com.mx/precios-liquidacion","tipo":"liquidacion_oficial"},
-    {"tienda":"Sanborns","nombre":"Videojuegos con descuento","url":"https://www.sanborns.com.mx/cat/videojuegos?id=12&percent_off=50+TO+80&order=sanborns_price_asc","tipo":"categoria_oficial"}
+    {
+      "tienda": "Walmart MX",
+      "nombre": "Liquidaciones Walmart",
+      "url": "https://kiosco.www.walmart.com.mx/shop/liquidaciones-walmart",
+      "tipo": "liquidacion_oficial"
+    },
+    {
+      "tienda": "Chedraui",
+      "nombre": "Precios de Liquidación",
+      "url": "https://www.chedraui.com.mx/precios-liquidacion",
+      "tipo": "liquidacion_oficial"
+    },
+    {
+      "tienda": "Sanborns",
+      "nombre": "Videojuegos con descuento",
+      "url": "https://www.sanborns.com.mx/cat/videojuegos?id=12&percent_off=50+TO+80&order=sanborns_price_asc",
+      "tipo": "categoria_oficial"
+    },
+    {
+      "tienda": "Juguetron",
+      "nombre": "Promociones Juguetron",
+      "url": "https://www.juguetron.mx/promociones",
+      "tipo": "promociones_oficiales"
+    }
   ],
   "fuentes_comunitarias": [
-    {"nombre":"Cazanga México","url":"https://www.cazanga.net/mx/","autolectura":false,"uso":"fuente de descubrimiento; no se toma como prueba de precio"},
-    {"nombre":"LiquidaPromos","url":"https://linktr.ee/liquidapromos","autolectura":false,"uso":"fuente de descubrimiento; no se toma como prueba de precio"}
+    {
+      "nombre": "Cazanga México",
+      "url": "https://www.cazanga.net/mx/",
+      "autolectura": false,
+      "uso": "fuente de descubrimiento; no se toma como prueba de precio"
+    },
+    {
+      "nombre": "LiquidaPromos",
+      "url": "https://linktr.ee/liquidapromos",
+      "autolectura": false,
+      "uso": "fuente de descubrimiento; no se toma como prueba de precio"
+    }
   ],
   "facebook": {
     "autolectura": false,
     "motivo": "Las páginas/grupos de Facebook no se leen automáticamente solo por su URL y muchos contenidos requieren sesión. Se usarán únicamente como pistas manuales hasta disponer de una fuente autorizada y estable.",
-    "buscar": ["liquidaciones Walmart México","cazadores de ofertas México","liquidaciones juguetes México","liquidaciones Coppel México","liquidaciones Liverpool México"]
+    "buscar": [
+      "liquidaciones Walmart México",
+      "cazadores de ofertas México",
+      "liquidaciones juguetes México",
+      "liquidaciones Coppel México",
+      "liquidaciones Liverpool México"
+    ]
   }
 }
