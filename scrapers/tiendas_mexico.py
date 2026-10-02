@@ -1,3 +1,4 @@
+import os
 import hashlib
 import json
 import re
@@ -597,7 +598,11 @@ def buscar_todas():
     session = requests.Session()
     session.headers.update(HEADERS)
     salida = []
+    skip = {x.strip() for x in os.environ.get("PREFLIGHT_SKIP_SOURCES", "").split(",") if x.strip()}
     for nombre, plantilla in TIENDAS.items():
+        if nombre in skip:
+            print(f"{nombre}: omitida por preflight ({'fuente no disponible'})")
+            continue
         if nombre == "Soriana":
             salida.extend(buscar_soriana(session))
         elif nombre == "Coppel":
