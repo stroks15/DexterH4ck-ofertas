@@ -403,7 +403,17 @@ def buscar_soriana(session):
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
     base_url = plantilla.split("{q}", 1)[0]
-    for q in BUSQUEDAS:
+    # Rotación de consultas: cubre todas las categorías a lo largo de los ciclos
+    # sin lanzar cientos de peticiones por cada ejecución de 15 minutos.
+    import time as _time
+    bloque = max(1, int(_time.time() // 900))
+    tam = 12
+    inicio = (bloque * tam) % len(BUSQUEDAS)
+    consultas = [BUSQUEDAS[(inicio + i) % len(BUSQUEDAS)] for i in range(tam)]
+    for prioritaria in ("liquidacion", "remate", "outlet"):
+        if prioritaria in BUSQUEDAS and prioritaria not in consultas:
+            consultas[-1] = prioritaria
+    for q in consultas:
         url = plantilla.format(q=quote_plus(q))
         try:
             response = None
