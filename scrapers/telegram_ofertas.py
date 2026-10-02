@@ -39,6 +39,24 @@ def urlparse_safe(url):
     except Exception:
         return ""
 
+def _condiciones(text):
+    low = (text or "").lower()
+    condiciones = []
+    if "planea y ahorra" in low or "subscribe & save" in low:
+        condiciones.append("Planea y Ahorra")
+    if "cupón" in low or "cupon" in low or "coupon" in low:
+        condiciones.append("cupón")
+    if "seguidor de la tienda" in low or "seguir la tienda" in low:
+        condiciones.append("seguir la tienda")
+    if "compra mínima" in low or "mínimo de compra" in low or "minima de compra" in low:
+        condiciones.append("compra mínima")
+    if "comprando" in low or "compra 5" in low or "compra 10" in low or "por volumen" in low:
+        condiciones.append("cantidad/volumen")
+    if "prime" in low:
+        condiciones.append("Amazon Prime")
+    return condiciones
+
+
 def _store(text):
     low = (text or "").lower()
     for name, needles in [
@@ -106,6 +124,7 @@ def _candidate(source, text, session=None):
         url = reparar_url(str(ai["url"]), tienda, text)
     liquidacion = liquidacion or bool(ai.get("liquidacion"))
     descuento = round((1 - actual / anterior) * 100) if actual and anterior and anterior > actual else int(ai.get("descuento") or 0)
+    condiciones = _condiciones(text)
 
     if not titulo:
         lines = [re.sub(r"^[👉🔥⚡️➡️⭐️✅🚨🛒💥🎉]+\s*", "", x).strip() for x in text.splitlines() if x.strip()]
@@ -121,6 +140,7 @@ def _candidate(source, text, session=None):
         "precio_actual": actual, "precio_anterior": anterior, "descuento": descuento,
         "url": url, "liquidacion": liquidacion,
         "outlet": any(x in low for x in ("outlet", "reacondicionado", "open box")),
+        "condiciones": condiciones,
         "origen": source, "origen_link": "Telegram", "publicacion": html.unescape(text[:4000]),
     }
 
