@@ -36,7 +36,7 @@ jobs:
           test -n "$TELEGRAM_CHAT_ID" || { echo "::error::Falta el secret TELEGRAM_CHAT_ID"; exit 1; }
           echo "Secretos de Telegram detectados correctamente."
       - name: Validar sintaxis Python
-        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py core/ai_reparador.py core/liquidation_engine.py scrapers/tiendas_fisicas.py
+        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py
       - name: Ejecutar monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
