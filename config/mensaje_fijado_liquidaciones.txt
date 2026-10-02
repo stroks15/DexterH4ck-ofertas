@@ -1,0 +1,24 @@
+📌 GUÍA DE COLORES — ¿QUÉ SIGNIFICA CADA ALERTA?
+
+🟢 VERDE = OFERTA/LIQUIDACIÓN COMPARABLE
+Tenemos precio actual + precio anterior/referencia y podemos calcular el descuento. Además, buscamos una URL directa del producto o una fuente oficial de liquidaciones.
+
+🔴 ROJO = ALERTA ESPECIAL / PRECIO EXTREMO
+Hay una señal fuerte de liquidación, remate, outlet, precio muy bajo, cupón o publicación comunitaria, pero no existe suficiente referencia para afirmar el porcentaje de descuento.
+
+⚠️ IMPORTANTE
+🔴 NO significa que sea falsa.
+🟢 NO significa que el producto esté garantizado o que haya stock.
+
+Antes de comprar:
+1️⃣ Abre el enlace.
+2️⃣ Comprueba que el precio siga vigente.
+3️⃣ Revisa talla/color/variante.
+4️⃣ Revisa stock y condiciones.
+5️⃣ Si es una liquidación física, confirma la sucursal.
+
+💥 PRECIOS DE $1 O SIMILARES
+Son alertas especiales. El bot intenta comprobar la página oficial antes de marcarlos como “precio extremo verificado”.
+
+🎟️ CUPONES / PLANEА Y AHORRA
+El precio final solo se considera válido si se cumplen las condiciones del cupón, suscripción, cantidad mínima o forma de pago.
