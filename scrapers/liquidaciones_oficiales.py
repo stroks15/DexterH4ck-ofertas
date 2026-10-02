@@ -43,7 +43,7 @@ FUENTES = [
         "tienda": "Juguetron",
         "url": "https://www.juguetron.mx/promociones",
         "host": "juguetron.mx",
-        "patrones": ("/p", ".html"),
+        "patrones": ("/p/", ".html"),
     },
 ]
 
@@ -70,7 +70,7 @@ def _is_product(url, source):
     path = parsed.path.lower()
     if not host or not (host == source["host"] or host.endswith("." + source["host"])):
         return False
-    if any(x in path for x in ("/search", "/buscar", "/catalogo", "/ofertas", "/marcas", "/home", "/precios-liquidacion")):
+    if any(x in path for x in ("/search", "/buscar", "/catalogo", "/ofertas", "/marcas", "/home", "/precios-liquidacion", "/promociones")):
         return False
     return any(p in path for p in source["patrones"]) or (source["host"] == "chedraui.com.mx" and path.endswith("/p"))
 
