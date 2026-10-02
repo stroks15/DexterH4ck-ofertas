@@ -10,6 +10,7 @@ from core.liquidation_engine import evaluate_product
 from scrapers.tiendas_mexico import buscar_todas
 from scrapers.telegram_ofertas import buscar_telegram
 from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
+from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -96,7 +97,8 @@ def revisar():
     candidatos = buscar_todas()
     candidatos.extend(buscar_telegram(requests.Session()))
     candidatos.extend(buscar_tiendas_fisicas(requests.Session()))
-    print(f"Fuentes adicionales Telegram + físicas: {len(candidatos)} candidatos totales")
+    candidatos.extend(buscar_liquidaciones_oficiales(requests.Session()))
+    print(f"Fuentes adicionales Telegram + físicas + liquidaciones oficiales: {len(candidatos)} candidatos totales")
     for item in candidatos:
         titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
         url = str(item.get("url") or "").strip()
