@@ -40,14 +40,28 @@ def formato_alerta_tipo(tipo):
     return "🟢" if tipo == "VERDE" else "🔴"
 
 def es_enlace_producto_directo(url):
-    host = urlparse(url).netloc.lower()
-    path = urlparse(url).path.lower()
-    if not host or host in ("t.me", "telegram.me", "www.google.com"):
+    parsed = urlparse(url or "")
+    host = parsed.netloc.lower()
+    path = parsed.path.lower()
+    if not host or host in ("t.me", "telegram.me", "www.google.com", "google.com"):
         return False
-    if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home")):
+    if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
         return False
-    patrones = ("/dp/", "/gp/product/", "/ip/", "/mlm-", "-p-", "/pdp/", "/producto/", "/product/", "/item/")
-    return any(x in path for x in patrones) or len(path.strip("/")) > 8
+    patrones_por_tienda = {
+        "walmart.com.mx": ("/ip/",),
+        "bodegaaurrera.com.mx": ("/ip/",),
+        "chedraui.com.mx": ("/p",),
+        "coppel.com": ("/pdp/",),
+        "amazon.com.mx": ("/dp/", "/gp/product/"),
+        "mercadolibre.com.mx": ("/mlm-", "/p/"),
+        "liverpool.com.mx": ("/tienda/pdp/", "/pdp/"),
+        "soriana.com": ("/producto/", "/p/"),
+        "suburbia.com.mx": ("/p/", "/producto/"),
+    }
+    for dominio, patrones in patrones_por_tienda.items():
+        if host == dominio or host.endswith("." + dominio):
+            return any(p in path for p in patrones)
+    return len(path.strip("/")) > 12
 
 def enviar_telegram(texto):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
@@ -105,6 +119,7 @@ def revisar():
         enriched["precio_anterior"] = referencia or item.get("precio_anterior")
         scoring = evaluate_product({**enriched, "precio_anterior": referencia})
         scoring["descuento"] = dcto
+        extreme = scoring.get("extremo", {})
 
         registro = historial.get(clave)
         if not registro or float(registro.get("precio_actual", 0)) != actual:
@@ -118,6 +133,7 @@ def revisar():
                 "precio_maximo": max(actual, referencia),
                 "descuento": dcto,
                 "puntuacion": scoring["puntuacion"],
+                "extremo": extreme,
                 "ultima_actualizacion": datetime.now(timezone.utc).isoformat(),
                 "precio_alertado": anterior_hist.get("precio_alertado"),
             }
@@ -125,6 +141,7 @@ def revisar():
             historial[clave]["precio_maximo"] = max(float(historial[clave].get("precio_maximo", 0)), actual, referencia)
             historial[clave]["descuento"] = dcto
             historial[clave]["puntuacion"] = scoring["puntuacion"]
+            historial[clave]["extremo"] = extreme
             if scoring.get("marca"):
                 historial[clave]["marca"] = scoring["marca"]
             if scoring.get("categoria"):
@@ -174,6 +191,12 @@ def revisar():
             extras.append("🔥 palabra liquidación")
         if "ultima_pieza_outlet" in scoring.get("indicadores", []):
             extras.append("🏷️ última pieza/outlet")
+        if precio_extremo:
+            extras.append(f"💥 {nivel_extremo.lower()}")
+        if precio_extremo_verificado:
+            extras.append("✅ precio comprobado en página oficial")
+        elif precio_extremo:
+            extras.append("⚠️ comprobación pendiente")
 
         mensaje = (
             f"{etiqueta}\n"
