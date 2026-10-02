@@ -5,6 +5,8 @@ import re
 import unicodedata
 from pathlib import Path
 
+from core.extreme_liquidation import analizar_precio_extremo
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_CATEGORIAS = ROOT / "config" / "categorias_ofertas.json"
 CONFIG_MARCAS = ROOT / "marcas_prioritarias.json"
@@ -25,6 +27,9 @@ KEYWORDS_LIQUIDACION = {
     "clearance": 10,
     "oferta relampago": 10,
     "oferta relámpago": 10,
+    "precio extremo": 20,
+    "precio error": 15,
+    "error de precio": 15,
 }
 
 def normalize_text(value):
@@ -118,8 +123,12 @@ def score_product(product, discount=None):
         score += 15
         indicators.append(f"categoria_alta:{category}")
 
-    if "liquidacion" in text:
-        score += 10
+    keyword_bonus = 0
+    for keyword, points in KEYWORDS_LIQUIDACION.items():
+        if normalize_text(keyword) in text:
+            keyword_bonus = max(keyword_bonus, points)
+    if keyword_bonus:
+        score += min(keyword_bonus, 25)
         indicators.append("liquidacion")
 
     last_piece_outlet = any(
@@ -129,6 +138,17 @@ def score_product(product, discount=None):
         score += 10
         indicators.append("ultima_pieza_outlet")
 
+    extreme = analizar_precio_extremo(product)
+    if extreme["es_extremo"]:
+        indicators.append("precio_extremo")
+        score += 15
+        if extreme["url_oficial"]:
+            score += 5
+            indicators.append("url_tienda_oficial")
+        if extreme["precio_verificado"]:
+            score += 20
+            indicators.append("precio_extremo_verificado")
+
     return {
         "puntuacion": min(score, 100),
         "descuento": int(discount or 0),
@@ -137,6 +157,7 @@ def score_product(product, discount=None):
         "categoria": category,
         "categoria_alta_demanda": high_demand,
         "indicadores": indicators,
+        "extremo": extreme,
     }
 
 def evaluate_product(product):
