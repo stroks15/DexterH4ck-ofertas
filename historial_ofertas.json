@@ -13728,9 +13728,9 @@
     "categoria": "Consolas",
     "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIO3L3DWFFFYfYrsXLqZ7B4EoQ4fKR%2FQxKOb7M869hIOLU55mPSg1HIrWxDMmYFMT09oTo7gVEFFcJTAbxHelAQ9T2LXwLoGwoeVr5TTIW3a7foxQzEVKVmpBgC%2Fi7NHnasW9fkcSpl2bfX%2BHAh7OA4vOQLh5aH%2Bpxa%2BPP%2By6S8TouHwCKzpjwWjaC18KRi1DeMIWl0%3D",
     "precio_actual": 79.0,
-    "precio_maximo": 79.0,
-    "descuento": 0,
-    "puntuacion": 35,
+    "precio_maximo": 299.0,
+    "descuento": 74,
+    "puntuacion": 85,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -13744,5 +13744,633 @@
     },
     "ultima_actualizacion": "2026-10-03T17:40:54.584231+00:00",
     "precio_alertado": null
+  },
+  "Mercado Libre|MercadoLibre: Bocina Jbl Partybox 130 Bluetooth 15h Batería Ipx4 Auracast|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGTKOfWM7C8%2BnjNvcimOfZ5qaH9Y45tSg1mdCiOnSvxo0Woa2lPe2f5W%2Fr5Dmgya5T08UrS4JU482s8FvWhoN4xgxlduvt8Y8jYzbuFTr3ZOJwKffiQ7mqwBovFJqRzD3QB8JLGZKI6gyHqqeChjDH49C5pwE0nbzh5IOL4dmG3bJjAypeV3wRlVVFOgVSGoUL0yHXI%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Bocina Jbl Partybox 130 Bluetooth 15h Batería Ipx4 Auracast",
+    "marca": "JBL",
+    "categoria": "Audio",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGTKOfWM7C8%2BnjNvcimOfZ5qaH9Y45tSg1mdCiOnSvxo0Woa2lPe2f5W%2Fr5Dmgya5T08UrS4JU482s8FvWhoN4xgxlduvt8Y8jYzbuFTr3ZOJwKffiQ7mqwBovFJqRzD3QB8JLGZKI6gyHqqeChjDH49C5pwE0nbzh5IOL4dmG3bJjAypeV3wRlVVFOgVSGoUL0yHXI%3D",
+    "precio_actual": 5999.0,
+    "precio_maximo": 8000.0,
+    "descuento": 25,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.153179+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: Marinela Galletas Príncipe Avellana Tentación, 5 paquetes, 315g|https://www.amazon.com.mx/dp/B0BB3KM83S?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Marinela Galletas Príncipe Avellana Tentación, 5 paquetes, 315g",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BB3KM83S?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 25.0,
+    "precio_maximo": 40.82,
+    "descuento": 39,
+    "puntuacion": 39,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.154378+00:00",
+    "precio_alertado": 25.0
+  },
+  "Telegram|RUBOR LIQUIDO CON ACABADO LUMINOSO DE NYX X THE SIMPSONS|https://www.amazon.com.mx/dp/B0GFW26XSZ?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=44f1845e4a206289f75759635766d1ab&ref_=as_li_ss_tl&ascsubtag=srctok-362af8cb7040849b&btn_type=ss&btn_ref=srctok-362af8cb7040849b": {
+    "tienda": "Telegram",
+    "titulo": "RUBOR LIQUIDO CON ACABADO LUMINOSO DE NYX X THE SIMPSONS",
+    "marca": "NYX",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GFW26XSZ?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=44f1845e4a206289f75759635766d1ab&ref_=as_li_ss_tl&ascsubtag=srctok-362af8cb7040849b&btn_type=ss&btn_ref=srctok-362af8cb7040849b",
+    "precio_actual": 100.0,
+    "precio_maximo": 269.0,
+    "descuento": 63,
+    "puntuacion": 70,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.155354+00:00",
+    "precio_alertado": 100.0
+  },
+  "Amazon|¡CELEBRA CADA JUEGO CON CERVEZA MINERVA!|https://www.amazon.com.mx/dp/B0H37GD8D6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡CELEBRA CADA JUEGO CON CERVEZA MINERVA!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H37GD8D6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 243.0,
+    "precio_maximo": 304.0,
+    "descuento": 20,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.156339+00:00",
+    "precio_alertado": 243.0
+  },
+  "Mercado Libre|MercadoLibre: Inia Masajeador Facial Corporal Radiofrecuencia Ems Luz|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDURF4niFH4%2BBEk9EZG6Fh5RmpnjuS4cfTVJza5m%2BPwpy0bv6fz6lCdUgoq%2BORdLKQKmLI2kpDeJxLqxyp0CIUQRJQI9ndZikhbyUVcTcJNw8JT38XjAa6Z00mmb5tLgbxyYH2JovrA5IVd7Tyw%2Bz2kSM%2BJxyJjRmGyjUcgX8Pnxi83eAKd7%2BJXUijEm1d1cl09EGA%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Inia Masajeador Facial Corporal Radiofrecuencia Ems Luz",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDURF4niFH4%2BBEk9EZG6Fh5RmpnjuS4cfTVJza5m%2BPwpy0bv6fz6lCdUgoq%2BORdLKQKmLI2kpDeJxLqxyp0CIUQRJQI9ndZikhbyUVcTcJNw8JT38XjAa6Z00mmb5tLgbxyYH2JovrA5IVd7Tyw%2Bz2kSM%2BJxyJjRmGyjUcgX8Pnxi83eAKd7%2BJXUijEm1d1cl09EGA%3D%3D",
+    "precio_actual": 1650.79,
+    "precio_maximo": 8000.0,
+    "descuento": 79,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.157403+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|LUCES QUE TRANSFORMAN TU HOGAR|https://www.amazon.com.mx/dp/B0BSYJJTZT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "LUCES QUE TRANSFORMAN TU HOGAR",
+    "marca": "",
+    "categoria": "Hogar",
+    "url": "https://www.amazon.com.mx/dp/B0BSYJJTZT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 288.99,
+    "precio_maximo": 439.0,
+    "descuento": 34,
+    "puntuacion": 49,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.157849+00:00",
+    "precio_alertado": 288.99
+  },
+  "Amazon|Amazon: Hikeo Asador de Carbón Grande 22 Pulgadas (55 cm) con Ruedas y Termómetro|https://www.amazon.com.mx/dp/B0FRH7RD4R?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Hikeo Asador de Carbón Grande 22 Pulgadas (55 cm) con Ruedas y Termómetro",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FRH7RD4R?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1996.0,
+    "precio_maximo": 2749.0,
+    "descuento": 27,
+    "puntuacion": 27,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.158994+00:00",
+    "precio_alertado": 1996.0
+  },
+  "Telegram|EL NUEVO DESMAQUILLANTE BIFASICO CON VITAMINA C DE NIVEA|https://www.amazon.com.mx/dp/B0GT6H32N7?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=8288609e56b348b44ca67db37f792587&ref_=as_li_ss_tl&ascsubtag=srctok-23a41ae06f135923&btn_type=ss&btn_ref=srctok-23a41ae06f135923": {
+    "tienda": "Telegram",
+    "titulo": "EL NUEVO DESMAQUILLANTE BIFASICO CON VITAMINA C DE NIVEA",
+    "marca": "Nivea",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GT6H32N7?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=8288609e56b348b44ca67db37f792587&ref_=as_li_ss_tl&ascsubtag=srctok-23a41ae06f135923&btn_type=ss&btn_ref=srctok-23a41ae06f135923",
+    "precio_actual": 40.0,
+    "precio_maximo": 113.0,
+    "descuento": 65,
+    "puntuacion": 70,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.159932+00:00",
+    "precio_alertado": 40.0
+  },
+  "Amazon|¡IMPULSA TU COLECCIÓN CON HAN SOLO Y EL MILLENNIUM FALCON!|https://www.amazon.com.mx/dp/B0CQS1S9QW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡IMPULSA TU COLECCIÓN CON HAN SOLO Y EL MILLENNIUM FALCON!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CQS1S9QW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 199.0,
+    "precio_maximo": 329.99,
+    "descuento": 40,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.160951+00:00",
+    "precio_alertado": 199.0
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE: VAJILLA NEGRA DE 89 PZS!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIZi5SGh8Vvbw6HTV46GNvWcI%2FnzWIDWvINBBKAHx6agBcv%2FDXNJJfpRWUA9EfxrkKaU8WnKJtukHhhzNb9AmZ4SugAk6iHFxvqWTvbT3o4ngGbLJrwf%2BjxpV97prPWoaGd8Z%2Bx8YHThxWBOmK6a82FsxSF35Z7Eyztrw8IbE9deKkvFKFcX45kOw%2FiaTj85lLHsCA%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE: VAJILLA NEGRA DE 89 PZS!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIZi5SGh8Vvbw6HTV46GNvWcI%2FnzWIDWvINBBKAHx6agBcv%2FDXNJJfpRWUA9EfxrkKaU8WnKJtukHhhzNb9AmZ4SugAk6iHFxvqWTvbT3o4ngGbLJrwf%2BjxpV97prPWoaGd8Z%2Bx8YHThxWBOmK6a82FsxSF35Z7Eyztrw8IbE9deKkvFKFcX45kOw%2FiaTj85lLHsCA%3D%3D",
+    "precio_actual": 452.0,
+    "precio_maximo": 904.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.161912+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡DISFRUTA DE SONIDO BOLD CON EL JBL GRIP!|https://www.amazon.com.mx/dp/B0FKV24X87?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡DISFRUTA DE SONIDO BOLD CON EL JBL GRIP!",
+    "marca": "JBL",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FKV24X87?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 929.0,
+    "precio_maximo": 929.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.162835+00:00",
+    "precio_alertado": 929.0
+  },
+  "Amazon|Amazon: Blokees Evangelion Legend Edition: EVA Unit 01 73501|https://www.amazon.com.mx/dp/B0F8WTJSK6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Blokees Evangelion Legend Edition: EVA Unit 01 73501",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F8WTJSK6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 835.79,
+    "precio_maximo": 1049.0,
+    "descuento": 20,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.163843+00:00",
+    "precio_alertado": 835.79
+  },
+  "Telegram|RUBOR EN BARRA DE WET N WILD|https://www.amazon.com.mx/dp/B01N5MWPAG?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=fe181c260373b13196adb0686a4bf093&ref_=as_li_ss_tl&ascsubtag=srctok-35dc7c68570b263f&btn_type=ss&btn_ref=srctok-35dc7c68570b263f": {
+    "tienda": "Telegram",
+    "titulo": "RUBOR EN BARRA DE WET N WILD",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B01N5MWPAG?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=fe181c260373b13196adb0686a4bf093&ref_=as_li_ss_tl&ascsubtag=srctok-35dc7c68570b263f&btn_type=ss&btn_ref=srctok-35dc7c68570b263f",
+    "precio_actual": 89.0,
+    "precio_maximo": 129.0,
+    "descuento": 31,
+    "puntuacion": 31,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.164737+00:00",
+    "precio_alertado": 89.0
+  },
+  "Amazon|Amazon: PHANTOM INTENSE REFILLABLE EDP 150ML|https://www.amazon.com.mx/dp/B0CY8H2GGB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: PHANTOM INTENSE REFILLABLE EDP 150ML",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CY8H2GGB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1581.0,
+    "precio_maximo": 2986.05,
+    "descuento": 47,
+    "puntuacion": 47,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.165672+00:00",
+    "precio_alertado": 1581.0
+  },
+  "Mercado Libre|MercadoLibre: Apple iPhone 17 (256 GB) - Salvia|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKDdwHfHEIQh3edJ5d6PjZVXiNTbMQPTCW8DUgzbvYkGV7ZK2bk%2FCBJTfnl8piU39RLez1CSXIOpm9Zcmh5IE1jm4IpAPlWncgubDd5en0CgsPw5NgnJTbHc2lEa30nX2M04DfZNbyU4uoz%2FdkC5saHgXhuXstIaH9iZVwglGWpwuS7bYhyzZu4%2B4NXQLeGbnrxrtyg%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Apple iPhone 17 (256 GB) - Salvia",
+    "marca": "Apple",
+    "categoria": "Smartphones",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKDdwHfHEIQh3edJ5d6PjZVXiNTbMQPTCW8DUgzbvYkGV7ZK2bk%2FCBJTfnl8piU39RLez1CSXIOpm9Zcmh5IE1jm4IpAPlWncgubDd5en0CgsPw5NgnJTbHc2lEa30nX2M04DfZNbyU4uoz%2FdkC5saHgXhuXstIaH9iZVwglGWpwuS7bYhyzZu4%2B4NXQLeGbnrxrtyg%3D",
+    "precio_actual": 16219.0,
+    "precio_maximo": 16219.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.166049+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|PRECIO MAS BAJO JUEGO FOTORAMA|https://www.amazon.com.mx/dp/B00PPWJY2I?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO JUEGO FOTORAMA",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B00PPWJY2I?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 223.2,
+    "precio_maximo": 299.0,
+    "descuento": 25,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.166923+00:00",
+    "precio_alertado": 223.2
+  },
+  "Telegram|SHAMPOO PARA CABELLO SECO DE KÉRASTASE|https://www.amazon.com.mx/dp/B0BZZKXTQW?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=2caf7076f9a877ebd0a95a6d819da985&ref_=as_li_ss_tl&ascsubtag=srctok-6f7f30ecde11718c&btn_type=ss&btn_ref=srctok-6f7f30ecde11718c": {
+    "tienda": "Telegram",
+    "titulo": "SHAMPOO PARA CABELLO SECO DE KÉRASTASE",
+    "marca": "",
+    "categoria": "Cuidado del Cabello",
+    "url": "https://www.amazon.com.mx/dp/B0BZZKXTQW?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=2caf7076f9a877ebd0a95a6d819da985&ref_=as_li_ss_tl&ascsubtag=srctok-6f7f30ecde11718c&btn_type=ss&btn_ref=srctok-6f7f30ecde11718c",
+    "precio_actual": 655.0,
+    "precio_maximo": 935.0,
+    "descuento": 30,
+    "puntuacion": 30,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.167405+00:00",
+    "precio_alertado": 655.0
+  },
+  "Amazon|Amazon: Colgate Enjuague Bucal Luminous White Charcoal 500ml (Paquete de 2)|https://www.amazon.com.mx/dp/B0H46SLB7M?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Colgate Enjuague Bucal Luminous White Charcoal 500ml (Paquete de 2)",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H46SLB7M?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 81.0,
+    "precio_maximo": 258.0,
+    "descuento": 69,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.168429+00:00",
+    "precio_alertado": 81.0
+  },
+  "Amazon|Amazon: Funko Pop! Bitty Ride: Star Wars - Han Solo with Millenium Falcon|https://www.amazon.com.mx/dp/B0CQS1S9QW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Funko Pop! Bitty Ride: Star Wars - Han Solo with Millenium Falcon",
+    "marca": "",
+    "categoria": "Juegos de Mesa y Coleccionables",
+    "url": "https://www.amazon.com.mx/dp/B0CQS1S9QW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 199.0,
+    "precio_maximo": 329.99,
+    "descuento": 40,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.168964+00:00",
+    "precio_alertado": 199.0
+  },
+  "Amazon|Amazon: Ninja Luxe Café Pro Cafetera Espresso 4 en 1 ES701LAA|https://www.amazon.com.mx/dp/B0H6NNG5NC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Ninja Luxe Café Pro Cafetera Espresso 4 en 1 ES701LAA",
+    "marca": "Ninja",
+    "categoria": "Electrodomésticos Pequeños",
+    "url": "https://www.amazon.com.mx/dp/B0H6NNG5NC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 12599.0,
+    "precio_maximo": 17999.0,
+    "descuento": 30,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.169410+00:00",
+    "precio_alertado": 12599.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-5d876cfd57d423d5&btn_type=ss&btn_ref=srctok-5d876cfd57d423d5": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-5d876cfd57d423d5&btn_type=ss&btn_ref=srctok-5d876cfd57d423d5",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.171042+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-33e867f6479ac74e&btn_type=ss&btn_ref=srctok-33e867f6479ac74e": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-33e867f6479ac74e&btn_type=ss&btn_ref=srctok-33e867f6479ac74e",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.173959+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-4d13efd69652a2a9&btn_type=ss&btn_ref=srctok-4d13efd69652a2a9": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-4d13efd69652a2a9&btn_type=ss&btn_ref=srctok-4d13efd69652a2a9",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.174344+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-53ed8bab01f7e87f&btn_type=ss&btn_ref=srctok-53ed8bab01f7e87f": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-53ed8bab01f7e87f&btn_type=ss&btn_ref=srctok-53ed8bab01f7e87f",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.175308+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-18bb17ac4477d7ce&btn_type=ss&btn_ref=srctok-18bb17ac4477d7ce": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-18bb17ac4477d7ce&btn_type=ss&btn_ref=srctok-18bb17ac4477d7ce",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.176299+00:00",
+    "precio_alertado": 160.0
+  },
+  "Mercado Libre|2 mesas plagables de 1.80m por $1,164|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BFxagu3mQgFCoUnT%2Bje8zW%2FR6fL54GienuesAtA8DdngKHV%2Bx9284geX%2BUIWFqoDmDxIOxjhD%2FQanWlU3OZeu38qKL4ZunIphE4B1N3s9N%2B%2Bo2m03A1WmEwyDiMKyieaQsn1FbFDq9jYRzmtdVKveScE1kgj%2F33QxP%2BmVCSOtU9QYhk5z6QqyvgLdKGMhAXKT%2FDumBw%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "2 mesas plagables de 1.80m por $1,164",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BFxagu3mQgFCoUnT%2Bje8zW%2FR6fL54GienuesAtA8DdngKHV%2Bx9284geX%2BUIWFqoDmDxIOxjhD%2FQanWlU3OZeu38qKL4ZunIphE4B1N3s9N%2B%2Bo2m03A1WmEwyDiMKyieaQsn1FbFDq9jYRzmtdVKveScE1kgj%2F33QxP%2BmVCSOtU9QYhk5z6QqyvgLdKGMhAXKT%2FDumBw%3D",
+    "precio_actual": 1164.0,
+    "precio_maximo": 1164.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.177978+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Nickelodeon Kart 2 para Nintendo Switch a $250|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-61164e3742081d82&btn_type=ss&btn_ref=srctok-61164e3742081d82": {
+    "tienda": "Telegram",
+    "titulo": "Nickelodeon Kart 2 para Nintendo Switch a $250",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-61164e3742081d82&btn_type=ss&btn_ref=srctok-61164e3742081d82",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T20:15:44.178360+00:00",
+    "precio_alertado": 250.0
   }
 }
