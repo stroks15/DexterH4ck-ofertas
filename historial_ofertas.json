@@ -12928,5 +12928,183 @@
     },
     "ultima_actualizacion": "2026-10-03T08:29:45.731239+00:00",
     "precio_alertado": 160.0
+  },
+  "Amazon|Amazon: Gain Island Fresh Detergente Líquido, Jabón Líquido para Ropa 2.6L|https://www.amazon.com.mx/dp/B0C8TWWYMS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Gain Island Fresh Detergente Líquido, Jabón Líquido para Ropa 2.6L",
+    "marca": "",
+    "categoria": "Limpieza del Hogar",
+    "url": "https://www.amazon.com.mx/dp/B0C8TWWYMS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 189.0,
+    "precio_maximo": 429.0,
+    "descuento": 56,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.836562+00:00",
+    "precio_alertado": 189.0
+  },
+  "Telegram|Reloj Fossil fs4736 de $4,199 a $1,500|https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-6cc50e8cffbc92f7&btn_type=ss&btn_ref=srctok-6cc50e8cffbc92f7": {
+    "tienda": "Telegram",
+    "titulo": "Reloj Fossil fs4736 de $4,199 a $1,500",
+    "marca": "",
+    "categoria": "Relojes",
+    "url": "https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-6cc50e8cffbc92f7&btn_type=ss&btn_ref=srctok-6cc50e8cffbc92f7",
+    "precio_actual": 4199.0,
+    "precio_maximo": 4199.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.839370+00:00",
+    "precio_alertado": 4199.0
+  },
+  "Telegram|Crema Facial Nivea 200ml de $96 a $29|https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-58021d45e9c86134&btn_type=ss&btn_ref=srctok-58021d45e9c86134": {
+    "tienda": "Telegram",
+    "titulo": "Crema Facial Nivea 200ml de $96 a $29",
+    "marca": "Nivea",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-58021d45e9c86134&btn_type=ss&btn_ref=srctok-58021d45e9c86134",
+    "precio_actual": 96.0,
+    "precio_maximo": 96.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.840694+00:00",
+    "precio_alertado": 96.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-220d946b1463f937&btn_type=ss&btn_ref=srctok-220d946b1463f937": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-220d946b1463f937&btn_type=ss&btn_ref=srctok-220d946b1463f937",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.843356+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-2a2b95c9319d9ca1&btn_type=ss&btn_ref=srctok-2a2b95c9319d9ca1": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-2a2b95c9319d9ca1&btn_type=ss&btn_ref=srctok-2a2b95c9319d9ca1",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.848201+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-6df04e22b4765cd2&btn_type=ss&btn_ref=srctok-6df04e22b4765cd2": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-6df04e22b4765cd2&btn_type=ss&btn_ref=srctok-6df04e22b4765cd2",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.849098+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-792763ac73a16654&btn_type=ss&btn_ref=srctok-792763ac73a16654": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-792763ac73a16654&btn_type=ss&btn_ref=srctok-792763ac73a16654",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.850645+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-5c5a1a6a4ac32e85&btn_type=ss&btn_ref=srctok-5c5a1a6a4ac32e85": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-5c5a1a6a4ac32e85&btn_type=ss&btn_ref=srctok-5c5a1a6a4ac32e85",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T13:42:34.852352+00:00",
+    "precio_alertado": 160.0
   }
 }
