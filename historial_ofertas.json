@@ -7066,14 +7066,25 @@
   "Amazon|Amazon: Samsung Galaxy Z Fold8 Ultra Grafito 512GB|https://www.amazon.com.mx/dp/B0H92G9GNW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
     "tienda": "Amazon",
     "titulo": "Amazon: Samsung Galaxy Z Fold8 Ultra Grafito 512GB",
-    "marca": "",
+    "marca": "Samsung",
     "categoria": "",
     "url": "https://www.amazon.com.mx/dp/B0H92G9GNW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 35000.0,
+    "precio_actual": 35132.67,
     "precio_maximo": 53499.0,
-    "descuento": 35,
-    "puntuacion": 35,
-    "ultima_actualizacion": "2026-09-30T20:28:47.937879+00:00",
+    "descuento": 34,
+    "puntuacion": 54,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.071015+00:00",
     "precio_alertado": 35000.0
   },
   "Amazon|¡CREA SIN LÍMITES CON PLASTILINA ULTRALIGERA!|https://www.amazon.com.mx/dp/B0GH734BJG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
@@ -11675,5 +11686,613 @@
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.740468+00:00",
     "precio_alertado": 11890.0
+  },
+  "Amazon|Amazon: Ninja K32017 Foodi NeverDull Premium - Juego de cuchillos de 17 piezas con afilador integrado, cuchillos alemanes de acero inoxidable, color negro|https://www.amazon.com.mx/dp/B09B7R3SY7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Ninja K32017 Foodi NeverDull Premium - Juego de cuchillos de 17 piezas con afilador integrado, cuchillos alemanes de acero inoxidable, color negro",
+    "marca": "Ninja",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09B7R3SY7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 5062.72,
+    "precio_maximo": 7719.48,
+    "descuento": 34,
+    "puntuacion": 54,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.067492+00:00",
+    "precio_alertado": 5062.72
+  },
+  "Amazon|¡OFERTA IMPERDIBLE EN AURICULARES PULSE 3D|https://www.amazon.com.mx/dp/B0BHM8H9XD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE EN AURICULARES PULSE 3D",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BHM8H9XD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1579.0,
+    "precio_maximo": 2269.0,
+    "descuento": 30,
+    "puntuacion": 30,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.069361+00:00",
+    "precio_alertado": 1579.0
+  },
+  "Mercado Libre|SET DE BROCHAS Y ESPOJAS PARA MAQUILLAJE DE MAANGE|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BDhy90ee%2BE8aonWMAy7eyK3c%2FXIBpShBLYiTq5HrrRXOPJRiozCAhIvWD%2FFYzkPvEZK471fDVAJsWcSA3a2grYMlVDz7HzbK80q3s2RFpc%2FMcI3h94YcFA60b73k0yy%2BajRXTfmGM1si9ulGOPXRXOMmOCzWlsx6c8wY9UqlDt71JI83dDejO9aSA1ign%2B1FmqRgOZM%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "SET DE BROCHAS Y ESPOJAS PARA MAQUILLAJE DE MAANGE",
+    "marca": "",
+    "categoria": "Maquillaje",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BDhy90ee%2BE8aonWMAy7eyK3c%2FXIBpShBLYiTq5HrrRXOPJRiozCAhIvWD%2FFYzkPvEZK471fDVAJsWcSA3a2grYMlVDz7HzbK80q3s2RFpc%2FMcI3h94YcFA60b73k0yy%2BajRXTfmGM1si9ulGOPXRXOMmOCzWlsx6c8wY9UqlDt71JI83dDejO9aSA1ign%2B1FmqRgOZM%3D",
+    "precio_actual": 178.0,
+    "precio_maximo": 282.0,
+    "descuento": 37,
+    "puntuacion": 37,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.071791+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: Revlon Secadora de Viaje Compacta Plegable con Tecnología Iónica, Mango Plegable, 2 Temperaturas, 2 Velocidades, Voltaje Doble, Negro|https://www.amazon.com.mx/dp/B09QVK6831?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Revlon Secadora de Viaje Compacta Plegable con Tecnología Iónica, Mango Plegable, 2 Temperaturas, 2 Velocidades, Voltaje Doble, Negro",
+    "marca": "Revlon",
+    "categoria": "Secadoras",
+    "url": "https://www.amazon.com.mx/dp/B09QVK6831?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 321.0,
+    "precio_maximo": 400.0,
+    "descuento": 20,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.072460+00:00",
+    "precio_alertado": 321.0
+  },
+  "Amazon|Amazon: Philips Norelco OneBlade 360 Face + Body Hybrid Cortadora y afeitadora eléctrica QP2834/70|https://www.amazon.com.mx/dp/B0BZDPFH45?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Philips Norelco OneBlade 360 Face + Body Hybrid Cortadora y afeitadora eléctrica QP2834/70",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BZDPFH45?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1151.08,
+    "precio_maximo": 1585.75,
+    "descuento": 27,
+    "puntuacion": 27,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.074330+00:00",
+    "precio_alertado": 1151.08
+  },
+  "Mercado Libre|MercadoLibre: 6pzs Lápidas De Decoración De Patio Con Lápidas De Halloween|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ0HJExD5rFsCTe20I02KGnodM7Sd9ATqDT7Oko7yDGFwh50VFfw%2FXLS%2F4%2BfpGzOhXwF2W2BBTco5hSuIuc4Ps6i1Oh9qv%2FGKTRdF11TRMB2VVEjU99yvgmcVHAKIWTdI2v4xHdhIkCpPv%2Bwm68N8YiDOaMRwlMM%2FRO9zy0IYDeFc%2FTtxA3LyAscEBXWHUmuNypcYA%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: 6pzs Lápidas De Decoración De Patio Con Lápidas De Halloween",
+    "marca": "",
+    "categoria": "Decoración",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ0HJExD5rFsCTe20I02KGnodM7Sd9ATqDT7Oko7yDGFwh50VFfw%2FXLS%2F4%2BfpGzOhXwF2W2BBTco5hSuIuc4Ps6i1Oh9qv%2FGKTRdF11TRMB2VVEjU99yvgmcVHAKIWTdI2v4xHdhIkCpPv%2Bwm68N8YiDOaMRwlMM%2FRO9zy0IYDeFc%2FTtxA3LyAscEBXWHUmuNypcYA%3D%3D",
+    "precio_actual": 212.0,
+    "precio_maximo": 366.0,
+    "descuento": 42,
+    "puntuacion": 42,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.075186+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡GRAN OFERTA EN SMART TV DE 43\"!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKyZ9x8GE12TVZNDiiP4XDxzu8eaCJvqemfDUW%2ByuebC3SO4DWo36wIZuqcWz%2B0kdMRnznV1xf%2BLfQX7rHMzXU2ta%2BL0TCjS6%2BqJPJo7TjPQC5JxZmV4dD4OTaKJM6NgKj4%2FjaO2XMpH1dZ7UYNxR5l7vbDkzaDyqzAalLdXkG8QNGB%2BFke%2FjdcELbtIw5YR28VS%2Fbg%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡GRAN OFERTA EN SMART TV DE 43\"!",
+    "marca": "",
+    "categoria": "Smart TV",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKyZ9x8GE12TVZNDiiP4XDxzu8eaCJvqemfDUW%2ByuebC3SO4DWo36wIZuqcWz%2B0kdMRnznV1xf%2BLfQX7rHMzXU2ta%2BL0TCjS6%2BqJPJo7TjPQC5JxZmV4dD4OTaKJM6NgKj4%2FjaO2XMpH1dZ7UYNxR5l7vbDkzaDyqzAalLdXkG8QNGB%2BFke%2FjdcELbtIw5YR28VS%2Fbg%3D",
+    "precio_actual": 2969.0,
+    "precio_maximo": 4570.0,
+    "descuento": 35,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.075906+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|CORRECTOR DE MAQUILLAJE CON ACABADO NATURAL DE MAYBELLINE|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BPwzYy8g5qaXSY0ksesvF172ZuU4U4eLPCarDnutLba0GhhMByzJUI7Vxt9ZhOk%2BJsCVShb3VZL7Ts6yFYB3j1sxzl0dhZ9vTDka4g%2F4DzYwhjQitoawWnZbGmtWBFlqpI4XPlATDSrWzQ8%2FkB8LKGSlMfrHI3EqS8O4N%2FqxjCxPD4vGjSPp1ZKp29a99oYM3JtzBfo%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "CORRECTOR DE MAQUILLAJE CON ACABADO NATURAL DE MAYBELLINE",
+    "marca": "Maybelline",
+    "categoria": "Maquillaje",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BPwzYy8g5qaXSY0ksesvF172ZuU4U4eLPCarDnutLba0GhhMByzJUI7Vxt9ZhOk%2BJsCVShb3VZL7Ts6yFYB3j1sxzl0dhZ9vTDka4g%2F4DzYwhjQitoawWnZbGmtWBFlqpI4XPlATDSrWzQ8%2FkB8LKGSlMfrHI3EqS8O4N%2FqxjCxPD4vGjSPp1ZKp29a99oYM3JtzBfo%3D",
+    "precio_actual": 113.0,
+    "precio_maximo": 189.0,
+    "descuento": 40,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.076472+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE! SCOOTER ELÉCTRICO SEGWAY NINEBOT MAX G3|https://www.amazon.com.mx/dp/B0DSMQJX1X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE! SCOOTER ELÉCTRICO SEGWAY NINEBOT MAX G3",
+    "marca": "",
+    "categoria": "Bicicletas y Scooters",
+    "url": "https://www.amazon.com.mx/dp/B0DSMQJX1X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 21749.0,
+    "precio_maximo": 28999.0,
+    "descuento": 25,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.077330+00:00",
+    "precio_alertado": 21749.0
+  },
+  "Mercado Libre|POLVO TRANSLUCIDO PARA SELLAR EL MAQUILLAJE DE YUYA|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BMV4Euxg4wFHHDanQr7oEm04Rt6n5KJXWuwWSdCZ57%2BoYy0izdjxX3LXoiapHB%2BPNgLJuN3sujutRjJ8HKY3oAyY83CmAEX3cVSIhTjSGccfS169X76IyxCEEY0nMKoV1L9XzRUSufUG2b84eoO7OptQTjANQQHCm2XZQxA%2BYJ%2FJ%2FDJq6Om9z%2BuFOxUCnc0lrgAX%2FPI%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "POLVO TRANSLUCIDO PARA SELLAR EL MAQUILLAJE DE YUYA",
+    "marca": "",
+    "categoria": "Maquillaje",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BMV4Euxg4wFHHDanQr7oEm04Rt6n5KJXWuwWSdCZ57%2BoYy0izdjxX3LXoiapHB%2BPNgLJuN3sujutRjJ8HKY3oAyY83CmAEX3cVSIhTjSGccfS169X76IyxCEEY0nMKoV1L9XzRUSufUG2b84eoO7OptQTjANQQHCm2XZQxA%2BYJ%2FJ%2FDJq6Om9z%2BuFOxUCnc0lrgAX%2FPI%3D",
+    "precio_actual": 189.0,
+    "precio_maximo": 259.0,
+    "descuento": 27,
+    "puntuacion": 27,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.078125+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|SOMBRAS NEUTRAS CON UN POP DE COLOR, BISSU|https://www.amazon.com.mx/dp/B0GZR3ZS7H?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=3b0c58980e51d9167674be06b5b73d61&ref_=as_li_ss_tl&ascsubtag=srctok-6b1698a17d592d86&btn_type=ss&btn_ref=srctok-6b1698a17d592d86": {
+    "tienda": "Telegram",
+    "titulo": "SOMBRAS NEUTRAS CON UN POP DE COLOR, BISSU",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GZR3ZS7H?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=3b0c58980e51d9167674be06b5b73d61&ref_=as_li_ss_tl&ascsubtag=srctok-6b1698a17d592d86&btn_type=ss&btn_ref=srctok-6b1698a17d592d86",
+    "precio_actual": 151.0,
+    "precio_maximo": 180.0,
+    "descuento": 16,
+    "puntuacion": 16,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.079681+00:00",
+    "precio_alertado": 151.0
+  },
+  "Mercado Libre|NECESER PARA MAQUILLAJE Y SET DE BROCHAS|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BBRHCAY4lsrhHa8hTyexXG6asnCulMReLyjAjHz%2BF5qxCoJ%2Fcq5SeqVxXYj6vIArv8pMG5g9Scz5eVcM9phyE03qNbUuf2rRSqMomzzmCW4P8sQMP0gyHe9dE82sbllQvSqqJFOvxSefXhCynDA1Q4XUJAOBeg5BjctMp2OYmMU%2F8ve5PFkx%2Ftvz0d3IrkLLxAxbQhbeE3AiGM%2FjbQ%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "NECESER PARA MAQUILLAJE Y SET DE BROCHAS",
+    "marca": "",
+    "categoria": "Maquillaje",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BBRHCAY4lsrhHa8hTyexXG6asnCulMReLyjAjHz%2BF5qxCoJ%2Fcq5SeqVxXYj6vIArv8pMG5g9Scz5eVcM9phyE03qNbUuf2rRSqMomzzmCW4P8sQMP0gyHe9dE82sbllQvSqqJFOvxSefXhCynDA1Q4XUJAOBeg5BjctMp2OYmMU%2F8ve5PFkx%2Ftvz0d3IrkLLxAxbQhbeE3AiGM%2FjbQ%3D%3D",
+    "precio_actual": 574.0,
+    "precio_maximo": 899.0,
+    "descuento": 36,
+    "puntuacion": 36,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.080471+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡DISFRUTA DEL SONIDO SIN LÍMITES!|https://www.amazon.com.mx/dp/B0CHXRCG91?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡DISFRUTA DEL SONIDO SIN LÍMITES!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CHXRCG91?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4319.0,
+    "precio_maximo": 5799.0,
+    "descuento": 26,
+    "puntuacion": 26,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.081998+00:00",
+    "precio_alertado": 4319.0
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE! BATIDORA KITCHENAID CLASSIC|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKMJh%2F0AbinMpH15o%2F0XHSRq4TOW74kBsNGMKXhnqDmrrmrIkc3zJc9iVknkHabnoadPowNvtsQR2%2Fn8FMgrL6z3Mr7ysCs%2BE%2BVhlgULFJ28eubROphwiTbwKxlFPaHPpQEJ%2FJvRG8wOLWvUkmPq3G1ulxbVa%2Fb6CRdEeZQC8f0XYhi3jVtzQKnyu0r3JOf%2FZzPIYOM%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE! BATIDORA KITCHENAID CLASSIC",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKMJh%2F0AbinMpH15o%2F0XHSRq4TOW74kBsNGMKXhnqDmrrmrIkc3zJc9iVknkHabnoadPowNvtsQR2%2Fn8FMgrL6z3Mr7ysCs%2BE%2BVhlgULFJ28eubROphwiTbwKxlFPaHPpQEJ%2FJvRG8wOLWvUkmPq3G1ulxbVa%2Fb6CRdEeZQC8f0XYhi3jVtzQKnyu0r3JOf%2FZzPIYOM%3D",
+    "precio_actual": 5499.0,
+    "precio_maximo": 8699.0,
+    "descuento": 37,
+    "puntuacion": 37,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.083580+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA INCREÍBLE EN JABÓN LÍQUIDO!|https://www.amazon.com.mx/dp/B01LTGM28G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA INCREÍBLE EN JABÓN LÍQUIDO!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B01LTGM28G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 488.0,
+    "precio_maximo": 849.0,
+    "descuento": 43,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.085138+00:00",
+    "precio_alertado": 488.0
+  },
+  "Mercado Libre|PESTAÑAS LARGA Y RIZADAS CON YUYA|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BM2alXRIg54CdWoOrE8%2BgqOvBa0Ah6KE3uy4xxyWgiwtKHhrLaQQ8BWbCnn9q0GQqjjwE44D19Ae8pAWQjHdMkr%2BjUWH7S%2BvLleaXyzRsm1jez4t5236MGneZypi9ktaqSQR3BYr3lt6Y3MrbwRHaxdGUQ%2Bznj55DHqlinrysEIgNUnAr6%2B1wO9LR%2FzDixQl8w5nupo%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "PESTAÑAS LARGA Y RIZADAS CON YUYA",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BM2alXRIg54CdWoOrE8%2BgqOvBa0Ah6KE3uy4xxyWgiwtKHhrLaQQ8BWbCnn9q0GQqjjwE44D19Ae8pAWQjHdMkr%2BjUWH7S%2BvLleaXyzRsm1jez4t5236MGneZypi9ktaqSQR3BYr3lt6Y3MrbwRHaxdGUQ%2Bznj55DHqlinrysEIgNUnAr6%2B1wO9LR%2FzDixQl8w5nupo%3D",
+    "precio_actual": 159.0,
+    "precio_maximo": 219.0,
+    "descuento": 27,
+    "puntuacion": 27,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.086668+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡AFÉITATE CON ESTILO!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGILWY8YjHNvYMATkERYf8q3yzkbhYmG3u9Kuy1QgPVnihSwHVCXOfs3clHT5nBokEMpL%2BIkLNMYvVkToE7%2BPKdspyo7X5W14pTZpjk%2BuRFPjAo9e8g02wlYCzLvvADVIBVZUN6ytfs9NA67HMYX%2BXie8tNM6Ug3yYlJqdhbLDS%2FP7%2BURA5o300KaZkc75XwttjlD3M%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡AFÉITATE CON ESTILO!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGILWY8YjHNvYMATkERYf8q3yzkbhYmG3u9Kuy1QgPVnihSwHVCXOfs3clHT5nBokEMpL%2BIkLNMYvVkToE7%2BPKdspyo7X5W14pTZpjk%2BuRFPjAo9e8g02wlYCzLvvADVIBVZUN6ytfs9NA67HMYX%2BXie8tNM6Ug3yYlJqdhbLDS%2FP7%2BURA5o300KaZkc75XwttjlD3M%3D",
+    "precio_actual": 289.0,
+    "precio_maximo": 526.0,
+    "descuento": 45,
+    "puntuacion": 45,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.088140+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡PARAGUAS AUTOMÁTICO REFORZADO PARA CUALQUIER CLIMA!|https://www.amazon.com.mx/dp/B0DHD471ZL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡PARAGUAS AUTOMÁTICO REFORZADO PARA CUALQUIER CLIMA!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DHD471ZL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 199.97,
+    "precio_maximo": 349.99,
+    "descuento": 43,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.089723+00:00",
+    "precio_alertado": 199.97
+  },
+  "Mercado Libre|¡PROTEGE TU PIEL CON SUNFRESH!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BPSu1V0vrWj4w5jKA0HgdX6TCVi7lpSZK8A5ta8Scd89o70TPOQgniIyhjhiLGzULLQccOeb%2BCP6Ctzlt7EgaV4qBvrCq3jHLflSUfnSZtZvc89aSV4MtedIFTWFvhTKIrDAZcJS5aZG39i7XKdw%2FH9p7%2F%2BVPXYV4qkWS1vRLlP%2F78EpB1dnolUvqZ5Q2xdNVh4bBrg%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡PROTEGE TU PIEL CON SUNFRESH!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BPSu1V0vrWj4w5jKA0HgdX6TCVi7lpSZK8A5ta8Scd89o70TPOQgniIyhjhiLGzULLQccOeb%2BCP6Ctzlt7EgaV4qBvrCq3jHLflSUfnSZtZvc89aSV4MtedIFTWFvhTKIrDAZcJS5aZG39i7XKdw%2FH9p7%2F%2BVPXYV4qkWS1vRLlP%2F78EpB1dnolUvqZ5Q2xdNVh4bBrg%3D",
+    "precio_actual": 267.0,
+    "precio_maximo": 542.0,
+    "descuento": 51,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.091265+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Reloj Fossil fs4736 de $4,199 a $1,500|https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-509414ca58831a16&btn_type=ss&btn_ref=srctok-509414ca58831a16": {
+    "tienda": "Telegram",
+    "titulo": "Reloj Fossil fs4736 de $4,199 a $1,500",
+    "marca": "",
+    "categoria": "Relojes",
+    "url": "https://www.amazon.com.mx/dp/B0088X1Q9U/ref=cm_sw_r_as_gl_api_gl_i_7RMQ94VVR5PFHZTD0CC4?linkCode=ml1&tag=liquidahorros--20&linkId=5cf6d7d791a47267f686c017620e3166&ascsubtag=srctok-509414ca58831a16&btn_type=ss&btn_ref=srctok-509414ca58831a16",
+    "precio_actual": 4199.0,
+    "precio_maximo": 4199.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.094222+00:00",
+    "precio_alertado": 4199.0
+  },
+  "Telegram|Crema Facial Nivea 200ml de $96 a $29|https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-695dbb0aab3b43a9&btn_type=ss&btn_ref=srctok-695dbb0aab3b43a9": {
+    "tienda": "Telegram",
+    "titulo": "Crema Facial Nivea 200ml de $96 a $29",
+    "marca": "Nivea",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0131MLDWW/ref=cm_sw_r_as_gl_api_gl_i_XRS64PZBFRTD4ZVY75G6?linkCode=ml1&tag=liquidahorros--20&linkId=f0ba985207ed0cecd87d623cfc69bb25&ascsubtag=srctok-695dbb0aab3b43a9&btn_type=ss&btn_ref=srctok-695dbb0aab3b43a9",
+    "precio_actual": 96.0,
+    "precio_maximo": 96.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.095620+00:00",
+    "precio_alertado": 96.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-3ae81d4abccda1f6&btn_type=ss&btn_ref=srctok-3ae81d4abccda1f6": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-3ae81d4abccda1f6&btn_type=ss&btn_ref=srctok-3ae81d4abccda1f6",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.098525+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-0124e66b77b94b46&btn_type=ss&btn_ref=srctok-0124e66b77b94b46": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-0124e66b77b94b46&btn_type=ss&btn_ref=srctok-0124e66b77b94b46",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.103644+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-53387b8b4ee32992&btn_type=ss&btn_ref=srctok-53387b8b4ee32992": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-53387b8b4ee32992&btn_type=ss&btn_ref=srctok-53387b8b4ee32992",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.104339+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-6802eb7454222c13&btn_type=ss&btn_ref=srctok-6802eb7454222c13": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-6802eb7454222c13&btn_type=ss&btn_ref=srctok-6802eb7454222c13",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.105968+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-132c25a2b36a4681&btn_type=ss&btn_ref=srctok-132c25a2b36a4681": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-132c25a2b36a4681&btn_type=ss&btn_ref=srctok-132c25a2b36a4681",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T02:23:22.107638+00:00",
+    "precio_alertado": 160.0
   }
 }
