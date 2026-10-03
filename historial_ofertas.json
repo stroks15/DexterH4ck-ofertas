@@ -14372,5 +14372,609 @@
     },
     "ultima_actualizacion": "2026-10-03T20:15:44.178360+00:00",
     "precio_alertado": 250.0
+  },
+  "Amazon|PRECIO MAS BAJO TÉ FRUTOS ROJOS|https://www.amazon.com.mx/dp/B07F89Z5DS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO TÉ FRUTOS ROJOS",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07F89Z5DS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 33.9,
+    "precio_maximo": 60.05,
+    "descuento": 44,
+    "puntuacion": 44,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.512514+00:00",
+    "precio_alertado": 33.9
+  },
+  "Mercado Libre|¡KIT DE GELS SEMIPERMANENTES PARA UÑAS!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BK1fKNhvfQhTHHr1sYgiu5jNpHKBkoPBP3gua3Jg3vsI7Eq8eTiEkRExO0L7W6CNsd%2B5xqW%2BIZxRmpN1%2ByAA0ub2rartpKsrayN%2FM9pXw%2FGbKch9ZHmDK50jDSMkh9WPZI65qRqOIhgKvpL4aE%2BpZaltgAQKeLOphExaH8H3HTdI0ySsL6KTFiRmB3fJ7hrkV2rKcQ%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡KIT DE GELS SEMIPERMANENTES PARA UÑAS!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BK1fKNhvfQhTHHr1sYgiu5jNpHKBkoPBP3gua3Jg3vsI7Eq8eTiEkRExO0L7W6CNsd%2B5xqW%2BIZxRmpN1%2ByAA0ub2rartpKsrayN%2FM9pXw%2FGbKch9ZHmDK50jDSMkh9WPZI65qRqOIhgKvpL4aE%2BpZaltgAQKeLOphExaH8H3HTdI0ySsL6KTFiRmB3fJ7hrkV2rKcQ%3D%3D",
+    "precio_actual": 280.0,
+    "precio_maximo": 632.0,
+    "descuento": 56,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.514269+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|MercadoLibre: Apple iPhone 15 128 GB Negro|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDSRiMBTlelPeeZqfqybRtUy4ydVzmENhuKSnTL4vUrOa3blycGSTCQsixDxe3z0mEFULLoji8LyeH3pHE2sHHNz7287zu5W32Nn1zGhebb8KarQLC9NXQq5v6HTkpqLe2U6qyFAHH9w2%2B3%2Bz4vdRMEL6OYCq8XXsIUiw%2FwwfC6ZtLrX8eJOd73StVOfQDAyorxrLMk%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Apple iPhone 15 128 GB Negro",
+    "marca": "Apple",
+    "categoria": "Smartphones",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDSRiMBTlelPeeZqfqybRtUy4ydVzmENhuKSnTL4vUrOa3blycGSTCQsixDxe3z0mEFULLoji8LyeH3pHE2sHHNz7287zu5W32Nn1zGhebb8KarQLC9NXQq5v6HTkpqLe2U6qyFAHH9w2%2B3%2Bz4vdRMEL6OYCq8XXsIUiw%2FwwfC6ZtLrX8eJOd73StVOfQDAyorxrLMk%3D",
+    "precio_actual": 9939.0,
+    "precio_maximo": 9939.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.515003+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡SMART TV MOTOROLA DE 43\" A UN PRECIO IMPERDIBLE!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBqhrmQS4FXQUCuY%2F9JnVuykeauZ%2F54YU46URES3zkxmMmIGVz%2FiUgcQavTN%2Fj1ofVBFxXqiU9mCgGEUZybkb9B1aYBkeW91huq7pawTxhJ5x%2BOc8BCjdA2uE4D0moxTrQwLf085zCxkRMot0nx%2B%2B%2B3tQ4HWa6br56PqMVSeSYo2UYclYPGZ1AVbti5TwImMaRFQyE8%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡SMART TV MOTOROLA DE 43\" A UN PRECIO IMPERDIBLE!",
+    "marca": "Motorola",
+    "categoria": "Smart TV",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBqhrmQS4FXQUCuY%2F9JnVuykeauZ%2F54YU46URES3zkxmMmIGVz%2FiUgcQavTN%2Fj1ofVBFxXqiU9mCgGEUZybkb9B1aYBkeW91huq7pawTxhJ5x%2BOc8BCjdA2uE4D0moxTrQwLf085zCxkRMot0nx%2B%2B%2B3tQ4HWa6br56PqMVSeSYo2UYclYPGZ1AVbti5TwImMaRFQyE8%3D",
+    "precio_actual": 3685.0,
+    "precio_maximo": 5999.0,
+    "descuento": 39,
+    "puntuacion": 74,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.515729+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|PRECIO MAS BAJO MILKY WAY 6 PACK|https://www.amazon.com.mx/dp/B097XM3KJW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO MILKY WAY 6 PACK",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B097XM3KJW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 67.0,
+    "precio_maximo": 133.18,
+    "descuento": 50,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.517287+00:00",
+    "precio_alertado": 67.0
+  },
+  "Telegram|TABLET HUAWEI CON PLUMA DE REGALO, AGREGA AMBAS AL CARRITO Y SOLO PAGAS LA TABLET|https://www.amazon.com.mx/dp/B0FJG32DRX?th=1&linkCode=sl2&tag=ofertones03-20&linkId=08e9e6f1259902922bb8a55401ae623e&ref_=as_li_ss_tl&ascsubtag=srctok-5f33cb4d01871242&btn_type=ss&btn_ref=srctok-5f33cb4d01871242": {
+    "tienda": "Telegram",
+    "titulo": "TABLET HUAWEI CON PLUMA DE REGALO, AGREGA AMBAS AL CARRITO Y SOLO PAGAS LA TABLET",
+    "marca": "",
+    "categoria": "Tablets",
+    "url": "https://www.amazon.com.mx/dp/B0FJG32DRX?th=1&linkCode=sl2&tag=ofertones03-20&linkId=08e9e6f1259902922bb8a55401ae623e&ref_=as_li_ss_tl&ascsubtag=srctok-5f33cb4d01871242&btn_type=ss&btn_ref=srctok-5f33cb4d01871242",
+    "precio_actual": 6099.0,
+    "precio_maximo": 9999.0,
+    "descuento": 39,
+    "puntuacion": 39,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.518154+00:00",
+    "precio_alertado": 6099.0
+  },
+  "Mercado Libre|¡OFERTÓN EN HORNO DE MICROONDAS MIRAGE!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDfnZD5RoCnlgG3987uqqrNbV5lfr6%2FOwufzBzwJBksHJMnRkzmQbPS1aoFUHBnPd819Vc6%2BJ8FGV39hrOi7G%2BqF7rq5HR1UXQe%2Bk77895%2BpCuKeOJRZx8UA1dsqmXhyTv%2BZg3PwcrwrqrSRyQSXwoR9Bagl1YrDKy8s%2BnT9D4bLsFIGA%2FdIYSeF0Zy5I%2B3UruYNOog%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTÓN EN HORNO DE MICROONDAS MIRAGE!",
+    "marca": "",
+    "categoria": "Microondas",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDfnZD5RoCnlgG3987uqqrNbV5lfr6%2FOwufzBzwJBksHJMnRkzmQbPS1aoFUHBnPd819Vc6%2BJ8FGV39hrOi7G%2BqF7rq5HR1UXQe%2Bk77895%2BpCuKeOJRZx8UA1dsqmXhyTv%2BZg3PwcrwrqrSRyQSXwoR9Bagl1YrDKy8s%2BnT9D4bLsFIGA%2FdIYSeF0Zy5I%2B3UruYNOog%3D",
+    "precio_actual": 1374.0,
+    "precio_maximo": 2490.0,
+    "descuento": 45,
+    "puntuacion": 45,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.518966+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE EN COLCHÓN INDIVIDUAL!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BFZIOxjeM93%2BEAchCRTH7IBRsAcesNnDt%2FXcWi%2BOUMCe96f6xCRDqV7D2LwFRi%2BvANpnc6jW0jF6OSrb5tI%2BYEof99wNZbVrlM6lGdyAVKd65oMVteLrQAJd7rF3ZneHcvZjD3Zl%2BAHZ%2B%2FscJ1UmBbGs9iItUUlIJw4VK86L%2FHEzwJBigJy6HvoKVDqoWOOd00WcYIY%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE EN COLCHÓN INDIVIDUAL!",
+    "marca": "",
+    "categoria": "Colchones",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BFZIOxjeM93%2BEAchCRTH7IBRsAcesNnDt%2FXcWi%2BOUMCe96f6xCRDqV7D2LwFRi%2BvANpnc6jW0jF6OSrb5tI%2BYEof99wNZbVrlM6lGdyAVKd65oMVteLrQAJd7rF3ZneHcvZjD3Zl%2BAHZ%2B%2FscJ1UmBbGs9iItUUlIJw4VK86L%2FHEzwJBigJy6HvoKVDqoWOOd00WcYIY%3D",
+    "precio_actual": 1599.0,
+    "precio_maximo": 3926.0,
+    "descuento": 59,
+    "puntuacion": 65,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.519741+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|4 LABIALES LIQUIDOS CON ACABADO SATINADO DE MAYBELLINE|https://www.amazon.com.mx/dp/B0DSWR6517?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=901d12b1dd5013513975f5df174aeb7a&ref_=as_li_ss_tl&ascsubtag=srctok-3928f1c3e39abf86&btn_type=ss&btn_ref=srctok-3928f1c3e39abf86": {
+    "tienda": "Telegram",
+    "titulo": "4 LABIALES LIQUIDOS CON ACABADO SATINADO DE MAYBELLINE",
+    "marca": "Maybelline",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DSWR6517?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=901d12b1dd5013513975f5df174aeb7a&ref_=as_li_ss_tl&ascsubtag=srctok-3928f1c3e39abf86&btn_type=ss&btn_ref=srctok-3928f1c3e39abf86",
+    "precio_actual": 669.0,
+    "precio_maximo": 1116.0,
+    "descuento": 40,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.521185+00:00",
+    "precio_alertado": 669.0
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE EN NIKE AIR MAX ALPHA TRAINER 6!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBrVBlRzhJeL4DjUgfhPl6fKNq%2BBQTtAW0INFbZLM%2Bxc2nIk3pUrR5M3PtyOyLQlEGE3Oau591xYmGwX6qgd%2BVTstPkhj69fNfrmvvLXRSHEKY4cVqV9vGs7m7Wibq%2B6RoA%2B7w4lSucjIp8%2FqWQ95Z2SVWQyktSAh7TvkuJEcSpBVO9iD4Ds08vGay99di4C6GSvFQ%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE EN NIKE AIR MAX ALPHA TRAINER 6!",
+    "marca": "Nike",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBrVBlRzhJeL4DjUgfhPl6fKNq%2BBQTtAW0INFbZLM%2Bxc2nIk3pUrR5M3PtyOyLQlEGE3Oau591xYmGwX6qgd%2BVTstPkhj69fNfrmvvLXRSHEKY4cVqV9vGs7m7Wibq%2B6RoA%2B7w4lSucjIp8%2FqWQ95Z2SVWQyktSAh7TvkuJEcSpBVO9iD4Ds08vGay99di4C6GSvFQ%3D%3D",
+    "precio_actual": 1979.0,
+    "precio_maximo": 2199.0,
+    "descuento": 10,
+    "puntuacion": 30,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.522805+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE EN EL NUEVO IPHONE 17!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKg%2FyyoF0gkUPDnekn4sNpWHVW1zZJh3HNktq0iInrtLxhgbfDxs4jtC3SVU%2FZ2XV%2FvPqtL%2BazBXXRUqyh7HT3%2FkwZlfCgvwlza2GPCU%2BBwkhEzmQ1UloBGkSx1SB8YZdw2XoQUocsZARzfoX77Y%2FipBdEGKBAZ06np5vUXiE%2BAZPny0r43dO6bNJGe9bg6ncwPHp3Y%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE EN EL NUEVO IPHONE 17!",
+    "marca": "",
+    "categoria": "Smartphones",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKg%2FyyoF0gkUPDnekn4sNpWHVW1zZJh3HNktq0iInrtLxhgbfDxs4jtC3SVU%2FZ2XV%2FvPqtL%2BazBXXRUqyh7HT3%2FkwZlfCgvwlza2GPCU%2BBwkhEzmQ1UloBGkSx1SB8YZdw2XoQUocsZARzfoX77Y%2FipBdEGKBAZ06np5vUXiE%2BAZPny0r43dO6bNJGe9bg6ncwPHp3Y%3D",
+    "precio_actual": 17699.0,
+    "precio_maximo": 25999.0,
+    "descuento": 32,
+    "puntuacion": 47,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.523528+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡NUEVO SMARTPHONE MOTOROLA MOTO G17 4G!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHlhPtXRmF13wnPhPPnyTH8UgfFR06XDtiEmypG7fPfswlWCrXRabij6dfc3UCQD1dog2HQdGH4TD9HbjhP9poNsrLo9Dj6FP7orGavASp5sBaFDtdqkLGGQZhi68KrhjrNf7wL%2BS0bxrfW1mdZt5Zeb7dqmhBM9%2FSXwA%2BH4fx4oazMgftaD48LPnLuIZ6N4SfwuEJI%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡NUEVO SMARTPHONE MOTOROLA MOTO G17 4G!",
+    "marca": "Motorola",
+    "categoria": "Smartphones",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHlhPtXRmF13wnPhPPnyTH8UgfFR06XDtiEmypG7fPfswlWCrXRabij6dfc3UCQD1dog2HQdGH4TD9HbjhP9poNsrLo9Dj6FP7orGavASp5sBaFDtdqkLGGQZhi68KrhjrNf7wL%2BS0bxrfW1mdZt5Zeb7dqmhBM9%2FSXwA%2BH4fx4oazMgftaD48LPnLuIZ6N4SfwuEJI%3D",
+    "precio_actual": 3379.0,
+    "precio_maximo": 4599.0,
+    "descuento": 27,
+    "puntuacion": 62,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.524166+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡COMODIDAD Y ESTILO EN TU OFICINA!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BI2P8pejS46kpgUfIUQDrZfFUGpZvYk0TiTmIKy2C8xMC5vSayd9AvvKSg38xls%2FH60oGJPruw2BukWuW10cPm4%2B4hfNghX7BWveUxTHfhL7FHjHU7JZ1HKY6oBWL%2FLnJB6MrBS4UEadby%2FvGVCDioN0bQqQZUb0Ky0kHUeeIkNr9%2F4sa%2FP72tvooXx8HsNEM2G4rNU%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡COMODIDAD Y ESTILO EN TU OFICINA!",
+    "marca": "",
+    "categoria": "Papelería y Oficina",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BI2P8pejS46kpgUfIUQDrZfFUGpZvYk0TiTmIKy2C8xMC5vSayd9AvvKSg38xls%2FH60oGJPruw2BukWuW10cPm4%2B4hfNghX7BWveUxTHfhL7FHjHU7JZ1HKY6oBWL%2FLnJB6MrBS4UEadby%2FvGVCDioN0bQqQZUb0Ky0kHUeeIkNr9%2F4sa%2FP72tvooXx8HsNEM2G4rNU%3D",
+    "precio_actual": 664.0,
+    "precio_maximo": 1698.0,
+    "descuento": 61,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.525068+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|MercadoLibre: Kit Assassin's Creed Black Flag Resynced Xbox Series X + Taza Mágica|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BB%2FgLFAyWHkF9UBt%2BW5JMNoaoMQ64gWq%2BUKiFpLhBTaciUu0tN%2BIfhD2pIy6KDjH4QCfUb%2B5wLe1JnSoEbHVbCwO9oGJFJQ%2BN5LP%2BfhR%2Bu%2B9Ti5XHxlHsd5AK2HPnC9F%2FLL20vcsJ%2F5Rf8z5xoOSJb%2FzA7MICeDwTBrtpZtQMJyyuNqaUrxmuSJj6vbclsmJ4T5qKiUT%2BGmvctpEJw%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Kit Assassin's Creed Black Flag Resynced Xbox Series X + Taza Mágica",
+    "marca": "Xbox",
+    "categoria": "Consolas",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BB%2FgLFAyWHkF9UBt%2BW5JMNoaoMQ64gWq%2BUKiFpLhBTaciUu0tN%2BIfhD2pIy6KDjH4QCfUb%2B5wLe1JnSoEbHVbCwO9oGJFJQ%2BN5LP%2BfhR%2Bu%2B9Ti5XHxlHsd5AK2HPnC9F%2FLL20vcsJ%2F5Rf8z5xoOSJb%2FzA7MICeDwTBrtpZtQMJyyuNqaUrxmuSJj6vbclsmJ4T5qKiUT%2BGmvctpEJw%3D%3D",
+    "precio_actual": 1299.0,
+    "precio_maximo": 1698.0,
+    "descuento": 23,
+    "puntuacion": 58,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.525811+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE EN EL AMAZON ECHO SHOW 8!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNyhHoPVfGp9Q9CbCvCK0s%2BMzKRxqMKfboYWSRZdj4lW8msMd%2BaPH%2FR7fsDGMYxCUpwaYY8BOLqA8ThFQMfLzc0%2Fta0rEPILbhfH2ZPiIttXH%2BpDheT%2FTPd74fjuNwI0gwfvFNgXGZpRWMU7di6pc4Su3t67xP7S7RovqMP1Ob0OC5NgfEyOzHI00nzngwfOVYl29cY%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE EN EL AMAZON ECHO SHOW 8!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNyhHoPVfGp9Q9CbCvCK0s%2BMzKRxqMKfboYWSRZdj4lW8msMd%2BaPH%2FR7fsDGMYxCUpwaYY8BOLqA8ThFQMfLzc0%2Fta0rEPILbhfH2ZPiIttXH%2BpDheT%2FTPd74fjuNwI0gwfvFNgXGZpRWMU7di6pc4Su3t67xP7S7RovqMP1Ob0OC5NgfEyOzHI00nzngwfOVYl29cY%3D",
+    "precio_actual": 2599.0,
+    "precio_maximo": 3699.0,
+    "descuento": 30,
+    "puntuacion": 30,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.527398+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: EA Madden NFL 25 - PlayStation 5|https://www.amazon.com.mx/dp/B0D9MN5L65?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: EA Madden NFL 25 - PlayStation 5",
+    "marca": "PlayStation",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0D9MN5L65?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 399.0,
+    "precio_maximo": 399.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.528118+00:00",
+    "precio_alertado": 399.0
+  },
+  "Telegram|CORRECTOR EN SERUM DE NYX|https://www.amazon.com.mx/dp/B09HNMGGPR?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=0c3805d8c8f93e0cfb91f04f26fe4623&ref_=as_li_ss_tl&ascsubtag=srctok-7397f5d651fc1b57&btn_type=ss&btn_ref=srctok-7397f5d651fc1b57": {
+    "tienda": "Telegram",
+    "titulo": "CORRECTOR EN SERUM DE NYX",
+    "marca": "NYX",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09HNMGGPR?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=0c3805d8c8f93e0cfb91f04f26fe4623&ref_=as_li_ss_tl&ascsubtag=srctok-7397f5d651fc1b57&btn_type=ss&btn_ref=srctok-7397f5d651fc1b57",
+    "precio_actual": 196.0,
+    "precio_maximo": 215.0,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.529500+00:00",
+    "precio_alertado": 196.0
+  },
+  "Mercado Libre|¡REVITALIZA TU PIEL CON INIA!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDURF4niFH4%2BBEk9EZG6Fh5RmpnjuS4cfTVJza5m%2BPwpy0bv6fz6lCdUgoq%2BORdLKQKmLI2kpDeJxLqxyp0CIUQRJQI9ndZikhbyUVcTcJNw8JT38XjAa6Z00mmb5tLgbxyYH2JovrA5IVd7Tyw%2Bz2kSM%2BJxyJjRmGyjUcgX8Pnxi83eAKd7%2BJXUijEm1d1cl09EGA%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡REVITALIZA TU PIEL CON INIA!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDURF4niFH4%2BBEk9EZG6Fh5RmpnjuS4cfTVJza5m%2BPwpy0bv6fz6lCdUgoq%2BORdLKQKmLI2kpDeJxLqxyp0CIUQRJQI9ndZikhbyUVcTcJNw8JT38XjAa6Z00mmb5tLgbxyYH2JovrA5IVd7Tyw%2Bz2kSM%2BJxyJjRmGyjUcgX8Pnxi83eAKd7%2BJXUijEm1d1cl09EGA%3D%3D",
+    "precio_actual": 1725.0,
+    "precio_maximo": 3135.0,
+    "descuento": 45,
+    "puntuacion": 45,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.531043+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|PRECIO MAS BAJO|https://www.amazon.com.mx/dp/B0CSV7FF7D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CSV7FF7D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 553.24,
+    "precio_maximo": 813.04,
+    "descuento": 32,
+    "puntuacion": 32,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.532571+00:00",
+    "precio_alertado": 553.24
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-3769b88262d3a360&btn_type=ss&btn_ref=srctok-3769b88262d3a360": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-3769b88262d3a360&btn_type=ss&btn_ref=srctok-3769b88262d3a360",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.534798+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-23cf258b1b636cbb&btn_type=ss&btn_ref=srctok-23cf258b1b636cbb": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-23cf258b1b636cbb&btn_type=ss&btn_ref=srctok-23cf258b1b636cbb",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.540054+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-4d91984918817465&btn_type=ss&btn_ref=srctok-4d91984918817465": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-4d91984918817465&btn_type=ss&btn_ref=srctok-4d91984918817465",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.540765+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-17824edcfeea1a56&btn_type=ss&btn_ref=srctok-17824edcfeea1a56": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-17824edcfeea1a56&btn_type=ss&btn_ref=srctok-17824edcfeea1a56",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.542409+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-2ac7104505cf38b2&btn_type=ss&btn_ref=srctok-2ac7104505cf38b2": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-2ac7104505cf38b2&btn_type=ss&btn_ref=srctok-2ac7104505cf38b2",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.544136+00:00",
+    "precio_alertado": 160.0
+  },
+  "Telegram|Nickelodeon Kart 2 para Nintendo Switch a $250|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-5be482bb2fb94bbe&btn_type=ss&btn_ref=srctok-5be482bb2fb94bbe": {
+    "tienda": "Telegram",
+    "titulo": "Nickelodeon Kart 2 para Nintendo Switch a $250",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-5be482bb2fb94bbe&btn_type=ss&btn_ref=srctok-5be482bb2fb94bbe",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.547860+00:00",
+    "precio_alertado": 250.0
+  },
+  "Telegram|Cerveza Bohemia 12 pack desde $11.90 la pieza|https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-2e2fbfdf5dfad537&btn_type=ss&btn_ref=srctok-2e2fbfdf5dfad537": {
+    "tienda": "Telegram",
+    "titulo": "Cerveza Bohemia 12 pack desde $11.90 la pieza",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-2e2fbfdf5dfad537&btn_type=ss&btn_ref=srctok-2e2fbfdf5dfad537",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-03T23:09:04.549506+00:00",
+    "precio_alertado": 11.9
   }
 }
