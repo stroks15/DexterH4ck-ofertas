@@ -134,7 +134,10 @@ def enviar_telegram(texto):
 def calcular_datos(item, anterior_hist):
     actual = float(item.get("precio_actual") or item.get("price") or 0)
     listado = float(item["precio_anterior"]) if item.get("precio_anterior") else None
-    referencia = max([x for x in (listado, anterior_hist.get("precio_maximo")) if x], default=0)
+    # La referencia publicada por la tienda tiene prioridad. El historial
+    # solo sirve como respaldo cuando la ficha actual no trae precio anterior.
+    historica = float(anterior_hist.get("precio_maximo") or 0)
+    referencia = listado if listado and listado > actual else (historica if historica > actual else 0)
     dcto = round((1 - actual / referencia) * 100) if referencia > actual else 0
     return actual, referencia, dcto
 
