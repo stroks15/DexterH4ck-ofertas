@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "enabled": true,
   "precio_extremo_mxn": 10,
   "precio_ultra_extremo_mxn": 1,
@@ -36,6 +36,30 @@
       "nombre": "Promociones Juguetron",
       "url": "https://www.juguetron.mx/promociones",
       "tipo": "promociones_oficiales"
+    },
+    {
+      "tienda": "Bodega Aurrera",
+      "nombre": "Remates en todas las categorías",
+      "url": "https://despensa.bodegaaurrera.com.mx/content/remates/2715538",
+      "tipo": "liquidacion_oficial"
+    },
+    {
+      "tienda": "Coppel",
+      "nombre": "Outlet y saldos",
+      "url": "https://www.coppel.com/ca/outlet-saldos",
+      "tipo": "outlet_oficial"
+    },
+    {
+      "tienda": "Liverpool",
+      "nombre": "Ofertas de liquidación",
+      "url": "https://www.liverpool.com.mx/tienda?s=ofertas+de+liquidaci%C3%B3n",
+      "tipo": "liquidacion_oficial"
+    },
+    {
+      "tienda": "Coppel",
+      "nombre": "Ofertas",
+      "url": "https://www.coppel.com/ofertas",
+      "tipo": "ofertas_oficial"
     }
   ],
   "fuentes_comunitarias": [
@@ -62,5 +86,36 @@
       "liquidaciones Coppel México",
       "liquidaciones Liverpool México"
     ]
+  },
+  "descuento_cazador_minimo": 95,
+  "descuento_cazador_maximo": 99,
+  "consultas_prioritarias_95_99": [
+    "liquidacion 99",
+    "liquidación 99",
+    "liquidacion 95",
+    "liquidación 95",
+    "99% descuento",
+    "95% descuento",
+    "99 por ciento",
+    "95 por ciento",
+    "precio extremo",
+    "precio $1",
+    "precio $10",
+    "remate 99",
+    "remate 95",
+    "ultima pieza",
+    "última pieza",
+    "ultimas piezas",
+    "últimas piezas",
+    "clearance",
+    "outlet"
+  ],
+  "politica_verificacion_95_99": {
+    "requiere_precio_actual": true,
+    "requiere_referencia_para_porcentaje": true,
+    "requiere_url_producto": true,
+    "requiere_host_oficial": true,
+    "si_no_hay_referencia": "publicar como ALERTA ESPECIAL y no como descuento confirmado",
+    "nota": "Las terminaciones .01/.02/.03 y publicaciones comunitarias son señales de descubrimiento, no pruebas por sí solas."
   }
 }
