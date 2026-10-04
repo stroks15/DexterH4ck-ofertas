@@ -23,9 +23,14 @@ HEADERS = {
 FUENTES = [
     {
         "tienda": "Walmart MX",
-        "url": "https://kiosco.www.walmart.com.mx/shop/liquidaciones-walmart",
+        "urls": (
+            "https://www.walmart.com.mx/content/especiales/360013_300279",
+            "https://kiosco.www.walmart.com.mx/shop/liquidaciones-walmart",
+        ),
+        "url": "https://www.walmart.com.mx/content/especiales/360013_300279",
         "host": "walmart.com.mx",
         "patrones": ("/ip/",),
+        "max_pages": 4,
     },
     {
         "tienda": "Chedraui",
@@ -41,21 +46,35 @@ FUENTES = [
     },
     {
         "tienda": "Bodega Aurrera",
-        "url": "https://despensa.bodegaaurrera.com.mx/content/remates/2715538",
+        "urls": (
+            "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
+            "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-linea-blanca/490004_1030001_1360040",
+            "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-muebles/490004_1030001_1270007",
+            "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-electrodomesticos/490004_1030001_1360004",
+        ),
+        "url": "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
         "host": "bodegaaurrera.com.mx",
-        "patrones": ("/content/", "/ip/"),
+        "patrones": ("/ip/",),
+        "max_pages": 4,
     },
     {
         "tienda": "Coppel",
+        "urls": (
+            "https://www.coppel.com/ca/outlet-saldos",
+            "https://www.coppel.com/ofertas",
+        ),
         "url": "https://www.coppel.com/ca/outlet-saldos",
         "host": "coppel.com",
         "patrones": ("/pdp/", "/p/"),
+        "max_pages": 2,
     },
     {
         "tienda": "Liverpool",
+        "urls": ("https://www.liverpool.com.mx/tienda?s=ofertas+de+liquidaci%C3%B3n",),
         "url": "https://www.liverpool.com.mx/tienda?s=ofertas+de+liquidaci%C3%B3n",
         "host": "liverpool.com.mx",
         "patrones": ("/tienda/pdp/", "/pdp/"),
+        "max_pages": 3,
     },
     {
         "tienda": "Juguetron",
@@ -198,6 +217,27 @@ def _from_json_ld(soup, source, seen):
     return results
 
 
+def _listing_links(soup, source):
+    found = []
+    base = source["url"]
+    for anchor in soup.find_all("a", href=True):
+        href = urljoin(base, anchor.get("href", ""))
+        parsed = urlparse(href)
+        host = parsed.netloc.lower()
+        if host != source["host"] and not host.endswith("." + source["host"]):
+            continue
+        if _is_product(href, source):
+            continue
+        text = " ".join(anchor.get_text(" ", strip=True).lower().split())
+        haystack = parsed.path.lower() + " " + text
+        if any(x in haystack for x in (
+            "page=", "pagina", "siguiente", "remates", "liquidacion",
+            "liquidación", "ofertas", "rebajas", "promociones", "outlet"
+        )):
+            if href not in found:
+                found.append(href)
+    return found[:20]
+
 def _from_links(soup, source, seen):
     results = []
     for anchor in soup.find_all("a", href=True):
@@ -245,26 +285,55 @@ def _from_links(soup, source, seen):
 
 
 def buscar_liquidaciones_oficiales(session=None):
+    """Descubre ofertas desde hubs oficiales y una cantidad limitada de páginas."""
     session = session or requests.Session()
     session.headers.update(HEADERS)
     resultados = []
 
     for source in FUENTES:
-        try:
-            response = session.get(source["url"], timeout=25)
-            if response.status_code >= 400:
-                print(f"Oficial/{source['tienda']}: HTTP {response.status_code}")
+        seeds = list(source.get("urls") or (source.get("url"),))
+        pendientes = seeds[:]
+        visitadas = set()
+        limite = int(source.get("max_pages", 2))
+        while pendientes and len(visitadas) < limite:
+            url = pendientes.pop(0)
+            if not url or url in visitadas:
                 continue
-            soup = BeautifulSoup(response.text, "html.parser")
-            seen = set()
-            encontrados = _from_json_ld(soup, source, seen)
-            encontrados.extend(_from_links(soup, source, seen))
-            resultados.extend(encontrados[:120])
-            print(f"Oficial/{source['tienda']}: {len(encontrados[:120])} productos")
-        except requests.RequestException as error:
-            print(f"Oficial/{source['tienda']}: {error}")
-        except Exception as error:
-            print(f"Oficial/{source['tienda']}: error {error}")
-        time.sleep(0.5)
+            visitadas.add(url)
+            local_source = dict(source)
+            local_source["url"] = url
+            try:
+                response = session.get(url, timeout=25)
+                if response.status_code in (403, 429):
+                    print(f"Oficial/{source['tienda']}: HTTP {response.status_code}; fuente pausada este ciclo.")
+                    break
+                if response.status_code >= 400:
+                    print(f"Oficial/{source['tienda']}: HTTP {response.status_code} en {url}")
+                    continue
+                soup = BeautifulSoup(response.text, "html.parser")
+                seen = {item.get("url") for item in resultados if item.get("tienda") == source["tienda"] and item.get("url")}
+                encontrados = _from_json_ld(soup, local_source, seen)
+                encontrados.extend(_from_links(soup, local_source, seen))
+                for item in encontrados:
+                    item["origen_link"] = url
+                    item["fuente_descubrimiento"] = "oficial_hub"
+                resultados.extend(encontrados[:120])
+                print(f"Oficial/{source['tienda']}: {url} -> {len(encontrados[:120])} productos")
+                for link in _listing_links(soup, local_source):
+                    if link not in visitadas and link not in pendientes:
+                        pendientes.append(link)
+                time.sleep(0.5)
+            except requests.RequestException as error:
+                print(f"Oficial/{source['tienda']}: error de red en {url}: {error}")
+            except Exception as error:
+                print(f"Oficial/{source['tienda']}: error procesando {url}: {error}")
 
-    return resultados
+    unicos = {}
+    for item in resultados:
+        key = (item.get("tienda"), item.get("url"))
+        if not key[1]:
+            continue
+        old = unicos.get(key)
+        if old is None or item.get("descuento", 0) > old.get("descuento", 0):
+            unicos[key] = item
+    return list(unicos.values())
