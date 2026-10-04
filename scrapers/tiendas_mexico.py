@@ -426,7 +426,108 @@ def _urls_busqueda(nombre, q, plantilla):
     return [primaria]
 
 
-EXTREME_QUERIES = ["liquidacion 99","liquidacion 95","99% descuento","95% descuento","precio extremo","precio 1","precio 10","remate 99","remate 95","ultima pieza","ultimas piezas","clearance"]
+EXTREME_QUERIES = [
+    "liquidacion 99", "liquidacion 95", "99% descuento", "95% descuento",
+    "precio extremo", "precio 1", "precio 10", "remate 99", "remate 95",
+    "ultima pieza", "ultimas piezas", "clearance"
+]
+
+# No se limita la cacería a 95/99: estos rangos son los que el motor puede
+# confirmar con precio actual + referencia. Las consultas sirven para descubrir
+# páginas públicas; el porcentaje final siempre se calcula con los precios.
+DESCUENTO_QUERIES = [
+    "oferta 40%", "oferta 50%", "oferta 60%", "oferta 70%",
+    "oferta 80%", "oferta 90%", "descuento 40%", "descuento 50%",
+    "descuento 60%", "descuento 70%", "descuento 80%", "descuento 90%",
+    "rebaja", "oferta", "promocion", "cupon", "liquidacion", "remate",
+]
+
+
+def _buscar_indexado_tienda(nombre, consultas, session):
+    """Descubre productos desde resultados públicos indexados cuando la tienda
+    devuelve HTTP 200 pero oculta el catálogo al cliente automatizado.
+
+    No intenta saltar CAPTCHA, WAF, autenticación ni medidas de seguridad.
+    Solo usa resultados públicos del buscador y conserva el enlace oficial.
+    """
+    dominio = {
+        "Walmart MX": "walmart.com.mx",
+        "Bodega Aurrera": "bodegaaurrera.com.mx",
+    }.get(nombre)
+    if not dominio:
+        return []
+
+    resultados = []
+    vistos = set()
+    for consulta in consultas:
+        q = f"site:{dominio} {consulta} -search -buscar -login"
+        try:
+            response = session.get(
+                "https://www.google.com/search",
+                params={"q": q, "hl": "es", "gl": "mx", "num": 10},
+                headers=GOOGLE_HEADERS,
+                timeout=20,
+            )
+            if response.status_code >= 400:
+                print(f"{nombre}/Indexado: HTTP {response.status_code} para {consulta}")
+                continue
+
+            soup = BeautifulSoup(response.text, "html.parser")
+            for enlace in soup.select("a[href]"):
+                href = enlace.get("href", "")
+                if href.startswith("/url?q="):
+                    href = href.split("/url?q=", 1)[1].split("&", 1)[0]
+                parsed = urlparse(href)
+                if parsed.scheme not in ("http", "https"):
+                    continue
+                host = parsed.netloc.lower()
+                if not (host == dominio or host.endswith("." + dominio)):
+                    continue
+                if not es_url_producto(href, f"https://www.{dominio}/"):
+                    continue
+
+                texto = normalizar_texto(enlace.get_text(" ", strip=True))
+                padre = enlace.find_parent()
+                contexto = normalizar_texto(
+                    padre.get_text(" ", strip=True) if padre else texto
+                )
+                precios = extraer_precios(contexto)
+                actual = precios[0] if precios else None
+                anterior = next((p for p in precios[1:] if p > actual), None) if actual else None
+                if not actual:
+                    # El precio puede estar en el snippet, pero si no aparece
+                    # no se publica como oferta confirmada.
+                    continue
+
+                clave = producto_id(nombre, texto, href)
+                if clave in vistos:
+                    continue
+                vistos.add(clave)
+
+                marca, _ = detect_priority_brand({"titulo": texto})
+                categoria = infer_category({"titulo": texto})
+                contexto_lower = contexto.lower()
+                resultados.append({
+                    "tienda": nombre,
+                    "titulo": texto[:180],
+                    "marca": marca,
+                    "categoria": categoria,
+                    "precio_actual": actual,
+                    "precio_anterior": anterior,
+                    "descuento": calcular_descuento(anterior, actual),
+                    "url": href,
+                    "liquidacion": any(k in contexto_lower for k in KEYWORDS_LIQUIDACION),
+                    "outlet": any(k in contexto_lower for k in ("outlet", "clearance", "open box", "warehouse")),
+                    "origen_link": "buscador_publico",
+                })
+        except requests.RequestException as error:
+            print(f"{nombre}/Indexado: error de red para {consulta}: {error}")
+        except Exception as error:
+            print(f"{nombre}/Indexado: error procesando {consulta}: {error}")
+        time.sleep(0.4)
+
+    print(f"{nombre}/Indexado: {len(resultados)} productos públicos descubiertos")
+    return resultados
 
 
 def buscar_tienda(nombre, plantilla, session):
@@ -440,8 +541,9 @@ def buscar_tienda(nombre, plantilla, session):
     inicio = (bloque * tam) % len(BUSQUEDAS)
     consultas_base = [BUSQUEDAS[(inicio + i) % len(BUSQUEDAS)] for i in range(tam)]
     consultas = []
-    for q in EXTREME_QUERIES[:4]:
-        if q not in consultas:
+    # No monopolizar el ciclo con 95/99: mezclamos extremos con rangos medios.
+    for q in (EXTREME_QUERIES[:4] + DESCUENTO_QUERIES[:6]):
+        if q not in consultas and len(consultas) < tam:
             consultas.append(q)
     for q in consultas_base:
         if q not in consultas and len(consultas) < tam:
@@ -499,6 +601,11 @@ def buscar_tienda(nombre, plantilla, session):
             print(f"{nombre}: error de red para {q}: {error}")
         except Exception as error:
             print(f"{nombre}: error procesando {q}: {error}")
+    # Walmart y Bodega pueden entregar HTTP 200 con contenido de bloqueo.
+    # Si no hubo candidatos útiles, usamos descubrimiento público indexado.
+    if nombre in ("Walmart MX", "Bodega Aurrera") and not resultados:
+        fallback_queries = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
+        resultados.extend(_buscar_indexado_tienda(nombre, fallback_queries, session))
     return resultados
 
 
