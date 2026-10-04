@@ -459,67 +459,32 @@ def _buscar_indexado_tienda(nombre, consultas, session):
 
     resultados = []
     vistos = set()
+    motores = [
+        ("Google", "https://www.google.com/search", {"hl": "es", "gl": "mx", "num": 10}),
+        ("Bing", "https://www.bing.com/search", {"setlang": "es-MX", "cc": "mx", "count": 10}),
+    ]
     for consulta in consultas:
         q = f"site:{dominio} {consulta} -search -buscar -login"
-        try:
-            response = session.get(
-                "https://www.google.com/search",
-                params={"q": q, "hl": "es", "gl": "mx", "num": 10},
-                headers=GOOGLE_HEADERS,
-                timeout=20,
-            )
-            if response.status_code >= 400:
-                print(f"{nombre}/Indexado: HTTP {response.status_code} para {consulta}")
-                continue
-
-            soup = BeautifulSoup(response.text, "html.parser")
-            for enlace in soup.select("a[href]"):
-                href = enlace.get("href", "")
-                if href.startswith("/url?q="):
-                    href = href.split("/url?q=", 1)[1].split("&", 1)[0]
-                parsed = urlparse(href)
-                if parsed.scheme not in ("http", "https"):
-                    continue
-                host = parsed.netloc.lower()
-                if not (host == dominio or host.endswith("." + dominio)):
-                    continue
-                if not es_url_producto(href, f"https://www.{dominio}/"):
-                    continue
-
-                texto = normalizar_texto(enlace.get_text(" ", strip=True))
-                padre = enlace.find_parent()
-                contexto = normalizar_texto(
-                    padre.get_text(" ", strip=True) if padre else texto
+        soup = None
+        motor_usado = ""
+        for motor, endpoint, extra_params in motores:
+            try:
+                response = session.get(
+                    endpoint,
+                    params={"q": q, **extra_params},
+                    headers=GOOGLE_HEADERS,
+                    timeout=20,
                 )
-                precios = extraer_precios(contexto)
-                actual = precios[0] if precios else None
-                anterior = next((p for p in precios[1:] if p > actual), None) if actual else None
-                if not actual:
-                    # El precio puede estar en el snippet, pero si no aparece
-                    # no se publica como oferta confirmada.
+                if response.status_code >= 400:
+                    print(f"{nombre}/{motor}: HTTP {response.status_code} para {consulta}")
                     continue
-
-                clave = producto_id(nombre, texto, href)
-                if clave in vistos:
-                    continue
-                vistos.add(clave)
-
-                marca, _ = detect_priority_brand({"titulo": texto})
-                categoria = infer_category({"titulo": texto})
-                contexto_lower = contexto.lower()
-                resultados.append({
-                    "tienda": nombre,
-                    "titulo": texto[:180],
-                    "marca": marca,
-                    "categoria": categoria,
-                    "precio_actual": actual,
-                    "precio_anterior": anterior,
-                    "descuento": calcular_descuento(anterior, actual),
-                    "url": href,
-                    "liquidacion": any(k in contexto_lower for k in KEYWORDS_LIQUIDACION),
-                    "outlet": any(k in contexto_lower for k in ("outlet", "clearance", "open box", "warehouse")),
-                    "origen_link": "buscador_publico",
-                })
+                soup = BeautifulSoup(response.text, "html.parser")
+                motor_usado = motor
+                break
+            except requests.RequestException as error:
+                print(f"{nombre}/{motor}: error de red para {consulta}: {error}")
+        if soup is None:
+            continue
         except requests.RequestException as error:
             print(f"{nombre}/Indexado: error de red para {consulta}: {error}")
         except Exception as error:
