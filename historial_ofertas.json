@@ -6358,7 +6358,7 @@
     "precio_actual": 8400.0,
     "precio_maximo": 9389.0,
     "descuento": 11,
-    "puntuacion": 46,
+    "puntuacion": 40,
     "ultima_actualizacion": "2026-09-30T10:08:52.533715+00:00",
     "precio_alertado": 8400.0,
     "extremo": {
@@ -6398,7 +6398,7 @@
     "precio_actual": 12259.0,
     "precio_maximo": 13119.0,
     "descuento": 7,
-    "puntuacion": 7,
+    "puntuacion": 5,
     "ultima_actualizacion": "2026-09-30T10:08:52.534644+00:00",
     "precio_alertado": 12259.0,
     "extremo": {
@@ -6425,7 +6425,7 @@
     "precio_actual": 21290.0,
     "precio_maximo": 22289.0,
     "descuento": 4,
-    "puntuacion": 19,
+    "puntuacion": 20,
     "ultima_actualizacion": "2026-09-30T10:08:52.534875+00:00",
     "precio_alertado": 21290.0,
     "extremo": {
@@ -6452,7 +6452,7 @@
     "precio_actual": 14322.0,
     "precio_maximo": 15322.0,
     "descuento": 7,
-    "puntuacion": 7,
+    "puntuacion": 5,
     "ultima_actualizacion": "2026-09-30T10:08:52.535507+00:00",
     "precio_alertado": 14322.0,
     "extremo": {
@@ -7905,7 +7905,7 @@
     "precio_actual": 9378.0,
     "precio_maximo": 10378.0,
     "descuento": 10,
-    "puntuacion": 45,
+    "puntuacion": 40,
     "ultima_actualizacion": "2026-10-01T06:02:16.021430+00:00",
     "precio_alertado": 9378.0,
     "extremo": {
@@ -10644,7 +10644,7 @@
     "precio_actual": 1995.0,
     "precio_maximo": 3990.0,
     "descuento": 50,
-    "puntuacion": 60,
+    "puntuacion": 21,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10671,7 +10671,7 @@
     "precio_actual": 6999.0,
     "precio_maximo": 6999.0,
     "descuento": 0,
-    "puntuacion": 10,
+    "puntuacion": 15,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10698,7 +10698,7 @@
     "precio_actual": 171.0,
     "precio_maximo": 969.0,
     "descuento": 82,
-    "puntuacion": 60,
+    "puntuacion": 40,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10725,7 +10725,7 @@
     "precio_actual": 2200.0,
     "precio_maximo": 3299.0,
     "descuento": 33,
-    "puntuacion": 43,
+    "puntuacion": 15,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10752,7 +10752,7 @@
     "precio_actual": 5579.0,
     "precio_maximo": 5579.0,
     "descuento": 0,
-    "puntuacion": 10,
+    "puntuacion": 15,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10779,7 +10779,7 @@
     "precio_actual": 156.0,
     "precio_maximo": 363.0,
     "descuento": 57,
-    "puntuacion": 60,
+    "puntuacion": 25,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10806,7 +10806,7 @@
     "precio_actual": 257.7,
     "precio_maximo": 859.0,
     "descuento": 70,
-    "puntuacion": 60,
+    "puntuacion": 33,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10833,7 +10833,7 @@
     "precio_actual": 500.0,
     "precio_maximo": 6299.0,
     "descuento": 92,
-    "puntuacion": 60,
+    "puntuacion": 46,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10860,7 +10860,7 @@
     "precio_actual": 380.0,
     "precio_maximo": 849.0,
     "descuento": 55,
-    "puntuacion": 60,
+    "puntuacion": 24,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -10887,7 +10887,7 @@
     "precio_actual": 11890.0,
     "precio_maximo": 17309.0,
     "descuento": 31,
-    "puntuacion": 41,
+    "puntuacion": 15,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -13260,17 +13260,20 @@
     "precio_actual": 1376.0,
     "precio_maximo": 8000.0,
     "descuento": 83,
-    "puntuacion": 85,
+    "puntuacion": 66,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 82.8,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-03T17:40:54.557632+00:00",
     "precio_alertado": null
@@ -13826,7 +13829,7 @@
     "precio_actual": 1774.0,
     "precio_maximo": 1774.0,
     "descuento": 0,
-    "puntuacion": 15,
+    "puntuacion": 20,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -13853,7 +13856,7 @@
     "precio_actual": 79.0,
     "precio_maximo": 299.0,
     "descuento": 74,
-    "puntuacion": 85,
+    "puntuacion": 60,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -14462,7 +14465,7 @@
     "precio_actual": 1164.0,
     "precio_maximo": 1164.0,
     "descuento": 0,
-    "puntuacion": 0,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17135,7 +17138,7 @@
     "precio_actual": 8399.0,
     "precio_maximo": 8399.0,
     "descuento": 0,
-    "puntuacion": 0,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17162,7 +17165,7 @@
     "precio_actual": 1299.0,
     "precio_maximo": 2299.0,
     "descuento": 43,
-    "puntuacion": 43,
+    "puntuacion": 7,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17189,7 +17192,7 @@
     "precio_actual": 557.1,
     "precio_maximo": 600.0,
     "descuento": 7,
-    "puntuacion": 27,
+    "puntuacion": 25,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17216,7 +17219,7 @@
     "precio_actual": 319.0,
     "precio_maximo": 699.0,
     "descuento": 54,
-    "puntuacion": 50,
+    "puntuacion": 13,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17418,7 +17421,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17445,7 +17448,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17472,7 +17475,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17499,7 +17502,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17526,7 +17529,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17553,7 +17556,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17580,7 +17583,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17607,7 +17610,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17634,7 +17637,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17661,7 +17664,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17688,7 +17691,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17715,7 +17718,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17742,7 +17745,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17769,7 +17772,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17796,7 +17799,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17823,7 +17826,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17850,7 +17853,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17877,7 +17880,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17904,7 +17907,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17931,7 +17934,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17958,7 +17961,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -17985,7 +17988,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18012,7 +18015,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18039,7 +18042,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18066,7 +18069,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18093,7 +18096,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18120,7 +18123,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18147,7 +18150,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18174,7 +18177,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18201,7 +18204,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18228,7 +18231,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18255,7 +18258,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18282,7 +18285,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18309,7 +18312,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18336,7 +18339,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18363,7 +18366,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18390,7 +18393,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18417,7 +18420,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18444,7 +18447,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18471,7 +18474,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18498,7 +18501,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18525,7 +18528,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18579,7 +18582,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18606,7 +18609,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18633,7 +18636,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18660,7 +18663,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18687,7 +18690,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18714,7 +18717,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18741,7 +18744,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18768,7 +18771,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18795,7 +18798,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18822,7 +18825,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18849,7 +18852,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18876,7 +18879,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18903,7 +18906,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18930,7 +18933,7 @@
     "precio_actual": 1815.0,
     "precio_maximo": 2000.0,
     "descuento": 9,
-    "puntuacion": 9,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18957,7 +18960,7 @@
     "precio_actual": 9999.0,
     "precio_maximo": 15299.0,
     "descuento": 35,
-    "puntuacion": 70,
+    "puntuacion": 40,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -18984,7 +18987,7 @@
     "precio_actual": 599.0,
     "precio_maximo": 749.0,
     "descuento": 20,
-    "puntuacion": 20,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -19011,7 +19014,7 @@
     "precio_actual": 553.0,
     "precio_maximo": 890.0,
     "descuento": 38,
-    "puntuacion": 38,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -19213,7 +19216,7 @@
     "precio_actual": 1299.0,
     "precio_maximo": 1299.0,
     "descuento": 0,
-    "puntuacion": 20,
+    "puntuacion": 25,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -19240,7 +19243,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -19257,5 +19260,745 @@
     },
     "ultima_actualizacion": "2026-10-04T17:29:36.204813+00:00",
     "precio_alertado": 24.0
+  },
+  "Mercado Libre|Mercado Libre: Rca Cafetera Eléctrica Con Molino Rc-caf4 Color Negro|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO5hvnZFfvIaK%2F11yU04htkWobRRi3Z9sLXx8zbLXI7lH5sEiyFV7lUoEWqQXobQ7UwdzMukDZ1m%2By4KvPpCTO0hXBjRiq7WMKTwDHPHuuGx0mv7bv%2BA4UmKcoWb1ILITwULejlakVKiqZvgE12iI3HdG9ov%2F4H9Eu0Qkx7dMOSuU9svNvjNENxLwdHn81Jj%2Fjbaiio%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Rca Cafetera Eléctrica Con Molino Rc-caf4 Color Negro",
+    "marca": "",
+    "categoria": "Electrodomésticos Pequeños",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO5hvnZFfvIaK%2F11yU04htkWobRRi3Z9sLXx8zbLXI7lH5sEiyFV7lUoEWqQXobQ7UwdzMukDZ1m%2By4KvPpCTO0hXBjRiq7WMKTwDHPHuuGx0mv7bv%2BA4UmKcoWb1ILITwULejlakVKiqZvgE12iI3HdG9ov%2F4H9Eu0Qkx7dMOSuU9svNvjNENxLwdHn81Jj%2Fjbaiio%3D",
+    "precio_actual": 923.0,
+    "precio_maximo": 1400.0,
+    "descuento": 34,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 34.07,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.603056+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡SCOOTER 2 EN 1 CON ASIENTO MINNIE PARA NIÑOS!|https://www.amazon.com.mx/dp/B0CKY1J8N3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡SCOOTER 2 EN 1 CON ASIENTO MINNIE PARA NIÑOS!",
+    "marca": "",
+    "categoria": "Bicicletas y Scooters",
+    "url": "https://www.amazon.com.mx/dp/B0CKY1J8N3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1499.0,
+    "precio_maximo": 1699.0,
+    "descuento": 12,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 11.77,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.603756+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|Mercado Libre: Samsung Galaxy A56 5G Dual Sim 256GB 12GB Negro 6.7''|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOQ5mCPKsdaq3F8p%2FU8cmyRJOQKR2pJv2pc4ei8eovQBHpFDbZCtwE4E8s8oO8X3QsjscIXhEOgUVcDDo3yz9sv5Fa0w4WncCf%2B25OOu5tKh8cZgfBNReCJEws1WufPoh70vXbWZ4zjhrUKwmCK6niJWl%2Fkik5k0Ps9xPFcnUZ6hIEOCqUo4quWIIZv9kchQLpg%2BpGI%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Samsung Galaxy A56 5G Dual Sim 256GB 12GB Negro 6.7''",
+    "marca": "Samsung",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOQ5mCPKsdaq3F8p%2FU8cmyRJOQKR2pJv2pc4ei8eovQBHpFDbZCtwE4E8s8oO8X3QsjscIXhEOgUVcDDo3yz9sv5Fa0w4WncCf%2B25OOu5tKh8cZgfBNReCJEws1WufPoh70vXbWZ4zjhrUKwmCK6niJWl%2Fkik5k0Ps9xPFcnUZ6hIEOCqUo4quWIIZv9kchQLpg%2BpGI%3D",
+    "precio_actual": 6299.42,
+    "precio_maximo": 6299.42,
+    "descuento": 0,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.605071+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE: GUESS FOR MEN EDT 50ML!|https://www.amazon.com.mx/dp/B0897RQ7HP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE: GUESS FOR MEN EDT 50ML!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0897RQ7HP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 250.01,
+    "precio_maximo": 544.04,
+    "descuento": 54,
+    "puntuacion": 13,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 54.05,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.606450+00:00",
+    "precio_alertado": 250.01
+  },
+  "Mercado Libre|Mercado Libre: Chiq Televisor 65 65u712xr 4k Roku Hdr Ultra Delgado Negro|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHV3GvIcNGzOXmIkJUxwxi%2FGYVH8XCku%2BsJgOK6Ulol5uC7AVy3VxINFgBYnuLtEJCWg6ukTs5vqf1uKwhyPLZODNaINpoQ68fciqEaQxccu%2B4GP%2BKURW8aPKszSvEn6JJAjF8rOEpf7G3P%2FQBdfn3qMf9lAcmO3z2AuLNBxgAM55FSAK09v3S9VOgVcp45jXD0cOBc%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Chiq Televisor 65 65u712xr 4k Roku Hdr Ultra Delgado Negro",
+    "marca": "",
+    "categoria": "Streaming",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHV3GvIcNGzOXmIkJUxwxi%2FGYVH8XCku%2BsJgOK6Ulol5uC7AVy3VxINFgBYnuLtEJCWg6ukTs5vqf1uKwhyPLZODNaINpoQ68fciqEaQxccu%2B4GP%2BKURW8aPKszSvEn6JJAjF8rOEpf7G3P%2FQBdfn3qMf9lAcmO3z2AuLNBxgAM55FSAK09v3S9VOgVcp45jXD0cOBc%3D",
+    "precio_actual": 6410.17,
+    "precio_maximo": 6410.17,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.607135+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE! JUEGO ELEGANTE DE DISPENSADORES DE CHAMPÚ Y ACONDICIONADOR|https://www.amazon.com.mx/dp/B0GF2F8BGQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE! JUEGO ELEGANTE DE DISPENSADORES DE CHAMPÚ Y ACONDICIONADOR",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GF2F8BGQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 585.99,
+    "precio_maximo": 887.04,
+    "descuento": 34,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 33.94,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.608635+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE EN HERRAMIENTAS MAKITA!|https://www.amazon.com.mx/dp/B0H6YC7274?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE EN HERRAMIENTAS MAKITA!",
+    "marca": "",
+    "categoria": "Herramientas",
+    "url": "https://www.amazon.com.mx/dp/B0H6YC7274?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3209.4,
+    "precio_maximo": 4782.35,
+    "descuento": 33,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 32.89,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.609841+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|MercadoLibre: Tenis Adidas Hombre Urban Court|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ2cViSWEF06hOGidh0Wp16Zk1Ta%2Br5%2BEfzGzVcSavfrSEza9IKC7WBV%2FLubIZ%2FOQHPKGQ0yckqxDQSDRgE8ScTWZT71i1%2BWwnxt0m6xtEriU6PYxPXleMQtOC9421gy2SiWwkMC1XNoKZQZpKoCtuKfA3cMJw58PhX5ZO1203tL2MxFK2fUE22FY9HFG4JeraFImdmIV2z%2BAFME": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Tenis Adidas Hombre Urban Court",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ2cViSWEF06hOGidh0Wp16Zk1Ta%2Br5%2BEfzGzVcSavfrSEza9IKC7WBV%2FLubIZ%2FOQHPKGQ0yckqxDQSDRgE8ScTWZT71i1%2BWwnxt0m6xtEriU6PYxPXleMQtOC9421gy2SiWwkMC1XNoKZQZpKoCtuKfA3cMJw58PhX5ZO1203tL2MxFK2fUE22FY9HFG4JeraFImdmIV2z%2BAFME",
+    "precio_actual": 606.0,
+    "precio_maximo": 2000.0,
+    "descuento": 70,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 69.7,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.610374+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE! 3 PIESAS DE PANTALONES DEPORTIVOS|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BH7mODFjnECIDkEFTgKd2jt7PVbkjxbj8eKMi2%2FJNKIu%2FqR%2FA1NJtQKZwFDu%2Bym0YsOqtMM8fhyWHQO%2BAPR4pN5S548Xqp8OI8ZuTiVgMM4pG9864AqypJh7H60YIKC6AbyLwDpZywaoSVTaTIjKl1RcBlpzkLAlS%2FBdiNvHTPDSwo8iOX3ll4z8HxP%2BOIsS%2FVvkkQ%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE! 3 PIESAS DE PANTALONES DEPORTIVOS",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BH7mODFjnECIDkEFTgKd2jt7PVbkjxbj8eKMi2%2FJNKIu%2FqR%2FA1NJtQKZwFDu%2Bym0YsOqtMM8fhyWHQO%2BAPR4pN5S548Xqp8OI8ZuTiVgMM4pG9864AqypJh7H60YIKC6AbyLwDpZywaoSVTaTIjKl1RcBlpzkLAlS%2FBdiNvHTPDSwo8iOX3ll4z8HxP%2BOIsS%2FVvkkQ%3D%3D",
+    "precio_actual": 413.0,
+    "precio_maximo": 633.0,
+    "descuento": 35,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 34.76,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.611734+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|PRECIO MAS BAJO VALENTINO UOMO|https://www.amazon.com.mx/dp/B0DT6WG8DK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO VALENTINO UOMO",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DT6WG8DK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2207.95,
+    "precio_maximo": 2894.35,
+    "descuento": 24,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 23.72,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.612970+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-28e9f431162ef335&btn_type=ss&btn_ref=srctok-28e9f431162ef335": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-28e9f431162ef335&btn_type=ss&btn_ref=srctok-28e9f431162ef335",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.613602+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-7090f3d99f4d75fe&btn_type=ss&btn_ref=srctok-7090f3d99f4d75fe": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-7090f3d99f4d75fe&btn_type=ss&btn_ref=srctok-7090f3d99f4d75fe",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.618367+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-7268932b64dd579f&btn_type=ss&btn_ref=srctok-7268932b64dd579f": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-7268932b64dd579f&btn_type=ss&btn_ref=srctok-7268932b64dd579f",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.618940+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-71619b4144933cc8&btn_type=ss&btn_ref=srctok-71619b4144933cc8": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-71619b4144933cc8&btn_type=ss&btn_ref=srctok-71619b4144933cc8",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 9.09,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.620306+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-1bf3b0b00630ef39&btn_type=ss&btn_ref=srctok-1bf3b0b00630ef39": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-1bf3b0b00630ef39&btn_type=ss&btn_ref=srctok-1bf3b0b00630ef39",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.621738+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Nickelodeon Kart 2 para Nintendo Switch a $250|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-038d45b2a4ab3ac9&btn_type=ss&btn_ref=srctok-038d45b2a4ab3ac9": {
+    "tienda": "Telegram",
+    "titulo": "Nickelodeon Kart 2 para Nintendo Switch a $250",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-038d45b2a4ab3ac9&btn_type=ss&btn_ref=srctok-038d45b2a4ab3ac9",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.624671+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|Cerveza Bohemia 12 pack desde $11.90 la pieza|https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-1a6b96f3dcb448e2&btn_type=ss&btn_ref=srctok-1a6b96f3dcb448e2": {
+    "tienda": "Telegram",
+    "titulo": "Cerveza Bohemia 12 pack desde $11.90 la pieza",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-1a6b96f3dcb448e2&btn_type=ss&btn_ref=srctok-1a6b96f3dcb448e2",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 36,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 91.68,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.625984+00:00",
+    "precio_alertado": 11.9
+  },
+  "Telegram|Perfume Valentino Uomo a $1,680|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_WE9PXX056R7AK09XDFY2?linkCode=ml1&tag=liquidahorros--20&linkId=3cb1b47c8a9a6b2acb2b75f0787dded2&ascsubtag=srctok-465566d7b5315c3b&btn_type=ss&btn_ref=srctok-465566d7b5315c3b": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo a $1,680",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_WE9PXX056R7AK09XDFY2?linkCode=ml1&tag=liquidahorros--20&linkId=3cb1b47c8a9a6b2acb2b75f0787dded2&ascsubtag=srctok-465566d7b5315c3b&btn_type=ss&btn_ref=srctok-465566d7b5315c3b",
+    "precio_actual": 1680.0,
+    "precio_maximo": 1680.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.628007+00:00",
+    "precio_alertado": null
+  },
+  "Walmart MX|$ 1,995 00 precio actual $1,995.00, Antes $3,990.00 $3,990.00 Ahorra $1,995.00 Hasta 3 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Asador-de-Carbon-Expert-Grill-Cuadrado-de-24-Pulgadas/00060538802437": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 1,995 00 precio actual $1,995.00, Antes $3,990.00 $3,990.00 Ahorra $1,995.00 Hasta 3 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Asador-de-Carbon-Expert-Grill-Cuadrado-de-24-Pulgadas/00060538802437",
+    "precio_actual": 1995.0,
+    "precio_maximo": 3990.0,
+    "descuento": 50,
+    "puntuacion": 21,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 50.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.645488+00:00",
+    "precio_alertado": 1995.0
+  },
+  "Walmart MX|$ 6,999 00 precio actual $6,999.00 Hasta 24 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/TV-Atvio-50-pulgadas-4K-Ultra-HD-Smart-TV-LED-ATV-50UHDR/00084184810115": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 6,999 00 precio actual $6,999.00 Hasta 24 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/TV-Atvio-50-pulgadas-4K-Ultra-HD-Smart-TV-LED-ATV-50UHDR/00084184810115",
+    "precio_actual": 6999.0,
+    "precio_maximo": 6999.0,
+    "descuento": 0,
+    "puntuacion": 15,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.646961+00:00",
+    "precio_alertado": null
+  },
+  "Walmart MX|$ 969 00 precio actual $969.00, Antes $1,140.00 $1,140.00 Ahorra $171.00 Hasta 12 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Plancha-para-Asar-Electrica-Oster-Negra/00003426446811": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 969 00 precio actual $969.00, Antes $1,140.00 $1,140.00 Ahorra $171.00 Hasta 12 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Plancha-para-Asar-Electrica-Oster-Negra/00003426446811",
+    "precio_actual": 171.0,
+    "precio_maximo": 969.0,
+    "descuento": 82,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 82.35,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.648583+00:00",
+    "precio_alertado": 171.0
+  },
+  "Walmart MX|$ 3,299 00 precio actual $3,299.00, Antes $5,499.00 $5,499.00 Ahorra $2,200.00 Hasta 3 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/TCL-Soundbar-5-1-Canales-con-Subwoofer-Inalambrico-Dolby-Atmos-Q65H/00084046409413": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 3,299 00 precio actual $3,299.00, Antes $5,499.00 $5,499.00 Ahorra $2,200.00 Hasta 3 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/TCL-Soundbar-5-1-Canales-con-Subwoofer-Inalambrico-Dolby-Atmos-Q65H/00084046409413",
+    "precio_actual": 2200.0,
+    "precio_maximo": 3299.0,
+    "descuento": 33,
+    "puntuacion": 15,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 33.31,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.650264+00:00",
+    "precio_alertado": null
+  },
+  "Walmart MX|$ 5,579 00 precio actual $5,579.00 Hasta 12 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mini-Split-Mabe-On-Off-12000-BTU-s-110-V-MMT12CABWCA32BM1-Solo-Frio/00075763842846": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 5,579 00 precio actual $5,579.00 Hasta 12 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mini-Split-Mabe-On-Off-12000-BTU-s-110-V-MMT12CABWCA32BM1-Solo-Frio/00075763842846",
+    "precio_actual": 5579.0,
+    "precio_maximo": 5579.0,
+    "descuento": 0,
+    "puntuacion": 15,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.651670+00:00",
+    "precio_alertado": null
+  },
+  "Walmart MX|$ 363 00 precio actual $363.00, Antes $519.00 $519.00 Ahorra $156.00 Hasta 3 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Pizarra-Luminosa-Toy-Story-5-Lily-Pad/00002911611800": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 363 00 precio actual $363.00, Antes $519.00 $519.00 Ahorra $156.00 Hasta 3 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Pizarra-Luminosa-Toy-Story-5-Lily-Pad/00002911611800",
+    "precio_actual": 156.0,
+    "precio_maximo": 363.0,
+    "descuento": 57,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 57.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.653264+00:00",
+    "precio_alertado": 156.0
+  },
+  "Walmart MX|$ 859 00 precio actual $859.00, Antes $1,116.70 $1,116.70 Ahorra $257.70 Hasta 12 meses sin intereses|https://kiosco.www.walmart.com.mx/ip/Audifonos-True-Wireless-con-cancelacion-de-ruido-JBL-Vibe-Buds-2-Negro/00005003640516": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 859 00 precio actual $859.00, Antes $1,116.70 $1,116.70 Ahorra $257.70 Hasta 12 meses sin intereses",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Audifonos-True-Wireless-con-cancelacion-de-ruido-JBL-Vibe-Buds-2-Negro/00005003640516",
+    "precio_actual": 257.7,
+    "precio_maximo": 859.0,
+    "descuento": 70,
+    "puntuacion": 33,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.654889+00:00",
+    "precio_alertado": 257.7
+  },
+  "Walmart MX|$ 6,299 00 precio actual $6,299.00, Antes $6,799.00 $6,799.00 Ahorra $500.00 Hasta 18 mensualidades fijas|https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mabe-Portatil-On-Off-Solo-Frio-1-Tonelada-12-000-BTU-s-110V-PTM12CABWJM2/00075763838235": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 6,299 00 precio actual $6,299.00, Antes $6,799.00 $6,799.00 Ahorra $500.00 Hasta 18 mensualidades fijas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Aire-Acondicionado-Mabe-Portatil-On-Off-Solo-Frio-1-Tonelada-12-000-BTU-s-110V-PTM12CABWJM2/00075763838235",
+    "precio_actual": 500.0,
+    "precio_maximo": 6299.0,
+    "descuento": 92,
+    "puntuacion": 46,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 92.06,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.656557+00:00",
+    "precio_alertado": 500.0
+  },
+  "Walmart MX|$ 849 00 precio actual $849.00, Antes $1,229.00 $1,229.00 Ahorra $380.00 Hasta 18 mensualidades fijas|https://kiosco.www.walmart.com.mx/ip/Hielera-Coleman-Chiller-15-litros-portatil-azul/00007650117108": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 849 00 precio actual $849.00, Antes $1,229.00 $1,229.00 Ahorra $380.00 Hasta 18 mensualidades fijas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Hielera-Coleman-Chiller-15-litros-portatil-azul/00007650117108",
+    "precio_actual": 380.0,
+    "precio_maximo": 849.0,
+    "descuento": 55,
+    "puntuacion": 24,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 55.24,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.658181+00:00",
+    "precio_alertado": 380.0
+  },
+  "Walmart MX|$ 17,309 00 precio actual $17,309.00, Antes $29,199.00 $29,199.00 Ahorra $11,890.00 Hasta 18 mensualidades fijas|https://kiosco.www.walmart.com.mx/ip/Lavavajillas-Maytag-Empotrable-Gris-Acero-Power-Bast/00088304953290": {
+    "tienda": "Walmart MX",
+    "titulo": "$ 17,309 00 precio actual $17,309.00, Antes $29,199.00 $29,199.00 Ahorra $11,890.00 Hasta 18 mensualidades fijas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://kiosco.www.walmart.com.mx/ip/Lavavajillas-Maytag-Empotrable-Gris-Acero-Power-Bast/00088304953290",
+    "precio_actual": 11890.0,
+    "precio_maximo": 17309.0,
+    "descuento": 31,
+    "puntuacion": 15,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 31.31,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T18:15:01.659873+00:00",
+    "precio_alertado": null
   }
 }
