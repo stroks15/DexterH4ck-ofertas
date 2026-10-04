@@ -24,15 +24,15 @@ PY_FILES = [
 ]
 
 SOURCES = {
-    "Walmart MX": "https://www.walmart.com.mx/",
-    "Bodega Aurrera": "https://www.bodegaaurrera.com.mx/",
-    "Chedraui": "https://www.chedraui.com.mx/",
+    "Walmart MX": "https://www.walmart.com.mx/content/especiales/360013_300279",
+    "Bodega Aurrera": "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
+    "Chedraui": "https://www.chedraui.com.mx/promociones/solo-hoy",
     "Mercado Libre MX": "https://listado.mercadolibre.com.mx/celular",
     "Soriana": "https://www.soriana.com/buscar?q=ofertas",
-    "Liverpool": "https://www.liverpool.com.mx/",
+    "Liverpool": "https://www.liverpool.com.mx/tienda?s=ofertas+de+liquidaci%C3%B3n",
     "Amazon MX": "https://www.amazon.com.mx/",
     "Coppel": "https://www.coppel.com/ofertas",
-    "Suburbia": "https://www.suburbia.com.mx/",
+    "Suburbia": "https://www.suburbia.com.mx/tienda?s=promociones",
     "Oferstock": "https://www.oferstock.com.mx/",
     "Google": "https://www.google.com/search?q=site%3Asoriana.com+ofertas",
 }
