@@ -95,7 +95,7 @@ def es_enlace_producto_directo(url):
         if host == dominio or host.endswith("." + dominio):
             if dominio == "chedraui.com.mx":
                 return "/p/" in path or path.endswith("/p")
-            if dominio == "soriana.com" and re.search(r"/\\d{5,}\\.html$", path):
+            if dominio == "soriana.com" and re.search(r"/\d{5,}\.html$", path):
                 return True
             return any(p in path for p in patrones)
     return len(path.strip("/")) > 12
