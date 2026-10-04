@@ -1,6 +1,5 @@
 """Motor de puntuación y detección de liquidaciones para DexterH4ck-ofertas."""
 
-import builtins
 import json
 import re
 import unicodedata
@@ -167,13 +166,6 @@ def evaluate_product(product):
     result["nivel_oportunidad"] = result["puntuacion"]
     result["recomendado"] = result["puntuacion"] >= 50 or result["descuento"] >= 40
 
-    # Compatibilidad con el monitor: expone las señales calculadas para que
-    # las plantillas de alerta no fallen aunque el producto venga de otra fuente.
-    extreme = result.get("extremo") or {}
-    builtins.precio_extremo = bool(extreme.get("es_extremo"))
-    builtins.nivel_extremo = str(extreme.get("nivel") or "")
-    builtins.precio_extremo_verificado = bool(extreme.get("precio_verificado"))
-
     texto = " ".join(str(product.get(k, "")) for k in (
         "titulo", "description", "descripcion", "publicacion", "condiciones"
     )).lower()
@@ -188,8 +180,6 @@ def evaluate_product(product):
     ):
         if any(x in texto for x in needles) and label not in condiciones:
             condiciones.append(label)
-    builtins.condiciones = condiciones
-
     return result
 
 def is_liquidation(product):
