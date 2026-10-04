@@ -107,7 +107,10 @@ def score_product(product, discount=None):
         "titulo", "title", "nombre", "description", "descripcion", "liquidacion", "indicadores"
     )))
     indicators = []
-    score = min(max(int(discount), 0), 50)
+    # La puntuación es independiente del porcentaje. El descuento aporta como
+    # máximo 35 puntos dentro de una escala total de 5..100.
+    discount_score = round(min(max((float(discount or 0) - 40) / 59, 0), 1) * 35)
+    score = 5 + discount_score
 
     brand, brand_group = detect_priority_brand(product)
     if brand_group:
@@ -150,7 +153,7 @@ def score_product(product, discount=None):
             indicators.append("precio_extremo_verificado")
 
     return {
-        "puntuacion": min(score, 100),
+        "puntuacion": max(5, min(score, 100)),
         "descuento": int(discount or 0),
         "marca": brand,
         "marca_prioritaria": bool(brand_group),
@@ -162,9 +165,11 @@ def score_product(product, discount=None):
 
 def evaluate_product(product):
     result = score_product(product)
-    result["es_liquidacion"] = bool(result["indicadores"]) or result["descuento"] >= 40
+    result["es_liquidacion"] = 40 <= result["descuento"] <= 99
     result["nivel_oportunidad"] = result["puntuacion"]
-    result["recomendado"] = result["puntuacion"] >= 50 or result["descuento"] >= 40
+    # La puntuación NO decide si una liquidación 40..99 se publica; solamente
+    # sirve para ordenar/priorizar. El porcentaje es el criterio de elegibilidad.
+    result["recomendado"] = result["es_liquidacion"]
 
     texto = " ".join(str(product.get(k, "")) for k in (
         "titulo", "description", "descripcion", "publicacion", "condiciones"
