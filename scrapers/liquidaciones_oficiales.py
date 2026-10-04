@@ -39,6 +39,19 @@ FUENTES = [
         "patrones": ("/p/",),
     },
     {
+        "tienda": "Chedraui",
+        "urls": (
+            "https://www.chedraui.com.mx/promociones/solo-hoy",
+            "https://www.chedraui.com.mx/promociones/chedraui",
+            "https://www.chedraui.com.mx/promociones/productos-de-limpieza",
+            "https://www.chedraui.com.mx/promociones/perfumeria",
+        ),
+        "url": "https://www.chedraui.com.mx/promociones/solo-hoy",
+        "host": "chedraui.com.mx",
+        "patrones": ("/p/",),
+        "max_pages": 3,
+    },
+    {
         "tienda": "Sanborns",
         "url": "https://www.sanborns.com.mx/cat/videojuegos?id=12&percent_off=50+TO+80&order=sanborns_price_asc",
         "host": "sanborns.com.mx",
@@ -74,6 +87,17 @@ FUENTES = [
         "url": "https://www.liverpool.com.mx/tienda?s=ofertas+de+liquidaci%C3%B3n",
         "host": "liverpool.com.mx",
         "patrones": ("/tienda/pdp/", "/pdp/"),
+        "max_pages": 3,
+    },
+    {
+        "tienda": "Suburbia",
+        "urls": (
+            "https://www.suburbia.com.mx/tienda?s=promociones",
+            "https://www.suburbia.com.mx/tienda?s=rebajas",
+        ),
+        "url": "https://www.suburbia.com.mx/tienda?s=promociones",
+        "host": "suburbia.com.mx",
+        "patrones": ("/p/", "/producto/"),
         "max_pages": 3,
     },
     {
