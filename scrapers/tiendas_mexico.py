@@ -255,8 +255,38 @@ def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
             marca = normalizar_texto(marca_attr.get("content") if marca_attr and marca_attr.get("content") else marca_attr.get_text(" ", strip=True) if marca_attr else "")
             categoria_attr = nodo.select_one("[itemprop='category'], [data-category], [class*='category']")
             categoria = normalizar_texto(categoria_attr.get("content") if categoria_attr and categoria_attr.get("content") else categoria_attr.get_text(" ", strip=True) if categoria_attr else "")
-            actual = precios[0]
-            anterior = next((p for p in precios[1:] if p > actual), None)
+            # Walmart y otras tiendas pueden repetir el precio en formato
+            # "$X precio actual $X, Antes $Y ... Ahorra $Z". Las etiquetas
+            # tienen prioridad sobre la posición del precio para no confundir
+            # "Ahorra" con el precio actual.
+            def precio_etiquetado(patterns):
+                for pattern in patterns:
+                    match = re.search(pattern, texto, flags=re.I)
+                    if match:
+                        try:
+                            return float(match.group(1).replace(",", ""))
+                        except (TypeError, ValueError):
+                            pass
+                return None
+
+            actual = precio_etiquetado([
+                r"precio\s+(?:actual|final|de\s+oferta)\s*\$?\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",
+                r"\$\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)\s*(?=precio\s+actual)",
+                r"\bahora\s*:?\s*\$?\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",
+            ])
+            anterior = precio_etiquetado([
+                r"(?:antes|precio\s+(?:anterior|regular)|original)\s*:?\s*\$?\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)",
+            ])
+            if actual is None:
+                # Fallback conservador: el primer precio, excluyendo importes
+                # claramente asociados a "Ahorra" o financiamiento.
+                precios_utiles = [
+                    p for p in precios
+                    if not re.search(rf"ahorra\s+\$?\s*{re.escape(f'{p:g}')}", texto, flags=re.I)
+                ]
+                actual = precios_utiles[0] if precios_utiles else precios[0]
+            if anterior is None:
+                anterior = next((p for p in precios if p > actual), None)
             dcto = calcular_descuento(anterior, actual)
             es_liq = liquidacion_contexto or any(k in texto.lower() for k in KEYWORDS_LIQUIDACION)
             if not anterior and not es_liq:
