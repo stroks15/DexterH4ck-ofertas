@@ -39,7 +39,42 @@ def guardar_historial(historial):
         json.dump(historial, archivo, ensure_ascii=False, indent=2)
     os.replace(temporal, HISTORIAL_FILE)
 
-def formato_alerta_tipo(tipo):
+
+
+def limpiar_titulo_producto(titulo, url=""):
+    """Limpia títulos contaminados por precios/metadatos de tarjetas de tienda.
+    Nunca cambia los precios estructurados del producto; solo el texto mostrado.
+    """
+    from urllib.parse import unquote
+    texto = html.unescape(str(titulo or ""))
+    texto = re.sub(r"\\s+", " ", texto).strip(" \\t\\r\\n-–—|·")
+    # Cortar todo lo que claramente pertenece al bloque comercial de precios.
+    texto = re.split(
+        r"\\b(?:precio\\s+(?:actual|final|de\\s+oferta)|antes|ahorra|hasta\\s+\\d+\\s+mensualidades?|mensualidades?\\s+fijas?|precio\\s+anterior|precio\\s+regular)\\b",
+        texto,
+        maxsplit=1,
+        flags=re.I,
+    )[0]
+    # Eliminar importes que hayan quedado al principio o al final.
+    texto = re.sub(r"(?:^|[|·–—-])\\s*\\$\\s*[0-9][0-9,]*(?:\\s+[0-9]{2})?(?:\\.[0-9]{1,2})?", " ", texto)
+    texto = re.sub(r"\\$\\s*[0-9][0-9,]*(?:\\s+[0-9]{2})?(?:\\.[0-9]{1,2})?", " ", texto)
+    texto = re.sub(r"\\s{2,}", " ", texto).strip(" \\t\\r\\n-–—|·,;:")
+    # Si no quedó un nombre razonable, intenta usar el slug de la ficha directa.
+    letras = re.findall(r"[A-Za-zÁÉÍÓÚáéíóúÑñÜü]{2,}", texto)
+    if len("".join(letras)) < 5 and url:
+        try:
+            path = unquote(urlparse(url).path).rstrip("/")
+            slug = path.rsplit("/", 1)[-1]
+            slug = re.sub(r"(?:-)?(?:mlm[-_]?)?\\d{5,}$", "", slug, flags=re.I)
+            slug = re.sub(r"[-_]+", " ", slug)
+            slug = re.sub(r"\\b(?:ip|pdp|producto|product|item)\\b", " ", slug, flags=re.I)
+            slug = re.sub(r"\\s{2,}", " ", slug).strip(" -_/")
+            if len(slug) >= 5:
+                texto = slug
+        except Exception:
+            pass
+    return texto[:180]
+\ndef formato_alerta_tipo(tipo):
     return "🟢" if tipo == "VERDE" else "🔴"
 
 def es_enlace_producto_directo(url):
@@ -190,7 +225,7 @@ def revisar():
         "no_elegible": 0,
     }
     for item in candidatos:
-        titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
+        titulo = limpiar_titulo_producto(item.get("titulo") or item.get("title") or item.get("nombre") or "", url)
         url = str(item.get("url") or "").strip()
         tienda = str(item.get("tienda") or item.get("store") or "Desconocida").strip()
         if not titulo or not url:
@@ -234,7 +269,7 @@ def revisar():
             }
         else:
             historial[clave]["precio_maximo"] = max(float(historial[clave].get("precio_maximo", 0)), actual, referencia)
-            historial[clave]["descuento"] = dcto
+            historial[clave]["titulo"] = titulo\n            historial[clave]["descuento"] = dcto
             historial[clave]["puntuacion"] = scoring["puntuacion"]
             historial[clave]["extremo"] = extreme
             if scoring.get("marca"):
