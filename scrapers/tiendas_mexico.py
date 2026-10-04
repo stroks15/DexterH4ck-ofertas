@@ -757,6 +757,11 @@ def buscar_todas():
         if nombre in skip:
             print(f"{nombre}: omitida por preflight ({'fuente no disponible'})")
             continue
+        # Estas tiendas tienen ahora adaptadores oficiales de hubs de ofertas;
+        # evitamos /search porque devuelve 404 o 200 sin catálogo en Actions.
+        if nombre in ("Walmart MX", "Bodega Aurrera", "Chedraui"):
+            print(f"{nombre}: búsqueda genérica omitida; se usa descubrimiento oficial.")
+            continue
         if nombre == "Soriana":
             salida.extend(buscar_soriana(session))
         elif nombre == "Coppel":
