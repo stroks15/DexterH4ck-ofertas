@@ -5045,7 +5045,21 @@
     "descuento": 67,
     "puntuacion": 65,
     "ultima_actualizacion": "2026-09-29T18:09:37.720118+00:00",
-    "precio_alertado": 399.0
+    "precio_alertado": 399.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 66.72,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    }
   },
   "1fe550112ccdfff0fedb36df98bff73699b04dbc57dab23afb2be4adfb7d825a": {
     "tienda": "Amazon MX",
@@ -5058,7 +5072,21 @@
     "descuento": 53,
     "puntuacion": 50,
     "ultima_actualizacion": "2026-09-29T18:09:37.721122+00:00",
-    "precio_alertado": 749.0
+    "precio_alertado": 749.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 53.16,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    }
   },
   "24f5191a77b8c23fbbf52f5ada7eaa0e980aa5311ea7c1311d35077f3c773f6f": {
     "tienda": "Amazon MX",
@@ -5071,7 +5099,21 @@
     "descuento": 45,
     "puntuacion": 45,
     "ultima_actualizacion": "2026-09-29T18:09:37.721465+00:00",
-    "precio_alertado": 1199.0
+    "precio_alertado": 1199.0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 45.48,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    }
   },
   "d354af047fc15d1c567e5ae24b2d8a6052699a892eb683aad6b847c75ec88d46": {
     "tienda": "Suburbia",
@@ -6295,13 +6337,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 4.61,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     }
   },
   "Mercado Libre|Nintendo Switch 2 + Mario a $8,400 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BEq9UDPO0zIL7o%2FJkWozBnA55hwplsZi1VYAz4HGW%2BLdhV7SCduAz8tYYepb%2BGgSa2kvRb3JTxc6FsgoymYdNMQxu%2FFOE7K9GuvW%2FBmOs6TL4oWbVYA0F5pUok8OvFX77XEmyGbYP54Mern8hd7DDLT7Cgt7gksqzYhnly9fsHmCa5Z57aOwIqbzcTUFo1OLsk6fsjs%3D": {
@@ -6319,13 +6364,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 10.53,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     }
   },
   "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-46ca8fdc2a539212&btn_type=ss&btn_ref=srctok-46ca8fdc2a539212": {
@@ -6356,13 +6404,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 6.56,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     }
   },
   "Mercado Libre|Iphone 17 Pro Max a $21,290 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BCCAs0NWhiwIRoDiyixy3k7l0GczEb%2FrqlC4CkZ68BN4DHOEtNdmqFpbTQoy0SvVt3Q5jHWX94D8MiUaSSCyGCBal1RntN9gA12giKyIpd1%2FXl7tuIr6vaX5g7NQVyxUoa21gDSpQ2uvQ9FXxA4RUrCjyg5z5q%2FVVJy8q8nWScFwvtWykMbkVfHUR2zaybdxPcdiCjE%3D": {
@@ -6380,13 +6431,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 4.48,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     }
   },
   "Mercado Libre|Galaxy S26 Ultra a $14,322 con Banamex|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BMHwa8qhJpAdeGM5c93VQVnwiKm8TKWWxST%2F8nphpBJpFlnYGd0Xd8E26cyAgiTD7aKJ1lbbllo9qlgq7Vuf7zljtEJHhDOdTBZ4vYYgTlGLsPWCnaHVSxmcjQu%2FnCrIUcCo8piLZ%2B6KLv2rh%2Fr%2FPg5RX%2FxB12U6oryFTEzTDcOPIZfhXO0S5j%2F0%2BCbuxZ8m8I41jVc%3D": {
@@ -6404,13 +6458,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 6.53,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     }
   },
   "Mercado Libre|Nintendo Switch 2 + Mario + Controles a $9,378 con Banamex|https://www.mercadolibre.com.mx/social/liquid/lists": {
@@ -7854,13 +7911,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 9.64,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     }
   },
   "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-2b4fa5c513c0a957&btn_type=ss&btn_ref=srctok-2b4fa5c513c0a957": {
@@ -10588,13 +10648,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 50.0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.359249+00:00",
     "precio_alertado": 1995.0
@@ -10612,13 +10675,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.360982+00:00",
     "precio_alertado": 6999.0
@@ -10636,13 +10702,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 82.35,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.362890+00:00",
     "precio_alertado": 171.0
@@ -10660,13 +10729,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 33.31,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.364800+00:00",
     "precio_alertado": 2200.0
@@ -10684,13 +10756,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.366481+00:00",
     "precio_alertado": 5579.0
@@ -10708,13 +10783,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 57.02,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.368351+00:00",
     "precio_alertado": 156.0
@@ -10732,13 +10810,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.370253+00:00",
     "precio_alertado": 257.7
@@ -10756,13 +10837,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 92.06,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.372186+00:00",
     "precio_alertado": 500.0
@@ -10780,13 +10864,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 55.24,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.374138+00:00",
     "precio_alertado": 380.0
@@ -10804,13 +10891,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 31.31,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T22:12:23.376099+00:00",
     "precio_alertado": 11890.0
@@ -13710,13 +13800,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-03T17:40:54.583755+00:00",
     "precio_alertado": null
@@ -13734,13 +13827,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 73.58,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-03T17:40:54.584231+00:00",
     "precio_alertado": null
@@ -14340,13 +14436,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-03T20:15:44.177978+00:00",
     "precio_alertado": null
@@ -16564,5 +16663,2232 @@
     },
     "ultima_actualizacion": "2026-10-04T14:40:51.918784+00:00",
     "precio_alertado": 11.9
+  },
+  "Amazon|Amazon: SUPRA BY SUPERFLAMA Supra Parrilla a Gas de 4 Quemadores 4Q-TITAN|https://www.amazon.com.mx/dp/B0GMSKP7X7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: SUPRA BY SUPERFLAMA Supra Parrilla a Gas de 4 Quemadores 4Q-TITAN",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GMSKP7X7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1599.0,
+    "precio_maximo": 1599.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.059056+00:00",
+    "precio_alertado": 1599.0
+  },
+  "Amazon|Amazon: Canon Pixma TS9521Ca Impresora de inyección de Tinta inalámbrica Todo en uno (Blanco)|https://www.amazon.com.mx/dp/B0CX69SZMB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Canon Pixma TS9521Ca Impresora de inyección de Tinta inalámbrica Todo en uno (Blanco)",
+    "marca": "",
+    "categoria": "Impresoras",
+    "url": "https://www.amazon.com.mx/dp/B0CX69SZMB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4568.12,
+    "precio_maximo": 9204.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 50.37,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.059697+00:00",
+    "precio_alertado": 4568.12
+  },
+  "Mercado Libre|Mercado Libre: Proyector Magcubic Hy300 Pro Portátil Smart Tv con Android 14 y Wi-Fi 6|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLEap0NbfM6U0XuzIbkQE7ZgypUVG8Y7resr9Ya2%2BCCLyrDA%2F%2FJfr3cQot1CEmsDN3M%2FojE%2FiSxaMxkZtWimrj9tO80xCxwQ89cKbWUodRXajJuqFJiFdBk04ehI7OLntKRubC1qom%2BwbhO5tuf%2FGm2t6rw%2BRaSDwDoIH0Jd2OJiRF5E6Lsse9JyUciYdjx5uchc11k%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Proyector Magcubic Hy300 Pro Portátil Smart Tv con Android 14 y Wi-Fi 6",
+    "marca": "",
+    "categoria": "Smart TV",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLEap0NbfM6U0XuzIbkQE7ZgypUVG8Y7resr9Ya2%2BCCLyrDA%2F%2FJfr3cQot1CEmsDN3M%2FojE%2FiSxaMxkZtWimrj9tO80xCxwQ89cKbWUodRXajJuqFJiFdBk04ehI7OLntKRubC1qom%2BwbhO5tuf%2FGm2t6rw%2BRaSDwDoIH0Jd2OJiRF5E6Lsse9JyUciYdjx5uchc11k%3D",
+    "precio_actual": 724.0,
+    "precio_maximo": 1400.0,
+    "descuento": 48,
+    "puntuacion": 63,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 48.29,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.060270+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡ELIMINA LA CAÍDA DEL CABELLO CON DOVE!|https://www.amazon.com.mx/dp/B0F83CK2Q4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡ELIMINA LA CAÍDA DEL CABELLO CON DOVE!",
+    "marca": "",
+    "categoria": "Cuidado del Cabello",
+    "url": "https://www.amazon.com.mx/dp/B0F83CK2Q4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 75.0,
+    "precio_maximo": 105.0,
+    "descuento": 29,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 28.57,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.060783+00:00",
+    "precio_alertado": 75.0
+  },
+  "Mercado Libre|Mercado Libre: Auriculares In-ear Inalámbricos Aiwa Awtwsgprob Con Cancelación De Ruido Negro|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO%2F9OhP7t0E63nlLf3lU%2FunJDg9HNfLPKVvivqCQHvqjt8P%2B219fFhdy0iBmZC7Z9iiWsCpVhF43WONsoSF4MC44L5JpyYIeIMOovCUMoYQT0w0bsJa4Zw%2F60WDIMxyj6TSE8bvVP%2F0dIvJxqLW934ti%2BN1rvagjWaJgfbC%2FjQmiZsuwz4o%2Brs3tpHEgpBfH1H8sw3g%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Auriculares In-ear Inalámbricos Aiwa Awtwsgprob Con Cancelación De Ruido Negro",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO%2F9OhP7t0E63nlLf3lU%2FunJDg9HNfLPKVvivqCQHvqjt8P%2B219fFhdy0iBmZC7Z9iiWsCpVhF43WONsoSF4MC44L5JpyYIeIMOovCUMoYQT0w0bsJa4Zw%2F60WDIMxyj6TSE8bvVP%2F0dIvJxqLW934ti%2BN1rvagjWaJgfbC%2FjQmiZsuwz4o%2Brs3tpHEgpBfH1H8sw3g%3D",
+    "precio_actual": 318.0,
+    "precio_maximo": 600.0,
+    "descuento": 47,
+    "puntuacion": 47,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 47.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.062115+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡TRANSFORMA TU MAQUILLAJE CON LA ESPOJA DOBLE PUNTA DE E.L.F.!|https://www.amazon.com.mx/dp/B085P2SVXT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡TRANSFORMA TU MAQUILLAJE CON LA ESPOJA DOBLE PUNTA DE E.L.F.!",
+    "marca": "",
+    "categoria": "Maquillaje",
+    "url": "https://www.amazon.com.mx/dp/B085P2SVXT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 188.66,
+    "precio_maximo": 325.0,
+    "descuento": 42,
+    "puntuacion": 42,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 41.95,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.062629+00:00",
+    "precio_alertado": 188.66
+  },
+  "Mercado Libre|¡MUEBLE MODERNO PARA TU HOGAR!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMa1QbVBqybKGLsnZi9b3kuO%2F91NL2Y5higNzsDTmem0%2FbGWxL2Cl3mepxbpJziivjqgsZxf1dHTwDXXe1OSlB7h4KhCVQqEo2%2FiXnkE53UjAcrkAEZUPb00s%2FFBKgKfszj%2FlXQIVKB8hNWuqI53OqJ0JsfZ0WB6%2B3zSXdYghMFyeIu%2BgCG8mE7YnvtW5y9YR9ZWLvo%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡MUEBLE MODERNO PARA TU HOGAR!",
+    "marca": "",
+    "categoria": "Muebles",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMa1QbVBqybKGLsnZi9b3kuO%2F91NL2Y5higNzsDTmem0%2FbGWxL2Cl3mepxbpJziivjqgsZxf1dHTwDXXe1OSlB7h4KhCVQqEo2%2FiXnkE53UjAcrkAEZUPb00s%2FFBKgKfszj%2FlXQIVKB8hNWuqI53OqJ0JsfZ0WB6%2B3zSXdYghMFyeIu%2BgCG8mE7YnvtW5y9YR9ZWLvo%3D",
+    "precio_actual": 549.0,
+    "precio_maximo": 731.0,
+    "descuento": 25,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 24.9,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.063163+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|OFERTA IMPERDIBLE: JUEGO DE CUBIERTOS TRAMONTINA 25 PZS AZUL|https://www.amazon.com.mx/dp/B086YB33F3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "OFERTA IMPERDIBLE: JUEGO DE CUBIERTOS TRAMONTINA 25 PZS AZUL",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B086YB33F3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 224.84,
+    "precio_maximo": 449.0,
+    "descuento": 50,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 49.92,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.064279+00:00",
+    "precio_alertado": 224.84
+  },
+  "Mercado Libre|Mercado Libre: Refrigerador Xpert Inverter Top Mount 9 Wt02409d|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAawBf25aNbKpKMKxNpnJRsTVr%2Bv%2FCXALG03sDh19V5OkYEyn7GZwv%2BenbDwp0mcONinFo600%2Fy4kF4yFQUjqbmyZ%2BGuynZqLsbJ2OXqIceoVSRQtQa9R8DgLtbwp%2BO0EXN%2Fq5fpJguSiqQCX6XTCt0Md1E0y8ga8wnpaF0XAotVVXlwipyaV9LWEdQVIjkWODi2b6GwyknzUYcN2g%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Refrigerador Xpert Inverter Top Mount 9 Wt02409d",
+    "marca": "",
+    "categoria": "Refrigeradores",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAawBf25aNbKpKMKxNpnJRsTVr%2Bv%2FCXALG03sDh19V5OkYEyn7GZwv%2BenbDwp0mcONinFo600%2Fy4kF4yFQUjqbmyZ%2BGuynZqLsbJ2OXqIceoVSRQtQa9R8DgLtbwp%2BO0EXN%2Fq5fpJguSiqQCX6XTCt0Md1E0y8ga8wnpaF0XAotVVXlwipyaV9LWEdQVIjkWODi2b6GwyknzUYcN2g%3D%3D",
+    "precio_actual": 6649.57,
+    "precio_maximo": 6649.57,
+    "descuento": 0,
+    "puntuacion": 15,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.064818+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡CAPTURA MOMENTOS INCREÍBLES!|https://www.amazon.com.mx/dp/B0H86MRY1N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡CAPTURA MOMENTOS INCREÍBLES!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H86MRY1N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 859.0,
+    "precio_maximo": 1399.0,
+    "descuento": 39,
+    "puntuacion": 39,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 38.6,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.065796+00:00",
+    "precio_alertado": 859.0
+  },
+  "Mercado Libre|Mercado Libre: Licuadora Ninja Profesional Total Crushing Bl710WM Color Negro|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BI%2FJe96gjgMNGyMF4BY7ndJV7Fq7JnGx1AmLfaH16NnL%2FE%2BjhS1HYFUfl5dwpc3ZzgKVqgEs0BfOhO9RoV8H%2FMunnmwn6O7nfzpXGVTN55dhosEO1dNSUexJQbm1m7pTeYcKSrpQQdH%2BZeNRc6THIOMC9W6ogiO2S4Z29IQr1ujW9LrMdJAdi5EsVdCD3B2kndjCD50%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Licuadora Ninja Profesional Total Crushing Bl710WM Color Negro",
+    "marca": "Ninja",
+    "categoria": "Electrodomésticos Pequeños",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BI%2FJe96gjgMNGyMF4BY7ndJV7Fq7JnGx1AmLfaH16NnL%2FE%2BjhS1HYFUfl5dwpc3ZzgKVqgEs0BfOhO9RoV8H%2FMunnmwn6O7nfzpXGVTN55dhosEO1dNSUexJQbm1m7pTeYcKSrpQQdH%2BZeNRc6THIOMC9W6ogiO2S4Z29IQr1ujW9LrMdJAdi5EsVdCD3B2kndjCD50%3D",
+    "precio_actual": 1439.1,
+    "precio_maximo": 2000.0,
+    "descuento": 28,
+    "puntuacion": 48,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 28.05,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.066348+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡CARPA PLEGABLE IMPRESCINDIBLE PARA TUS AVENTURAS!|https://www.amazon.com.mx/dp/B0DW26Y51Q?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡CARPA PLEGABLE IMPRESCINDIBLE PARA TUS AVENTURAS!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DW26Y51Q?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 269.0,
+    "precio_maximo": 449.0,
+    "descuento": 40,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 40.09,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.067408+00:00",
+    "precio_alertado": 269.0
+  },
+  "Mercado Libre|Mercado Libre: Colchón Matrimonial Híbrido Memory Foam Transpirable En Caja|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDDxd%2F1ssw008Ud5IplrGKueAfE%2FzrtekW8tnMpbDfxwOky8bG2%2FSMBFfiEhwC4nwbXtPQ1mRtN33w43VuzE2RUxydH%2Bpd5MyBcr2p5ZOWuDIS7QShCk5sKtdExxuJSgAdRZtp718ofNDZZVgtg6%2BSgoiiSXZOc2uDMdgk0lQhVl1dIS8gQ6zuFsTzOI0WvXembaFjlknpEjQFieLw%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Colchón Matrimonial Híbrido Memory Foam Transpirable En Caja",
+    "marca": "",
+    "categoria": "Colchones",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDDxd%2F1ssw008Ud5IplrGKueAfE%2FzrtekW8tnMpbDfxwOky8bG2%2FSMBFfiEhwC4nwbXtPQ1mRtN33w43VuzE2RUxydH%2Bpd5MyBcr2p5ZOWuDIS7QShCk5sKtdExxuJSgAdRZtp718ofNDZZVgtg6%2BSgoiiSXZOc2uDMdgk0lQhVl1dIS8gQ6zuFsTzOI0WvXembaFjlknpEjQFieLw%3D%3D",
+    "precio_actual": 3650.0,
+    "precio_maximo": 6000.0,
+    "descuento": 39,
+    "puntuacion": 54,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 39.17,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.067934+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE EN EQUIPAJE SAMSONITE!|https://www.amazon.com.mx/dp/B0BJ2R4YZK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE EN EQUIPAJE SAMSONITE!",
+    "marca": "",
+    "categoria": "Viajes y Equipaje",
+    "url": "https://www.amazon.com.mx/dp/B0BJ2R4YZK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2094.98,
+    "precio_maximo": 2823.33,
+    "descuento": 26,
+    "puntuacion": 26,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 25.8,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.068474+00:00",
+    "precio_alertado": 2094.98
+  },
+  "Mercado Libre|Mercado Libre: Combo AROL Parrilla Empotrable 76 cm 5 Quemadores Gas LP Convertible a Gas Natural P-IN5Q76 + Campana Extractora Slim 80 cm Acero Inoxidable CSI-80AI 85W 3 Velocidad|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKAbjx0i3g1yIsPGQp81dH3UDrP3F9MizW1e3gKF%2FqGn2xXflaMgwuBILTpkTSq84qaSQ1K6fTGAWm57LLBa7X79clinSZl60z5SKB95zNTw0okDvxRFkr8VYBrHEm8p0B4fI3YiBy9yfYJ3unmaJ4U5659Zi0IiLY2oZT6WctCwOIWUc7bLba0W4n6OZopoYCO46D0%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Combo AROL Parrilla Empotrable 76 cm 5 Quemadores Gas LP Convertible a Gas Natural P-IN5Q76 + Campana Extractora Slim 80 cm Acero Inoxidable CSI-80AI 85W 3 Velocidad",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKAbjx0i3g1yIsPGQp81dH3UDrP3F9MizW1e3gKF%2FqGn2xXflaMgwuBILTpkTSq84qaSQ1K6fTGAWm57LLBa7X79clinSZl60z5SKB95zNTw0okDvxRFkr8VYBrHEm8p0B4fI3YiBy9yfYJ3unmaJ4U5659Zi0IiLY2oZT6WctCwOIWUc7bLba0W4n6OZopoYCO46D0%3D",
+    "precio_actual": 3955.48,
+    "precio_maximo": 6000.0,
+    "descuento": 34,
+    "puntuacion": 34,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 34.08,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.070120+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|CALENTADOR ESPACIAL DREO 2024: CALOR EN TUS MANOS!|https://www.amazon.com.mx/dp/B0C6FCKQML?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "CALENTADOR ESPACIAL DREO 2024: CALOR EN TUS MANOS!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0C6FCKQML?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 740.02,
+    "precio_maximo": 1029.03,
+    "descuento": 28,
+    "puntuacion": 28,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 28.09,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.071228+00:00",
+    "precio_alertado": 740.02
+  },
+  "Mercado Libre|Mercado Libre: Google Pixel 9a De 8 Gb Ram 128 Gb Rom Dual Sim 6.3 Inch De Obsidiana|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOBNDUdgqWmAxP7ywLV%2FvfleYXjNsUWy7xkZ9G%2FK%2B%2Fgo3%2FcEUM3LK8VaxswlFbrlI7p4ij0AqAudPq4giu3id4ipxvDPe08l0m%2B11%2F4Hc5wedlCLwQTkrN48hAmIrOONGK7tPz75tYnNBx%2Bdepy%2F937Pc9l5eAWJH68F8FW%2BnciSzl6DRxCUXlBkT6xRGpN5TrjlOTo%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Google Pixel 9a De 8 Gb Ram 128 Gb Rom Dual Sim 6.3 Inch De Obsidiana",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOBNDUdgqWmAxP7ywLV%2FvfleYXjNsUWy7xkZ9G%2FK%2B%2Fgo3%2FcEUM3LK8VaxswlFbrlI7p4ij0AqAudPq4giu3id4ipxvDPe08l0m%2B11%2F4Hc5wedlCLwQTkrN48hAmIrOONGK7tPz75tYnNBx%2Bdepy%2F937Pc9l5eAWJH68F8FW%2BnciSzl6DRxCUXlBkT6xRGpN5TrjlOTo%3D",
+    "precio_actual": 8399.0,
+    "precio_maximo": 8399.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.072476+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡MESA Y SILLAS MONTESSORI PARA NIÑOS!|https://www.amazon.com.mx/dp/B0CHXMF1C9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡MESA Y SILLAS MONTESSORI PARA NIÑOS!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CHXMF1C9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1299.0,
+    "precio_maximo": 2299.0,
+    "descuento": 43,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 43.5,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.073513+00:00",
+    "precio_alertado": 1299.0
+  },
+  "Mercado Libre|Mercado Libre: Sandalias Adidas Sin Género Adilette Lumia Jp9580|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDn6CSQlbaJn8fUqG3kRHNUL0%2BBBLg8LCHT8ewW5neZeNzwpqyI8hACyAcsEREj%2BkppZ1wdUL94CEqi0N2ys9%2B11A1uaXEI1fgyeGJ7cPfdQJvTFY%2Fgbw%2Fc8ZhzLKTjaa5rpBBmhth%2FGsP8tx8TZO2cz9rwGmBGYRx9bvA0CKGPT5gv7AaZgUN8jYpLxmV8aCE12AYU2qXtXsKK%2FJA%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Sandalias Adidas Sin Género Adilette Lumia Jp9580",
+    "marca": "Adidas",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDn6CSQlbaJn8fUqG3kRHNUL0%2BBBLg8LCHT8ewW5neZeNzwpqyI8hACyAcsEREj%2BkppZ1wdUL94CEqi0N2ys9%2B11A1uaXEI1fgyeGJ7cPfdQJvTFY%2Fgbw%2Fc8ZhzLKTjaa5rpBBmhth%2FGsP8tx8TZO2cz9rwGmBGYRx9bvA0CKGPT5gv7AaZgUN8jYpLxmV8aCE12AYU2qXtXsKK%2FJA%3D%3D",
+    "precio_actual": 557.1,
+    "precio_maximo": 600.0,
+    "descuento": 7,
+    "puntuacion": 27,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 7.15,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.074614+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE EN BASCULA DIGITAL OMROM!|https://www.amazon.com.mx/dp/B073ZCTJTC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE EN BASCULA DIGITAL OMROM!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B073ZCTJTC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 319.0,
+    "precio_maximo": 699.0,
+    "descuento": 54,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 54.36,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.075677+00:00",
+    "precio_alertado": 319.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-733bc1636111744e&btn_type=ss&btn_ref=srctok-733bc1636111744e": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-733bc1636111744e&btn_type=ss&btn_ref=srctok-733bc1636111744e",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.077073+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-067d8006c3506368&btn_type=ss&btn_ref=srctok-067d8006c3506368": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-067d8006c3506368&btn_type=ss&btn_ref=srctok-067d8006c3506368",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.080392+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-68988759762b6a26&btn_type=ss&btn_ref=srctok-68988759762b6a26": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-68988759762b6a26&btn_type=ss&btn_ref=srctok-68988759762b6a26",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.080810+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-60fccfb86402c072&btn_type=ss&btn_ref=srctok-60fccfb86402c072": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-60fccfb86402c072&btn_type=ss&btn_ref=srctok-60fccfb86402c072",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 9.09,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.081922+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-5c5a4f2df0995817&btn_type=ss&btn_ref=srctok-5c5a4f2df0995817": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-5c5a4f2df0995817&btn_type=ss&btn_ref=srctok-5c5a4f2df0995817",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.083064+00:00",
+    "precio_alertado": 160.0
+  },
+  "Telegram|Nickelodeon Kart 2 para Nintendo Switch a $250|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-7b4fcf00f80a1f6e&btn_type=ss&btn_ref=srctok-7b4fcf00f80a1f6e": {
+    "tienda": "Telegram",
+    "titulo": "Nickelodeon Kart 2 para Nintendo Switch a $250",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-7b4fcf00f80a1f6e&btn_type=ss&btn_ref=srctok-7b4fcf00f80a1f6e",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.085460+00:00",
+    "precio_alertado": 250.0
+  },
+  "Telegram|Cerveza Bohemia 12 pack desde $11.90 la pieza|https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-4a59dba0e3a2e19b&btn_type=ss&btn_ref=srctok-4a59dba0e3a2e19b": {
+    "tienda": "Telegram",
+    "titulo": "Cerveza Bohemia 12 pack desde $11.90 la pieza",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-4a59dba0e3a2e19b&btn_type=ss&btn_ref=srctok-4a59dba0e3a2e19b",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 91.68,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.086534+00:00",
+    "precio_alertado": 11.9
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/de-cer%c3%a1mica-3-piezas/1202303001": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/de-cer%c3%a1mica-3-piezas/1202303001",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.099979+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/termo-doble-pared-de-acero-inoxidable-con-tapa-a-presi%c3%b3n-1-5-l/99978604071?skuid=1167459052": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/termo-doble-pared-de-acero-inoxidable-con-tapa-a-presi%c3%b3n-1-5-l/99978604071?skuid=1167459052",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.100902+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/guirnaldas-de-luces-led-cascada-navide%c3%b1a-sdd1340-con-160-focos/999686611822": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/guirnaldas-de-luces-led-cascada-navide%c3%b1a-sdd1340-con-160-focos/999686611822",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.101838+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/bolsa-shoulder-para-mujer/1125997569": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/bolsa-shoulder-para-mujer/1125997569",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.102777+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-redondo-para-mujer/1190156166?skuid=1190158353": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-redondo-para-mujer/1190156166?skuid=1190158353",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.103721+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/falda-short-a-la-cintura/1199225918": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/falda-short-a-la-cintura/1199225918",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.104674+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/jeans-skinny-para-mujer/1109188812": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/jeans-skinny-para-mujer/1109188812",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.105634+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/sandalia-plana-para-mujer/99995355140": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/sandalia-plana-para-mujer/99995355140",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.106596+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/juego-de-s%c3%a1banas-de-microfibra-100-g/1161403432?skuid=1174965001": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/juego-de-s%c3%a1banas-de-microfibra-100-g/1161403432?skuid=1174965001",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.107557+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/pantal%c3%b3n-para-ni%c3%b1a/1193038296?skuid=1193039291": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/pantal%c3%b3n-para-ni%c3%b1a/1193038296?skuid=1193039291",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.108519+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/mochila-deportiva-para-ni%c3%b1a/1047764052": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/mochila-deportiva-para-ni%c3%b1a/1047764052",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.109489+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/cosmetiquera-multiusos-para-mujer/1197249371": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/cosmetiquera-multiusos-para-mujer/1197249371",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.110455+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/aretes-largos/1185256886": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/aretes-largos/1185256886",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.111419+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-larga-para-beb%c3%a9-ni%c3%b1a/1182245380": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-larga-para-beb%c3%a9-ni%c3%b1a/1182245380",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.112393+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/falda-short-cintura-alta/1174411751?skuid=1174412622": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/falda-short-cintura-alta/1174411751?skuid=1174412622",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.113395+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-con-bot%c3%b3n-mujer/1188564479": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-con-bot%c3%b3n-mujer/1188564479",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.114402+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-tank-cuello-cuadrado-mujer/1188681963": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-tank-cuello-cuadrado-mujer/1188681963",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.115379+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/mascada-para-mujer/1185257238": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/mascada-para-mujer/1185257238",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.116339+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/shorty-bikini-a-la-cintura-para-mujer/1180391184": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/shorty-bikini-a-la-cintura-para-mujer/1180391184",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.117300+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/panty-brasile%c3%b1a-para-mujer/1183976761": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/panty-brasile%c3%b1a-para-mujer/1183976761",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.118266+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/florero-minimal-de-cer%c3%a1mica/1170909921": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/florero-minimal-de-cer%c3%a1mica/1170909921",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.119230+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/carpeta-redondo-navidad/1172129958": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/carpeta-redondo-navidad/1172129958",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.120174+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/tenis-zig-para-correr-de-hombre/1182365768": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/tenis-zig-para-correr-de-hombre/1182365768",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.121133+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/short-para-mujer/1199226337": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/short-para-mujer/1199226337",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.122074+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/conjunto-pijama-para-ni%c3%b1a/1195151359": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/conjunto-pijama-para-ni%c3%b1a/1195151359",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.123042+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/bikini-estampado-a-rayas-a-la-cadera-para-mujer/1199643698": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/bikini-estampado-a-rayas-a-la-cadera-para-mujer/1199643698",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.124005+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-cuello-polo-para-hombre/1195515385": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-cuello-polo-para-hombre/1195515385",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.124957+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/set-ligas-para-cabello/1142506960": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/set-ligas-para-cabello/1142506960",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.125910+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/pantal%c3%b3n-capri-skinny-para-mujer/1109140291": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/pantal%c3%b3n-capri-skinny-para-mujer/1109140291",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.126854+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/blusa-para-mujer/1191854703": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/blusa-para-mujer/1191854703",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.127800+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-tipo-polo-de-algod%c3%b3n-para-ni%c3%b1o/1182246050": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-tipo-polo-de-algod%c3%b3n-para-ni%c3%b1o/1182246050",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.128740+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/tanga-para-mujer/1184689587": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/tanga-para-mujer/1184689587",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.129702+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/collar-de-cruz-de-oro-10-k/1155338233": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/collar-de-cruz-de-oro-10-k/1155338233",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.130661+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/short-para-hombre/1191829326?skuid=1191829448": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/short-para-hombre/1191829326?skuid=1191829448",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.131614+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/vestido-corto-casual-para-mujer/1189747801": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/vestido-corto-casual-para-mujer/1189747801",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.132563+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/bolsa-shopper-para-mujer/1189745865": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/bolsa-shopper-para-mujer/1189745865",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.133515+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/jeans-slim-para-mujer/1187131455": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/jeans-slim-para-mujer/1187131455",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.134463+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-redondo-mujer/1196325229": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-redondo-mujer/1196325229",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.135417+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-para-ni%c3%b1o/1133624558": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-para-ni%c3%b1o/1133624558",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.136362+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/vestido-corto-athleisure-deportivo-para-mujer/1182581070?skuid=1182581166": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/vestido-corto-athleisure-deportivo-para-mujer/1182581070?skuid=1182581166",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.137311+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/jeans-loose-894175-000-para-mujer/1199078460": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/jeans-loose-894175-000-para-mujer/1199078460",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.138263+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/chaleco-de-algod%c3%b3n-para-mujer/1189531655": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/chaleco-de-algod%c3%b3n-para-mujer/1189531655",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.139205+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-deportiva-para-correr-de-mujer/1186340093": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-deportiva-para-correr-de-mujer/1186340093",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.140148+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/blusa-para-mujer/1192932856": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/blusa-para-mujer/1192932856",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.141105+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/jeans-straight-para-hombre/1110782387?skuid=1125348692": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/jeans-straight-para-hombre/1110782387?skuid=1125348692",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.142046+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/estante-de-acero-beque-mkcs062wd01/999686854969": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/estante-de-acero-beque-mkcs062wd01/999686854969",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.142997+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/pants-para-entrenamiento-de-hombre/99985719876": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/pants-para-entrenamiento-de-hombre/99985719876",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.143948+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/boardshort-para-hombre/99989389535": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/boardshort-para-hombre/99989389535",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.144904+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/short-mickey-mouse-para-beb%c3%a9-ni%c3%b1o/1187860660": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/short-mickey-mouse-para-beb%c3%a9-ni%c3%b1o/1187860660",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.145852+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/sobrecamisa-de-algod%c3%b3n-manga-larga-para-mujer/1189515633": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/sobrecamisa-de-algod%c3%b3n-manga-larga-para-mujer/1189515633",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.146816+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/zapato-de-piel-para-mujer/99995249198": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/zapato-de-piel-para-mujer/99995249198",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.147774+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/vestido-largo-de-fiesta-escote-cuadrado/1182299439": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/vestido-largo-de-fiesta-escote-cuadrado/1182299439",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.148722+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/sandalia-para-mujer/1184466065": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/sandalia-para-mujer/1184466065",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.149661+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/bikini-a-la-cintura-para-mujer/1180768831": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/bikini-a-la-cintura-para-mujer/1180768831",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.150607+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/short-para-mujer/1166939071?skuid=1166940105": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/short-para-mujer/1166939071?skuid=1166940105",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.151556+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-para-ni%c3%b1o/1167722173?skuid=1167723906": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-para-ni%c3%b1o/1167722173?skuid=1167723906",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:09:48.152477+00:00",
+    "precio_alertado": 24.0
   }
 }
