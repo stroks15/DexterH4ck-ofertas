@@ -45,3 +45,26 @@ El normalizador reconoce fichas de producto de Chedraui con rutas tipo \`/.../p\
 Configura \`TELEGRAM_TOKEN\` y \`TELEGRAM_CHAT_ID\` en GitHub Actions.
 
 El historial se guarda en \`historial_ofertas.json\`. Se mantiene el flujo sin SQLite para evitar cambios sin preparar durante el rebase de GitHub Actions.
+
+
+## Respaldo de IA
+
+El monitor usa una cadena de respaldo para evitar que un error temporal de Gemini detenga el procesamiento:
+
+1. **Gemini** como proveedor principal.
+2. **Groq** como respaldo automático cuando Gemini devuelve 429, 5xx, timeout o no entrega JSON válido.
+3. **Sin IA** si ambos proveedores no están disponibles.
+
+Configura en **GitHub → Settings → Secrets and variables → Actions**:
+- `GEMINI_API_KEY`
+- `GROQ_API_KEY`
+
+Opcionales:
+- `GEMINI_MODEL`
+- `GROQ_MODEL` (por defecto `openai/gpt-oss-20b`)
+
+Las claves nunca deben guardarse dentro del repositorio.
+
+## Chedraui
+
+Chedraui utiliza una estructura de URLs distinta a la ruta genérica `/search?q=...`. Para búsquedas de jardinería, el monitor usa como respaldo la categoría pública vigente de Patio y jardín cuando la búsqueda genérica devuelve HTTP 404. La ficha de producto sigue siendo validada antes de publicarse.
