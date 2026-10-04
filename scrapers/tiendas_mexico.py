@@ -401,6 +401,31 @@ def buscar_soriana(session):
     print(f"Soriana: {len(resultados)} productos/enlaces candidatos")
     return resultados
 
+def _urls_busqueda(nombre, q, plantilla):
+    """Devuelve URLs de búsqueda válidas y conservadoras por tienda.
+    Chedraui cambió su estructura de búsqueda; para jardinería usamos la
+    categoría pública vigente en lugar del endpoint /search que devuelve 404.
+    """
+    primaria = plantilla.format(q=quote_plus(q))
+    if nombre != "Chedraui":
+        return [primaria]
+
+    normalizada = q.lower().strip().replace("í", "i").replace("á", "a")
+    if normalizada in {
+        "jardineria",
+        "jardin",
+        "herramientas de jardineria",
+        "plantas",
+        "plantas y flores",
+        "macetas",
+    }:
+        return [
+            "https://www.chedraui.com.mx/hogar-y-jardin/patio-y-jardin",
+            primaria,
+        ]
+    return [primaria]
+
+
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
     base_url = plantilla.split("{q}", 1)[0]
@@ -415,23 +440,34 @@ def buscar_tienda(nombre, plantilla, session):
         if prioritaria in BUSQUEDAS and prioritaria not in consultas:
             consultas[-1] = prioritaria
     for q in consultas:
-        url = plantilla.format(q=quote_plus(q))
+        urls_busqueda = _urls_busqueda(nombre, q, plantilla)
+        response = None
+        url = urls_busqueda[0]
         try:
-            response = None
-            for intento in range(3):
-                response = session.get(url, timeout=20)
-                if response.status_code == 404:
-                    print(f"{nombre}: HTTP 404 para {q}; se omite esa búsqueda.")
+            for indice_url, candidata_url in enumerate(urls_busqueda):
+                url = candidata_url
+                response = None
+                for intento in range(3):
+                    response = session.get(url, timeout=20)
+                    if response.status_code == 404:
+                        if indice_url + 1 < len(urls_busqueda):
+                            print(f"{nombre}: HTTP 404 para {q}; usando ruta alternativa oficial.")
+                        else:
+                            print(f"{nombre}: HTTP 404 para {q}; se omite esa búsqueda.")
+                        break
+                    if response.status_code == 429 or response.status_code >= 500:
+                        espera = 2 ** intento
+                        print(f"{nombre}: HTTP {response.status_code} para {q}; reintento en {espera}s.")
+                        if intento < 2:
+                            time.sleep(espera)
+                            continue
                     break
-                if response.status_code == 429 or response.status_code >= 500:
-                    espera = 2 ** intento
-                    print(f"{nombre}: HTTP {response.status_code} para {q}; reintento en {espera}s.")
-                    if intento < 2:
-                        time.sleep(espera)
-                        continue
-                break
+                if response is not None and response.status_code < 400:
+                    break
+
             if response is None or response.status_code >= 400:
                 continue
+
             soup = BeautifulSoup(response.text, "html.parser")
             liquidacion_contexto = any(k in q.lower() for k in KEYWORDS_LIQUIDACION)
             candidatos = extraer_json_ld(soup, nombre, url, liquidacion_contexto)
