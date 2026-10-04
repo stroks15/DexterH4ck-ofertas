@@ -41,6 +41,7 @@ def guardar_historial(historial):
 
 
 
+
 def limpiar_titulo_producto(titulo, url=""):
     """Limpia títulos contaminados por precios/metadatos de tarjetas de tienda."""
     from urllib.parse import unquote, urlparse
