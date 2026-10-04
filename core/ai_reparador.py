@@ -24,7 +24,9 @@ _gemini_last_call = 0.0
 _gemini_disabled_until = 0.0
 _groq_calls = 0
 _groq_last_call = 0.0
+_groq_disabled_until = 0.0
 _ai_cache = {}
+_ai_unavailable_reported = False
 
 ALLOWED_HOSTS = {
     "soriana.com", "www.soriana.com", "coppel.com", "www.coppel.com",
@@ -151,9 +153,11 @@ def _gemini(prompt):
 
 
 def _groq(prompt):
-    global _groq_calls, _groq_last_call
+    global _groq_calls, _groq_last_call, _groq_disabled_until
 
     if not GROQ_API_KEY:
+        return {}
+    if time.monotonic() < _groq_disabled_until:
         return {}
     if _groq_calls >= GROQ_MAX_CALLS:
         return {}
@@ -209,7 +213,11 @@ def _groq(prompt):
                 time.sleep(espera)
                 continue
 
-            print(f"Groq: HTTP {response.status_code}; continuando sin IA.")
+            if response.status_code == 429:
+                _groq_disabled_until = time.monotonic() + 30
+                print("Groq: HTTP 429; pausando Groq durante 30s.")
+            else:
+                print(f"Groq: HTTP {response.status_code}; continuando sin IA.")
             return {}
 
         except (requests.RequestException, ValueError) as error:
@@ -225,18 +233,27 @@ def _groq(prompt):
 
 
 def _ai(prompt):
-    """Prioridad estricta: Gemini -> Groq -> sin IA."""
+    """Prioridad estricta: Gemini -> Groq -> sin IA, con circuito cerrado."""
+    global _ai_unavailable_reported
+    cache_key = "final|" + prompt.strip()
+    if cache_key in _ai_cache:
+        return _ai_cache[cache_key]
+
     result = _gemini(prompt)
     if result:
+        _ai_cache[cache_key] = result
         print("IA: respuesta obtenida con Gemini.")
         return result
 
     result = _groq(prompt)
     if result:
+        _ai_cache[cache_key] = result
         print("IA: Gemini no disponible; respuesta obtenida con Groq.")
         return result
 
-    print("IA: Gemini y Groq no disponibles; continuando sin IA.")
+    if not _ai_unavailable_reported:
+        print("IA: Gemini/Groq no disponibles; se continúa con extracción determinista. Se silencia este aviso durante el resto de la ejecución.")
+        _ai_unavailable_reported = True
     return {}
 
 
