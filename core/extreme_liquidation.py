@@ -51,6 +51,22 @@ def es_precio_extremo(precio, referencia=None):
         return ((1 - precio / referencia) * 100) >= 95
     return False
 
+def porcentaje_descuento(precio, referencia=None):
+    try:
+        precio = float(precio or 0)
+        referencia = float(referencia or 0)
+    except (TypeError, ValueError):
+        return 0
+    if precio <= 0 or referencia <= precio:
+        return 0
+    return round((1 - precio / referencia) * 100, 2)
+
+
+def es_liquidacion_95_99(precio, referencia=None):
+    descuento = porcentaje_descuento(precio, referencia)
+    return 95 <= descuento <= 99.99
+
+
 def nivel_extremo(precio, referencia=None):
     try:
         precio = float(precio or 0)
@@ -110,6 +126,7 @@ def analizar_precio_extremo(item, session=None):
     referencia=item.get("precio_anterior",item.get("previous_price",0))
     tienda=item.get("tienda",item.get("store",""))
     url=item.get("url","")
+    descuento=porcentaje_descuento(precio, referencia)
     nivel=nivel_extremo(precio,referencia)
     señales=[]
     if nivel != "normal":
@@ -126,9 +143,12 @@ def analizar_precio_extremo(item, session=None):
     return {
         "es_extremo": nivel != "normal",
         "nivel": nivel,
+        "descuento_calculado": descuento,
+        "es_95_99": es_liquidacion_95_99(precio, referencia),
         "senales": señales,
         "url_oficial": oficial,
         "precio_verificado": verificado,
         "evidencia_precio": evidencia,
-        "publicable_como_extremo": bool(nivel != "normal" and oficial and verificado)
+        "publicable_como_extremo": bool(nivel != "normal" and oficial and verificado),
+        "publicable_como_95_99": bool(es_liquidacion_95_99(precio, referencia) and oficial and verificado)
     }
