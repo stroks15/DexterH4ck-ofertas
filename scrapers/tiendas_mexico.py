@@ -426,6 +426,9 @@ def _urls_busqueda(nombre, q, plantilla):
     return [primaria]
 
 
+EXTREME_QUERIES = ["liquidacion 99","liquidacion 95","99% descuento","95% descuento","precio extremo","precio 1","precio 10","remate 99","remate 95","ultima pieza","ultimas piezas","clearance"]
+
+
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
     base_url = plantilla.split("{q}", 1)[0]
@@ -435,10 +438,17 @@ def buscar_tienda(nombre, plantilla, session):
     bloque = max(1, int(_time.time() // 900))
     tam = 12
     inicio = (bloque * tam) % len(BUSQUEDAS)
-    consultas = [BUSQUEDAS[(inicio + i) % len(BUSQUEDAS)] for i in range(tam)]
+    consultas_base = [BUSQUEDAS[(inicio + i) % len(BUSQUEDAS)] for i in range(tam)]
+    consultas = []
+    for q in EXTREME_QUERIES[:4]:
+        if q not in consultas:
+            consultas.append(q)
+    for q in consultas_base:
+        if q not in consultas and len(consultas) < tam:
+            consultas.append(q)
     for prioritaria in ("liquidacion", "remate", "outlet"):
-        if prioritaria in BUSQUEDAS and prioritaria not in consultas:
-            consultas[-1] = prioritaria
+        if prioritaria in BUSQUEDAS and prioritaria not in consultas and len(consultas) < tam:
+            consultas.append(prioritaria)
     for q in consultas:
         urls_busqueda = _urls_busqueda(nombre, q, plantilla)
         response = None
@@ -536,8 +546,10 @@ def buscar_urls_oficiales(tienda, urls, session, forzar_liquidacion=True):
 
 def buscar_coppel(session):
     urls = [
+        "https://www.coppel.com/ca/outlet-saldos",
         "https://www.coppel.com/ofertas",
         "https://www.coppel.com/l/ofertas",
+        "https://www.coppel.com/l/almacen-de-ofertas/",
         "https://www.coppel.com/l/rebajas-verano",
     ]
     return buscar_urls_oficiales("Coppel", urls, session, True)
