@@ -104,6 +104,52 @@ def _title_from(node):
     return text[:220]
 
 
+
+def _offer_prices(offers):
+    """Extrae precio actual y precio de lista cuando la tienda los publica estructurados."""
+    if isinstance(offers, list):
+        offers = offers[0] if offers else {}
+    if not isinstance(offers, dict):
+        return None, None
+
+    def number(value):
+        if isinstance(value, dict):
+            value = value.get("price") or value.get("value")
+        try:
+            result = float(str(value).replace(",", "").replace("$", "").strip())
+            return result if 0 < result <= 2_000_000 else None
+        except (TypeError, ValueError):
+            return None
+
+    current = number(offers.get("price") or offers.get("lowPrice"))
+    reference = None
+    for key in ("compareAtPrice", "listPrice", "wasPrice", "regularPrice",
+                "originalPrice", "previousPrice", "priceBefore"):
+        reference = number(offers.get(key))
+        if reference and (not current or reference > current):
+            break
+        reference = None
+
+    specs = offers.get("priceSpecification") or []
+    if isinstance(specs, dict):
+        specs = [specs]
+    for spec in specs if isinstance(specs, list) else []:
+        if not isinstance(spec, dict):
+            continue
+        candidate = number(spec.get("price") or spec.get("priceValue") or spec.get("value"))
+        kind = " ".join(str(spec.get(k, "")) for k in ("name", "description", "priceType", "@type")).lower()
+        if candidate and current is None and ("sale" in kind or "offer" in kind or "actual" in kind):
+            current = candidate
+        elif candidate and current and candidate > current and any(
+            word in kind for word in ("list", "regular", "original", "strike", "reference", "was")
+        ):
+            reference = candidate
+
+    if reference is not None and current is not None and reference <= current:
+        reference = None
+    return current, reference
+
+
 def _from_json_ld(soup, source, seen):
     results = []
     for script in soup.select("script[type='application/ld+json']"):
@@ -126,10 +172,7 @@ def _from_json_ld(soup, source, seen):
             offers = node.get("offers") or {}
             if isinstance(offers, list):
                 offers = offers[0] if offers else {}
-            try:
-                price = float(offers.get("price")) if offers.get("price") is not None else None
-            except (TypeError, ValueError):
-                price = None
+            price, previous = _offer_prices(offers)
             if not title or not price or url in seen:
                 continue
             seen.add(url)
@@ -143,8 +186,8 @@ def _from_json_ld(soup, source, seen):
                 "marca": brand,
                 "categoria": infer_category({"titulo": title, "marca": brand}),
                 "precio_actual": price,
-                "precio_anterior": None,
-                "descuento": 0,
+                "precio_anterior": previous,
+                "descuento": round((1 - price / previous) * 100, 2) if previous and previous > price else 0,
                 "url": url,
                 "liquidacion": True,
                 "outlet": True,
