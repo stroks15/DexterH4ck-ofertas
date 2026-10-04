@@ -9,7 +9,17 @@
         "remate",
         "ultima pieza",
         "clearance",
-        "outlet"
+        "outlet",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -20,7 +30,17 @@
         "liquidacion",
         "remate",
         "saldo",
-        "ultima pieza"
+        "ultima pieza",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -30,7 +50,17 @@
       "liquidaciones": [
         "oferta especial",
         "remate",
-        "liquidacion"
+        "liquidacion",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -40,7 +70,17 @@
       "liquidaciones": [
         "liquidacion",
         "descuento",
-        "remate"
+        "remate",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -50,7 +90,17 @@
       "liquidaciones": [
         "outlet",
         "liquidacion",
-        "ultima pieza"
+        "ultima pieza",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -60,7 +110,17 @@
       "liquidaciones": [
         "outlet",
         "remate",
-        "liquidacion"
+        "liquidacion",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -70,7 +130,17 @@
       "liquidaciones": [
         "oferta",
         "descuento",
-        "ultima pieza"
+        "ultima pieza",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -81,7 +151,17 @@
         "oferta relampago",
         "warehouse",
         "open box",
-        "descuento"
+        "descuento",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     },
     {
@@ -92,7 +172,17 @@
         "promociones",
         "remate",
         "outlet",
-        "ultima pieza"
+        "ultima pieza",
+        "95%",
+        "99%",
+        "precio extremo",
+        "$1",
+        "$10",
+        "remate 95",
+        "remate 99",
+        "liquidacion 95",
+        "liquidacion 99",
+        "últimas piezas"
       ]
     }
   ]
