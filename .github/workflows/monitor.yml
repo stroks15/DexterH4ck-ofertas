@@ -37,6 +37,8 @@ jobs:
           echo "Secretos de Telegram detectados correctamente."
       - name: Validar sintaxis Python
         run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py
+      - name: Pruebas deterministas de liquidaciones extremas
+        run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Preflight - detectar errores antes del monitor
         run: |
           python preflight.py
