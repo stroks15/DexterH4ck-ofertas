@@ -183,7 +183,7 @@ def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
             categoria_detectada = infer_category({"titulo": titulo, "marca": marca, "categoria": categoria})
             resultados.append({
                 "tienda": tienda,
-                "titulo": titulo[:180],
+                "titulo": limpiar_titulo_producto(titulo, url),
                 "marca": marca_detectada or marca,
                 "categoria": categoria_detectada or categoria,
                 "precio_actual": actual,
@@ -510,7 +510,7 @@ def _buscar_indexado_tienda(nombre, consultas, session):
                 contexto_lower = contexto.lower()
                 resultados.append({
                     "tienda": nombre,
-                    "titulo": texto[:180],
+                    "titulo": limpiar_titulo_producto(texto, href),
                     "marca": marca,
                     "categoria": categoria,
                     "precio_actual": actual,
