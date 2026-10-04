@@ -15608,5 +15608,615 @@
     },
     "ultima_actualizacion": "2026-10-04T02:42:02.024548+00:00",
     "precio_alertado": 11.9
+  },
+  "Amazon|Amazon: Mattel - Figura de Dinosaurio|https://www.amazon.com.mx/dp/B0G43MQXWP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Mattel - Figura de Dinosaurio",
+    "marca": "Mattel",
+    "categoria": "Juegos de Mesa y Coleccionables",
+    "url": "https://www.amazon.com.mx/dp/B0G43MQXWP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 387.12,
+    "precio_maximo": 428.85,
+    "descuento": 10,
+    "puntuacion": 30,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.369124+00:00",
+    "precio_alertado": 387.12
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE EN CELULAR INFINIX NOTE 60 PRO!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKG%2BNLy9QO4DpG3KF0jfhkjjJ%2FXDri8D90I1DPEfHLca9UDnGeK0Dx9PsPG4UYKhSZcBhK1xf99DRIpQF2l38PaNo37yej%2FbfmhbgnsNossics6%2B9oMEQN75F1MU4T2LMjk5CjbSaz5yA8IjLxrKF6kP1ztHvzdvFxcvpjjRLlcf0Dzj1mHqSXQ1M1xFCJCGu4eBLbs%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE EN CELULAR INFINIX NOTE 60 PRO!",
+    "marca": "",
+    "categoria": "Celulares",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKG%2BNLy9QO4DpG3KF0jfhkjjJ%2FXDri8D90I1DPEfHLca9UDnGeK0Dx9PsPG4UYKhSZcBhK1xf99DRIpQF2l38PaNo37yej%2FbfmhbgnsNossics6%2B9oMEQN75F1MU4T2LMjk5CjbSaz5yA8IjLxrKF6kP1ztHvzdvFxcvpjjRLlcf0Dzj1mHqSXQ1M1xFCJCGu4eBLbs%3D",
+    "precio_actual": 7599.0,
+    "precio_maximo": 10665.0,
+    "descuento": 29,
+    "puntuacion": 44,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.369804+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡TRANSFORMA TU BAÑO CON UNA REGADERA DE LUJO!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDgpr0iZwG9HCKMVHlzFpHE9NXmJzMMZwdhGJtg8I33GBzRthK13sKz07EShHzGCC4G57ZAwlIIVEopBr5Wi6Lb3Rjr8XOUNWBLdN5yroaGrj%2BKot2nnMydupVp4v1W1MdCvjKRxJYvYtq4XmooiP1wd5j9oFeXH2585PZ2a6cFWs1u%2FeRLftDab8qmRXRV6F7XtCuo%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡TRANSFORMA TU BAÑO CON UNA REGADERA DE LUJO!",
+    "marca": "",
+    "categoria": "Baño",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDgpr0iZwG9HCKMVHlzFpHE9NXmJzMMZwdhGJtg8I33GBzRthK13sKz07EShHzGCC4G57ZAwlIIVEopBr5Wi6Lb3Rjr8XOUNWBLdN5yroaGrj%2BKot2nnMydupVp4v1W1MdCvjKRxJYvYtq4XmooiP1wd5j9oFeXH2585PZ2a6cFWs1u%2FeRLftDab8qmRXRV6F7XtCuo%3D",
+    "precio_actual": 1096.0,
+    "precio_maximo": 1587.0,
+    "descuento": 31,
+    "puntuacion": 31,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.370349+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: Kingshouse Sofá Cama Individual Reclinable Plegable Cómodo de 3 Plazas|https://www.amazon.com.mx/dp/B0FH1J3RCQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Kingshouse Sofá Cama Individual Reclinable Plegable Cómodo de 3 Plazas",
+    "marca": "",
+    "categoria": "Muebles",
+    "url": "https://www.amazon.com.mx/dp/B0FH1J3RCQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2298.98,
+    "precio_maximo": 3199.0,
+    "descuento": 28,
+    "puntuacion": 28,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.370922+00:00",
+    "precio_alertado": 2298.98
+  },
+  "Mercado Libre|¡RENUEVA TU RUTINA CON EL BANCO MULTIFUNCIONAL!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO%2Fy0ZFSB63%2BabWr2lQYSZ7Ip4amsKAp%2BeZq1B2%2Fc7BE86DqJzL4qaUNcAph%2FkGao33ASmWVRnPK6SPOhlszUYTupfi6tUN%2FPZ0XsU0YgcG30Gzd%2B663m3BUGQk0sGynhePFfjP7Us7FNv0SpBtLzq%2BHJqEsVQ62wDepi9SFxbVv3%2F%2FW731%2FWgn9aeifnDgwCa8nqGA%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡RENUEVA TU RUTINA CON EL BANCO MULTIFUNCIONAL!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO%2Fy0ZFSB63%2BabWr2lQYSZ7Ip4amsKAp%2BeZq1B2%2Fc7BE86DqJzL4qaUNcAph%2FkGao33ASmWVRnPK6SPOhlszUYTupfi6tUN%2FPZ0XsU0YgcG30Gzd%2B663m3BUGQk0sGynhePFfjP7Us7FNv0SpBtLzq%2BHJqEsVQ62wDepi9SFxbVv3%2F%2FW731%2FWgn9aeifnDgwCa8nqGA%3D",
+    "precio_actual": 2909.0,
+    "precio_maximo": 7198.0,
+    "descuento": 60,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.372151+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: DJI Pack Estándar Osmo Action 5 Pro, cámara de acción 4K para Uso Diario|https://www.amazon.com.mx/dp/B0D1YH4B2R?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: DJI Pack Estándar Osmo Action 5 Pro, cámara de acción 4K para Uso Diario",
+    "marca": "",
+    "categoria": "Cámaras y Fotografía",
+    "url": "https://www.amazon.com.mx/dp/B0D1YH4B2R?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 5143.0,
+    "precio_maximo": 6999.0,
+    "descuento": 27,
+    "puntuacion": 27,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.372797+00:00",
+    "precio_alertado": 5143.0
+  },
+  "Amazon|Amazon: Dove Mascarilla Bond Intense Repair 270 g|https://www.amazon.com.mx/dp/B0H8W7JQ7L?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Dove Mascarilla Bond Intense Repair 270 g",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H8W7JQ7L?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 70.0,
+    "precio_maximo": 70.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.374026+00:00",
+    "precio_alertado": 70.0
+  },
+  "Mercado Libre|¡OFERTA IMPERDIBLE! PACK DE ALMOHADAS SOGNARE SEMI FIRME|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDzELCgl8%2BbZp4sOeG%2Bc%2F0rZNSX4%2FhuIBFBomww2Sjy%2B4NIch62zoVdcUV%2FsVR6s1M08JSaMXqYsbR%2BuFUL68e0FvJOea%2BizEOQ6kPsD68rJWtdE7AH9htEZNMrw9JUpVukU4gBkIbKspZeabD7i9eNb%2Fku6Pdgo2cZNUkng2xJZCR2ZtqIJanjaWSTXInmKj94qG9Q%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡OFERTA IMPERDIBLE! PACK DE ALMOHADAS SOGNARE SEMI FIRME",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDzELCgl8%2BbZp4sOeG%2Bc%2F0rZNSX4%2FhuIBFBomww2Sjy%2B4NIch62zoVdcUV%2FsVR6s1M08JSaMXqYsbR%2BuFUL68e0FvJOea%2BizEOQ6kPsD68rJWtdE7AH9htEZNMrw9JUpVukU4gBkIbKspZeabD7i9eNb%2Fku6Pdgo2cZNUkng2xJZCR2ZtqIJanjaWSTXInmKj94qG9Q%3D",
+    "precio_actual": 707.0,
+    "precio_maximo": 1179.0,
+    "descuento": 40,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.375312+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡GANA LA CARRERA CON MARIO KART 8 DELUXE!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ%2BFaClq6c3c6a5RckLgkOav95asTiRnRvipVJjD5ZPfayRZh%2F%2BAdWwnSUCFPYzBEYf5NkHknicfnzWEU1To7aTFrx%2BuxTNvjEigdgClBbcgYT3G83mMcU%2BHcmblOpTTj6AMy1NRrlZCnm%2BofOzbzTYrPbBVfC5WGDgcBdtuQgSadncds9YeGBV4jBbz5%2BgsotMCyg%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡GANA LA CARRERA CON MARIO KART 8 DELUXE!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ%2BFaClq6c3c6a5RckLgkOav95asTiRnRvipVJjD5ZPfayRZh%2F%2BAdWwnSUCFPYzBEYf5NkHknicfnzWEU1To7aTFrx%2BuxTNvjEigdgClBbcgYT3G83mMcU%2BHcmblOpTTj6AMy1NRrlZCnm%2BofOzbzTYrPbBVfC5WGDgcBdtuQgSadncds9YeGBV4jBbz5%2BgsotMCyg%3D%3D",
+    "precio_actual": 849.0,
+    "precio_maximo": 1784.0,
+    "descuento": 52,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.376472+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|¡INCREÍBLES AUDÍFONOS INALÁMBRICOS SAMSUNG GALAXY BUDS 4 PRO NEGROS!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAsIzFDglcEZzTz4mjRWvB4ZT%2F99jF%2BN5IyFxIZQ%2BImRqxbkw5aqnJrzFqeCMVLaCTZ39ioDhBWBWaH8QvwFsIwKE4RoPBixwqkc9I8WeyXgZ2V%2B%2BkOXjrwKsJw4EUpvWgR6PgCnT4gKRzjeZ0vowt6QTNVTU6VYw2VCJTCYeKpZde5GHWhLTYjsjzQdVKguOLfZzxfFBFm%2Ft3o6ig%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡INCREÍBLES AUDÍFONOS INALÁMBRICOS SAMSUNG GALAXY BUDS 4 PRO NEGROS!",
+    "marca": "Samsung",
+    "categoria": "Audífonos",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAsIzFDglcEZzTz4mjRWvB4ZT%2F99jF%2BN5IyFxIZQ%2BImRqxbkw5aqnJrzFqeCMVLaCTZ39ioDhBWBWaH8QvwFsIwKE4RoPBixwqkc9I8WeyXgZ2V%2B%2BkOXjrwKsJw4EUpvWgR6PgCnT4gKRzjeZ0vowt6QTNVTU6VYw2VCJTCYeKpZde5GHWhLTYjsjzQdVKguOLfZzxfFBFm%2Ft3o6ig%3D%3D",
+    "precio_actual": 3259.0,
+    "precio_maximo": 6999.0,
+    "descuento": 53,
+    "puntuacion": 85,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.376944+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: HYUNDAI Monitor HyView 24\" Full HD 1920x1080, Panel IPS, 100Hz, 5ms GTG, Diseño Moderno, para Oficina, Gaming y Entretenimiento, Negro|https://www.amazon.com.mx/dp/B0FCXJL5F7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: HYUNDAI Monitor HyView 24\" Full HD 1920x1080, Panel IPS, 100Hz, 5ms GTG, Diseño Moderno, para Oficina, Gaming y Entretenimiento, Negro",
+    "marca": "",
+    "categoria": "Monitores",
+    "url": "https://www.amazon.com.mx/dp/B0FCXJL5F7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1389.0,
+    "precio_maximo": 3999.0,
+    "descuento": 65,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.377589+00:00",
+    "precio_alertado": 1389.0
+  },
+  "Amazon|Amazon: Hyundai Monitor HyView Gaming Curvo 34\" WQHD 3440x1440, 180Hz, 1ms MPRT, R1000, HDMI x2, DisplayPort x2, Negro|https://www.amazon.com.mx/dp/B0DSXP9QM7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Hyundai Monitor HyView Gaming Curvo 34\" WQHD 3440x1440, 180Hz, 1ms MPRT, R1000, HDMI x2, DisplayPort x2, Negro",
+    "marca": "",
+    "categoria": "Monitores",
+    "url": "https://www.amazon.com.mx/dp/B0DSXP9QM7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4699.0,
+    "precio_maximo": 9499.0,
+    "descuento": 51,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.378210+00:00",
+    "precio_alertado": 4699.0
+  },
+  "Amazon|PRECIO MAS BAJO BARILLA PASTA AL BRONZO FUSILLI 500G|https://www.amazon.com.mx/dp/B0GGDGQRRT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO BARILLA PASTA AL BRONZO FUSILLI 500G",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GGDGQRRT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 33.47,
+    "precio_maximo": 67.5,
+    "descuento": 50,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.379395+00:00",
+    "precio_alertado": 33.47
+  },
+  "Mercado Libre|MercadoLibre: Slipcover Zelda Ocarina Of Time Remake Nintendo Switch Holographic Holographic|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHwPkjSMay27JxH1NdAFNC%2B5UpfFzWBsEVVUmNeafHF5Ta5avgEkJjuzVFZRlhOZOjgmDNTkg5YGHC5kBjbLuPWHUOJqWzQzBSFNb%2BrdsoZchcJDP86H%2FKGeHWICs0JWsktWNVrwX%2FZgxtrzSYVspgVEzKtrDvz3h5VebA8ry5NEW2UGGRr8iHL9krcF5vQy9qlZ9hHI%2FfbOo6iYGQ%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "MercadoLibre: Slipcover Zelda Ocarina Of Time Remake Nintendo Switch Holographic Holographic",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHwPkjSMay27JxH1NdAFNC%2B5UpfFzWBsEVVUmNeafHF5Ta5avgEkJjuzVFZRlhOZOjgmDNTkg5YGHC5kBjbLuPWHUOJqWzQzBSFNb%2BrdsoZchcJDP86H%2FKGeHWICs0JWsktWNVrwX%2FZgxtrzSYVspgVEzKtrDvz3h5VebA8ry5NEW2UGGRr8iHL9krcF5vQy9qlZ9hHI%2FfbOo6iYGQ%3D%3D",
+    "precio_actual": 259.0,
+    "precio_maximo": 259.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.379941+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|Amazon: Carolina Herrera - 212 VIP Black Men de 3,4 onzas/100 ml, lanzado en 2017|https://www.amazon.com.mx/dp/B074Z9QH5F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Carolina Herrera - 212 VIP Black Men de 3,4 onzas/100 ml, lanzado en 2017",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B074Z9QH5F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1146.49,
+    "precio_maximo": 2450.0,
+    "descuento": 53,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.381273+00:00",
+    "precio_alertado": 1146.49
+  },
+  "Amazon|Amazon: Pokémon TCG: 30TH Celebration - Figure Collection (Mew O Mewtwo SE ENVÍA Aleatorio)|https://www.amazon.com.mx/dp/B0H788HLPY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Pokémon TCG: 30TH Celebration - Figure Collection (Mew O Mewtwo SE ENVÍA Aleatorio)",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H788HLPY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 749.0,
+    "precio_maximo": 749.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.382687+00:00",
+    "precio_alertado": 749.0
+  },
+  "Amazon|Amazon: RACK & PACK Buro con Cajon de Almacenamiento Estante con Balda Mesita de Noche Auxiliar Tipo Madera Estructura de Metal Mesa Moderna para Habitacion Recamara Dormitorio Dis|https://www.amazon.com.mx/dp/B0CSVK4MZP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: RACK & PACK Buro con Cajon de Almacenamiento Estante con Balda Mesita de Noche Auxiliar Tipo Madera Estructura de Metal Mesa Moderna para Habitacion Recamara Dormitorio Dis",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CSVK4MZP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 499.0,
+    "precio_maximo": 499.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.384345+00:00",
+    "precio_alertado": 499.0
+  },
+  "Amazon|Amazon: POWER LEGS Maquina Caminadora Elíptica Motorizada Eliptic Trainer compacta con 3 Programas de Entrenamiento pre-programados y 10 velocidades | Recupera Movilidad y Alivia C|https://www.amazon.com.mx/dp/B09JB987TS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: POWER LEGS Maquina Caminadora Elíptica Motorizada Eliptic Trainer compacta con 3 Programas de Entrenamiento pre-programados y 10 velocidades | Recupera Movilidad y Alivia C",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09JB987TS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1889.0,
+    "precio_maximo": 1889.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.386054+00:00",
+    "precio_alertado": 1889.0
+  },
+  "Amazon|Amazon: Canon PIXMA TR7820 - Impresora inalámbrica Todo en uno para el hogar|https://www.amazon.com.mx/dp/B0CHLBPMYF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Canon PIXMA TR7820 - Impresora inalámbrica Todo en uno para el hogar",
+    "marca": "",
+    "categoria": "Impresoras",
+    "url": "https://www.amazon.com.mx/dp/B0CHLBPMYF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2370.73,
+    "precio_maximo": 5074.0,
+    "descuento": 53,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.386674+00:00",
+    "precio_alertado": 2370.73
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-1c783eccbfb0072f&btn_type=ss&btn_ref=srctok-1c783eccbfb0072f": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-1c783eccbfb0072f&btn_type=ss&btn_ref=srctok-1c783eccbfb0072f",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.388209+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-1ecaf1e0e89de7dc&btn_type=ss&btn_ref=srctok-1ecaf1e0e89de7dc": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-1ecaf1e0e89de7dc&btn_type=ss&btn_ref=srctok-1ecaf1e0e89de7dc",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.391921+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-68c10adf27505ed7&btn_type=ss&btn_ref=srctok-68c10adf27505ed7": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-68c10adf27505ed7&btn_type=ss&btn_ref=srctok-68c10adf27505ed7",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.392380+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-560db325fff97252&btn_type=ss&btn_ref=srctok-560db325fff97252": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-560db325fff97252&btn_type=ss&btn_ref=srctok-560db325fff97252",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.393586+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-74059b2582faff21&btn_type=ss&btn_ref=srctok-74059b2582faff21": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-74059b2582faff21&btn_type=ss&btn_ref=srctok-74059b2582faff21",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.394835+00:00",
+    "precio_alertado": 160.0
+  },
+  "Telegram|Nickelodeon Kart 2 para Nintendo Switch a $250|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-7039ca63c1dca80e&btn_type=ss&btn_ref=srctok-7039ca63c1dca80e": {
+    "tienda": "Telegram",
+    "titulo": "Nickelodeon Kart 2 para Nintendo Switch a $250",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-7039ca63c1dca80e&btn_type=ss&btn_ref=srctok-7039ca63c1dca80e",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.397398+00:00",
+    "precio_alertado": 250.0
+  },
+  "Telegram|Cerveza Bohemia 12 pack desde $11.90 la pieza|https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-6a693bea77fa11d4&btn_type=ss&btn_ref=srctok-6a693bea77fa11d4": {
+    "tienda": "Telegram",
+    "titulo": "Cerveza Bohemia 12 pack desde $11.90 la pieza",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-6a693bea77fa11d4&btn_type=ss&btn_ref=srctok-6a693bea77fa11d4",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false
+    },
+    "ultima_actualizacion": "2026-10-04T08:51:37.398558+00:00",
+    "precio_alertado": 11.9
   }
 }
