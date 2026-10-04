@@ -267,7 +267,8 @@ def revisar():
             }
         else:
             historial[clave]["precio_maximo"] = max(float(historial[clave].get("precio_maximo", 0)), actual, referencia)
-            historial[clave]["titulo"] = titulo\n            historial[clave]["descuento"] = dcto
+            historial[clave]["titulo"] = titulo
+            historial[clave]["descuento"] = dcto
             historial[clave]["puntuacion"] = scoring["puntuacion"]
             historial[clave]["extremo"] = extreme
             if scoring.get("marca"):
