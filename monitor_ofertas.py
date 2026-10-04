@@ -14,7 +14,7 @@ from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
 
-MIN_DESCUENTO = 5
+MIN_DESCUENTO = 40
 MAX_DESCUENTO = 99
 HISTORIAL_FILE = "historial_ofertas.json"
 MAX_HISTORIAL = 10000
@@ -137,7 +137,7 @@ def revisar():
             "con_referencia": 0,
             "sin_referencia": 0,
             "rangos_descuento": {
-                "5-49": 0,
+                "40-49": 0,
                 "50-69": 0,
                 "70-89": 0,
                 "90-94": 0,
@@ -149,7 +149,7 @@ def revisar():
         registro_salud["candidatos"] += 1
         if referencia_salud > actual_salud:
             registro_salud["con_referencia"] += 1
-            if 5 <= descuento_salud <= 49:
+            if 40 <= descuento_salud <= 49:
                 registro_salud["rangos_descuento"]["5-49"] += 1
             elif 50 <= descuento_salud <= 69:
                 registro_salud["rangos_descuento"]["50-69"] += 1
@@ -171,28 +171,42 @@ def revisar():
             "politica_publicacion": {
                 "min_descuento_comparable": MIN_DESCUENTO,
                 "max_descuento_comparable": MAX_DESCUENTO,
-                "rangos_incluidos": ["5-49", "50-69", "70-89", "90-94", "95-99"],
+                "rangos_incluidos": ["40-49", "50-69", "70-89", "90-94", "95-99"],
             },
             "tiendas": salud_tiendas,
         }, health_file, ensure_ascii=False, indent=2)
 
     print(f"Salud de fuentes por tienda: {json.dumps(salud_tiendas, ensure_ascii=False)}")
     print(f"Fuentes adicionales Telegram + físicas + liquidaciones oficiales: {len(candidatos)} candidatos totales")
+    descartes = {
+        "sin_titulo_o_url": 0,
+        "duplicado": 0,
+        "sin_precio": 0,
+        "sin_ficha_directa": 0,
+        "sin_referencia": 0,
+        "descuento_menor_40": 0,
+        "descuento_mayor_99": 0,
+        "historico_ya_alertado": 0,
+        "no_elegible": 0,
+    }
     for item in candidatos:
         titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
         url = str(item.get("url") or "").strip()
         tienda = str(item.get("tienda") or item.get("store") or "Desconocida").strip()
         if not titulo or not url:
+            descartes["sin_titulo_o_url"] += 1
             continue
 
         clave = item.get("id") or f"{tienda}|{titulo}|{url}"
         if clave in vistos_en_esta_revision:
+            descartes["duplicado"] += 1
             continue
         vistos_en_esta_revision.add(clave)
 
         anterior_hist = historial.get(clave, {})
         actual, referencia, dcto = calcular_datos(item, anterior_hist)
         if actual <= 0:
+            descartes["sin_precio"] += 1
             continue
 
         enriched = dict(item)
@@ -230,6 +244,7 @@ def revisar():
 
         ultimo_alertado = anterior_hist.get("precio_alertado")
         if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado):
+            descartes["historico_ya_alertado"] += 1
             continue
 
         # VERDE = descuento comprobable; ROJA = liquidación/ocasión sin referencia.
@@ -242,7 +257,20 @@ def revisar():
             es_enlace = bool(host_evidencia) and host_evidencia not in ("www.google.com", "google.com", "t.me", "telegram.me")
         tiene_precio = actual > 0
         tiene_referencia = referencia > actual
-        if not tiene_precio or not es_enlace:
+        if not tiene_precio:
+            descartes["sin_precio"] += 1
+            continue
+        if not es_enlace:
+            descartes["sin_ficha_directa"] += 1
+            continue
+        if not tiene_referencia:
+            descartes["sin_referencia"] += 1
+            continue
+        if dcto < MIN_DESCUENTO:
+            descartes["descuento_menor_40"] += 1
+            continue
+        if dcto > MAX_DESCUENTO:
+            descartes["descuento_mayor_99"] += 1
             continue
 
         marca = scoring.get("marca") or item.get("marca")
@@ -310,6 +338,7 @@ def revisar():
         )
         avisos.append((clave, actual, mensaje))
 
+    print(f"Descartes: {json.dumps(descartes, ensure_ascii=False)}")
     avisos.sort(key=lambda row: historial.get(row[0], {}).get("puntuacion", 0), reverse=True)
 
     enviados = 0
