@@ -14,7 +14,7 @@ from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
 
-MIN_DESCUENTO = 50
+MIN_DESCUENTO = 5
 MAX_DESCUENTO = 99
 HISTORIAL_FILE = "historial_ofertas.json"
 MAX_HISTORIAL = 10000
@@ -122,6 +122,61 @@ def revisar():
     candidatos.extend(buscar_telegram(requests.Session()))
     candidatos.extend(buscar_tiendas_fisicas(requests.Session()))
     candidatos.extend(buscar_liquidaciones_oficiales(requests.Session()))
+    # Salud de descubrimiento: permite comprobar que las tiendas no queden
+    # monopolizadas por 95/99 y que también estén llegando rangos medios.
+    salud_tiendas = {}
+    for candidato in candidatos:
+        tienda_salud = str(candidato.get("tienda") or candidato.get("store") or "Desconocida")
+        actual_salud = float(candidato.get("precio_actual") or candidato.get("price") or 0)
+        referencia_salud = float(candidato.get("precio_anterior") or candidato.get("previous_price") or 0)
+        if actual_salud <= 0:
+            continue
+        descuento_salud = round((1 - actual_salud / referencia_salud) * 100) if referencia_salud > actual_salud else 0
+        registro_salud = salud_tiendas.setdefault(tienda_salud, {
+            "candidatos": 0,
+            "con_referencia": 0,
+            "sin_referencia": 0,
+            "rangos_descuento": {
+                "5-49": 0,
+                "50-69": 0,
+                "70-89": 0,
+                "90-94": 0,
+                "95-99": 0,
+                "sin_descuento_comparable": 0,
+            },
+            "descubrimiento_publico": 0,
+        })
+        registro_salud["candidatos"] += 1
+        if referencia_salud > actual_salud:
+            registro_salud["con_referencia"] += 1
+            if 5 <= descuento_salud <= 49:
+                registro_salud["rangos_descuento"]["5-49"] += 1
+            elif 50 <= descuento_salud <= 69:
+                registro_salud["rangos_descuento"]["50-69"] += 1
+            elif 70 <= descuento_salud <= 89:
+                registro_salud["rangos_descuento"]["70-89"] += 1
+            elif 90 <= descuento_salud <= 94:
+                registro_salud["rangos_descuento"]["90-94"] += 1
+            elif 95 <= descuento_salud <= 99:
+                registro_salud["rangos_descuento"]["95-99"] += 1
+            else:
+                registro_salud["rangos_descuento"]["sin_descuento_comparable"] += 1
+        else:
+            registro_salud["sin_referencia"] += 1
+        if str(candidato.get("origen_link") or "").lower() == "buscador_publico":
+            registro_salud["descubrimiento_publico"] += 1
+
+    with open("preflight_health.json", "w", encoding="utf-8") as health_file:
+        json.dump({
+            "politica_publicacion": {
+                "min_descuento_comparable": MIN_DESCUENTO,
+                "max_descuento_comparable": MAX_DESCUENTO,
+                "rangos_incluidos": ["5-49", "50-69", "70-89", "90-94", "95-99"],
+            },
+            "tiendas": salud_tiendas,
+        }, health_file, ensure_ascii=False, indent=2)
+
+    print(f"Salud de fuentes por tienda: {json.dumps(salud_tiendas, ensure_ascii=False)}")
     print(f"Fuentes adicionales Telegram + físicas + liquidaciones oficiales: {len(candidatos)} candidatos totales")
     for item in candidatos:
         titulo = str(item.get("titulo") or item.get("title") or item.get("nombre") or "").strip()
