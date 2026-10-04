@@ -34,12 +34,6 @@ FUENTES = [
     },
     {
         "tienda": "Chedraui",
-        "url": "https://www.chedraui.com.mx/precios-liquidacion",
-        "host": "chedraui.com.mx",
-        "patrones": ("/p/",),
-    },
-    {
-        "tienda": "Chedraui",
         "urls": (
             "https://www.chedraui.com.mx/promociones/solo-hoy",
             "https://www.chedraui.com.mx/promociones/chedraui",
