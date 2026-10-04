@@ -40,6 +40,24 @@ FUENTES = [
         "patrones": ("/producto/", "/p/", "/item/"),
     },
     {
+        "tienda": "Bodega Aurrera",
+        "url": "https://despensa.bodegaaurrera.com.mx/content/remates/2715538",
+        "host": "bodegaaurrera.com.mx",
+        "patrones": ("/content/", "/ip/"),
+    },
+    {
+        "tienda": "Coppel",
+        "url": "https://www.coppel.com/ca/outlet-saldos",
+        "host": "coppel.com",
+        "patrones": ("/pdp/", "/p/"),
+    },
+    {
+        "tienda": "Liverpool",
+        "url": "https://www.liverpool.com.mx/tienda?s=ofertas+de+liquidaci%C3%B3n",
+        "host": "liverpool.com.mx",
+        "patrones": ("/tienda/pdp/", "/pdp/"),
+    },
+    {
         "tienda": "Juguetron",
         "url": "https://www.juguetron.mx/promociones",
         "host": "juguetron.mx",
