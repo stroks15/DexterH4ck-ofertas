@@ -11550,13 +11550,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 50.0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.723593+00:00",
     "precio_alertado": 1995.0
@@ -11574,13 +11577,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.725343+00:00",
     "precio_alertado": 6999.0
@@ -11598,13 +11604,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 82.35,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.727286+00:00",
     "precio_alertado": 171.0
@@ -11622,13 +11631,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 33.31,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.729245+00:00",
     "precio_alertado": 2200.0
@@ -11646,13 +11658,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.730977+00:00",
     "precio_alertado": 5579.0
@@ -11670,13 +11685,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 57.02,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.732820+00:00",
     "precio_alertado": 156.0
@@ -11694,13 +11712,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.734704+00:00",
     "precio_alertado": 257.7
@@ -11718,13 +11739,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 92.06,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.736620+00:00",
     "precio_alertado": 500.0
@@ -11742,13 +11766,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 55.24,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.738513+00:00",
     "precio_alertado": 380.0
@@ -11766,13 +11793,16 @@
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
+      "descuento_calculado": 31.31,
+      "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
       "evidencia_precio": "no_verificado",
-      "publicable_como_extremo": false
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-02T23:41:04.740468+00:00",
     "precio_alertado": 11890.0
@@ -18889,6 +18919,343 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-04T17:09:48.152477+00:00",
+    "precio_alertado": 24.0
+  },
+  "Mercado Libre|Mercado Libre: Bicicleta Lynx Montaña R26 1v. Mujer Frenos V Acero Azul/blanco Unica|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBtbKuS1TTu0dLxIF7sECJs7sQGHDntgC9yZE%2BLhQLLsUcaLiKzFFAA4OHDxvUQs5JJVbETQM7tvYYh0RJaZEJ4Z%2BDYcu1OFjpRN2Kn7HzRDQxUqykleUIO9a19FrRJWDhZJOEfG6XUH8tB18mgFdOAdP%2BZWUgMNpdxkphZg8lAxGBjwYPdNlygiStMO58n91dW9vb4%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Mercado Libre: Bicicleta Lynx Montaña R26 1v. Mujer Frenos V Acero Azul/blanco Unica",
+    "marca": "",
+    "categoria": "Bicicletas y Scooters",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBtbKuS1TTu0dLxIF7sECJs7sQGHDntgC9yZE%2BLhQLLsUcaLiKzFFAA4OHDxvUQs5JJVbETQM7tvYYh0RJaZEJ4Z%2BDYcu1OFjpRN2Kn7HzRDQxUqykleUIO9a19FrRJWDhZJOEfG6XUH8tB18mgFdOAdP%2BZWUgMNpdxkphZg8lAxGBjwYPdNlygiStMO58n91dW9vb4%3D",
+    "precio_actual": 1815.0,
+    "precio_maximo": 2000.0,
+    "descuento": 9,
+    "puntuacion": 9,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 9.25,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.084289+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA IMPERDIBLE! LENOVO IDEA PAD SLIM 3 CON AUDÍFONOS|https://www.amazon.com.mx/dp/B0F2KPGVTH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA IMPERDIBLE! LENOVO IDEA PAD SLIM 3 CON AUDÍFONOS",
+    "marca": "Lenovo",
+    "categoria": "Audífonos",
+    "url": "https://www.amazon.com.mx/dp/B0F2KPGVTH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 9999.0,
+    "precio_maximo": 15299.0,
+    "descuento": 35,
+    "puntuacion": 70,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 34.64,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.085027+00:00",
+    "precio_alertado": 9999.0
+  },
+  "Mercado Libre|¡PREPARA EL MEJOR CAFÉ CON EL MOLINO HAMILTON BEACH!|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBn1fERNBuEIA3%2F5%2B59XhNhawkZbYZLrPD0eQI8uVoMwuk6X2b84GW%2BpUMdk3wQKsMy287UWnYJcn6dgLOxYjGhb%2Bbyuf8enIpbYMihjc1sfYR%2FaU%2FIqxdaHp2Tj%2FFx8ahjx%2FkNWyrxqqQwqpd7Gevf6Y4I%2Fuut61PdzMrMIbNDPcQFEepB5pFgXjkADr2zXNLXxEwA%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "¡PREPARA EL MEJOR CAFÉ CON EL MOLINO HAMILTON BEACH!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBn1fERNBuEIA3%2F5%2B59XhNhawkZbYZLrPD0eQI8uVoMwuk6X2b84GW%2BpUMdk3wQKsMy287UWnYJcn6dgLOxYjGhb%2Bbyuf8enIpbYMihjc1sfYR%2FaU%2FIqxdaHp2Tj%2FFx8ahjx%2FkNWyrxqqQwqpd7Gevf6Y4I%2Fuut61PdzMrMIbNDPcQFEepB5pFgXjkADr2zXNLXxEwA%3D",
+    "precio_actual": 599.0,
+    "precio_maximo": 749.0,
+    "descuento": 20,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 20.03,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.086695+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|¡OFERTA EXCLUSIVA EN CARTERA GUESS!|https://www.amazon.com.mx/dp/B0FQK5GMVD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "¡OFERTA EXCLUSIVA EN CARTERA GUESS!",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FQK5GMVD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 553.0,
+    "precio_maximo": 890.0,
+    "descuento": 38,
+    "puntuacion": 38,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 37.87,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.088237+00:00",
+    "precio_alertado": 553.0
+  },
+  "Telegram|Perfume Valentino Uomo 100ml a $1,820|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-19f2fa0da2740c93&btn_type=ss&btn_ref=srctok-19f2fa0da2740c93": {
+    "tienda": "Telegram",
+    "titulo": "Perfume Valentino Uomo 100ml a $1,820",
+    "marca": "",
+    "categoria": "Perfumes y Fragancias",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_N7MRQPNF63BTYB99ZRKJ?linkCode=ml1&tag=liquidahorros--20&linkId=f0e2a3b1a7d9527e7af5c721064097dc&ascsubtag=srctok-19f2fa0da2740c93&btn_type=ss&btn_ref=srctok-19f2fa0da2740c93",
+    "precio_actual": 1820.0,
+    "precio_maximo": 1820.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.089730+00:00",
+    "precio_alertado": 1820.0
+  },
+  "Telegram|Tenis Adidas Racer 4.0 para Hombre de $999 a $589|https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-6628472e0ca14436&btn_type=ss&btn_ref=srctok-6628472e0ca14436": {
+    "tienda": "Telegram",
+    "titulo": "Tenis Adidas Racer 4.0 para Hombre de $999 a $589",
+    "marca": "Adidas",
+    "categoria": "Tenis",
+    "url": "https://www.amazon.com.mx/dp/B0DCK8Q2XF/ref=cm_sw_r_as_gl_api_gl_i_S4SDGETCT2PGZKPS4NJH?linkCode=ml1&tag=liquidahorros--20&linkId=30818aedc8cf6926876a967dd2c4c657&ascsubtag=srctok-6628472e0ca14436&btn_type=ss&btn_ref=srctok-6628472e0ca14436",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.094851+00:00",
+    "precio_alertado": 999.0
+  },
+  "Telegram|Nintendo Switch + Juego + Online a $3,700|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-3a34a30674f7a0f7&btn_type=ss&btn_ref=srctok-3a34a30674f7a0f7": {
+    "tienda": "Telegram",
+    "titulo": "Nintendo Switch + Juego + Online a $3,700",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-3a34a30674f7a0f7&btn_type=ss&btn_ref=srctok-3a34a30674f7a0f7",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.095546+00:00",
+    "precio_alertado": 3700.0
+  },
+  "Telegram|Axion líquido de 1.4L desde $35 comprando 5 o más|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-5de6156ca770cb5c&btn_type=ss&btn_ref=srctok-5de6156ca770cb5c": {
+    "tienda": "Telegram",
+    "titulo": "Axion líquido de 1.4L desde $35 comprando 5 o más",
+    "marca": "Axion",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-5de6156ca770cb5c&btn_type=ss&btn_ref=srctok-5de6156ca770cb5c",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 29,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 9.09,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.097194+00:00",
+    "precio_alertado": 35.0
+  },
+  "Telegram|Paquete de hojas Premium de $160 a $75 comprando 5 o más|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-6627a657a23ef7cd&btn_type=ss&btn_ref=srctok-6627a657a23ef7cd": {
+    "tienda": "Telegram",
+    "titulo": "Paquete de hojas Premium de $160 a $75 comprando 5 o más",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-6627a657a23ef7cd&btn_type=ss&btn_ref=srctok-6627a657a23ef7cd",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 0,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.098865+00:00",
+    "precio_alertado": 160.0
+  },
+  "Telegram|Nickelodeon Kart 2 para Nintendo Switch a $250|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-2d96547065811e78&btn_type=ss&btn_ref=srctok-2d96547065811e78": {
+    "tienda": "Telegram",
+    "titulo": "Nickelodeon Kart 2 para Nintendo Switch a $250",
+    "marca": "Nintendo",
+    "categoria": "Consolas",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-2d96547065811e78&btn_type=ss&btn_ref=srctok-2d96547065811e78",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 35,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.102516+00:00",
+    "precio_alertado": 250.0
+  },
+  "Telegram|Cerveza Bohemia 12 pack desde $11.90 la pieza|https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-159e00ecd53a73cd&btn_type=ss&btn_ref=srctok-159e00ecd53a73cd": {
+    "tienda": "Telegram",
+    "titulo": "Cerveza Bohemia 12 pack desde $11.90 la pieza",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-159e00ecd53a73cd&btn_type=ss&btn_ref=srctok-159e00ecd53a73cd",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 91.68,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.104147+00:00",
+    "precio_alertado": 11.9
+  },
+  "Mercado Libre|Zelda Ocarina of Time para Nintendo S2 a $1,299|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "Zelda Ocarina of Time para Nintendo S2 a $1,299",
+    "marca": "Nintendo",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D",
+    "precio_actual": 1299.0,
+    "precio_maximo": 1299.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.105722+00:00",
+    "precio_alertado": null
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-redondo-para-mujer/1190978298?skuid=1190980461": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-redondo-para-mujer/1190978298?skuid=1190980461",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 60,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-04T17:29:36.204813+00:00",
     "precio_alertado": 24.0
   }
 }
