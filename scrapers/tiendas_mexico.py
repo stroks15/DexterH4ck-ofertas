@@ -51,6 +51,34 @@ HEADERS = {
 def normalizar_texto(texto):
     return re.sub(r"\s+", " ", texto or "").strip()
 
+
+def limpiar_titulo_producto(titulo, url=""):
+    """Limpia títulos contaminados por precios/metadatos de tarjetas de tienda."""
+    from urllib.parse import unquote, urlparse
+    texto = html.unescape(str(titulo or ""))
+    texto = re.sub(r"\s+", " ", texto).strip(" \t\r\n-–—|·")
+    texto = re.split(
+        r"\b(?:precio\s+(?:actual|final|de\s+oferta)|antes|ahorra|hasta\s+\d+\s+mensualidades?|mensualidades?\s+fijas?|precio\s+anterior|precio\s+regular)\b",
+        texto, maxsplit=1, flags=re.I,
+    )[0]
+    texto = re.sub(r"(?:^|[|·–—-])\s*\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", texto)
+    texto = re.sub(r"\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", texto)
+    texto = re.sub(r"\s{2,}", " ", texto).strip(" \t\r\n-–—|·,;:")
+    letras = re.findall(r"[A-Za-zÁÉÍÓÚáéíóúÑñÜü]{2,}", texto)
+    if len("".join(letras)) < 5 and url:
+        try:
+            path = unquote(urlparse(url).path).rstrip("/")
+            slug = path.rsplit("/", 1)[-1]
+            slug = re.sub(r"(?:-)?(?:mlm[-_]?)?\d{5,}$", "", slug, flags=re.I)
+            slug = re.sub(r"[-_]+", " ", slug)
+            slug = re.sub(r"\b(?:ip|pdp|producto|product|item)\b", " ", slug, flags=re.I)
+            slug = re.sub(r"\s{2,}", " ", slug).strip(" -_/")
+            if len(slug) >= 5:
+                texto = slug
+        except Exception:
+            pass
+    return texto[:180]
+
 def extraer_precios(texto):
     encontrados = re.findall(
         r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)",
