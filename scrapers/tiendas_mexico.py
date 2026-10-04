@@ -446,14 +446,9 @@ DESCUENTO_QUERIES = [
 def _buscar_indexado_tienda(nombre, consultas, session):
     """Descubre productos desde resultados públicos indexados cuando la tienda
     devuelve HTTP 200 pero oculta el catálogo al cliente automatizado.
-
-    No intenta saltar CAPTCHA, WAF, autenticación ni medidas de seguridad.
-    Solo usa resultados públicos del buscador y conserva el enlace oficial.
+    No intenta saltar CAPTCHA/WAF/autenticación.
     """
-    dominio = {
-        "Walmart MX": "walmart.com.mx",
-        "Bodega Aurrera": "bodegaaurrera.com.mx",
-    }.get(nombre)
+    dominio = {"Walmart MX": "walmart.com.mx", "Bodega Aurrera": "bodegaaurrera.com.mx"}.get(nombre)
     if not dominio:
         return []
 
@@ -469,12 +464,8 @@ def _buscar_indexado_tienda(nombre, consultas, session):
         motor_usado = ""
         for motor, endpoint, extra_params in motores:
             try:
-                response = session.get(
-                    endpoint,
-                    params={"q": q, **extra_params},
-                    headers=GOOGLE_HEADERS,
-                    timeout=20,
-                )
+                response = session.get(endpoint, params={"q": q, **extra_params},
+                                       headers=GOOGLE_HEADERS, timeout=20)
                 if response.status_code >= 400:
                     print(f"{nombre}/{motor}: HTTP {response.status_code} para {consulta}")
                     continue
@@ -483,18 +474,61 @@ def _buscar_indexado_tienda(nombre, consultas, session):
                 break
             except requests.RequestException as error:
                 print(f"{nombre}/{motor}: error de red para {consulta}: {error}")
+
         if soup is None:
             continue
-        except requests.RequestException as error:
-            print(f"{nombre}/Indexado: error de red para {consulta}: {error}")
+
+        try:
+            for enlace in soup.select("a[href]"):
+                href = enlace.get("href", "")
+                if href.startswith("/url?q="):
+                    href = href.split("/url?q=", 1)[1].split("&", 1)[0]
+                parsed = urlparse(href)
+                if parsed.scheme not in ("http", "https"):
+                    continue
+                host = parsed.netloc.lower()
+                if not (host == dominio or host.endswith("." + dominio)):
+                    continue
+                if not es_url_producto(href, f"https://www.{dominio}/"):
+                    continue
+
+                texto = normalizar_texto(enlace.get_text(" ", strip=True))
+                padre = enlace.find_parent()
+                contexto = normalizar_texto(padre.get_text(" ", strip=True) if padre else texto)
+                precios = extraer_precios(contexto)
+                actual = precios[0] if precios else None
+                anterior = next((p for p in precios[1:] if p > actual), None) if actual else None
+                if not actual:
+                    continue
+
+                clave = producto_id(nombre, texto, href)
+                if clave in vistos:
+                    continue
+                vistos.add(clave)
+                marca, _ = detect_priority_brand({"titulo": texto})
+                categoria = infer_category({"titulo": texto})
+                contexto_lower = contexto.lower()
+                resultados.append({
+                    "tienda": nombre,
+                    "titulo": texto[:180],
+                    "marca": marca,
+                    "categoria": categoria,
+                    "precio_actual": actual,
+                    "precio_anterior": anterior,
+                    "descuento": calcular_descuento(anterior, actual),
+                    "url": href,
+                    "liquidacion": any(k in contexto_lower for k in KEYWORDS_LIQUIDACION),
+                    "outlet": any(k in contexto_lower for k in ("outlet", "clearance", "open box", "warehouse")),
+                    "origen_link": "buscador_publico",
+                    "motor_descubrimiento": motor_usado,
+                })
         except Exception as error:
             print(f"{nombre}/Indexado: error procesando {consulta}: {error}")
+
         time.sleep(0.4)
 
     print(f"{nombre}/Indexado: {len(resultados)} productos públicos descubiertos")
     return resultados
-
-
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
     base_url = plantilla.split("{q}", 1)[0]
