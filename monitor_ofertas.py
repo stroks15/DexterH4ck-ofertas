@@ -150,7 +150,7 @@ def revisar():
         if referencia_salud > actual_salud:
             registro_salud["con_referencia"] += 1
             if 40 <= descuento_salud <= 49:
-                registro_salud["rangos_descuento"]["5-49"] += 1
+                registro_salud["rangos_descuento"]["40-49"] += 1
             elif 50 <= descuento_salud <= 69:
                 registro_salud["rangos_descuento"]["50-69"] += 1
             elif 70 <= descuento_salud <= 89:
