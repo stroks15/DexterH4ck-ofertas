@@ -495,9 +495,8 @@ EXTREME_QUERIES = [
 # confirmar con precio actual + referencia. Las consultas sirven para descubrir
 # páginas públicas; el porcentaje final siempre se calcula con los precios.
 DESCUENTO_QUERIES = [
-    "oferta 40%", "oferta 50%", "oferta 60%", "oferta 70%",
-    "oferta 80%", "oferta 90%", "descuento 40%", "descuento 50%",
-    "descuento 60%", "descuento 70%", "descuento 80%", "descuento 90%",
+    "oferta 50%", "oferta 60%", "oferta 70%", "oferta 80%", "oferta 90%",
+    "descuento 50%", "descuento 60%", "descuento 70%", "descuento 80%", "descuento 90%",
     "rebaja", "oferta", "promocion", "cupon", "liquidacion", "remate",
 ]
 
