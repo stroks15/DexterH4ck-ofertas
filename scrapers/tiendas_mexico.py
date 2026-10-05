@@ -846,10 +846,29 @@ def buscar_todas():
         session = requests.Session()
         session.headers.update(HEADERS)
         try:
-            if nombre in ("Walmart MX", "Bodega Aurrera"):
-                consultas = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
-                rows = _buscar_indexado_tienda(nombre, consultas, session)
-                print(f"{nombre}: descubrimiento indexado -> {len(rows)} candidatos")
+            if nombre == "Walmart MX":
+                urls = [
+                    "https://www.walmart.com.mx/content/especiales/360013_300279",
+                    "https://www.walmart.com.mx/search?q=oferta",
+                    "https://www.walmart.com.mx/search?q=remate",
+                    "https://www.walmart.com.mx/search?q=outlet",
+                ]
+                rows = buscar_urls_oficiales(nombre, urls, session, True)
+                if not rows:
+                    rows = _buscar_indexado_tienda(nombre, DESCUENTO_QUERIES[:8] + EXTREME_QUERIES, session)
+                print(f"{nombre}: fuente oficial/indexada -> {len(rows)} candidatos")
+                return rows
+            if nombre == "Bodega Aurrera":
+                urls = [
+                    "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
+                    "https://www.bodegaaurrera.com.mx/search?q=oferta",
+                    "https://www.bodegaaurrera.com.mx/search?q=remate",
+                    "https://www.bodegaaurrera.com.mx/search?q=outlet",
+                ]
+                rows = buscar_urls_oficiales(nombre, urls, session, True)
+                if not rows:
+                    rows = _buscar_indexado_tienda(nombre, DESCUENTO_QUERIES[:8] + EXTREME_QUERIES, session)
+                print(f"{nombre}: fuente oficial/indexada -> {len(rows)} candidatos")
                 return rows
             if nombre in ("Amazon MX", "Mercado Libre MX"):
                 rows = buscar_tienda(nombre, plantilla, session)
