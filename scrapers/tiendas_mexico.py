@@ -842,10 +842,14 @@ def buscar_todas():
         session = requests.Session()
         session.headers.update(HEADERS)
         try:
-            if nombre in ("Walmart MX", "Bodega Aurrera", "Amazon MX", "Mercado Libre MX"):
+            if nombre in ("Walmart MX", "Bodega Aurrera"):
                 consultas = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
                 rows = _buscar_indexado_tienda(nombre, consultas, session)
                 print(f"{nombre}: descubrimiento indexado -> {len(rows)} candidatos")
+                return rows
+            if nombre in ("Amazon MX", "Mercado Libre MX"):
+                rows = buscar_tienda(nombre, plantilla, session)
+                print(f"{nombre}: búsqueda directa/publica -> {len(rows)} candidatos")
                 return rows
             if nombre == "Chedraui":
                 print(f"{nombre}: búsqueda HTML omitida; se prioriza API VTEX.")
