@@ -173,6 +173,11 @@ class MercadoLibreApiScraper(BaseScraper):
 
     def discover(self) -> list[dict[str, Any]]:
         circuit = SourceCircuit(self.store)
+        token = os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip()
+        require_token = os.getenv("ML_API_REQUIRE_TOKEN", "true").lower() not in {"0", "false", "no"}
+        if require_token and not token:
+            print("[SCRAPER:Mercado Libre MX] API omitida: falta MERCADOLIBRE_ACCESS_TOKEN; se conserva el descubrimiento web/indexado.")
+            return []
         queries = os.getenv(
             "ML_QUERIES",
             "liquidacion,remate,oferta,precio error,descuento",
