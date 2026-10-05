@@ -98,3 +98,17 @@ def canonical_product_identifier(store: str, url: str) -> dict[str, str]:
     if "mercado" in name:
         return {"url": str(url or "").strip(), "product_id": extract_mercadolibre_id(url)}
     return {"url": str(url or "").strip(), "product_id": ""}
+
+
+def expand_mercadolibre_url(url: str, session=None) -> str:
+    """Expande enlaces cortos con HEAD; devuelve la URL original ante fallo."""
+    import requests
+    value = str(url or "").strip()
+    if not value:
+        return ""
+    try:
+        session = session or requests.Session()
+        response = session.head(value, allow_redirects=True, timeout=10)
+        return response.url or value
+    except requests.RequestException:
+        return value
