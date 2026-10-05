@@ -54,6 +54,39 @@ jobs:
           test -n "$GEMINI_API_KEY" || echo "::warning::GEMINI_API_KEY no está configurada; el monitor funcionará sin Gemini."
           test -n "$GROQ_API_KEY" || echo "::warning::GROQ_API_KEY no está configurada; el monitor funcionará sin Groq."
 
+      - name: Diagnosticar acceso real a APIs de IA
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        shell: bash
+        run: |
+          set +e
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::warning::Gemini: secret ausente en Actions."
+          else
+            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15 "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY")
+            case "$code" in
+              200) echo "Gemini: clave presente y API accesible (HTTP 200)." ;;
+              401|403) echo "::error::Gemini: clave presente pero rechazada (HTTP $code)." ;;
+              429) echo "::warning::Gemini: clave presente, pero límite/cuota alcanzado (HTTP 429)." ;;
+              *) echo "::warning::Gemini: API respondió HTTP $code; el token sí está presente." ;;
+            esac
+          fi
+          if [ -z "$GROQ_API_KEY" ]; then
+            echo "::warning::Groq: secret ausente en Actions."
+          else
+            code=$(curl -sS -o /tmp/groq-models.json -w "%{http_code}" --max-time 15 \
+              -H "Authorization: Bearer $GROQ_API_KEY" \
+              -H "Content-Type: application/json" \
+              "https://api.groq.com/openai/v1/models")
+            case "$code" in
+              200) echo "Groq: clave presente y API accesible (HTTP 200)." ;;
+              401|403) echo "::error::Groq: clave presente pero rechazada (HTTP $code)." ;;
+              429) echo "::warning::Groq: clave presente, pero límite/cuota alcanzado (HTTP 429)." ;;
+              *) echo "::warning::Groq: API respondió HTTP $code; el token sí está presente." ;;
+            esac
+          fi
+
       - name: Verificar token opcional de Mercado Libre
         env:
           MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
@@ -65,7 +98,7 @@ jobs:
           fi
 
       - name: Validar sintaxis Python
-        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py core/source_resilience.py scrapers/api_stores.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py scrapers/mercado_libre_api.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
+        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py core/source_resilience.py core/offer_identity.py scrapers/api_stores.py scrapers/comunidades_web.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py scrapers/mercado_libre_api.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
       - name: Pruebas deterministas de liquidaciones extremas
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Preflight - detectar errores antes del monitor
