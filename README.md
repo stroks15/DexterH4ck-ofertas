@@ -101,4 +101,4 @@ Estas señales agregan **+30 puntos** y pueden generar alerta aunque no exista p
 
 ### Política de descuentos
 
-Se consideran comparables los rangos **5–49%, 50–69%, 70–89%, 90–94% y 95–99%**. El 95/99% es una categoría extrema, no un filtro exclusivo.
+El monitor investiga **50–99%**. Los rangos de diagnóstico son **50–69%, 70–89%, 90–94% y 95–99%**. Toda liquidación **90–99%** con referencia válida se fuerza como alerta prioritaria y lleva el emoji **💣** al inicio. El 95/99% no es el único objetivo.
