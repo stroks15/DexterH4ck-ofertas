@@ -142,6 +142,11 @@ def score_product(product, discount=None):
         indicators.append("ultima_pieza_outlet")
 
     extreme = analizar_precio_extremo(product)
+    # Liquidaciones físicas por centavos: señal independiente del texto.
+    # Se aplica a Walmart/Bodega (.01/.02/.03) y Soriana (.02/.05).
+    if "liquidacion_terminacion_centavos" in extreme.get("senales", []):
+        score += 30
+        indicators.append("liquidacion_centavos_fisica")
     if extreme["es_extremo"]:
         indicators.append("precio_extremo")
         score += 15
@@ -165,11 +170,11 @@ def score_product(product, discount=None):
 
 def evaluate_product(product):
     result = score_product(product)
-    result["es_liquidacion"] = 40 <= result["descuento"] <= 99
+    result["es_liquidacion"] = 5 <= result["descuento"] <= 99
     result["nivel_oportunidad"] = result["puntuacion"]
     # La puntuación NO decide si una liquidación 40..99 se publica; solamente
     # sirve para ordenar/priorizar. El porcentaje es el criterio de elegibilidad.
-    result["recomendado"] = result["es_liquidacion"]
+    result["recomendado"] = result["es_liquidacion"] or "liquidacion_centavos_fisica" in result["indicadores"]
 
     texto = " ".join(str(product.get(k, "")) for k in (
         "titulo", "description", "descripcion", "publicacion", "condiciones"
