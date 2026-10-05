@@ -26,6 +26,61 @@ def _num(value: Any) -> float | None:
         return None
 
 
+class GraphQLStoreScraper(BaseScraper):
+    """Cliente GraphQL configurable para catálogos autorizados.
+
+    STORE_ID se inyecta como variable y header únicamente cuando el comercio
+    documenta/permite ese contexto. No se intenta descubrir ni falsificar
+    cookies de una app móvil.
+    """
+
+    def __init__(self, store: str, endpoint_env: str, store_id_env: str, query_env: str,
+                 context: ScraperContext | None = None):
+        super().__init__(context)
+        self.store = store
+        self.endpoint_env = endpoint_env
+        self.store_id_env = store_id_env
+        self.query_env = query_env
+
+    def discover(self) -> list[dict[str, Any]]:
+        import json
+        endpoint = os.getenv(self.endpoint_env, "").strip()
+        query = os.getenv(self.query_env, "").strip()
+        if not endpoint or not query:
+            return []
+        store_id = os.getenv(self.store_id_env, "").strip()
+        variables = {"storeId": store_id} if store_id else {}
+        headers = {"Content-Type": "application/json"}
+        if store_id:
+            headers["X-Store-Id"] = store_id
+        response = self.session.post(
+            endpoint,
+            json={"query": query, "variables": variables},
+            headers=headers,
+            timeout=self.context.timeout,
+        )
+        if response.status_code >= 400:
+            print(f"[SCRAPER:{self.store}] GraphQL HTTP {response.status_code}")
+            return []
+        payload = response.json()
+        rows = payload.get("data", {}).get("products", []) if isinstance(payload, dict) else []
+        output = []
+        for row in rows:
+            price = _num(row.get("price") or row.get("currentPrice"))
+            previous = _num(row.get("previousPrice") or row.get("listPrice"))
+            url = row.get("url") or row.get("link")
+            if price and url:
+                output.append(self.normalize(
+                    title=row.get("title") or row.get("name"),
+                    url=url,
+                    price=price,
+                    previous_price=previous,
+                    api="graphql",
+                    store_id=store_id,
+                ))
+        return output
+
+
 class ChedrauiVtexScraper(BaseScraper):
     store = "Chedraui"
 
@@ -147,8 +202,8 @@ class ConfigurableJsonScraper(BaseScraper):
 def api_first_scrapers() -> list[BaseScraper]:
     """Construye los 8 adaptadores; los no públicos quedan configurables."""
     return [
-        ConfigurableJsonScraper("Walmart MX", "WALMART_API_ENDPOINT"),
-        ConfigurableJsonScraper("Bodega Aurrera", "BODEGA_API_ENDPOINT"),
+        GraphQLStoreScraper("Walmart MX", "WALMART_GRAPHQL_URL", "WALMART_STORE_ID", "WALMART_GRAPHQL_QUERY"),
+        GraphQLStoreScraper("Bodega Aurrera", "BODEGA_GRAPHQL_URL", "BODEGA_STORE_ID", "BODEGA_GRAPHQL_QUERY"),
         ChedrauiVtexScraper(),
         ConfigurableJsonScraper("Soriana", "SORIANA_API_ENDPOINT"),
         ConfigurableJsonScraper("Coppel", "COPPEL_API_ENDPOINT"),
