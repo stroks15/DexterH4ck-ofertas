@@ -16,7 +16,7 @@ from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
 from scrapers.api_stores import buscar_api_first
 
-MIN_DESCUENTO = 5
+MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
 HISTORIAL_FILE = "historial_ofertas.json"
 MAX_HISTORIAL = 10000
@@ -186,7 +186,11 @@ def revisar():
     for candidato in candidatos:
         tienda_salud = str(candidato.get("tienda") or candidato.get("store") or "Desconocida")
         actual_salud = float(candidato.get("precio_actual") or candidato.get("price") or 0)
-        referencia_salud = float(candidato.get("precio_anterior") or candidato.get("previous_price") or 0)
+        referencia_directa = float(candidato.get("precio_anterior") or candidato.get("previous_price") or 0)
+        clave_salud = candidato.get("id") or f"{tienda_salud}|{candidato.get('titulo') or candidato.get('title') or candidato.get('nombre') or ''}|{candidato.get('url') or ''}"
+        historico_salud = historial.get(clave_salud, {})
+        referencia_historica = float(historico_salud.get("precio_maximo") or 0)
+        referencia_salud = referencia_directa if referencia_directa > actual_salud else (referencia_historica if referencia_historica > actual_salud else 0)
         if actual_salud <= 0:
             continue
         descuento_salud = round((1 - actual_salud / referencia_salud) * 100) if referencia_salud > actual_salud else 0
@@ -208,7 +212,7 @@ def revisar():
         if referencia_salud > actual_salud:
             registro_salud["con_referencia"] += 1
             if 5 <= descuento_salud <= 49:
-                registro_salud["rangos_descuento"]["40-49"] += 1
+                registro_salud["rangos_descuento"]["5-49"] += 1
             elif 50 <= descuento_salud <= 69:
                 registro_salud["rangos_descuento"]["50-69"] += 1
             elif 70 <= descuento_salud <= 89:
@@ -229,7 +233,10 @@ def revisar():
             "politica_publicacion": {
                 "min_descuento_comparable": MIN_DESCUENTO,
                 "max_descuento_comparable": MAX_DESCUENTO,
-                "rangos_incluidos": ["5-49", "50-69", "70-89", "90-94", "95-99"],
+                "rangos_investigados": ["50-69", "70-89", "90-94", "90-99", "95-99"],
+                "min_descuento": 50,
+                "max_descuento": 99,
+                "liquidaciones_90_99_forzadas": True,
             },
             "tiendas": salud_tiendas,
         }, health_file, ensure_ascii=False, indent=2)
@@ -302,7 +309,8 @@ def revisar():
                 historial[clave]["categoria"] = scoring["categoria"]
 
         ultimo_alertado = anterior_hist.get("precio_alertado")
-        if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado):
+        dcto_90_99_forzado = 90 <= dcto <= 99
+        if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado) and not dcto_90_99_forzado:
             descartes["historico_ya_alertado"] += 1
             continue
 
@@ -332,7 +340,7 @@ def revisar():
         if not tiene_referencia and not centavos_fisica:
             descartes["sin_referencia"] += 1
             continue
-        if dcto < MIN_DESCUENTO and not centavos_fisica:
+        if dcto < MIN_DESCUENTO and not centavos_fisica and not dcto_90_99_forzado:
             descartes["descuento_menor_5"] += 1
             continue
         if dcto > MAX_DESCUENTO:
@@ -351,7 +359,14 @@ def revisar():
         precio_extremo_verificado = extremo.get("precio_verificado", False)
         condiciones = item.get("condiciones") or []
 
-        if es_descuento_real and tiene_referencia:
+        if dcto_90_99_forzado:
+            tipo_alerta = "VERDE"
+            etiqueta = "💣🟢 LIQUIDACIÓN 90-99% FORZADA"
+            bloque_descuento = f"{dcto}% DE DESCUENTO · ALERTA PRIORITARIA\n"
+            referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
+            ahorro = max(referencia - actual, 0)
+            ahorro_texto = f"🤓💲 Ahorrado: ${ahorro:,.2f} MXN\n"
+        elif es_descuento_real and tiene_referencia:
             tipo_alerta = "VERDE"
             etiqueta = "🟢🚨 OFERTA"
             bloque_descuento = f"{dcto}% DE DESCUENTO\n"
@@ -387,7 +402,7 @@ def revisar():
             extras.append("🎟️ " + ", ".join(str(x) for x in condiciones))
 
         mensaje = (
-            f"{etiqueta}\n"
+            f"{("💣 " if dcto_90_99_forzado else "")}{etiqueta}\n"
             f"{bloque_descuento}\n"
             f"🏪 <b>{html.escape(tienda)}</b>\n"
             f"🛒 {html.escape(titulo)}\n"
