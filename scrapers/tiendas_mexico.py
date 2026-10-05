@@ -605,6 +605,7 @@ def _buscar_indexado_tienda(nombre, consultas, session):
     return resultados
 def buscar_tienda(nombre, plantilla, session):
     resultados = []
+    urls_consultadas = set()
     base_url = plantilla.split("{q}", 1)[0]
     # Rotación de consultas: cubre todas las categorías a lo largo de los ciclos
     # sin lanzar cientos de peticiones por cada ejecución de 15 minutos.
@@ -630,6 +631,9 @@ def buscar_tienda(nombre, plantilla, session):
         url = urls_busqueda[0]
         try:
             for indice_url, candidata_url in enumerate(urls_busqueda):
+                if candidata_url in urls_consultadas:
+                    continue
+                urls_consultadas.add(candidata_url)
                 url = candidata_url
                 response = None
                 for intento in range(3):
