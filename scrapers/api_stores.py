@@ -130,12 +130,53 @@ class ChedrauiVtexScraper(BaseScraper):
 class MercadoLibreApiScraper(BaseScraper):
     store = "Mercado Libre MX"
 
+    def _precio_referencia(self, item_id: str):
+        token = os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip()
+        if not token or not item_id:
+            return None
+        try:
+            response = self.session.get(
+                f"https://api.mercadolibre.com/items/{item_id}/prices",
+                headers={"Authorization": f"Bearer {token}"},
+                params={"display_version": "true"},
+                timeout=self.context.timeout,
+            )
+            if response.status_code >= 400:
+                print(f"[SCRAPER:Mercado Libre MX] /prices HTTP {response.status_code} item={item_id}")
+                return None
+            data = response.json()
+            prices = data.get("prices") or []
+            current = None
+            references = []
+            for price in prices:
+                amount = _num(price.get("amount"))
+                regular = _num(price.get("regular_amount"))
+                if price.get("type") == "promotion" and amount:
+                    current = amount
+                    if regular and regular > amount:
+                        references.append(regular)
+                elif price.get("type") == "standard" and amount:
+                    if current is None:
+                        current = amount
+            if references:
+                return max(references)
+            # Sin promoción activa, no inventamos un descuento usando otro
+            # precio estándar: el monitor usará su historial como respaldo.
+            return None
+        except (requests.RequestException, ValueError) as exc:
+            print(f"[SCRAPER:Mercado Libre MX] error /prices item={item_id}: {type(exc).__name__}")
+            return None
+
     def discover(self) -> list[dict[str, Any]]:
         queries = os.getenv(
             "ML_QUERIES",
             "liquidacion,remate,oferta,precio error,descuento",
         ).split(",")
         output: list[dict[str, Any]] = []
+        max_price_lookups = max(0, int(os.getenv("ML_PRICE_LOOKUPS", "40")))
+        lookups = 0
+        seen_ids = set()
+
         for query in (q.strip() for q in queries if q.strip()):
             params = {"q": query, "limit": "50", "offset": "0"}
             response = self.get(
@@ -149,16 +190,26 @@ class MercadoLibreApiScraper(BaseScraper):
                 price = _num(item.get("price"))
                 if not price:
                     continue
-                # La API pública da el precio actual. La referencia histórica se
-                # obtiene después desde historial_ofertas.json/Supabase.
+
+                previous = None
+                item_id = str(item.get("id") or "")
+                if item_id and item_id not in seen_ids and lookups < max_price_lookups:
+                    seen_ids.add(item_id)
+                    previous = self._precio_referencia(item_id)
+                    lookups += 1
+                    time.sleep(0.15)
+
                 output.append(self.normalize(
                     title=item.get("title"),
                     url=item.get("permalink") or "",
                     price=price,
-                    previous_price=None,
+                    previous_price=previous,
                     categoria=item.get("category_id", ""),
-                    api="mercadolibre_public",
+                    marca=item.get("brand") or "",
+                    api="mercadolibre_prices" if previous else "mercadolibre_public",
+                    item_id=item_id,
                 ))
+        print(f"[SCRAPER:Mercado Libre MX] enriquecimiento /prices: {lookups}/{max_price_lookups}")
         return output
 
 
