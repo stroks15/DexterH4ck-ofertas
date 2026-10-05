@@ -6,6 +6,7 @@ el mismo motor de verificación.
 """
 
 import json
+import os
 import re
 import time
 from urllib.parse import urljoin, urlparse
