@@ -21,6 +21,8 @@ PY_FILES = [
     "core/ai_reparador.py",
     "core/liquidation_engine.py",
     "core/extreme_liquidation.py",
+    "core/scraper_base.py",
+    "scrapers/api_stores.py",
 ]
 
 SOURCES = {
@@ -62,6 +64,8 @@ def check_imports():
         "core.ai_reparador",
         "core.liquidation_engine",
         "core.extreme_liquidation",
+        "core.scraper_base",
+        "scrapers.api_stores",
     ]
     for module in modules:
         try:
