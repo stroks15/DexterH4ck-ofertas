@@ -107,10 +107,12 @@ def score_product(product, discount=None):
         "titulo", "title", "nombre", "description", "descripcion", "liquidacion", "indicadores"
     )))
     indicators = []
-    # La puntuación es independiente del porcentaje. El descuento aporta como
-    # máximo 35 puntos dentro de una escala total de 5..100.
-    discount_score = round(min(max((float(discount or 0) - 40) / 59, 0), 1) * 35)
-    score = 5 + discount_score
+    # El descuento es el componente principal: aporta de 5 a 100 puntos.
+    # 50% = ~53 puntos; 90% = ~91; 99% = 100. Los demás indicadores
+    # funcionan como bonos de prioridad, con tope final de 100.
+    descuento_normalizado = min(max(float(discount or 0), 0), 99)
+    discount_score = round(5 + (descuento_normalizado / 99) * 95)
+    score = discount_score
 
     brand, brand_group = detect_priority_brand(product)
     if brand_group:
