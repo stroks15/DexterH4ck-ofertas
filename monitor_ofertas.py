@@ -204,7 +204,7 @@ def revisar():
             "politica_publicacion": {
                 "min_descuento_comparable": MIN_DESCUENTO,
                 "max_descuento_comparable": MAX_DESCUENTO,
-                "rangos_incluidos": ["40-49", "50-69", "70-89", "90-94", "95-99"],
+                "rangos_incluidos": ["5-49", "50-69", "70-89", "90-94", "95-99"],
             },
             "tiendas": salud_tiendas,
         }, health_file, ensure_ascii=False, indent=2)
@@ -217,14 +217,14 @@ def revisar():
         "sin_precio": 0,
         "sin_ficha_directa": 0,
         "sin_referencia": 0,
-        "descuento_menor_40": 0,
+        "descuento_menor_5": 0,
         "descuento_mayor_99": 0,
         "historico_ya_alertado": 0,
         "no_elegible": 0,
     }
     for item in candidatos:
-        titulo = limpiar_titulo_producto(item.get("titulo") or item.get("title") or item.get("nombre") or "", url)
         url = str(item.get("url") or "").strip()
+        titulo = limpiar_titulo_producto(item.get("titulo") or item.get("title") or item.get("nombre") or "", url)
         tienda = str(item.get("tienda") or item.get("store") or "Desconocida").strip()
         if not titulo or not url:
             descartes["sin_titulo_o_url"] += 1
@@ -301,7 +301,7 @@ def revisar():
             descartes["sin_referencia"] += 1
             continue
         if dcto < MIN_DESCUENTO:
-            descartes["descuento_menor_40"] += 1
+            descartes["descuento_menor_5"] += 1
             continue
         if dcto > MAX_DESCUENTO:
             descartes["descuento_mayor_99"] += 1
