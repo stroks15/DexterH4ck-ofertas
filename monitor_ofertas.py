@@ -139,7 +139,11 @@ def calcular_datos(item, anterior_hist):
     # La referencia publicada por la tienda tiene prioridad. El historial
     # solo sirve como respaldo cuando la ficha actual no trae precio anterior.
     historica = float(anterior_hist.get("precio_maximo") or 0)
-    referencia = listado if listado and listado > actual else (historica if historica > actual else 0)
+    # Si tenemos precio publicado y máximo histórico, usamos la referencia
+    # más conservadora (la menor de ambas). Así una tienda no puede inflar
+    # artificialmente el porcentaje mostrando un "antes" exagerado.
+    referencias_validas = [x for x in (listado, historica) if x and x > actual]
+    referencia = min(referencias_validas) if referencias_validas else 0
     dcto = round((1 - actual / referencia) * 100) if referencia > actual else 0
     return actual, referencia, dcto
 
