@@ -2,6 +2,7 @@ import html
 import json
 import os
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
@@ -13,8 +14,9 @@ from scrapers.telegram_ofertas import buscar_telegram
 from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
+from scrapers.api_stores import buscar_api_first
 
-MIN_DESCUENTO = 40
+MIN_DESCUENTO = 5
 MAX_DESCUENTO = 99
 HISTORIAL_FILE = "historial_ofertas.json"
 MAX_HISTORIAL = 10000
@@ -151,10 +153,33 @@ def revisar():
     # reenviar_ofertas_hoy.yml / reenviar_ofertas_hoy.py.
     rearmar_alertas = False
 
-    candidatos = buscar_todas()
-    candidatos.extend(buscar_telegram(requests.Session()))
-    candidatos.extend(buscar_tiendas_fisicas(requests.Session()))
-    candidatos.extend(buscar_liquidaciones_oficiales(requests.Session()))
+    # Descubrimiento en paralelo: API-first + legacy + fuentes oficiales/físicas.
+    # Los fallos de una fuente no detienen las otras.
+    tareas = {
+        "api_first": buscar_api_first,
+        "legacy": buscar_todas,
+        "fisicas": lambda: buscar_tiendas_fisicas(requests.Session()),
+        "oficiales": lambda: buscar_liquidaciones_oficiales(requests.Session()),
+    }
+    candidatos = []
+    with ThreadPoolExecutor(max_workers=4, thread_name_prefix="discovery") as pool:
+        futures = {pool.submit(fn): nombre for nombre, fn in tareas.items()}
+        for future in as_completed(futures):
+            nombre = futures[future]
+            try:
+                candidatos.extend(future.result() or [])
+            except Exception as exc:
+                print(f"Descubrimiento {nombre}: error aislado -> {type(exc).__name__}: {exc}")
+
+    # El monitor queda enfocado exclusivamente en las 8 tiendas solicitadas.
+    tiendas_objetivo = {
+        "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
+        "Amazon MX", "Mercado Libre MX", "Coppel", "Suburbia",
+    }
+    candidatos = [
+        item for item in candidatos
+        if str(item.get("tienda") or item.get("store") or "").strip() in tiendas_objetivo
+    ]
     # Salud de descubrimiento: permite comprobar que las tiendas no queden
     # monopolizadas por 95/99 y que también estén llegando rangos medios.
     salud_tiendas = {}
@@ -170,7 +195,7 @@ def revisar():
             "con_referencia": 0,
             "sin_referencia": 0,
             "rangos_descuento": {
-                "40-49": 0,
+                "5-49": 0,
                 "50-69": 0,
                 "70-89": 0,
                 "90-94": 0,
@@ -182,7 +207,7 @@ def revisar():
         registro_salud["candidatos"] += 1
         if referencia_salud > actual_salud:
             registro_salud["con_referencia"] += 1
-            if 40 <= descuento_salud <= 49:
+            if 5 <= descuento_salud <= 49:
                 registro_salud["rangos_descuento"]["40-49"] += 1
             elif 50 <= descuento_salud <= 69:
                 registro_salud["rangos_descuento"]["50-69"] += 1
@@ -297,10 +322,17 @@ def revisar():
         if not es_enlace:
             descartes["sin_ficha_directa"] += 1
             continue
-        if not tiene_referencia:
+        centavos_fisica = (
+            es_fisica and
+            "liquidacion_terminacion_centavos" in extreme.get("senales", [])
+        )
+        # La señal física por centavos puede alertar sin precio anterior.
+        # Esto evita que una liquidación .01/.02/.03/.05 quede bloqueada
+        # por la ausencia de un precio de lista online.
+        if not tiene_referencia and not centavos_fisica:
             descartes["sin_referencia"] += 1
             continue
-        if dcto < MIN_DESCUENTO:
+        if dcto < MIN_DESCUENTO and not centavos_fisica:
             descartes["descuento_menor_5"] += 1
             continue
         if dcto > MAX_DESCUENTO:
@@ -317,7 +349,7 @@ def revisar():
         precio_extremo_verificado = extremo.get("precio_verificado", False)
         condiciones = item.get("condiciones") or []
 
-        if es_descuento_real and tiene_referencia:
+        if (es_descuento_real and tiene_referencia) or centavos_fisica:
             tipo_alerta = "VERDE"
             etiqueta = "🟢🚨 OFERTA"
             bloque_descuento = f"{dcto}% DE DESCUENTO\n"
