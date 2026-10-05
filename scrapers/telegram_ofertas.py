@@ -13,6 +13,9 @@ TELEGRAM_CHANNELS = [
     ("Ofertones México", "https://t.me/s/OfertonesMexico"),
     ("LiquidAhorros", "https://t.me/s/LiquidAhorrosOficial"),
     ("Outlet y Reacondicionados", "https://t.me/s/outletyreacondicionados"),
+    ("LiquidaPromos MX", "https://t.me/s/LiquidaPromos"),
+    ("Ofertas MX", "https://t.me/s/ofertasYcupones"),
+    ("Ofertas México - Xataka Selección", "https://t.me/s/xatakamexico"),
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 Chrome/140 Safari/537.36", "Accept-Language": "es-MX,es;q=0.9"}
@@ -155,13 +158,11 @@ def _candidate(source, text, session=None):
     titulo = limpiar_titulo_producto(str(ai.get("titulo") or "").strip(), url)
     marca = str(ai.get("marca") or "").strip()
     categoria = str(ai.get("categoria") or "").strip()
-    if isinstance(ai.get("precio_actual"), (int, float)) and ai["precio_actual"] > 0:
-        actual = float(ai["precio_actual"])
-    if isinstance(ai.get("precio_anterior"), (int, float)) and ai["precio_anterior"] > actual:
-        anterior = float(ai["precio_anterior"])
-    tienda = str(ai.get("tienda") or tienda)
-    if ai.get("url"):
-        url = reparar_url(str(ai["url"]), tienda, text)
+    # La IA NO tiene autoridad sobre precio, referencia ni URL. Esos campos
+    # provienen de la publicación/evidencia y se validan determinísticamente.
+    # Esto evita que un modelo confunda mensualidades, cupones o productos.
+    if not tienda and ai.get("tienda"):
+        tienda = str(ai["tienda"]).strip()
     liquidacion = liquidacion or bool(ai.get("liquidacion"))
     descuento = round((1 - actual / anterior) * 100) if actual and anterior and anterior > actual else int(ai.get("descuento") or 0)
     condiciones = _condiciones(text)
