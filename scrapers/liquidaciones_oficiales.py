@@ -310,8 +310,12 @@ def buscar_liquidaciones_oficiales(session=None):
     session = session or requests.Session()
     session.headers.update(HEADERS)
     resultados = []
+    skip = {x.strip() for x in os.environ.get("PREFLIGHT_SKIP_SOURCES", "").split(",") if x.strip()}
 
     for source in FUENTES:
+        if source["tienda"] in skip:
+            print(f"Oficial/{source['tienda']}: omitida por preflight.")
+            continue
         seeds = list(source.get("urls") or (source.get("url"),))
         pendientes = seeds[:]
         visitadas = set()
