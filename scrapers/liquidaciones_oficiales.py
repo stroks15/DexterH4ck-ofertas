@@ -146,6 +146,39 @@ def _title_from(node):
 
 
 
+def _labelled_prices(text):
+    """Extrae precio actual/referencia usando etiquetas, nunca por simple posición."""
+    text = " ".join((text or "").split())
+    money = r"(?:\$\s*)?([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)"
+    actual_patterns = (
+        rf"precio\s+(?:actual|final|de\s+oferta)\s*:?\s*{money}",
+        rf"ahora\s*:?\s*{money}",
+        rf"precio\s+en\s+rojo\s*:?\s*{money}",
+    )
+    reference_patterns = (
+        rf"(?:antes|precio\s+(?:anterior|regular)|precio\s+de\s+lista|original)\s*:?\s*{money}",
+    )
+    def first(patterns):
+        for pattern in patterns:
+            m = re.search(pattern, text, re.I)
+            if m:
+                try:
+                    return float(m.group(1).replace(",", ""))
+                except (TypeError, ValueError):
+                    pass
+        return None
+    actual = first(actual_patterns)
+    reference = first(reference_patterns)
+    # En listados de Liverpool el formato normal es "$actual $regular".
+    # Solo aceptamos esa pareja cuando no hay rangos ni mensualidades.
+    if actual is None and "/" not in text and "hasta" not in text.lower():
+        prices = _prices(text)
+        if len(prices) == 2 and prices[1] > prices[0]:
+            actual, reference = prices
+    if actual and reference and reference <= actual:
+        reference = None
+    return actual, reference
+
 def _offer_prices(offers):
     """Extrae precio actual y precio de lista cuando la tienda los publica estructurados."""
     if isinstance(offers, list):
@@ -283,9 +316,14 @@ def _from_links(soup, source, seen):
         if not title or len(title) < 8:
             continue
 
-        actual = min(prices)
-        bigger = [p for p in prices if p > actual]
-        previous = min(bigger) if bigger else None
+        actual, previous = _labelled_prices(text)
+        if actual is None:
+            # Solo aceptamos una pareja inequívoca; nunca tomamos el mínimo
+            # de una tarjeta que puede contener mensualidades, variantes o ahorro.
+            if len(prices) == 2 and prices[1] > prices[0] and "/" not in text and "hasta" not in text.lower():
+                actual, previous = prices
+            else:
+                continue
         brand, _ = detect_priority_brand({"titulo": title})
         seen.add(href)
         results.append({
