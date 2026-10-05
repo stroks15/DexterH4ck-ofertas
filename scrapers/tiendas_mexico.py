@@ -3,6 +3,7 @@ import hashlib
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import quote_plus, urljoin, urlparse
 
 import requests
@@ -807,36 +808,48 @@ def buscar_oferstock(session):
 
 
 def buscar_todas():
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    salida = []
+    """Descubrimiento legacy paralelo y aislado por tienda.
+
+    Cada tienda obtiene su propia Session para evitar compartir estado/cookies
+    entre workers. Los adaptadores API-first se ejecutan en otra capa y luego
+    se deduplican en el monitor.
+    """
     skip = {x.strip() for x in os.environ.get("PREFLIGHT_SKIP_SOURCES", "").split(",") if x.strip()}
-    for nombre, plantilla in TIENDAS.items():
-        if nombre in skip:
-            print(f"{nombre}: omitida por preflight ({'fuente no disponible'})")
-            continue
-        # Estas tiendas tienen ahora adaptadores oficiales de hubs de ofertas;
-        # evitamos /search porque devuelve 404 o 200 sin catálogo en Actions.
-        if nombre in ("Walmart MX", "Bodega Aurrera"):
-            # El catálogo directo puede devolver 200 con contenido anti-bot.
-            # Antes de depender sólo del hub oficial, usamos resultados públicos
-            # indexados para recuperar fichas directas sin intentar evadir WAF/CAPTCHA.
-            consultas_fallback = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
-            indexados = _buscar_indexado_tienda(nombre, consultas_fallback, session)
-            salida.extend(indexados)
-            print(f"{nombre}: descubrimiento indexado -> {len(indexados)} candidatos")
-            continue
-        if nombre == "Chedraui":
-            print(f"{nombre}: búsqueda genérica omitida; se usa descubrimiento oficial.")
-            continue
-        if nombre == "Soriana":
-            salida.extend(buscar_soriana(session))
-        elif nombre == "Coppel":
-            salida.extend(buscar_coppel(session))
-        elif nombre == "Suburbia":
-            salida.extend(buscar_suburbia(session))
-        elif nombre == "Oferstock":
-            salida.extend(buscar_oferstock(session))
-        else:
-            salida.extend(buscar_tienda(nombre, plantilla, session))
+    tareas = [(nombre, plantilla) for nombre, plantilla in TIENDAS.items()
+              if nombre != "Oferstock" and nombre not in skip]
+
+    def ejecutar(tarea):
+        nombre, plantilla = tarea
+        session = requests.Session()
+        session.headers.update(HEADERS)
+        try:
+            if nombre in ("Walmart MX", "Bodega Aurrera"):
+                consultas = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
+                rows = _buscar_indexado_tienda(nombre, consultas, session)
+                print(f"{nombre}: descubrimiento indexado -> {len(rows)} candidatos")
+                return rows
+            if nombre == "Chedraui":
+                print(f"{nombre}: búsqueda HTML omitida; se prioriza API VTEX.")
+                return []
+            if nombre == "Soriana":
+                return buscar_soriana(session)
+            if nombre == "Coppel":
+                return buscar_coppel(session)
+            if nombre == "Suburbia":
+                return buscar_suburbia(session)
+            return buscar_tienda(nombre, plantilla, session)
+        except Exception as exc:
+            print(f"{nombre}: error aislado en worker -> {type(exc).__name__}: {exc}")
+            return []
+
+    salida = []
+    with ThreadPoolExecutor(max_workers=min(8, max(1, len(tareas))), thread_name_prefix="legacy-store") as pool:
+        futures = {pool.submit(ejecutar, tarea): tarea[0] for tarea in tareas}
+        for future in as_completed(futures):
+            nombre = futures[future]
+            try:
+                salida.extend(future.result() or [])
+            except Exception as exc:
+                print(f"{nombre}: worker falló -> {type(exc).__name__}: {exc}")
     return salida
+
