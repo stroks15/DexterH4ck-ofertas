@@ -22,6 +22,7 @@ PY_FILES = [
     "core/liquidation_engine.py",
     "core/extreme_liquidation.py",
     "core/scraper_base.py",
+    "core/source_resilience.py",
     "scrapers/api_stores.py",
     "config/walmart_graphql_query.py",
     "scrapers/walmart_graphql.py",
@@ -80,6 +81,7 @@ def check_imports():
         "scrapers.bodega_aurrera_api",
         "scrapers.mercado_libre_api",
         "scrapers.feeds_comunidad_api",
+        "core.source_resilience",
     ]
     for module in modules:
         try:
