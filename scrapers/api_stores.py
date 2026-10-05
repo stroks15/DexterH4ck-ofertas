@@ -131,6 +131,31 @@ class ChedrauiVtexScraper(BaseScraper):
         return output
 
 
+
+class CoppelPublicScraper(BaseScraper):
+    store = "Coppel"
+
+    def discover(self) -> list[dict[str, Any]]:
+        from scrapers.coppel_public import extract_product_from_next_data
+        urls = [
+            "https://www.coppel.com/ca/outlet-saldos",
+            "https://www.coppel.com/ofertas",
+            "https://www.coppel.com/l/ofertas",
+        ]
+        output = []
+        for url in urls:
+            try:
+                response = self.get(url, headers={"Accept": "text/html,application/xhtml+xml"})
+                if response.status_code >= 400:
+                    print(f"[SCRAPER:Coppel] HTML HTTP {response.status_code} en {url}")
+                    continue
+                item = extract_product_from_next_data(response.text, response.url)
+                if item:
+                    output.append(item)
+            except requests.RequestException as exc:
+                print(f"[SCRAPER:Coppel] {type(exc).__name__}: {exc}")
+        return output
+
 class MercadoLibreApiScraper(BaseScraper):
     store = "Mercado Libre MX"
 
@@ -174,7 +199,7 @@ class MercadoLibreApiScraper(BaseScraper):
     def discover(self) -> list[dict[str, Any]]:
         circuit = SourceCircuit(self.store)
         token = os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip()
-        require_token = os.getenv("ML_API_REQUIRE_TOKEN", "true").lower() not in {"0", "false", "no"}
+        require_token = os.getenv("ML_API_REQUIRE_TOKEN", "false").lower() not in {"0", "false", "no"}
         if require_token and not token:
             print("[SCRAPER:Mercado Libre MX] API omitida: falta MERCADOLIBRE_ACCESS_TOKEN; se conserva el descubrimiento web/indexado.")
             return []
@@ -289,7 +314,7 @@ def api_first_scrapers() -> list[BaseScraper]:
         FunctionScraper("Bodega Aurrera", buscar_bodega_graphql),
         ChedrauiVtexScraper(),
         ConfigurableJsonScraper("Soriana", "SORIANA_API_ENDPOINT"),
-        ConfigurableJsonScraper("Coppel", "COPPEL_API_ENDPOINT"),
+        CoppelPublicScraper(),
         ConfigurableJsonScraper("Suburbia", "SUBURBIA_API_ENDPOINT"),
         ConfigurableJsonScraper("Liverpool", "LIVERPOOL_API_ENDPOINT"),
         ConfigurableJsonScraper("Oferstock", "OFERSTOCK_API_ENDPOINT"),
