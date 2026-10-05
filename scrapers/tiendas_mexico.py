@@ -665,7 +665,7 @@ def buscar_tienda(nombre, plantilla, session):
             print(f"{nombre}: error procesando {q}: {error}")
     # Walmart y Bodega pueden entregar HTTP 200 con contenido de bloqueo.
     # Si no hubo candidatos útiles, usamos descubrimiento público indexado.
-    if nombre in ("Walmart MX", "Bodega Aurrera") and not resultados:
+    if nombre in ("Walmart MX", "Bodega Aurrera", "Amazon MX", "Mercado Libre MX") and not resultados:
         fallback_queries = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
         resultados.extend(_buscar_indexado_tienda(nombre, fallback_queries, session))
     return resultados
@@ -827,7 +827,7 @@ def buscar_todas():
         session = requests.Session()
         session.headers.update(HEADERS)
         try:
-            if nombre in ("Walmart MX", "Bodega Aurrera"):
+            if nombre in ("Walmart MX", "Bodega Aurrera", "Amazon MX", "Mercado Libre MX"):
                 consultas = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
                 rows = _buscar_indexado_tienda(nombre, consultas, session)
                 print(f"{nombre}: descubrimiento indexado -> {len(rows)} candidatos")
