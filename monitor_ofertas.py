@@ -404,8 +404,9 @@ def revisar():
         if condiciones:
             extras.append("🎟️ " + ", ".join(str(x) for x in condiciones))
 
+        prefijo_alerta = "💣 " if dcto_90_99_forzado else ""
         mensaje = (
-            f"{("💣 " if dcto_90_99_forzado else "")}{etiqueta}\n"
+            f"{prefijo_alerta}{etiqueta}\n"
             f"{bloque_descuento}\n"
             f"🏪 <b>{html.escape(tienda)}</b>\n"
             f"🛒 {html.escape(titulo)}\n"
