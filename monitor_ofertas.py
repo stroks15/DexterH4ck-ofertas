@@ -194,7 +194,8 @@ def revisar():
         clave_salud = candidato.get("id") or f"{tienda_salud}|{candidato.get('titulo') or candidato.get('title') or candidato.get('nombre') or ''}|{candidato.get('url') or ''}"
         historico_salud = historial.get(clave_salud, {})
         referencia_historica = float(historico_salud.get("precio_maximo") or 0)
-        referencia_salud = referencia_directa if referencia_directa > actual_salud else (referencia_historica if referencia_historica > actual_salud else 0)
+        referencias_salud = [x for x in (referencia_directa, referencia_historica) if x > actual_salud]
+        referencia_salud = min(referencias_salud) if referencias_salud else 0
         if actual_salud <= 0:
             continue
         descuento_salud = round((1 - actual_salud / referencia_salud) * 100) if referencia_salud > actual_salud else 0
@@ -234,7 +235,8 @@ def revisar():
             "politica_publicacion": {
                 "min_descuento_comparable": MIN_DESCUENTO,
                 "max_descuento_comparable": MAX_DESCUENTO,
-                "rangos_investigados": ["50-69", "70-89", "90-94", "90-99"],
+                "rangos_investigados": ["50-69", "70-89", "90-94", "95-99"],
+                "rango_liquidacion_forzada": "90-99",
                 "min_descuento": 50,
                 "max_descuento": 99,
                 "liquidaciones_90_99_forzadas": True,
@@ -311,7 +313,7 @@ def revisar():
 
         ultimo_alertado = anterior_hist.get("precio_alertado")
         dcto_90_99_forzado = 90 <= dcto <= 99
-        if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado) and not dcto_90_99_forzado:
+        if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado) :
             descartes["historico_ya_alertado"] += 1
             continue
 
@@ -362,7 +364,7 @@ def revisar():
 
         if dcto_90_99_forzado:
             tipo_alerta = "VERDE"
-            etiqueta = "💣🟢 LIQUIDACIÓN 90-99% FORZADA"
+            etiqueta = "🟢 LIQUIDACIÓN 90-99% FORZADA"
             bloque_descuento = f"{dcto}% DE DESCUENTO · ALERTA PRIORITARIA\n"
             referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
             ahorro = max(referencia - actual, 0)
