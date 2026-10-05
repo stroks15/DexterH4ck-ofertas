@@ -110,7 +110,15 @@ def parsear_feed_comunidad_espejo() -> list[dict]:
 
         prices = [_money(x) for x in PRICE_RE.findall(combined)]
         prices = [x for x in prices if x is not None and x > 0]
-        current = min(prices) if prices else None
+        current = None
+        current_match = re.search(
+            r"(?i)(?:precio\\s+(?:final|actual|oferta)|precio\\s+en\\s+oferta|ahora|a\\s+solo)\\D{0,20}\\$?\\s*([0-9][0-9,.]*)",
+            combined,
+        )
+        if current_match:
+            current = _money(current_match.group(1))
+        elif len(prices) == 1:
+            current = prices[0]
 
         match = DISCOUNT_RE.search(combined)
         discount = int(match.group(1) or match.group(2)) if match else 0
