@@ -28,6 +28,8 @@ PY_FILES = [
     "scrapers/bodega_graphql.py",
     "scrapers/walmart_api.py",
     "scrapers/bodega_aurrera_api.py",
+    "scrapers/mercado_libre_api.py",
+    "scrapers/feeds_comunidad_api.py",
 ]
 
 SOURCES = {
@@ -76,6 +78,8 @@ def check_imports():
         "scrapers.bodega_graphql",
         "scrapers.walmart_api",
         "scrapers.bodega_aurrera_api",
+        "scrapers.mercado_libre_api",
+        "scrapers.feeds_comunidad_api",
     ]
     for module in modules:
         try:
