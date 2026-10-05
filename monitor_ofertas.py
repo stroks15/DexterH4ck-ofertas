@@ -17,6 +17,7 @@ from core.extreme_liquidation import analizar_precio_extremo
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from scrapers.api_stores import buscar_api_first
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
+from scrapers.comunidades_web import buscar_comunidades_web
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -193,6 +194,7 @@ def revisar():
     tareas = {
         "api_first": buscar_api_first,
         "feeds_comunidad": parsear_feed_comunidad_espejo,
+        "comunidades_web": buscar_comunidades_web,
         "legacy": buscar_todas,
         "telegram": lambda: buscar_telegram(requests.Session()),
         "fisicas": lambda: buscar_tiendas_fisicas(requests.Session()),
