@@ -190,7 +190,8 @@ class MercadoLibreApiScraper(BaseScraper):
                 "https://api.mercadolibre.com/sites/MLM/search?" + urlencode(params)
             )
             if response.status_code >= 400:
-                print(f"[SCRAPER:Mercado Libre MX] API HTTP {response.status_code} q={query!r}")
+                circuit.record(response.status_code, f"HTTP {response.status_code}")
+                print(f"[SCRAPER:Mercado Libre MX] API HTTP {response.status_code}; fuente pausada en este ciclo.")
                 continue
             data = response.json()
             for item in data.get("results", []):
