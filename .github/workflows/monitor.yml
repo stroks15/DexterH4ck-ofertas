@@ -121,7 +121,7 @@ jobs:
 
           for intento in 1 2 3; do
             git fetch origin main
-            git checkout origin/main -- historial_ofertas.json 2>/dev/null || true
+            git reset --hard origin/main
 
             python - <<'PY'
           import json
@@ -147,9 +147,7 @@ jobs:
                   continue
               old = merged[key] if isinstance(merged[key], dict) else {}
               new = value if isinstance(value, dict) else {}
-              old_ts = str(old.get("ultima_actualizacion", ""))
-              new_ts = str(new.get("ultima_actualizacion", ""))
-              if new_ts >= old_ts:
+              if str(new.get("ultima_actualizacion", "")) >= str(old.get("ultima_actualizacion", "")):
                   merged[key] = new
 
           remote_path.write_text(
@@ -168,9 +166,7 @@ jobs:
               echo "Historial actualizado correctamente."
               exit 0
             fi
-            git reset --soft HEAD~1
-            git checkout -- historial_ofertas.json
-            cp /tmp/historial_local.json historial_ofertas.json
+            git reset --hard origin/main
             sleep 3
           done
 
