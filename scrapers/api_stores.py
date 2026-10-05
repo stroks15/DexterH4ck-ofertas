@@ -11,8 +11,11 @@ romper el resto del monitor.
 from __future__ import annotations
 
 import os
+import time
 from typing import Any
 from urllib.parse import urlencode
+
+import requests
 
 from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
 
@@ -250,15 +253,36 @@ class ConfigurableJsonScraper(BaseScraper):
         return output
 
 
+class FunctionScraper(BaseScraper):
+    """Adapta un scraper especializado al contrato común de la capa API-first."""
+
+    def __init__(self, store: str, function, context: ScraperContext | None = None):
+        super().__init__(context)
+        self.store = store
+        self.function = function
+
+    def discover(self) -> list[dict[str, Any]]:
+        try:
+            return self.function() or []
+        except Exception as exc:
+            print(f"[SCRAPER:{self.store}] adaptador especializado: {type(exc).__name__}: {exc}")
+            return []
+
+
 def api_first_scrapers() -> list[BaseScraper]:
-    """Construye los 8 adaptadores; los no públicos quedan configurables."""
+    """Construye adaptadores homogéneos y deja cada fuente aislada."""
+    from scrapers.bodega_aurrera_api import buscar_bodega_graphql
+    from scrapers.walmart_api import buscar_walmart_graphql
+
     return [
-        GraphQLStoreScraper("Walmart MX", "WALMART_GRAPHQL_URL", "WALMART_STORE_ID", "WALMART_GRAPHQL_QUERY"),
-        GraphQLStoreScraper("Bodega Aurrera", "BODEGA_GRAPHQL_URL", "BODEGA_STORE_ID", "BODEGA_GRAPHQL_QUERY"),
+        FunctionScraper("Walmart MX", buscar_walmart_graphql),
+        FunctionScraper("Bodega Aurrera", buscar_bodega_graphql),
         ChedrauiVtexScraper(),
         ConfigurableJsonScraper("Soriana", "SORIANA_API_ENDPOINT"),
         ConfigurableJsonScraper("Coppel", "COPPEL_API_ENDPOINT"),
         ConfigurableJsonScraper("Suburbia", "SUBURBIA_API_ENDPOINT"),
+        ConfigurableJsonScraper("Liverpool", "LIVERPOOL_API_ENDPOINT"),
+        ConfigurableJsonScraper("Oferstock", "OFERSTOCK_API_ENDPOINT"),
         MercadoLibreApiScraper(),
         ConfigurableJsonScraper("Amazon MX", "AMAZON_API_ENDPOINT"),
     ]
