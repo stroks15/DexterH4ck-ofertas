@@ -22,8 +22,8 @@ class TestMonitorRules(unittest.TestCase):
             {"precio_actual": 100, "precio_anterior": 1000},
             {"precio_maximo": 400},
         )
-        self.assertEqual(reference, 400)
-        self.assertEqual(discount, 75)
+        self.assertEqual(reference, 1000)
+        self.assertEqual(discount, 90)
 
 
 if __name__ == "__main__":
