@@ -20,6 +20,8 @@ from urllib.parse import urlencode
 
 import requests
 
+from core.source_resilience import SourceCircuit
+
 LOG = logging.getLogger("mercado_libre_api")
 API = "https://api.mercadolibre.com"
 SITE_ID = "MLM"
@@ -73,6 +75,7 @@ class MercadoLibreApi:
         self.official_only = os.getenv("ML_OFFICIAL_ONLY", "true").lower() not in {"0", "false", "no"}
         self.limit = min(max(int(os.getenv("ML_API_LIMIT", "50")), 1), 100)
         self.max_price_lookups = max(int(os.getenv("ML_PRICE_LOOKUPS", "40")), 0)
+        self.circuit = SourceCircuit("Mercado Libre MX")
 
     def _get(self, path: str, params: dict[str, Any]) -> requests.Response | None:
         headers = {
@@ -88,9 +91,9 @@ class MercadoLibreApi:
                 headers=headers,
                 timeout=self.timeout,
             )
-            if response.status_code == 429:
-                retry = int(response.headers.get("Retry-After", "2") or 2)
-                time.sleep(min(max(retry, 1), 20))
+            if response.status_code >= 400:
+                self.circuit.record(response.status_code, f"HTTP {response.status_code}")
+                self.circuit.backoff(response.status_code, retry_after=response.headers.get("Retry-After"))
             return response
         except requests.RequestException as exc:
             LOG.warning("[MELI API] %s: %s", type(exc).__name__, exc)
@@ -125,6 +128,9 @@ class MercadoLibreApi:
         return current, reference
 
     def search(self, query: str) -> list[dict[str, Any]]:
+        if not self.circuit.can_continue():
+            LOG.info("[MELI API] fuente pausada este ciclo: %s", self.circuit.reason)
+            return []
         base = {
             "q": query,
             "limit": str(self.limit),
@@ -139,7 +145,10 @@ class MercadoLibreApi:
 
         if response is None or response.status_code >= 400:
             status = response.status_code if response is not None else "network"
-            LOG.warning("[MELI API] búsqueda %r HTTP=%s", query, status)
+            if status in (401, 403, 404):
+                LOG.warning("[MELI API] acceso no disponible HTTP=%s; se activa fallback web/indexado y no se reintenta en este ciclo.", status)
+            else:
+                LOG.warning("[MELI API] búsqueda %r HTTP=%s", query, status)
             return []
 
         try:
@@ -158,6 +167,8 @@ class MercadoLibreApi:
         lookups = 0
 
         for query in queries:
+            if not self.circuit.can_continue():
+                break
             for item in self.search(query):
                 item_id = str(item.get("id") or "")
                 if not item_id or item_id in seen:
