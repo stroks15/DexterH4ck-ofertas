@@ -343,13 +343,15 @@ def revisar():
         categoria = scoring.get("categoria") or item.get("categoria") or "Otros / Miscelánea"
         puntuacion = scoring.get("puntuacion", 0)
 
-        extremo = analizar_precio_extremo(item)
+        # Reutilizamos el análisis ya calculado por evaluate_product para no
+        # duplicar requests de verificación de precios extremos.
+        extremo = scoring.get("extremo", {})
         precio_extremo = extremo.get("es_extremo", False)
         nivel_extremo = extremo.get("nivel", "normal")
         precio_extremo_verificado = extremo.get("precio_verificado", False)
         condiciones = item.get("condiciones") or []
 
-        if (es_descuento_real and tiene_referencia) or centavos_fisica:
+        if es_descuento_real and tiene_referencia:
             tipo_alerta = "VERDE"
             etiqueta = "🟢🚨 OFERTA"
             bloque_descuento = f"{dcto}% DE DESCUENTO\n"
@@ -359,7 +361,10 @@ def revisar():
         else:
             tipo_alerta = "ROJA"
             etiqueta = "🔴🔥 LIQUIDACIÓN / OFERTA ESPECIAL"
-            bloque_descuento = "DESCUENTO NO COMPARABLE\n"
+            bloque_descuento = (
+                "LIQUIDACIÓN FÍSICA POR TERMINACIÓN\n"
+                if centavos_fisica else "DESCUENTO NO COMPARABLE\n"
+            )
             referencia_texto = ""
             ahorro = 0
             ahorro_texto = ""
