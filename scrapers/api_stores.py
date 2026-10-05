@@ -18,6 +18,7 @@ from urllib.parse import urlencode
 import requests
 
 from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
+from core.source_resilience import SourceCircuit
 
 
 def _num(value: Any) -> float | None:
