@@ -172,6 +172,7 @@ class MercadoLibreApiScraper(BaseScraper):
             return None
 
     def discover(self) -> list[dict[str, Any]]:
+        circuit = SourceCircuit(self.store)
         queries = os.getenv(
             "ML_QUERIES",
             "liquidacion,remate,oferta,precio error,descuento",
@@ -182,6 +183,8 @@ class MercadoLibreApiScraper(BaseScraper):
         seen_ids = set()
 
         for query in (q.strip() for q in queries if q.strip()):
+            if not circuit.can_continue():
+                break
             params = {"q": query, "limit": "50", "offset": "0"}
             response = self.get(
                 "https://api.mercadolibre.com/sites/MLM/search?" + urlencode(params)
