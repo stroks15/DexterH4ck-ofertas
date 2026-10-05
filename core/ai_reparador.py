@@ -294,7 +294,18 @@ Contexto: {contexto[:800]}"""
     except (TypeError, ValueError):
         confidence = 0
 
-    return propuesta if propuesta and confidence >= 0.65 and _host_allowed(propuesta) else url
+    if not propuesta or confidence < 0.65 or not _host_allowed(propuesta):
+        return url
+    original_host = urlparse(url).netloc.lower().split(":")[0]
+    proposed_host = urlparse(propuesta).netloc.lower().split(":")[0]
+    shorteners = {"meli.la", "amzn.to", "bit.ly", "tidd.ly", "link.amazon"}
+    # La IA solo puede cambiar la ruta si conserva la misma tienda. Un acortador
+    # puede resolverse a una tienda oficial, pero nunca a otra tienda.
+    if original_host not in shorteners and proposed_host != original_host:
+        return url
+    if original_host in shorteners and proposed_host not in ALLOWED_HOSTS:
+        return url
+    return propuesta
 
 
 def analizar_publicacion(texto, url="", tienda=""):
