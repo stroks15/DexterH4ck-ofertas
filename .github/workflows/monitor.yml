@@ -104,3 +104,12 @@ jobs:
           done
           echo "::error::No se pudo actualizar historial_ofertas.json después de 3 intentos."
           exit 1
+
+
+      - name: Guardar diagnóstico final del monitor
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitor-health-final
+          path: preflight_health.json
+          if-no-files-found: ignore
