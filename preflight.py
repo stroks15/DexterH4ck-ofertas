@@ -113,7 +113,10 @@ def main():
         # Walmart/Bodega pueden devolver 200 con una capa anti-bot. No se omiten:
         # sus adaptadores tienen fallback por índice público y fuente oficial.
         if result["state"] in {"rate_limited", "blocked", "server_error", "network_error", "blocked_content"}:
-            if not (name in {"Walmart MX", "Bodega Aurrera"} and result["state"] == "blocked_content"):
+            if not (
+                name in {"Walmart MX", "Bodega Aurrera", "Amazon MX", "Mercado Libre MX"}
+                and result["state"] == "blocked_content"
+            ):
                 report["skipped_sources"].append(name)
 
     # Google is only a fallback for physical-store discovery. If limited, disable
