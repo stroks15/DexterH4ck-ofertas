@@ -65,7 +65,7 @@ jobs:
           fi
 
       - name: Validar sintaxis Python
-        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py scrapers/api_stores.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py scrapers/mercado_libre_api.py scrapers/feeds_comunidad_api.py
+        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py scrapers/api_stores.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py scrapers/mercado_libre_api.py scrapers/feeds_comunidad_api.py reenviar_historial.py
       - name: Pruebas deterministas de liquidaciones extremas
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Preflight - detectar errores antes del monitor
