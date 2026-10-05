@@ -9,16 +9,29 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
 
 def enviar(texto):
-    requests.post(
-        f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-        json={
-            "chat_id": CHAT_ID,
-            "text": texto,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": False,
-        },
-        timeout=20,
-    )
+    if not TOKEN or not CHAT_ID:
+        raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
+    for intento in range(2):
+        response = requests.post(
+            f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+            json={
+                "chat_id": CHAT_ID,
+                "text": texto,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": False,
+            },
+            timeout=20,
+        )
+        if response.ok:
+            return
+        if response.status_code == 429 and intento == 0:
+            try:
+                espera = int(response.json().get("parameters", {}).get("retry_after", "5"))
+            except (ValueError, TypeError):
+                espera = 5
+            time.sleep(min(max(espera, 1), 120) + 0.5)
+            continue
+        raise RuntimeError(f"Telegram HTTP {response.status_code}: {response.text[:300]}")
 
 
 with open(HISTORIAL_FILE, "r", encoding="utf-8") as archivo:
