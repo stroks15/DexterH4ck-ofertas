@@ -18555,7 +18555,7 @@
     "precio_actual": 24.0,
     "precio_maximo": 49.0,
     "descuento": 51,
-    "puntuacion": 60,
+    "puntuacion": 22,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -20332,6 +20332,1216 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-04T18:26:43.730032+00:00",
+    "precio_alertado": 24.0
+  },
+  "Telegram|B000S97MAY|https://www.amazon.com.mx/dp/B000S97MAY?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=dfbe80f878f93eae465bcf81926a3992&ref_=as_li_ss_tl&ascsubtag=srctok-6d158b63bb6400d1&btn_type=ss&btn_ref=srctok-6d158b63bb6400d1": {
+    "tienda": "Telegram",
+    "titulo": "B000S97MAY",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B000S97MAY?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=dfbe80f878f93eae465bcf81926a3992&ref_=as_li_ss_tl&ascsubtag=srctok-6d158b63bb6400d1&btn_type=ss&btn_ref=srctok-6d158b63bb6400d1",
+    "precio_actual": 627.0,
+    "precio_maximo": 895.0,
+    "descuento": 30,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 29.94,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.137771+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B078JXFBDP|https://www.amazon.com.mx/dp/B078JXFBDP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B078JXFBDP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B078JXFBDP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1838.02,
+    "precio_maximo": 2799.0,
+    "descuento": 34,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 34.33,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.139184+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B0B57L9FNL|https://www.amazon.com.mx/dp/B0B57L9FNL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B0B57L9FNL",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0B57L9FNL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 664.53,
+    "precio_maximo": 1364.0,
+    "descuento": 51,
+    "puntuacion": 12,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.28,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.140486+00:00",
+    "precio_alertado": 664.53
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGUlxD81utBdDI0HjVpyH%2Fxy4huUM3HFMNP5Jx%2F77jupncH2Yvdhr2Lo0H2ADMJXRbnZlWRvTkuhgi9muwW87aj%2FptKx1ZpQ2v%2F5JIasiYFIx4svR3O%2Fa3Oljv2NxY5k5FD%2BClmLlyycZ1BQs%2B3wDr0kxXkCBoIooPsjSPXLsJESHFxl6Sa17M5L6IhQwyQmaYvwlA%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGUlxD81utBdDI0HjVpyH%2Fxy4huUM3HFMNP5Jx%2F77jupncH2Yvdhr2Lo0H2ADMJXRbnZlWRvTkuhgi9muwW87aj%2FptKx1ZpQ2v%2F5JIasiYFIx4svR3O%2Fa3Oljv2NxY5k5FD%2BClmLlyycZ1BQs%2B3wDr0kxXkCBoIooPsjSPXLsJESHFxl6Sa17M5L6IhQwyQmaYvwlA%3D%3D",
+    "precio_actual": 1619.0,
+    "precio_maximo": 1999.0,
+    "descuento": 19,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 19.01,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.141865+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B01N10Z0L2|https://www.amazon.com.mx/dp/B01N10Z0L2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B01N10Z0L2",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B01N10Z0L2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 489.0,
+    "precio_maximo": 739.0,
+    "descuento": 34,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 33.83,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.143157+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B07KGYBHTH|https://www.amazon.com.mx/dp/B07KGYBHTH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B07KGYBHTH",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07KGYBHTH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 159.0,
+    "precio_maximo": 339.0,
+    "descuento": 53,
+    "puntuacion": 13,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 53.1,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.144411+00:00",
+    "precio_alertado": 159.0
+  },
+  "Amazon|B0000645YM|https://www.amazon.com.mx/dp/B0000645YM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B0000645YM",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0000645YM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 611.55,
+    "precio_maximo": 2419.0,
+    "descuento": 75,
+    "puntuacion": 26,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 74.72,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.145762+00:00",
+    "precio_alertado": 611.55
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNPVcZl29gYT48lsFTgr08Ue4sntYngMQ0XIFrPqOV%2B3yLD%2FxAwFvV2fjFclI%2BN%2BbZFOvy0WAIFSUuYhQaDn6tt676ECTAYA9du0rCZyl7xXU3Ctzc8ue2LFjH1LVj2HRFCNRmXubP5CrPLp786%2FOuBb%2BNZiP8YV6swHwZKQ%2FEDzowFPehrjrFug44oxhPA4cqsG9BA%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNPVcZl29gYT48lsFTgr08Ue4sntYngMQ0XIFrPqOV%2B3yLD%2FxAwFvV2fjFclI%2BN%2BbZFOvy0WAIFSUuYhQaDn6tt676ECTAYA9du0rCZyl7xXU3Ctzc8ue2LFjH1LVj2HRFCNRmXubP5CrPLp786%2FOuBb%2BNZiP8YV6swHwZKQ%2FEDzowFPehrjrFug44oxhPA4cqsG9BA%3D",
+    "precio_actual": 1799.0,
+    "precio_maximo": 3999.0,
+    "descuento": 55,
+    "puntuacion": 14,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 55.01,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.147101+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|B0C6624WP5|https://www.amazon.com.mx/dp/B0C6624WP5?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=73127b62ecd6b1f326a77e1e445c4ec2&ref_=as_li_ss_tl&ascsubtag=srctok-726d8d055e83a935&btn_type=ss&btn_ref=srctok-726d8d055e83a935": {
+    "tienda": "Telegram",
+    "titulo": "B0C6624WP5",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0C6624WP5?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=73127b62ecd6b1f326a77e1e445c4ec2&ref_=as_li_ss_tl&ascsubtag=srctok-726d8d055e83a935&btn_type=ss&btn_ref=srctok-726d8d055e83a935",
+    "precio_actual": 69.0,
+    "precio_maximo": 95.0,
+    "descuento": 27,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 27.37,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.148384+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B08TCHB2GT|https://www.amazon.com.mx/dp/B08TCHB2GT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B08TCHB2GT",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08TCHB2GT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1280.04,
+    "precio_maximo": 4332.48,
+    "descuento": 70,
+    "puntuacion": 23,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.45,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.149650+00:00",
+    "precio_alertado": 1280.04
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBF2W4rB1nDLuA0LK8aB9wdoQaCXayCFuA6RCeykpDwfeuwHHNu8zn4Gx7%2BymI8382cgk4t990Bb5G9QZbrDtsFTLMM1KrjOYFevVAm374Ey9hIJN3ktYWv4fDRb5B9om0kDVT45AvhXnGBNkDxfjeFVO8Pe6%2FNuK7rv5v9FkiLaTkgG9TiszsIxDpYvhgVlya%2BRgbo%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBF2W4rB1nDLuA0LK8aB9wdoQaCXayCFuA6RCeykpDwfeuwHHNu8zn4Gx7%2BymI8382cgk4t990Bb5G9QZbrDtsFTLMM1KrjOYFevVAm374Ey9hIJN3ktYWv4fDRb5B9om0kDVT45AvhXnGBNkDxfjeFVO8Pe6%2FNuK7rv5v9FkiLaTkgG9TiszsIxDpYvhgVlya%2BRgbo%3D",
+    "precio_actual": 798.0,
+    "precio_maximo": 1199.0,
+    "descuento": 33,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 33.44,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.150986+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B0G1CSSMN1|https://www.amazon.com.mx/dp/B0G1CSSMN1?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B0G1CSSMN1",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0G1CSSMN1?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4990.0,
+    "precio_maximo": 7999.0,
+    "descuento": 38,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 37.62,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.152259+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|B0FG2XRQ76|https://www.amazon.com.mx/dp/B0FG2XRQ76?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=769d71e23ef0d01e63ce33eaa614b848&ref_=as_li_ss_tl&ascsubtag=srctok-4ea6ceb1df8fb113&btn_type=ss&btn_ref=srctok-4ea6ceb1df8fb113": {
+    "tienda": "Telegram",
+    "titulo": "B0FG2XRQ76",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FG2XRQ76?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=769d71e23ef0d01e63ce33eaa614b848&ref_=as_li_ss_tl&ascsubtag=srctok-4ea6ceb1df8fb113&btn_type=ss&btn_ref=srctok-4ea6ceb1df8fb113",
+    "precio_actual": 128.0,
+    "precio_maximo": 161.0,
+    "descuento": 20,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 20.5,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.153557+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBjFAXWC9y5I0J%2BZaDN38zHgH0ecylGyBN07l1u%2FBpOrX5s3flMQ3RxA2ilZyj%2F1GTr0pSXGOsPoTVmN9FEKr5lFXGWFl5fzQMEgke3qHe1dUmxy74neGtkxnt7KZ2QJOjFmGPCy70Ld1VoNskNJteYG2CuYzhE8nf6D2CXbFOs%2F2BEzPIpnU8rSX%2B6L2gmODE416Z8%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBjFAXWC9y5I0J%2BZaDN38zHgH0ecylGyBN07l1u%2FBpOrX5s3flMQ3RxA2ilZyj%2F1GTr0pSXGOsPoTVmN9FEKr5lFXGWFl5fzQMEgke3qHe1dUmxy74neGtkxnt7KZ2QJOjFmGPCy70Ld1VoNskNJteYG2CuYzhE8nf6D2CXbFOs%2F2BEzPIpnU8rSX%2B6L2gmODE416Z8%3D",
+    "precio_actual": 1462.0,
+    "precio_maximo": 2599.0,
+    "descuento": 44,
+    "puntuacion": 7,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 43.75,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.154842+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B0GMSKV7GK|https://www.amazon.com.mx/dp/B0GMSKV7GK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B0GMSKV7GK",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GMSKV7GK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 699.3,
+    "precio_maximo": 999.0,
+    "descuento": 30,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 30.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.156124+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKL76up7dnGMVv4JF10SlNUmtRWXQdmoTLY8OV5Jkg3WJi4SvRwD5IkwNB97yLDPxM2ikDgI7TcXP9iF1Vje4P2rQexYVM64dq53PsT0Z0HY0n9uqSowKHtW4D1JPfBIsxZgGuQBj%2BD8y02lKFEv4LS30%2FxSVMNSCivSxzd1DCWPdt7OEElDGLv%2BUf3WkhDryYvIv1huyL4%2FR6Ag%2Fw%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKL76up7dnGMVv4JF10SlNUmtRWXQdmoTLY8OV5Jkg3WJi4SvRwD5IkwNB97yLDPxM2ikDgI7TcXP9iF1Vje4P2rQexYVM64dq53PsT0Z0HY0n9uqSowKHtW4D1JPfBIsxZgGuQBj%2BD8y02lKFEv4LS30%2FxSVMNSCivSxzd1DCWPdt7OEElDGLv%2BUf3WkhDryYvIv1huyL4%2FR6Ag%2Fw%3D%3D",
+    "precio_actual": 298.0,
+    "precio_maximo": 369.0,
+    "descuento": 19,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 19.24,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.157396+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLjCYqnRTJ0kDGC6EC3IThJXxEEVqkIpm3yUqvyYyUBkh7xE3RYwLHC6v1znKANMdElJGZErSCA328Gr9moJuLlWQ4xjsfvDvzPFg5XUmjsC8frNx7YAW%2BB3wJT8MB1rVqt1bXXBRGYnm%2B1%2F32UcsErEczVbL1tJljxWrROFg%2FlCwnEFkaohmnVRmA7vAaeZQhfhGsQ%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLjCYqnRTJ0kDGC6EC3IThJXxEEVqkIpm3yUqvyYyUBkh7xE3RYwLHC6v1znKANMdElJGZErSCA328Gr9moJuLlWQ4xjsfvDvzPFg5XUmjsC8frNx7YAW%2BB3wJT8MB1rVqt1bXXBRGYnm%2B1%2F32UcsErEczVbL1tJljxWrROFg%2FlCwnEFkaohmnVRmA7vAaeZQhfhGsQ%3D",
+    "precio_actual": 994.0,
+    "precio_maximo": 994.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.158680+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|ofertonesmexico|https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKDM0kr4jvaBRlDuaEllcMM7DAcjsmBk2Vt%2Bl5EeFjE8TTY9W%2B7%2BD6lPJIvR03EbO1bstFJf8ucn3ubvc7UfhFefh5JookVdcd%2F7KXlVwwBXXTEpqRC26yr02Z671oD2VhbCAdrV%2BBW9PTqGFx1N5gZeJcsZZ19%2FWlNHS8ErsaN8OoMRuUvm1kn5voXK2512Y42RvQ%3D%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BKDM0kr4jvaBRlDuaEllcMM7DAcjsmBk2Vt%2Bl5EeFjE8TTY9W%2B7%2BD6lPJIvR03EbO1bstFJf8ucn3ubvc7UfhFefh5JookVdcd%2F7KXlVwwBXXTEpqRC26yr02Z671oD2VhbCAdrV%2BBW9PTqGFx1N5gZeJcsZZ19%2FWlNHS8ErsaN8OoMRuUvm1kn5voXK2512Y42RvQ%3D%3D",
+    "precio_actual": 1260.0,
+    "precio_maximo": 2399.0,
+    "descuento": 47,
+    "puntuacion": 9,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 47.48,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.159988+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B082QPTHYC|https://www.amazon.com.mx/dp/B082QPTHYC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B082QPTHYC",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B082QPTHYC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3436.55,
+    "precio_maximo": 3436.55,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.161230+00:00",
+    "precio_alertado": null
+  },
+  "Amazon|B0CJQLVSRP|https://www.amazon.com.mx/dp/B0CJQLVSRP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1": {
+    "tienda": "Amazon",
+    "titulo": "B0CJQLVSRP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CJQLVSRP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 636.35,
+    "precio_maximo": 899.0,
+    "descuento": 29,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 29.22,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.162477+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i 0XJ26RF7515A3X24RPN6|https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-099f12ba32073158&btn_type=ss&btn_ref=srctok-099f12ba32073158": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i 0XJ26RF7515A3X24RPN6",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FM1RC8RR/ref=cm_sw_r_as_gl_api_gl_i_0XJ26RF7515A3X24RPN6?linkCode=ml1&tag=liquidahorros--20&linkId=14563f6fdc810ff5a59fea5619430ab7&ascsubtag=srctok-099f12ba32073158&btn_type=ss&btn_ref=srctok-099f12ba32073158",
+    "precio_actual": 3700.0,
+    "precio_maximo": 3700.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.163914+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i NK6647ZPZ85FNRGVR0WF|https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-741b7913e74d8b3e&btn_type=ss&btn_ref=srctok-741b7913e74d8b3e": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i NK6647ZPZ85FNRGVR0WF",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_NK6647ZPZ85FNRGVR0WF?linkCode=ml1&tag=liquidahorros--20&linkId=f5eaa13bc692ce63bf2224a02e94fcae&ascsubtag=srctok-741b7913e74d8b3e&btn_type=ss&btn_ref=srctok-741b7913e74d8b3e",
+    "precio_actual": 35.0,
+    "precio_maximo": 38.5,
+    "descuento": 9,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 9.09,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.165367+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i YPMARGMK9F19N1ZS79KA|https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-7e4fa8f6513f5a47&btn_type=ss&btn_ref=srctok-7e4fa8f6513f5a47": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i YPMARGMK9F19N1ZS79KA",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DB1LFFX8/ref=cm_sw_r_as_gl_api_gl_i_YPMARGMK9F19N1ZS79KA?linkCode=ml1&tag=liquidahorros--20&linkId=c1fa9997f2c88ec60737734768563d52&ascsubtag=srctok-7e4fa8f6513f5a47&btn_type=ss&btn_ref=srctok-7e4fa8f6513f5a47",
+    "precio_actual": 160.0,
+    "precio_maximo": 160.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.166794+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|liquid|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BHubuLIYQTAWyUe5c%2BbW%2FS1%2Fqu7O%2FQDOFPsgqQGAYWIU1rEHHGJV6xu27AppkWrWDaK8d%2Fw7eqV7lDtW530I6Idx1N6NMl2Y%2BbDewTtqtM9kzLh1n%2BE7bt28I7b4l0B4FiuA9XxesBtCuhuNQdhlCI%2FrqNatwMWmGaYPmgzT30btpBQSbcmd1ECeobdM2L7YihDAhTM%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BHubuLIYQTAWyUe5c%2BbW%2FS1%2Fqu7O%2FQDOFPsgqQGAYWIU1rEHHGJV6xu27AppkWrWDaK8d%2Fw7eqV7lDtW530I6Idx1N6NMl2Y%2BbDewTtqtM9kzLh1n%2BE7bt28I7b4l0B4FiuA9XxesBtCuhuNQdhlCI%2FrqNatwMWmGaYPmgzT30btpBQSbcmd1ECeobdM2L7YihDAhTM%3D",
+    "precio_actual": 1774.0,
+    "precio_maximo": 1774.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.168041+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|liquid|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIO3L3DWFFFYfYrsXLqZ7B4EoQ4fKR%2FQxKOb7M869hIOLU55mPSg1HIrWxDMmYFMT09oTo7gVEFFcJTAbxHelAQ9T2LXwLoGwoeVr5TTIW3a7foxQzEVKVmpBgC%2Fi7NHnasW9fkcSpl2bfX%2BHAh7OA4vOQLh5aH%2Bpxa%2BPP%2By6S8TouHwCKzpjwWjaC18KRi1DeMIWl0%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIO3L3DWFFFYfYrsXLqZ7B4EoQ4fKR%2FQxKOb7M869hIOLU55mPSg1HIrWxDMmYFMT09oTo7gVEFFcJTAbxHelAQ9T2LXwLoGwoeVr5TTIW3a7foxQzEVKVmpBgC%2Fi7NHnasW9fkcSpl2bfX%2BHAh7OA4vOQLh5aH%2Bpxa%2BPP%2By6S8TouHwCKzpjwWjaC18KRi1DeMIWl0%3D",
+    "precio_actual": 79.0,
+    "precio_maximo": 299.0,
+    "descuento": 74,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 73.58,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.169264+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|liquid|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BFxagu3mQgFCoUnT%2Bje8zW%2FR6fL54GienuesAtA8DdngKHV%2Bx9284geX%2BUIWFqoDmDxIOxjhD%2FQanWlU3OZeu38qKL4ZunIphE4B1N3s9N%2B%2Bo2m03A1WmEwyDiMKyieaQsn1FbFDq9jYRzmtdVKveScE1kgj%2F33QxP%2BmVCSOtU9QYhk5z6QqyvgLdKGMhAXKT%2FDumBw%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BFxagu3mQgFCoUnT%2Bje8zW%2FR6fL54GienuesAtA8DdngKHV%2Bx9284geX%2BUIWFqoDmDxIOxjhD%2FQanWlU3OZeu38qKL4ZunIphE4B1N3s9N%2B%2Bo2m03A1WmEwyDiMKyieaQsn1FbFDq9jYRzmtdVKveScE1kgj%2F33QxP%2BmVCSOtU9QYhk5z6QqyvgLdKGMhAXKT%2FDumBw%3D",
+    "precio_actual": 1164.0,
+    "precio_maximo": 1164.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.170475+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i 3E3HKSQG99J6Y5YT69H7|https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-4e49d77d640f8480&btn_type=ss&btn_ref=srctok-4e49d77d640f8480": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i 3E3HKSQG99J6Y5YT69H7",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-4e49d77d640f8480&btn_type=ss&btn_ref=srctok-4e49d77d640f8480",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.171925+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i M4GB30ANTXKQB482ZM0X|https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-3a979e3a35a2ca86&btn_type=ss&btn_ref=srctok-3a979e3a35a2ca86": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i M4GB30ANTXKQB482ZM0X",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-3a979e3a35a2ca86&btn_type=ss&btn_ref=srctok-3a979e3a35a2ca86",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 36,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 91.68,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.173362+00:00",
+    "precio_alertado": 11.9
+  },
+  "Mercado Libre|liquid|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D",
+    "precio_actual": 1299.0,
+    "precio_maximo": 1299.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.174616+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i WE9PXX056R7AK09XDFY2|https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_WE9PXX056R7AK09XDFY2?linkCode=ml1&tag=liquidahorros--20&linkId=3cb1b47c8a9a6b2acb2b75f0787dded2&ascsubtag=srctok-1daccef565913826&btn_type=ss&btn_ref=srctok-1daccef565913826": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i WE9PXX056R7AK09XDFY2",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_WE9PXX056R7AK09XDFY2?linkCode=ml1&tag=liquidahorros--20&linkId=3cb1b47c8a9a6b2acb2b75f0787dded2&ascsubtag=srctok-1daccef565913826&btn_type=ss&btn_ref=srctok-1daccef565913826",
+    "precio_actual": 1680.0,
+    "precio_maximo": 1680.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.176070+00:00",
+    "precio_alertado": null
+  },
+  "Mercado Libre|liquid|https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BNi3RTVx%2B6PeiGiAG9EUP1nW35MBNXCi7aW%2B%2FP1td%2FJDQgwHXdLqopPLX%2FiJAPdJWb7VJ3neC1eBH3FdxJDxZ3XuJhytK%2FouA1GMiPogle%2FvZDPqUVy8p3gVCT4Wp6qdYis%2BwHh%2BbPP7oPQJseNte9T6%2BIqbfoI3QItpjI6QHqfmA51Wgis9kUVs%2BW2VxDaUx4cDgPM%3D": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BNi3RTVx%2B6PeiGiAG9EUP1nW35MBNXCi7aW%2B%2FP1td%2FJDQgwHXdLqopPLX%2FiJAPdJWb7VJ3neC1eBH3FdxJDxZ3XuJhytK%2FouA1GMiPogle%2FvZDPqUVy8p3gVCT4Wp6qdYis%2BwHh%2BbPP7oPQJseNte9T6%2BIqbfoI3QItpjI6QHqfmA51Wgis9kUVs%2BW2VxDaUx4cDgPM%3D",
+    "precio_actual": 848.0,
+    "precio_maximo": 848.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.177288+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i WEQDBQTCZE39052BDRF9|https://www.amazon.com.mx/dp/B0DG9GFFBD/ref=cm_sw_r_as_gl_api_gl_i_WEQDBQTCZE39052BDRF9?linkCode=ml1&tag=liquidahorros--20&linkId=c5bdf66d1a28e6b7b1a65445ddcfb7b0&ascsubtag=srctok-4f0abd2e2d20323d&btn_type=ss&btn_ref=srctok-4f0abd2e2d20323d": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i WEQDBQTCZE39052BDRF9",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DG9GFFBD/ref=cm_sw_r_as_gl_api_gl_i_WEQDBQTCZE39052BDRF9?linkCode=ml1&tag=liquidahorros--20&linkId=c5bdf66d1a28e6b7b1a65445ddcfb7b0&ascsubtag=srctok-4f0abd2e2d20323d&btn_type=ss&btn_ref=srctok-4f0abd2e2d20323d",
+    "precio_actual": 2299.0,
+    "precio_maximo": 2299.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.178741+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i TZSZ4P6YKNE7SYP39BDZ|https://www.amazon.com.mx/dp/B003TNITJO/ref=cm_sw_r_as_gl_api_gl_i_TZSZ4P6YKNE7SYP39BDZ?linkCode=ml1&tag=liquidahorros--20&linkId=87660943723e969918a4b93b96e79eae&ascsubtag=srctok-26470e6638f474d1&btn_type=ss&btn_ref=srctok-26470e6638f474d1": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i TZSZ4P6YKNE7SYP39BDZ",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B003TNITJO/ref=cm_sw_r_as_gl_api_gl_i_TZSZ4P6YKNE7SYP39BDZ?linkCode=ml1&tag=liquidahorros--20&linkId=87660943723e969918a4b93b96e79eae&ascsubtag=srctok-26470e6638f474d1&btn_type=ss&btn_ref=srctok-26470e6638f474d1",
+    "precio_actual": 533.0,
+    "precio_maximo": 533.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.180177+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i A14SYXB5TNVTSNZRGFSR|https://www.amazon.com.mx/dp/B07X4JG2G4/ref=cm_sw_r_as_gl_api_gl_i_A14SYXB5TNVTSNZRGFSR?linkCode=ml1&tag=liquidahorros--20&linkId=1a35c39575adf0d6376a82affae3a409&ascsubtag=srctok-1bf18f958291d99f&btn_type=ss&btn_ref=srctok-1bf18f958291d99f": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i A14SYXB5TNVTSNZRGFSR",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07X4JG2G4/ref=cm_sw_r_as_gl_api_gl_i_A14SYXB5TNVTSNZRGFSR?linkCode=ml1&tag=liquidahorros--20&linkId=1a35c39575adf0d6376a82affae3a409&ascsubtag=srctok-1bf18f958291d99f&btn_type=ss&btn_ref=srctok-1bf18f958291d99f",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.181613+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i dl W7XW0S063RY214M890T2|https://www.amazon.com.mx/dp/B0DSXP9QM7/ref=cm_sw_r_as_gl_api_gl_i_dl_W7XW0S063RY214M890T2?linkCode=ml1&tag=liquidahorros--20&linkId=b0f037a5c438723def1a2d6c44ad6d36&ascsubtag=srctok-7cbe0e25289520a9&btn_type=ss&btn_ref=srctok-7cbe0e25289520a9": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i dl W7XW0S063RY214M890T2",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DSXP9QM7/ref=cm_sw_r_as_gl_api_gl_i_dl_W7XW0S063RY214M890T2?linkCode=ml1&tag=liquidahorros--20&linkId=b0f037a5c438723def1a2d6c44ad6d36&ascsubtag=srctok-7cbe0e25289520a9&btn_type=ss&btn_ref=srctok-7cbe0e25289520a9",
+    "precio_actual": 699.0,
+    "precio_maximo": 4699.0,
+    "descuento": 85,
+    "puntuacion": 32,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 85.12,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.183077+00:00",
+    "precio_alertado": 699.0
+  },
+  "Telegram|ref=cm sw r as gl api gl i 17BVDTEEMP8CW500AR9E|https://www.amazon.com.mx/dp/B0BPP8Z5HL/ref=cm_sw_r_as_gl_api_gl_i_17BVDTEEMP8CW500AR9E?linkCode=ml1&tag=liquidahorros--20&linkId=5a01d3a827fe206cb64201d0f08f5df7&ascsubtag=srctok-058b6d4366c26440&btn_type=ss&btn_ref=srctok-058b6d4366c26440": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i 17BVDTEEMP8CW500AR9E",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BPP8Z5HL/ref=cm_sw_r_as_gl_api_gl_i_17BVDTEEMP8CW500AR9E?linkCode=ml1&tag=liquidahorros--20&linkId=5a01d3a827fe206cb64201d0f08f5df7&ascsubtag=srctok-058b6d4366c26440&btn_type=ss&btn_ref=srctok-058b6d4366c26440",
+    "precio_actual": 279.0,
+    "precio_maximo": 279.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.184527+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i DA1Y5NGBJT229QS0J5VF|https://www.amazon.com.mx/dp/B07STXD8YX/ref=cm_sw_r_as_gl_api_gl_i_DA1Y5NGBJT229QS0J5VF?linkCode=ml1&tag=liquidahorros--20&linkId=8b59352fecd07725a19d8166cfbb981f&ascsubtag=srctok-4c37cb77c0145b16&btn_type=ss&btn_ref=srctok-4c37cb77c0145b16": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i DA1Y5NGBJT229QS0J5VF",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07STXD8YX/ref=cm_sw_r_as_gl_api_gl_i_DA1Y5NGBJT229QS0J5VF?linkCode=ml1&tag=liquidahorros--20&linkId=8b59352fecd07725a19d8166cfbb981f&ascsubtag=srctok-4c37cb77c0145b16&btn_type=ss&btn_ref=srctok-4c37cb77c0145b16",
+    "precio_actual": 838.0,
+    "precio_maximo": 838.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.185985+00:00",
+    "precio_alertado": null
+  },
+  "Telegram|ref=cm sw r as gl api gl i K1CPD5J6VVFJKAQQFRRW|https://www.amazon.com.mx/dp/B0CQKL4YTB/ref=cm_sw_r_as_gl_api_gl_i_K1CPD5J6VVFJKAQQFRRW?linkCode=ml1&tag=liquidahorros--20&linkId=a63df69221667d4459b142399442736c&ascsubtag=srctok-0d9073e1f371d4aa&btn_type=ss&btn_ref=srctok-0d9073e1f371d4aa": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i K1CPD5J6VVFJKAQQFRRW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CQKL4YTB/ref=cm_sw_r_as_gl_api_gl_i_K1CPD5J6VVFJKAQQFRRW?linkCode=ml1&tag=liquidahorros--20&linkId=a63df69221667d4459b142399442736c&ascsubtag=srctok-0d9073e1f371d4aa&btn_type=ss&btn_ref=srctok-0d9073e1f371d4aa",
+    "precio_actual": 1049.0,
+    "precio_maximo": 1049.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.187403+00:00",
+    "precio_alertado": null
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/jeans-straight-w4ba0yd5cca-gjrv-corte-cintura-para-mujer/1175501282": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/jeans-straight-w4ba0yd5cca-gjrv-corte-cintura-para-mujer/1175501282",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.196795+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/tenis-terrex-tracefinder-2-para-senderismo-de-hombre/1202984092": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/tenis-terrex-tracefinder-2-para-senderismo-de-hombre/1202984092",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.225130+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/bikini-a-la-cadera-para-mujer/1174414947?skuid=1174414986": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/bikini-a-la-cadera-para-mujer/1174414947?skuid=1174414986",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.239185+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/salida-de-playa-blusa-para-mujer/1194231511": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/salida-de-playa-blusa-para-mujer/1194231511",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.241793+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/blusa-para-mujer/1192932856?skuid=1192932889": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/blusa-para-mujer/1192932856?skuid=1192932889",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.244406+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/sudadera-para-hombre/1195513251?skuid=1195513305": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/sudadera-para-hombre/1195513251?skuid=1195513305",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.254629+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/bowl-rustic-flow-de-porcelana/1182438720": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/bowl-rustic-flow-de-porcelana/1182438720",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.257258+00:00",
+    "precio_alertado": 24.0
+  },
+  "Liverpool|de cerámica 3 piezas|https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-v-mujer/1071852466": {
+    "tienda": "Liverpool",
+    "titulo": "de cerámica 3 piezas",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-cuello-v-mujer/1071852466",
+    "precio_actual": 24.0,
+    "precio_maximo": 49.0,
+    "descuento": 51,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-05T02:30:37.259832+00:00",
     "precio_alertado": 24.0
   }
 }
