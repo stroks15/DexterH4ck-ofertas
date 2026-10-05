@@ -39,18 +39,25 @@ class WalmartGraphQLParser:
     def parsear_respuesta_busqueda(self, json_response: dict) -> list[dict]:
         productos = []
         try:
-            rows = json_response.get("data", {}).get("search", {}).get("products", [])
+            data = json_response.get("data", {}) if isinstance(json_response, dict) else {}
+            search = data.get("search") or data.get("searchAndFilter") or data.get("SearchAndFilter") or {}
+            rows = search.get("products") if isinstance(search, dict) else []
+            if not isinstance(rows, list):
+                rows = data.get("products") or []
             if not isinstance(rows, list):
                 return []
 
             for prod in rows:
                 if not isinstance(prod, dict):
                     continue
+                price_info = prod.get("priceInfo") or prod.get("price") or {}
+                current_node = price_info.get("currentPrice") if isinstance(price_info, dict) else None
                 current = self._money(
-                    (prod.get("priceInfo") or {}).get("currentPrice", {}).get("price")
+                    (current_node or {}).get("price") if isinstance(current_node, dict) else current_node
                 )
+                previous_node = price_info.get("wasPrice") if isinstance(price_info, dict) else None
                 previous = self._money(
-                    (prod.get("priceInfo") or {}).get("wasPrice", {}).get("price")
+                    (previous_node or {}).get("price") if isinstance(previous_node, dict) else previous_node
                 )
                 if current is None or current <= 0:
                     continue
@@ -75,7 +82,7 @@ class WalmartGraphQLParser:
                     continue
 
                 productos.append({
-                    "id": prod.get("id"),
+                    "id": prod.get("id") or prod.get("productId") or prod.get("upc"),
                     "titulo": nombre,
                     "nombre": nombre,
                     "marca": brand,
