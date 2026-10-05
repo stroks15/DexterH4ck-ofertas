@@ -161,6 +161,7 @@ def score_product(product, discount=None):
 
     return {
         "puntuacion": max(5, min(score, 100)),
+        "componente_descuento": discount_score,
         "descuento": int(discount or 0),
         "marca": brand,
         "marca_prioritaria": bool(brand_group),
