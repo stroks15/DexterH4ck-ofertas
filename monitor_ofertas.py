@@ -199,7 +199,6 @@ def revisar():
             "con_referencia": 0,
             "sin_referencia": 0,
             "rangos_descuento": {
-                "5-49": 0,
                 "50-69": 0,
                 "70-89": 0,
                 "90-94": 0,
@@ -211,9 +210,7 @@ def revisar():
         registro_salud["candidatos"] += 1
         if referencia_salud > actual_salud:
             registro_salud["con_referencia"] += 1
-            if 5 <= descuento_salud <= 49:
-                registro_salud["rangos_descuento"]["5-49"] += 1
-            elif 50 <= descuento_salud <= 69:
+            if 50 <= descuento_salud <= 69:
                 registro_salud["rangos_descuento"]["50-69"] += 1
             elif 70 <= descuento_salud <= 89:
                 registro_salud["rangos_descuento"]["70-89"] += 1
@@ -233,7 +230,7 @@ def revisar():
             "politica_publicacion": {
                 "min_descuento_comparable": MIN_DESCUENTO,
                 "max_descuento_comparable": MAX_DESCUENTO,
-                "rangos_investigados": ["50-69", "70-89", "90-94", "90-99", "95-99"],
+                "rangos_investigados": ["50-69", "70-89", "90-94", "90-99"],
                 "min_descuento": 50,
                 "max_descuento": 99,
                 "liquidaciones_90_99_forzadas": True,
@@ -249,7 +246,7 @@ def revisar():
         "sin_precio": 0,
         "sin_ficha_directa": 0,
         "sin_referencia": 0,
-        "descuento_menor_5": 0,
+        "descuento_menor_50": 0,
         "descuento_mayor_99": 0,
         "historico_ya_alertado": 0,
         "no_elegible": 0,
@@ -341,7 +338,7 @@ def revisar():
             descartes["sin_referencia"] += 1
             continue
         if dcto < MIN_DESCUENTO and not centavos_fisica and not dcto_90_99_forzado:
-            descartes["descuento_menor_5"] += 1
+            descartes["descuento_menor_50"] += 1
             continue
         if dcto > MAX_DESCUENTO:
             descartes["descuento_mayor_99"] += 1
