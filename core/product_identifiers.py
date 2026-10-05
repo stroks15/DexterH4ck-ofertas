@@ -80,7 +80,7 @@ def extract_mercadolibre_id(url: str) -> str:
     for pattern in patterns:
         match = re.search(pattern, text, re.I)
         if match:
-            value = match.group(1).upper()
+            value = match.group(1).upper().replace("-", "").replace("_", "")
             return value if value.startswith("MLM") else f"MLM{value}"
     return ""
 
