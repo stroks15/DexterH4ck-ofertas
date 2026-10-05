@@ -518,8 +518,8 @@ def _buscar_indexado_tienda(nombre, consultas, session):
     resultados = []
     vistos = set()
     motores = [
-        ("Google", "https://www.google.com/search", {"hl": "es", "gl": "mx", "num": 10}),
         ("Bing", "https://www.bing.com/search", {"setlang": "es-MX", "cc": "mx", "count": 10}),
+        ("Google", "https://www.google.com/search", {"hl": "es", "gl": "mx", "num": 10}),
     ]
     for consulta in consultas:
         q = f"site:{dominio} {consulta} -search -buscar -login"
