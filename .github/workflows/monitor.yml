@@ -111,6 +111,7 @@ jobs:
           ML_API_LIMIT: "50"
           ML_API_TIMEOUT: "12"
           ML_API_DELAY: "0.20"
+          ML_API_REQUIRE_TOKEN: "true"
           PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com/rss"
           # Endpoints GraphQL se configuran solo si la integración autorizada está disponible.
           WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
