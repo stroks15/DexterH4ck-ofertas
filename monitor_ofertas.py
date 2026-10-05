@@ -15,6 +15,8 @@ from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
 from scrapers.api_stores import buscar_api_first
+from scrapers.mercado_libre_api import buscar_mercado_libre_api
+from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -190,6 +192,8 @@ def revisar():
     # liquidaciones oficiales + evidencia física. Un fallo no detiene las demás.
     tareas = {
         "api_first": buscar_api_first,
+        "mercado_libre_contingencia": buscar_mercado_libre_api,
+        "feeds_comunidad": parsear_feed_comunidad_espejo,
         "legacy": buscar_todas,
         "telegram": lambda: buscar_telegram(requests.Session()),
         "fisicas": lambda: buscar_tiendas_fisicas(requests.Session()),
