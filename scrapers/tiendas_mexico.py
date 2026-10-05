@@ -466,6 +466,17 @@ def _urls_busqueda(nombre, q, plantilla):
     categoría pública vigente en lugar del endpoint /search que devuelve 404.
     """
     primaria = plantilla.format(q=quote_plus(q))
+    if nombre == "Mercado Libre MX":
+        return [
+            primaria,
+            "https://www.mercadolibre.com.mx/ofertas",
+        ]
+    if nombre == "Amazon MX":
+        return [
+            primaria,
+            "https://www.amazon.com.mx/deals",
+            "https://www.amazon.com.mx/gp/goldbox",
+        ]
     if nombre != "Chedraui":
         return [primaria]
 
