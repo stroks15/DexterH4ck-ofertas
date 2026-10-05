@@ -83,14 +83,26 @@ def nivel_extremo(precio, referencia=None):
         return "EXTREMO"
     return "normal"
 
-def senal_terminacion_walmart(precio, tienda):
-    if "walmart" not in str(tienda or "").lower():
-        return False
+def senal_terminacion_liquidacion(precio, tienda):
+    """Señal de liquidación física por terminación conocida en México.
+
+    No depende del texto de la publicación y aporta +30 al score. Es una señal,
+    no una garantía de inventario: la disponibilidad local debe verificarse.
+    """
     try:
         texto = f"{float(precio):.2f}"
     except (TypeError, ValueError):
         return False
-    return texto.endswith((".01",".02",".03"))
+    nombre = str(tienda or "").lower()
+    if "walmart" in nombre or "bodega aurrera" in nombre:
+        return texto.endswith((".01", ".02", ".03"))
+    if "soriana" in nombre:
+        return texto.endswith((".02", ".05"))
+    return False
+
+
+def senal_terminacion_walmart(precio, tienda):
+    return senal_terminacion_liquidacion(precio, tienda)
 
 def _precios_en_html(html):
     valores=[]
@@ -131,8 +143,8 @@ def analizar_precio_extremo(item, session=None):
     señales=[]
     if nivel != "normal":
         señales.append("precio_extremo")
-    if senal_terminacion_walmart(precio,tienda):
-        señales.append("walmart_terminacion_01_02_03")
+    if senal_terminacion_liquidacion(precio, tienda):
+        señales.append("liquidacion_terminacion_centavos")
     oficial=es_producto_oficial(url,tienda)
     if oficial:
         señales.append("url_tienda_oficial")
