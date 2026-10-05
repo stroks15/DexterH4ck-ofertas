@@ -15,6 +15,7 @@ from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
+from core.product_identifiers import canonical_product_identifier
 from scrapers.api_stores import buscar_api_first
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
@@ -307,11 +308,17 @@ def revisar():
             descartes["sin_titulo_o_url"] += 1
             continue
 
+        identificador = canonical_product_identifier(tienda, url)
         identidad = {
             **item,
             "tienda": canonical_store(tienda),
             "titulo": titulo,
-            "url": url,
+            "url": identificador.get("url") or url,
+            "product_id": identificador.get("product_id") or item.get("id") or "",
+            "upc": identificador.get("upc") or item.get("upc") or "",
+            "asin": identificador.get("asin") or item.get("asin") or "",
+            "sku": identificador.get("sku") or item.get("sku") or "",
+            "store_id": identificador.get("store_id") or item.get("store_id") or "",
         }
         clave = history_key(identidad) or item.get("id") or f"{canonical_store(tienda)}|{titulo}"
         if clave in vistos_en_esta_revision:
