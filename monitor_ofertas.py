@@ -14,6 +14,7 @@ from scrapers.telegram_ofertas import buscar_telegram
 from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
 from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
+from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from scrapers.api_stores import buscar_api_first
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 
@@ -210,6 +211,7 @@ def revisar():
     # Mantener todas las tiendas online y no eliminar las fuentes físicas o
     # Telegram solo porque su etiqueta incluya una sucursal o alias.
     candidatos = [item for item in candidatos if _candidato_de_tienda_objetivo(item)]
+    candidatos, duplicados_fuente = deduplicate_candidates(candidatos)
     # Salud de descubrimiento: permite comprobar que las tiendas no queden
     # monopolizadas por 95/99 y que también estén llegando rangos medios.
     tiendas_esperadas = list(TIENDAS_OBJETIVO)
@@ -288,7 +290,7 @@ def revisar():
     print(f"Fuentes adicionales Telegram + físicas + liquidaciones oficiales: {len(candidatos)} candidatos totales")
     descartes = {
         "sin_titulo_o_url": 0,
-        "duplicado": 0,
+        "duplicado": duplicados_fuente,
         "sin_precio": 0,
         "sin_ficha_directa": 0,
         "sin_referencia": 0,
@@ -305,13 +307,35 @@ def revisar():
             descartes["sin_titulo_o_url"] += 1
             continue
 
-        clave = item.get("id") or f"{tienda}|{titulo}|{url}"
+        identidad = {
+            **item,
+            "tienda": canonical_store(tienda),
+            "titulo": titulo,
+            "url": url,
+        }
+        clave = history_key(identidad) or item.get("id") or f"{canonical_store(tienda)}|{titulo}"
         if clave in vistos_en_esta_revision:
             descartes["duplicado"] += 1
             continue
         vistos_en_esta_revision.add(clave)
 
+        # Compatibilidad con historial antiguo: buscamos cualquier clave del
+        # mismo producto antes de crear un registro nuevo. Así una oferta que
+        # antes llegó por URL y ahora por ID no vuelve a enviarse.
+        aliases_hist = identity_keys(identidad)
         anterior_hist = historial.get(clave, {})
+        if not anterior_hist:
+            for old_key, old_record in historial.items():
+                if not isinstance(old_record, dict):
+                    continue
+                old_identity = {
+                    "tienda": old_record.get("tienda", tienda),
+                    "titulo": old_record.get("titulo", titulo),
+                    "url": old_record.get("url", ""),
+                }
+                if aliases_hist.intersection(identity_keys(old_identity)):
+                    anterior_hist = old_record
+                    break
         actual, referencia, dcto = calcular_datos(item, anterior_hist)
         if actual <= 0:
             descartes["sin_precio"] += 1
