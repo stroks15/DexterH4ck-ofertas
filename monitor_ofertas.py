@@ -234,8 +234,10 @@ def revisar():
         clave_salud = candidato.get("id") or f"{tienda_salud}|{candidato.get('titulo') or candidato.get('title') or candidato.get('nombre') or ''}|{candidato.get('url') or ''}"
         historico_salud = historial.get(clave_salud, {})
         referencia_historica = float(historico_salud.get("precio_maximo") or 0)
-        referencias_salud = [x for x in (referencia_directa, referencia_historica) if x > actual_salud]
-        referencia_salud = min(referencias_salud) if referencias_salud else 0
+        referencia_salud = (
+            referencia_directa if referencia_directa > actual_salud
+            else (referencia_historica if referencia_historica > actual_salud else 0)
+        )
         if actual_salud <= 0:
             continue
         descuento_salud = round((1 - actual_salud / referencia_salud) * 100) if referencia_salud > actual_salud else 0
