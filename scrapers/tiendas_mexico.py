@@ -817,7 +817,16 @@ def buscar_todas():
             continue
         # Estas tiendas tienen ahora adaptadores oficiales de hubs de ofertas;
         # evitamos /search porque devuelve 404 o 200 sin catálogo en Actions.
-        if nombre in ("Walmart MX", "Bodega Aurrera", "Chedraui"):
+        if nombre in ("Walmart MX", "Bodega Aurrera"):
+            # El catálogo directo puede devolver 200 con contenido anti-bot.
+            # Antes de depender sólo del hub oficial, usamos resultados públicos
+            # indexados para recuperar fichas directas sin intentar evadir WAF/CAPTCHA.
+            consultas_fallback = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
+            indexados = _buscar_indexado_tienda(nombre, consultas_fallback, session)
+            salida.extend(indexados)
+            print(f"{nombre}: descubrimiento indexado -> {len(indexados)} candidatos")
+            continue
+        if nombre == "Chedraui":
             print(f"{nombre}: búsqueda genérica omitida; se usa descubrimiento oficial.")
             continue
         if nombre == "Soriana":
