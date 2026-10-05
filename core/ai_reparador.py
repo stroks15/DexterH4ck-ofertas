@@ -133,7 +133,9 @@ def _gemini(prompt):
                 time.sleep(espera)
                 continue
 
-            if response.status_code == 429:
+            if response.status_code in (401, 403):
+                print(f"Gemini: HTTP {response.status_code}; la clave fue rechazada (credencial/permisos/proyecto).")
+            elif response.status_code == 429:
                 _gemini_disabled_until = time.monotonic() + 30
                 print("Gemini: HTTP 429; activando respaldo Groq y pausando Gemini durante 30s.")
             else:
@@ -174,30 +176,42 @@ def _groq(prompt):
         _groq_last_call = time.monotonic()
         try:
             _groq_calls += 1
+            payload = {
+                "model": GROQ_MODEL,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": (
+                            "Eres un respaldo de un monitor de ofertas de México. "
+                            "No inventes precios, productos ni URLs. Devuelve JSON válido."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                "temperature": 0,
+                "max_tokens": 700,
+                "response_format": {"type": "json_object"},
+            }
             response = requests.post(
                 GROQ_ENDPOINT,
                 headers={
                     "Authorization": f"Bearer {GROQ_API_KEY}",
                     "Content-Type": "application/json",
                 },
-                json={
-                    "model": GROQ_MODEL,
-                    "messages": [
-                        {
-                            "role": "system",
-                            "content": (
-                                "Eres un respaldo de un monitor de ofertas de México. "
-                                "No inventes precios, productos ni URLs. Devuelve JSON válido."
-                            ),
-                        },
-                        {"role": "user", "content": prompt},
-                    ],
-                    "temperature": 0,
-                    "max_tokens": 700,
-                    "response_format": {"type": "json_object"},
-                },
+                json=payload,
                 timeout=20,
             )
+            if response.status_code == 400:
+                payload.pop("response_format", None)
+                response = requests.post(
+                    GROQ_ENDPOINT,
+                    headers={
+                        "Authorization": f"Bearer {GROQ_API_KEY}",
+                        "Content-Type": "application/json",
+                    },
+                    json=payload,
+                    timeout=20,
+                )
 
             if response.ok:
                 data = response.json()
@@ -213,11 +227,13 @@ def _groq(prompt):
                 time.sleep(espera)
                 continue
 
-            if response.status_code == 429:
+            if response.status_code in (401, 403):
+                print(f"Groq: HTTP {response.status_code}; la clave fue rechazada (credencial/permisos).")
+            elif response.status_code == 429:
                 _groq_disabled_until = time.monotonic() + 30
                 print("Groq: HTTP 429; pausando Groq durante 30s.")
             else:
-                print(f"Groq: HTTP {response.status_code}; continuando sin IA.")
+                print(f"Groq: HTTP {response.status_code}; continuando sin IA. Revisa modelo/configuración de la API.")
             return {}
 
         except (requests.RequestException, ValueError) as error:
