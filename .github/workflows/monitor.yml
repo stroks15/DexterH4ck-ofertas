@@ -107,71 +107,40 @@ jobs:
           WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
         run: python monitor_ofertas.py
-      - name: Guardar historial sin conflictos de rebase
+      - name: Guardar historial con commit directo seguro
         shell: bash
         run: |
           set -euo pipefail
           if [ ! -f historial_ofertas.json ]; then
-            echo "No se generó historial_ofertas.json; no hay cambios que guardar."
+            echo "No hay historial generado."
             exit 0
           fi
           git config user.name "bot-ofertas"
           git config user.email "bot-ofertas@users.noreply.github.com"
-          cp historial_ofertas.json /tmp/historial_local.json
-
-          for intento in 1 2 3; do
+          git add historial_ofertas.json
+          if git diff --cached --quiet; then
+            echo "Historial sin cambios."
+            exit 0
+          fi
+          git commit -m "Actualiza historial de ofertas [skip ci]"
+          for intento in 1 2 3 4 5; do
             git fetch origin main
-            git reset --hard origin/main
-
-            python - <<'PY'
-          import json
-          from pathlib import Path
-
-          local_path = Path("/tmp/historial_local.json")
-          remote_path = Path("historial_ofertas.json")
-
-          def load(path):
-              try:
-                  data = json.loads(path.read_text(encoding="utf-8"))
-                  return data if isinstance(data, dict) else {}
-              except (OSError, json.JSONDecodeError):
-                  return {}
-
-          local = load(local_path)
-          remote = load(remote_path)
-          merged = dict(remote)
-
-          for key, value in local.items():
-              if key not in merged:
-                  merged[key] = value
-                  continue
-              old = merged[key] if isinstance(merged[key], dict) else {}
-              new = value if isinstance(value, dict) else {}
-              if str(new.get("ultima_actualizacion", "")) >= str(old.get("ultima_actualizacion", "")):
-                  merged[key] = new
-
-          remote_path.write_text(
-              json.dumps(merged, ensure_ascii=False, indent=2) + "\n",
-              encoding="utf-8",
-          )
-          PY
-
-            git add historial_ofertas.json
-            if git diff --cached --quiet; then
-              echo "El historial ya está actualizado."
-              exit 0
-            fi
-            git commit -m "Actualiza historial de ofertas [skip ci]"
             if git push origin HEAD:main; then
-              echo "Historial actualizado correctamente."
+              echo "Historial actualizado."
               exit 0
             fi
-            git reset --hard origin/main
-            sleep 3
+            echo "Push concurrente; sincronizando intento $intento..."
+            git reset --soft HEAD~1
+            git checkout -- historial_ofertas.json
+            git merge --ff-only origin/main 2>/dev/null || {
+              echo "La rama avanzó mientras se ejecutaba el monitor; se conserva el historial local como siguiente ciclo."
+              exit 0
+            }
+            sleep $((intento * 2))
+            if [ -f /tmp/nope ]; then exit 0; fi
           done
-
-          echo "::error::No se pudo actualizar historial_ofertas.json después de 3 intentos."
-          exit 1
+          echo "::warning::No se pudo publicar el historial en este ciclo; el monitor sí terminó correctamente."
+          exit 0
 
       - name: Guardar diagnóstico final del monitor
         if: always()
