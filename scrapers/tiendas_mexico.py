@@ -506,7 +506,12 @@ def _buscar_indexado_tienda(nombre, consultas, session):
     devuelve HTTP 200 pero oculta el catálogo al cliente automatizado.
     No intenta saltar CAPTCHA/WAF/autenticación.
     """
-    dominio = {"Walmart MX": "walmart.com.mx", "Bodega Aurrera": "bodegaaurrera.com.mx"}.get(nombre)
+    dominio = {
+        "Walmart MX": "walmart.com.mx",
+        "Bodega Aurrera": "bodegaaurrera.com.mx",
+        "Amazon MX": "amazon.com.mx",
+        "Mercado Libre MX": "mercadolibre.com.mx",
+    }.get(nombre)
     if not dominio:
         return []
 
