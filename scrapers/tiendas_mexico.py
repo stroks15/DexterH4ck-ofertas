@@ -424,7 +424,7 @@ def buscar_soriana(session):
     """
     resultados = []
     consultas = [
-        "liquidacion", "ofertas", "pantallas", "celulares", "videojuegos", "hogar"
+        "ofertas", "pantallas", "celulares", "videojuegos", "hogar", "belleza", "mascotas"
     ]
     vistos = {}
     for consulta in consultas:
@@ -434,6 +434,9 @@ def buscar_soriana(session):
             if response.status_code in (403, 429):
                 print(f"Soriana: HTTP {response.status_code} para '{consulta}'; fuente pausada hasta el siguiente ciclo.")
                 break
+            if response.status_code == 404:
+                print(f"Soriana: ruta de búsqueda no encontrada para '{consulta}'; se omite sin reintento.")
+                continue
             if response.status_code >= 400:
                 print(f"Soriana: HTTP {response.status_code} para '{consulta}'")
                 continue
