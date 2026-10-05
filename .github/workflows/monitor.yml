@@ -44,7 +44,7 @@ jobs:
           test -n "$GROQ_API_KEY" || echo "::warning::GROQ_API_KEY no está configurada; el monitor funcionará sin Groq."
 
       - name: Validar sintaxis Python
-        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py scrapers/api_stores.py
+        run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py scrapers/api_stores.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py
       - name: Pruebas deterministas de liquidaciones extremas
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Preflight - detectar errores antes del monitor
@@ -72,6 +72,14 @@ jobs:
           GROQ_MODEL: openai/gpt-oss-20b
           GROQ_MAX_CALLS: "8"
           GROQ_MIN_DELAY: "1.5"
+          # Token opcional de Mercado Libre. Si no existe, se conserva el fallback al historial.
+          MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
+          ML_PRICE_LOOKUPS: "40"
+          # Endpoints GraphQL se configuran solo si la integración autorizada está disponible.
+          WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
+          BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
+          WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
+          BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
         run: python monitor_ofertas.py
       - name: Guardar historial sin rebase sobre cambios sin preparar
         shell: bash
