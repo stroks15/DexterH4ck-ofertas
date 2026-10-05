@@ -104,6 +104,35 @@ def es_enlace_producto_directo(url):
 
 _ultimo_envio_telegram = 0.0
 
+TIENDAS_OBJETIVO = (
+    "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
+    "Liverpool", "Amazon MX", "Mercado Libre MX", "Coppel",
+    "Suburbia", "Oferstock",
+)
+
+def _candidato_de_tienda_objetivo(item):
+    """Acepta tiendas online y sucursales/Telegram sin perder su evidencia."""
+    if str(item.get("tipo_fuente") or "").upper() == "FISICA":
+        return True
+    tienda = str(item.get("tienda") or item.get("store") or "").strip().lower()
+    aliases = (
+        ("walmart", "Walmart MX"),
+        ("bodega aurrera", "Bodega Aurrera"),
+        ("chedraui", "Chedraui"),
+        ("soriana", "Soriana"),
+        ("liverpool", "Liverpool"),
+        ("amazon", "Amazon MX"),
+        ("mercado libre", "Mercado Libre MX"),
+        ("mercadolibre", "Mercado Libre MX"),
+        ("coppel", "Coppel"),
+        ("suburbia", "Suburbia"),
+        ("oferstock", "Oferstock"),
+    )
+    if any(alias in tienda for alias, _ in aliases):
+        return True
+    origen = str(item.get("origen_link") or item.get("origen") or "").lower()
+    return origen == "telegram" and bool(item.get("url"))
+
 def enviar_telegram(texto):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
@@ -157,11 +186,12 @@ def revisar():
     # reenviar_ofertas_hoy.yml / reenviar_ofertas_hoy.py.
     rearmar_alertas = False
 
-    # Descubrimiento en paralelo: API-first + legacy + fuentes oficiales/físicas.
-    # Los fallos de una fuente no detienen las otras.
+    # Descubrimiento en paralelo: API-first + legacy + Telegram +
+    # liquidaciones oficiales + evidencia física. Un fallo no detiene las demás.
     tareas = {
         "api_first": buscar_api_first,
         "legacy": buscar_todas,
+        "telegram": lambda: buscar_telegram(requests.Session()),
         "fisicas": lambda: buscar_tiendas_fisicas(requests.Session()),
         "oficiales": lambda: buscar_liquidaciones_oficiales(requests.Session()),
     }
@@ -175,21 +205,12 @@ def revisar():
             except Exception as exc:
                 print(f"Descubrimiento {nombre}: error aislado -> {type(exc).__name__}: {exc}")
 
-    # El monitor queda enfocado exclusivamente en las 8 tiendas solicitadas.
-    tiendas_objetivo = {
-        "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
-        "Amazon MX", "Mercado Libre MX", "Coppel", "Suburbia",
-    }
-    candidatos = [
-        item for item in candidatos
-        if str(item.get("tienda") or item.get("store") or "").strip() in tiendas_objetivo
-    ]
+    # Mantener todas las tiendas online y no eliminar las fuentes físicas o
+    # Telegram solo porque su etiqueta incluya una sucursal o alias.
+    candidatos = [item for item in candidatos if _candidato_de_tienda_objetivo(item)]
     # Salud de descubrimiento: permite comprobar que las tiendas no queden
     # monopolizadas por 95/99 y que también estén llegando rangos medios.
-    tiendas_esperadas = [
-        "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
-        "Amazon MX", "Mercado Libre MX", "Coppel", "Suburbia",
-    ]
+    tiendas_esperadas = list(TIENDAS_OBJETIVO)
     salud_tiendas = {
         tienda: {
             "candidatos": 0,
