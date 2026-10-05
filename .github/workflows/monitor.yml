@@ -43,6 +43,16 @@ jobs:
           test -n "$GEMINI_API_KEY" || echo "::warning::GEMINI_API_KEY no está configurada; el monitor funcionará sin Gemini."
           test -n "$GROQ_API_KEY" || echo "::warning::GROQ_API_KEY no está configurada; el monitor funcionará sin Groq."
 
+      - name: Verificar token opcional de Mercado Libre
+        env:
+          MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
+        run: |
+          if [ -n "$MERCADOLIBRE_ACCESS_TOKEN" ]; then
+            echo "Token de Mercado Libre detectado; se habilitará enriquecimiento oficial de precios."
+          else
+            echo "::notice::MERCADOLIBRE_ACCESS_TOKEN no configurado; Mercado Libre seguirá usando búsqueda pública + historial."
+          fi
+
       - name: Validar sintaxis Python
         run: python -m py_compile monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py scrapers/api_stores.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py
       - name: Pruebas deterministas de liquidaciones extremas
