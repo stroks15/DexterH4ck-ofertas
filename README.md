@@ -68,3 +68,37 @@ Las claves nunca deben guardarse dentro del repositorio.
 ## Chedraui
 
 Chedraui utiliza una estructura de URLs distinta a la ruta genérica `/search?q=...`. Para búsquedas de jardinería, el monitor usa como respaldo la categoría pública vigente de Patio y jardín cuando la búsqueda genérica devuelve HTTP 404. La ficha de producto sigue siendo validada antes de publicarse.
+
+
+## Arquitectura multiscraper API-first (2026-10)
+
+El monitor mantiene dos capas de descubrimiento:
+
+1. **API-first** en `scrapers/api_stores.py`: Chedraui usa su catálogo VTEX y Mercado Libre usa su API pública. Walmart/Bodega y los demás adaptadores admiten endpoints JSON/GraphQL autorizados mediante variables de entorno.
+2. **Legacy paralelo** en `scrapers/tiendas_mexico.py`: cada tienda se ejecuta en un worker aislado para que un timeout o 429 no detenga a las demás.
+
+La interfaz común está en `core/scraper_base.py`. Los requests usan timeouts, backoff y límites conservadores; el proyecto **no intenta saltar CAPTCHA/WAF ni falsificar la identidad de aplicaciones móviles**.
+
+### Variables opcionales API-first
+
+- `WALMART_GRAPHQL_URL`, `WALMART_STORE_ID`, `WALMART_GRAPHQL_QUERY`
+- `BODEGA_GRAPHQL_URL`, `BODEGA_STORE_ID`, `BODEGA_GRAPHQL_QUERY`
+- `CHEDRAUI_VTEX_ENDPOINT`
+- `SORIANA_API_ENDPOINT`
+- `COPPEL_API_ENDPOINT`
+- `SUBURBIA_API_ENDPOINT`
+- `AMAZON_API_ENDPOINT`
+- `ML_QUERIES`
+
+Los endpoints de terceros solo deben configurarse cuando estén documentados o autorizados para la integración. El historial local/Supabase sigue siendo la referencia para detectar bajadas reales cuando una API solo entrega el precio actual.
+
+### Señales de liquidación física
+
+- Walmart/Bodega: `.03`, `.02`, `.01`
+- Soriana: `.02`, `.05`
+
+Estas señales agregan **+30 puntos** y pueden generar alerta aunque no exista precio anterior online. No implican stock garantizado en sucursal.
+
+### Política de descuentos
+
+Se consideran comparables los rangos **5–49%, 50–69%, 70–89%, 90–94% y 95–99%**. El 95/99% es una categoría extrema, no un filtro exclusivo.
