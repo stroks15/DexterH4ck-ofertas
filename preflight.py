@@ -23,6 +23,11 @@ PY_FILES = [
     "core/extreme_liquidation.py",
     "core/scraper_base.py",
     "scrapers/api_stores.py",
+    "config/walmart_graphql_query.py",
+    "scrapers/walmart_graphql.py",
+    "scrapers/bodega_graphql.py",
+    "scrapers/walmart_api.py",
+    "scrapers/bodega_aurrera_api.py",
 ]
 
 SOURCES = {
@@ -66,6 +71,11 @@ def check_imports():
         "core.extreme_liquidation",
         "core.scraper_base",
         "scrapers.api_stores",
+        "config.walmart_graphql_query",
+        "scrapers.walmart_graphql",
+        "scrapers.bodega_graphql",
+        "scrapers.walmart_api",
+        "scrapers.bodega_aurrera_api",
     ]
     for module in modules:
         try:
