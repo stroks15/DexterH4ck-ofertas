@@ -186,7 +186,24 @@ def revisar():
     ]
     # Salud de descubrimiento: permite comprobar que las tiendas no queden
     # monopolizadas por 95/99 y que también estén llegando rangos medios.
-    salud_tiendas = {}
+    tiendas_esperadas = [
+        "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
+        "Amazon MX", "Mercado Libre MX", "Coppel", "Suburbia",
+    ]
+    salud_tiendas = {
+        tienda: {
+            "candidatos": 0,
+            "con_referencia": 0,
+            "sin_referencia": 0,
+            "rangos_descuento": {
+                "50-69": 0, "70-89": 0, "90-94": 0, "95-99": 0,
+                "sin_descuento_comparable": 0,
+            },
+            "liquidaciones_90_99": 0,
+            "descubrimiento_publico": 0,
+        }
+        for tienda in tiendas_esperadas
+    }
     for candidato in candidatos:
         tienda_salud = str(candidato.get("tienda") or candidato.get("store") or "Desconocida")
         actual_salud = float(candidato.get("precio_actual") or candidato.get("price") or 0)
@@ -204,15 +221,15 @@ def revisar():
             "con_referencia": 0,
             "sin_referencia": 0,
             "rangos_descuento": {
-                "50-69": 0,
-                "70-89": 0,
-                "90-94": 0,
-                "95-99": 0,
+                "50-69": 0, "70-89": 0, "90-94": 0, "95-99": 0,
                 "sin_descuento_comparable": 0,
             },
+            "liquidaciones_90_99": 0,
             "descubrimiento_publico": 0,
         })
         registro_salud["candidatos"] += 1
+        if 90 <= descuento_salud <= 99:
+            registro_salud["liquidaciones_90_99"] += 1
         if referencia_salud > actual_salud:
             registro_salud["con_referencia"] += 1
             if 50 <= descuento_salud <= 69:
