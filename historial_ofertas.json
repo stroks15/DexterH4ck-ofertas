@@ -27696,5 +27696,2218 @@
     },
     "ultima_actualizacion": "2026-10-05T15:16:21.922350+00:00",
     "precio_alertado": null
+  },
+  "chedraui|title:snack para bebe gerber etapa 3 sabor fresa a base de yogurt bolsa de 28g": {
+    "tienda": "Chedraui",
+    "titulo": "Snack para Bebé Gerber Etapa 3 Sabor Fresa a Base de Yogurt Bolsa de 28g",
+    "marca": "Gerber",
+    "categoria": "Bolsas y Accesorios",
+    "url": "https://www.chedraui.com.mx/snack-para-bebe-gerber-etapa-3-sabor-fresa-a-base-de-yogurt-bolsa-de-28g-3861873/p",
+    "precio_actual": 5.9,
+    "precio_maximo": 94.0,
+    "descuento": 94,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 93.72,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:56.411667+00:00",
+    "precio_alertado": 5.9
+  },
+  "chedraui|title:hojas de lechuga mrlucky orejona organica 250g": {
+    "tienda": "Chedraui",
+    "titulo": "Hojas de Lechuga MrLucky' Orejona Orgánica 250g",
+    "marca": "Mr. Lucky",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/hojas-de-lechuga-mrlucky-orejona-organica-250g-3285549/p",
+    "precio_actual": 9.9,
+    "precio_maximo": 57.5,
+    "descuento": 83,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 82.78,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:57.563873+00:00",
+    "precio_alertado": 9.9
+  },
+  "chedraui|title:chile jalapeno por kg": {
+    "tienda": "Chedraui",
+    "titulo": "Chile Jalapeño por Kg",
+    "marca": "Frutas y Verduras",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/chile-jalapeno-por-kg-3109735/p",
+    "precio_actual": 6.7,
+    "precio_maximo": 36.9,
+    "descuento": 82,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 81.84,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:57.626038+00:00",
+    "precio_alertado": 6.7
+  },
+  "chedraui|title:corazones de lechuga mr lucky 3 piezas": {
+    "tienda": "Chedraui",
+    "titulo": "Corazones de Lechuga Mr. Lucky 3 Piezas",
+    "marca": "Mr. Lucky",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/corazones-de-lechuga-mr-lucky-3-piezas-3103019/p",
+    "precio_actual": 9.9,
+    "precio_maximo": 54.5,
+    "descuento": 82,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 81.83,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.050979+00:00",
+    "precio_alertado": 9.9
+  },
+  "chedraui|title:camara de seguridad ezviz interiores wifi 2k color cs c6": {
+    "tienda": "Chedraui",
+    "titulo": "Cámara de Seguridad EZVIZ Interiores Wifi 2K Color CS-C6",
+    "marca": "Ezviz",
+    "categoria": "Seguridad",
+    "url": "https://www.chedraui.com.mx/camara-de-seguridad-ezviz-interiores-wifi-2k-color-cs-c6-3803091/p",
+    "precio_actual": 495.0,
+    "precio_maximo": 2495.0,
+    "descuento": 80,
+    "puntuacion": 82,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 80.16,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.060657+00:00",
+    "precio_alertado": 495.0
+  },
+  "chedraui|title:queso fud manchego jalapeno 200g": {
+    "tienda": "Chedraui",
+    "titulo": "Queso Fud Manchego Jalapeño 200g",
+    "marca": "FUD",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/queso-fud-manchego-jalapeno-200g-3904275/p",
+    "precio_actual": 12.0,
+    "precio_maximo": 58.0,
+    "descuento": 79,
+    "puntuacion": 81,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 79.31,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.069700+00:00",
+    "precio_alertado": 12.0
+  },
+  "chedraui|title:figura de accion marvel hulk rojo f9299": {
+    "tienda": "Chedraui",
+    "titulo": "Figura de acción Marvel Hulk Rojo F9299",
+    "marca": "Marvel",
+    "categoria": "Juegos de Mesa y Coleccionables",
+    "url": "https://www.chedraui.com.mx/figura-de-accion-marvel-hulk-rojo-f9299-3847528/p",
+    "precio_actual": 90.4,
+    "precio_maximo": 429.0,
+    "descuento": 79,
+    "puntuacion": 81,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 78.93,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.078755+00:00",
+    "precio_alertado": 90.4
+  },
+  "chedraui|title:perchero recibidor 3 en 1 bossa con zapatera banco y estante superior": {
+    "tienda": "Chedraui",
+    "titulo": "Perchero Recibidor 3 en 1 Bossa con Zapatera, Banco y Estante Superior",
+    "marca": "Bossa",
+    "categoria": "/Hogar y jardin/",
+    "url": "https://www.chedraui.com.mx/perchero-recibidor-3-en-1-bossa-con-zapatera-banco-y-estante-superior-6023602/p",
+    "precio_actual": 999.0,
+    "precio_maximo": 4499.0,
+    "descuento": 78,
+    "puntuacion": 80,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 77.8,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.088019+00:00",
+    "precio_alertado": 999.0
+  },
+  "chedraui|title:lector de tarjeta clip total 2": {
+    "tienda": "Chedraui",
+    "titulo": "Lector de Tarjeta Clip Total 2",
+    "marca": "Clip",
+    "categoria": "/Tecnologia/",
+    "url": "https://www.chedraui.com.mx/lector-de-tarjeta-clip-total-2-3829931/p",
+    "precio_actual": 495.0,
+    "precio_maximo": 2195.0,
+    "descuento": 77,
+    "puntuacion": 79,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 77.45,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.097104+00:00",
+    "precio_alertado": 495.0
+  },
+  "chedraui|title:bafle kaiser 15 luz flama front ksw3515": {
+    "tienda": "Chedraui",
+    "titulo": "Bafle Kaiser 15\" Luz Flama Front KSW3515",
+    "marca": "Kaiser",
+    "categoria": "/Tecnologia/",
+    "url": "https://www.chedraui.com.mx/bafle-kaiser-15-luz-flama-front-ksw3515-3793186/p",
+    "precio_actual": 1395.0,
+    "precio_maximo": 5995.0,
+    "descuento": 77,
+    "puntuacion": 79,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 76.73,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.106103+00:00",
+    "precio_alertado": 1395.0
+  },
+  "chedraui|title:muneca polly pocket surtido": {
+    "tienda": "Chedraui",
+    "titulo": "Muñeca Polly Pocket Surtido",
+    "marca": "Polly Pocket",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/muneca-polly-pocket-surtido-3587420/p",
+    "precio_actual": 24.0,
+    "precio_maximo": 100.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 76.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.115042+00:00",
+    "precio_alertado": 24.0
+  },
+  "chedraui|title:muneca barbie para ninas de 3 anos en adelante": {
+    "tienda": "Chedraui",
+    "titulo": "Muñeca Barbie para niñas de 3 años en adelante",
+    "marca": "Barbie",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/muneca-barbie-para-ninas-de-3-anos-en-adelante-3854855/p",
+    "precio_actual": 103.0,
+    "precio_maximo": 429.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.99,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.123896+00:00",
+    "precio_alertado": 103.0
+  },
+  "chedraui|title:imaginext jurassic world dinosaurio de juguete baby dinos 1 pieza": {
+    "tienda": "Chedraui",
+    "titulo": "Imaginext Jurassic World Dinosaurio de Juguete Baby Dinos 1 Pieza",
+    "marca": "Imaginext",
+    "categoria": "Juguetes",
+    "url": "https://www.chedraui.com.mx/imaginext-jurassic-world-dinosaurio-de-juguete-baby-dinos-1-pieza-3865318/p",
+    "precio_actual": 24.0,
+    "precio_maximo": 99.9,
+    "descuento": 76,
+    "puntuacion": 93,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.98,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.132906+00:00",
+    "precio_alertado": 24.0
+  },
+  "chedraui|title:figura de accion wwe para ninos de 6 anos en adelante": {
+    "tienda": "Chedraui",
+    "titulo": "Figura de Acción WWE para Niños de 6 años en Adelante",
+    "marca": "Mattel",
+    "categoria": "Juegos de Mesa y Coleccionables",
+    "url": "https://www.chedraui.com.mx/figura-de-accion-wwe-para-ninos-de-6-anos-en-adelante-3854830/p",
+    "precio_actual": 96.0,
+    "precio_maximo": 399.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.94,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.141672+00:00",
+    "precio_alertado": 96.0
+  },
+  "chedraui|title:barbie dream besties muneca renee de playa": {
+    "tienda": "Chedraui",
+    "titulo": "Barbie Dream Besties Muñeca Renee de Playa",
+    "marca": "Barbie",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/barbie-dream-besties-muneca-renee-de-playa-3865189/p",
+    "precio_actual": 96.0,
+    "precio_maximo": 399.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.94,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.150416+00:00",
+    "precio_alertado": 96.0
+  },
+  "chedraui|title:muneca barbie animalitos con globos 1 pieza": {
+    "tienda": "Chedraui",
+    "titulo": "Muñeca Barbie Animalitos con Globos 1 Pieza",
+    "marca": "Barbie",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/muneca-barbie-animalitos-con-globos-1-pieza-3865183/p",
+    "precio_actual": 96.0,
+    "precio_maximo": 399.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.94,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.159238+00:00",
+    "precio_alertado": 96.0
+  },
+  "chedraui|title:vehiculo hot wheels skate multipack": {
+    "tienda": "Chedraui",
+    "titulo": "Vehículo Hot Wheels Skate Multipack",
+    "marca": "Hot Wheels",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/vehiculo-hot-wheels-skate-multipack-3773113/p",
+    "precio_actual": 91.0,
+    "precio_maximo": 378.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.93,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.167970+00:00",
+    "precio_alertado": 91.0
+  },
+  "chedraui|title:accesorios para muneca barbie moditas paquete de 2": {
+    "tienda": "Chedraui",
+    "titulo": "Accesorios para muñeca Barbie Moditas paquete de 2",
+    "marca": "Barbie",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/accesorios-para-muneca-barbie-moditas-paquete-de-2-3736011/p",
+    "precio_actual": 60.0,
+    "precio_maximo": 249.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.9,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.176936+00:00",
+    "precio_alertado": 60.0
+  },
+  "chedraui|title:complemento para pistas hot wheels action surtido lanzador de bolsillo": {
+    "tienda": "Chedraui",
+    "titulo": "Complemento para Pistas Hot Wheels Action Surtido Lanzador de Bolsillo",
+    "marca": "Hot Wheels",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/complemento-para-pistas-hot-wheels-action-surtido-lanzador-de-bolsillo-3506573/p",
+    "precio_actual": 35.0,
+    "precio_maximo": 145.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.86,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.185899+00:00",
+    "precio_alertado": 35.0
+  },
+  "chedraui|title:minecraft la pelicula figura de accion de 4": {
+    "tienda": "Chedraui",
+    "titulo": "Minecraft La Película Figura de Acción de 4\"",
+    "marca": "Minecraft",
+    "categoria": "Juegos de Mesa y Coleccionables",
+    "url": "https://www.chedraui.com.mx/minecraft-la-pelicula-figura-de-accion-de-4-3855451/p",
+    "precio_actual": 77.0,
+    "precio_maximo": 319.0,
+    "descuento": 76,
+    "puntuacion": 78,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.86,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.194877+00:00",
+    "precio_alertado": 77.0
+  },
+  "chedraui|title:imaginext jurassic world dinosaurio de juguete con ruedas": {
+    "tienda": "Chedraui",
+    "titulo": "Imaginext Jurassic World Dinosaurio de Juguete con Ruedas",
+    "marca": "Jurassic World",
+    "categoria": "Juguetes",
+    "url": "https://www.chedraui.com.mx/imaginext-jurassic-world-dinosaurio-de-juguete-con-ruedas-3865319/p",
+    "precio_actual": 53.0,
+    "precio_maximo": 219.0,
+    "descuento": 76,
+    "puntuacion": 93,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.8,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.203839+00:00",
+    "precio_alertado": 53.0
+  },
+  "chedraui|title:vehiculo hot wheels patineta tenis hgt46": {
+    "tienda": "Chedraui",
+    "titulo": "Vehículo Hot Wheels Patineta Tenis HGT46",
+    "marca": "Hot Wheels",
+    "categoria": "Tenis",
+    "url": "https://www.chedraui.com.mx/vehiculo-hot-wheels-patineta-tenis-hgt46-3773112/p",
+    "precio_actual": 24.0,
+    "precio_maximo": 99.0,
+    "descuento": 76,
+    "puntuacion": 98,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.76,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.212474+00:00",
+    "precio_alertado": 24.0
+  },
+  "chedraui|title:little people juguete para bebes figuras de personajes 1 pieza": {
+    "tienda": "Chedraui",
+    "titulo": "Little People Juguete para Bebés Figuras de Personajes 1 Pieza",
+    "marca": "Little People",
+    "categoria": "Juguetes",
+    "url": "https://www.chedraui.com.mx/little-people-juguete-para-bebes-figuras-de-personajes-1-pieza-3865325/p",
+    "precio_actual": 17.0,
+    "precio_maximo": 69.9,
+    "descuento": 76,
+    "puntuacion": 93,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.68,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.221412+00:00",
+    "precio_alertado": 17.0
+  },
+  "chedraui|title:chile de arbol por kg": {
+    "tienda": "Chedraui",
+    "titulo": "Chile de Árbol por Kg",
+    "marca": "Frutas y Verduras",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/chile-de-arbol-por-kg-3109739/p",
+    "precio_actual": 29.9,
+    "precio_maximo": 122.9,
+    "descuento": 76,
+    "puntuacion": 78,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.67,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.230406+00:00",
+    "precio_alertado": 29.9
+  },
+  "chedraui|title:uno juego de cartas jurassic world rebirth para ninos": {
+    "tienda": "Chedraui",
+    "titulo": "UNO Juego de Cartas Jurassic World Rebirth para Niños",
+    "marca": "Jurassic World",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/uno-juego-de-cartas-jurassic-world-rebirth-para-ninos-3865302/p",
+    "precio_actual": 29.0,
+    "precio_maximo": 119.0,
+    "descuento": 76,
+    "puntuacion": 78,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.63,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.239578+00:00",
+    "precio_alertado": 29.0
+  },
+  "chedraui|title:lector de tarjeta clip pro2 inalambrico": {
+    "tienda": "Chedraui",
+    "titulo": "Lector de Tarjeta Clip Pro2 Inalámbrico",
+    "marca": "Clip",
+    "categoria": "/Tecnologia/",
+    "url": "https://www.chedraui.com.mx/lector-de-tarjeta-clip-pro2-inalambrico-3788976/p",
+    "precio_actual": 295.0,
+    "precio_maximo": 1195.0,
+    "descuento": 75,
+    "puntuacion": 77,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.31,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.248615+00:00",
+    "precio_alertado": 295.0
+  },
+  "chedraui|title:peluche electronico furby dj furby": {
+    "tienda": "Chedraui",
+    "titulo": "Peluche Electrónico Furby DJ Furby",
+    "marca": "Furby",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/peluche-electronico-furby-dj-furby-3878416/p",
+    "precio_actual": 417.6,
+    "precio_maximo": 1589.0,
+    "descuento": 74,
+    "puntuacion": 76,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 73.72,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.257681+00:00",
+    "precio_alertado": 417.6
+  },
+  "chedraui|title:audifonos motorola moto buds bass negro": {
+    "tienda": "Chedraui",
+    "titulo": "Audifonos Motorola Moto Buds Bass Negro",
+    "marca": "Motorola",
+    "categoria": "Audífonos",
+    "url": "https://www.chedraui.com.mx/audifonos-motorola-moto-buds-bass-negro-6027972/p",
+    "precio_actual": 724.0,
+    "precio_maximo": 2599.0,
+    "descuento": 72,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 72.14,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.266160+00:00",
+    "precio_alertado": 724.0
+  },
+  "chedraui|title:audifonos motorola moto buds bass azul": {
+    "tienda": "Chedraui",
+    "titulo": "Audifonos Motorola Moto Buds Bass Azul",
+    "marca": "Motorola",
+    "categoria": "Audífonos",
+    "url": "https://www.chedraui.com.mx/audifonos-motorola-moto-buds-bass-azul-6027969/p",
+    "precio_actual": 724.0,
+    "precio_maximo": 2599.0,
+    "descuento": 72,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 72.14,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.274687+00:00",
+    "precio_alertado": 724.0
+  },
+  "chedraui|title:jugo kombucha solem infusion antiox botella 290ml": {
+    "tienda": "Chedraui",
+    "titulo": "Jugo Kombucha Solem Infusión Antiox Botella 290ml",
+    "marca": "Solem",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/jugo-kombucha-solem-infusion-antiox-botella-290ml-3736345/p",
+    "precio_actual": 9.9,
+    "precio_maximo": 34.9,
+    "descuento": 72,
+    "puntuacion": 94,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 71.63,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.542271+00:00",
+    "precio_alertado": 9.9
+  },
+  "chedraui|title:pista hot wheels mario k carrera selva": {
+    "tienda": "Chedraui",
+    "titulo": "Pista Hot Wheels Mario K. Carrera Selva",
+    "marca": "Hot Wheels",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/pista-hot-wheels-mario-k-carrera-selva-3773110/p",
+    "precio_actual": 336.0,
+    "precio_maximo": 1179.0,
+    "descuento": 72,
+    "puntuacion": 94,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 71.5,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.551093+00:00",
+    "precio_alertado": 336.0
+  },
+  "chedraui|title:platano dominico por kg": {
+    "tienda": "Chedraui",
+    "titulo": "Plátano Dominico por Kg",
+    "marca": "Frutas y Verduras",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/platano-dominico-por-kg-3102824/p",
+    "precio_actual": 12.9,
+    "precio_maximo": 45.0,
+    "descuento": 71,
+    "puntuacion": 73,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 71.33,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.560032+00:00",
+    "precio_alertado": 12.9
+  },
+  "chedraui|title:bicicleta infantil veloci para nina 16r 1v freno v brake azul heart beat": {
+    "tienda": "Chedraui",
+    "titulo": "Bicicleta Infantil Veloci para Niña 16R 1V Freno V Brake Azul Heart Beat",
+    "marca": "Veloci",
+    "categoria": "Bicicletas y Scooters",
+    "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nina-16r-1v-freno-v-brake-azul-heart-beat-6016738/p",
+    "precio_actual": 1999.0,
+    "precio_maximo": 6798.0,
+    "descuento": 71,
+    "puntuacion": 73,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.59,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.568440+00:00",
+    "precio_alertado": 1999.0
+  },
+  "chedraui|title:capsulas de cafe blason espresso 10 piezas": {
+    "tienda": "Chedraui",
+    "titulo": "Cápsulas De Café Blasón Espresso 10 Piezas",
+    "marca": "Blasón",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/capsulas-de-cafe-blason-espresso-10-piezas-3636188/p",
+    "precio_actual": 33.0,
+    "precio_maximo": 111.0,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.27,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.576993+00:00",
+    "precio_alertado": 33.0
+  },
+  "chedraui|title:jitomate saladet campo vivo organico 450g": {
+    "tienda": "Chedraui",
+    "titulo": "Jitomate Saladet Campo Vivo Orgánico 450g",
+    "marca": "Campo Vivo",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/jitomate-saladet-campo-vivo-organico-450g-3334617/p",
+    "precio_actual": 14.9,
+    "precio_maximo": 49.9,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.14,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.585660+00:00",
+    "precio_alertado": 14.9
+  },
+  "chedraui|title:porta laptop fifa edicion 2026 negro": {
+    "tienda": "Chedraui",
+    "titulo": "Porta Laptop FIFA Edicion 2026 Negro",
+    "marca": "Selección Mexicana",
+    "categoria": "Laptops",
+    "url": "https://www.chedraui.com.mx/null-3903312/p",
+    "precio_actual": 238.5,
+    "precio_maximo": 795.0,
+    "descuento": 70,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.594147+00:00",
+    "precio_alertado": 238.5
+  },
+  "chedraui|title:te mccormick jengibre limon y te manzanilla frambuesa coco y vainilla con taza lavanda 3 pzs": {
+    "tienda": "Chedraui",
+    "titulo": "Té McCormick Jengibre Limón y Té Manzanilla Frambuesa, Coco y Vainilla con Taza Lavanda 3 pzs",
+    "marca": "McCormick",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/te-mccormick-jengibre-limon-y-te-manzanilla-frambuesa-coco-y-vainilla-con-taza-lavanda-3-pzs-3886504/p",
+    "precio_actual": 36.0,
+    "precio_maximo": 120.0,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.603045+00:00",
+    "precio_alertado": 36.0
+  },
+  "chedraui|title:te mccormick limon y te manzanilla palomitas y caramelo con taza azul 3 pzs": {
+    "tienda": "Chedraui",
+    "titulo": "Té McCormick Limón y Té Manzanilla Palomitas y Caramelo con Taza Azul 3 pzs",
+    "marca": "McCormick",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/te-mccormick-limon-y-te-manzanilla-palomitas-y-caramelo-con-taza-azul-3-pzs-3886502/p",
+    "precio_actual": 36.0,
+    "precio_maximo": 120.0,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.611895+00:00",
+    "precio_alertado": 36.0
+  },
+  "chedraui|title:porta laptop fifa edicion 2026 blanco": {
+    "tienda": "Chedraui",
+    "titulo": "Porta Laptop FIFA Edición 2026 Blanco",
+    "marca": "Selección Mexicana",
+    "categoria": "Laptops",
+    "url": "https://www.chedraui.com.mx/null-3903314/p",
+    "precio_actual": 238.5,
+    "precio_maximo": 795.0,
+    "descuento": 70,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.620335+00:00",
+    "precio_alertado": 238.5
+  },
+  "chedraui|title:tote bag fifa mascota canada ctbmascan13": {
+    "tienda": "Chedraui",
+    "titulo": "Tote bag FIFA mascota Canadá ctbmascan13",
+    "marca": "Sunbeam",
+    "categoria": "Mascotas",
+    "url": "https://www.chedraui.com.mx/tote-bag-fifa-mascota-canada-ctbmascan13-3903269/p",
+    "precio_actual": 73.5,
+    "precio_maximo": 245.0,
+    "descuento": 70,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.628662+00:00",
+    "precio_alertado": 73.5
+  },
+  "chedraui|title:tote bag fifa mascota mexico ctbmasmex12": {
+    "tienda": "Chedraui",
+    "titulo": "Tote bag FIFA mascota Mexico ctbmasmex12",
+    "marca": "Sunbeam",
+    "categoria": "Mascotas",
+    "url": "https://www.chedraui.com.mx/tote-bag-fifa-mascota-mexico-ctbmasmex12-3903268/p",
+    "precio_actual": 73.5,
+    "precio_maximo": 245.0,
+    "descuento": 70,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.637107+00:00",
+    "precio_alertado": 73.5
+  },
+  "chedraui|title:tote bag fifa mascota eu ctbmasusa11": {
+    "tienda": "Chedraui",
+    "titulo": "Tote bag FIFA mascota eu ctbmasusa11",
+    "marca": "Sunbeam",
+    "categoria": "Mascotas",
+    "url": "https://www.chedraui.com.mx/tote-bag-fifa-mascota-eu-ctbmasusa11-3903267/p",
+    "precio_actual": 73.5,
+    "precio_maximo": 245.0,
+    "descuento": 70,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.645526+00:00",
+    "precio_alertado": 73.5
+  },
+  "chedraui|title:tote bag fifa ctbf2610": {
+    "tienda": "Chedraui",
+    "titulo": "Tote bag FIFA ctbf2610",
+    "marca": "Sunbeam",
+    "categoria": "/Hogar y jardin/",
+    "url": "https://www.chedraui.com.mx/tote-bag-fifa-ctbf2610-3903266/p",
+    "precio_actual": 73.5,
+    "precio_maximo": 245.0,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.654031+00:00",
+    "precio_alertado": 73.5
+  },
+  "chedraui|title:hielera inflable snm smhi wh blanca": {
+    "tienda": "Chedraui",
+    "titulo": "Hielera Inflable snm smhi-wh Blanca",
+    "marca": "Selección Mexicana",
+    "categoria": "/Deportes/",
+    "url": "https://www.chedraui.com.mx/hielera-inflable-snm-smhi-wh-blanca-3901989/p",
+    "precio_actual": 149.7,
+    "precio_maximo": 499.0,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.662723+00:00",
+    "precio_alertado": 149.7
+  },
+  "chedraui|title:hielera inflable snm smhi gn verde": {
+    "tienda": "Chedraui",
+    "titulo": "Hielera inflable snm smhi-gn verde",
+    "marca": "Selección Mexicana",
+    "categoria": "/Deportes/",
+    "url": "https://www.chedraui.com.mx/hielera-inflable-snm-smhi-gn-verde-3901988/p",
+    "precio_actual": 149.7,
+    "precio_maximo": 499.0,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:09:59.671385+00:00",
+    "precio_alertado": 149.7
+  },
+  "chedraui|title:vaso cervecero snm 32oz smvck": {
+    "tienda": "Chedraui",
+    "titulo": "Vaso Cervecero snm 32oz smvck",
+    "marca": "Selección Mexicana",
+    "categoria": "/Hogar y jardin/",
+    "url": "https://www.chedraui.com.mx/vaso-cervecero-snm-32oz-smvck-3901987/p",
+    "precio_actual": 8.7,
+    "precio_maximo": 29.0,
+    "descuento": 70,
+    "puntuacion": 92,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:00.887025+00:00",
+    "precio_alertado": 8.7
+  },
+  "chedraui|title:vaso cervecero snm 32 oz smvcg": {
+    "tienda": "Chedraui",
+    "titulo": "Vaso Cervecero snm 32 oz smvcg",
+    "marca": "Selección Mexicana",
+    "categoria": "/Hogar y jardin/",
+    "url": "https://www.chedraui.com.mx/vaso-cervecero-snm-32-oz-smvcg-3901986/p",
+    "precio_actual": 8.7,
+    "precio_maximo": 29.0,
+    "descuento": 70,
+    "puntuacion": 92,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:00.957973+00:00",
+    "precio_alertado": 8.7
+  },
+  "chedraui|title:vaso cervecero snm 32 oz smvag": {
+    "tienda": "Chedraui",
+    "titulo": "Vaso Cervecero snm 32 oz smvag",
+    "marca": "Selección Mexicana",
+    "categoria": "/Hogar y jardin/",
+    "url": "https://www.chedraui.com.mx/vaso-cervecero-snm-32-oz-smvag-3901985/p",
+    "precio_actual": 8.7,
+    "precio_maximo": 29.0,
+    "descuento": 70,
+    "puntuacion": 92,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 70.0,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.231824+00:00",
+    "precio_alertado": 8.7
+  },
+  "chedraui|title:supermercado peppa pig": {
+    "tienda": "Chedraui",
+    "titulo": "Supermercado Peppa Pig",
+    "marca": "Hasbro",
+    "categoria": "/Jugueteria/",
+    "url": "https://www.chedraui.com.mx/supermercado-peppa-pig-3770115/p",
+    "precio_actual": 177.12,
+    "precio_maximo": 579.0,
+    "descuento": 69,
+    "puntuacion": 91,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 69.41,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.240783+00:00",
+    "precio_alertado": 177.12
+  },
+  "chedraui|title:laminas pulpa negra wagyu res cross kg": {
+    "tienda": "Chedraui",
+    "titulo": "Laminas Pulpa Negra Wagyu Res Cross Kg",
+    "marca": "Productos Frescos",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/laminas-pulpa-negra-wagyu-res-cross-kg-3837398/p",
+    "precio_actual": 399.0,
+    "precio_maximo": 1299.0,
+    "descuento": 69,
+    "puntuacion": 71,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 69.28,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.249764+00:00",
+    "precio_alertado": 399.0
+  },
+  "telegram|code:b08jnjj3l4": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i M4GB30ANTXKQB482ZM0X",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_M4GB30ANTXKQB482ZM0X?linkCode=ml1&tag=liquidahorros--20&linkId=899fb2cfe9ea833a817c27edfb661f43&ascsubtag=srctok-70fcff7872b31473&btn_type=ss&btn_ref=srctok-70fcff7872b31473",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "descuento": 92,
+    "puntuacion": 93,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 91.68,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.258870+00:00",
+    "precio_alertado": 11.9
+  },
+  "telegram|code:b0dsxp9qm7": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i dl W7XW0S063RY214M890T2",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DSXP9QM7/ref=cm_sw_r_as_gl_api_gl_i_dl_W7XW0S063RY214M890T2?linkCode=ml1&tag=liquidahorros--20&linkId=b0f037a5c438723def1a2d6c44ad6d36&ascsubtag=srctok-04f725b4f6577694&btn_type=ss&btn_ref=srctok-04f725b4f6577694",
+    "precio_actual": 699.0,
+    "precio_maximo": 4699.0,
+    "descuento": 85,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 85.12,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.267837+00:00",
+    "precio_alertado": 699.0
+  },
+  "mercadolibre|title:liquid": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIO3L3DWFFFYfYrsXLqZ7B4EoQ4fKR%2FQxKOb7M869hIOLU55mPSg1HIrWxDMmYFMT09oTo7gVEFFcJTAbxHelAQ9T2LXwLoGwoeVr5TTIW3a7foxQzEVKVmpBgC%2Fi7NHnasW9fkcSpl2bfX%2BHAh7OA4vOQLh5aH%2Bpxa%2BPP%2By6S8TouHwCKzpjwWjaC18KRi1DeMIWl0%3D",
+    "precio_actual": 79.0,
+    "precio_maximo": 299.0,
+    "descuento": 74,
+    "puntuacion": 76,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 73.58,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.276823+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d6d4jsh5": {
+    "tienda": "Amazon",
+    "titulo": "B0D6D4JSH5",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D6D4JSH5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 115.89,
+    "precio_maximo": 397.12,
+    "descuento": 71,
+    "puntuacion": 73,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.82,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.285560+00:00",
+    "precio_alertado": 115.89
+  },
+  "amazon|code:b0cygwbjpk": {
+    "tienda": "Amazon",
+    "titulo": "B0CYGWBJPK",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CYGWBJPK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 409.92,
+    "precio_maximo": 1380.04,
+    "descuento": 70,
+    "puntuacion": 72,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 70.3,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.294007+00:00",
+    "precio_alertado": 409.92
+  },
+  "amazon|code:b00n9tpnf6": {
+    "tienda": "Amazon",
+    "titulo": "B00N9TPNF6",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B00N9TPNF6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 369.96,
+    "precio_maximo": 990.0,
+    "descuento": 63,
+    "puntuacion": 65,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 62.63,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.302604+00:00",
+    "precio_alertado": 369.96
+  },
+  "amazon|code:b086zlglv3": {
+    "tienda": "Amazon",
+    "titulo": "B086ZLGLV3",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B086ZLGLV3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 669.99,
+    "precio_maximo": 1831.0,
+    "descuento": 63,
+    "puntuacion": 65,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 63.41,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.311137+00:00",
+    "precio_alertado": 669.99
+  },
+  "mercadolibre|title:ofertonesmexico": {
+    "tienda": "Mercado Libre",
+    "titulo": "ofertonesmexico",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIcfE6T7GqSARUEPDxpL1S%2BTP0eAqkjKrwdYxoCRfnIwUfR%2Fvm5gYUeolW9aagVTI1YJYz6z69xYABq1p%2FOE2leGjZZIXMacHbPLe87aC0KncAEKm%2B7oSnJD8f2IlLu0o1d7dTOv5%2FHdGtf%2BcDd6GUcxpcCEUBejYHGcBOHms6pOshljH96EK2hLrXDQhtSgHWxU9hk%3D",
+    "precio_actual": 898.0,
+    "precio_maximo": 2299.0,
+    "descuento": 61,
+    "puntuacion": 64,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 60.94,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.319780+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09dm87qx6": {
+    "tienda": "Amazon",
+    "titulo": "B09DM87QX6",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09DM87QX6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 236.6,
+    "precio_maximo": 464.27,
+    "descuento": 49,
+    "puntuacion": 52,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 49.04,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.328255+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08h786slt": {
+    "tienda": "Amazon",
+    "titulo": "B08H786SLT",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08H786SLT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 379.0,
+    "precio_maximo": 699.0,
+    "descuento": 46,
+    "puntuacion": 49,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 45.78,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.336701+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fkbxyd8p": {
+    "tienda": "Amazon",
+    "titulo": "B0FKBXYD8P",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FKBXYD8P?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 839.0,
+    "precio_maximo": 1199.0,
+    "descuento": 30,
+    "puntuacion": 34,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 30.03,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.345032+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hhnvbhq5": {
+    "tienda": "Amazon",
+    "titulo": "B0HHNVBHQ5",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0HHNVBHQ5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1699.0,
+    "precio_maximo": 1699.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.353519+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d6r2663k": {
+    "tienda": "Amazon",
+    "titulo": "B0D6R2663K",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D6R2663K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1903.14,
+    "precio_maximo": 1903.14,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.361958+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b08bs6bnhp": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i 3E3HKSQG99J6Y5YT69H7",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08BS6BNHP/ref=cm_sw_r_as_gl_api_gl_i_3E3HKSQG99J6Y5YT69H7?linkCode=ml1&tag=liquidahorros--20&linkId=c1de744bb6b827d022d0a463f6fa90dd&ascsubtag=srctok-339e135674a97afb&btn_type=ss&btn_ref=srctok-339e135674a97afb",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.370706+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b07ydgwwpl": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i WE9PXX056R7AK09XDFY2",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07YDGWWPL/ref=cm_sw_r_as_gl_api_gl_i_WE9PXX056R7AK09XDFY2?linkCode=ml1&tag=liquidahorros--20&linkId=3cb1b47c8a9a6b2acb2b75f0787dded2&ascsubtag=srctok-594fbe8fc173807e&btn_type=ss&btn_ref=srctok-594fbe8fc173807e",
+    "precio_actual": 1680.0,
+    "precio_maximo": 1680.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.379411+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0dg9gffbd": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i WEQDBQTCZE39052BDRF9",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DG9GFFBD/ref=cm_sw_r_as_gl_api_gl_i_WEQDBQTCZE39052BDRF9?linkCode=ml1&tag=liquidahorros--20&linkId=c5bdf66d1a28e6b7b1a65445ddcfb7b0&ascsubtag=srctok-28ce5bc52fb31018&btn_type=ss&btn_ref=srctok-28ce5bc52fb31018",
+    "precio_actual": 2299.0,
+    "precio_maximo": 2299.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.388124+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b003tnitjo": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i TZSZ4P6YKNE7SYP39BDZ",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B003TNITJO/ref=cm_sw_r_as_gl_api_gl_i_TZSZ4P6YKNE7SYP39BDZ?linkCode=ml1&tag=liquidahorros--20&linkId=87660943723e969918a4b93b96e79eae&ascsubtag=srctok-334aea0a9ebfa1ac&btn_type=ss&btn_ref=srctok-334aea0a9ebfa1ac",
+    "precio_actual": 533.0,
+    "precio_maximo": 533.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.396922+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b07x4jg2g4": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i A14SYXB5TNVTSNZRGFSR",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07X4JG2G4/ref=cm_sw_r_as_gl_api_gl_i_A14SYXB5TNVTSNZRGFSR?linkCode=ml1&tag=liquidahorros--20&linkId=1a35c39575adf0d6376a82affae3a409&ascsubtag=srctok-22de82f4ca43f08f&btn_type=ss&btn_ref=srctok-22de82f4ca43f08f",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.405747+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0bpp8z5hl": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i 17BVDTEEMP8CW500AR9E",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BPP8Z5HL/ref=cm_sw_r_as_gl_api_gl_i_17BVDTEEMP8CW500AR9E?linkCode=ml1&tag=liquidahorros--20&linkId=5a01d3a827fe206cb64201d0f08f5df7&ascsubtag=srctok-143932c1cea2b1c1&btn_type=ss&btn_ref=srctok-143932c1cea2b1c1",
+    "precio_actual": 279.0,
+    "precio_maximo": 279.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.414713+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b07stxd8yx": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i DA1Y5NGBJT229QS0J5VF",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07STXD8YX/ref=cm_sw_r_as_gl_api_gl_i_DA1Y5NGBJT229QS0J5VF?linkCode=ml1&tag=liquidahorros--20&linkId=8b59352fecd07725a19d8166cfbb981f&ascsubtag=srctok-7a3e744803c003db&btn_type=ss&btn_ref=srctok-7a3e744803c003db",
+    "precio_actual": 838.0,
+    "precio_maximo": 838.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.423532+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0cqkl4ytb": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i K1CPD5J6VVFJKAQQFRRW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CQKL4YTB/ref=cm_sw_r_as_gl_api_gl_i_K1CPD5J6VVFJKAQQFRRW?linkCode=ml1&tag=liquidahorros--20&linkId=a63df69221667d4459b142399442736c&ascsubtag=srctok-12df2d0ccfb1191c&btn_type=ss&btn_ref=srctok-12df2d0ccfb1191c",
+    "precio_actual": 1049.0,
+    "precio_maximo": 1049.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.432418+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0dvjx97pm": {
+    "tienda": "Telegram",
+    "titulo": "ref=cm sw r as gl api gl i dl G7EH2AFH6353AY7F176Q",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DVJX97PM/ref=cm_sw_r_as_gl_api_gl_i_dl_G7EH2AFH6353AY7F176Q?linkCode=ml1&tag=liquidahorros--20&linkId=a4f00e2ee42701cf255f54457a36b015&ascsubtag=srctok-4080291c009d0ea0&btn_type=ss&btn_ref=srctok-4080291c009d0ea0",
+    "precio_actual": 399.0,
+    "precio_maximo": 399.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.441241+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0fvybt4rd": {
+    "tienda": "Telegram",
+    "titulo": "B0FVYBT4RD",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FVYBT4RD?ascsubtag=srctok-4a93753d7bd3a4bb&btn_type=ss&btn_ref=srctok-790d0e5e8d9255f6&linkCode=sl2&tag=liquidapromos01-20&linkId=1a58002f72f102480eeafdda3149ebd2&ref_=as_li_ss_tl",
+    "precio_actual": 1619.0,
+    "precio_maximo": 1619.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.449680+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:liquidapromos": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquidapromos",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BMkZ9leMa34r7j9tQs9C0dV%2BplxqeL1NQf5k5%2BC94VBflMTwGzqdcPUUM6ggoT23BAW94d0RMAP%2B0XM4UajCtt0B0b%2FpQLEEiKdJz7jjYOV45IMmugXwYULmAN%2F5455mA%2FfHIfj6wR%2FT3ATW6HV9Hupd1knwlAF34QFFHZqb41f6aKSOnfX%2F04YXdpE6f3WanrNpdSZtlYKe1PSwkg%3D%3D",
+    "precio_actual": 157.0,
+    "precio_maximo": 157.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.458126+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0cts7223w": {
+    "tienda": "Telegram",
+    "titulo": "B0CTS7223W",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CTS7223W?smid=AVDBXBAVVSXLQ&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=f3ab28d4048f04e488e53612d4291025&ref_=as_li_ss_tl&ascsubtag=srctok-1c6c9638c13e86d2&btn_type=ss&btn_ref=srctok-1c6c9638c13e86d2",
+    "precio_actual": 445.0,
+    "precio_maximo": 445.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.466818+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0fcxjl5f7": {
+    "tienda": "Telegram",
+    "titulo": "B0FCXJL5F7",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FCXJL5F7?ascsubtag=ppr-mx-613230347&th=1&linkCode=sl2&tag=liquidapromos01-20&linkId=9114159674de74269d2f18b4388a5c3f&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-39f2750b579a1441",
+    "precio_actual": 1389.0,
+    "precio_maximo": 1389.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.475563+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0cygwbjpk": {
+    "tienda": "Telegram",
+    "titulo": "B0CYGWBJPK",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/Nanuya-Large-Dog-Orthopedic-Washable/dp/B0CYGWBJPK?pf_rd_r=WYXYM2X6RN41CTTGWA3H&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&ascsubtag=srctok-1f98501719d60f5b&btn_type=ss&btn_ref=srctok-5cb477731f1fcd19&linkCode=sl2&tag=liquidapromosmx-20&linkId=2bea1ecbd05f9dbcded0e7e08e334853&ref_=as_li_ss_tl",
+    "precio_actual": 409.0,
+    "precio_maximo": 409.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.484407+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b08c5h9n74": {
+    "tienda": "Telegram",
+    "titulo": "B08C5H9N74",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B08C5H9N74?social_share=cm_sw_r_cso_cp_apin_dp_SY03A385W85EZAR6MW4N&ascsubtag=ppr-mx-613164996&btn_type=ss&btn_ref=srctok-7cd081f020091678&linkCode=sl2&tag=liquidapromosmx-20&linkId=f6cd6dffc7ee7c7288a5ded5140f2f77&ref_=as_li_ss_tl",
+    "precio_actual": 895.0,
+    "precio_maximo": 895.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.493052+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b01lxgchrw": {
+    "tienda": "Telegram",
+    "titulo": "B01LXGCHRW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B01LXGCHRW?smid=AVDBXBAVVSXLQ&ascsubtag=ppr-mx-613241714&th=1&linkCode=sl2&tag=yteliquidapromos-20&linkId=e6b4463764e898ec4c19ee197c121180&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-4c7d9aeeb51c0dd4",
+    "precio_actual": 594.0,
+    "precio_maximo": 594.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.501657+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dvjx97pm": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick HD (modelo más reciente): Control remoto por voz Alexa que recibe alimentación a través de la televisión y se configura fácilmente 4.2 4.2 (1660) Promoción - 6",
+    "marca": "",
+    "categoria": "TV",
+    "url": "https://www.amazon.com.mx/dp/B0DVJX97PM?pd_rd_w=zezyp&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=JKKG6K3CP27K8S5XR328&pd_rd_wg=ukVLP&pd_rd_r=31f99a96-499c-4ac1-b080-8253437adf39&pd_rd_i=B0DVJX97PM&ref_=febr_c_p_r0_img",
+    "precio_actual": 399.0,
+    "precio_maximo": 1199.0,
+    "descuento": 67,
+    "puntuacion": 84,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 66.72,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.509375+00:00",
+    "precio_alertado": 399.0
+  },
+  "amazon|code:b0f7z3cbvf": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K Plus, compatible con Wi-Fi 6, Dolby Vision/Atmos, encuentra programas más rápido con Alexa+ 4.7 4.7 (5276) Promoción - 53% . 00 . 00 Precio de l",
+    "marca": "",
+    "categoria": "Streaming",
+    "url": "https://www.amazon.com.mx/dp/B0F7Z3CBVF?pd_rd_w=zezyp&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=JKKG6K3CP27K8S5XR328&pd_rd_wg=ukVLP&pd_rd_r=31f99a96-499c-4ac1-b080-8253437adf39&pd_rd_i=B0F7Z3CBVF&ref_=febr_c_p_r1_img",
+    "precio_actual": 749.0,
+    "precio_maximo": 1599.0,
+    "descuento": 53,
+    "puntuacion": 56,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 53.16,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.517352+00:00",
+    "precio_alertado": 749.0
+  },
+  "suburbia|title:week by weekend": {
+    "tienda": "Suburbia",
+    "titulo": "WEEK BY WEEKEND",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.suburbia.com.mx/tienda/pdp/Top/SB5014091999",
+    "precio_actual": 174.0,
+    "precio_maximo": 349.0,
+    "descuento": 50,
+    "puntuacion": 53,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 50.14,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.525943+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bxlzxp8d": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K Max (modelo más reciente), compatible con Wi-Fi 6E, fondo ambiental, encuentra programas más rápido con Alexa+ 4.7 4.7 (4604) Promoción - 45% . 00 $",
+    "marca": "",
+    "categoria": "Streaming",
+    "url": "https://www.amazon.com.mx/dp/B0BXLZXP8D?pd_rd_w=zezyp&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=JKKG6K3CP27K8S5XR328&pd_rd_wg=ukVLP&pd_rd_r=31f99a96-499c-4ac1-b080-8253437adf39&pd_rd_i=B0BXLZXP8D&ref_=febr_c_p_r2_img",
+    "precio_actual": 1199.0,
+    "precio_maximo": 2199.0,
+    "descuento": 45,
+    "puntuacion": 48,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 45.48,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T00:10:01.534049+00:00",
+    "precio_alertado": null
   }
 }
