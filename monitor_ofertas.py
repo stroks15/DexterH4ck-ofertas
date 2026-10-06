@@ -229,7 +229,7 @@ def revisar():
         for tienda in tiendas_esperadas
     }
     for candidato in candidatos:
-        tienda_salud = str(candidato.get("tienda") or candidato.get("store") or "Desconocida")
+        tienda_salud = canonical_store(candidato.get("tienda") or candidato.get("store") or "Desconocida")
         actual_salud = float(candidato.get("precio_actual") or candidato.get("price") or 0)
         referencia_directa = float(candidato.get("precio_anterior") or candidato.get("previous_price") or 0)
         clave_salud = candidato.get("id") or f"{tienda_salud}|{candidato.get('titulo') or candidato.get('title') or candidato.get('nombre') or ''}|{candidato.get('url') or ''}"
