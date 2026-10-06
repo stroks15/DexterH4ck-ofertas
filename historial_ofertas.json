@@ -27869,14 +27869,14 @@
     "marca": "Marvel",
     "categoria": "Juegos de Mesa y Coleccionables",
     "url": "https://www.chedraui.com.mx/figura-de-accion-marvel-hulk-rojo-f9299-3847528/p",
-    "precio_actual": 90.4,
+    "precio_actual": 113.0,
     "precio_maximo": 429.0,
-    "descuento": 79,
-    "puntuacion": 81,
+    "descuento": 74,
+    "puntuacion": 76,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 78.93,
+      "descuento_calculado": 73.66,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -27887,7 +27887,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T00:09:59.078755+00:00",
+    "ultima_actualizacion": "2026-10-06T06:58:09.815882+00:00",
     "precio_alertado": 90.4
   },
   "chedraui|title:perchero recibidor 3 en 1 bossa con zapatera banco y estante superior": {
@@ -29110,15 +29110,15 @@
     "titulo": "liquid",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIO3L3DWFFFYfYrsXLqZ7B4EoQ4fKR%2FQxKOb7M869hIOLU55mPSg1HIrWxDMmYFMT09oTo7gVEFFcJTAbxHelAQ9T2LXwLoGwoeVr5TTIW3a7foxQzEVKVmpBgC%2Fi7NHnasW9fkcSpl2bfX%2BHAh7OA4vOQLh5aH%2Bpxa%2BPP%2By6S8TouHwCKzpjwWjaC18KRi1DeMIWl0%3D",
-    "precio_actual": 79.0,
-    "precio_maximo": 299.0,
-    "descuento": 74,
-    "puntuacion": 76,
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BIxTIW8C1OvslE0wqCKZxK0zHOoA3P%2BMWjLa1mlFFAUDUC5QTcaa3pTASr4zOSNkO1NrvJ0wP%2FGtrJmE61TSBjadkfhWlSPz2kixo5hDldXEuP4c0jjkZDJeN2cXCHMh2U276zQj0B2HBD8kZ%2FI4UmIROtii4%2FS6Zy0QGSIy8FFlJGRbpcBGmNIv1zwm9daUubPwQrc%3D",
+    "precio_actual": 1299.0,
+    "precio_maximo": 1299.0,
+    "descuento": 0,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 73.58,
+      "descuento_calculado": 0,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -29129,7 +29129,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T00:10:01.276823+00:00",
+    "ultima_actualizacion": "2026-10-06T06:58:15.725282+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0d6d4jsh5": {
@@ -29657,26 +29657,27 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BO%2BFiiOQUCCik8yJcxOpVVTMGA909L02JDBCNO85Do9jktjFEpLE8J1yLw%2Blr%2Bxkk7H1g3dp95atULMEtOUst0r7psAMYB%2F%2B5xM%2BdMSJyizmomEOj2plmk3ecJELJAShtVuRyks3lgYndeFfR91jcdpxOyJm13Z817Oua2rbVt0jm4Y6ujch%2FgOwMVIMWqYqiLwYWGU%3D",
-    "precio_actual": 4998.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BKiyDGaLKSngytuDgauJ2MfnpH8OSt1wjD%2FBhCVEGzJVK8tmkih0ErNL2LL96J7NOgz8AHQEf71%2Fz2TOTwdAW93vmjf4njeVp5UwbUYfIzKLb0wye%2BAuWKbbRlTwaLchYe7ocnIE3Cat1B9R2hRSsUhODC%2Bjk0Dxl8%2Bj23hjErXULKUYcoC6E2UHdlEifhPZnUTA4yc%3D",
+    "precio_actual": 148.0,
     "precio_maximo": 4998.0,
-    "descuento": 0,
-    "puntuacion": 5,
+    "descuento": 97,
+    "puntuacion": 100,
     "extremo": {
-      "es_extremo": false,
-      "nivel": "normal",
-      "descuento_calculado": 0,
-      "es_95_99": false,
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 97.04,
+      "es_95_99": true,
       "senales": [
+        "precio_extremo",
         "url_tienda_oficial"
       ],
       "url_oficial": true,
       "precio_verificado": false,
-      "evidencia_precio": "no_verificado",
+      "evidencia_precio": "precio_no_encontrado",
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T00:48:17.420269+00:00",
+    "ultima_actualizacion": "2026-10-06T06:58:16.141804+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -30318,6 +30319,652 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-06T00:48:17.492722+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:organizador de utensilios de cocina bossa marek negro compacto multiusos": {
+    "tienda": "Chedraui",
+    "titulo": "Organizador de Utensilios de Cocina Bossa Marek Negro Compacto Multiusos",
+    "marca": "Bossa",
+    "categoria": "Cocina",
+    "url": "https://www.chedraui.com.mx/organizador-de-utensilios-de-cocina-bossa-marek-negro-compacto-multiusos-6024378/p",
+    "precio_actual": 399.0,
+    "precio_maximo": 1299.0,
+    "descuento": 69,
+    "puntuacion": 71,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 69.28,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:13.555740+00:00",
+    "precio_alertado": 399.0
+  },
+  "chedraui|title:postre en polvo d gari pudin arroz 96g": {
+    "tienda": "Chedraui",
+    "titulo": "Postre En Polvo D'Gari Pudin arroz 96g",
+    "marca": "D'Gari",
+    "categoria": "Supermercado y Despensa",
+    "url": "https://www.chedraui.com.mx/postre-en-polvo-dgari-pudin-arroz-96g-3748680/p",
+    "precio_actual": 4.5,
+    "precio_maximo": 14.5,
+    "descuento": 69,
+    "puntuacion": 91,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 68.97,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:14.607510+00:00",
+    "precio_alertado": 4.5
+  },
+  "chedraui|title:postre en polvo d gari pudin vainilla 96g": {
+    "tienda": "Chedraui",
+    "titulo": "Postre En Polvo D'Gari Pudin Vainilla 96g",
+    "marca": "D'Gari",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/postre-en-polvo-dgari-pudin-vainilla-96g-3748408/p",
+    "precio_actual": 4.5,
+    "precio_maximo": 14.5,
+    "descuento": 69,
+    "puntuacion": 91,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 68.97,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.548434+00:00",
+    "precio_alertado": 4.5
+  },
+  "amazon|code:b0cv1bwqnw": {
+    "tienda": "Amazon",
+    "titulo": "B0CV1BWQNW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CV1BWQNW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 219.82,
+    "precio_maximo": 1149.0,
+    "descuento": 81,
+    "puntuacion": 83,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 80.87,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.561446+00:00",
+    "precio_alertado": 219.82
+  },
+  "amazon|code:b0876q9gcv": {
+    "tienda": "Amazon",
+    "titulo": "B0876Q9GCV",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0876Q9GCV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 408.57,
+    "precio_maximo": 1699.0,
+    "descuento": 76,
+    "puntuacion": 78,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.95,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.569816+00:00",
+    "precio_alertado": 408.57
+  },
+  "amazon|code:b0d9r7fktk": {
+    "tienda": "Amazon",
+    "titulo": "B0D9R7FKTK",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D9R7FKTK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 479.19,
+    "precio_maximo": 1999.0,
+    "descuento": 76,
+    "puntuacion": 78,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 76.03,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.578199+00:00",
+    "precio_alertado": 479.19
+  },
+  "amazon|code:b0b64f39hb": {
+    "tienda": "Amazon",
+    "titulo": "B0B64F39HB",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0B64F39HB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 809.0,
+    "precio_maximo": 3099.0,
+    "descuento": 74,
+    "puntuacion": 76,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 73.89,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.586695+00:00",
+    "precio_alertado": 809.0
+  },
+  "amazon|code:b0d59rllg4": {
+    "tienda": "Amazon",
+    "titulo": "B0D59RLLG4",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D59RLLG4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 490.18,
+    "precio_maximo": 1399.0,
+    "descuento": 65,
+    "puntuacion": 67,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 64.96,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.595133+00:00",
+    "precio_alertado": 490.18
+  },
+  "amazon|code:b0bnyr7mqv": {
+    "tienda": "Amazon",
+    "titulo": "B0BNYR7MQV",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BNYR7MQV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 419.99,
+    "precio_maximo": 1089.0,
+    "descuento": 61,
+    "puntuacion": 64,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 61.43,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.603551+00:00",
+    "precio_alertado": 419.99
+  },
+  "amazon|code:b0fb7p1p7b": {
+    "tienda": "Amazon",
+    "titulo": "B0FB7P1P7B",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FB7P1P7B?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 437.99,
+    "precio_maximo": 1099.0,
+    "descuento": 60,
+    "puntuacion": 63,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 60.15,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.611982+00:00",
+    "precio_alertado": 437.99
+  },
+  "amazon|code:b07c5xd33d": {
+    "tienda": "Amazon",
+    "titulo": "B07C5XD33D",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07C5XD33D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 260.95,
+    "precio_maximo": 599.0,
+    "descuento": 56,
+    "puntuacion": 59,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 56.44,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.620476+00:00",
+    "precio_alertado": 260.95
+  },
+  "amazon|code:b0b8jljynp": {
+    "tienda": "Amazon",
+    "titulo": "B0B8JLJYNP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0B8JLJYNP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1799.0,
+    "precio_maximo": 3899.0,
+    "descuento": 54,
+    "puntuacion": 57,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 53.86,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.628905+00:00",
+    "precio_alertado": 1799.0
+  },
+  "amazon|code:b0ghy6s94z": {
+    "tienda": "Amazon",
+    "titulo": "GRAN OFERTA EN JBL XTREME 5!",
+    "marca": "JBL",
+    "categoria": "Bocina portátil",
+    "url": "https://www.amazon.com.mx/dp/B0GHY6S94Z",
+    "precio_actual": 4528.0,
+    "precio_maximo": 6999.0,
+    "descuento": 35,
+    "puntuacion": 59,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 35.31,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.637516+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0djcj6r5y": {
+    "tienda": "Amazon",
+    "titulo": "B0DJCJ6R5Y",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DJCJ6R5Y?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 682.77,
+    "precio_maximo": 770.6,
+    "descuento": 11,
+    "puntuacion": 16,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 11.4,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.645948+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cqkl27gn": {
+    "tienda": "Amazon",
+    "titulo": "B0CQKL27GN",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CQKL27GN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 786.0,
+    "precio_maximo": 786.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.654255+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dq2vgbh9": {
+    "tienda": "Amazon",
+    "titulo": "B0DQ2VGBH9",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DQ2VGBH9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4130.08,
+    "precio_maximo": 4130.08,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.662689+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0b6dfg1fq": {
+    "tienda": "Amazon",
+    "titulo": "B0B6DFG1FQ",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0B6DFG1FQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1696.0,
+    "precio_maximo": 1696.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.670993+00:00",
+    "precio_alertado": null
+  },
+  "telegram|title:amazonprime": {
+    "tienda": "Telegram",
+    "titulo": "amazonprime",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/amazonprime?linkCode=sl2&tag=ofertones03-20&linkId=495613467c1822c51b9d24cc2e06025f&ref_=as_li_ss_tl&ascsubtag=srctok-2fc510e44e32f2ae&btn_type=ss&btn_ref=srctok-2fc510e44e32f2ae",
+    "precio_actual": 500.0,
+    "precio_maximo": 500.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.679506+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0g1ynm8xs": {
+    "tienda": "Amazon",
+    "titulo": "B0G1YNM8XS",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0G1YNM8XS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 6196.5,
+    "precio_maximo": 6196.5,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.687890+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gwjdwnvw": {
+    "tienda": "Amazon",
+    "titulo": "B0GWJDWNVW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GWJDWNVW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4409.37,
+    "precio_maximo": 4409.37,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.696194+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h771qqgl": {
+    "tienda": "Amazon",
+    "titulo": "B0H771QQGL",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H771QQGL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4832.1,
+    "precio_maximo": 4832.1,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.704556+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h783fy5z": {
+    "tienda": "Amazon",
+    "titulo": "B0H783FY5Z",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H783FY5Z?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 589.0,
+    "precio_maximo": 589.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.712961+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09yvgd2zp": {
+    "tienda": "Amazon",
+    "titulo": "B09YVGD2ZP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09YVGD2ZP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 435.0,
+    "precio_maximo": 435.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:15.721295+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0chvnq591": {
+    "tienda": "Telegram",
+    "titulo": "B0CHVNQ591",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CHVNQ591?ascsubtag=ppr-mx-613265966&th=1&psc=1&linkCode=sl2&tag=yteliquidapromos-20&linkId=8e3a526f72c962db7c7f84ef38e668b9&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-2bc623d6622407a7",
+    "precio_actual": 599.0,
+    "precio_maximo": 599.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T06:58:16.150853+00:00",
     "precio_alertado": null
   }
 }
