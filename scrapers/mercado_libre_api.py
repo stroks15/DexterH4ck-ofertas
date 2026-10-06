@@ -72,7 +72,7 @@ class MercadoLibreApi:
         self.timeout = float(os.getenv("ML_API_TIMEOUT", "12"))
         self.delay = float(os.getenv("ML_API_DELAY", "0.20"))
         self.token = os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip()
-        self.official_only = os.getenv("ML_OFFICIAL_ONLY", "true").lower() not in {"0", "false", "no"}
+        self.official_only = os.getenv("ML_OFFICIAL_ONLY", "false").lower() not in {"0", "false", "no"}
         self.limit = min(max(int(os.getenv("ML_API_LIMIT", "50")), 1), 100)
         self.max_price_lookups = max(int(os.getenv("ML_PRICE_LOOKUPS", "40")), 0)
         self.circuit = SourceCircuit("Mercado Libre MX")
