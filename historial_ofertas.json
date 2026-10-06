@@ -29245,15 +29245,15 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BD0AaFKs1I6cae3S%2F7lJ6tdb%2B8LznNIVigA2QQQ1ofeR6jkBnfq9METHzH%2Ba5889TNPjFyT0GuatEx2jXmyvrriwknUcXqZjprbnFrEObYa0wiHC56J78RxhbjldFGVaJr%2B2imCb1XI%2Brq7DVCJqEEdfR3XCFyWcKoAiJp6ofIOOkKIMfbDV9BsRmWW1tFJxKwn4Ylo%3D",
-    "precio_actual": 1236.0,
-    "precio_maximo": 1800.0,
-    "descuento": 31,
-    "puntuacion": 35,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNMZ2n%2Bw9VoQdzKZeqdVFECvKBSuNYbUZhRhk%2BC9AGT5ev7W6YBGn1bF7XSUpYR0nPI4szUHHreYF4pDfHHmscmLG1QHCD5Hgj%2FEDAH5bA15aNe7SqDAmKmsNg%2FDryU1hiNVPSsVgUT1wWWZ9K%2FS0btlW4XikohC0N%2BBAzJKxyvNRyUHNHtwIhzhpZ472eegLd9Jwuk%3D",
+    "precio_actual": 2177.0,
+    "precio_maximo": 3299.0,
+    "descuento": 34,
+    "puntuacion": 38,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 31.33,
+      "descuento_calculado": 34.01,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T19:39:11.919409+00:00",
+    "ultima_actualizacion": "2026-10-06T23:17:23.446081+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,15 +29657,15 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BAv%2BEUgrL9z9ZEbkcInUgOdS9ClpIGQJXDoB8K5ilIUmcxDAF1Edf%2FtxC0iUQDd1Kjfj1bIzef%2BFhrFN8GA4r0rNd6JrS9IkdyJ9C9upx4T%2BAkQwqB8mHZFscQCldfxzNGvgcdDL5ac83LeT5fQYYD7Npr89KRD9eltyo5gADuJfxuuLUTUfrVWWxpQsqUvRl23eFQIWBXseecsH",
-    "precio_actual": 2054.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BJKIkwrYZ2kvhHoB05kEnJp%2F5gUacRgysmLOekVGrHqVYE3slR8%2F5HoKhi1F1eDGgf252NzPomfkt5CpXJWV3FEXMtkD7Mq8Xn6Wajehtyjhykj1NuzTlSrVd5tCApQf9e3A64suzBT60eYz%2BmREDposcSLA4q7IleqBVEA6WbdmHh9hOKO6YhMbjiIzYfqVzlNgGaG%2FeX8CnrehCw%3D%3D",
+    "precio_actual": 2804.0,
     "precio_maximo": 4000.0,
-    "descuento": 49,
-    "puntuacion": 52,
+    "descuento": 30,
+    "puntuacion": 34,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 48.65,
+      "descuento_calculado": 29.9,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T19:39:11.872864+00:00",
+    "ultima_actualizacion": "2026-10-06T23:17:23.447641+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -32551,6 +32551,745 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-06T19:39:12.177669+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:romero fresco tiempo de cosecha 50g": {
+    "tienda": "Chedraui",
+    "titulo": "Romero Fresco Tiempo de Cosecha 50g",
+    "marca": "Tiempo de Cosecha",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/romero-fresco-tiempo-de-cosecha-50g-3579253/p",
+    "precio_actual": 5.5,
+    "precio_maximo": 43.5,
+    "descuento": 87,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 87.36,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:13.698338+00:00",
+    "precio_alertado": 5.5
+  },
+  "chedraui|title:papa rosada por kg": {
+    "tienda": "Chedraui",
+    "titulo": "Papa Rosada por kg",
+    "marca": "Frutas y Verduras",
+    "categoria": "/Supermercado/",
+    "url": "https://www.chedraui.com.mx/papa-rosada-por-kg-3102857/p",
+    "precio_actual": 14.9,
+    "precio_maximo": 54.9,
+    "descuento": 73,
+    "puntuacion": 75,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 72.86,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:16.937320+00:00",
+    "precio_alertado": 14.9
+  },
+  "amazon|code:b07k2kn7d7": {
+    "tienda": "Amazon",
+    "titulo": "B07K2KN7D7",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07K2KN7D7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2366.91,
+    "precio_maximo": 5581.92,
+    "descuento": 58,
+    "puntuacion": 61,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 57.6,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.392755+00:00",
+    "precio_alertado": 2366.91
+  },
+  "amazon|code:b09vmpwwth": {
+    "tienda": "Amazon",
+    "titulo": "B09VMPWWTH",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09VMPWWTH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 419.0,
+    "precio_maximo": 899.0,
+    "descuento": 53,
+    "puntuacion": 56,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 53.39,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.400352+00:00",
+    "precio_alertado": 419.0
+  },
+  "amazon|code:b00tuaov0g": {
+    "tienda": "Amazon",
+    "titulo": "B00TUAOV0G",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B00TUAOV0G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 769.0,
+    "precio_maximo": 1597.52,
+    "descuento": 52,
+    "puntuacion": 55,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.86,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.407721+00:00",
+    "precio_alertado": 769.0
+  },
+  "amazon|code:b0c41f1z57": {
+    "tienda": "Amazon",
+    "titulo": "B0C41F1Z57",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0C41F1Z57?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 901.46,
+    "precio_maximo": 1870.0,
+    "descuento": 52,
+    "puntuacion": 55,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.79,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.415053+00:00",
+    "precio_alertado": 901.46
+  },
+  "amazon|code:b0d7kbzyvp": {
+    "tienda": "Amazon",
+    "titulo": "B0D7KBZYVP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D7KBZYVP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 811.76,
+    "precio_maximo": 1500.0,
+    "descuento": 46,
+    "puntuacion": 49,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 45.88,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.422368+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b004r8387i": {
+    "tienda": "Amazon",
+    "titulo": "B004R8387I",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B004R8387I?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 157.41,
+    "precio_maximo": 262.35,
+    "descuento": 40,
+    "puntuacion": 43,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 40.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.429668+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dqfcmk5h": {
+    "tienda": "Amazon",
+    "titulo": "B0DQFCMK5H",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DQFCMK5H?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 247.15,
+    "precio_maximo": 384.95,
+    "descuento": 36,
+    "puntuacion": 40,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 35.8,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.436972+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dkxy1rmp": {
+    "tienda": "Amazon",
+    "titulo": "B0DKXY1RMP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DKXY1RMP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 949.05,
+    "precio_maximo": 1450.0,
+    "descuento": 35,
+    "puntuacion": 39,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 34.55,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.444239+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fms95qcv": {
+    "tienda": "Amazon",
+    "titulo": "B0FMS95QCV",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FMS95QCV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 533.0,
+    "precio_maximo": 679.0,
+    "descuento": 22,
+    "puntuacion": 26,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 21.5,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.454867+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h5t7mn2k": {
+    "tienda": "Amazon",
+    "titulo": "B0H5T7MN2K",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H5T7MN2K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1259.0,
+    "precio_maximo": 1599.0,
+    "descuento": 21,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 21.26,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.462133+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0clwvh384": {
+    "tienda": "Amazon",
+    "titulo": "B0CLWVH384",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CLWVH384?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 652.24,
+    "precio_maximo": 801.98,
+    "descuento": 19,
+    "puntuacion": 23,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 18.67,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.469340+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f3jw1vt3": {
+    "tienda": "Amazon",
+    "titulo": "B0F3JW1VT3",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F3JW1VT3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 75.44,
+    "precio_maximo": 91.99,
+    "descuento": 18,
+    "puntuacion": 22,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 17.99,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.476628+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0djttb6v9": {
+    "tienda": "Amazon",
+    "titulo": "B0DJTTB6V9",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DJTTB6V9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2399.0,
+    "precio_maximo": 2905.93,
+    "descuento": 17,
+    "puntuacion": 21,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 17.44,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.483891+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fhrp5zv6": {
+    "tienda": "Amazon",
+    "titulo": "B0FHRP5ZV6",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FHRP5ZV6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1748.3,
+    "precio_maximo": 1999.0,
+    "descuento": 13,
+    "puntuacion": 17,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 12.54,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.491174+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07pcxz4cp": {
+    "tienda": "Amazon",
+    "titulo": "B07PCXZ4CP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07PCXZ4CP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 914.47,
+    "precio_maximo": 1030.0,
+    "descuento": 11,
+    "puntuacion": 16,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 11.22,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.498425+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fsqcy6wq": {
+    "tienda": "Amazon",
+    "titulo": "B0FSQCY6WQ",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FSQCY6WQ",
+    "precio_actual": 4372.0,
+    "precio_maximo": 4372.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.505671+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cyhgtmnh": {
+    "tienda": "Amazon",
+    "titulo": "B0CYHGTMNH",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CYHGTMNH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4188.9,
+    "precio_maximo": 4188.9,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.512925+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0cqkl27gn": {
+    "tienda": "Telegram",
+    "titulo": "B0CQKL27GN",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CQKL27GN?ascsubtag=ppr-mx-613447036&th=1&linkCode=sl2&tag=liquidahorros--20&linkId=cda210b7e3e1cf7aeae310f9e1b4f13d&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-39496eb5e77a5c93",
+    "precio_actual": 891.0,
+    "precio_maximo": 891.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.535819+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b08j2tfrtd": {
+    "tienda": "Telegram",
+    "titulo": "B08J2TFRTD",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/Remington-Plancha-alaciadora-wet2straight-cabello/dp/B08J2TFRTD?pd_rd_w=W9gpw&content-id=amzn1.sym.26cb1de2-7812-494b-977c-cca848eca5cb&pf_rd_p=26cb1de2-7812-494b-977c-cca848eca5cb&pf_rd_r=5BE03G9MPQ4P63PMBDD2&pd_rd_wg=vVBLU&pd_rd_r=a3f4d773-c92c-447e-8f03-6ec473917dcb&pd_rd_i=B08J2TFRTD&psc=1&linkCode=sl2&tag=liquidapromos01-20&linkId=832625092a5a6c19b9686bc337e33522&ref_=as_li_ss_tl&ascsubtag=srctok-42ceaccba2d3e31e&btn_type=ss&btn_ref=srctok-42ceaccba2d3e31e",
+    "precio_actual": 849.0,
+    "precio_maximo": 849.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.545025+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0cnq4djrv": {
+    "tienda": "Telegram",
+    "titulo": "B0CNQ4DJRV",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/LOr%C3%A9al-Paris-maquillaje-duraci%C3%B3n-Infallible/dp/B0CNQ4DJRV?pd_rd_w=fhOe5&content-id=amzn1.sym.92852a38-e564-48db-9017-6a4b73e42673&pf_rd_p=92852a38-e564-48db-9017-6a4b73e42673&pf_rd_r=7W5BXZS5QVAE531ZED1B&pd_rd_wg=0SfxV&pd_rd_r=83073734-6158-43af-9d51-c1233bb90ef5&pd_rd_i=B0CNQ4DJRV&th=1&linkCode=sl2&tag=liquidapromos01-20&linkId=4af86be72d6bd630a0a7c5545f2dbc68&ref_=as_li_ss_tl&ascsubtag=srctok-7eff5cfca386e671&btn_type=ss&btn_ref=srctok-7eff5cfca386e671",
+    "precio_actual": 206.0,
+    "precio_maximo": 206.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.552478+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0f25jh9fd": {
+    "tienda": "Telegram",
+    "titulo": "B0F25JH9FD",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/Vileda-Sistema-Limpieza-Repuesto-Adicional/dp/B0F25JH9FD?pf_rd_r=54F8X5SY89CT5WNX7P0H&pf_rd_p=4184477a-0db8-4623-ab03-b05fedfe1e5d&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromos01-20&linkId=2306039c4c21d34855b68297c1ba2bb5&ref_=as_li_ss_tl&ascsubtag=srctok-63bdd6e8559b573a&btn_type=ss&btn_ref=srctok-63bdd6e8559b573a",
+    "precio_actual": 1049.0,
+    "precio_maximo": 1049.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.560034+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0dxdzrf2v": {
+    "tienda": "Telegram",
+    "titulo": "B0DXDZRF2V",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/Marcadores-Acr%C3%ADlicos-Colores-Punta-Brush/dp/B0DXDZRF2V?pd_rd_w=mFDoR&content-id=amzn1.sym.70f541df-08c9-47b3-945f-f0ea79a6da36&pf_rd_p=70f541df-08c9-47b3-945f-f0ea79a6da36&pf_rd_r=SHXN4M6Q49XJNPFTV0H3&pd_rd_wg=wsaHk&pd_rd_r=d755c1dd-d352-47d9-aedb-abbe295b7e8f&pd_rd_i=B0DXDZRF2V&th=1&linkCode=sl2&tag=liquidapromos01-20&linkId=72e2de386d4e63fc6237de731ae6d023&ref_=as_li_ss_tl&ascsubtag=srctok-19d90f7377dedc87&btn_type=ss&btn_ref=srctok-19d90f7377dedc87",
+    "precio_actual": 522.0,
+    "precio_maximo": 522.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.567473+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b09f4pdnfp": {
+    "tienda": "Telegram",
+    "titulo": "B09F4PDNFP",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/Repuesto-Aromatizante-Autom%C3%A1tico-Aerosol-Elegancia/dp/B09F4PDNFP?pf_rd_r=DKWYGNQ60JWEZK4B877J&pf_rd_p=42f2f52f-bf1d-4134-a613-b9ae3b89e769&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1&linkCode=sl2&tag=liquidapromos01-20&linkId=1a94905ddffd55e55d4a4f0797310396&ref_=as_li_ss_tl&ascsubtag=srctok-115857c34340b56c&btn_type=ss&btn_ref=srctok-115857c34340b56c",
+    "precio_actual": 91.0,
+    "precio_maximo": 91.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.574874+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0dr3vg3yh": {
+    "tienda": "Telegram",
+    "titulo": "B0DR3VG3YH",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/Mini-Brands-Fill-Fridge-Playset/dp/B0DR3VG3YH?pf_rd_r=3HEX8Z8N80ZDHGYT3B80&pf_rd_p=26d37d2e-f7d9-4270-b85e-d371162d08c3&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromos01-20&linkId=3ce792b43bc0e5ca35d3c10a2db4880d&ref_=as_li_ss_tl&ascsubtag=srctok-5e6f318c84463a0f&btn_type=ss&btn_ref=srctok-5e6f318c84463a0f",
+    "precio_actual": 447.0,
+    "precio_maximo": 447.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.582274+00:00",
+    "precio_alertado": null
+  },
+  "telegram|code:b0fbmns9k4": {
+    "tienda": "Telegram",
+    "titulo": "B0FBMNS9K4",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0FBMNS9K4?social_share=cm_sw_r_cso_cp_mwn_dp_WBPJ78TR0BFK0ZFPZMA3&ascsubtag=ppr-mx-613472353&linkCode=sl2&tag=liquidapromosmx-20&linkId=ca8f01b324302920377be995b9dd3747&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-4d981de28390fcb9",
+    "precio_actual": 199.0,
+    "precio_maximo": 199.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.589682+00:00",
+    "precio_alertado": null
+  },
+  "telegram|title:wd6000t 18kg white wd18t6000gw ax": {
+    "tienda": "Telegram",
+    "titulo": "wd6000t 18kg white wd18t6000gw ax",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.samsung.com/mx/washers-and-dryers/washer-dryer-combo/wd6000t-18kg-white-wd18t6000gw-ax/?aw_affid=2597657&awc=105411_1791328622_d45c62614a1977ce9f7c2331d5f04888&cid=mx_pd_affiliate_awin_none_none_test-awin_image_test_none-2597657_01",
+    "precio_actual": 25499.0,
+    "precio_maximo": 25499.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-06T23:17:23.597151+00:00",
     "precio_alertado": null
   }
 }
