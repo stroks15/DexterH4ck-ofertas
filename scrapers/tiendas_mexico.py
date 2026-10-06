@@ -137,7 +137,7 @@ def es_url_producto(url, base):
         ("chedraui.com.mx", ("/p/", "/p")),
         ("liverpool.com.mx", ("/pdp/", "/producto/", "/p/")),
         ("coppel.com", ("/p/", "/producto/")),
-        ("suburbia.com.mx", ("/producto/", "/p/", "/tienda/p/")),
+        ("suburbia.com.mx", ("/producto/", "/p/", "/tienda/p/", "/tienda/pdp/")),
         ("soriana.com", ("/producto/", "/p/")),
     )
     for dominio, rutas in patrones:
@@ -461,6 +461,9 @@ def buscar_soriana(session):
         except Exception as error:
             print(f"Soriana: error procesando '{consulta}': {error}")
     resultados = list(vistos.values())
+    if not resultados:
+        print("Soriana: 0 candidatos en HTML directo; activando fallback de enlaces públicos indexados.")
+        resultados = buscar_soriana_desde_google(session)
     print(f"Soriana: {len(resultados)} productos/enlaces candidatos")
     return resultados
 
@@ -745,9 +748,9 @@ def buscar_coppel(session):
 
 def buscar_suburbia(session):
     urls = [
-        "https://www.suburbia.com.mx/tienda/ofertas/catst62289453",
         "https://www.suburbia.com.mx/",
         "https://www.suburbia.com.mx/tienda/home",
+        "https://www.suburbia.com.mx/tienda/pdp/Top/SB5014091999",
     ]
     return buscar_urls_oficiales("Suburbia", urls, session, True)
 
@@ -839,7 +842,7 @@ def buscar_todas():
     """
     skip = {x.strip() for x in os.environ.get("PREFLIGHT_SKIP_SOURCES", "").split(",") if x.strip()}
     tareas = [(nombre, plantilla) for nombre, plantilla in TIENDAS.items()
-              if nombre != "Oferstock" and nombre not in skip]
+              if nombre not in skip]
 
     def ejecutar(tarea):
         nombre, plantilla = tarea
@@ -883,6 +886,8 @@ def buscar_todas():
                 return buscar_coppel(session)
             if nombre == "Suburbia":
                 return buscar_suburbia(session)
+            if nombre == "Oferstock":
+                return buscar_oferstock(session)
             return buscar_tienda(nombre, plantilla, session)
         except Exception as exc:
             print(f"{nombre}: error aislado en worker -> {type(exc).__name__}: {exc}")
