@@ -191,6 +191,15 @@ def calcular_datos(item, anterior_hist):
     dcto = round((1 - actual / referencia) * 100) if referencia > actual else 0
     return actual, referencia, dcto
 
+def buscar_vtex_coppel_suburbia():
+    """Ejecuta los adaptadores VTEX opcionales con una sola sesión por ciclo."""
+    scraper = VtexStoresScraper()
+    return (
+        scraper.fetch_coppel_liquidations()
+        + scraper.fetch_suburbia_liquidations()
+    )
+
+
 def revisar():
     historial = cargar_historial()
     avisos = []
@@ -205,10 +214,7 @@ def revisar():
     # liquidaciones oficiales + evidencia física. Un fallo no detiene las demás.
     tareas = {
         "api_first": buscar_api_first,
-        "vtex_coppel_suburbia": lambda: (
-            VtexStoresScraper().fetch_coppel_liquidations()
-            + VtexStoresScraper().fetch_suburbia_liquidations()
-        ),
+        "vtex_coppel_suburbia": buscar_vtex_coppel_suburbia,
         "feeds_comunidad": parsear_feed_comunidad_espejo,
         "comunidades_web": buscar_comunidades_web,
         "legacy": buscar_todas,
