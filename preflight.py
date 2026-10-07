@@ -31,6 +31,8 @@ PY_FILES = [
     "scrapers/bodega_aurrera_api.py",
     "scrapers/mercado_libre_api.py",
     "scrapers/feeds_comunidad_api.py",
+    "scrapers/liquidazona.py",
+    "scrapers/comunidades_web.py",
 ]
 
 SOURCES = {
@@ -81,6 +83,8 @@ def check_imports():
         "scrapers.bodega_aurrera_api",
         "scrapers.mercado_libre_api",
         "scrapers.feeds_comunidad_api",
+        "scrapers.liquidazona",
+        "scrapers.comunidades_web",
         "core.source_resilience",
     ]
     for module in modules:
