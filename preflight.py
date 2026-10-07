@@ -6,7 +6,6 @@ import time
 from pathlib import Path
 from urllib.parse import quote_plus
 
-import requests
 from curl_cffi import requests as curl_requests
 
 TIMEOUT = 12
