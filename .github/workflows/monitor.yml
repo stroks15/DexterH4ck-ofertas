@@ -38,6 +38,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: Instalar navegador para captura JSON (opcional)
+        if: ${{ vars.NETWORK_BROWSER_ENABLED == 'true' }}
+        run: |
+          pip install -r requirements-browser.txt
+          python -m playwright install --with-deps chromium
+
       - name: Verificar secretos de Telegram
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -151,6 +157,8 @@ jobs:
           BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
           WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
+          NETWORK_BROWSER_ENABLED: ${{ vars.NETWORK_BROWSER_ENABLED }}
+          NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
         run: python monitor_ofertas.py
       - name: Guardar historial con commit directo seguro
         shell: bash
