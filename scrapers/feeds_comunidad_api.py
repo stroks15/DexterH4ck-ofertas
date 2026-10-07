@@ -112,7 +112,7 @@ def parsear_feed_comunidad_espejo() -> list[dict]:
         prices = [x for x in prices if x is not None and x > 0]
         current = None
         current_match = re.search(
-            r"(?i)(?:precio\\s+(?:final|actual|oferta)|precio\\s+en\\s+oferta|ahora|a\\s+solo)\\D{0,20}\\$?\\s*([0-9][0-9,.]*)",
+            r"(?i)(?:precio\s+(?:final|actual|oferta)|precio\s+en\s+oferta|ahora|a\s+solo)\D{0,20}\$?\s*([0-9][0-9,.]*)",
             combined,
         )
         if current_match:
