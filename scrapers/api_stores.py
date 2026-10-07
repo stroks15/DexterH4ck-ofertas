@@ -35,7 +35,7 @@ class ApiStoresScraper:
         final_store_id = store_id or getattr(self.context, f"{tienda.upper()}_STORE_ID", default_store)
 
         payload = {
-            "query": "query SearchAndFilter($searchQuery: String!, $facetFilters: String, $page: Int, $size: Int, $storeId: String!) { search(query: $searchQuery, facetFilters: $facetFilters, page: $page, size: $size, storeId: $storeId) { products { id name brand canonicalUrl priceInfo { currentPrice { price } wasPrice { price } } } } }",
+            "query": "query SearchAndFilter($searchQuery: String!, $facetFilters: String, $page: Int, $size: Int, $storeId: String!) { search(query: $searchQuery, facetFilters: $facetFilters, page[...]",
             "variables": {
                 "searchQuery": search_query, 
                 "facetFilters": "[]", 
