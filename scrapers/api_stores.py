@@ -460,11 +460,4 @@ def buscar_api_first() -> list[dict[str, Any]]:
             results.extend(buscar_network_browser())
         except Exception as exc:
             print(f"[SCRAPER:NetworkBrowser] ERROR aislado: {type(exc).__name__}: {exc}")
-    try:
-        from scrapers.vtex_stores import VtexStoresScraper
-        vtex = VtexStoresScraper()
-        results.extend(vtex.fetch_coppel_liquidations())
-        results.extend(vtex.fetch_suburbia_liquidations())
-    except Exception as exc:
-        print(f"[SCRAPER:VtexStores] ERROR aislado: {type(exc).__name__}: {exc}")
     return results
