@@ -342,6 +342,7 @@ class ApiStoresScraper:
             "Accept": "application/json, text/plain, */*",
             "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
         })
+        self.gateway_bases = ENDPOINTS_REALES
         self.walmart_api = os.getenv("WALMART_GRAPHQL_URL", "").strip()
         self.bodega_api = os.getenv("BODEGA_GRAPHQL_URL", "").strip()
         self.chedraui_api = (
