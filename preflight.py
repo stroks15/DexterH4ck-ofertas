@@ -6,7 +6,7 @@ import time
 from pathlib import Path
 from urllib.parse import quote_plus
 
-import requests
+from curl_cffi import requests as curl_requests
 
 TIMEOUT = 12
 REPORT = Path("preflight_health.json")
@@ -24,6 +24,8 @@ PY_FILES = [
     "core/scraper_base.py",
     "core/source_resilience.py",
     "scrapers/api_stores.py",
+    "scrapers/vtex_stores.py",
+    "config/endpoints.py",
     "config/walmart_graphql_query.py",
     "scrapers/walmart_graphql.py",
     "scrapers/bodega_graphql.py",
@@ -74,6 +76,8 @@ def check_imports():
         "core.extreme_liquidation",
         "core.scraper_base",
         "scrapers.api_stores",
+        "scrapers.vtex_stores",
+        "config.endpoints",
         "config.walmart_graphql_query",
         "scrapers.walmart_graphql",
         "scrapers.bodega_graphql",
@@ -109,7 +113,7 @@ def check_http(session, url):
             text = response.text[:50000].lower()
             blocked = any(x in text for x in ("access denied", "captcha", "temporarily blocked", "too many requests"))
             return {"status": status, "state": "blocked_content" if blocked else "ok"}
-        except requests.RequestException as exc:
+        except Exception as exc:
             if attempt == 0:
                 time.sleep(1)
                 continue
@@ -121,7 +125,9 @@ def main():
     if not report["python_errors"]:
         report["import_errors"] = check_imports()
 
-    session = requests.Session()
+    # curl_cffi se usa como cliente HTTP compatible con los runners; no se
+    # habilita impersonación TLS ni técnicas de evasión de controles de acceso.
+    session = curl_requests.Session()
     session.headers.update(HEADERS)
     for name, url in SOURCES.items():
         result = check_http(session, url)

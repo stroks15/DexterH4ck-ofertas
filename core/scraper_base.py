@@ -13,7 +13,7 @@ from dataclasses import dataclass, field
 from typing import Any, Iterable
 import time
 
-import requests
+from curl_cffi import requests as curl_requests
 
 
 DEFAULT_HEADERS = {
@@ -38,7 +38,7 @@ class BaseScraper(ABC):
 
     def __init__(self, context: ScraperContext | None = None) -> None:
         self.context = context or ScraperContext()
-        self.session = requests.Session()
+        self.session = curl_requests.Session()
         self.session.headers.update(self.context.headers)
 
     @abstractmethod
@@ -46,7 +46,7 @@ class BaseScraper(ABC):
         """Devuelve candidatos normalizados; nunca publica directamente."""
         raise NotImplementedError
 
-    def get(self, url: str, **kwargs: Any) -> requests.Response:
+    def get(self, url: str, **kwargs: Any) -> Any:
         base_timeout = float(kwargs.pop("timeout", self.context.timeout))
         last_error: Exception | None = None
         transient = {408, 425, 429, 500, 502, 503, 504, 522, 524}
@@ -77,7 +77,7 @@ class BaseScraper(ABC):
                     time.sleep(delay)
                     continue
                 return response
-            except requests.RequestException as exc:
+            except Exception as exc:
                 last_error = exc
                 if attempt < self.context.max_retries:
                     delay = min(1.0 * (2 ** attempt), 12.0)
