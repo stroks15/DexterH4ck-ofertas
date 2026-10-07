@@ -29657,15 +29657,15 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BPTkCrB7iEie7Cm5808iw53HAx2H%2BSKXyMKS3o3wCz%2FhW662epXU5u3NkUtiycMB07k%2B8%2FVjenASY0sth9wODZ%2BR4FjcIWowGMcztv0N82z9NmwFt5NW6ftszUOsu9FGVvjbrsQFbzZHU3IcmnspncFWsAFpsugv2Sj346t7HjR4z5wA8aGQWNnJx3tvzhjrZLSG%2FN8%3D",
-    "precio_actual": 3878.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BGZ0YCCnxN9Nv8eEE5vVLOT9kXoSyRFtnpqxdx8oDJRMJ5rkmRwHcfpCmnelz1OfXWmaW6ljqg9e4w2zLHAfwGdX%2BbYL2eDQEvSJw4de1Kt7DprzczAItp4gmeo%2ByaL1xv9qp%2B%2FpYaCyhwmoUoNmLqSDFuvAWQ6rj8KTT7ObO%2FQ8ykQ%2Fkp2AzxIgcWg4%2BQ7aHRI8NDo%3D",
+    "precio_actual": 3619.0,
     "precio_maximo": 4500.0,
-    "descuento": 14,
-    "puntuacion": 18,
+    "descuento": 20,
+    "puntuacion": 24,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 13.82,
+      "descuento_calculado": 19.58,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-07T02:11:22.299233+00:00",
+    "ultima_actualizacion": "2026-10-07T02:52:40.888629+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -33510,9 +33510,9 @@
   },
   "amazon|code:b015geqom2": {
     "tienda": "Amazon",
-    "titulo": "B015GEQOM2",
-    "marca": "",
-    "categoria": "",
+    "titulo": "¡DEJA QUE EL ENCANTO TE ENVUELVA!",
+    "marca": "Ariana Grande",
+    "categoria": "Perfumes y Fragancias",
     "url": "https://www.amazon.com.mx/dp/B015GEQOM2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
     "precio_actual": 581.51,
     "precio_maximo": 881.0,
@@ -34650,6 +34650,87 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-07T02:43:43.545525+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0g1yyjvxz": {
+    "tienda": "Amazon",
+    "titulo": "B0G1YYJVXZ",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0G1YYJVXZ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1188.98,
+    "precio_maximo": 2399.0,
+    "descuento": 50,
+    "puntuacion": 53,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 50.44,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:52:40.872192+00:00",
+    "precio_alertado": 1188.98
+  },
+  "amazon|code:b0h8yct384": {
+    "tienda": "Amazon",
+    "titulo": "B0H8YCT384",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0H8YCT384?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1336.39,
+    "precio_maximo": 1999.99,
+    "descuento": 33,
+    "puntuacion": 37,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 33.18,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:52:40.885151+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0128umbl0": {
+    "tienda": "Amazon",
+    "titulo": "B0128UMBL0",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0128UMBL0?smid=AVDBXBAVVSXLQ&ascsubtag=ppr-mx-613525545&linkCode=sl2&tag=yteliquidapromos-20&linkId=7dfe99be13a92a9c0f440f6bb541db92&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-27bdf47a77f2acbf",
+    "precio_actual": 680.0,
+    "precio_maximo": 680.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:52:41.060848+00:00",
     "precio_alertado": null
   }
 }
