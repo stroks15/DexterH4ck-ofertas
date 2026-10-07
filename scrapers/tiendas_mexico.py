@@ -484,9 +484,11 @@ def buscar_soriana(session):
         except Exception as error:
             print(f"Soriana: error procesando '{consulta}': {error}")
     resultados = list(vistos.values())
-    if not resultados:
-        print("Soriana: 0 candidatos en HTML directo; activando fallback de enlaces públicos indexados.")
-        resultados = buscar_soriana_desde_google(session)
+    publicables = [x for x in resultados if (x.get("descuento") or 0) >= 50]
+    if not resultados or not publicables:
+        print("Soriana: sin candidatos publicables >=50%; activando fallback de enlaces públicos indexados.")
+        fallback = buscar_soriana_desde_google(session)
+        resultados.extend(fallback)
     print(f"Soriana: {len(resultados)} productos/enlaces candidatos")
     return resultados
 
@@ -543,20 +545,60 @@ DESCUENTO_QUERIES = [
 
 
 def verificar_pagina_producto(url, tienda, session):
+    """Verifica una PDP y prioriza el producto de la propia ficha.
+    
+    Una PDP puede contener tarjetas de productos relacionados. Nunca debemos
+    elegir como producto principal el relacionado sólo porque tenga un mayor
+    descuento. JSON-LD con URL/título coincidente tiene prioridad; las tarjetas
+    sólo son un último recurso.
+    """
     try:
         response = session.get(url, timeout=25, allow_redirects=True)
-        if response.status_code >= 400: return None
+        if response.status_code >= 400:
+            return None
+
         final_url = response.url
         soup = BeautifulSoup(response.text, "html.parser")
-        rows = extraer_json_ld(soup, tienda, final_url, False)
-        rows.extend(extraer_tarjetas(soup, tienda, final_url, False))
-        if not rows: return None
-        rows.sort(key=lambda x: (bool(x.get("precio_anterior")), x.get("descuento", 0)), reverse=True)
-        row = rows[0]
+        target_path = urlparse(final_url).path.rstrip("/").lower()
+        target_tokens = set(re.findall(r"[a-z0-9]{4,}", target_path))
+
+        json_rows = extraer_json_ld(soup, tienda, final_url, False)
+        card_rows = extraer_tarjetas(soup, tienda, final_url, False)
+
+        def score(row):
+            row_url = str(row.get("url") or "")
+            row_path = urlparse(row_url).path.rstrip("/").lower()
+            same_url = row_path == target_path
+            title_tokens = set(re.findall(
+                r"[a-z0-9]{4,}",
+                normalizar_texto(row.get("titulo", "")).lower(),
+            ))
+            overlap = len(target_tokens & title_tokens)
+            return (
+                1000 if same_url else 0,
+                min(overlap, 20),
+                20 if row.get("precio_anterior") else 0,
+                float(row.get("descuento") or 0),
+            )
+
+        rows = json_rows or []
+        if not rows:
+            rows = card_rows
+        if not rows:
+            return None
+
+        row = max(rows, key=score)
         row["url"] = final_url
         row["origen_link"] = "ficha_directa_verificada"
         row["verificado_en_tienda"] = True
+        row["imagen"] = row.get("imagen") or extraer_imagen_producto(soup, None, final_url)
         return row
+    except requests.RequestException as error:
+        print(f"{tienda}: error verificando ficha {url}: {error}")
+        return None
+    except Exception as error:
+        print(f"{tienda}: error procesando ficha {url}: {error}")
+        return None
 
 
 def _buscar_indexado_tienda(nombre, consultas, session):
