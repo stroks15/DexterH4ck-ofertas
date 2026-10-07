@@ -13,6 +13,10 @@ from __future__ import annotations
 import os
 import time
 from typing import Any
+
+from curl_cffi import requests as curl_requests
+
+from config.endpoints import ENDPOINTS_REALES, STORES_FALLBACK
 from urllib.parse import urlencode
 
 import requests
@@ -321,6 +325,113 @@ class FunctionScraper(BaseScraper):
             return []
 
 
+
+class ApiStoresScraper:
+    """Gateway HTTP para APIs públicas/configuradas.
+
+    No realiza evasión de WAF/CAPTCHA ni suplantación TLS. Los endpoints
+    GraphQL de Walmart/Bodega solo se usan cuando están configurados
+    explícitamente; si no, el orquestador conserva los scrapers públicos.
+    """
+
+    def __init__(self, context: ScraperContext | None = None):
+        self.context = context or ScraperContext()
+        self.session = curl_requests.Session()
+        self.session.headers.update(self.context.headers)
+        self.session.headers.update({
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
+        })
+        self.walmart_api = os.getenv("WALMART_GRAPHQL_URL", "").strip()
+        self.bodega_api = os.getenv("BODEGA_GRAPHQL_URL", "").strip()
+        self.chedraui_api = (
+            os.getenv("CHEDRAUI_VTEX_ENDPOINT", "").strip()
+            or "https://www.chedraui.com.mx/api/catalog_system/pub/products/search"
+        )
+        self.mercadolibre_api = (
+            os.getenv("MERCADOLIBRE_API_ENDPOINT", "").strip()
+            or "https://api.mercadolibre.com/sites/MLM/search"
+        )
+
+    def _post_json(self, url: str, payload: dict[str, Any], headers: dict[str, str] | None = None) -> dict[str, Any]:
+        if not url:
+            return {}
+        try:
+            response = self.session.post(
+                url,
+                json=payload,
+                headers=headers or {},
+                timeout=min(float(self.context.timeout) * 2, 30.0),
+            )
+            if response.status_code == 200:
+                data = response.json()
+                return data if isinstance(data, dict) else {}
+            print(f"[SCRAPER:ApiGateway] HTTP {response.status_code} en {url}")
+        except Exception as exc:
+            print(f"[SCRAPER:ApiGateway] {type(exc).__name__}: {exc}")
+        return {}
+
+    def fetch_walmart_bodega_graphql(self, tienda: str = "walmart", search_query: str = "liquidacion", store_id: str | None = None) -> dict[str, Any]:
+        tienda_key = tienda.strip().lower()
+        if tienda_key not in {"walmart", "bodega", "bodegaaurrera"}:
+            return {}
+        endpoint = self.walmart_api if tienda_key == "walmart" else self.bodega_api
+        if not endpoint:
+            return {}
+        default_store = STORES_FALLBACK["WALMART_STORE_ID"] if tienda_key == "walmart" else STORES_FALLBACK["BODEGA_STORE_ID"]
+        env_name = "WALMART_STORE_ID" if tienda_key == "walmart" else "BODEGA_STORE_ID"
+        final_store_id = store_id or os.getenv(env_name, default_store)
+        from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
+        payload = {
+            "query": WALMART_GRAPHQL_QUERY,
+            "variables": {
+                "searchQuery": search_query,
+                "facetFilters": "[]",
+                "page": 1,
+                "size": 50,
+                "storeId": str(final_store_id),
+            },
+        }
+        domain = "www.walmart.com.mx" if tienda_key == "walmart" else "www.bodegaaurrera.com.mx"
+        return self._post_json(
+            endpoint,
+            payload,
+            headers={
+                "Content-Type": "application/json",
+                "Origin": f"https://{domain}",
+                "Referer": f"https://{domain}/search?q={search_query}",
+                "X-Apollo-Operation-Name": "SearchAndFilter",
+            },
+        )
+
+    def fetch_chedraui_vtex(self) -> list[dict[str, Any]]:
+        try:
+            response = self.session.get(
+                self.chedraui_api,
+                params={"_from": "0", "_to": "49", "O": "OrderByBestDiscountDESC"},
+                timeout=min(float(self.context.timeout) * 2, 30.0),
+            )
+            if response.status_code == 200:
+                data = response.json()
+                return data if isinstance(data, list) else []
+        except Exception as exc:
+            print(f"[SCRAPER:ApiGateway:Chedraui] {type(exc).__name__}: {exc}")
+        return []
+
+    def fetch_mercado_libre_api(self, query: str = "liquidacion") -> dict[str, Any]:
+        try:
+            response = self.session.get(
+                self.mercadolibre_api,
+                params={"q": query, "limit": "50", "offset": "0"},
+                timeout=min(float(self.context.timeout) * 2, 30.0),
+            )
+            if response.status_code == 200:
+                data = response.json()
+                return data if isinstance(data, dict) else {}
+        except Exception as exc:
+            print(f"[SCRAPER:ApiGateway:MercadoLibre] {type(exc).__name__}: {exc}")
+        return {}
+
 def api_first_scrapers() -> list[BaseScraper]:
     """Construye adaptadores homogéneos y deja cada fuente aislada."""
     from scrapers.bodega_aurrera_api import buscar_bodega_graphql
@@ -348,4 +459,11 @@ def buscar_api_first() -> list[dict[str, Any]]:
             results.extend(buscar_network_browser())
         except Exception as exc:
             print(f"[SCRAPER:NetworkBrowser] ERROR aislado: {type(exc).__name__}: {exc}")
+    try:
+        from scrapers.vtex_stores import VtexStoresScraper
+        vtex = VtexStoresScraper()
+        results.extend(vtex.fetch_coppel_liquidations())
+        results.extend(vtex.fetch_suburbia_liquidations())
+    except Exception as exc:
+        print(f"[SCRAPER:VtexStores] ERROR aislado: {type(exc).__name__}: {exc}")
     return results
