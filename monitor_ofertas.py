@@ -17,6 +17,7 @@ from core.extreme_liquidation import analizar_precio_extremo
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from core.product_identifiers import canonical_product_identifier
 from scrapers.api_stores import buscar_api_first
+from scrapers.vtex_stores import VtexStoresScraper
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
 from scrapers.liquidazona import buscar_liquidazona_walmart
@@ -204,6 +205,10 @@ def revisar():
     # liquidaciones oficiales + evidencia física. Un fallo no detiene las demás.
     tareas = {
         "api_first": buscar_api_first,
+        "vtex_coppel_suburbia": lambda: (
+            VtexStoresScraper().fetch_coppel_liquidations()
+            + VtexStoresScraper().fetch_suburbia_liquidations()
+        ),
         "feeds_comunidad": parsear_feed_comunidad_espejo,
         "comunidades_web": buscar_comunidades_web,
         "legacy": buscar_todas,
