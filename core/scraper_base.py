@@ -14,6 +14,7 @@ from typing import Any, Iterable
 import time
 
 import requests
+from curl_cffi import requests as curl_requests
 
 
 DEFAULT_HEADERS = {
@@ -38,7 +39,7 @@ class BaseScraper(ABC):
 
     def __init__(self, context: ScraperContext | None = None) -> None:
         self.context = context or ScraperContext()
-        self.session = requests.Session()
+        self.session = curl_requests.Session()
         self.session.headers.update(self.context.headers)
 
     @abstractmethod
