@@ -29245,15 +29245,15 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIQbi5iK9uIOaQhOeSGlrxah%2FoHrdu3pQ0jnmSojMLOdXA7Q8rL3fgbChigeNhvNAQvMRrbAzoCuYRVtDjiRnAoYL4vxqpRndsxLRlsAKnLlmYEg4VGV3wvYelG%2B5yxBs8my0idSZS091%2F%2B9KNIFUa5ECLi4KUJmkuOdNyTP1KEzjBKV03VGdI8uSsRX8%2Fb4gM%2BwWZc%3D",
-    "precio_actual": 272.0,
-    "precio_maximo": 544.0,
-    "descuento": 50,
-    "puntuacion": 53,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDVxRIXCEgO4lklHjCCsbLQBtwvBy%2BRpB6pMNpayl8apjhqkL7%2FpGqJbc4wyNL3jsjnhRu8MZsM0%2BrlQPIuSWYoIuM7776XN3uJm27IwI28KnVZCxwc5VY5m%2FEGU97sHxoDPOJQcoEa8zvypCl02XzZLFisio3MIRTCQuCqPmNZxlgLRSm4cDpKkrzpuDcP5bGgqUg%3D%3D",
+    "precio_actual": 290.0,
+    "precio_maximo": 634.0,
+    "descuento": 54,
+    "puntuacion": 57,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 50.0,
+      "descuento_calculado": 54.26,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-07T02:11:22.243932+00:00",
+    "ultima_actualizacion": "2026-10-07T02:43:43.147763+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29806,14 +29806,14 @@
   },
   "amazon|code:b0dvjx97pm": {
     "tienda": "Amazon MX",
-    "titulo": "Amazon Fire TV Stick HD (modelo más reciente): Control remoto por voz Alexa que recibe alimentación a través de la televisión y se configura fácilmente 4.2 4.2 (1660) Promoción - 6",
+    "titulo": "ref=cm sw r as gl api gl i dl G7EH2AFH6353AY7F176Q",
     "marca": "",
     "categoria": "TV",
     "url": "https://www.amazon.com.mx/dp/B0DVJX97PM?pd_rd_w=zezyp&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=JKKG6K3CP27K8S5XR328&pd_rd_wg=ukVLP&pd_rd_r=31f99a96-499c-4ac1-b080-8253437adf39&pd_rd_i=B0DVJX97PM&ref_=febr_c_p_r0_img",
     "precio_actual": 399.0,
     "precio_maximo": 1199.0,
     "descuento": 67,
-    "puntuacion": 84,
+    "puntuacion": 69,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
@@ -30705,9 +30705,9 @@
     "titulo": "B0CQKL27GN",
     "marca": "",
     "categoria": "",
-    "url": "https://www.amazon.com.mx/dp/B0CQKL27GN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 786.0,
-    "precio_maximo": 786.0,
+    "url": "https://www.amazon.com.mx/dp/B0CQKL27GN?ascsubtag=ppr-mx-613447036&th=1&linkCode=sl2&tag=liquidahorros--20&linkId=cda210b7e3e1cf7aeae310f9e1b4f13d&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-162ccdc95aa0ab7a",
+    "precio_actual": 891.0,
+    "precio_maximo": 891.0,
     "descuento": 0,
     "puntuacion": 5,
     "extremo": {
@@ -30724,7 +30724,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T06:58:15.654255+00:00",
+    "ultima_actualizacion": "2026-10-07T02:43:43.431296+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0dq2vgbh9": {
@@ -33537,9 +33537,9 @@
   },
   "amazon|code:b0ds2b3p2b": {
     "tienda": "Amazon",
-    "titulo": "B0DS2B3P2B",
-    "marca": "",
-    "categoria": "",
+    "titulo": "DJI Pack Essential Osmo Action 4, cámara de acción 4K/120 fps",
+    "marca": "DJI",
+    "categoria": "Cámaras y Fotografía",
     "url": "https://www.amazon.com.mx/dp/B0DS2B3P2B?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
     "precio_actual": 3800.0,
     "precio_maximo": 5679.0,
@@ -33905,6 +33905,751 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-07T02:11:22.412740+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:amazon rappi 6 k tiras para dippear": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon rappi — 6 k-tiras para dippear",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.promodescuentos.com/ofertas/amazon-rappi-6-k-tiras-para-dippear-1196889",
+    "precio_actual": 70.0,
+    "precio_maximo": 70.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.118064+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:amazon momcozy automeal procesador de alimentos para bebe": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Momcozy AutoMeal Procesador de Alimentos para Bebé",
+    "marca": "",
+    "categoria": "Alimentos y Bebidas",
+    "url": "https://www.promodescuentos.com/ofertas/amzon-1196898",
+    "precio_actual": 1853.0,
+    "precio_maximo": 1853.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.126561+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dsxp9qm7": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i dl W7XW0S063RY214M890T2",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DSXP9QM7/ref=cm_sw_r_as_gl_api_gl_i_dl_W7XW0S063RY214M890T2?linkCode=ml1&tag=liquidahorros--20&linkId=b0f037a5c438723def1a2d6c44ad6d36&ascsubtag=srctok-7d5e8c6a92960db8&btn_type=ss&btn_ref=srctok-7d5e8c6a92960db8",
+    "precio_actual": 699.0,
+    "precio_maximo": 4699.0,
+    "descuento": 85,
+    "puntuacion": 87,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 85.12,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.135317+00:00",
+    "precio_alertado": 699.0
+  },
+  "amazon|code:b0d4wvy49p": {
+    "tienda": "Amazon",
+    "titulo": "B0D4WVY49P",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D4WVY49P?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 665.75,
+    "precio_maximo": 1635.99,
+    "descuento": 59,
+    "puntuacion": 62,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 59.31,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.145671+00:00",
+    "precio_alertado": 665.75
+  },
+  "amazon|code:b0f11vfp7x": {
+    "tienda": "Amazon",
+    "titulo": "B0F11VFP7X",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F11VFP7X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 810.03,
+    "precio_maximo": 1367.78,
+    "descuento": 41,
+    "puntuacion": 44,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 40.78,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.159543+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f1pfdqj4": {
+    "tienda": "Amazon",
+    "titulo": "B0F1PFDQJ4",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F1PFDQJ4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 559.03,
+    "precio_maximo": 816.43,
+    "descuento": 32,
+    "puntuacion": 36,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 31.53,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.171695+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dtkkl68r": {
+    "tienda": "Amazon",
+    "titulo": "B0DTKKL68R",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DTKKL68R?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 444.51,
+    "precio_maximo": 501.45,
+    "descuento": 11,
+    "puntuacion": 16,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 11.36,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.185279+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f2yzn5kn": {
+    "tienda": "Amazon",
+    "titulo": "B0F2YZN5KN",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F2YZN5KN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 149.0,
+    "precio_maximo": 149.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.193710+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dg9gffbd": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i WEQDBQTCZE39052BDRF9",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DG9GFFBD/ref=cm_sw_r_as_gl_api_gl_i_WEQDBQTCZE39052BDRF9?linkCode=ml1&tag=liquidahorros--20&linkId=c5bdf66d1a28e6b7b1a65445ddcfb7b0&ascsubtag=srctok-1ab3ce947d8bf89c&btn_type=ss&btn_ref=srctok-1ab3ce947d8bf89c",
+    "precio_actual": 2299.0,
+    "precio_maximo": 2299.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.202372+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b003tnitjo": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i TZSZ4P6YKNE7SYP39BDZ",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B003TNITJO/ref=cm_sw_r_as_gl_api_gl_i_TZSZ4P6YKNE7SYP39BDZ?linkCode=ml1&tag=liquidahorros--20&linkId=87660943723e969918a4b93b96e79eae&ascsubtag=srctok-72d2078f13507680&btn_type=ss&btn_ref=srctok-72d2078f13507680",
+    "precio_actual": 533.0,
+    "precio_maximo": 533.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.211005+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07x4jg2g4": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i A14SYXB5TNVTSNZRGFSR",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07X4JG2G4/ref=cm_sw_r_as_gl_api_gl_i_A14SYXB5TNVTSNZRGFSR?linkCode=ml1&tag=liquidahorros--20&linkId=1a35c39575adf0d6376a82affae3a409&ascsubtag=srctok-6817ae492e585e51&btn_type=ss&btn_ref=srctok-6817ae492e585e51",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.219670+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bpp8z5hl": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i 17BVDTEEMP8CW500AR9E",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0BPP8Z5HL/ref=cm_sw_r_as_gl_api_gl_i_17BVDTEEMP8CW500AR9E?linkCode=ml1&tag=liquidahorros--20&linkId=5a01d3a827fe206cb64201d0f08f5df7&ascsubtag=srctok-79dc66a442625b72&btn_type=ss&btn_ref=srctok-79dc66a442625b72",
+    "precio_actual": 279.0,
+    "precio_maximo": 279.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.228305+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07stxd8yx": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i DA1Y5NGBJT229QS0J5VF",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07STXD8YX/ref=cm_sw_r_as_gl_api_gl_i_DA1Y5NGBJT229QS0J5VF?linkCode=ml1&tag=liquidahorros--20&linkId=8b59352fecd07725a19d8166cfbb981f&ascsubtag=srctok-0811c6d5afef4891&btn_type=ss&btn_ref=srctok-0811c6d5afef4891",
+    "precio_actual": 838.0,
+    "precio_maximo": 838.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.236985+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cqkl4ytb": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i K1CPD5J6VVFJKAQQFRRW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CQKL4YTB/ref=cm_sw_r_as_gl_api_gl_i_K1CPD5J6VVFJKAQQFRRW?linkCode=ml1&tag=liquidahorros--20&linkId=a63df69221667d4459b142399442736c&ascsubtag=srctok-46f67da0020038d1&btn_type=ss&btn_ref=srctok-46f67da0020038d1",
+    "precio_actual": 1049.0,
+    "precio_maximo": 1049.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.245610+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b081rjqrkm": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i AM7WSS4R9S6HKYCBMP52",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B081RJQRKM/ref=cm_sw_r_as_gl_api_gl_i_AM7WSS4R9S6HKYCBMP52?linkCode=ml1&tag=liquidahorros--20&linkId=645f5b444928d30a9576fe68d6db288c&ascsubtag=srctok-452cd53191a6b993&btn_type=ss&btn_ref=srctok-452cd53191a6b993",
+    "precio_actual": 3.6,
+    "precio_maximo": 3.6,
+    "descuento": 0,
+    "puntuacion": 25,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo",
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "precio_no_encontrado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.429439+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09qv24ffz": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i Y0HD6VCQ0REGDFV92P0D",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B09QV24FFZ/ref=cm_sw_r_as_gl_api_gl_i_Y0HD6VCQ0REGDFV92P0D?linkCode=ml1&tag=liquidahorros--20&linkId=78e6e89dcb5ad85de14bbb3722777b46&ascsubtag=srctok-06779c6ea6a437f0&btn_type=ss&btn_ref=srctok-06779c6ea6a437f0",
+    "precio_actual": 5499.0,
+    "precio_maximo": 5499.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.440095+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gr6n18f6": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i N1DJ2DWE00M226AQA5JX",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GR6N18F6/ref=cm_sw_r_as_gl_api_gl_i_N1DJ2DWE00M226AQA5JX?linkCode=ml1&tag=liquidahorros--20&linkId=32c372317e45513b6d093f9c289c5e55&ascsubtag=srctok-6c368e2e561f27cf&btn_type=ss&btn_ref=srctok-6c368e2e561f27cf",
+    "precio_actual": 934.0,
+    "precio_maximo": 934.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.448850+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart cortina decorativa de interior marca hometrends 96 5cm 213 4cm con el 95 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Cortina decorativa de interior marca Hometrends / 96.5cm 213.4cm con el 95% de descuento…",
+    "marca": "",
+    "categoria": "",
+    "url": "https://liquidazona.com/ofertas/9-00-walmart-producto-descripcion-con-el-de-descuento/",
+    "precio_actual": 9.0,
+    "precio_maximo": 300.0,
+    "descuento": 97,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 97.0,
+      "es_95_99": true,
+      "senales": [
+        "precio_extremo"
+      ],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.457866+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart cartucho para afeitar marca gillette venus essential care original 2pzs aloe vera con el 95 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Cartucho para afeitar marca Gillette Venus Essential Care Original / 2pzs Aloe Vera con el 95% de descuento…",
+    "marca": "",
+    "categoria": "",
+    "url": "https://liquidazona.com/ofertas/2-00-walmart-cartucho-para-afeitar-marca-gillette-venus-essential-care-original-2pzs-aloe-vera-con-el-95-de-descuento/",
+    "precio_actual": 6.0,
+    "precio_maximo": 139.0,
+    "descuento": 96,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 95.68,
+      "es_95_99": true,
+      "senales": [
+        "precio_extremo"
+      ],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.467039+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart marco para placa marca autodrive color negro con el 95 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Marco para placa marca AutoDrive / Color Negro con el 95% de descuento…",
+    "marca": "",
+    "categoria": "",
+    "url": "https://liquidazona.com/ofertas/10-00-walmart-marco-para-placa-marca-autodrive-color-negro-con-el-95-de-descuento/",
+    "precio_actual": 10.0,
+    "precio_maximo": 199.0,
+    "descuento": 95,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 94.97,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo"
+      ],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.475823+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart juguetes de playa juego de mesa marca play day 17 piezas con el 85 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Juguetes de playa juego de mesa marca Play Day 17 piezas con el 85% de descuento…",
+    "marca": "",
+    "categoria": "Juguetes",
+    "url": "https://liquidazona.com/ofertas/21-00-walmart-juguetes-de-playa-juego-de-mesa-marca-play-day-17-piezas-con-el-de-descuento/",
+    "precio_actual": 21.0,
+    "precio_maximo": 159.0,
+    "descuento": 87,
+    "puntuacion": 100,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 86.79,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.484290+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart tines de caballero marca atleticos 3 pares color blanco con el 75 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Tines de caballero marca Atleticos / 3 pares color Blanco con el 75% de descuento…",
+    "marca": "",
+    "categoria": "",
+    "url": "https://liquidazona.com/ofertas/22-00-walmart-tines-de-caballero-marca-atleticos-3-pares-color-blanco-con-el-75-de-descuento/",
+    "precio_actual": 22.0,
+    "precio_maximo": 89.0,
+    "descuento": 75,
+    "puntuacion": 77,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.28,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.493141+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart pantalon de mezclilla para dama marca george talla eg color azul obscuro con el 75 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Pantalón de mezclilla para dama marca George / Talla EG Color Azul Obscuro con el 75% de descuento…",
+    "marca": "",
+    "categoria": "Ropa",
+    "url": "https://liquidazona.com/ofertas/92-00-walmart-pantalon-de-mezclilla-para-dama-marca-george-talla-eg-color-azul-obscuro-con-el-75-de-descuento/",
+    "precio_actual": 92.0,
+    "precio_maximo": 369.0,
+    "descuento": 75,
+    "puntuacion": 92,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 75.07,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.501578+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart shampoo para bebe marca johnsons original botella de 100ml con el 65 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Shampoo para bebé marca Johnson’s Original / Botella de 100ml con el 65% de descuento…",
+    "marca": "",
+    "categoria": "Cuidado del Cabello",
+    "url": "https://liquidazona.com/ofertas/15-00-walmart-shampoo-para-bebe-marca-johnsons-original-botella-de-100ml-con-el-65-de-descuento/",
+    "precio_actual": 15.0,
+    "precio_maximo": 45.0,
+    "descuento": 67,
+    "puntuacion": 69,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 66.67,
+      "es_95_99": false,
+      "senales": [],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.510194+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b099xbzqzb": {
+    "tienda": "Amazon MX",
+    "titulo": "Monitor inteligente de calidad del aire Amazon: detecta temperatura, humedad, monóxido de carbono, PM 2.5 y COV, proporciona notificaciones cuando la calidad del aire baja y es com",
+    "marca": "",
+    "categoria": "Monitores",
+    "url": "https://www.amazon.com.mx/dp/B099XBZQZB?pd_rd_w=pu1rh&content-id=amzn1.sym.7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a%3Aamzn1.sym.7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a&pf_rd_p=7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a&pf_rd_r=XQGXNKBY7RMBVYMTYJ3C&pd_rd_wg=Vr0SG&pd_rd_r=f2ceca0c-d678-4641-b83e-f262579a38b9&pd_rd_i=B099XBZQZB&ref_=febr_c_p_r1_img",
+    "precio_actual": 849.0,
+    "precio_maximo": 1649.0,
+    "descuento": 49,
+    "puntuacion": 52,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 48.51,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.520081+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0g1j16fcs": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Enchufe Inteligente, Compatible con Alexa, Configuración fácil y un sinfín de posibilidades (Paquete de 2) 4.8 4.8 (6341) Promoción - 47% . 00 . 00 Lista",
+    "marca": "",
+    "categoria": "Smart Home",
+    "url": "https://www.amazon.com.mx/dp/B0G1J16FCS?pd_rd_w=pu1rh&content-id=amzn1.sym.7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a%3Aamzn1.sym.7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a&pf_rd_p=7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a&pf_rd_r=XQGXNKBY7RMBVYMTYJ3C&pd_rd_wg=Vr0SG&pd_rd_r=f2ceca0c-d678-4641-b83e-f262579a38b9&pd_rd_i=B0G1J16FCS&ref_=febr_c_p_r2_img",
+    "precio_actual": 580.0,
+    "precio_maximo": 1100.0,
+    "descuento": 47,
+    "puntuacion": 50,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 47.27,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.528213+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b089dscf16": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Enchufe Inteligente, Compatible con Alexa, Configuración fácil y un sinfín de posibilidades 4.8 4.8 (6341) Promoción - 46% . 00 . 00 Precio de lista: . 00",
+    "marca": "",
+    "categoria": "Smart Home",
+    "url": "https://www.amazon.com.mx/dp/B089DSCF16?pd_rd_w=pu1rh&content-id=amzn1.sym.7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a%3Aamzn1.sym.7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a&pf_rd_p=7b3cfd56-17bd-42a5-ac87-e0a1f78dd04a&pf_rd_r=XQGXNKBY7RMBVYMTYJ3C&pd_rd_wg=Vr0SG&pd_rd_r=f2ceca0c-d678-4641-b83e-f262579a38b9&pd_rd_i=B089DSCF16&ref_=febr_c_p_r0_img",
+    "precio_actual": 299.0,
+    "precio_maximo": 550.0,
+    "descuento": 46,
+    "puntuacion": 49,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 45.64,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.536316+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart variedad de libretas y cuadernos cosidos marcas norma y scribe hasta con el 90 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Variedad de libretas y cuadernos cosidos marcas Norma y Scribe hasta con el 90% de descuento…",
+    "marca": "",
+    "categoria": "",
+    "url": "https://liquidazona.com/ofertas/5-00-walmart-variedad-de-libretas-y-cuadernos-cosidos-marcas-norma-y-scribe-hasta-con-el-90-de-descuento/",
+    "precio_actual": 5.0,
+    "precio_maximo": 5.0,
+    "descuento": 0,
+    "puntuacion": 20,
+    "extremo": {
+      "es_extremo": true,
+      "nivel": "EXTREMO",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "precio_extremo"
+      ],
+      "url_oficial": false,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T02:43:43.545525+00:00",
     "precio_alertado": null
   }
 }
