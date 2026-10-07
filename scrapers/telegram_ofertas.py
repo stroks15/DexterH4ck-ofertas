@@ -116,14 +116,39 @@ def _candidate(source, text, session=None):
     if not urls:
         return None
     external = [u for u in urls if not u.startswith(("https://t.me/", "https://telegram.me/"))]
-    url = external[0] if external else urls[0]
+    if not external:
+        return None
+
+    # Prefer URLs that identify a supported store/product. The first URL in a
+    # Telegram post is often an affiliate/shortener or an image/tracking link.
+    store_hints = (
+        "amazon.com.mx", "amzn.to", "walmart.com.mx", "bodegaaurrera.com.mx",
+        "mercadolibre.com.mx", "meli.la", "chedraui.com.mx", "soriana.com",
+        "liverpool.com.mx", "coppel.com", "suburbia.com.mx", "oferstock.com.mx",
+    )
+    ordered = sorted(
+        external,
+        key=lambda u: (
+            1 if any(host in u.lower() for host in store_hints) else 0,
+            1 if any(token in u.lower() for token in ("/ip/", "/p/", "/dp/", "/producto/", "/pdp/", "-p-")) else 0,
+        ),
+        reverse=True,
+    )
+    url = ordered[0]
     tienda = _store(text + " " + url)
     url = reparar_url(url, tienda, text)
+
+    # Resolve short/affiliate redirects when possible, then re-evaluate the
+    # store from the final URL instead of keeping the original guess.
     if session and urlparse_safe(url) in ("amzn.to", "meli.la", "mercadolibre.com", "mercadolibre.com", "bit.ly", "tidd.ly", "link.amazon"):
         try:
             r = session.get(url, headers=HEADERS, allow_redirects=True, timeout=12)
             if r.url and not r.url.startswith(("https://t.me/", "https://telegram.me/")):
-                url = reparar_url(r.url, tienda, text)
+                url = r.url
+                tienda_final = _store(text + " " + url)
+                if tienda_final != "Telegram":
+                    tienda = tienda_final
+                url = reparar_url(url, tienda, text)
         except requests.RequestException:
             pass
     if urlparse_safe(url) in ("t.me", "telegram.me"):
