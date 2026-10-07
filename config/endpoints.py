@@ -1,15 +1,15 @@
-"""Endpoints base oficiales configurados para los adaptadores de tienda.
-
-Estos valores son hosts base, no garantizan que una ruta REST/GraphQL concreta
-exista en producción. Los adaptadores deben añadir la ruta de servicio que
-corresponda a cada API/documentación disponible.
-"""
+# config/endpoints.py
 
 ENDPOINTS_REALES = {
-    "Walmart MX": "https://walmart.com.mx",
-    "Bodega Aurrera": "https://walmart.com.mx",
-    "Chedraui": "https://chedraui.com.mx",
-    "Mercado Libre MX": "https://mercadolibre.com",
-    "Coppel": "https://coppel.com",
-    "Suburbia": "https://suburbia.com.mx",
+    "WALMART_GRAPHQL": "https://walmart.com.mx",
+    "BODEGA_GRAPHQL": "https://walmart.com.mx",
+    "CHEDRAUI_VTEX": "https://chedraui.com.mx",
+    "MERCADOLIBRE_API": "https://mercadolibre.com",
+    "COPPEL_API": "https://coppel.com",
+    "SUBURBIA_API": "https://suburbia.com.mx"
+}
+
+STORES_FALLBACK = {
+    "WALMART_STORE_ID": "0000003362",
+    "BODEGA_STORE_ID": "0000003001"
 }
