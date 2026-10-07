@@ -16,6 +16,7 @@ from typing import Any
 from urllib.parse import urlencode
 
 import requests
+from curl_cffi import requests as curl_requests
 
 from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
 from core.source_resilience import SourceCircuit
@@ -42,6 +43,9 @@ class GraphQLStoreScraper(BaseScraper):
     def __init__(self, store: str, endpoint_env: str, store_id_env: str, query_env: str,
                  context: ScraperContext | None = None):
         super().__init__(context)
+        # Transporte TLS moderno sin suplantar la identidad de un navegador.
+        self.session = curl_requests.Session()
+        self.session.headers.update(self.context.headers)
         self.store = store
         self.endpoint_env = endpoint_env
         self.store_id_env = store_id_env
