@@ -10,7 +10,17 @@ from core.network_json import extract_products
 
 def _sources()->list[dict[str,Any]]:
     raw=os.getenv("NETWORK_BROWSER_SOURCES","").strip()
-    if not raw: return []
+    if not raw:
+        return [
+            {"store": "Walmart MX", "url": "https://www.walmart.com.mx/search?q=oferta"},
+            {"store": "Bodega Aurrera", "url": "https://despensa.bodegaaurrera.com.mx/browse/cupones-y-bonificaciones/rebajas-y-mas/8171461_3848205"},
+            {"store": "Soriana", "url": "https://www.soriana.com/ofertas/"},
+            {"store": "Liverpool", "url": "https://www.liverpool.com.mx/tienda?s=promociones"},
+            {"store": "Suburbia", "url": "https://www.suburbia.com.mx/tienda/ofertas-relampago/catst68781332"},
+            {"store": "Amazon MX", "url": "https://www.amazon.com.mx/deals"},
+            {"store": "Coppel", "url": "https://www.coppel.com/ofertas"},
+            {"store": "Oferstock", "url": "https://www.oferstock.com.mx/"},
+        ]
     try: data=json.loads(raw)
     except json.JSONDecodeError:
         print("NetworkBrowser: NETWORK_BROWSER_SOURCES no es JSON válido."); return []
@@ -23,7 +33,7 @@ def buscar_network_browser():
         from playwright.sync_api import sync_playwright
     except ImportError:
         print("NetworkBrowser: Playwright no está instalado; fuente omitida."); return []
-    wait_ms=max(0,int(os.getenv("NETWORK_BROWSER_WAIT_MS","5000")))
+    wait_ms=max(0,int(os.getenv("NETWORK_BROWSER_WAIT_MS","6500")))
     max_responses=max(1,int(os.getenv("NETWORK_BROWSER_MAX_RESPONSES","40")))
     results=[]
     with sync_playwright() as playwright:
