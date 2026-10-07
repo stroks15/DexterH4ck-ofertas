@@ -159,6 +159,7 @@ jobs:
           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
           NETWORK_BROWSER_ENABLED: ${{ vars.NETWORK_BROWSER_ENABLED }}
           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
+          TELEGRAM_STICKER_LIQUIDACION: ${{ vars.TELEGRAM_STICKER_LIQUIDACION }}
         run: python monitor_ofertas.py
       - name: Guardar historial con commit directo seguro
         shell: bash
