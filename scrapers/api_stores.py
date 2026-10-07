@@ -137,7 +137,7 @@ class CoppelPublicScraper(BaseScraper):
     store = "Coppel"
 
     def discover(self) -> list[dict[str, Any]]:
-        from scrapers.coppel_public import extract_product_from_next_data
+        from scrapers.coppel_public import extract_products_from_next_data, extract_product_from_next_data
         urls = [
             "https://www.coppel.com/ca/outlet-saldos",
             "https://www.coppel.com/ofertas",
