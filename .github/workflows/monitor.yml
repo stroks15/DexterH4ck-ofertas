@@ -39,7 +39,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Instalar navegador para captura JSON (opcional)
-        if: ${{ vars.NETWORK_BROWSER_ENABLED == 'true' }}
+        if: ${{ vars.NETWORK_BROWSER_ENABLED != 'false' }}
         run: |
           pip install -r requirements-browser.txt
           python -m playwright install --with-deps chromium
@@ -159,6 +159,8 @@ jobs:
           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
           NETWORK_BROWSER_ENABLED: ${{ vars.NETWORK_BROWSER_ENABLED }}
           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
+          NETWORK_BROWSER_WAIT_MS: "6500"
+          NETWORK_BROWSER_MAX_RESPONSES: "20"
           TELEGRAM_STICKER_LIQUIDACION: ${{ vars.TELEGRAM_STICKER_LIQUIDACION }}
         run: python monitor_ofertas.py
       - name: Guardar historial con commit directo seguro
