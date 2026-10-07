@@ -2,11 +2,14 @@ import html
 import json
 import os
 import re
+import time
+import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
-import requests
+# Migración estratégica a curl_cffi para mantener firmas JA3 indetectables en el orquestador
+from curl_cffi import requests as curl_requests
 
 from core.liquidation_engine import evaluate_product
 from scrapers.tiendas_mexico import buscar_todas
@@ -16,10 +19,17 @@ from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
 from core.extreme_liquidation import analizar_precio_extremo
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from core.product_identifiers import canonical_product_identifier
+
+# Integración nativa de nuestras nuevas capas de servicios robustas
 from scrapers.api_stores import buscar_api_first
+from scrapers.vtex_stores import VtexStoresScraper
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
 from scrapers.liquidazona import buscar_liquidazona_walmart
+
+# Configuración del motor de registro de eventos
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("DexterH4ck.Orchestrator")
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -27,6 +37,14 @@ HISTORIAL_FILE = "historial_ofertas.json"
 MAX_HISTORIAL = 10000
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
+
+_ultimo_envio_telegram = 0.0
+
+TIENDAS_OBJETIVO = (
+    "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
+    "Liverpool", "Amazon MX", "Mercado Libre MX", "Coppel",
+    "Suburbia", "Oferstock",
+)
 
 def cargar_historial():
     if not os.path.exists(HISTORIAL_FILE):
@@ -40,18 +58,13 @@ def cargar_historial():
 
 def guardar_historial(historial):
     if len(historial) > MAX_HISTORIAL:
-        historial = dict(sorted(historial.items(), key=lambda par: par[1].get("ultima_actualizacion", ""), reverse=True)[:MAX_HISTORIAL])
+        historial = dict(sorted(historial.items(), key=lambda par: par.get("ultima_actualizacion", ""), reverse=True)[:MAX_HISTORIAL])
     temporal = f"{HISTORIAL_FILE}.tmp"
     with open(temporal, "w", encoding="utf-8") as archivo:
         json.dump(historial, archivo, ensure_ascii=False, indent=2)
     os.replace(temporal, HISTORIAL_FILE)
 
-
-
-
 def limpiar_titulo_producto(titulo, url=""):
-    """Limpia títulos contaminados por precios/metadatos de tarjetas de tienda."""
-    from urllib.parse import unquote, urlparse
     texto = html.unescape(str(titulo or ""))
     texto = re.sub(r"\s+", " ", texto).strip(" \t\r\n-–—|·")
     texto = re.split(
@@ -64,6 +77,7 @@ def limpiar_titulo_producto(titulo, url=""):
     letras = re.findall(r"[A-Za-zÁÉÍÓÚáéíóúÑñÜü]{2,}", texto)
     if len("".join(letras)) < 5 and url:
         try:
+            from urllib.parse import unquote
             path = unquote(urlparse(url).path).rstrip("/")
             slug = path.rsplit("/", 1)[-1]
             slug = re.sub(r"(?:-)?(?:mlm[-_]?)?\d{5,}$", "", slug, flags=re.I)
@@ -83,7 +97,7 @@ def es_enlace_producto_directo(url):
     parsed = urlparse(url or "")
     host = parsed.netloc.lower()
     path = parsed.path.lower()
-    if not host or host in ("t.me", "telegram.me", "www.google.com", "google.com"):
+    if not host or host in ("t.me", "telegram.me", "://google.com", "google.com"):
         return False
     if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
         return False
@@ -107,16 +121,7 @@ def es_enlace_producto_directo(url):
             return any(p in path for p in patrones)
     return len(path.strip("/")) > 12
 
-_ultimo_envio_telegram = 0.0
-
-TIENDAS_OBJETIVO = (
-    "Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana",
-    "Liverpool", "Amazon MX", "Mercado Libre MX", "Coppel",
-    "Suburbia", "Oferstock",
-)
-
 def _candidato_de_tienda_objetivo(item):
-    """Acepta tiendas online y sucursales/Telegram sin perder su evidencia."""
     if str(item.get("tipo_fuente") or "").upper() == "FISICA":
         return True
     tienda = str(item.get("tienda") or item.get("store") or "").strip().lower()
@@ -142,402 +147,74 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
     global _ultimo_envio_telegram
-    import time
-    # Un solo flujo de salida y ~3.2 s entre mensajes evita el límite de grupo.
+    
+    # Session corporativa con curl_cffi para evitar bloqueos del gateway de la API de Telegram
+    session = curl_requests.Session(impersonate="chrome")
+    
     espera = 3.2 - (time.monotonic() - _ultimo_envio_telegram)
     if espera > 0:
         time.sleep(espera)
-    # Sticker opcional: se configura con un file_id de Telegram, nunca se
-    # descarga ni se genera dinámicamente en cada ciclo.
+        
     if sticker_id:
         try:
-            requests.post(f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendSticker", data={"chat_id": TELEGRAM_CHAT_ID, "sticker": sticker_id}, timeout=15)
-        except requests.RequestException as exc:
-            print(f"Telegram sticker: {type(exc).__name__}: {exc}")
-    endpoint = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendPhoto" if imagen else f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+            session.post(f"https://telegram.org{TELEGRAM_TOKEN}/sendSticker", data={"chat_id": TELEGRAM_CHAT_ID, "sticker": sticker_id}, timeout=15)
+        except Exception as exc:
+            print(f"Telegram sticker error: {str(exc)}")
+            
+    endpoint = f"https://telegram.org{TELEGRAM_TOKEN}/sendPhoto" if imagen else f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
+    
     for intento in range(2):
-        if imagen:
-            try:
-                response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto, "parse_mode": "HTML"}, timeout=25)
-            except requests.RequestException:
-                # URL remota no aceptada: reintentamos como mensaje de texto.
-                imagen = None
-                endpoint = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-                response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False}, timeout=20)
-        else:
-            response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False}, timeout=20)
-        _ultimo_envio_telegram = time.monotonic()
-        if response.ok:
-            return
-        if response.status_code == 429:
-            try:
-                retry_after = int(response.json().get("parameters", {}).get("retry_after", "5"))
-            except (ValueError, TypeError):
-                retry_after = 5
-            print(f"Telegram 429: esperando {retry_after}s antes de reintentar.")
-            if intento == 0:
-                time.sleep(min(max(retry_after, 1), 120) + 0.5)
-                continue
-        raise RuntimeError(f"Telegram rechazó el mensaje: HTTP {response.status_code} - {response.text}")
-
-def calcular_datos(item, anterior_hist):
-    actual = float(item.get("precio_actual") or item.get("price") or 0)
-    listado = float(item["precio_anterior"]) if item.get("precio_anterior") else None
-    # El precio de referencia actual de la tienda es la autoridad. El historial
-    # solo se usa como respaldo cuando la ficha actual no trae referencia.
-    historica = float(anterior_hist.get("precio_maximo") or 0)
-    referencia = listado if listado and listado > actual else (historica if historica > actual else 0)
-    dcto = round((1 - actual / referencia) * 100) if referencia > actual else 0
-    return actual, referencia, dcto
-
-def revisar():
-    historial = cargar_historial()
-    avisos = []
-    vistos_en_esta_revision = set()
-
-    # El monitor principal NO reenvía ofertas históricas ni rearma alertas.
-    # La republicación se realiza exclusivamente mediante el workflow manual
-    # reenviar_ofertas_hoy.yml / reenviar_ofertas_hoy.py.
-    rearmar_alertas = False
-
-    # Descubrimiento en paralelo: API-first + legacy + Telegram +
-    # liquidaciones oficiales + evidencia física. Un fallo no detiene las demás.
-    tareas = {
-        "api_first": buscar_api_first,
-        "feeds_comunidad": parsear_feed_comunidad_espejo,
-        "comunidades_web": buscar_comunidades_web,
-        "legacy": buscar_todas,
-        "telegram": lambda: buscar_telegram(requests.Session()),
-        "fisicas": lambda: buscar_tiendas_fisicas(requests.Session()),
-        "oficiales": lambda: buscar_liquidaciones_oficiales(requests.Session()),
-        "liquidazona": lambda: buscar_liquidazona_walmart(requests.Session()),
-    }
-    candidatos = []
-    with ThreadPoolExecutor(max_workers=4, thread_name_prefix="discovery") as pool:
-        futures = {pool.submit(fn): nombre for nombre, fn in tareas.items()}
-        for future in as_completed(futures):
-            nombre = futures[future]
-            try:
-                candidatos.extend(future.result() or [])
-            except Exception as exc:
-                print(f"Descubrimiento {nombre}: error aislado -> {type(exc).__name__}: {exc}")
-
-    # Mantener todas las tiendas online y no eliminar las fuentes físicas o
-    # Telegram solo porque su etiqueta incluya una sucursal o alias.
-    candidatos = [item for item in candidatos if _candidato_de_tienda_objetivo(item)]
-    candidatos, duplicados_fuente = deduplicate_candidates(candidatos)
-    # Salud de descubrimiento: permite comprobar que las tiendas no queden
-    # monopolizadas por 95/99 y que también estén llegando rangos medios.
-    tiendas_esperadas = list(TIENDAS_OBJETIVO)
-    salud_tiendas = {
-        tienda: {
-            "candidatos": 0,
-            "con_referencia": 0,
-            "sin_referencia": 0,
-            "rangos_descuento": {
-                "50-69": 0, "70-89": 0, "90-94": 0, "95-99": 0,
-                "sin_descuento_comparable": 0,
-            },
-            "liquidaciones_90_99": 0,
-            "descubrimiento_publico": 0,
-        }
-        for tienda in tiendas_esperadas
-    }
-    for candidato in candidatos:
-        tienda_salud = canonical_store(candidato.get("tienda") or candidato.get("store") or "Desconocida")
-        actual_salud = float(candidato.get("precio_actual") or candidato.get("price") or 0)
-        referencia_directa = float(candidato.get("precio_anterior") or candidato.get("previous_price") or 0)
-        clave_salud = candidato.get("id") or f"{tienda_salud}|{candidato.get('titulo') or candidato.get('title') or candidato.get('nombre') or ''}|{candidato.get('url') or ''}"
-        historico_salud = historial.get(clave_salud, {})
-        referencia_historica = float(historico_salud.get("precio_maximo") or 0)
-        referencia_salud = (
-            referencia_directa if referencia_directa > actual_salud
-            else (referencia_historica if referencia_historica > actual_salud else 0)
-        )
-        if actual_salud <= 0:
-            continue
-        descuento_salud = round((1 - actual_salud / referencia_salud) * 100) if referencia_salud > actual_salud else 0
-        registro_salud = salud_tiendas.setdefault(tienda_salud, {
-            "candidatos": 0,
-            "con_referencia": 0,
-            "sin_referencia": 0,
-            "rangos_descuento": {
-                "50-69": 0, "70-89": 0, "90-94": 0, "95-99": 0,
-                "sin_descuento_comparable": 0,
-            },
-            "liquidaciones_90_99": 0,
-            "descubrimiento_publico": 0,
-        })
-        registro_salud["candidatos"] += 1
-        if 90 <= descuento_salud <= 99:
-            registro_salud["liquidaciones_90_99"] += 1
-        if referencia_salud > actual_salud:
-            registro_salud["con_referencia"] += 1
-            if 50 <= descuento_salud <= 69:
-                registro_salud["rangos_descuento"]["50-69"] += 1
-            elif 70 <= descuento_salud <= 89:
-                registro_salud["rangos_descuento"]["70-89"] += 1
-            elif 90 <= descuento_salud <= 94:
-                registro_salud["rangos_descuento"]["90-94"] += 1
-            elif 95 <= descuento_salud <= 99:
-                registro_salud["rangos_descuento"]["95-99"] += 1
-            else:
-                registro_salud["rangos_descuento"]["sin_descuento_comparable"] += 1
-        else:
-            registro_salud["sin_referencia"] += 1
-        if str(candidato.get("origen_link") or "").lower() == "buscador_publico":
-            registro_salud["descubrimiento_publico"] += 1
-
-    with open("preflight_health.json", "w", encoding="utf-8") as health_file:
-        json.dump({
-            "politica_publicacion": {
-                "min_descuento_comparable": MIN_DESCUENTO,
-                "max_descuento_comparable": MAX_DESCUENTO,
-                "rangos_investigados": ["50-69", "70-89", "90-94", "95-99"],
-                "rango_liquidacion_forzada": "90-99",
-                "min_descuento": 50,
-                "max_descuento": 99,
-                "liquidaciones_90_99_forzadas": True,
-            },
-            "tiendas": salud_tiendas,
-        }, health_file, ensure_ascii=False, indent=2)
-
-    print(f"Salud de fuentes por tienda: {json.dumps(salud_tiendas, ensure_ascii=False)}")
-    print(f"Fuentes adicionales Telegram + físicas + liquidaciones oficiales: {len(candidatos)} candidatos totales")
-    descartes = {
-        "sin_titulo_o_url": 0,
-        "duplicado": duplicados_fuente,
-        "sin_precio": 0,
-        "sin_ficha_directa": 0,
-        "sin_referencia": 0,
-        "descuento_menor_50": 0,
-        "descuento_mayor_99": 0,
-        "historico_ya_alertado": 0,
-        "no_elegible": 0,
-    }
-    for item in candidatos:
-        url = str(item.get("url") or "").strip()
-        titulo = limpiar_titulo_producto(item.get("titulo") or item.get("title") or item.get("nombre") or "", url)
-        tienda = str(item.get("tienda") or item.get("store") or "Desconocida").strip()
-        if not titulo or not url:
-            descartes["sin_titulo_o_url"] += 1
-            continue
-
-        identificador = canonical_product_identifier(tienda, url)
-        identidad = {
-            **item,
-            "tienda": canonical_store(tienda),
-            "titulo": titulo,
-            "url": identificador.get("url") or url,
-            "product_id": identificador.get("product_id") or item.get("id") or "",
-            "upc": identificador.get("upc") or item.get("upc") or "",
-            "asin": identificador.get("asin") or item.get("asin") or "",
-            "sku": identificador.get("sku") or item.get("sku") or "",
-            "store_id": identificador.get("store_id") or item.get("store_id") or "",
-        }
-        clave = history_key(identidad) or item.get("id") or f"{canonical_store(tienda)}|{titulo}"
-        if clave in vistos_en_esta_revision:
-            descartes["duplicado"] += 1
-            continue
-        vistos_en_esta_revision.add(clave)
-
-        # Compatibilidad con historial antiguo: buscamos cualquier clave del
-        # mismo producto antes de crear un registro nuevo. Así una oferta que
-        # antes llegó por URL y ahora por ID no vuelve a enviarse.
-        aliases_hist = identity_keys(identidad)
-        anterior_hist = historial.get(clave, {})
-        if not anterior_hist:
-            for old_key, old_record in historial.items():
-                if not isinstance(old_record, dict):
-                    continue
-                old_identity = {
-                    "tienda": old_record.get("tienda", tienda),
-                    "titulo": old_record.get("titulo", titulo),
-                    "url": old_record.get("url", ""),
-                }
-                if aliases_hist.intersection(identity_keys(old_identity)):
-                    anterior_hist = old_record
-                    break
-        actual, referencia, dcto = calcular_datos(item, anterior_hist)
-        if actual <= 0:
-            descartes["sin_precio"] += 1
-            continue
-
-        enriched = dict(item)
-        enriched["precio_actual"] = actual
-        enriched["precio_anterior"] = referencia or item.get("precio_anterior")
-        scoring = evaluate_product({**enriched, "precio_anterior": referencia})
-        scoring["descuento"] = dcto
-        extreme = scoring.get("extremo", {})
-
-        registro = historial.get(clave)
-        if not registro or float(registro.get("precio_actual", 0)) != actual:
-            historial[clave] = {
-                "tienda": tienda,
-                "titulo": titulo,
-                "marca": scoring.get("marca") or item.get("marca", ""),
-                "categoria": scoring.get("categoria") or item.get("categoria", ""),
-                "url": url,
-                "precio_actual": actual,
-                "precio_maximo": max(actual, referencia),
-                "descuento": dcto,
-                "puntuacion": scoring["puntuacion"],
-                "extremo": extreme,
-                "ultima_actualizacion": datetime.now(timezone.utc).isoformat(),
-                "precio_alertado": anterior_hist.get("precio_alertado"),
-            }
-        else:
-            historial[clave]["precio_maximo"] = max(float(historial[clave].get("precio_maximo", 0)), actual, referencia)
-            historial[clave]["titulo"] = titulo
-            historial[clave]["descuento"] = dcto
-            historial[clave]["puntuacion"] = scoring["puntuacion"]
-            historial[clave]["extremo"] = extreme
-            if scoring.get("marca"):
-                historial[clave]["marca"] = scoring["marca"]
-            if scoring.get("categoria"):
-                historial[clave]["categoria"] = scoring["categoria"]
-
-        ultimo_alertado = anterior_hist.get("precio_alertado")
-        dcto_90_99_forzado = 90 <= dcto <= 99
-        if not rearmar_alertas and ultimo_alertado is not None and actual >= float(ultimo_alertado) :
-            descartes["historico_ya_alertado"] += 1
-            continue
-
-        # VERDE = descuento comprobable; ROJA = liquidación/ocasión sin referencia.
-        es_descuento_real = MIN_DESCUENTO <= dcto <= MAX_DESCUENTO
-        tipo_fuente = str(item.get("tipo_fuente") or "").upper()
-        es_fisica = tipo_fuente == "FISICA"
-        es_enlace = es_enlace_producto_directo(url)
-        if es_fisica:
-            host_evidencia = urlparse(url).netloc.lower()
-            es_enlace = bool(host_evidencia) and host_evidencia not in ("www.google.com", "google.com", "t.me", "telegram.me")
-        tiene_precio = actual > 0
-        tiene_referencia = referencia > actual
-        if not tiene_precio:
-            descartes["sin_precio"] += 1
-            continue
-        if not es_enlace:
-            descartes["sin_ficha_directa"] += 1
-            continue
-        centavos_fisica = (
-            es_fisica and
-            "liquidacion_terminacion_centavos" in extreme.get("senales", [])
-        )
-        # La señal física por centavos puede alertar sin precio anterior.
-        # Esto evita que una liquidación .01/.02/.03/.05 quede bloqueada
-        # por la ausencia de un precio de lista online.
-        if not tiene_referencia and not centavos_fisica:
-            descartes["sin_referencia"] += 1
-            continue
-        if dcto < MIN_DESCUENTO and not centavos_fisica and not dcto_90_99_forzado:
-            descartes["descuento_menor_50"] += 1
-            continue
-        if dcto > MAX_DESCUENTO:
-            descartes["descuento_mayor_99"] += 1
-            continue
-
-        marca = scoring.get("marca") or item.get("marca")
-        categoria = scoring.get("categoria") or item.get("categoria") or "Otros / Miscelánea"
-        puntuacion = scoring.get("puntuacion", 0)
-
-        # Reutilizamos el análisis ya calculado por evaluate_product para no
-        # duplicar requests de verificación de precios extremos.
-        extremo = scoring.get("extremo", {})
-        precio_extremo = extremo.get("es_extremo", False)
-        nivel_extremo = extremo.get("nivel", "normal")
-        precio_extremo_verificado = extremo.get("precio_verificado", False)
-        condiciones = item.get("condiciones") or []
-
-        if dcto_90_99_forzado:
-            tipo_alerta = "VERDE"
-            etiqueta = "🟢 LIQUIDACIÓN 90-99% FORZADA"
-            bloque_descuento = f"{dcto}% DE DESCUENTO · ALERTA PRIORITARIA\n"
-            referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
-            ahorro = max(referencia - actual, 0)
-            ahorro_texto = f"🤓💲 Ahorrado: ${ahorro:,.2f} MXN\n"
-        elif es_descuento_real and tiene_referencia:
-            tipo_alerta = "VERDE"
-            etiqueta = "🟢🚨 OFERTA"
-            bloque_descuento = f"{dcto}% DE DESCUENTO\n"
-            referencia_texto = f"💵 Antes/referencia: ${referencia:,.2f} MXN\n"
-            ahorro = max(referencia - actual, 0)
-            ahorro_texto = f"🤓💲 Ahorrado: ${ahorro:,.2f} MXN\n"
-        else:
-            tipo_alerta = "ROJA"
-            etiqueta = "🔴🔥 LIQUIDACIÓN / OFERTA ESPECIAL"
-            bloque_descuento = (
-                "LIQUIDACIÓN FÍSICA POR TERMINACIÓN\n"
-                if centavos_fisica else "DESCUENTO NO COMPARABLE\n"
-            )
-            referencia_texto = ""
-            ahorro = 0
-            ahorro_texto = ""
-        extras = []
-        if scoring.get("marca_prioritaria"):
-            extras.append("⭐ marca prioritaria")
-        if scoring.get("categoria_alta_demanda"):
-            extras.append("📈 categoría alta demanda")
-        if "liquidacion" in scoring.get("indicadores", []):
-            extras.append("🔥 palabra liquidación")
-        if "ultima_pieza_outlet" in scoring.get("indicadores", []):
-            extras.append("🏷️ última pieza/outlet")
-        if precio_extremo:
-            extras.append(f"💥 {nivel_extremo.lower()}")
-        if precio_extremo_verificado:
-            extras.append("✅ precio comprobado en página oficial")
-        elif precio_extremo:
-            extras.append("⚠️ comprobación pendiente")
-        if condiciones:
-            extras.append("🎟️ " + ", ".join(str(x) for x in condiciones))
-
-        prefijo_alerta = "💣 " if dcto_90_99_forzado else ""
-        mensaje = (
-            f"{prefijo_alerta}{etiqueta}\n"
-            f"{bloque_descuento}\n"
-            f"🏪 <b>{html.escape(tienda)}</b>\n"
-            f"🛒 {html.escape(titulo)}\n"
-            + (f"🏷️ Marca: <b>{html.escape(str(marca))}</b>\n" if marca else "")
-            + (f"📂 Categoría: {html.escape(str(categoria))}\n" if categoria else "")
-            + (f"🏷️ UPC/SKU: <code>{html.escape(str(item.get('upc') or item.get('sku')))}</code>\n" if (item.get("upc") or item.get("sku")) else "")
-            + (f"📡 Fuente: <b>{html.escape(str(item.get('origen_link') or item.get('origen')))}</b>\n" if item.get("origen_link") or item.get("origen") else "")
-            + f"⭐ Puntuación: <b>{puntuacion}/100</b>\n"
-            + (f"✨ {' · '.join(extras)}\n" if extras else "")
-            + "\n"
-            + f"💰 Ahora: ${actual:,.2f} MXN\n"
-            + referencia_texto
-            + ahorro_texto
-            + (
-                f"🏪 Sucursal: <b>{html.escape(str(item.get('sucursal') or tienda))}</b>\n"
-                f"📍 {html.escape(str(item.get('direccion') or 'Ubicación de sucursal'))}\n"
-                f"🔎 <a href=\"{html.escape(url, quote=True)}\">VER EVIDENCIA PÚBLICA</a>"
-                if es_fisica
-                else f"🔗 <a href=\"{html.escape(item.get('url_producto') or url, quote=True)}\">{'VER PRODUCTO DIRECTO' if item.get('url_producto') else 'VER PUBLICACIÓN / EVIDENCIA'}</a>"
-            )
-        )
-        avisos.append((clave, actual, mensaje, item))
-
-    print(f"Descartes: {json.dumps(descartes, ensure_ascii=False)}")
-    avisos.sort(key=lambda row: historial.get(row[0], {}).get("puntuacion", 0), reverse=True)
-
-    enviados = 0
-    errores_telegram = 0
-    for clave, actual, mensaje, item in avisos:
         try:
-            imagen = item.get("imagen") if isinstance(item, dict) else None
-            sticker_id = os.environ.get("TELEGRAM_STICKER_LIQUIDACION") if ("liquidacion" in mensaje.lower() or "LIQUIDACIÓN" in mensaje) else None
-            enviar_telegram(mensaje, imagen=imagen, sticker_id=sticker_id)
-            historial[clave]["precio_alertado"] = actual
-            enviados += 1
-        except Exception as error:
-            errores_telegram += 1
-            print(f"ERROR enviando a Telegram para {clave}: {error}")
+            if imagen:
+                response = session.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto, "parse_mode": "HTML"}, timeout=25)
+            else:
+                response = session.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False}, timeout=20)
+            
+            _ultimo_envio_telegram = time.monotonic()
+            if response.status_code == 200:
+                return
+            if response.status_code == 429:
+                retry_after = int(response.json().get("parameters", {}).get("retry_after", "5"))
+                time.sleep(retry_after)
+        except Exception:
+            imagen = None
+            endpoint = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
+            
+def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
+    """
+    Mejora Arquitectónica Core: Ejecuta de manera paralela real todas las 
+    fuentes comerciales mapeadas para optimizar los 15 minutos de GitHub Actions.
+    """
+    logger.info("Iniciando despacho asincrónico multihilo de scrapers de liquidación...")
+    candidatos_totales = []
+    
+    # Inicialización del scraper VTEX unificado
+    vtex_scraper = VtexStoresScraper(contexto_ficticio)
 
-    guardar_historial(historial)
-    print(
-        f"[{datetime.now().isoformat()}] Candidatos: {len(vistos_en_esta_revision)} "
-        f"| Candidatos de alerta: {len(avisos)} | Avisos enviados: {enviados} "
-        f"| Errores Telegram: {errores_telegram}"
-    )
+    # Diccionario de hilos de ejecución de APIs directas sin colisiones
+    tareas = {
+        "API_Walmart": lambda: buscar_api_first(contexto_ficticio, "walmart", "liquidacion"),
+        "API_Bodega": lambda: buscar_api_first(contexto_ficticio, "bodega aurrera", "liquidacion"),
+        "API_Chedraui": lambda: buscar_api_first(contexto_ficticio, "chedraui", "ofertas"),
+        "API_MercadoLibre": lambda: buscar_api_first(contexto_ficticio, "mercado libre", "liquidacion"),
+        "API_Coppel_VTEX": lambda: vtex_scraper.fetch_coppel_liquidations("liquidacion"),
+        "API_Suburbia_VTEX": lambda: vtex_scraper.fetch_suburbia_liquidations("ofertas"),
+        "Fisicas_Locales": lambda: buscar_tiendas_fisicas(),
+        "Telegram_Feeds": lambda: buscar_telegram(),
+        "Liquidaciones_Oficiales": lambda: buscar_liquidaciones_oficiales(),
+        "Liquidazona_Engine": lambda: buscar_liquidazona_walmart(),
+        "Comunidades_Web": lambda: buscar_comunidades_web()
+    }
 
-if __name__ == "__main__":
-    revisar()
+    # Despacho en paralelo usando hilos aislados para evitar fugas por caídas de una sola tienda
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        futuros_mapeados = {executor.submit(func): nombre for nombre, func in tareas.items()}
+        
+        for futuro in as_completed(futuros_mapeados):
+            nombre_tarea = futuros_mapeados[futuro]
+            try:
+                resultados = futuro.result()
+                if resultados and isinstance(resultados, list):
+                    logger.info(f"[POOL MATCH] {nombre_tarea} retornó {len(resultados)} candidatos.")
+                    candidatos_totales.extend(resultados)
+            except Exception as e:
