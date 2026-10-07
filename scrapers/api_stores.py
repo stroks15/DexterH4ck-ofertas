@@ -96,18 +96,18 @@ class ApiStoresScraper:
 
 
 # =====================================================================
-# FUNCIÓN ORQUESTADORA PRINCIPAL QUE IMPORTA MONITOR_OFERTAS.PY
+# RESTAURACIÓN CORE: FUNCIÓN ORQUESTADORA BUSCAR_API_FIRST
 # =====================================================================
 def buscar_api_first(context, tienda: str, query: str = "liquidacion") -> list:
     """
-    Punto de entrada unificado para que monitor_ofertas.py ejecute las búsquedas.
-    Normaliza las salidas de todas las tiendas de la capa API-first.
+    Punto de entrada unificado requerido por monitor_ofertas.py.
+    Normaliza y unifica las salidas de todas las tiendas de la capa API-first.
     """
     scraper = ApiStoresScraper(context)
     tienda_clean = tienda.lower().strip()
     productos_normalizados = []
 
-    # 1. EJECUCIÓN GRUPO WALMART / BODEGA
+    # 1. EJECUCIÓN GRUPO WALMART / BODEGA AURRERA
     if tienda_clean in ["walmart", "bodega aurrera", "bodega_aurrera"]:
         tienda_key = "bodega" if "bodega" in tienda_clean else "walmart"
         raw_data = scraper.fetch_walmart_bodega_graphql(tienda=tienda_key, search_query=query)
@@ -166,7 +166,6 @@ def buscar_api_first(context, tienda: str, query: str = "liquidacion") -> list:
         for item in results:
             try:
                 precio_act = float(item.get("price", 0))
-                # Mercado Libre usa 'original_price' para el tachado
                 precio_ant = float(item.get("original_price")) if item.get("original_price") else None
                 
                 productos_normalizados.append({
