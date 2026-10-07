@@ -172,6 +172,26 @@ def valor_category(value):
         return value[0] if value else ""
     return value or ""
 
+def extraer_imagen_producto(soup, nodo=None, base_url=""):
+    candidatos = []
+    if nodo and isinstance(nodo, dict):
+        imagen = nodo.get("image")
+        if isinstance(imagen, list): candidatos.extend(imagen)
+        elif imagen: candidatos.append(imagen)
+    for selector in ("meta[property='og:image']", "meta[name='twitter:image']", "link[rel='image_src']"):
+        el = soup.select_one(selector)
+        if el: candidatos.append(el.get("content") or el.get("href"))
+    if soup:
+        img = soup.select_one("img[src], img[data-src], img[data-lazy-src]")
+        if img: candidatos.append(img.get("src") or img.get("data-src") or img.get("data-lazy-src"))
+    for value in candidatos:
+        if isinstance(value, dict): value = value.get("url")
+        if value:
+            value = urljoin(base_url, str(value).strip())
+            if value.startswith(("http://", "https://")): return value
+    return ""
+
+
 def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
     resultados = []
     for script in soup.find_all("script", type="application/ld+json"):
@@ -220,6 +240,7 @@ def extraer_json_ld(soup, tienda, base_url, liquidacion_contexto=False):
                 "precio_anterior": anterior if anterior and anterior > actual else None,
                 "descuento": calcular_descuento(anterior, actual) if anterior else 0,
                 "url": url,
+                "imagen": extraer_imagen_producto(soup, obj, base_url),
                 "liquidacion": es_liq,
                 "outlet": any(k in texto_contexto.lower() for k in ("outlet", "clearance", "open box", "warehouse")),
             })
@@ -307,6 +328,7 @@ def extraer_tarjetas(soup, tienda, base_url, liquidacion_contexto=False):
                 "precio_anterior": anterior,
                 "descuento": dcto,
                 "url": url,
+                "imagen": extraer_imagen_producto(soup, None, base_url),
                 "liquidacion": es_liq,
                 "outlet": any(k in texto.lower() for k in ("outlet", "clearance", "open box", "warehouse")),
             })
@@ -519,6 +541,23 @@ DESCUENTO_QUERIES = [
 ]
 
 
+def verificar_pagina_producto(url, tienda, session):
+    try:
+        response = session.get(url, timeout=25, allow_redirects=True)
+        if response.status_code >= 400: return None
+        final_url = response.url
+        soup = BeautifulSoup(response.text, "html.parser")
+        rows = extraer_json_ld(soup, tienda, final_url, False)
+        rows.extend(extraer_tarjetas(soup, tienda, final_url, False))
+        if not rows: return None
+        rows.sort(key=lambda x: (bool(x.get("precio_anterior")), x.get("descuento", 0)), reverse=True)
+        row = rows[0]
+        row["url"] = final_url
+        row["origen_link"] = "ficha_directa_verificada"
+        row["verificado_en_tienda"] = True
+        return row
+
+
 def _buscar_indexado_tienda(nombre, consultas, session):
     """Descubre productos desde resultados públicos indexados cuando la tienda
     devuelve HTTP 200 pero oculta el catálogo al cliente automatizado.
@@ -568,9 +607,10 @@ def _buscar_indexado_tienda(nombre, consultas, session):
                 if parsed.scheme not in ("http", "https"):
                     continue
                 host = parsed.netloc.lower()
-                if not (host == dominio or host.endswith("." + dominio)):
+                if not (host == dominio or host.endswith("." + dominio) or (nombre == "Bodega Aurrera" and host.endswith("bodegaaurrera.com.mx"))):
                     continue
-                if not es_url_producto(href, f"https://www.{dominio}/"):
+                base_host = "https://www.bodegaaurrera.com.mx/" if nombre == "Bodega Aurrera" else f"https://www.{dominio}/"
+                if not es_url_producto(href, base_host):
                     continue
 
                 texto = normalizar_texto(enlace.get_text(" ", strip=True))
@@ -580,6 +620,12 @@ def _buscar_indexado_tienda(nombre, consultas, session):
                 actual = precios[0] if precios else None
                 anterior = next((p for p in precios[1:] if p > actual), None) if actual else None
                 if not actual:
+                    verificado = verificar_pagina_producto(href, nombre, session)
+                    if verificado:
+                        clave = producto_id(nombre, verificado.get("titulo", ""), verificado.get("url", href))
+                        if clave not in vistos:
+                            vistos.add(clave)
+                            resultados.append(verificado)
                     continue
 
                 clave = producto_id(nombre, texto, href)
@@ -855,6 +901,7 @@ def buscar_todas():
                     "https://www.walmart.com.mx/search?q=oferta",
                     "https://www.walmart.com.mx/search?q=remate",
                     "https://www.walmart.com.mx/search?q=outlet",
+                    "https://www.walmart.com.mx/browse/especiales/ahorra-o-nunca/360013_7719936",
                 ]
                 rows = buscar_urls_oficiales(nombre, urls, session, True)
                 if not rows:
@@ -867,6 +914,8 @@ def buscar_todas():
                     "https://www.bodegaaurrera.com.mx/search?q=oferta",
                     "https://www.bodegaaurrera.com.mx/search?q=remate",
                     "https://www.bodegaaurrera.com.mx/search?q=outlet",
+                    "https://despensa.bodegaaurrera.com.mx/browse/cupones-y-bonificaciones/rebajas-y-mas/8171461_3848205",
+                    "https://despensa.bodegaaurrera.com.mx/browse/promociones-bancarias/hogar-y-electronica/2596858/2421581",
                 ]
                 rows = buscar_urls_oficiales(nombre, urls, session, True)
                 if not rows:
