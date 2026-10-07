@@ -139,20 +139,27 @@ class CoppelPublicScraper(BaseScraper):
     def discover(self) -> list[dict[str, Any]]:
         from scrapers.coppel_public import extract_products_from_next_data, extract_product_from_next_data
         urls = [
-            "https://www.coppel.com/ca/outlet-saldos",
             "https://www.coppel.com/ofertas",
+            "https://www.coppel.com/ca/outlet-saldos",
             "https://www.coppel.com/l/ofertas",
         ]
         output = []
         for url in urls:
             try:
-                response = self.get(url, headers={"Accept": "text/html,application/xhtml+xml"})
+                response = self.get(
+                    url,
+                    headers={
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                        "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
+                        "Cache-Control": "no-cache",
+                    },
+                    timeout=18,
+                )
                 if response.status_code >= 400:
                     print(f"[SCRAPER:Coppel] HTML HTTP {response.status_code} en {url}")
                     continue
-                item = extract_product_from_next_data(response.text, response.url)
-                if item:
-                    output.append(item)
+                items = extract_products_from_next_data(response.text, response.url)
+                output.extend(items or [])
             except requests.RequestException as exc:
                 print(f"[SCRAPER:Coppel] {type(exc).__name__}: {exc}")
         return output
