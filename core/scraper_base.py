@@ -47,18 +47,32 @@ class BaseScraper(ABC):
         raise NotImplementedError
 
     def get(self, url: str, **kwargs: Any) -> requests.Response:
-        timeout = kwargs.pop("timeout", self.context.timeout)
+        base_timeout = float(kwargs.pop("timeout", self.context.timeout))
         last_error: Exception | None = None
+        transient = {408, 425, 429, 500, 502, 503, 504, 522, 524}
+
         for attempt in range(self.context.max_retries + 1):
+            # Aumenta moderadamente el timeout en cada intento para evitar que
+            # conexiones lentas de catálogos públicos se queden colgadas.
+            timeout = min(base_timeout * (1.35 ** attempt), 45.0)
             try:
                 response = self.session.get(url, timeout=timeout, **kwargs)
-                if response.status_code not in {408, 429, 500, 502, 503, 504}:
+
+                # 401/403/412/451 no se "combaten" con más tráfico: normalmente
+                # significan política de acceso o contenido condicionado.
+                if response.status_code not in transient:
                     return response
+
                 retry_after = response.headers.get("Retry-After")
-                if retry_after and retry_after.isdigit():
-                    delay = min(float(retry_after), 8.0)
+                if retry_after and retry_after.replace(".", "", 1).isdigit():
+                    delay = min(float(retry_after), 20.0)
                 else:
-                    delay = min(0.8 * (2**attempt), 6.0)
+                    delay = min(1.0 * (2 ** attempt), 12.0)
+
+                # Jitter evita que varias tiendas vuelvan a golpear al mismo
+                # tiempo al recuperarse de un 429/503.
+                delay += __import__("random").uniform(0.20, 0.90)
+
                 if attempt < self.context.max_retries:
                     time.sleep(delay)
                     continue
@@ -66,7 +80,10 @@ class BaseScraper(ABC):
             except requests.RequestException as exc:
                 last_error = exc
                 if attempt < self.context.max_retries:
-                    time.sleep(min(0.8 * (2**attempt), 6.0))
+                    delay = min(1.0 * (2 ** attempt), 12.0)
+                    delay += __import__("random").uniform(0.20, 0.90)
+                    time.sleep(delay)
+
         raise last_error or RuntimeError(f"{self.store}: request failed")
 
     def normalize(self, *, title: str, url: str, price: Any,
