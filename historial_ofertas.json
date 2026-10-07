@@ -31648,14 +31648,14 @@
     "marca": "NatureSweet",
     "categoria": "/Supermercado/",
     "url": "https://www.chedraui.com.mx/tomates-cherry-naturesweet-glorys-467g-3794611/p",
-    "precio_actual": 29.9,
+    "precio_actual": 94.9,
     "precio_maximo": 94.9,
-    "descuento": 68,
-    "puntuacion": 70,
+    "descuento": 0,
+    "puntuacion": 5,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 68.49,
+      "descuento_calculado": 0,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -31666,7 +31666,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T19:39:11.850835+00:00",
+    "ultima_actualizacion": "2026-10-07T09:58:58.591828+00:00",
     "precio_alertado": 29.9
   },
   "amazon|code:b0d4v2sq25": {
