@@ -732,11 +732,14 @@ def buscar_tienda(nombre, plantilla, session):
             print(f"{nombre}: error de red para {q}: {error}")
         except Exception as error:
             print(f"{nombre}: error procesando {q}: {error}")
-    # Walmart y Bodega pueden entregar HTTP 200 con contenido de bloqueo.
-    # Si no hubo candidatos útiles, usamos descubrimiento público indexado.
-    if nombre in ("Walmart MX", "Bodega Aurrera", "Amazon MX", "Mercado Libre MX") and not resultados:
-        fallback_queries = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
-        resultados.extend(_buscar_indexado_tienda(nombre, fallback_queries, session))
+    # Walmart/Bodega pueden entregar HTTP 200 con catálogo normal pero ocultar
+    # las liquidaciones. En ese caso el índice público funciona como segunda
+    # fuente, no sólo cuando el HTML queda completamente vacío.
+    if nombre in ("Walmart MX", "Bodega Aurrera", "Amazon MX", "Mercado Libre MX"):
+        comparables = [x for x in resultados if (x.get("descuento") or 0) >= 50]
+        if not resultados or not comparables:
+            fallback_queries = DESCUENTO_QUERIES[:10] + EXTREME_QUERIES
+            resultados.extend(_buscar_indexado_tienda(nombre, fallback_queries, session))
     return resultados
 
 
