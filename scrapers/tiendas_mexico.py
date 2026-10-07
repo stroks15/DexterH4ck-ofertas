@@ -119,7 +119,7 @@ def es_url_producto(url, base):
     parsed = urlparse(url)
     base_host = urlparse(base).netloc.lower()
     host = parsed.netloc.lower()
-    if not host or host != base_host:
+    if not host or (host != base_host and not (base_host.endswith("bodegaaurrera.com.mx") and host.endswith("bodegaaurrera.com.mx"))):
         return False
     path = parsed.path.lower().rstrip("/")
     full = url.lower()
@@ -134,6 +134,7 @@ def es_url_producto(url, base):
         ("mercadolibre.com.mx", ("/mlm-", "-p-")),
         ("walmart.com.mx", ("/ip/", "/p/")),
         ("bodegaaurrera.com.mx", ("/ip/", "/p/")),
+        ("despensa.bodegaaurrera.com.mx", ("/ip/", "/p/", "/browse/")),
         ("chedraui.com.mx", ("/p/", "/p")),
         ("liverpool.com.mx", ("/pdp/", "/producto/", "/p/")),
         ("coppel.com", ("/p/", "/producto/")),
