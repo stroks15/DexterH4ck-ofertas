@@ -136,7 +136,7 @@ def _candidato_de_tienda_objetivo(item):
     if any(alias in tienda for alias, _ in aliases):
         return True
     origen = str(item.get("origen_link") or item.get("origen") or "").lower()
-    return origen == "telegram" and bool(item.get("url"))
+    return origen in ("telegram", "liquidazona") and bool(item.get("url"))
 
 def enviar_telegram(texto, imagen=None, sticker_id=None):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
@@ -158,7 +158,7 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
     for intento in range(2):
         if imagen:
             try:
-                response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "caption": texto, "parse_mode": "HTML"}, files={"photo": (None, imagen)}, timeout=25)
+                response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto, "parse_mode": "HTML"}, timeout=25)
             except requests.RequestException:
                 # URL remota no aceptada: reintentamos como mensaje de texto.
                 imagen = None
@@ -509,7 +509,7 @@ def revisar():
                 f"📍 {html.escape(str(item.get('direccion') or 'Ubicación de sucursal'))}\n"
                 f"🔎 <a href=\"{html.escape(url, quote=True)}\">VER EVIDENCIA PÚBLICA</a>"
                 if es_fisica
-                else f"🔗 <a href=\"{html.escape(url, quote=True)}\">VER PRODUCTO DIRECTO</a>"
+                else f"🔗 <a href=\"{html.escape(item.get('url_producto') or url, quote=True)}\">{'VER PRODUCTO DIRECTO' if item.get('url_producto') else 'VER PUBLICACIÓN / EVIDENCIA'}</a>"
             )
         )
         avisos.append((clave, actual, mensaje))
