@@ -114,7 +114,7 @@ def check_http(session, url):
             text = response.text[:50000].lower()
             blocked = any(x in text for x in ("access denied", "captcha", "temporarily blocked", "too many requests"))
             return {"status": status, "state": "blocked_content" if blocked else "ok"}
-        except requests.RequestException as exc:
+        except Exception as exc:
             if attempt == 0:
                 time.sleep(1)
                 continue
