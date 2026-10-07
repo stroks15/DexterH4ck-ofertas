@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import quote_plus
 
 import requests
+from curl_cffi import requests as curl_requests
 
 TIMEOUT = 12
 REPORT = Path("preflight_health.json")
@@ -121,7 +122,7 @@ def main():
     if not report["python_errors"]:
         report["import_errors"] = check_imports()
 
-    session = requests.Session()
+    session = curl_requests.Session()
     session.headers.update(HEADERS)
     for name, url in SOURCES.items():
         result = check_http(session, url)
