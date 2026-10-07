@@ -93,3 +93,93 @@ class ApiStoresScraper:
         except Exception as e: 
             logger.error(f"[MERCADO LIBRE] Error de comunicación en API: {str(e)}")
         return {}
+
+
+# =====================================================================
+# FUNCIÓN ORQUESTADORA PRINCIPAL QUE IMPORTA MONITOR_OFERTAS.PY
+# =====================================================================
+def buscar_api_first(context, tienda: str, query: str = "liquidacion") -> list:
+    """
+    Punto de entrada unificado para que monitor_ofertas.py ejecute las búsquedas.
+    Normaliza las salidas de todas las tiendas de la capa API-first.
+    """
+    scraper = ApiStoresScraper(context)
+    tienda_clean = tienda.lower().strip()
+    productos_normalizados = []
+
+    # 1. EJECUCIÓN GRUPO WALMART / BODEGA
+    if tienda_clean in ["walmart", "bodega aurrera", "bodega_aurrera"]:
+        tienda_key = "bodega" if "bodega" in tienda_clean else "walmart"
+        raw_data = scraper.fetch_walmart_bodega_graphql(tienda=tienda_key, search_query=query)
+        
+        try:
+            products_list = raw_data.get("data", {}).get("search", {}).get("products", [])
+            for p in products_list:
+                precio_act = float(p.get("priceInfo", {}).get("currentPrice", {}).get("price", 0))
+                precio_ant = float(p.get("priceInfo", {}).get("wasPrice", {}).get("price", 0))
+                if precio_ant <= precio_act:
+                    precio_ant = None
+                    
+                productos_normalizados.append({
+                    "id": p.get("id", ""),
+                    "name": p.get("name", ""),
+                    "brand": p.get("brand", "Genérico"),
+                    "canonical_url": p.get("canonicalUrl", ""),
+                    "precio_actual": precio_act,
+                    "precio_anterior": precio_ant,
+                    "tienda": tienda,
+                    "disponibilidad": True
+                })
+        except Exception as e:
+            logger.error(f"Error parseando datos GraphQL de {tienda}: {str(e)}")
+
+    # 2. EJECUCIÓN CHEDRAUI (VTEX)
+    elif tienda_clean == "chedraui":
+        raw_list = scraper.fetch_chedraui_vtex()
+        for item in raw_list:
+            try:
+                skus = item.get("items", [])
+                if not skus: continue
+                comm_offer = skus[0].get("sellers", [{}])[0].get("commertialOffer", {})
+                precio_act = float(comm_offer.get("Price", 0))
+                precio_ant = float(comm_offer.get("ListPrice", 0))
+                if precio_ant <= precio_act:
+                    precio_ant = None
+
+                productos_normalizados.append({
+                    "id": item.get("productId", ""),
+                    "name": item.get("productName", ""),
+                    "brand": item.get("brand", "Genérico"),
+                    "canonical_url": item.get("link", ""),
+                    "precio_actual": precio_act,
+                    "precio_anterior": precio_ant,
+                    "tienda": "Chedraui",
+                    "disponibilidad": True if comm_offer.get("AvailableQuantity", 0) > 0 else False
+                })
+            except Exception as e:
+                logger.debug(f"Error mapeando producto VTEX Chedraui: {str(e)}")
+
+    # 3. EJECUCIÓN MERCADO LIBRE
+    elif tienda_clean in ["mercado libre", "mercado_libre", "mercadolibre"]:
+        raw_data = scraper.fetch_mercado_libre_api(query=query)
+        results = raw_data.get("results", [])
+        for item in results:
+            try:
+                precio_act = float(item.get("price", 0))
+                # Mercado Libre usa 'original_price' para el tachado
+                precio_ant = float(item.get("original_price")) if item.get("original_price") else None
+                
+                productos_normalizados.append({
+                    "id": item.get("id", ""),
+                    "name": item.get("title", ""),
+                    "brand": "Ver en publicación",
+                    "canonical_url": item.get("permalink", ""),
+                    "precio_actual": precio_act,
+                    "precio_anterior": precio_ant,
+                    "tienda": "Mercado Libre",
+                    "disponibilidad": True
+                })
+            except Exception as e:
+                logger.debug(f"Error mapeando item de Mercado Libre: {str(e)}")
+
+    return productos_normalizados
