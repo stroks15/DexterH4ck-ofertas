@@ -66,7 +66,7 @@ class VtexStoresScraper:
                 return []
             payload = response.json()
             return payload if isinstance(payload, list) else []
-        except (ValueError, curl_requests.RequestsError) as exc:
+        except ValueError as exc:
             logger.warning("[%s] Error VTEX controlado: %s", store_name.upper(), exc)
         except Exception as exc:
             logger.warning("[%s] Error VTEX inesperado: %s", store_name.upper(), exc)
