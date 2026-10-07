@@ -66,7 +66,7 @@ FUENTES = [
         ),
         "url": "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
         "host": "bodegaaurrera.com.mx",
-        "patrones": ("/ip/",),
+        "patrones": ("/ip/", "/p/"),
         "max_pages": 4,
     },
     {
