@@ -13,3 +13,9 @@ class StoreDiscoveryRegressionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_bodega_despensa_product_url(self):
+        self.assertTrue(es_url_producto(
+            "https://despensa.bodegaaurrera.com.mx/ip/Producto/00750231572066",
+            "https://www.bodegaaurrera.com.mx/",
+        ))
