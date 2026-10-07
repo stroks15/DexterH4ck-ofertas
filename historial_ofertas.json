@@ -29245,15 +29245,15 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDVxRIXCEgO4lklHjCCsbLQBtwvBy%2BRpB6pMNpayl8apjhqkL7%2FpGqJbc4wyNL3jsjnhRu8MZsM0%2BrlQPIuSWYoIuM7776XN3uJm27IwI28KnVZCxwc5VY5m%2FEGU97sHxoDPOJQcoEa8zvypCl02XzZLFisio3MIRTCQuCqPmNZxlgLRSm4cDpKkrzpuDcP5bGgqUg%3D%3D",
-    "precio_actual": 290.0,
-    "precio_maximo": 634.0,
-    "descuento": 54,
-    "puntuacion": 57,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHgjmEEmpmvfk5FhJJFsGA35yCaTkd%2BIkRf8DuifUS4KiaKea%2FLEoVUTKWfv4usVmlEt%2FyirhVH2i%2FEFFXCCJskxpoOEzbnTKSTaOXLidV1zqjk18Z2KDHzCIFY2mR1C2DupxnKMIcIj6cPiMxZqVzMQc9aJ8opWo8DEWwJp82xBsft8elMK1To0LAZxWxheXuUPLhM%3D",
+    "precio_actual": 1979.0,
+    "precio_maximo": 4399.0,
+    "descuento": 55,
+    "puntuacion": 58,
     "extremo": {
       "es_extremo": false,
       "nivel": "normal",
-      "descuento_calculado": 54.26,
+      "descuento_calculado": 55.01,
       "es_95_99": false,
       "senales": [
         "url_tienda_oficial"
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-07T02:43:43.147763+00:00",
+    "ultima_actualizacion": "2026-10-07T03:40:05.863143+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29833,7 +29833,7 @@
   },
   "amazon|code:b0f7z3cbvf": {
     "tienda": "Amazon MX",
-    "titulo": "Amazon Fire TV Stick 4K Plus, compatible con Wi-Fi 6, Dolby Vision/Atmos, encuentra programas más rápido con Alexa+ 4.7 4.7 (5276) Promoción - 53% . 00 . 00 Precio de l",
+    "titulo": "Amazon Fire TV Stick 4K Plus, compatible con Wi-Fi 6, Dolby Vision/Atmos, encuentra programas más rápido con Alexa+ 4.7 4.7 (5280) Promoción - 53% . 00 . 00 Precio de l",
     "marca": "",
     "categoria": "Streaming",
     "url": "https://www.amazon.com.mx/dp/B0F7Z3CBVF?pd_rd_w=zezyp&content-id=amzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d%3Aamzn1.sym.cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_p=cb872713-f8f9-4ddf-82f7-c0570a90498d&pf_rd_r=JKKG6K3CP27K8S5XR328&pd_rd_wg=ukVLP&pd_rd_r=31f99a96-499c-4ac1-b080-8253437adf39&pd_rd_i=B0F7Z3CBVF&ref_=febr_c_p_r1_img",
@@ -34731,6 +34731,357 @@
       "publicable_como_95_99": false
     },
     "ultima_actualizacion": "2026-10-07T02:52:41.060848+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01hd7w6rc": {
+    "tienda": "Amazon",
+    "titulo": "B01HD7W6RC",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B01HD7W6RC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 30.38,
+    "precio_maximo": 91.01,
+    "descuento": 67,
+    "puntuacion": 69,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 66.62,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.848646+00:00",
+    "precio_alertado": 30.38
+  },
+  "amazon|code:b07sjszhd7": {
+    "tienda": "Amazon",
+    "titulo": "B07SJSZHD7",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07SJSZHD7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 494.16,
+    "precio_maximo": 1348.99,
+    "descuento": 63,
+    "puntuacion": 65,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 63.37,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.854520+00:00",
+    "precio_alertado": 494.16
+  },
+  "amazon|code:b0cts7223w": {
+    "tienda": "Amazon",
+    "titulo": "B0CTS7223W",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0CTS7223W?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 438.99,
+    "precio_maximo": 1099.0,
+    "descuento": 60,
+    "puntuacion": 63,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 60.06,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.860429+00:00",
+    "precio_alertado": 438.99
+  },
+  "amazon|code:b07fpxl3lw": {
+    "tienda": "Amazon",
+    "titulo": "B07FPXL3LW",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B07FPXL3LW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 165.0,
+    "precio_maximo": 337.0,
+    "descuento": 51,
+    "puntuacion": 54,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 51.04,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.868986+00:00",
+    "precio_alertado": 165.0
+  },
+  "amazon|code:b0f14n95qv": {
+    "tienda": "Amazon",
+    "titulo": "B0F14N95QV",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0F14N95QV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2072.39,
+    "precio_maximo": 3099.0,
+    "descuento": 33,
+    "puntuacion": 37,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 33.13,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.874923+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d1w4rk7s": {
+    "tienda": "Amazon",
+    "titulo": "B0D1W4RK7S",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0D1W4RK7S?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 629.0,
+    "precio_maximo": 899.0,
+    "descuento": 30,
+    "puntuacion": 34,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 30.03,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.880762+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gc424m14": {
+    "tienda": "Amazon",
+    "titulo": "B0GC424M14",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GC424M14?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 698.97,
+    "precio_maximo": 999.0,
+    "descuento": 30,
+    "puntuacion": 34,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 30.03,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.886583+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gfhlk5wv": {
+    "tienda": "Amazon",
+    "titulo": "B0GFHLK5WV",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GFHLK5WV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1329.14,
+    "precio_maximo": 1699.0,
+    "descuento": 22,
+    "puntuacion": 26,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 21.77,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.892468+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gfwg58wd": {
+    "tienda": "Amazon",
+    "titulo": "B0GFWG58WD",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0GFWG58WD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 799.99,
+    "precio_maximo": 999.99,
+    "descuento": 20,
+    "puntuacion": 24,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 20.0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.898317+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dr8969gt": {
+    "tienda": "Amazon",
+    "titulo": "B0DR8969GT",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DR8969GT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 261.28,
+    "precio_maximo": 309.0,
+    "descuento": 15,
+    "puntuacion": 19,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 15.44,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.905499+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dphczz2t": {
+    "tienda": "Amazon",
+    "titulo": "B0DPHCZZ2T",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0DPHCZZ2T?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 7514.0,
+    "precio_maximo": 7514.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.911332+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c8rdq5nk": {
+    "tienda": "Amazon",
+    "titulo": "B0C8RDQ5NK",
+    "marca": "",
+    "categoria": "",
+    "url": "https://www.amazon.com.mx/dp/B0C8RDQ5NK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3382.0,
+    "precio_maximo": 3382.0,
+    "descuento": 0,
+    "puntuacion": 5,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 0,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:05.917202+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gsh9myj6": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon Fire TV Stick 4K (último modelo): streaming 4K simple, nuevo Control remoto Fire TV, todas tus apps en un solo lugar, TV gratis y en vivo, encuentra series más rápido con Al",
+    "marca": "",
+    "categoria": "Streaming",
+    "url": "https://www.amazon.com.mx/dp/B0GSH9MYJ6?pd_rd_w=Haxmi&content-id=amzn1.sym.dd47cdcf-0d8c-41d4-98ae-812c137073f8%3Aamzn1.sym.dd47cdcf-0d8c-41d4-98ae-812c137073f8&pf_rd_p=dd47cdcf-0d8c-41d4-98ae-812c137073f8&pf_rd_r=ZJ4WSV2W18K5Z7R1ER38&pd_rd_wg=3oHpX&pd_rd_r=f3880c3a-01fb-4f94-b60a-f0b3d6cf9e72&pd_rd_i=B0GSH9MYJ6&ref_=febr_c_p_r1_img",
+    "precio_actual": 1049.0,
+    "precio_maximo": 1499.0,
+    "descuento": 30,
+    "puntuacion": 34,
+    "extremo": {
+      "es_extremo": false,
+      "nivel": "normal",
+      "descuento_calculado": 30.02,
+      "es_95_99": false,
+      "senales": [
+        "url_tienda_oficial"
+      ],
+      "url_oficial": true,
+      "precio_verificado": false,
+      "evidencia_precio": "no_verificado",
+      "publicable_como_extremo": false,
+      "publicable_como_95_99": false
+    },
+    "ultima_actualizacion": "2026-10-07T03:40:06.116282+00:00",
     "precio_alertado": null
   }
 }
