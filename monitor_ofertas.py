@@ -19,6 +19,7 @@ from core.product_identifiers import canonical_product_identifier
 from scrapers.api_stores import buscar_api_first
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
+from scrapers.liquidazona import buscar_liquidazona_walmart
 
 MIN_DESCUENTO = 50
 MAX_DESCUENTO = 99
@@ -137,7 +138,7 @@ def _candidato_de_tienda_objetivo(item):
     origen = str(item.get("origen_link") or item.get("origen") or "").lower()
     return origen == "telegram" and bool(item.get("url"))
 
-def enviar_telegram(texto):
+def enviar_telegram(texto, imagen=None, sticker_id=None):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
         raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
     global _ultimo_envio_telegram
@@ -146,12 +147,25 @@ def enviar_telegram(texto):
     espera = 3.2 - (time.monotonic() - _ultimo_envio_telegram)
     if espera > 0:
         time.sleep(espera)
+    # Sticker opcional: se configura con un file_id de Telegram, nunca se
+    # descarga ni se genera dinámicamente en cada ciclo.
+    if sticker_id:
+        try:
+            requests.post(f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendSticker", data={"chat_id": TELEGRAM_CHAT_ID, "sticker": sticker_id}, timeout=15)
+        except requests.RequestException as exc:
+            print(f"Telegram sticker: {type(exc).__name__}: {exc}")
+    endpoint = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendPhoto" if imagen else f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     for intento in range(2):
-        response = requests.post(
-            f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
-            data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False},
-            timeout=20,
-        )
+        if imagen:
+            try:
+                response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "caption": texto, "parse_mode": "HTML"}, files={"photo": (None, imagen)}, timeout=25)
+            except requests.RequestException:
+                # URL remota no aceptada: reintentamos como mensaje de texto.
+                imagen = None
+                endpoint = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+                response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False}, timeout=20)
+        else:
+            response = requests.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False}, timeout=20)
         _ultimo_envio_telegram = time.monotonic()
         if response.ok:
             return
@@ -196,6 +210,7 @@ def revisar():
         "telegram": lambda: buscar_telegram(requests.Session()),
         "fisicas": lambda: buscar_tiendas_fisicas(requests.Session()),
         "oficiales": lambda: buscar_liquidaciones_oficiales(requests.Session()),
+        "liquidazona": lambda: buscar_liquidazona_walmart(requests.Session()),
     }
     candidatos = []
     with ThreadPoolExecutor(max_workers=4, thread_name_prefix="discovery") as pool:
@@ -506,7 +521,9 @@ def revisar():
     errores_telegram = 0
     for clave, actual, mensaje in avisos:
         try:
-            enviar_telegram(mensaje)
+            imagen = item.get("imagen") if isinstance(item, dict) else None
+            sticker_id = os.environ.get("TELEGRAM_STICKER_LIQUIDACION") if ("liquidacion" in mensaje.lower() or "LIQUIDACIÓN" in mensaje) else None
+            enviar_telegram(mensaje, imagen=imagen, sticker_id=sticker_id)
             historial[clave]["precio_alertado"] = actual
             enviados += 1
         except Exception as error:
