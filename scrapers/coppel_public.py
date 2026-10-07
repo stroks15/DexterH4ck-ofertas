@@ -38,7 +38,7 @@ def parse_next_data(html: str, url: str) -> dict[str, Any] | None:
         return None
 
 
-def extract_product_from_next_data(html: str, url: str) -> dict[str, Any] | None:
+def extract_products_from_next_data(html: str, url: str) -> list[dict[str, Any]]:
     context = extract_coppel_context(url)
     data = parse_next_data(html, url)
     if not data:
@@ -58,39 +58,58 @@ def extract_product_from_next_data(html: str, url: str) -> dict[str, Any] | None
             candidates.append((str(title), current, previous, node))
 
     if not candidates:
-        return None
+        return []
 
-    title, current, previous, node = candidates[0]
-    try:
-        current = float(str(current).replace("$", "").replace(",", "").strip())
-    except (TypeError, ValueError):
-        return None
-    try:
-        previous = float(str(previous).replace("$", "").replace(",", "").strip()) if previous is not None else None
-    except (TypeError, ValueError):
-        previous = None
+    output = []
+    seen = set()
+    for title, current, previous, node in candidates:
+        try:
+            current = float(str(current).replace("$", "").replace(",", "").strip())
+        except (TypeError, ValueError):
+            continue
+        try:
+            previous = float(str(previous).replace("$", "").replace(",", "").strip()) if previous is not None else None
+        except (TypeError, ValueError):
+            previous = None
+        if current <= 0:
+            continue
 
-    brand = node.get("brand") or node.get("brandName") or ""
-    if isinstance(brand, dict):
-        brand = brand.get("name") or ""
-    brand, _ = detect_priority_brand({"titulo": title, "marca": brand})
-    category = infer_category({"titulo": title, "marca": brand, "categoria": node.get("category") or ""})
-    discount = round((1 - current / previous) * 100) if previous and previous > current else 0
+        brand = node.get("brand") or node.get("brandName") or ""
+        if isinstance(brand, dict):
+            brand = brand.get("name") or ""
+        detected_brand, _ = detect_priority_brand({"titulo": title, "marca": brand})
+        category = infer_category({
+            "titulo": title,
+            "marca": detected_brand or brand,
+            "categoria": node.get("category") or "",
+        })
+        discount = round((1 - current / previous) * 100) if previous and previous > current else 0
+        product_url = node.get("url") or node.get("permalink") or context["url"]
+        sku = node.get("sku") or node.get("id") or context.get("sku") or ""
+        identity = (str(sku), str(product_url), str(title).strip().lower())
+        if identity in seen:
+            continue
+        seen.add(identity)
+        output.append({
+            "id": sku or context.get("sku") or node.get("id"),
+            "titulo": title,
+            "nombre": title,
+            "marca": detected_brand or brand,
+            "categoria": category,
+            "precio_actual": current,
+            "precio_anterior": previous if previous and previous > current else None,
+            "descuento": discount,
+            "url": product_url,
+            "score": discount,
+            "puntuacion": discount,
+            "es_bomba": discount >= 90,
+            "tienda": "Coppel",
+            "sku": sku,
+            "origen_link": "coppel_next_data",
+        })
+    return output
 
-    return {
-        "id": context.get("sku") or node.get("sku") or node.get("id"),
-        "titulo": title,
-        "nombre": title,
-        "marca": brand,
-        "categoria": category,
-        "precio_actual": current,
-        "precio_anterior": previous if previous and previous > current else None,
-        "descuento": discount,
-        "url": context["url"],
-        "score": discount,
-        "puntuacion": discount,
-        "es_bomba": discount >= 90,
-        "tienda": "Coppel",
-        "sku": context.get("sku", ""),
-        "origen_link": "coppel_next_data",
-    }
+
+def extract_product_from_next_data(html: str, url: str) -> dict[str, Any] | None:
+    rows = extract_products_from_next_data(html, url)
+    return rows[0] if rows else None
