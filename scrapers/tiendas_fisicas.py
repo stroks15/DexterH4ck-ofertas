@@ -122,11 +122,7 @@ def buscar_tiendas_fisicas(session=None):
     session.headers.update(HEADERS)
     resultados = []
     vistos = set()
-    google_bloqueado_global = False
-
     for tienda in TIENDAS_FISICAS:
-        if google_bloqueado_global:
-            break
         google_bloqueado = False
         for consulta in tienda["consultas"]:
             if google_bloqueado:
@@ -140,7 +136,6 @@ def buscar_tiendas_fisicas(session=None):
                 if response.status_code == 429:
                     print(f"Fisicas/{tienda['nombre']}: Google HTTP 429; se detiene el resto de consultas de esta sucursal para no empeorar el bloqueo.")
                     google_bloqueado = True
-                    google_bloqueado_global = True
                     continue
                 if response.status_code >= 400:
                     print(f"Fisicas/{tienda['nombre']}: Google HTTP {response.status_code}")
