@@ -22,7 +22,6 @@ from core.product_identifiers import canonical_product_identifier
 
 # Integración nativa de nuestras nuevas capas de servicios robustas
 from scrapers.api_stores import buscar_api_first
-from scrapers.vtex_stores import VtexStoresScraper
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
 from scrapers.liquidazona import buscar_liquidazona_walmart
@@ -187,9 +186,6 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     """
     logger.info("Iniciando despacho asincrónico multihilo de scrapers de liquidación...")
     candidatos_totales = []
-    
-    # Inicialización del scraper VTEX unificado
-    vtex_scraper = VtexStoresScraper(contexto_ficticio)
 
     # Diccionario de hilos de ejecución de APIs directas sin colisiones
     tareas = {
@@ -197,13 +193,12 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
         "API_Bodega": lambda: buscar_api_first(contexto_ficticio, "bodega aurrera", "liquidacion"),
         "API_Chedraui": lambda: buscar_api_first(contexto_ficticio, "chedraui", "ofertas"),
         "API_MercadoLibre": lambda: buscar_api_first(contexto_ficticio, "mercado libre", "liquidacion"),
-        "API_Coppel_VTEX": lambda: vtex_scraper.fetch_coppel_liquidations("liquidacion"),
-        "API_Suburbia_VTEX": lambda: vtex_scraper.fetch_suburbia_liquidations("ofertas"),
         "Fisicas_Locales": lambda: buscar_tiendas_fisicas(),
         "Telegram_Feeds": lambda: buscar_telegram(),
         "Liquidaciones_Oficiales": lambda: buscar_liquidaciones_oficiales(),
         "Liquidazona_Engine": lambda: buscar_liquidazona_walmart(),
-        "Comunidades_Web": lambda: buscar_comunidades_web()
+        "Comunidades_Web": lambda: buscar_comunidades_web(),
+        "Feed_Comunidad": lambda: parsear_feed_comunidad_espejo()
     }
 
     # Despacho en paralelo usando hilos aislados para evitar fugas por caídas de una sola tienda
@@ -218,3 +213,7 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
                     logger.info(f"[POOL MATCH] {nombre_tarea} retornó {len(resultados)} candidatos.")
                     candidatos_totales.extend(resultados)
             except Exception as e:
+                # Manejo de excepciones en el pool: registra el error pero continúa con otras tareas
+                logger.error(f"[POOL ERROR] {nombre_tarea} falló: {type(e).__name__}: {str(e)}")
+    
+    return candidatos_totales
