@@ -512,14 +512,14 @@ def revisar():
                 else f"🔗 <a href=\"{html.escape(item.get('url_producto') or url, quote=True)}\">{'VER PRODUCTO DIRECTO' if item.get('url_producto') else 'VER PUBLICACIÓN / EVIDENCIA'}</a>"
             )
         )
-        avisos.append((clave, actual, mensaje))
+        avisos.append((clave, actual, mensaje, item))
 
     print(f"Descartes: {json.dumps(descartes, ensure_ascii=False)}")
     avisos.sort(key=lambda row: historial.get(row[0], {}).get("puntuacion", 0), reverse=True)
 
     enviados = 0
     errores_telegram = 0
-    for clave, actual, mensaje in avisos:
+    for clave, actual, mensaje, item in avisos:
         try:
             imagen = item.get("imagen") if isinstance(item, dict) else None
             sticker_id = os.environ.get("TELEGRAM_STICKER_LIQUIDACION") if ("liquidacion" in mensaje.lower() or "LIQUIDACIÓN" in mensaje) else None
