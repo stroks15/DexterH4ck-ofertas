@@ -498,6 +498,8 @@ def revisar():
             f"🛒 {html.escape(titulo)}\n"
             + (f"🏷️ Marca: <b>{html.escape(str(marca))}</b>\n" if marca else "")
             + (f"📂 Categoría: {html.escape(str(categoria))}\n" if categoria else "")
+            + (f"🏷️ UPC/SKU: <code>{html.escape(str(item.get('upc') or item.get('sku')))}</code>\n" if (item.get("upc") or item.get("sku")) else "")
+            + (f"📡 Fuente: <b>{html.escape(str(item.get('origen_link') or item.get('origen')))}</b>\n" if item.get("origen_link") or item.get("origen") else "")
             + f"⭐ Puntuación: <b>{puntuacion}/100</b>\n"
             + (f"✨ {' · '.join(extras)}\n" if extras else "")
             + "\n"
