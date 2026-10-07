@@ -228,8 +228,19 @@ class MercadoLibreApiScraper(BaseScraper):
                 "https://api.mercadolibre.com/sites/MLM/search?" + urlencode(params)
             )
             if response.status_code >= 400:
-                circuit.record(response.status_code, f"HTTP {response.status_code}")
-                print(f"[SCRAPER:Mercado Libre MX] API HTTP {response.status_code}; fuente pausada en este ciclo.")
+                paused = circuit.record(
+                    response.status_code,
+                    f"HTTP {response.status_code}",
+                )
+                print(
+                    f"[SCRAPER:Mercado Libre MX] API HTTP {response.status_code}; "
+                    f"se conserva el fallback público/indexado. paused={paused}"
+                )
+                # Un 401/403 no mejora repitiendo la misma llamada anónima.
+                # Cortamos la API en este ciclo para que el resto del monitor
+                # pueda trabajar con HTML, comunidad e historial.
+                if response.status_code in {401, 403, 451}:
+                    break
                 continue
             data = response.json()
             for item in data.get("results", []):
