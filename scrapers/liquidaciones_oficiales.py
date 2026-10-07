@@ -30,7 +30,7 @@ FUENTES = [
         ),
         "url": "https://www.walmart.com.mx/content/especiales/360013_300279",
         "host": "walmart.com.mx",
-        "patrones": ("/ip/",),
+        "patrones": ("/ip/", "/p/"),
         "max_pages": 4,
     },
     {
@@ -62,6 +62,7 @@ FUENTES = [
             "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-destacados/490004_1030001_1030002",
             "https://www.bodegaaurrera.com.mx/content/eventos/remates/490004_1030001",
             "https://despensa.bodegaaurrera.com.mx/content/remates/2715538",
+            "https://despensa.bodegaaurrera.com.mx/browse/cupones-y-bonificaciones/rebajas-y-mas/8171461_3848205",
         ),
         "url": "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
         "host": "bodegaaurrera.com.mx",
@@ -127,7 +128,10 @@ def _is_product(url, source):
     parsed = urlparse(url)
     host = parsed.netloc.lower()
     path = parsed.path.lower()
-    if not host or not (host == source["host"] or host.endswith("." + source["host"])):
+    allowed_host = host == source["host"] or host.endswith("." + source["host"])
+    if source["tienda"] == "Bodega Aurrera":
+        allowed_host = allowed_host or host.endswith("despensa.bodegaaurrera.com.mx")
+    if not host or not allowed_host:
         return False
     if any(x in path for x in ("/search", "/buscar", "/catalogo", "/ofertas", "/marcas", "/home", "/precios-liquidacion", "/promociones")):
         return False
