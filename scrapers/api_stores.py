@@ -19,6 +19,7 @@ import requests
 
 from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
 from core.source_resilience import SourceCircuit
+from core.network_json import extract_products
 
 
 def _num(value: Any) -> float | None:
@@ -268,23 +269,21 @@ class ConfigurableJsonScraper(BaseScraper):
             print(f"[SCRAPER:{self.store}] {self.endpoint_env} HTTP {response.status_code}")
             return []
         data = response.json()
+        # Primero usamos el extractor semántico, que tolera respuestas
+        # anidadas y variantes de nombres sin depender de una ruta JSON fija.
+        output = extract_products(data, response.url, self.store)
+        if output:
+            return output
+        # Fallback legacy para APIs muy simples.
         rows = data if isinstance(data, list) else data.get("results", data.get("products", []))
-        output = []
         for row in rows or []:
+            if not isinstance(row, dict):
+                continue
             price = _num(row.get("price") or row.get("Price") or row.get("precio"))
-            previous = _num(
-                row.get("compareAtPrice") or row.get("ListPrice") or
-                row.get("previous_price") or row.get("precio_anterior")
-            )
+            previous = _num(row.get("compareAtPrice") or row.get("ListPrice") or row.get("previous_price") or row.get("precio_anterior"))
             url = row.get("url") or row.get("link") or row.get("permalink")
             if price and url:
-                output.append(self.normalize(
-                    title=row.get("title") or row.get("name") or row.get("productName"),
-                    url=url,
-                    price=price,
-                    previous_price=previous,
-                    api="configured_json",
-                ))
+                output.append(self.normalize(title=row.get("title") or row.get("name") or row.get("productName"), url=url, price=price, previous_price=previous, api="configured_json"))
         return output
 
 
@@ -324,4 +323,11 @@ def api_first_scrapers() -> list[BaseScraper]:
 
 
 def buscar_api_first() -> list[dict[str, Any]]:
-    return run_scrapers_parallel(api_first_scrapers())
+    results = run_scrapers_parallel(api_first_scrapers())
+    if os.getenv("NETWORK_BROWSER_ENABLED", "false").lower() in {"1", "true", "yes"}:
+        try:
+            from scrapers.browser_network import buscar_network_browser
+            results.extend(buscar_network_browser())
+        except Exception as exc:
+            print(f"[SCRAPER:NetworkBrowser] ERROR aislado: {type(exc).__name__}: {exc}")
+    return results
