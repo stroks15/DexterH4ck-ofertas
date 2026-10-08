@@ -1,4 +1,5 @@
 name: Monitor de descuentos
+
 on:
   push:
     branches:
@@ -8,55 +9,79 @@ on:
       - "**/*.yml"
       - "**/*.yaml"
       - "requirements.txt"
+      - "requirements-browser.txt"
       - "config/**"
       - "tests/**"
   schedule:
     # Cada 15 minutos, desplazado 7 minutos para evitar el pico de cada hora.
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
   group: monitor-ofertas
   cancel-in-progress: false
+
 jobs:
   revisar:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           clean: true
+
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
+
       - name: Instalar dependencias
+        shell: bash
         run: |
+          set -euo pipefail
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          else
+            echo "::error::No existe requirements.txt"
+            exit 1
+          fi
+          if [ -f requirements-browser.txt ]; then
+            python -m pip install -r requirements-browser.txt
+          else
+            echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
+          fi
+
       - name: Cachear binarios de Playwright
+        if: hashFiles('requirements-browser.txt') != ''
         uses: actions/cache@v4
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-browser.txt') }}
 
-      - name: Instalar navegador para captura JSON (opcional)
-        if: true
+      - name: Instalar navegadores para captura JSON (opcional)
+        if: hashFiles('requirements-browser.txt') != ''
+        shell: bash
         run: |
-          pip install -r requirements-browser.txt
-          # Si hubo un acierto en la caché, solo vincula el navegador sin descargar dependencias pesadas de apt
-          if [ "${{ steps.playwright-cache.outputs.cache-hit }}" = 'true' ]; then
-            echo "Navegador detectado en caché. Vinculando binarios existentes..."
-            python -m playwright install chromium
+          set -euo pipefail
+          if python -c "import playwright" >/dev/null 2>&1; then
+            echo "Instalando binarios de Playwright: Chromium + WebKit."
+            if [ "${{ steps.playwright-cache.outputs.cache-hit }}" = "true" ]; then
+              echo "Caché de Playwright encontrada; se verifican/instalan los navegadores solicitados."
+            else
+              echo "Caché de Playwright no encontrada; se instalarán los navegadores."
+            fi
+            python -m playwright install --with-deps chromium webkit
           else
-            echo "Caché vacía. Descargando Chromium e instalando librerías del sistema Linux..."
-            python -m playwright install --with-deps chromium
+            echo "::notice::Playwright no está instalado; no se descargan binarios de navegador."
           fi
 
       - name: Verificar secretos de Telegram
@@ -67,6 +92,7 @@ jobs:
           test -n "$TELEGRAM_TOKEN" || { echo "::error::Falta el secret TELEGRAM_TOKEN"; exit 1; }
           test -n "$TELEGRAM_CHAT_ID" || { echo "::error::Falta el secret TELEGRAM_CHAT_ID"; exit 1; }
           echo "Secretos de Telegram detectados correctamente."
+
       - name: Verificar credenciales de IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -85,26 +111,23 @@ jobs:
           if [ -z "$GEMINI_API_KEY" ]; then
             echo "::warning::Gemini: secret ausente en Actions."
           else
-            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15 "https://googleapis.com")
+            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15               "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY")
             case "$code" in
               200) echo "Gemini: clave presente y API accesible (HTTP 200)." ;;
-              401|403) echo "::error::Gemini: clave presente pero rechazada (HTTP $code)." ;;
+              400|401|403) echo "::error::Gemini: clave presente pero rechazada o solicitud inválida (HTTP $code)." ;;
               429) echo "::warning::Gemini: clave presente, pero límite/cuota alcanzado (HTTP 429)." ;;
-              *) echo "::warning::Gemini: API respondió HTTP $code; el token sí está presente." ;;
+              *) echo "::warning::Gemini: API respondió HTTP $code." ;;
             esac
           fi
           if [ -z "$GROQ_API_KEY" ]; then
             echo "::warning::Groq: secret ausente en Actions."
           else
-            code=$(curl -sS -o /tmp/groq-models.json -w "%{http_code}" --max-time 15 \
-              -H "Authorization: Bearer $GROQ_API_KEY" \
-              -H "Content-Type: application/json" \
-              "https://groq.com")
+            code=$(curl -sS -o /tmp/groq-models.json -w "%{http_code}" --max-time 15               -H "Authorization: Bearer $GROQ_API_KEY"               -H "Content-Type: application/json"               "https://api.groq.com/openai/v1/models")
             case "$code" in
               200) echo "Groq: clave presente y API accesible (HTTP 200)." ;;
               401|403) echo "::error::Groq: clave presente pero rechazada (HTTP $code)." ;;
               429) echo "::warning::Groq: clave presente, pero límite/cuota alcanzado (HTTP 429)." ;;
-              *) echo "::warning::Groq: API respondió HTTP $code; el token sí está presente." ;;
+              *) echo "::warning::Groq: API respondió HTTP $code." ;;
             esac
           fi
 
@@ -122,7 +145,13 @@ jobs:
         run: python -m py_compile core/product_identifiers.py core/network_json.py scrapers/browser_network.py tools/descubrir_apis_navegador.py tests/test_product_identifiers.py monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py scrapers/whatsapp_channels.py core/scraper_base.py core/source_resilience.py core/offer_identity.py scrapers/api_stores.py scrapers/vtex_stores.py scrapers/comunidades_web.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
 
       - name: Pruebas deterministas de liquidaciones extremas
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m unittest discover -s tests -p "test_*.py" -v
+
       - name: Preflight - detectar errores antes del monitor
         run: |
           python preflight.py
@@ -187,23 +216,23 @@ jobs:
             exit 0
           fi
           git config user.name "bot-ofertas"
-          git config user.email "bot-ofertas@://github.com"
+          git config user.email "bot-ofertas@users.noreply.github.com"
           git add historial_ofertas.json
           if git diff --cached --quiet; then
             echo "Historial sin cambios."
             exit 0
           fi
           git commit -m "Actualiza historial de ofertas [skip ci]"
-          
+
           for intento in {1..5}; do
             echo "Intento de Push de historial $intento/5..."
             git fetch origin main
-            
+
             if git push origin HEAD:main; then
               echo "Historial actualizado."
               exit 0
             fi
-            
+
             echo "Push concurrente; sincronizando intento $intento..."
             git reset --soft HEAD~1
             git checkout -- historial_ofertas.json
@@ -213,7 +242,6 @@ jobs:
               exit 0
             }
             sleep $((intento * 2))
-            if [ -f /tmp/nope ]; then exit 0; fi
           done
           echo "::warning::No se pudo publicar el historial en este ciclo; el monitor sí terminó correctamente."
           exit 0
