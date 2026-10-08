@@ -128,3 +128,33 @@ def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
                 continue
 
     return resultados
+
+
+def es_url_producto(url, base_url=None):
+    """Determina si una URL pertenece a una página de producto y no a un listado/búsqueda."""
+    try:
+        parsed = urlparse(url or "")
+        host = parsed.netloc.lower().split(":", 1)[0]
+        path = parsed.path.lower()
+        if not host or not path or path == "/":
+            return False
+        if base_url:
+            base_host = urlparse(base_url).netloc.lower().split(":", 1)[0]
+            if base_host and not (host == base_host or host.endswith("." + base_host)):
+                return False
+        if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
+            return False
+        patrones = (
+            "/ip/", "/dp/", "/gp/product/", "/mlm-", "/p/", "/pdp/",
+            "/tienda/pdp/", "/producto/", "/product/", "/item/"
+        )
+        if any(p in path for p in patrones):
+            return True
+        # Amazon y Mercado Libre también pueden usar identificadores en la ruta.
+        if re.search(r"/(?:dp|gp/product|itm|mlm)[-_]?[a-z0-9]+", path):
+            return True
+        return False
+    except Exception:
+        return False
+
+from urllib.parse import urlparse
