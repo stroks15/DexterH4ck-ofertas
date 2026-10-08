@@ -1,38 +1,92 @@
 # preflight.py
-import os
+"""Preflight por tienda.
+
+Sondea cada tienda con requests legítimos (User-Agent honesto) y clasifica el
+resultado. Una tienda bloqueada/no disponible se OMITE (PREFLIGHT_BLOCKED_STORES),
+pero jamás detiene el resto del monitor: este script siempre termina con código 0
+y deja siempre `preflight_health.json` y `preflight.env`.
+No intenta evadir CAPTCHA/WAF.
+"""
+from __future__ import annotations
+
+import json
 import logging
-# Corregido el import de curl_cffi que rompía el inicio del script
-from curl_cffi import requests as curl_requests
+import os
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
+
+import requests
+
+from core.source_resilience import (
+    STORE_TARGETS,
+    classify_status,
+    probe_url,
+    summarize_store,
+    BLOCK_SIGNATURES,
+    PROBE_HEADERS,
+)
 
 logger = logging.getLogger("DexterH4ck.Preflight")
 
-HEADERS_PROV = {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-    "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
-    "Cache-Control": "no-cache"
-}
+HEALTH_FILE = "preflight_health.json"
+ENV_FILE = "preflight.env"
+
 
 def ejecutar_diagnostico_conectividad(url: str, nombre_tienda: str) -> str:
-    """
-    Realiza una comprobación de salud de red simulando el stack completo de Chrome
-    para evitar generar alertas falsas de bloqueo en el runner de GitHub.
-    """
-    session = curl_requests.Session(impersonate="chrome")
+    """Compatibilidad: devuelve el estado clasificado de una URL ('ok', 'blocked', ...)."""
+    resultado = probe_url(url)
+    if resultado["state"] != "ok":
+        logger.warning("[%s] preflight %s -> %s (HTTP %s)", nombre_tienda, url, resultado["state"], resultado.get("status"))
+    return resultado["state"]
+
+
+def ejecutar_preflight(targets: dict[str, list[str]] | None = None) -> dict:
+    targets = targets or STORE_TARGETS
+    tiendas: dict[str, dict] = {}
+
+    def _una(tienda: str) -> tuple[str, dict]:
+        with requests.Session() as session:
+            probes = [probe_url(u, session=session) for u in targets[tienda]]
+        return tienda, summarize_store(probes)
+
+    with ThreadPoolExecutor(max_workers=6, thread_name_prefix="preflight") as pool:
+        for tienda, resumen in pool.map(_una, list(targets)):
+            tiendas[tienda] = resumen
+            nivel = logging.INFO if resumen["state"] == "ok" else logging.WARNING
+            logger.log(nivel, "[%s] preflight: %s%s", tienda, resumen["state"],
+                       " (se omitirá en este ciclo)" if resumen["blocked"] else "")
+
+    bloqueadas = [t for t, r in tiendas.items() if r["blocked"]]
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "stores": tiendas,
+        "blocked_stores": bloqueadas,
+    }
+
+
+def escribir_salidas(health: dict) -> None:
+    with open(HEALTH_FILE, "w", encoding="utf-8") as fh:
+        json.dump(health, fh, ensure_ascii=False, indent=2)
+    with open(ENV_FILE, "w", encoding="utf-8") as fh:
+        fh.write(f"PREFLIGHT_BLOCKED_STORES={','.join(health.get('blocked_stores', []))}\n")
+
+
+def main() -> int:
+    logging.basicConfig(level=logging.INFO)
     try:
-        # Se establece un timeout fijo para mitigar congelamientos de red
-        response = session.get(url, headers=HEADERS_PROV, timeout=15.0, allow_redirects=True)
-        html_lower = response.text.lower()
-        
-        if any(term in html_lower for term in ["access denied", "temporarily blocked", "captcha"]):
-            logger.warning(f"[{nombre_tienda}] El servidor devolvió contenido con firmas de bloqueo o reto.")
-            return "blocked"
-            
-        if response.status_code == 200:
-            return "ok"
-        elif response.status_code >= 500:
-            return "server_error"
-        else:
-            return "http_error"
-    except Exception as e:
-        logger.error(f"[{nombre_tienda}] Error en el chequeo HTTP del preflight: {str(e)}")
-        return "network_error"
+        health = ejecutar_preflight()
+    except Exception as exc:  # el preflight no debe convertir un fallo propio en fallo global
+        logger.error("Preflight falló de forma inesperada (%s: %s); no se bloquea ninguna fuente.", type(exc).__name__, exc)
+        health = {"generated_at": datetime.now(timezone.utc).isoformat(), "stores": {},
+                  "blocked_stores": [], "error": f"{type(exc).__name__}: {exc}"}
+    escribir_salidas(health)
+    print("=== PREFLIGHT ===")
+    for tienda, r in health["stores"].items():
+        print(f"{tienda}: {r['state']}{' [OMITIDA]' if r['blocked'] else ''}")
+    if health["blocked_stores"]:
+        print(f"::warning::Tiendas omitidas en este ciclo por preflight: {', '.join(health['blocked_stores'])}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
