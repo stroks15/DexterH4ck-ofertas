@@ -23,7 +23,7 @@ from core.product_identifiers import canonical_product_identifier
 
 # Integración nativa de nuestras nuevas capas de servicios robustas
 from scrapers.api_stores import ApiStoresScraper
-from scrapers.vtex_stores import VtexStoresScraper
+try:\n    from scrapers.vtex_stores import VtexStoresScraper\nexcept ImportError:\n    # La capa VTEX es opcional: no debe impedir cargar el monitor ni sus regresiones.\n    VtexStoresScraper = None
 from scrapers.whatsapp_channels import buscar_whatsapp
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
