@@ -1,55 +1,109 @@
-"""Descubre endpoints JSON que usa una página mediante Playwright.
+# tools/descubrir_apis_navegador.py
+import os
+import json
+import asyncio
+import logging
+import random
+from urllib.parse import urlparse
+from playwright.async_api import async_playwright
+from playwright_stealth import stealth_async
 
-Uso manual:
-NETWORK_DISCOVERY_URL=https://www.soriana.com/buscar?q=ofertas python tools/descubrir_apis_navegador.py
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("DexterH4ck.ApiDiscover")
 
-Genera network_endpoints.json. No guarda cookies ni tokens de autenticación.
-"""
-from __future__ import annotations
-import json,os
-from pathlib import Path
+# Pool de User-Agents comerciales actualizados para la inspección
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+]
 
-from core.network_json import extract_products
-
-def main():
-    url=os.getenv("NETWORK_DISCOVERY_URL","").strip()
-    if not url:
-        raise SystemExit("Falta NETWORK_DISCOVERY_URL")
+async def descubrir_endpoints():
+    url_objetivo = os.environ.get("NETWORK_DISCOVERY_URL")
     try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        raise SystemExit("Instala requirements-browser.txt y Chromium de Playwright.")
-    rows=[]
-    with sync_playwright() as p:
-        browser=p.chromium.launch(headless=True)
-        page=browser.new_page(locale="es-MX",extra_http_headers={"Accept-Language":"es-MX,es;q=0.9,en;q=0.7"})
-        def on_response(response):
-            ct=(response.headers.get("content-type") or "").lower()
-            if response.status>=400 or ("json" not in ct and response.request.resource_type not in ("xhr","fetch")):
-                return
-            try: payload=response.json()
-            except Exception: return
-            products=extract_products(payload,response.url,"Discovery")
-            rows.append({
-                "method":response.request.method,
-                "url":response.url,
-                "status":response.status,
-                "content_type":ct,
-                "product_candidates":len(products),
-                "product_ids":[str(x.get("product_id") or "") for x in products[:10]],
-            })
-        page.on("response",on_response)
-        page.goto(url,wait_until="domcontentloaded",timeout=30000)
-        page.wait_for_timeout(max(0,int(os.getenv("NETWORK_DISCOVERY_WAIT_MS","7000"))))
-        browser.close()
-    unique={}
-    for row in rows:
-        unique[row["url"]]=row
-    Path("network_endpoints.json").write_text(json.dumps(list(unique.values()),ensure_ascii=False,indent=2),encoding="utf-8")
-    for row in unique.values():
-        print(f'{row["status"]} {row["method"]} products={row["product_candidates"]} {row["url"]}')
-    print(f"Endpoints JSON detectados: {len(unique)}")
-    return 0
+        wait_ms = int(os.environ.get("NETWORK_DISCOVERY_WAIT_MS", "7000"))
+    except (ValueError, TypeError):
+        wait_ms = 7000
 
-if __name__=="__main__":
-    raise SystemExit(main())
+    if not url_objetivo:
+        logger.error("Falta la variable de entorno NETWORK_DISCOVERY_URL. Abortando.")
+        return
+
+    logger.info(f"Iniciando inspección camuflada sobre la URL: {url_objetivo}")
+    endpoints_capturados = {}
+
+    async with async_playwright() as p:
+        # Lanzamiento con desactivación explícita de marcas de automatización (WAF Bypass)
+        browser = await p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-infobars",
+                "--disable-dev-shm-usage",
+                "--window-size=1920,1080"
+            ]
+        )
+
+        # Configuración de contexto simulando un entorno orgánico interactivo de México
+        context = await browser.new_context(
+            user_agent=random.choice(USER_AGENTS),
+            locale="es-MX",
+            timezone_id="America/Mexico_City",
+            viewport={"width": 1920, "height": 1080}
+        )
+
+        page = await context.new_page()
+
+        # Inyección de scripts avanzados para eliminar rastros de automatización en el motor Blink
+        await page.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+            window.chrome = { runtime: {} };
+            Object.defineProperty(navigator, 'languages', {get: () => ['es-MX', 'es', 'en-US', 'en']});
+        """)
+
+        # Aplicación nativa de la librería de sigilo
+        await stealth_async(page)
+
+        # Interceptor de respuestas de red en tiempo real
+        async def interceptar_respuesta(response):
+            try:
+                content_type = response.headers.get("content-type", "").lower()
+                # Captura solo tráfico útil: llamadas REST JSON, APIs internas o GraphQL
+                if "application/json" in content_type or "graphql" in response.url:
+                    url_completa = response.url
+                    parsed_url = urlparse(url_completa)
+                    host = parsed_url.netloc
+                    
+                    if host not in endpoints_capturados:
+                        endpoints_capturados[host] = []
+                        
+                    # Evitamos almacenar duplicados exactos en el reporte final
+                    if url_completa not in endpoints_capturados[host]:
+                        endpoints_capturados[host].append(url_completa)
+                        logger.info(f"[CAPTURA JSON] EndPoint detectado en {host} -> {url_completa[:90]}...")
+            except Exception:
+                pass
+
+        # Vinculación del evento de escucha de red
+        page.on("response", interceptar_response=interceptar_respuesta)
+
+        try:
+            # Esperamos a que el DOM esté listo o la red se estabilice
+            await page.goto(url_objetivo, wait_until="domcontentloaded", timeout=45000)
+            logger.info(f"Página base cargada de forma exitosa. Esperando {wait_ms} ms para capturar peticiones asíncronas...")
+            await asyncio.sleep(wait_ms / 1000.0)
+        except Exception as e:
+            logger.error(f"Error o timeout controlado durante el renderizado dinámico: {str(e)}")
+        finally:
+            await context.close()
+            await browser.close()
+
+    # Escritura defensiva del reporte de diagnóstico
+    output_file = "network_endpoints.json"
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump(endpoints_capturados, f, ensure_ascii=False, indent=2)
+        
+    logger.info(f"Análisis perimetral completado. Archivo '{output_file}' generado con {len(endpoints_capturados)} hosts mapeados.")
+
+if __name__ == "__main__":
+    asyncio.run(descubrir_endpoints())
