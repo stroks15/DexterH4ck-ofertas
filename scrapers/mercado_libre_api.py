@@ -160,7 +160,7 @@ class MercadoLibreApi:
         return payload.get("results") or []
 
     def discover(self) -> list[dict[str, Any]]:
-        raw_queries = os.getenv("ML_HIGH_DEMAND_QUERIES", DEFAULT_QUERIES)
+        raw_queries = os.getenv("ML_HIGH_DEMAND_QUERIES") or os.getenv("ML_QUERIES") or DEFAULT_QUERIES
         queries = [q.strip() for q in raw_queries.split(",") if q.strip()]
         results: list[dict[str, Any]] = []
         seen: set[str] = set()

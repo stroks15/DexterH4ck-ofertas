@@ -18,7 +18,7 @@ TELEGRAM_CHANNELS = [
     ("Ofertas México - Xataka Selección", "https://t.me/s/xatakamexico"),
 ]
 
-HEADERS = {"User-Agent": "Mozilla/5.0 Chrome/140 Safari/537.36", "Accept-Language": "es-MX,es;q=0.9"}
+HEADERS = {"User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)", "Accept-Language": "es-MX,es;q=0.9"}
 MAX_TELEGRAM_AI = int(os.environ.get("GEMINI_MAX_TELEGRAM_AI", "10"))
 GEMINI_DELAY = float(os.environ.get("GEMINI_TELEGRAM_DELAY", "1.5"))
 _ai_calls = 0

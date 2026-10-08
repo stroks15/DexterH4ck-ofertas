@@ -1,73 +1,170 @@
 # scrapers/api_stores.py
-import random
+"""Capa API-first: un adaptador aislado por tienda.
+
+Cada adaptador implementa `discover()` y expone `last_status` con el estado REAL de
+la fuente (ok, not_configured, forbidden, rate_limited, timeout, invalid_response...).
+Un bloqueo o error de una tienda nunca se convierte en "success" y nunca detiene a las
+demás. Los endpoints se configuran por variables de entorno; no se hardcodean
+endpoints internos y no se intenta evadir CAPTCHA/WAF.
+"""
+from __future__ import annotations
+
 import logging
-from curl_cffi import requests as curl_requests
-from config.endpoints import ENDPOINTS_REALES, STORES_FALLBACK
+from typing import Any
+
+import requests
+
+from config.endpoints import ENDPOINT_ENV_VARS, get_endpoint
+from core.network_json import extract_products
+from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
+from core.source_resilience import classify_status
+
+try:  # La capa VTEX es opcional
+    from scrapers.vtex_stores import VtexStoresScraper
+except ImportError:  # pragma: no cover
+    VtexStoresScraper = None
 
 logger = logging.getLogger("DexterH4ck.ApiStores")
 
+
+class JsonEndpointAdapter(BaseScraper):
+    """Adaptador genérico para un endpoint JSON autorizado configurado por entorno."""
+
+    store = "unknown"
+    endpoint_name = ""
+    home = ""
+
+    def __init__(self, context: ScraperContext | None = None, endpoint: str | None = None) -> None:
+        super().__init__(context)
+        self.endpoint = (endpoint if endpoint is not None else get_endpoint(self.endpoint_name)).strip()
+        self.last_status: dict[str, Any] = {"state": "not_run"}
+
+    def discover(self) -> list[dict[str, Any]]:
+        if not self.endpoint:
+            self.last_status = {"state": "not_configured",
+                                "detail": f"{ENDPOINT_ENV_VARS.get(self.endpoint_name, 'endpoint')} no configurado"}
+            logger.info("[%s] %s no configurado; fuente API omitida.", self.store, ENDPOINT_ENV_VARS.get(self.endpoint_name))
+            return []
+        try:
+            response = self.get(self.endpoint)
+        except requests.Timeout:
+            self.last_status = {"state": "timeout"}
+            return []
+        except requests.RequestException as exc:
+            self.last_status = {"state": "network_error", "error": type(exc).__name__}
+            return []
+        state = classify_status(response.status_code)
+        if state != "ok":
+            self.last_status = {"state": state, "http": response.status_code}
+            logger.warning("[%s] API respondió HTTP %s (%s).", self.store, response.status_code, state)
+            return []
+        try:
+            payload = response.json()
+        except ValueError:
+            self.last_status = {"state": "invalid_response"}
+            return []
+        rows = extract_products(payload, self.home or self.endpoint, self.store)
+        for row in rows:
+            row["origen_link"] = "api_publica"
+        self.last_status = {"state": "ok", "count": len(rows)}
+        return rows
+
+
+class WalmartAdapter(BaseScraper):
+    store = "Walmart MX"
+
+    def __init__(self, context: ScraperContext | None = None) -> None:
+        super().__init__(context)
+        self.last_status: dict[str, Any] = {"state": "not_run"}
+
+    def discover(self) -> list[dict[str, Any]]:
+        from scrapers import walmart_api
+        rows = walmart_api.buscar_walmart_graphql()
+        self.last_status = dict(walmart_api.LAST_STATUS)
+        if self.last_status.get("state") == "ok":
+            self.last_status["count"] = len(rows)
+        return rows
+
+
+class BodegaAdapter(BaseScraper):
+    store = "Bodega Aurrera"
+
+    def __init__(self, context: ScraperContext | None = None) -> None:
+        super().__init__(context)
+        self.last_status: dict[str, Any] = {"state": "not_run"}
+
+    def discover(self) -> list[dict[str, Any]]:
+        from scrapers import bodega_aurrera_api
+        rows = bodega_aurrera_api.buscar_bodega_graphql()
+        self.last_status = dict(bodega_aurrera_api.LAST_STATUS)
+        if self.last_status.get("state") == "ok":
+            self.last_status["count"] = len(rows)
+        return rows
+
+
+class MercadoLibreAdapter(BaseScraper):
+    """API pública de Mercado Libre; MERCADOLIBRE_ACCESS_TOKEN es opcional."""
+
+    store = "Mercado Libre MX"
+
+    def __init__(self, context: ScraperContext | None = None) -> None:
+        super().__init__(context)
+        self.last_status: dict[str, Any] = {"state": "not_run"}
+
+    def discover(self) -> list[dict[str, Any]]:
+        import os
+        from scrapers.mercado_libre_api import MercadoLibreApi
+        if not os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip():
+            logger.info("[Mercado Libre MX] MERCADOLIBRE_ACCESS_TOKEN no configurado; "
+                        "se usa búsqueda pública + historial.")
+        api = MercadoLibreApi()
+        rows = api.discover()
+        if api.circuit.paused:
+            ultimo = list(api.circuit.failures)[-1] if api.circuit.failures else None
+            self.last_status = {"state": classify_status(ultimo), "http": ultimo, "detail": api.circuit.reason}
+        else:
+            self.last_status = {"state": "ok", "count": len(rows)}
+        return rows
+
+
+def _adapter(name: str, endpoint_name: str, home: str):
+    return type(f"{name}Adapter", (JsonEndpointAdapter,), {
+        "store": name, "endpoint_name": endpoint_name, "home": home,
+    })
+
+
+SorianaAdapter = _adapter("Soriana", "SORIANA_API", "https://www.soriana.com")
+LiverpoolAdapter = _adapter("Liverpool", "LIVERPOOL_API", "https://www.liverpool.com.mx")
+AmazonAdapter = _adapter("Amazon MX", "AMAZON_API", "https://www.amazon.com.mx")
+CoppelAdapter = _adapter("Coppel", "COPPEL_API", "https://www.coppel.com")
+SuburbiaAdapter = _adapter("Suburbia", "SUBURBIA_API", "https://www.suburbia.com.mx")
+OferstockAdapter = _adapter("Oferstock", "OFERSTOCK_API", "https://www.oferstock.com.mx")
+ChedrauiJsonAdapter = _adapter("Chedraui", "CHEDRAUI_VTEX", "https://www.chedraui.com.mx")
+
+
+def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScraper]:
+    """Un adaptador independiente por cada tienda objetivo."""
+    chedraui = VtexStoresScraper(context) if VtexStoresScraper else ChedrauiJsonAdapter(context)
+    return [
+        WalmartAdapter(context),
+        BodegaAdapter(context),
+        chedraui,
+        SorianaAdapter(context),
+        LiverpoolAdapter(context),
+        AmazonAdapter(context),
+        MercadoLibreAdapter(context),
+        CoppelAdapter(context),
+        SuburbiaAdapter(context),
+        OferstockAdapter(context),
+    ]
+
+
 class ApiStoresScraper:
-    def __init__(self, context=None):
+    """Fachada API-first: agrupa los adaptadores aislados por tienda."""
+
+    def __init__(self, context: ScraperContext | None = None) -> None:
         self.context = context
-        # Autenticación TLS/JA3 automática para Bodega Aurrera, Walmart y Mercado Libre
-        self.session = curl_requests.Session(impersonate="chrome")
-        
-        self.walmart_api = getattr(self.context, "WALMART_GRAPHQL_URL", None) or ENDPOINTS_REALES["WALMART_GRAPHQL"]
-        self.chedraui_api = getattr(self.context, "CHEDRAUI_VTEX", None) or ENDPOINTS_REALES["CHEDRAUI_VTEX"]
-        self.mercadolibre_api = getattr(self.context, "MERCADOLIBRE_API", None) or ENDPOINTS_REALES["MERCADOLIBRE_API"]
+        self.scrapers = api_first_scrapers(context)
 
-        self.session.headers.update({
-            "Accept": "application/json, text/plain, */*",
-            "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive"
-        })
-
-    def fetch_walmart_bodega_graphql(self, tienda="walmart", search_query="liquidacion", store_id=None):
-        url = self.walmart_api
-        default_store = STORES_FALLBACK["WALMART_STORE_ID"] if tienda == "walmart" else STORES_FALLBACK["BODEGA_STORE_ID"]
-        final_store_id = store_id or getattr(self.context, f"{tienda.upper()}_STORE_ID", default_store)
-
-        payload = {
-            "query": "query SearchAndFilter($searchQuery: String!, $facetFilters: String, $page: Int, $size: Int, $storeId: String!) { search(query: $searchQuery, facetFilters: $facetFilters, page: $page, size: $size, storeId: $storeId) { products { id name brand canonicalUrl priceInfo { currentPrice { price } wasPrice { price } } } } }",
-            "variables": {"searchQuery": search_query, "facetFilters": "[]", "page": 1, "size": 50, "storeId": str(final_store_id)}
-        }
-        
-        headers = {
-            "Content-Type": "application/json",
-            "Origin": f"https://www.{tienda}.com.mx",
-            "Referer": f"https://www.{tienda}.com.mx/search?q={search_query}"
-        }
-        
-        try:
-            # Se fuerza un timeout estricto de 20 segundos para evitar que el runner se quede colgado eternamente
-            response = self.session.post(url, json=payload, headers=headers, timeout=20.0)
-            if response.status_code == 200:
-                return response.json()
-            # CORREGIDO: Se definen explícitamente los códigos de restricción para validar la sintaxis
-            elif response.status_code in (401, 403, 412, 429):
-                logger.warning(f"[{tienda.upper()}] Acceso denegado o limitado temporalmente por el servidor ({response.status_code}).")
-        except Exception as e:
-            logger.error(f"Error en transporte GraphQL de {tienda}: {str(e)}")
-        return {}
-
-    def fetch_chedraui_vtex(self):
-        params = {"_from": "0", "_to": "49", "O": "OrderByBestDiscountDESC"}
-        try:
-            response = self.session.get(self.chedraui_api, params=params, timeout=20.0)
-            if response.status_code == 200:
-                return response.json()
-        except Exception as e:
-            logger.error(f"Error en catálogo VTEX Chedraui: {str(e)}")
-        return []
-
-    def fetch_mercado_libre_api(self, query="liquidacion"):
-        params = {"q": query, "limit": "50", "sort": "discount_desc"}
-        headers = {"User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"}
-        try:
-            response = self.session.get(self.mercadolibre_api, params=params, headers=headers, timeout=15.0)
-            if response.status_code == 200:
-                return response.json()
-        except Exception as e:
-            logger.error(f"Error en API de Mercado Libre: {str(e)}")
-        return {}
+    def discover(self) -> list[dict[str, Any]]:
+        return run_scrapers_parallel(self.scrapers)

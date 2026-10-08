@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 from core.liquidation_engine import detect_priority_brand, infer_category
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36",
+    "User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
     "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
 }
 

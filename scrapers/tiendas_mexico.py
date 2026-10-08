@@ -1,130 +1,134 @@
 # scrapers/tiendas_mexico.py
-import html
-import re
+import hashlib
 import logging
-import random
+import re
+from urllib.parse import quote_plus, urljoin, urlparse
+
+import requests
 from bs4 import BeautifulSoup
-from curl_cffi import requests as curl_requests
-from core.product_identifiers import canonical_product_identifier
+
+from core.source_resilience import BLOCK_SIGNATURES, HONEST_USER_AGENT, classify_status
 
 logger = logging.getLogger("DexterH4ck.TiendasMexico")
 
-# Listado dinámico de User-Agents idénticos al pool del orquestador principal
-USER_AGENTS_POOL = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-]
+# Estado de la última corrida por tienda (lo lee el monitor para reportar bloqueos reales).
+LAST_STATUS: dict = {}
+
+TERMINOS = ["liquidacion", "ofertas", "remate", "outlet"]
+
+# Búsquedas públicas por tienda.
+URLS_BUSQUEDA = {
+    "amazon": "https://www.amazon.com.mx/s?k={q}",
+    "soriana": "https://www.soriana.com/buscar?q={q}",
+    "liverpool": "https://www.liverpool.com.mx/tienda?s={q}",
+}
+
+
+def _hash_id(*partes) -> str:
+    return hashlib.sha1("|".join(str(p) for p in partes).encode("utf-8")).hexdigest()[:16]
+
 
 def buscar_todas(filtro_tienda=None) -> list:
-    """
-    Motor Legacy robusto con soporte nativo de curl_cffi.
-    Rastrea las búsquedas públicas cuando las APIs dedicadas están limitadas.
+    """Motor legacy: rastrea búsquedas públicas cuando las APIs dedicadas no están disponibles.
+
+    Si una tienda responde 403/429/5xx o muestra un reto, se registra el estado real en
+    LAST_STATUS y se deja de consultar ESA tienda en este ciclo; las demás continúan.
     """
     productos_encontrados = []
-    
-    # Inicialización del cliente emulando el stack criptográfico completo de Chrome
-    session = curl_requests.Session(impersonate="chrome")
-    
+    LAST_STATUS.clear()
+
+    session = requests.Session()
     session.headers.update({
-        "User-Agent": random.choice(USER_AGENTS_POOL),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "User-Agent": HONEST_USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Cache-Control": "no-cache",
-        "Connection": "keep-alive"
     })
 
-    # Mapeo de términos de búsqueda genéricos de alta demanda en México
-    terminos = ["liquidacion", "ofertas", "remate", "outlet"]
-    
-    # Diccionario de URLs públicas base mapeadas por tu bot
-    urls_mapeadas = {
-        "amazon": "https://amazon.com.mx",
-        "soriana": "https://soriana.com",
-        "liverpool": "https://liverpool.com.mx"
-    }
-
-    # Si se especifica un filtro (ej. desde el orquestador paralelo), acorta el bucle
-    tiendas_a_procesar = [filtro_tienda.lower()] if filtro_tienda else urls_mapeadas.keys()
-
-    for tienda in tiendas_a_procesar:
-        if tienda not in urls_mapeadas:
+    tiendas = [filtro_tienda.lower()] if filtro_tienda else list(URLS_BUSQUEDA)
+    for tienda in tiendas:
+        plantilla = URLS_BUSQUEDA.get(tienda)
+        if not plantilla:
             continue
-            
-        base_url = urls_mapeadas[tienda]
-        for termino in terminos:
-            target_url = f"{base_url}{termino}"
+        LAST_STATUS[tienda] = "ok"
+        for termino in TERMINOS:
+            target_url = plantilla.format(q=quote_plus(termino))
             try:
-                logger.info(f"[{tienda.upper()}] Extrayendo listado público vía curl_cffi: {target_url}")
-                
-                # Timeout robusto de 25 segundos para evitar hilos colgados en GitHub Actions
+                logger.info("[%s] Extrayendo listado público: %s", tienda.upper(), target_url)
                 response = session.get(target_url, timeout=25.0)
-                
-                if response.status_code == 200:
-                    html_content = response.text
-                    items_procesados = _parsear_html_por_tienda(html_content, tienda, target_url)
-                    productos_encontrados.extend(items_procesados)
-                elif response.status_code == 503 and tienda == "amazon":
-                    logger.warning("[AMAZON] El servidor devolvió 503 (Frecuencia alta). Aplicando enfriamiento...")
+                estado = classify_status(response.status_code)
+                if estado == "ok":
+                    cuerpo = (response.text or "").lower()
+                    if any(sig in cuerpo for sig in BLOCK_SIGNATURES):
+                        LAST_STATUS[tienda] = "blocked"
+                        logger.warning("[%s] Reto/bloqueo detectado; se omite la tienda en este ciclo.", tienda.upper())
+                        break
+                    productos_encontrados.extend(_parsear_html_por_tienda(response.text, tienda, target_url))
                 else:
-                    logger.error(f"[{tienda.upper()}] Respuesta inestable del servidor público: {response.status_code}")
-                    
-            except Exception as e:
-                logger.error(f"[{tienda.upper()}] Excepción controlada de red en fallback público: {str(e)}")
+                    LAST_STATUS[tienda] = estado
+                    logger.warning("[%s] HTTP %s (%s); se omite la tienda en este ciclo.",
+                                   tienda.upper(), response.status_code, estado)
+                    # 403/429/5xx/etc.: no se insiste con más términos contra la misma tienda.
+                    break
+            except requests.Timeout:
+                LAST_STATUS[tienda] = "timeout"
+                logger.error("[%s] Timeout; se omite la tienda en este ciclo.", tienda.upper())
+                break
+            except requests.RequestException as exc:
+                LAST_STATUS[tienda] = "network_error"
+                logger.error("[%s] Error de red: %s", tienda.upper(), type(exc).__name__)
+                break
 
     return productos_encontrados
 
+
 def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
-    """Análisis sintáctico básico del HTML extraído por el cliente robusto."""
+    """Análisis sintáctico básico del HTML extraído."""
     soup = BeautifulSoup(html_source, "html.parser")
     resultados = []
-    
-    # --- Extractor Alternativo para Amazon MX ---
+
     if tienda == "amazon":
         for contenedor in soup.select("div[data-component-type='s-search-result']"):
             try:
                 titulo_el = contenedor.select_one("h2 a span")
                 link_el = contenedor.select_one("h2 a")
                 precio_el = contenedor.select_one(".a-price-whole")
-                
                 if titulo_el and link_el and precio_el:
-                    precio_actual = float(precio_el.text.replace(",", "").strip())
-                    url_final = "https://amazon.com.mx" + link_el.get("href", "")
-                    
+                    precio_actual = float(re.sub(r"[^0-9.]", "", precio_el.text.replace(",", "")) or 0)
+                    url_final = urljoin("https://www.amazon.com.mx", link_el.get("href", ""))
                     resultados.append({
-                        "id": contenedor.get("data-asin", str(random.randint(1000, 9999))),
+                        "id": contenedor.get("data-asin") or _hash_id(url_final),
                         "name": titulo_el.text.strip(),
+                        "titulo": titulo_el.text.strip(),
                         "brand": "Amazon",
                         "url": url_final,
                         "precio_actual": precio_actual,
-                        "precio_anterior": None,  # Se calcula automáticamente mediante tu historial JSON
+                        "precio_anterior": None,  # la referencia sale del historial JSON
                         "tienda": "Amazon MX",
-                        "tipo_fuente": "WEB_FALLBACK"
+                        "tipo_fuente": "WEB_FALLBACK",
                     })
-            except Exception:
+            except (ValueError, AttributeError, TypeError):
                 continue
 
-    # --- Extractor Alternativo para Soriana ---
     elif tienda == "soriana":
         for card in soup.select(".product-card"):
             try:
                 link_el = card.select_one("a.product-title-link")
                 precio_el = card.select_one(".value")
-                
                 if link_el and precio_el:
                     precio_actual = float(precio_el.text.replace("$", "").replace(",", "").strip())
+                    url_final = urljoin("https://www.soriana.com", link_el.get("href", ""))
                     resultados.append({
-                        "id": card.get("data-pid", str(random.randint(1000, 9999))),
+                        "id": card.get("data-pid") or _hash_id(url_final),
                         "name": link_el.text.strip(),
+                        "titulo": link_el.text.strip(),
                         "brand": "Soriana",
-                        "url": "https://soriana.com" + link_el.get("href", ""),
+                        "url": url_final,
                         "precio_actual": precio_actual,
                         "precio_anterior": None,
                         "tienda": "Soriana",
-                        "tipo_fuente": "WEB_FALLBACK"
+                        "tipo_fuente": "WEB_FALLBACK",
                     })
-            except Exception:
+            except (ValueError, AttributeError, TypeError):
                 continue
 
     return resultados
@@ -140,6 +144,10 @@ def es_url_producto(url, base_url=None):
             return False
         if base_url:
             base_host = urlparse(base_url).netloc.lower().split(":", 1)[0]
+            # www.bodegaaurrera.com.mx y despensa.bodegaaurrera.com.mx son la misma tienda:
+            # se compara contra el dominio sin el prefijo "www.".
+            if base_host.startswith("www."):
+                base_host = base_host[4:]
             if base_host and not (host == base_host or host.endswith("." + base_host)):
                 return False
         if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
@@ -156,5 +164,3 @@ def es_url_producto(url, base_url=None):
         return False
     except Exception:
         return False
-
-from urllib.parse import urlparse
