@@ -2,7 +2,14 @@ name: Regression CI
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+    paths:
+      - "**/*.py"
+      - "requirements.txt"
+      - "requirements-browser.txt"
+      - "tests/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 permissions:
@@ -11,7 +18,7 @@ permissions:
 jobs:
   regression:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
 
     steps:
       - name: Descargar repositorio
@@ -26,9 +33,41 @@ jobs:
           cache: pip
 
       - name: Instalar dependencias
+        shell: bash
         run: |
+          set -euo pipefail
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          else
+            echo "::error::No existe requirements.txt"
+            exit 1
+          fi
+          if [ -f requirements-browser.txt ]; then
+            python -m pip install -r requirements-browser.txt
+          else
+            echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
+          fi
+
+      - name: Cachear binarios de Playwright
+        if: hashFiles('requirements-browser.txt') != ''
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-browser.txt') }}
+
+      - name: Instalar navegadores Playwright
+        if: hashFiles('requirements-browser.txt') != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          if python -c "import playwright" >/dev/null 2>&1; then
+            echo "Preparando Chromium y WebKit para las regresiones."
+            python -m playwright install --with-deps chromium webkit
+          else
+            echo "::notice::Playwright no está instalado; no se descargan binarios."
+          fi
 
       - name: Validar sintaxis de todo el código Python
         run: |
@@ -42,5 +81,10 @@ jobs:
           PY
 
       - name: Ejecutar regresiones de scraping
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules -v
