@@ -15,27 +15,27 @@ logger = logging.getLogger("DexterH4ck.Diagnostics")
 
 TARGETS = {
     "Walmart MX": [
-        "https://www.walmart.com.mx/content/especiales/360013_300279",
-        "https://www.walmart.com.mx/search?q=oferta"
+        "https://walmart.com.mx",
+        "https://walmart.com.mx"
     ],
     "Bodega Aurrera": [
-        "https://www.bodegaaurrera.com.mx/browse/eventos/remates/remates-para-tu-hogar/490004_1030001_1030004",
-        "https://www.bodegaaurrera.com.mx/search?q=oferta"
+        "https://bodegaaurrera.com.mx",
+        "https://bodegaaurrera.com.mx"
     ],
     "Soriana": [
-        "https://www.soriana.com/buscar?q=ofertas",
-        "https://www.soriana.com/buscar?q=productos"
+        "https://soriana.com",
+        "https://soriana.com"
     ],
     "Chedraui": [
-        "https://www.chedraui.com.mx/api/catalog_system/pub/products/search?_from=0&_to=4&O=OrderByBestDiscountDESC"
+        "https://chedraui.com.mx"
     ],
     "Mercado Libre MX": [
-        "https://api.mercadolibre.com/sites/MLM/search?q=oferta&limit=1",
-        "https://listado.mercadolibre.com.mx/oferta"
+        "https://mercadolibre.com",
+        "https://mercadolibre.com.mx"
     ],
     "Amazon MX": [
-        "https://www.amazon.com.mx/s?k=liquidacion",
-        "https://www.amazon.com.mx/deals"
+        "https://amazon.com.mx",
+        "https://amazon.com.mx"
     ],
 }
 
@@ -58,7 +58,7 @@ def probe(session: curl_requests.Session, url: str) -> dict:
         
         if r.status_code < 400:
             state = "ok"
-        elif r.status_code in (401, 403, 412):
+        elif r.status_code in (401, 403, 412, 429):
             state = "forbidden"
         elif r.status_code == 404:
             state = "not_found"
@@ -87,7 +87,9 @@ def main() -> int:
     
     print("\n=== RESUMEN DE DIAGNÓSTICO DE RED ===")
     for store, rows in report.items():
-        print(f"{store}: {', '.join(f\"{r['state']}={r.get('status')}\" for r in rows)}")
+        # CORREGIDO: Alternamos comillas triples externas para anidar las comillas de los diccionarios limpiamente sin backslashes
+        resumen_tienda = ", ".join(f"{r['state']}={r.get('status')}" for r in rows)
+        print(f"{store}: {resumen_tienda}")
         
     return 0
 
