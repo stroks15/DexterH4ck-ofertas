@@ -19,36 +19,23 @@ jobs:
   regression:
     runs-on: ubuntu-latest
     timeout-minutes: 12
-
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
-
       - name: Instalar dependencias
         shell: bash
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
-            python -m pip install -r requirements.txt
-          else
-            echo "::error::No existe requirements.txt"
-            exit 1
-          fi
-          if [ -f requirements-browser.txt ]; then
-            python -m pip install -r requirements-browser.txt
-          else
-            echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
-          fi
-
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; else echo "::error::No existe requirements.txt"; exit 1; fi
+          if [ -f requirements-browser.txt ]; then python -m pip install -r requirements-browser.txt; else echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."; fi
       - name: Cachear binarios de Playwright
         if: hashFiles('requirements-browser.txt') != ''
         uses: actions/cache@v4
@@ -56,19 +43,16 @@ jobs:
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-browser.txt') }}
-
       - name: Instalar navegadores Playwright
         if: hashFiles('requirements-browser.txt') != ''
         shell: bash
         run: |
           set -euo pipefail
           if python -c "import playwright" >/dev/null 2>&1; then
-            echo "Preparando Chromium y WebKit para las regresiones."
             python -m playwright install --with-deps chromium webkit
           else
             echo "::notice::Playwright no está instalado; no se descargan binarios."
           fi
-
       - name: Validar sintaxis de todo el código Python
         run: |
           python - <<'PY'
@@ -79,7 +63,6 @@ jobs:
           for path in files:
               py_compile.compile(str(path), doraise=True)
           PY
-
       - name: Ejecutar regresiones de scraping
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -87,4 +70,4 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules -v
+          python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules tests.test_source_status tests.test_monitor_flow -v
