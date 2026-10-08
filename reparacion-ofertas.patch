@@ -1,0 +1,2594 @@
+diff --git a/.github/workflows/monitor.yml b/.github/workflows/monitor.yml
+index 9bb907b..33d3d78 100644
+--- a/.github/workflows/monitor.yml
++++ b/.github/workflows/monitor.yml
+@@ -142,7 +142,7 @@ jobs:
+           fi
+ 
+       - name: Validar sintaxis Python
+-        run: python -m py_compile core/product_identifiers.py core/network_json.py scrapers/browser_network.py tools/descubrir_apis_navegador.py tests/test_product_identifiers.py monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py scrapers/whatsapp_channels.py core/scraper_base.py core/source_resilience.py core/offer_identity.py scrapers/api_stores.py scrapers/vtex_stores.py scrapers/comunidades_web.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
++        run: python -m compileall -q .
+ 
+       - name: Pruebas deterministas de liquidaciones extremas
+         env:
+@@ -195,11 +195,17 @@ jobs:
+           ML_API_TIMEOUT: "12"
+           ML_API_DELAY: "0.20"
+           ML_API_REQUIRE_TOKEN: "false"
+-          PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com"
++          PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com/rss"
+           WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
+           BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
+           WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
+           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
++          CHEDRAUI_VTEX_ENDPOINT: ${{ vars.CHEDRAUI_VTEX_ENDPOINT }}
++          SORIANA_API_ENDPOINT: ${{ vars.SORIANA_API_ENDPOINT }}
++          COPPEL_API_ENDPOINT: ${{ vars.COPPEL_API_ENDPOINT }}
++          SUBURBIA_API_ENDPOINT: ${{ vars.SUBURBIA_API_ENDPOINT }}
++          AMAZON_API_ENDPOINT: ${{ vars.AMAZON_API_ENDPOINT }}
++          ML_QUERIES: ${{ vars.ML_QUERIES }}
+           NETWORK_BROWSER_ENABLED: "true"
+           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
+           NETWORK_BROWSER_WAIT_MS: "6500"
+@@ -251,5 +257,7 @@ jobs:
+         uses: actions/upload-artifact@v4
+         with:
+           name: monitor-health-final
+-          path: preflight_health.json
++          path: |
++            preflight_health.json
++            monitor_health.json
+           if-no-files-found: ignore
+diff --git a/.github/workflows/reenviar_ofertas_hoy.yml b/.github/workflows/reenviar_ofertas_hoy.yml
+index f7f94dc..7a25fc8 100644
+--- a/.github/workflows/reenviar_ofertas_hoy.yml
++++ b/.github/workflows/reenviar_ofertas_hoy.yml
+@@ -28,4 +28,4 @@ jobs:
+           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+         run: |
+-          python reenviar_ofertas_hoy.py
++          python reenviar_historial.py
+diff --git a/.github/workflows/regression-ci.yml b/.github/workflows/regression-ci.yml
+index 8837a4f..3dac46d 100644
+--- a/.github/workflows/regression-ci.yml
++++ b/.github/workflows/regression-ci.yml
+@@ -87,4 +87,4 @@ jobs:
+           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+         run: |
+-          python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules -v
++          python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules tests.test_source_status tests.test_monitor_flow -v
+diff --git a/config/endpoints.py b/config/endpoints.py
+index a7dc881..8375ccb 100644
+--- a/config/endpoints.py
++++ b/config/endpoints.py
+@@ -1,15 +1,44 @@
+ # config/endpoints.py
++"""Endpoints de APIs de tiendas.
+ 
+-ENDPOINTS_REALES = {
+-    "WALMART_GRAPHQL": "https://walmart.com.mx",
+-    "BODEGA_GRAPHQL": "https://walmart.com.mx",
+-    "CHEDRAUI_VTEX": "https://chedraui.com.mx",
+-    "MERCADOLIBRE_API": "https://mercadolibre.com",
+-    "COPPEL_API": "https://coppel.com",
+-    "SUBURBIA_API": "https://suburbia.com.mx"
++NO se hardcodean endpoints internos/no documentados. Cada endpoint se configura por
++variable de entorno (opcional). Si una variable no existe, el valor es "" y la
++fuente correspondiente se reporta como `not_configured` sin afectar a las demás.
++"""
++import os
++
++# nombre lógico -> variable de entorno
++ENDPOINT_ENV_VARS = {
++    "WALMART_GRAPHQL": "WALMART_GRAPHQL_URL",
++    "BODEGA_GRAPHQL": "BODEGA_GRAPHQL_URL",
++    "CHEDRAUI_VTEX": "CHEDRAUI_VTEX_ENDPOINT",
++    "SORIANA_API": "SORIANA_API_ENDPOINT",
++    "COPPEL_API": "COPPEL_API_ENDPOINT",
++    "SUBURBIA_API": "SUBURBIA_API_ENDPOINT",
++    "AMAZON_API": "AMAZON_API_ENDPOINT",
++    "LIVERPOOL_API": "LIVERPOOL_API_ENDPOINT",
++    "OFERSTOCK_API": "OFERSTOCK_API_ENDPOINT",
+ }
+ 
++# API pública y documentada de Mercado Libre (el token es opcional).
++MERCADOLIBRE_PUBLIC_API = "https://api.mercadolibre.com"
++
+ STORES_FALLBACK = {
+     "WALMART_STORE_ID": "0000003362",
+-    "BODEGA_STORE_ID": "0000003001"
++    "BODEGA_STORE_ID": "0000003001",
+ }
++
++
++def get_endpoint(name: str) -> str:
++    """Endpoint configurado o "" si no existe (nunca lanza excepción)."""
++    return os.environ.get(ENDPOINT_ENV_VARS.get(name, ""), "").strip()
++
++
++def get_store_id(tienda: str) -> str:
++    key = f"{tienda.upper()}_STORE_ID"
++    return os.environ.get(key, "").strip() or STORES_FALLBACK.get(key, "")
++
++
++# Compatibilidad con el nombre anterior del diccionario.
++ENDPOINTS_REALES = {name: get_endpoint(name) for name in ENDPOINT_ENV_VARS}
++ENDPOINTS_REALES["MERCADOLIBRE_API"] = MERCADOLIBRE_PUBLIC_API
+diff --git a/core/liquidation_engine.py b/core/liquidation_engine.py
+index 67fd7ba..9232b4a 100644
+--- a/core/liquidation_engine.py
++++ b/core/liquidation_engine.py
+@@ -193,6 +193,7 @@ def evaluate_product(product):
+     ):
+         if any(x in texto for x in needles) and label not in condiciones:
+             condiciones.append(label)
++    result["condiciones"] = condiciones
+     return result
+ 
+ def is_liquidation(product):
+diff --git a/core/scraper_base.py b/core/scraper_base.py
+index 1b4cf8b..e2f2b64 100644
+--- a/core/scraper_base.py
++++ b/core/scraper_base.py
+@@ -14,7 +14,6 @@ from typing import Any, Iterable
+ import time
+ 
+ import requests
+-from curl_cffi import requests as curl_requests
+ 
+ 
+ DEFAULT_HEADERS = {
+@@ -39,7 +38,7 @@ class BaseScraper(ABC):
+ 
+     def __init__(self, context: ScraperContext | None = None) -> None:
+         self.context = context or ScraperContext()
+-        self.session = curl_requests.Session()
++        self.session = requests.Session()
+         self.session.headers.update(self.context.headers)
+ 
+     @abstractmethod
+diff --git a/core/source_resilience.py b/core/source_resilience.py
+index 30cdf8c..f0503f9 100644
+--- a/core/source_resilience.py
++++ b/core/source_resilience.py
+@@ -55,3 +55,100 @@ def status_summary(circuit: SourceCircuit) -> dict[str, Any]:
+         "reason": circuit.reason,
+         "failures": dict(circuit.failures),
+     }
++
++
++# ---------------------------------------------------------------------------
++# Clasificación de estados HTTP y sondeo de fuentes (preflight/diagnóstico).
++# No intenta evadir WAF/CAPTCHA: solo distingue y reporta cada situación.
++# ---------------------------------------------------------------------------
++import requests  # noqa: E402
++
++HONEST_USER_AGENT = "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)"
++PROBE_HEADERS = {
++    "User-Agent": HONEST_USER_AGENT,
++    "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
++    "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
++}
++
++# Firmas de bloqueo/reto en el cuerpo de la respuesta (se conservan del preflight original).
++BLOCK_SIGNATURES = ("access denied", "temporarily blocked", "captcha")
++
++# Estados que hacen que ESA fuente se omita en el ciclo (nunca detienen las demás).
++BLOCKING_STATES = {"blocked", "forbidden", "rate_limited", "server_error", "unavailable"}
++
++# Dominios/URLs públicas de salud por tienda (mismas 10 tiendas objetivo del monitor).
++STORE_TARGETS = {
++    "Walmart MX": ["https://www.walmart.com.mx/"],
++    "Bodega Aurrera": ["https://www.bodegaaurrera.com.mx/"],
++    "Chedraui": ["https://www.chedraui.com.mx/"],
++    "Soriana": ["https://www.soriana.com/"],
++    "Liverpool": ["https://www.liverpool.com.mx/"],
++    "Amazon MX": ["https://www.amazon.com.mx/"],
++    "Mercado Libre MX": ["https://api.mercadolibre.com/sites/MLM", "https://www.mercadolibre.com.mx/"],
++    "Coppel": ["https://www.coppel.com/"],
++    "Suburbia": ["https://www.suburbia.com.mx/"],
++    "Oferstock": ["https://www.oferstock.com.mx/"],
++}
++
++
++def classify_status(status: int | None) -> str:
++    """Convierte un código HTTP en un estado distinto por situación (no todo es 'error')."""
++    if status is None:
++        return "network_error"
++    if 200 <= status < 300:
++        return "ok"
++    if 300 <= status < 400:
++        return "redirect"
++    exact = {
++        400: "bad_request",        # solicitud/endpoint mal formado
++        401: "unauthorized",       # credencial inválida o ausente
++        403: "forbidden",          # acceso denegado/bloqueado
++        404: "not_found",          # endpoint o producto inexistente
++        408: "timeout",
++        409: "conflict",
++        429: "rate_limited",
++        500: "server_error",
++        502: "unavailable",
++        503: "unavailable",
++        504: "unavailable",
++    }
++    if status in exact:
++        return exact[status]
++    if status >= 500:
++        return "server_error"
++    return "http_error"
++
++
++def probe_url(url: str, session: "requests.Session | None" = None, timeout: float = 15.0) -> dict[str, Any]:
++    """Sondea una URL pública y devuelve estado clasificado. Nunca lanza excepciones."""
++    own = session is None
++    session = session or requests.Session()
++    try:
++        response = session.get(url, headers=PROBE_HEADERS, timeout=timeout, allow_redirects=True)
++        status = response.status_code
++        state = classify_status(status)
++        try:
++            body = (response.text or "")[:200_000].lower()
++        except Exception:  # cuerpo ilegible: no es un bloqueo demostrable
++            body = ""
++        if any(sig in body for sig in BLOCK_SIGNATURES):
++            state = "blocked"
++        return {"url": url, "status": status, "state": state, "final_url": str(getattr(response, "url", url))}
++    except requests.Timeout as exc:
++        return {"url": url, "status": None, "state": "timeout", "error": type(exc).__name__}
++    except requests.RequestException as exc:
++        return {"url": url, "status": None, "state": "network_error", "error": type(exc).__name__}
++    except Exception as exc:  # defensivo: el sondeo jamás debe tumbar el preflight
++        return {"url": url, "status": None, "state": "network_error", "error": type(exc).__name__}
++    finally:
++        if own:
++            session.close()
++
++
++def summarize_store(probes: list[dict[str, Any]]) -> dict[str, Any]:
++    """Estado de una tienda: ok si alguna sonda responde ok; si no, el estado de la primera."""
++    if any(p.get("state") == "ok" for p in probes):
++        state = "ok"
++    else:
++        state = probes[0].get("state", "network_error") if probes else "network_error"
++    return {"state": state, "blocked": state in BLOCKING_STATES, "probes": probes}
+diff --git a/monitor_ofertas.py b/monitor_ofertas.py
+index 0d3371a..154b872 100644
+--- a/monitor_ofertas.py
++++ b/monitor_ofertas.py
+@@ -1,33 +1,33 @@
+ # monitor_ofertas.py
+ import html
++import importlib
+ import json
++import logging
+ import os
+ import re
++import sys
++import threading
+ import time
+-import logging
+-from concurrent.futures import ThreadPoolExecutor, as_completed
++from dataclasses import dataclass, field
+ from datetime import datetime, timezone
++from typing import Any, Callable
+ from urllib.parse import urlparse
+ 
+-# Migración estratégica a curl_cffi para mantener firmas JA3 indetectables en el orquestador
+-from curl_cffi import requests as curl_requests
++import requests
+ 
+-from core.liquidation_engine import evaluate_product
+-from scrapers.tiendas_mexico import buscar_todas
+-from scrapers.telegram_ofertas import buscar_telegram
+-from scrapers.tiendas_fisicas import buscar_tiendas_fisicas
+-from scrapers.liquidaciones_oficiales import buscar_liquidaciones_oficiales
++from core.liquidation_engine import evaluate_product, calculate_discount
+ from core.extreme_liquidation import analizar_precio_extremo
+ from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
+ from core.product_identifiers import canonical_product_identifier
++from core.source_resilience import HONEST_USER_AGENT, classify_status
+ 
+-# Integración nativa de nuestras nuevas capas de servicios robustas
++# Integración de las capas de servicios: API-first + legacy en paralelo
+ from scrapers.api_stores import ApiStoresScraper
+-try:\n    from scrapers.vtex_stores import VtexStoresScraper\nexcept ImportError:\n    # La capa VTEX es opcional: no debe impedir cargar el monitor ni sus regresiones.\n    VtexStoresScraper = None
+-from scrapers.whatsapp_channels import buscar_whatsapp
+-from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
+-from scrapers.comunidades_web import buscar_comunidades_web
+-from scrapers.liquidazona import buscar_liquidazona_walmart
++try:
++    from scrapers.vtex_stores import VtexStoresScraper
++except ImportError:
++    # La capa VTEX es opcional: no debe impedir cargar el monitor ni sus regresiones.
++    VtexStoresScraper = None
+ 
+ # Configuración del motor de registro de eventos
+ logging.basicConfig(level=logging.INFO)
+@@ -60,7 +60,11 @@ def cargar_historial():
+ 
+ def guardar_historial(historial):
+     if len(historial) > MAX_HISTORIAL:
+-        historial = dict(sorted(historial.items(), key=lambda par: par.get("ultima_actualizacion", ""), reverse=True)[:MAX_HISTORIAL])
++        historial = dict(sorted(
++            historial.items(),
++            key=lambda par: (par[1].get("ultima_actualizacion", "") if isinstance(par[1], dict) else ""),
++            reverse=True,
++        )[:MAX_HISTORIAL])
+     temporal = f"{HISTORIAL_FILE}.tmp"
+     with open(temporal, "w", encoding="utf-8") as archivo:
+         json.dump(historial, archivo, ensure_ascii=False, indent=2)
+@@ -101,7 +105,7 @@ def es_enlace_producto_directo(url):
+     parsed = urlparse(url or "")
+     host = parsed.netloc.lower()
+     path = parsed.path.lower()
+-    if not host or host in ("t.me", "telegram.me", "://google.com", "google.com"):
++    if not host or host in ("t.me", "telegram.me", "google.com", "www.google.com"):
+         return False
+     if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
+         return False
+@@ -150,11 +154,16 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
+         descuento = round((1 - precio_actual / float(precio_anterior)) * 100)
+ 
+     if 95 <= descuento <= 99:
+-        identificador_producto = item.get("id") or canonical_product_identifier(item.get("url", ""))
++        contexto_producto = canonical_product_identifier(item.get("tienda", ""), item.get("url", ""))
++        identificador_producto = (
++            item.get("id") or contexto_producto.get("product_id") or contexto_producto.get("url") or item.get("url", "")
++        )
+         tienda_canonica = canonical_store(item.get("tienda", ""))
+         clave_historial = f"{tienda_canonica}_{identificador_producto}"
+         
+-        if clave_historial in historial_local:
++        entrada_actual = historial_local.get(history_key(item))
++        ya_alertada = isinstance(entrada_actual, dict) and entrada_actual.get("precio_alertado") is not None
++        if clave_historial in historial_local or ya_alertada:
+             logger.info(f"[BOMBA OMITIDA] Ya fue enviada previamente: {clave_historial}")
+             return False
+             
+@@ -188,41 +197,502 @@ def _candidato_de_tienda_objetivo(item):
+     origen = str(item.get("origen_link") or item.get("origen") or "").lower()
+     return origen in ("telegram", "liquidazona", "whatsapp") and bool(item.get("url"))
+ 
+-def enviar_telegram(texto, imagen=None, sticker_id=None):
++DESCUENTO_BOMBA = 90          # 90–99 % con referencia válida => alerta prioritaria 💣
++MAX_ALERTAS_POR_CICLO = int(os.environ.get("MAX_ALERTAS_POR_CICLO", "25") or 25)
++FUENTES_TIMEOUT_TOTAL = float(os.environ.get("FUENTES_TIMEOUT_TOTAL", "540") or 540)
++FUENTES_CONCURRENCIA = 6
++MONITOR_HEALTH_FILE = "monitor_health.json"
++
++# Estados de fuente que NO son un fallo (no hubo error real de acceso).
++ESTADOS_SIN_FALLO = {"ok", "empty", "not_configured", "skipped_preflight"}
++# Estados que indican que la fuente sí respondió con datos o vacía (para detectar caída total).
++ESTADOS_RESPONDIO = {"ok", "empty"}
++
++VARIABLES_OPCIONALES = (
++    "WALMART_GRAPHQL_URL", "WALMART_STORE_ID", "WALMART_GRAPHQL_QUERY",
++    "BODEGA_GRAPHQL_URL", "BODEGA_STORE_ID", "BODEGA_GRAPHQL_QUERY",
++    "CHEDRAUI_VTEX_ENDPOINT", "SORIANA_API_ENDPOINT", "COPPEL_API_ENDPOINT",
++    "SUBURBIA_API_ENDPOINT", "AMAZON_API_ENDPOINT", "ML_QUERIES",
++    "MERCADOLIBRE_ACCESS_TOKEN",
++)
++
++
++# ---------------------------------------------------------------------------
++# Precios y referencia
++# ---------------------------------------------------------------------------
++def _num(valor) -> float:
++    try:
++        numero = float(valor)
++        return numero if numero > 0 else 0.0
++    except (TypeError, ValueError):
++        return 0.0
++
++
++def calcular_datos(item: dict, entrada_historial: dict | None = None):
++    """Devuelve (precio_actual, precio_referencia, descuento).
++
++    La referencia es conservadora: se usa el precio anterior explícito de la oferta
++    si es válido; solo si no existe se recurre al precio máximo del historial.
++    """
++    actual = _num(item.get("precio_actual", item.get("price")))
++    anterior = _num(item.get("precio_anterior", item.get("previous_price")))
++    maximo = _num((entrada_historial or {}).get("precio_maximo"))
++    if actual > 0 and anterior > actual:
++        referencia = anterior
++    elif actual > 0 and maximo > actual:
++        referencia = maximo
++    else:
++        referencia = 0.0
++    descuento = calculate_discount(referencia, actual) if referencia else 0
++    return actual, referencia, descuento
++
++
++# ---------------------------------------------------------------------------
++# Telegram
++# ---------------------------------------------------------------------------
++def _telegram_api(metodo: str) -> str:
++    return f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/{metodo}"
++
++
++def enviar_telegram(texto, imagen=None, sticker_id=None) -> bool:
++    """Envía un mensaje. Devuelve True solo si Telegram confirmó la entrega."""
+     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+         raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
+     global _ultimo_envio_telegram
+-    
+-    session = curl_requests.Session(impersonate="chrome")
++
++    session = requests.Session()
+     espera = 3.2 - (time.monotonic() - _ultimo_envio_telegram)
+     if espera > 0:
+         time.sleep(espera)
+-        
++
+     if sticker_id:
+         try:
+-            session.post(f"https://telegram.org{TELEGRAM_TOKEN}/sendSticker", data={"chat_id": TELEGRAM_CHAT_ID, "sticker": sticker_id}, timeout=15)
+-        except Exception as exc:
+-            print(f"Telegram sticker error: {str(exc)}")
+-            
+-    endpoint = f"https://telegram.org{TELEGRAM_TOKEN}/sendPhoto" if imagen else f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
+-    
+-    for intento in range(2):
++            session.post(_telegram_api("sendSticker"),
++                         data={"chat_id": TELEGRAM_CHAT_ID, "sticker": sticker_id}, timeout=15)
++        except requests.RequestException as exc:
++            logger.warning("Telegram sticker error: %s", type(exc).__name__)
++
++    metodo = "sendPhoto" if imagen else "sendMessage"
++    for intento in range(3):
+         try:
+-            if imagen:
+-                response = session.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto, "parse_mode": "HTML"}, timeout=25)
++            if metodo == "sendPhoto":
++                response = session.post(_telegram_api(metodo), data={
++                    "chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto[:1000], "parse_mode": "HTML"}, timeout=25)
+             else:
+-                response = session.post(endpoint, data={"chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML", "disable_web_page_preview": False}, timeout=20)
+-            
++                response = session.post(_telegram_api(metodo), data={
++                    "chat_id": TELEGRAM_CHAT_ID, "text": texto, "parse_mode": "HTML",
++                    "disable_web_page_preview": False}, timeout=20)
+             _ultimo_envio_telegram = time.monotonic()
+             if response.status_code == 200:
+-                return
++                return True
+             if response.status_code == 429:
+-                retry_after = int(response.json().get("parameters", {}).get("retry_after", "5"))
+-                time.sleep(retry_after)
+-        except Exception:
+-            imagen = None
+-            endpoint = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
++                try:
++                    retry_after = int(response.json().get("parameters", {}).get("retry_after", 5))
++                except (ValueError, TypeError, AttributeError):
++                    retry_after = 5
++                time.sleep(min(max(retry_after, 1), 60) + 0.5)
++                continue
++            logger.error("Telegram HTTP %s en %s", response.status_code, metodo)
++            if metodo == "sendPhoto":      # la foto falló: se reintenta como texto
++                metodo, imagen = "sendMessage", None
++                continue
++            if response.status_code in (400, 401, 403, 404):
++                return False               # credencial/chat inválidos: reintentar no ayuda
++        except requests.RequestException as exc:
++            logger.warning("Telegram error de red (%s) en intento %s", type(exc).__name__, intento + 1)
++            if metodo == "sendPhoto":
++                metodo, imagen = "sendMessage", None
++            time.sleep(1.5)
++    return False
++
++
++def formatear_alerta(alerta: dict) -> str:
++    item = alerta["item"]
++    bomba = alerta["bomba"]
++    tipo = "VERDE" if es_enlace_producto_directo(item.get("url")) else "ROJO"
++    marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\n" if bomba else ""
++    lineas = [
++        f"{marca}{formato_alerta_tipo(tipo)} <b>{html.escape(str(item.get('titulo') or ''))}</b>",
++        f"🏪 {html.escape(str(item.get('tienda') or 'Tienda'))}",
++        f"💰 ${alerta['actual']:,.2f} MXN (antes ${alerta['referencia']:,.2f})",
++        f"📉 {alerta['descuento']}% de descuento",
++    ]
++    ev = alerta.get("evaluacion") or {}
++    if ev.get("puntuacion") is not None:
++        extra = f" · {', '.join(ev.get('indicadores', [])[:4])}" if ev.get("indicadores") else ""
++        lineas.append(f"⭐ Puntuación {ev['puntuacion']}/100{html.escape(extra)}")
++    if ev.get("condiciones"):
++        lineas.append("⚠️ Condiciones: " + html.escape(", ".join(map(str, ev["condiciones"]))))
++    lineas.append(f"🔗 {item.get('url', '')}")
++    return "\n".join(lineas)
++
++
++# ---------------------------------------------------------------------------
++# Orquestación: cada fuente/tienda está aislada
++# ---------------------------------------------------------------------------
++@dataclass
++class Fuente:
++    nombre: str
++    tiendas: set
++    funcion: Callable[[], list]
++    estado_fn: Callable[[], Any] = None
++    resultado: list = field(default_factory=list)
++
++
++ULTIMO_REPORTE_FUENTES: dict = {}
++
++# ---------------------------------------------------------------------------
++# Registro de respuestas HTTP por fuente.
++# Varios scrapers legacy imprimen "HTTP 403" y devuelven [] sin exponer el estado.
++# Este registro (por hilo, solo observa) evita reportar como "empty"/"ok" una fuente
++# cuyas peticiones fueron todas rechazadas.
++# ---------------------------------------------------------------------------
++_TLS = threading.local()
++_SEND_INSTALADO = False
++
++
++def _instalar_registro_http() -> None:
++    global _SEND_INSTALADO
++    if _SEND_INSTALADO:
++        return
++    original = requests.sessions.Session.send
++
++    def _send_registrado(self, request, **kwargs):
++        registro = getattr(_TLS, "http", None)
++        try:
++            respuesta = original(self, request, **kwargs)
++        except Exception as exc:
++            if registro is not None:
++                registro.append(exc)
++            raise
++        if registro is not None:
++            registro.append(respuesta.status_code)
++        return respuesta
++
++    requests.sessions.Session.send = _send_registrado
++    _SEND_INSTALADO = True
++
++
++def estado_desde_http(registro: list) -> str | None:
++    """None si no hay información o si alguna petición fue exitosa; si todas fallaron, el estado dominante."""
++    if not registro:
++        return None
++    codigos = [r for r in registro if isinstance(r, int)]
++    if any(200 <= c < 400 for c in codigos):
++        return None
++    if codigos:
++        estados = [classify_status(c) for c in codigos]
++        return max(set(estados), key=estados.count)
++    return "timeout" if any(isinstance(r, requests.Timeout) for r in registro) else "network_error"
++
++
++
++def _lazy(modulo: str, nombre: str, *args, **kwargs) -> Callable[[], list]:
++    """Importa el scraper al ejecutarse: un ImportError afecta solo a ESA fuente."""
++    def _llamar():
++        return getattr(importlib.import_module(modulo), nombre)(*args, **kwargs)
++    return _llamar
++
++
++def _lazy_attr(modulo: str, atributo: str) -> Callable[[], Any]:
++    def _leer():
++        return getattr(importlib.import_module(modulo), atributo, None)
++    return _leer
++
++
++def _crear_sesion() -> requests.Session:
++    sesion = requests.Session()
++    sesion.headers.update({
++        "User-Agent": HONEST_USER_AGENT,
++        "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
++    })
++    return sesion
++
++
++def _tiendas_bloqueadas() -> set:
++    """Tiendas que no pasaron el preflight (PREFLIGHT_BLOCKED_STORES), en forma canónica."""
++    bruto = os.environ.get("PREFLIGHT_BLOCKED_STORES", "")
++    return {canonical_store(t) for t in bruto.split(",") if t.strip()}
++
++
++def _estado_tiendas_mexico():
++    from scrapers import tiendas_mexico
++    estados = list(tiendas_mexico.LAST_STATUS.values())
++    if not estados or any(e == "ok" for e in estados):
++        return {"state": "ok"}
++    return {"state": estados[0]}
++
++
++def _estado_modulo(modulo: str):
++    return lambda: dict(getattr(importlib.import_module(modulo), "LAST_STATUS", {}) or {})
++
++
++def definir_fuentes(sesion: requests.Session | None = None) -> list:
++    sesion = sesion or _crear_sesion()
++    fuentes: list[Fuente] = []
++
++    # API-first: un adaptador aislado por tienda
++    for scraper in ApiStoresScraper().scrapers:
++        fuentes.append(Fuente(f"api:{scraper.store}", {canonical_store(scraper.store)},
++                              scraper.discover, lambda s=scraper: s.last_status))
++
++    # Legacy/browser en paralelo
++    fuentes.append(Fuente("legacy:tiendas_mexico", {"amazon", "soriana", "liverpool"},
++                          _lazy("scrapers.tiendas_mexico", "buscar_todas"), _estado_tiendas_mexico))
++    fuentes.append(Fuente("legacy:liquidaciones_oficiales", set(),
++                          _lazy("scrapers.liquidaciones_oficiales", "buscar_liquidaciones_oficiales", sesion)))
++    fuentes.append(Fuente("legacy:tiendas_fisicas", set(),
++                          _lazy("scrapers.tiendas_fisicas", "buscar_tiendas_fisicas", sesion)))
++    fuentes.append(Fuente("comunidad:telegram", set(),
++                          _lazy("scrapers.telegram_ofertas", "buscar_telegram", sesion)))
++    fuentes.append(Fuente("comunidad:whatsapp", set(),
++                          _lazy("scrapers.whatsapp_channels", "buscar_whatsapp"), _estado_modulo("scrapers.whatsapp_channels")))
++    fuentes.append(Fuente("comunidad:feed", set(),
++                          _lazy("scrapers.feeds_comunidad_api", "parsear_feed_comunidad_espejo")))
++    fuentes.append(Fuente("comunidad:web", set(),
++                          _lazy("scrapers.comunidades_web", "buscar_comunidades_web")))
++    fuentes.append(Fuente("liquidazona:walmart", {canonical_store("Walmart MX")},
++                          _lazy("scrapers.liquidazona", "buscar_liquidazona_walmart", sesion)))
++    if os.environ.get("NETWORK_BROWSER_ENABLED", "false").strip().lower() in ("1", "true", "yes", "si"):
++        fuentes.append(Fuente("browser:network_json", set(),
++                              _lazy("scrapers.browser_network", "buscar_network_browser")))
++    return fuentes
++
++
++def _ejecutar_fuente(fuente: Fuente, salida: dict, semaforo: threading.Semaphore) -> None:
++    inicio = time.monotonic()
++    registro = {"fuente": fuente.nombre, "estado": "error", "candidatos": 0, "segundos": 0.0}
++    with semaforo:
++        _TLS.http = []
++        try:
++            items = fuente.funcion() or []
++            if not isinstance(items, list):
++                registro.update(estado="invalid_response", error=f"tipo inesperado: {type(items).__name__}")
++            else:
++                fuente.resultado = [i for i in items if isinstance(i, dict)]
++                registro["candidatos"] = len(fuente.resultado)
++                estado = {}
++                if fuente.estado_fn:
++                    try:
++                        estado = fuente.estado_fn() or {}
++                    except Exception as exc:  # leer el estado jamás tumba la fuente
++                        estado = {}
++                        logger.debug("estado_fn de %s falló: %s", fuente.nombre, exc)
++                declarado = str(estado.get("state") or "")
++                if declarado and declarado not in ("not_run", "ok"):
++                    registro["estado"] = declarado
++                    if estado.get("http"):
++                        registro["http"] = estado["http"]
++                elif fuente.resultado:
++                    registro["estado"] = "ok"
++                else:
++                    # Sin resultados: ¿realmente vacía o todas sus peticiones fueron rechazadas?
++                    registro["estado"] = estado_desde_http(_TLS.http) or "empty"
++        except Exception as exc:  # aislamiento: un fallo no afecta a otras fuentes
++            registro.update(estado="error", error=f"{type(exc).__name__}: {exc}"[:300])
++            logger.error("[%s] fallo aislado: %s", fuente.nombre, registro["error"])
++    registro["segundos"] = round(time.monotonic() - inicio, 1)
++    salida[fuente.nombre] = registro
++
+ 
+ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
+-    """Orquestación Paralela: Consume microservicios internos e inyecta hilos concurrentes."""
+-    logger.info("Iniciando despacho asincrónico multihilo de scrapers de liquidación...")
++    """Orquestación paralela: cada fuente corre aislada, con timeout y estado real reportado."""
++    global ULTIMO_REPORTE_FUENTES
++    logger.info("Iniciando despacho multihilo de scrapers de liquidación...")
++    _instalar_registro_http()
++    fuentes = definir_fuentes()
++    bloqueadas = _tiendas_bloqueadas()
++    salida: dict = {}
++    hilos: list[tuple[Fuente, threading.Thread]] = []
++    semaforo = threading.Semaphore(FUENTES_CONCURRENCIA)
++
++    for fuente in fuentes:
++        if fuente.tiendas and fuente.tiendas <= bloqueadas:
++            salida[fuente.nombre] = {"fuente": fuente.nombre, "estado": "skipped_preflight",
++                                     "candidatos": 0, "segundos": 0.0}
++            logger.warning("[%s] omitida: la tienda no pasó el preflight (las demás continúan).", fuente.nombre)
++            continue
++        hilo = threading.Thread(target=_ejecutar_fuente, args=(fuente, salida, semaforo),
++                                name=f"src-{fuente.nombre}", daemon=True)
++        hilo.start()
++        hilos.append((fuente, hilo))
++
++    limite = time.monotonic() + FUENTES_TIMEOUT_TOTAL
++    for fuente, hilo in hilos:
++        hilo.join(max(0.0, limite - time.monotonic()))
++        if hilo.is_alive():
++            salida.setdefault(fuente.nombre, {"fuente": fuente.nombre, "estado": "timeout",
++                                              "candidatos": 0, "segundos": FUENTES_TIMEOUT_TOTAL})
++            logger.error("[%s] timeout: se abandona esta fuente y el monitor continúa.", fuente.nombre)
++
++    candidatos: list = []
++    for fuente in fuentes:
++        if salida.get(fuente.nombre, {}).get("estado") != "timeout":
++            candidatos.extend(fuente.resultado)
++
++    ULTIMO_REPORTE_FUENTES = {
++        "generated_at": datetime.now(timezone.utc).isoformat(),
++        "preflight_bloqueadas": sorted(bloqueadas),
++        "fuentes": [salida[f.nombre] for f in fuentes if f.nombre in salida],
++    }
++    for fila in ULTIMO_REPORTE_FUENTES["fuentes"]:
++        nivel = logging.INFO if fila["estado"] in ESTADOS_SIN_FALLO else logging.WARNING
++        logger.log(nivel, "[FUENTE] %-34s estado=%-18s candidatos=%d", fila["fuente"], fila["estado"], fila["candidatos"])
++    return candidatos
++
++
++# ---------------------------------------------------------------------------
++# Evaluación de candidatos
++# ---------------------------------------------------------------------------
++def _actualizar_historial(historial: dict, clave: str, item: dict, actual: float, referencia: float, ahora: str):
++    entrada = historial.get(clave) if isinstance(historial.get(clave), dict) else None
++    maximo_previo = _num((entrada or {}).get("precio_maximo"))
++    maximo = max(maximo_previo, actual, referencia)
++    if entrada is not None and entrada.get("precio_actual") == actual and maximo == maximo_previo:
++        return entrada
++    nueva = dict(entrada or {})
++    nueva.update({
++        "tienda": item.get("tienda"), "titulo": item.get("titulo"), "url": item.get("url"),
++        "precio_actual": actual, "precio_maximo": maximo, "ultima_actualizacion": ahora,
++    })
++    nueva.setdefault("precio_alertado", None)
++    historial[clave] = nueva
++    return nueva
++
++
++def procesar_candidatos(candidatos: list, historial: dict) -> list:
++    """Filtra, puntúa y devuelve las alertas ordenadas por prioridad. Actualiza el historial."""
++    ahora = datetime.now(timezone.utc).isoformat()
++    unicos, duplicados = deduplicate_candidates([c for c in candidatos if isinstance(c, dict)])
++    logger.info("Candidatos: %d únicos (%d duplicados descartados).", len(unicos), duplicados)
++    alertas = []
++
++    for original in unicos:
++        try:
++            if not _candidato_de_tienda_objetivo(original):
++                continue
++            item = dict(original)
++            url = str(item.get("url") or "").strip()
++            if not es_enlace_valido_sin_error(url):
++                try:
++                    from core.ai_reparador import reparar_url
++                    url = str(reparar_url(url, item.get("tienda", ""), str(item.get("titulo", ""))) or "").strip()
++                except Exception as exc:  # sin IA se continúa con la URL original
++                    logger.debug("reparar_url no disponible: %s", exc)
++                if not es_enlace_valido_sin_error(url):
++                    continue
++            titulo = limpiar_titulo_producto(item.get("titulo") or item.get("name") or item.get("nombre"), url)
++            if not titulo:
++                continue
++            item["titulo"], item["url"] = titulo, url
++
++            clave = history_key(item)
++            entrada = historial.get(clave) if isinstance(historial.get(clave), dict) else None
++            actual, referencia, descuento = calcular_datos(item, entrada)
++            if actual <= 0:
++                continue
++            item["precio_actual"] = actual
++            item["precio_anterior"] = referencia or None
++            item["descuento"] = descuento
++
++            publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
++            if publicable and str(item.get("tipo_fuente") or "").upper() != "FISICA" \
++                    and not es_enlace_producto_directo(url):
++                publicable = False
++            if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
++                publicable = False
++            previo = (entrada or {}).get("precio_alertado")
++            if publicable and previo is not None and actual >= _num(previo) * 0.97:
++                publicable = False          # ya alertado a este precio (o menor)
++
++            if publicable:
++                try:
++                    evaluacion = evaluate_product(item)
++                except Exception as exc:
++                    logger.warning("evaluate_product falló para %s: %s", url, exc)
++                    evaluacion = {"puntuacion": descuento, "indicadores": []}
++                alertas.append({
++                    "clave": clave, "item": item, "actual": actual, "referencia": referencia,
++                    "descuento": descuento, "evaluacion": evaluacion,
++                    "bomba": DESCUENTO_BOMBA <= descuento <= MAX_DESCUENTO and referencia > actual,
++                })
++            _actualizar_historial(historial, clave, item, actual, referencia, ahora)
++        except Exception as exc:  # un candidato defectuoso no detiene el ciclo
++            logger.warning("Candidato descartado por error (%s): %s", type(exc).__name__, exc)
++
++    alertas.sort(key=lambda a: (a["bomba"], (a["evaluacion"] or {}).get("puntuacion", 0), a["descuento"]), reverse=True)
++    return alertas
++
++
++def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
++    enviadas = fallidas = 0
++    sticker = os.environ.get("TELEGRAM_STICKER_LIQUIDACION", "").strip() or None
++    for alerta in alertas[:MAX_ALERTAS_POR_CICLO]:
++        try:
++            ok = enviar_telegram(formatear_alerta(alerta), imagen=alerta["item"].get("imagen"),
++                                 sticker_id=sticker if alerta["bomba"] else None)
++        except RuntimeError as exc:
++            logger.error("%s", exc)
++            return enviadas, fallidas + len(alertas[:MAX_ALERTAS_POR_CICLO]) - enviadas - fallidas
++        if ok:
++            enviadas += 1
++            entrada = historial.get(alerta["clave"])
++            if isinstance(entrada, dict):
++                entrada["precio_alertado"] = alerta["actual"]
++                entrada["ultima_actualizacion"] = datetime.now(timezone.utc).isoformat()
++        else:
++            fallidas += 1
++    pendientes = max(0, len(alertas) - MAX_ALERTAS_POR_CICLO)
++    if pendientes:
++        logger.info("%d alertas quedan para el siguiente ciclo (límite %d).", pendientes, MAX_ALERTAS_POR_CICLO)
++    return enviadas, fallidas
++
++
++def _historial_ilegible() -> bool:
++    """True si el archivo existe con contenido pero no se pudo leer (para no sobrescribirlo)."""
++    try:
++        return os.path.exists(HISTORIAL_FILE) and os.path.getsize(HISTORIAL_FILE) > 2 and not cargar_historial()
++    except OSError:
++        return True
++
++
++def main() -> int:
++    faltantes = [v for v in VARIABLES_OPCIONALES if not os.environ.get(v, "").strip()]
++    if faltantes:
++        logger.info("Variables opcionales no configuradas (se usan alternativas/fuentes omitidas): %s", ", ".join(faltantes))
++    if _historial_ilegible():
++        logger.error("%s existe pero no se pudo leer; se aborta para NO sobrescribir el historial.", HISTORIAL_FILE)
++        return 1
++
++    historial = cargar_historial()
++    candidatos = ejecutar_orquestacion_paralela()
++    reporte = ULTIMO_REPORTE_FUENTES
++    try:
++        with open(MONITOR_HEALTH_FILE, "w", encoding="utf-8") as fh:
++            json.dump(reporte, fh, ensure_ascii=False, indent=2)
++    except OSError as exc:
++        logger.warning("No se pudo escribir %s: %s", MONITOR_HEALTH_FILE, exc)
++
++    alertas = procesar_candidatos(candidatos, historial)
++    enviadas, fallidas = enviar_alertas(alertas, historial)
++    guardar_historial(historial)
++
++    estados = [f["estado"] for f in reporte.get("fuentes", [])]
++    con_fallo = [f["fuente"] for f in reporte.get("fuentes", []) if f["estado"] not in ESTADOS_SIN_FALLO]
++    logger.info("Resumen: %d candidatos, %d alertas, %d enviadas, %d fallidas, %d fuentes con incidencia.",
++                len(candidatos), len(alertas), enviadas, fallidas, len(con_fallo))
++    if con_fallo:
++        print(f"::warning::Fuentes con incidencia (el resto continuó): {', '.join(con_fallo)}")
++
++    codigo = 0
++    if fallidas:
++        print("::error::Telegram no confirmó la entrega de algunas alertas.")
++        codigo = 1
++    if estados and not any(e in ESTADOS_RESPONDIO for e in estados):
++        print("::error::Ninguna fuente respondió correctamente en este ciclo (caída total).")
++        codigo = 1
++    return codigo
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/preflight.py b/preflight.py
+index e7aa57d..a2208aa 100644
+--- a/preflight.py
++++ b/preflight.py
+@@ -1,38 +1,92 @@
+ # preflight.py
+-import os
++"""Preflight por tienda.
++
++Sondea cada tienda con requests legítimos (User-Agent honesto) y clasifica el
++resultado. Una tienda bloqueada/no disponible se OMITE (PREFLIGHT_BLOCKED_STORES),
++pero jamás detiene el resto del monitor: este script siempre termina con código 0
++y deja siempre `preflight_health.json` y `preflight.env`.
++No intenta evadir CAPTCHA/WAF.
++"""
++from __future__ import annotations
++
++import json
+ import logging
+-# Corregido el import de curl_cffi que rompía el inicio del script
+-from curl_cffi import requests as curl_requests
++import os
++from concurrent.futures import ThreadPoolExecutor
++from datetime import datetime, timezone
++
++import requests
++
++from core.source_resilience import (
++    STORE_TARGETS,
++    classify_status,
++    probe_url,
++    summarize_store,
++    BLOCK_SIGNATURES,
++    PROBE_HEADERS,
++)
+ 
+ logger = logging.getLogger("DexterH4ck.Preflight")
+ 
+-HEADERS_PROV = {
+-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+-    "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
+-    "Cache-Control": "no-cache"
+-}
++HEALTH_FILE = "preflight_health.json"
++ENV_FILE = "preflight.env"
++
+ 
+ def ejecutar_diagnostico_conectividad(url: str, nombre_tienda: str) -> str:
+-    """
+-    Realiza una comprobación de salud de red simulando el stack completo de Chrome
+-    para evitar generar alertas falsas de bloqueo en el runner de GitHub.
+-    """
+-    session = curl_requests.Session(impersonate="chrome")
++    """Compatibilidad: devuelve el estado clasificado de una URL ('ok', 'blocked', ...)."""
++    resultado = probe_url(url)
++    if resultado["state"] != "ok":
++        logger.warning("[%s] preflight %s -> %s (HTTP %s)", nombre_tienda, url, resultado["state"], resultado.get("status"))
++    return resultado["state"]
++
++
++def ejecutar_preflight(targets: dict[str, list[str]] | None = None) -> dict:
++    targets = targets or STORE_TARGETS
++    tiendas: dict[str, dict] = {}
++
++    def _una(tienda: str) -> tuple[str, dict]:
++        with requests.Session() as session:
++            probes = [probe_url(u, session=session) for u in targets[tienda]]
++        return tienda, summarize_store(probes)
++
++    with ThreadPoolExecutor(max_workers=6, thread_name_prefix="preflight") as pool:
++        for tienda, resumen in pool.map(_una, list(targets)):
++            tiendas[tienda] = resumen
++            nivel = logging.INFO if resumen["state"] == "ok" else logging.WARNING
++            logger.log(nivel, "[%s] preflight: %s%s", tienda, resumen["state"],
++                       " (se omitirá en este ciclo)" if resumen["blocked"] else "")
++
++    bloqueadas = [t for t, r in tiendas.items() if r["blocked"]]
++    return {
++        "generated_at": datetime.now(timezone.utc).isoformat(),
++        "stores": tiendas,
++        "blocked_stores": bloqueadas,
++    }
++
++
++def escribir_salidas(health: dict) -> None:
++    with open(HEALTH_FILE, "w", encoding="utf-8") as fh:
++        json.dump(health, fh, ensure_ascii=False, indent=2)
++    with open(ENV_FILE, "w", encoding="utf-8") as fh:
++        fh.write(f"PREFLIGHT_BLOCKED_STORES={','.join(health.get('blocked_stores', []))}\n")
++
++
++def main() -> int:
++    logging.basicConfig(level=logging.INFO)
+     try:
+-        # Se establece un timeout fijo para mitigar congelamientos de red
+-        response = session.get(url, headers=HEADERS_PROV, timeout=15.0, allow_redirects=True)
+-        html_lower = response.text.lower()
+-        
+-        if any(term in html_lower for term in ["access denied", "temporarily blocked", "captcha"]):
+-            logger.warning(f"[{nombre_tienda}] El servidor devolvió contenido con firmas de bloqueo o reto.")
+-            return "blocked"
+-            
+-        if response.status_code == 200:
+-            return "ok"
+-        elif response.status_code >= 500:
+-            return "server_error"
+-        else:
+-            return "http_error"
+-    except Exception as e:
+-        logger.error(f"[{nombre_tienda}] Error en el chequeo HTTP del preflight: {str(e)}")
+-        return "network_error"
++        health = ejecutar_preflight()
++    except Exception as exc:  # el preflight no debe convertir un fallo propio en fallo global
++        logger.error("Preflight falló de forma inesperada (%s: %s); no se bloquea ninguna fuente.", type(exc).__name__, exc)
++        health = {"generated_at": datetime.now(timezone.utc).isoformat(), "stores": {},
++                  "blocked_stores": [], "error": f"{type(exc).__name__}: {exc}"}
++    escribir_salidas(health)
++    print("=== PREFLIGHT ===")
++    for tienda, r in health["stores"].items():
++        print(f"{tienda}: {r['state']}{' [OMITIDA]' if r['blocked'] else ''}")
++    if health["blocked_stores"]:
++        print(f"::warning::Tiendas omitidas en este ciclo por preflight: {', '.join(health['blocked_stores'])}")
++    return 0
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+diff --git a/scrapers/api_stores.py b/scrapers/api_stores.py
+index 4f4f835..64f33fb 100644
+--- a/scrapers/api_stores.py
++++ b/scrapers/api_stores.py
+@@ -1,73 +1,170 @@
+ # scrapers/api_stores.py
+-import random
++"""Capa API-first: un adaptador aislado por tienda.
++
++Cada adaptador implementa `discover()` y expone `last_status` con el estado REAL de
++la fuente (ok, not_configured, forbidden, rate_limited, timeout, invalid_response...).
++Un bloqueo o error de una tienda nunca se convierte en "success" y nunca detiene a las
++demás. Los endpoints se configuran por variables de entorno; no se hardcodean
++endpoints internos y no se intenta evadir CAPTCHA/WAF.
++"""
++from __future__ import annotations
++
+ import logging
+-from curl_cffi import requests as curl_requests
+-from config.endpoints import ENDPOINTS_REALES, STORES_FALLBACK
++from typing import Any
++
++import requests
++
++from config.endpoints import ENDPOINT_ENV_VARS, get_endpoint
++from core.network_json import extract_products
++from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
++from core.source_resilience import classify_status
++
++try:  # La capa VTEX es opcional
++    from scrapers.vtex_stores import VtexStoresScraper
++except ImportError:  # pragma: no cover
++    VtexStoresScraper = None
+ 
+ logger = logging.getLogger("DexterH4ck.ApiStores")
+ 
+-class ApiStoresScraper:
+-    def __init__(self, context=None):
+-        self.context = context
+-        # Autenticación TLS/JA3 automática para Bodega Aurrera, Walmart y Mercado Libre
+-        self.session = curl_requests.Session(impersonate="chrome")
+-        
+-        self.walmart_api = getattr(self.context, "WALMART_GRAPHQL_URL", None) or ENDPOINTS_REALES["WALMART_GRAPHQL"]
+-        self.chedraui_api = getattr(self.context, "CHEDRAUI_VTEX", None) or ENDPOINTS_REALES["CHEDRAUI_VTEX"]
+-        self.mercadolibre_api = getattr(self.context, "MERCADOLIBRE_API", None) or ENDPOINTS_REALES["MERCADOLIBRE_API"]
+-
+-        self.session.headers.update({
+-            "Accept": "application/json, text/plain, */*",
+-            "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
+-            "Cache-Control": "no-cache",
+-            "Connection": "keep-alive"
+-        })
+-
+-    def fetch_walmart_bodega_graphql(self, tienda="walmart", search_query="liquidacion", store_id=None):
+-        url = self.walmart_api
+-        default_store = STORES_FALLBACK["WALMART_STORE_ID"] if tienda == "walmart" else STORES_FALLBACK["BODEGA_STORE_ID"]
+-        final_store_id = store_id or getattr(self.context, f"{tienda.upper()}_STORE_ID", default_store)
+-
+-        payload = {
+-            "query": "query SearchAndFilter($searchQuery: String!, $facetFilters: String, $page: Int, $size: Int, $storeId: String!) { search(query: $searchQuery, facetFilters: $facetFilters, page: $page, size: $size, storeId: $storeId) { products { id name brand canonicalUrl priceInfo { currentPrice { price } wasPrice { price } } } } }",
+-            "variables": {"searchQuery": search_query, "facetFilters": "[]", "page": 1, "size": 50, "storeId": str(final_store_id)}
+-        }
+-        
+-        headers = {
+-            "Content-Type": "application/json",
+-            "Origin": f"https://www.{tienda}.com.mx",
+-            "Referer": f"https://www.{tienda}.com.mx/search?q={search_query}"
+-        }
+-        
+-        try:
+-            # Se fuerza un timeout estricto de 20 segundos para evitar que el runner se quede colgado eternamente
+-            response = self.session.post(url, json=payload, headers=headers, timeout=20.0)
+-            if response.status_code == 200:
+-                return response.json()
+-            # CORREGIDO: Se definen explícitamente los códigos de restricción para validar la sintaxis
+-            elif response.status_code in (401, 403, 412, 429):
+-                logger.warning(f"[{tienda.upper()}] Acceso denegado o limitado temporalmente por el servidor ({response.status_code}).")
+-        except Exception as e:
+-            logger.error(f"Error en transporte GraphQL de {tienda}: {str(e)}")
+-        return {}
+-
+-    def fetch_chedraui_vtex(self):
+-        params = {"_from": "0", "_to": "49", "O": "OrderByBestDiscountDESC"}
++
++class JsonEndpointAdapter(BaseScraper):
++    """Adaptador genérico para un endpoint JSON autorizado configurado por entorno."""
++
++    store = "unknown"
++    endpoint_name = ""
++    home = ""
++
++    def __init__(self, context: ScraperContext | None = None, endpoint: str | None = None) -> None:
++        super().__init__(context)
++        self.endpoint = (endpoint if endpoint is not None else get_endpoint(self.endpoint_name)).strip()
++        self.last_status: dict[str, Any] = {"state": "not_run"}
++
++    def discover(self) -> list[dict[str, Any]]:
++        if not self.endpoint:
++            self.last_status = {"state": "not_configured",
++                                "detail": f"{ENDPOINT_ENV_VARS.get(self.endpoint_name, 'endpoint')} no configurado"}
++            logger.info("[%s] %s no configurado; fuente API omitida.", self.store, ENDPOINT_ENV_VARS.get(self.endpoint_name))
++            return []
+         try:
+-            response = self.session.get(self.chedraui_api, params=params, timeout=20.0)
+-            if response.status_code == 200:
+-                return response.json()
+-        except Exception as e:
+-            logger.error(f"Error en catálogo VTEX Chedraui: {str(e)}")
+-        return []
+-
+-    def fetch_mercado_libre_api(self, query="liquidacion"):
+-        params = {"q": query, "limit": "50", "sort": "discount_desc"}
+-        headers = {"User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"}
++            response = self.get(self.endpoint)
++        except requests.Timeout:
++            self.last_status = {"state": "timeout"}
++            return []
++        except requests.RequestException as exc:
++            self.last_status = {"state": "network_error", "error": type(exc).__name__}
++            return []
++        state = classify_status(response.status_code)
++        if state != "ok":
++            self.last_status = {"state": state, "http": response.status_code}
++            logger.warning("[%s] API respondió HTTP %s (%s).", self.store, response.status_code, state)
++            return []
+         try:
+-            response = self.session.get(self.mercadolibre_api, params=params, headers=headers, timeout=15.0)
+-            if response.status_code == 200:
+-                return response.json()
+-        except Exception as e:
+-            logger.error(f"Error en API de Mercado Libre: {str(e)}")
+-        return {}
++            payload = response.json()
++        except ValueError:
++            self.last_status = {"state": "invalid_response"}
++            return []
++        rows = extract_products(payload, self.home or self.endpoint, self.store)
++        for row in rows:
++            row["origen_link"] = "api_publica"
++        self.last_status = {"state": "ok", "count": len(rows)}
++        return rows
++
++
++class WalmartAdapter(BaseScraper):
++    store = "Walmart MX"
++
++    def __init__(self, context: ScraperContext | None = None) -> None:
++        super().__init__(context)
++        self.last_status: dict[str, Any] = {"state": "not_run"}
++
++    def discover(self) -> list[dict[str, Any]]:
++        from scrapers import walmart_api
++        rows = walmart_api.buscar_walmart_graphql()
++        self.last_status = dict(walmart_api.LAST_STATUS)
++        if self.last_status.get("state") == "ok":
++            self.last_status["count"] = len(rows)
++        return rows
++
++
++class BodegaAdapter(BaseScraper):
++    store = "Bodega Aurrera"
++
++    def __init__(self, context: ScraperContext | None = None) -> None:
++        super().__init__(context)
++        self.last_status: dict[str, Any] = {"state": "not_run"}
++
++    def discover(self) -> list[dict[str, Any]]:
++        from scrapers import bodega_aurrera_api
++        rows = bodega_aurrera_api.buscar_bodega_graphql()
++        self.last_status = dict(bodega_aurrera_api.LAST_STATUS)
++        if self.last_status.get("state") == "ok":
++            self.last_status["count"] = len(rows)
++        return rows
++
++
++class MercadoLibreAdapter(BaseScraper):
++    """API pública de Mercado Libre; MERCADOLIBRE_ACCESS_TOKEN es opcional."""
++
++    store = "Mercado Libre MX"
++
++    def __init__(self, context: ScraperContext | None = None) -> None:
++        super().__init__(context)
++        self.last_status: dict[str, Any] = {"state": "not_run"}
++
++    def discover(self) -> list[dict[str, Any]]:
++        import os
++        from scrapers.mercado_libre_api import MercadoLibreApi
++        if not os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip():
++            logger.info("[Mercado Libre MX] MERCADOLIBRE_ACCESS_TOKEN no configurado; "
++                        "se usa búsqueda pública + historial.")
++        api = MercadoLibreApi()
++        rows = api.discover()
++        if api.circuit.paused:
++            ultimo = list(api.circuit.failures)[-1] if api.circuit.failures else None
++            self.last_status = {"state": classify_status(ultimo), "http": ultimo, "detail": api.circuit.reason}
++        else:
++            self.last_status = {"state": "ok", "count": len(rows)}
++        return rows
++
++
++def _adapter(name: str, endpoint_name: str, home: str):
++    return type(f"{name}Adapter", (JsonEndpointAdapter,), {
++        "store": name, "endpoint_name": endpoint_name, "home": home,
++    })
++
++
++SorianaAdapter = _adapter("Soriana", "SORIANA_API", "https://www.soriana.com")
++LiverpoolAdapter = _adapter("Liverpool", "LIVERPOOL_API", "https://www.liverpool.com.mx")
++AmazonAdapter = _adapter("Amazon MX", "AMAZON_API", "https://www.amazon.com.mx")
++CoppelAdapter = _adapter("Coppel", "COPPEL_API", "https://www.coppel.com")
++SuburbiaAdapter = _adapter("Suburbia", "SUBURBIA_API", "https://www.suburbia.com.mx")
++OferstockAdapter = _adapter("Oferstock", "OFERSTOCK_API", "https://www.oferstock.com.mx")
++ChedrauiJsonAdapter = _adapter("Chedraui", "CHEDRAUI_VTEX", "https://www.chedraui.com.mx")
++
++
++def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScraper]:
++    """Un adaptador independiente por cada tienda objetivo."""
++    chedraui = VtexStoresScraper(context) if VtexStoresScraper else ChedrauiJsonAdapter(context)
++    return [
++        WalmartAdapter(context),
++        BodegaAdapter(context),
++        chedraui,
++        SorianaAdapter(context),
++        LiverpoolAdapter(context),
++        AmazonAdapter(context),
++        MercadoLibreAdapter(context),
++        CoppelAdapter(context),
++        SuburbiaAdapter(context),
++        OferstockAdapter(context),
++    ]
++
++
++class ApiStoresScraper:
++    """Fachada API-first: agrupa los adaptadores aislados por tienda."""
++
++    def __init__(self, context: ScraperContext | None = None) -> None:
++        self.context = context
++        self.scrapers = api_first_scrapers(context)
++
++    def discover(self) -> list[dict[str, Any]]:
++        return run_scrapers_parallel(self.scrapers)
+diff --git a/scrapers/bodega_aurrera_api.py b/scrapers/bodega_aurrera_api.py
+index 7a1ca6a..f13af5f 100644
+--- a/scrapers/bodega_aurrera_api.py
++++ b/scrapers/bodega_aurrera_api.py
+@@ -8,18 +8,24 @@ import time
+ 
+ import requests
+ 
++from core.source_resilience import BLOCKING_STATES, classify_status
++
+ from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
+ from scrapers.bodega_graphql import BodegaGraphQLParser
+ 
+ 
++LAST_STATUS: dict = {"state": "not_run"}
++
++
+ def consultar_liquidaciones_bodega_api(termino_busqueda: str) -> dict:
+     endpoint = os.getenv("BODEGA_GRAPHQL_URL", "").strip()
+-    store_id = os.getenv("BODEGA_STORE_ID", "0000003001").strip()
++    store_id = os.getenv("BODEGA_STORE_ID", "").strip() or "0000003001"  # una variable vacía no debe anular el valor por defecto
+     if not endpoint:
++        LAST_STATUS["state"] = "not_configured"
+         return {}
+ 
+     payload = {
+-        "query": WALMART_GRAPHQL_QUERY,
++        "query": os.getenv("BODEGA_GRAPHQL_QUERY", "").strip() or WALMART_GRAPHQL_QUERY,
+         "variables": {
+             "searchQuery": termino_busqueda,
+             "facetFilters": "[]",
+@@ -31,7 +37,7 @@ def consultar_liquidaciones_bodega_api(termino_busqueda: str) -> dict:
+     headers = {
+         "User-Agent": os.getenv(
+             "SCRAPER_USER_AGENT",
+-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
++            "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
+         ),
+         "Accept": "application/json",
+         "Content-Type": "application/json",
+@@ -43,10 +49,22 @@ def consultar_liquidaciones_bodega_api(termino_busqueda: str) -> dict:
+     try:
+         response = requests.post(endpoint, json=payload, headers=headers, timeout=15)
+         if response.status_code != 200:
+-            print(f"[Bodega GraphQL] HTTP {response.status_code}")
++            LAST_STATUS["state"] = classify_status(response.status_code)
++            print(f"[Bodega GraphQL] HTTP {response.status_code} ({LAST_STATUS['state']})")
+             return {}
+-        return response.json()
+-    except (requests.RequestException, ValueError) as exc:
++        data = response.json()
++        LAST_STATUS["state"] = "ok"
++        return data
++    except requests.Timeout as exc:
++        LAST_STATUS["state"] = "timeout"
++        print(f"[Bodega GraphQL] timeout: {exc}")
++        return {}
++    except ValueError as exc:
++        LAST_STATUS["state"] = "invalid_response"
++        print(f"[Bodega GraphQL] respuesta no JSON: {exc}")
++        return {}
++    except requests.RequestException as exc:
++        LAST_STATUS["state"] = "network_error"
+         print(f"[Bodega GraphQL] error: {type(exc).__name__}: {exc}")
+         return {}
+ 
+@@ -57,4 +75,7 @@ def buscar_bodega_graphql(terminos=None, marcas_prioritarias=None) -> list[dict]
+     for termino in terminos or ("liquidacion", "remate", "oferta", "outlet"):
+         payload = consultar_liquidaciones_bodega_api(termino)
+         resultados.extend(parser.parsear_respuesta_busqueda(payload))
++        # Fuente bloqueada/no disponible: no se insiste con más términos en este ciclo.
++        if LAST_STATUS.get("state") in BLOCKING_STATES or LAST_STATUS.get("state") in ("not_configured", "unauthorized", "not_found"):
++            break
+     return resultados
+diff --git a/scrapers/liquidaciones_oficiales.py b/scrapers/liquidaciones_oficiales.py
+index 1c5867c..29805af 100644
+--- a/scrapers/liquidaciones_oficiales.py
++++ b/scrapers/liquidaciones_oficiales.py
+@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
+ from core.liquidation_engine import detect_priority_brand, infer_category
+ 
+ HEADERS = {
+-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36",
++    "User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
+     "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
+ }
+ 
+diff --git a/scrapers/mercado_libre_api.py b/scrapers/mercado_libre_api.py
+index c859ebc..22a93f3 100644
+--- a/scrapers/mercado_libre_api.py
++++ b/scrapers/mercado_libre_api.py
+@@ -160,7 +160,7 @@ class MercadoLibreApi:
+         return payload.get("results") or []
+ 
+     def discover(self) -> list[dict[str, Any]]:
+-        raw_queries = os.getenv("ML_HIGH_DEMAND_QUERIES", DEFAULT_QUERIES)
++        raw_queries = os.getenv("ML_HIGH_DEMAND_QUERIES") or os.getenv("ML_QUERIES") or DEFAULT_QUERIES
+         queries = [q.strip() for q in raw_queries.split(",") if q.strip()]
+         results: list[dict[str, Any]] = []
+         seen: set[str] = set()
+diff --git a/scrapers/telegram_ofertas.py b/scrapers/telegram_ofertas.py
+index 875f874..d39f89c 100644
+--- a/scrapers/telegram_ofertas.py
++++ b/scrapers/telegram_ofertas.py
+@@ -18,7 +18,7 @@ TELEGRAM_CHANNELS = [
+     ("Ofertas México - Xataka Selección", "https://t.me/s/xatakamexico"),
+ ]
+ 
+-HEADERS = {"User-Agent": "Mozilla/5.0 Chrome/140 Safari/537.36", "Accept-Language": "es-MX,es;q=0.9"}
++HEADERS = {"User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)", "Accept-Language": "es-MX,es;q=0.9"}
+ MAX_TELEGRAM_AI = int(os.environ.get("GEMINI_MAX_TELEGRAM_AI", "10"))
+ GEMINI_DELAY = float(os.environ.get("GEMINI_TELEGRAM_DELAY", "1.5"))
+ _ai_calls = 0
+diff --git a/scrapers/tiendas_fisicas.py b/scrapers/tiendas_fisicas.py
+index 2c1122f..4ca5206 100644
+--- a/scrapers/tiendas_fisicas.py
++++ b/scrapers/tiendas_fisicas.py
+@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
+ from core.liquidation_engine import detect_priority_brand, infer_category
+ 
+ HEADERS = {
+-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36",
++    "User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
+     "Accept-Language": "es-MX,es;q=0.9",
+ }
+ 
+diff --git a/scrapers/tiendas_mexico.py b/scrapers/tiendas_mexico.py
+index 2c9c9a7..309fd1c 100644
+--- a/scrapers/tiendas_mexico.py
++++ b/scrapers/tiendas_mexico.py
+@@ -1,130 +1,134 @@
+ # scrapers/tiendas_mexico.py
+-import html
+-import re
++import hashlib
+ import logging
+-import random
++import re
++from urllib.parse import quote_plus, urljoin, urlparse
++
++import requests
+ from bs4 import BeautifulSoup
+-from curl_cffi import requests as curl_requests
+-from core.product_identifiers import canonical_product_identifier
++
++from core.source_resilience import BLOCK_SIGNATURES, HONEST_USER_AGENT, classify_status
+ 
+ logger = logging.getLogger("DexterH4ck.TiendasMexico")
+ 
+-# Listado dinámico de User-Agents idénticos al pool del orquestador principal
+-USER_AGENTS_POOL = [
+-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+-]
++# Estado de la última corrida por tienda (lo lee el monitor para reportar bloqueos reales).
++LAST_STATUS: dict = {}
++
++TERMINOS = ["liquidacion", "ofertas", "remate", "outlet"]
++
++# Búsquedas públicas por tienda.
++URLS_BUSQUEDA = {
++    "amazon": "https://www.amazon.com.mx/s?k={q}",
++    "soriana": "https://www.soriana.com/buscar?q={q}",
++    "liverpool": "https://www.liverpool.com.mx/tienda?s={q}",
++}
++
++
++def _hash_id(*partes) -> str:
++    return hashlib.sha1("|".join(str(p) for p in partes).encode("utf-8")).hexdigest()[:16]
++
+ 
+ def buscar_todas(filtro_tienda=None) -> list:
+-    """
+-    Motor Legacy robusto con soporte nativo de curl_cffi.
+-    Rastrea las búsquedas públicas cuando las APIs dedicadas están limitadas.
++    """Motor legacy: rastrea búsquedas públicas cuando las APIs dedicadas no están disponibles.
++
++    Si una tienda responde 403/429/5xx o muestra un reto, se registra el estado real en
++    LAST_STATUS y se deja de consultar ESA tienda en este ciclo; las demás continúan.
+     """
+     productos_encontrados = []
+-    
+-    # Inicialización del cliente emulando el stack criptográfico completo de Chrome
+-    session = curl_requests.Session(impersonate="chrome")
+-    
++    LAST_STATUS.clear()
++
++    session = requests.Session()
+     session.headers.update({
+-        "User-Agent": random.choice(USER_AGENTS_POOL),
+-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
++        "User-Agent": HONEST_USER_AGENT,
++        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+         "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
+-        "Accept-Encoding": "gzip, deflate, br",
+-        "Cache-Control": "no-cache",
+-        "Connection": "keep-alive"
+     })
+ 
+-    # Mapeo de términos de búsqueda genéricos de alta demanda en México
+-    terminos = ["liquidacion", "ofertas", "remate", "outlet"]
+-    
+-    # Diccionario de URLs públicas base mapeadas por tu bot
+-    urls_mapeadas = {
+-        "amazon": "https://amazon.com.mx",
+-        "soriana": "https://soriana.com",
+-        "liverpool": "https://liverpool.com.mx"
+-    }
+-
+-    # Si se especifica un filtro (ej. desde el orquestador paralelo), acorta el bucle
+-    tiendas_a_procesar = [filtro_tienda.lower()] if filtro_tienda else urls_mapeadas.keys()
+-
+-    for tienda in tiendas_a_procesar:
+-        if tienda not in urls_mapeadas:
++    tiendas = [filtro_tienda.lower()] if filtro_tienda else list(URLS_BUSQUEDA)
++    for tienda in tiendas:
++        plantilla = URLS_BUSQUEDA.get(tienda)
++        if not plantilla:
+             continue
+-            
+-        base_url = urls_mapeadas[tienda]
+-        for termino in terminos:
+-            target_url = f"{base_url}{termino}"
++        LAST_STATUS[tienda] = "ok"
++        for termino in TERMINOS:
++            target_url = plantilla.format(q=quote_plus(termino))
+             try:
+-                logger.info(f"[{tienda.upper()}] Extrayendo listado público vía curl_cffi: {target_url}")
+-                
+-                # Timeout robusto de 25 segundos para evitar hilos colgados en GitHub Actions
++                logger.info("[%s] Extrayendo listado público: %s", tienda.upper(), target_url)
+                 response = session.get(target_url, timeout=25.0)
+-                
+-                if response.status_code == 200:
+-                    html_content = response.text
+-                    items_procesados = _parsear_html_por_tienda(html_content, tienda, target_url)
+-                    productos_encontrados.extend(items_procesados)
+-                elif response.status_code == 503 and tienda == "amazon":
+-                    logger.warning("[AMAZON] El servidor devolvió 503 (Frecuencia alta). Aplicando enfriamiento...")
++                estado = classify_status(response.status_code)
++                if estado == "ok":
++                    cuerpo = (response.text or "").lower()
++                    if any(sig in cuerpo for sig in BLOCK_SIGNATURES):
++                        LAST_STATUS[tienda] = "blocked"
++                        logger.warning("[%s] Reto/bloqueo detectado; se omite la tienda en este ciclo.", tienda.upper())
++                        break
++                    productos_encontrados.extend(_parsear_html_por_tienda(response.text, tienda, target_url))
+                 else:
+-                    logger.error(f"[{tienda.upper()}] Respuesta inestable del servidor público: {response.status_code}")
+-                    
+-            except Exception as e:
+-                logger.error(f"[{tienda.upper()}] Excepción controlada de red en fallback público: {str(e)}")
++                    LAST_STATUS[tienda] = estado
++                    logger.warning("[%s] HTTP %s (%s); se omite la tienda en este ciclo.",
++                                   tienda.upper(), response.status_code, estado)
++                    # 403/429/5xx/etc.: no se insiste con más términos contra la misma tienda.
++                    break
++            except requests.Timeout:
++                LAST_STATUS[tienda] = "timeout"
++                logger.error("[%s] Timeout; se omite la tienda en este ciclo.", tienda.upper())
++                break
++            except requests.RequestException as exc:
++                LAST_STATUS[tienda] = "network_error"
++                logger.error("[%s] Error de red: %s", tienda.upper(), type(exc).__name__)
++                break
+ 
+     return productos_encontrados
+ 
++
+ def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
+-    """Análisis sintáctico básico del HTML extraído por el cliente robusto."""
++    """Análisis sintáctico básico del HTML extraído."""
+     soup = BeautifulSoup(html_source, "html.parser")
+     resultados = []
+-    
+-    # --- Extractor Alternativo para Amazon MX ---
++
+     if tienda == "amazon":
+         for contenedor in soup.select("div[data-component-type='s-search-result']"):
+             try:
+                 titulo_el = contenedor.select_one("h2 a span")
+                 link_el = contenedor.select_one("h2 a")
+                 precio_el = contenedor.select_one(".a-price-whole")
+-                
+                 if titulo_el and link_el and precio_el:
+-                    precio_actual = float(precio_el.text.replace(",", "").strip())
+-                    url_final = "https://amazon.com.mx" + link_el.get("href", "")
+-                    
++                    precio_actual = float(re.sub(r"[^0-9.]", "", precio_el.text.replace(",", "")) or 0)
++                    url_final = urljoin("https://www.amazon.com.mx", link_el.get("href", ""))
+                     resultados.append({
+-                        "id": contenedor.get("data-asin", str(random.randint(1000, 9999))),
++                        "id": contenedor.get("data-asin") or _hash_id(url_final),
+                         "name": titulo_el.text.strip(),
++                        "titulo": titulo_el.text.strip(),
+                         "brand": "Amazon",
+                         "url": url_final,
+                         "precio_actual": precio_actual,
+-                        "precio_anterior": None,  # Se calcula automáticamente mediante tu historial JSON
++                        "precio_anterior": None,  # la referencia sale del historial JSON
+                         "tienda": "Amazon MX",
+-                        "tipo_fuente": "WEB_FALLBACK"
++                        "tipo_fuente": "WEB_FALLBACK",
+                     })
+-            except Exception:
++            except (ValueError, AttributeError, TypeError):
+                 continue
+ 
+-    # --- Extractor Alternativo para Soriana ---
+     elif tienda == "soriana":
+         for card in soup.select(".product-card"):
+             try:
+                 link_el = card.select_one("a.product-title-link")
+                 precio_el = card.select_one(".value")
+-                
+                 if link_el and precio_el:
+                     precio_actual = float(precio_el.text.replace("$", "").replace(",", "").strip())
++                    url_final = urljoin("https://www.soriana.com", link_el.get("href", ""))
+                     resultados.append({
+-                        "id": card.get("data-pid", str(random.randint(1000, 9999))),
++                        "id": card.get("data-pid") or _hash_id(url_final),
+                         "name": link_el.text.strip(),
++                        "titulo": link_el.text.strip(),
+                         "brand": "Soriana",
+-                        "url": "https://soriana.com" + link_el.get("href", ""),
++                        "url": url_final,
+                         "precio_actual": precio_actual,
+                         "precio_anterior": None,
+                         "tienda": "Soriana",
+-                        "tipo_fuente": "WEB_FALLBACK"
++                        "tipo_fuente": "WEB_FALLBACK",
+                     })
+-            except Exception:
++            except (ValueError, AttributeError, TypeError):
+                 continue
+ 
+     return resultados
+@@ -140,6 +144,10 @@ def es_url_producto(url, base_url=None):
+             return False
+         if base_url:
+             base_host = urlparse(base_url).netloc.lower().split(":", 1)[0]
++            # www.bodegaaurrera.com.mx y despensa.bodegaaurrera.com.mx son la misma tienda:
++            # se compara contra el dominio sin el prefijo "www.".
++            if base_host.startswith("www."):
++                base_host = base_host[4:]
+             if base_host and not (host == base_host or host.endswith("." + base_host)):
+                 return False
+         if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
+@@ -156,5 +164,3 @@ def es_url_producto(url, base_url=None):
+         return False
+     except Exception:
+         return False
+-
+-from urllib.parse import urlparse
+diff --git a/scrapers/vtex_stores.py b/scrapers/vtex_stores.py
+new file mode 100644
+index 0000000..305cb3b
+--- /dev/null
++++ b/scrapers/vtex_stores.py
+@@ -0,0 +1,104 @@
++# scrapers/vtex_stores.py
++"""Adaptador para catálogos VTEX con endpoint público/autorizado (p. ej. Chedraui).
++
++El endpoint se configura con CHEDRAUI_VTEX_ENDPOINT (URL de búsqueda de catálogo VTEX,
++por ejemplo `.../api/catalog_system/pub/products/search`). Si no está configurado, la
++fuente se reporta como `not_configured` y no afecta a las demás tiendas.
++"""
++from __future__ import annotations
++
++import logging
++import os
++from typing import Any
++from urllib.parse import urljoin
++
++import requests
++
++from core.scraper_base import BaseScraper, ScraperContext
++from core.source_resilience import classify_status
++
++logger = logging.getLogger("DexterH4ck.Vtex")
++
++
++class VtexStoresScraper(BaseScraper):
++    store = "Chedraui"
++    endpoint_env = "CHEDRAUI_VTEX_ENDPOINT"
++    home = "https://www.chedraui.com.mx"
++
++    def __init__(self, context: ScraperContext | None = None, endpoint: str | None = None) -> None:
++        super().__init__(context)
++        self.endpoint = (endpoint if endpoint is not None else os.environ.get(self.endpoint_env, "")).strip()
++        self.last_status: dict[str, Any] = {"state": "not_run"}
++
++    @staticmethod
++    def _offer(product: dict) -> tuple[float | None, float | None]:
++        for sku in product.get("items") or []:
++            for seller in sku.get("sellers") or []:
++                offer = seller.get("commertialOffer") or {}
++                if (offer.get("AvailableQuantity") or 0) <= 0:
++                    continue
++                try:
++                    price = float(offer.get("Price"))
++                except (TypeError, ValueError):
++                    continue
++                try:
++                    list_price = float(offer.get("ListPrice"))
++                except (TypeError, ValueError):
++                    list_price = None
++                if price > 0:
++                    return price, list_price
++        return None, None
++
++    def parse(self, payload: Any) -> list[dict[str, Any]]:
++        rows: list[dict[str, Any]] = []
++        if not isinstance(payload, list):
++            return rows
++        for product in payload:
++            if not isinstance(product, dict):
++                continue
++            price, list_price = self._offer(product)
++            link = str(product.get("link") or "").strip()
++            title = str(product.get("productName") or "").strip()
++            if price is None or not link or not title:
++                continue
++            reference = list_price if list_price and list_price > price else None
++            discount = round((1 - price / reference) * 100) if reference else 0
++            rows.append(self.normalize(
++                title=title,
++                url=urljoin(self.home + "/", link),
++                price=price,
++                previous_price=reference,
++                id=product.get("productId"),
++                marca=str(product.get("brand") or ""),
++                descuento=discount,
++                api="vtex",
++            ))
++        return rows
++
++    def discover(self) -> list[dict[str, Any]]:
++        if not self.endpoint:
++            self.last_status = {"state": "not_configured"}
++            logger.info("[%s] %s no configurado; fuente VTEX omitida.", self.store, self.endpoint_env)
++            return []
++        params = {"_from": "0", "_to": "49", "O": "OrderByBestDiscountDESC"}
++        try:
++            response = self.get(self.endpoint, params=params)
++        except requests.Timeout:
++            self.last_status = {"state": "timeout"}
++            return []
++        except requests.RequestException as exc:
++            self.last_status = {"state": "network_error", "error": type(exc).__name__}
++            return []
++        state = classify_status(response.status_code)
++        if state != "ok":
++            self.last_status = {"state": state, "http": response.status_code}
++            logger.warning("[%s] VTEX respondió HTTP %s (%s).", self.store, response.status_code, state)
++            return []
++        try:
++            payload = response.json()
++        except ValueError:
++            self.last_status = {"state": "invalid_response"}
++            return []
++        rows = self.parse(payload)
++        self.last_status = {"state": "ok" if isinstance(payload, list) else "invalid_response", "count": len(rows)}
++        return rows
+diff --git a/scrapers/walmart_api.py b/scrapers/walmart_api.py
+index 4a76403..7066b5e 100644
+--- a/scrapers/walmart_api.py
++++ b/scrapers/walmart_api.py
+@@ -8,18 +8,24 @@ import time
+ 
+ import requests
+ 
++from core.source_resilience import BLOCKING_STATES, classify_status
++
+ from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
+ from scrapers.walmart_graphql import WalmartGraphQLParser
+ 
+ 
++LAST_STATUS: dict = {"state": "not_run"}
++
++
+ def consultar_liquidaciones_walmart_api(termino_busqueda: str) -> dict:
+     endpoint = os.getenv("WALMART_GRAPHQL_URL", "").strip()
+-    store_id = os.getenv("WALMART_STORE_ID", "0000003362").strip()
++    store_id = os.getenv("WALMART_STORE_ID", "").strip() or "0000003362"  # una variable vacía no debe anular el valor por defecto
+     if not endpoint:
++        LAST_STATUS["state"] = "not_configured"
+         return {}
+ 
+     payload = {
+-        "query": WALMART_GRAPHQL_QUERY,
++        "query": os.getenv("WALMART_GRAPHQL_QUERY", "").strip() or WALMART_GRAPHQL_QUERY,
+         "variables": {
+             "searchQuery": termino_busqueda,
+             "facetFilters": "[]",
+@@ -31,7 +37,7 @@ def consultar_liquidaciones_walmart_api(termino_busqueda: str) -> dict:
+     headers = {
+         "User-Agent": os.getenv(
+             "SCRAPER_USER_AGENT",
+-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
++            "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
+         ),
+         "Accept": "application/json",
+         "Content-Type": "application/json",
+@@ -43,10 +49,22 @@ def consultar_liquidaciones_walmart_api(termino_busqueda: str) -> dict:
+     try:
+         response = requests.post(endpoint, json=payload, headers=headers, timeout=15)
+         if response.status_code != 200:
+-            print(f"[Walmart GraphQL] HTTP {response.status_code}")
++            LAST_STATUS["state"] = classify_status(response.status_code)
++            print(f"[Walmart GraphQL] HTTP {response.status_code} ({LAST_STATUS['state']})")
+             return {}
+-        return response.json()
+-    except (requests.RequestException, ValueError) as exc:
++        data = response.json()
++        LAST_STATUS["state"] = "ok"
++        return data
++    except requests.Timeout as exc:
++        LAST_STATUS["state"] = "timeout"
++        print(f"[Walmart GraphQL] timeout: {exc}")
++        return {}
++    except ValueError as exc:
++        LAST_STATUS["state"] = "invalid_response"
++        print(f"[Walmart GraphQL] respuesta no JSON: {exc}")
++        return {}
++    except requests.RequestException as exc:
++        LAST_STATUS["state"] = "network_error"
+         print(f"[Walmart GraphQL] error: {type(exc).__name__}: {exc}")
+         return {}
+ 
+@@ -57,4 +75,7 @@ def buscar_walmart_graphql(terminos=None, marcas_prioritarias=None) -> list[dict
+     for termino in terminos or ("liquidacion", "remate", "oferta", "outlet"):
+         payload = consultar_liquidaciones_walmart_api(termino)
+         resultados.extend(parser.parsear_respuesta_busqueda(payload))
++        # Fuente bloqueada/no disponible: no se insiste con más términos en este ciclo.
++        if LAST_STATUS.get("state") in BLOCKING_STATES or LAST_STATUS.get("state") in ("not_configured", "unauthorized", "not_found"):
++            break
+     return resultados
+diff --git a/scrapers/whatsapp_channels.py b/scrapers/whatsapp_channels.py
+index 1cbe82c..cbfaadb 100644
+--- a/scrapers/whatsapp_channels.py
++++ b/scrapers/whatsapp_channels.py
+@@ -1,137 +1,130 @@
+ # scrapers/whatsapp_channels.py
+-import os
+-import re
++"""Lectura de las vistas web públicas de canales de WhatsApp con Playwright normal.
++
++No usa stealth, no modifica fingerprints ni oculta la automatización. Si el
++navegador no está disponible o el canal responde con error/bloqueo, se reporta en
++LAST_STATUS y el resto del monitor continúa.
++"""
++import asyncio
++import hashlib
++import html
+ import json
+ import logging
+-import random
+-import asyncio
++import os
++import re
++
+ from bs4 import BeautifulSoup
+-from playwright.async_api import async_playwright
+-from playwright_stealth import stealth_async
++
++from core.source_resilience import classify_status
+ 
+ logger = logging.getLogger("DexterH4ck.WhatsApp")
+ 
+-USER_AGENTS_POOL = [
+-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+-]
++LAST_STATUS: dict = {}
++BLOCK_SIGNATURES = ("access denied", "temporarily blocked", "captcha")
++
+ 
+ class WhatsAppChannelScraper:
+     def __init__(self, context=None):
+         self.context = context
+-        # Ruta al archivo config JSON que contiene tus 4 canales objetivo
++        # Archivo de configuración con los canales objetivo
+         self.config_path = "config/fuentes_liquidaciones.json"
+ 
+     def _cargar_canales(self) -> list:
+         if not os.path.exists(self.config_path):
+-            logger.error(f"[WHATSAPP] Archivo de configuración ausente en: {self.config_path}")
++            logger.error("[WHATSAPP] Archivo de configuración ausente en: %s", self.config_path)
+             return []
+         try:
+             with open(self.config_path, "r", encoding="utf-8") as f:
+                 data = json.load(f)
+-                return data.get("fuentes", [])
+-        except Exception as e:
+-            logger.error(f"[WHATSAPP] Error al leer fuentes JSON: {str(e)}")
++                return data.get("fuentes", []) if isinstance(data, dict) else []
++        except (OSError, json.JSONDecodeError) as e:
++            logger.error("[WHATSAPP] Error al leer fuentes JSON: %s", e)
+             return []
+ 
+     async def buscar_canales_async(self) -> list:
+-        """
+-        Levanta una sesión persistente con camuflaje completo para leer
+-        las vistas previas web de los canales públicos de WhatsApp.
+-        """
+-        canales = self._cargar_canales()
+-        candidatos_encontrados = []
++        """Abre cada canal público en un navegador normal y extrae enlaces de los mensajes."""
++        from playwright.async_api import async_playwright
+ 
++        candidatos_encontrados = []
++        canales = [c for c in self._cargar_canales()
++                   if isinstance(c, dict) and str(c.get("tipo", "")).lower() == "whatsapp_channel"]
+         if not canales:
+-            return candidatos_encontrados
+-
+-        # Filtrar únicamente las fuentes configuradas como canales de WhatsApp
+-        canales_filtrados = [c for i in canales if (c := i) and str(i.get("tipo", "")).lower() == "whatsapp_channel"]
+-
+-        if not canales_filtrados:
++            LAST_STATUS["state"] = "not_configured"
+             return candidatos_encontrados
+ 
+         try:
+-            wait_ms = int(getattr(self.context, "NETWORK_BROWSER_WAIT_MS", 7000))
++            wait_ms = int(getattr(self.context, "NETWORK_BROWSER_WAIT_MS", os.getenv("NETWORK_BROWSER_WAIT_MS", "7000")))
+         except (ValueError, TypeError):
+             wait_ms = 7000
+ 
+         async with async_playwright() as p:
+-            browser = await p.chromium.launch(
+-                headless=True,
+-                args=[
+-                    "--disable-blink-features=AutomationControlled",
+-                    "--no-sandbox",
+-                    "--disable-infobars"
+-                ]
+-            )
+-            
+-            context = await browser.new_context(
+-                user_agent=random.choice(USER_AGENTS_POOL),
+-                locale="es-MX",
+-                timezone_id="America/Mexico_City",
+-                viewport={"width": 1280, "height": 720}
+-            )
+-            
++            browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
++            context = await browser.new_context(locale="es-MX", timezone_id="America/Mexico_City")
+             page = await context.new_page()
+-            await stealth_async(page)
+-            
+-            # Remoción de firmas en runtime
+-            await page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined});")
+-
+-            for canal in canales_filtrados:
+-                nombre = canal.get("nombre", "Canal Anónimo")
+-                url = canal.get("url")
+-                
+-                if not url:
+-                    continue
+-                    
+-                try:
+-                    logger.info(f"[WHATSAPP] Extrayendo historial dinámico del canal: '{nombre}'")
+-                    await page.goto(url, wait_until="networkidle", timeout=35000)
+-                    await asyncio.sleep(wait_ms / 1000.0)
+-                    
+-                    html_source = await page.content()
+-                    soup = BeautifulSoup(html_source, "html.parser")
+-                    
+-                    # Selectores del feed de mensajes de WhatsApp en su versión web pública
+-                    bloques_mensajes = soup.select("div dir='ltr', .whatsapp-public-message-text")
+-                    
+-                    for bloque in bloques_mensajes:
+-                        texto = bloque.text.strip()
+-                        # Extraemos URLs limpias dentro del mensaje del canal
+-                        enlaces = re.findall(r'https?://[^\s]+', texto)
+-                        
+-                        if enlaces:
+-                            for link in enlaces:
+-                                # Limpiamos caracteres residuales del regex en la URL
+-                                url_limpia = link.rstrip(",. text;\"')")
++            estados = []
++            try:
++                for canal in canales:
++                    nombre = canal.get("nombre", "Canal Anónimo")
++                    url = canal.get("url")
++                    if not url:
++                        continue
++                    try:
++                        logger.info("[WHATSAPP] Leyendo canal público: '%s'", nombre)
++                        respuesta = await page.goto(url, wait_until="networkidle", timeout=35000)
++                        if respuesta is not None and respuesta.status >= 400:
++                            logger.warning("[WHATSAPP] Canal '%s': HTTP %s", nombre, respuesta.status)
++                            estados.append(classify_status(respuesta.status))
++                            continue
++                        await asyncio.sleep(wait_ms / 1000.0)
++                        html_source = await page.content()
++                        if any(sig in html_source.lower() for sig in BLOCK_SIGNATURES):
++                            logger.warning("[WHATSAPP] Canal '%s': reto/bloqueo detectado; se omite.", nombre)
++                            estados.append("blocked")
++                            continue
++                        soup = BeautifulSoup(html_source, "html.parser")
++                        bloques = soup.select("[dir='ltr'], .whatsapp-public-message-text")
++                        estados.append("ok")
++                        for bloque in bloques:
++                            texto = bloque.get_text(" ", strip=True)
++                            for link in re.findall(r"https?://[^\s]+", texto):
++                                url_limpia = link.rstrip(",.;:\"')")
+                                 candidatos_encontrados.append({
+-                                    "id": str(hash(url_limpia + nombre)),
+-                                    "name": html.unescape(texto[:120]).replace("\n", " ") + "...",
++                                    "id": hashlib.sha1((url_limpia + nombre).encode("utf-8")).hexdigest()[:16],
++                                    "name": html.unescape(texto[:120]) + "...",
++                                    "titulo": html.unescape(texto[:120]),
+                                     "brand": "Canal Ofertas",
+                                     "url": url_limpia,
+-                                    "precio_actual": 0.0,  # El motor cruzará esto con el historial local
++                                    "precio_actual": 0.0,  # el motor cruza esto con el historial local
+                                     "precio_anterior": None,
+                                     "tienda": "WhatsApp_Feed",
+                                     "origen_link": "whatsapp",
+-                                    "tipo_fuente": "WEB_FALLBACK"
++                                    "tipo_fuente": "WEB_FALLBACK",
+                                 })
+-                                
+-                except Exception as err:
+-                    logger.error(f"[WHATSAPP] Error en canal '{nombre}': {str(err)}")
+-                    
+-            await context.close()
+-            await browser.close()
++                    except Exception as err:  # un canal roto no detiene a los demás
++                        logger.error("[WHATSAPP] Error en canal '%s': %s", nombre, err)
++                        estados.append("error")
++            finally:
++                await context.close()
++                await browser.close()
+ 
++        if estados and not any(e == "ok" for e in estados):
++            LAST_STATUS["state"] = next((e for e in estados if e != "ok"), "error")
++        else:
++            LAST_STATUS["state"] = "ok"
+         return candidatos_encontrados
+ 
++
+ def buscar_whatsapp(contexto=None) -> list:
+-    """Punto de entrada síncrono compatible con el ThreadPoolExecutor del orquestador."""
++    """Punto de entrada síncrono compatible con el orquestador."""
++    LAST_STATUS.clear()
+     scraper = WhatsAppChannelScraper(contexto)
+     try:
+-        # Se ejecuta el loop asíncrono de Playwright dentro del entorno del hilo aislado
+         return asyncio.run(scraper.buscar_canales_async())
++    except ImportError:
++        LAST_STATUS["state"] = "not_configured"
++        logger.warning("[WHATSAPP] Playwright no está instalado; fuente omitida.")
++        return []
+     except Exception as e:
+-        logging.getLogger("DexterH4ck.WhatsApp").error(f"Fallo en ejecución síncrona: {str(e)}")
++        LAST_STATUS["state"] = "error"
++        logger.error("[WHATSAPP] Fallo en ejecución: %s: %s", type(e).__name__, e)
+         return []
+diff --git a/tests/__init__.py b/tests/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/tests/test_monitor_flow.py b/tests/test_monitor_flow.py
+new file mode 100644
+index 0000000..7984279
+--- /dev/null
++++ b/tests/test_monitor_flow.py
+@@ -0,0 +1,208 @@
++import os
++import tempfile
++import unittest
++from unittest.mock import MagicMock, patch
++
++import monitor_ofertas as mon
++from scrapers.api_stores import JsonEndpointAdapter, api_first_scrapers
++
++
++def _item(precio, anterior, tienda="Walmart MX", ident="123456789"):
++    return {
++        "tienda": tienda, "titulo": "Pantalla Smart TV Ejemplo 55 pulgadas",
++        "url": f"https://www.walmart.com.mx/ip/pantalla/{ident}",
++        "precio_actual": precio, "precio_anterior": anterior, "origen_link": "api",
++    }
++
++
++class OrchestrationIsolationTests(unittest.TestCase):
++    def test_failing_and_blocked_sources_do_not_stop_the_others(self):
++        def boom():
++            raise RuntimeError("fallo simulado de Walmart")
++
++        fuentes = [
++            mon.Fuente("api:Walmart MX", {"walmart"}, boom),
++            mon.Fuente("api:Chedraui", {"chedraui"}, lambda: [_item(100, 1000, "Chedraui")]),
++            mon.Fuente("api:Soriana", {"soriana"}, lambda: [_item(100, 1000, "Soriana")]),
++        ]
++        with patch.object(mon, "definir_fuentes", return_value=fuentes), \
++                patch.dict(os.environ, {"PREFLIGHT_BLOCKED_STORES": "Soriana"}):
++            candidatos = mon.ejecutar_orquestacion_paralela()
++        estados = {f["fuente"]: f["estado"] for f in mon.ULTIMO_REPORTE_FUENTES["fuentes"]}
++        self.assertEqual(estados["api:Walmart MX"], "error")           # el error NO se disfraza de ok
++        self.assertEqual(estados["api:Chedraui"], "ok")
++        self.assertEqual(estados["api:Soriana"], "skipped_preflight")  # solo ESA tienda se omite
++        self.assertEqual(len(candidatos), 1)
++
++    def test_declared_blocked_status_is_not_reported_as_success(self):
++        fuente = mon.Fuente("api:X", set(), lambda: [], lambda: {"state": "rate_limited"})
++        with patch.object(mon, "definir_fuentes", return_value=[fuente]):
++            mon.ejecutar_orquestacion_paralela()
++        self.assertEqual(mon.ULTIMO_REPORTE_FUENTES["fuentes"][0]["estado"], "rate_limited")
++
++
++class AlertRulesTests(unittest.TestCase):
++    def setUp(self):
++        patcher = patch("core.extreme_liquidation.verificar_precio_producto", return_value=(False, "mock"))
++        patcher.start()
++        self.addCleanup(patcher.stop)
++
++    def test_95_to_99_is_priority_bomb_and_sent_only_once(self):
++        historial = {}
++        alertas = mon.procesar_candidatos([_item(50, 1000)], historial)
++        self.assertEqual(len(alertas), 1)
++        self.assertTrue(alertas[0]["bomba"])
++        self.assertIn("💣", mon.formatear_alerta(alertas[0]))
++        historial[alertas[0]["clave"]]["precio_alertado"] = 50
++        self.assertEqual(mon.procesar_candidatos([_item(50, 1000)], historial), [])
++
++    def test_90_percent_with_valid_reference_is_bomb(self):
++        alertas = mon.procesar_candidatos([_item(100, 1000)], {})
++        self.assertEqual(len(alertas), 1)
++        self.assertTrue(alertas[0]["bomba"])
++
++    def test_below_min_discount_is_not_published(self):
++        self.assertEqual(mon.procesar_candidatos([_item(600, 1000)], {}), [])
++
++    def test_normal_offer_is_not_marked_bomb(self):
++        alertas = mon.procesar_candidatos([_item(500, 1000)], {})
++        self.assertEqual(len(alertas), 1)
++        self.assertFalse(alertas[0]["bomba"])
++
++    def test_invalid_url_is_rejected(self):
++        item = _item(50, 1000)
++        item["url"] = "https://www.walmart.com.mx/ip/null"
++        with patch("core.ai_reparador.reparar_url", side_effect=lambda u, *a, **k: u):
++            self.assertEqual(mon.procesar_candidatos([item], {}), [])
++
++
++class TelegramTests(unittest.TestCase):
++    def test_uses_real_api_host_and_reports_failure_honestly(self):
++        respuesta = MagicMock(status_code=403)
++        sesion = MagicMock()
++        sesion.post.return_value = respuesta
++        with patch.object(mon, "TELEGRAM_TOKEN", "TOKEN"), patch.object(mon, "TELEGRAM_CHAT_ID", "1"), \
++                patch.object(mon.requests, "Session", return_value=sesion), patch.object(mon.time, "sleep"):
++            self.assertFalse(mon.enviar_telegram("hola"))
++        self.assertTrue(sesion.post.call_args[0][0].startswith("https://api.telegram.org/botTOKEN/"))
++
++    def test_missing_credentials_raise(self):
++        with patch.object(mon, "TELEGRAM_TOKEN", None):
++            with self.assertRaises(RuntimeError):
++                mon.enviar_telegram("hola")
++
++
++class HistoryTests(unittest.TestCase):
++    def test_unreadable_history_is_not_overwritten(self):
++        cwd = os.getcwd()
++        with tempfile.TemporaryDirectory() as tmp:
++            os.chdir(tmp)
++            try:
++                open(mon.HISTORIAL_FILE, "w", encoding="utf-8").write("{roto")
++                self.assertTrue(mon._historial_ilegible())
++                open(mon.HISTORIAL_FILE, "w", encoding="utf-8").write('{"a": {"titulo": "x"}}')
++                self.assertFalse(mon._historial_ilegible())
++            finally:
++                os.chdir(cwd)
++
++    def test_guardar_historial_trims_without_crashing(self):
++        cwd = os.getcwd()
++        with tempfile.TemporaryDirectory() as tmp:
++            os.chdir(tmp)
++            try:
++                with patch.object(mon, "MAX_HISTORIAL", 2):
++                    mon.guardar_historial({"a": {"ultima_actualizacion": "1"}, "b": {"ultima_actualizacion": "3"},
++                                           "c": {"ultima_actualizacion": "2"}})
++                import json
++                self.assertEqual(set(json.load(open(mon.HISTORIAL_FILE, encoding="utf-8"))), {"b", "c"})
++            finally:
++                os.chdir(cwd)
++
++
++class ApiFirstAdaptersTests(unittest.TestCase):
++    def test_unconfigured_endpoints_are_reported_not_failed(self):
++        with patch.dict(os.environ, {}, clear=False):
++            for var in ("SORIANA_API_ENDPOINT", "COPPEL_API_ENDPOINT", "SUBURBIA_API_ENDPOINT",
++                        "AMAZON_API_ENDPOINT", "CHEDRAUI_VTEX_ENDPOINT", "LIVERPOOL_API_ENDPOINT",
++                        "OFERSTOCK_API_ENDPOINT"):
++                os.environ.pop(var, None)
++            for scraper in api_first_scrapers():
++                if scraper.store in ("Walmart MX", "Bodega Aurrera", "Mercado Libre MX"):
++                    continue
++                self.assertEqual(scraper.discover(), [])
++                self.assertEqual(scraper.last_status["state"], "not_configured", scraper.store)
++
++    def _adapter(self, status, payload=None, json_error=False):
++        adaptador = JsonEndpointAdapter(endpoint="https://api.example.test/p")
++        adaptador.store = "Prueba"
++        respuesta = MagicMock(status_code=status)
++        if json_error:
++            respuesta.json.side_effect = ValueError("no json")
++        else:
++            respuesta.json.return_value = payload
++        adaptador.get = MagicMock(return_value=respuesta)
++        return adaptador
++
++    def test_429_and_403_are_reported_with_their_own_state(self):
++        for codigo, estado in ((429, "rate_limited"), (403, "forbidden"), (404, "not_found"), (401, "unauthorized")):
++            adaptador = self._adapter(codigo)
++            self.assertEqual(adaptador.discover(), [])
++            self.assertEqual(adaptador.last_status["state"], estado)
++
++    def test_invalid_json_is_invalid_response(self):
++        adaptador = self._adapter(200, json_error=True)
++        self.assertEqual(adaptador.discover(), [])
++        self.assertEqual(adaptador.last_status["state"], "invalid_response")
++
++    def test_valid_payload_returns_products(self):
++        payload = {"products": [{"id": "1", "name": "Producto", "price": 100, "listPrice": 1000, "url": "/p/1"}]}
++        adaptador = self._adapter(200, payload)
++        rows = adaptador.discover()
++        self.assertEqual(len(rows), 1)
++        self.assertEqual(adaptador.last_status["state"], "ok")
++
++    def test_one_store_per_target_and_each_isolated(self):
++        stores = {s.store for s in api_first_scrapers()}
++        for tienda in ("Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana", "Liverpool", "Amazon MX",
++                       "Mercado Libre MX", "Coppel", "Suburbia", "Oferstock"):
++            self.assertIn(tienda, stores)
++
++
++if __name__ == "__main__":
++    unittest.main()
++
++
++class HttpRecordTests(unittest.TestCase):
++    def test_all_rejected_requests_are_not_reported_as_empty_success(self):
++        self.assertEqual(mon.estado_desde_http([403, 403, 429]), "forbidden")
++        self.assertEqual(mon.estado_desde_http([503]), "unavailable")
++        self.assertEqual(mon.estado_desde_http([200, 403]), None)   # alguna respondió: no es bloqueo total
++        self.assertEqual(mon.estado_desde_http([]), None)
++        import requests as rq
++        self.assertEqual(mon.estado_desde_http([rq.Timeout()]), "timeout")
++
++    def test_source_that_swallows_403_is_reported_forbidden(self):
++        import requests as rq
++
++        def scraper_que_traga_errores():
++            rq.Session().get("http://127.0.0.1:9/")   # cualquier salida registrada
++            return []
++
++        def falso_send(self, request, **kw):
++            r = rq.Response()
++            r.status_code = 403
++            return r
++
++        fuente = mon.Fuente("legacy:demo", set(), scraper_que_traga_errores)
++        import requests.sessions as rs
++        with patch.object(mon, "definir_fuentes", return_value=[fuente]):
++            mon._instalar_registro_http()
++            # El envoltorio guarda el 'send' original en su cierre; se sustituye por uno simulado (sin red).
++            celda = [c for c in rs.Session.send.__closure__ if callable(c.cell_contents)][0]
++            guardado = celda.cell_contents
++            celda.cell_contents = falso_send
++            try:
++                mon.ejecutar_orquestacion_paralela()
++            finally:
++                celda.cell_contents = guardado
++        self.assertEqual(mon.ULTIMO_REPORTE_FUENTES["fuentes"][0]["estado"], "forbidden")
+diff --git a/tests/test_source_status.py b/tests/test_source_status.py
+new file mode 100644
+index 0000000..570f8d7
+--- /dev/null
++++ b/tests/test_source_status.py
+@@ -0,0 +1,82 @@
++import json
++import os
++import tempfile
++import unittest
++from unittest.mock import MagicMock, patch
++
++import requests
++
++import preflight
++from core.source_resilience import BLOCKING_STATES, classify_status, probe_url
++
++
++class ClassifyStatusTests(unittest.TestCase):
++    def test_codes_map_to_distinct_states(self):
++        esperado = {
++            200: "ok", 301: "redirect", 302: "redirect", 400: "bad_request",
++            401: "unauthorized", 403: "forbidden", 404: "not_found", 408: "timeout",
++            409: "conflict", 429: "rate_limited", 500: "server_error",
++            502: "unavailable", 503: "unavailable", 504: "unavailable", None: "network_error",
++        }
++        for codigo, estado in esperado.items():
++            self.assertEqual(classify_status(codigo), estado, codigo)
++
++    def test_rate_limit_forbidden_and_missing_are_not_the_same(self):
++        self.assertEqual(len({classify_status(c) for c in (403, 404, 429, 503)}), 4)
++
++    def test_blocking_states_do_not_include_missing_endpoint_or_bad_credential(self):
++        self.assertNotIn(classify_status(404), BLOCKING_STATES)
++        self.assertNotIn(classify_status(401), BLOCKING_STATES)
++        self.assertIn(classify_status(429), BLOCKING_STATES)
++        self.assertIn(classify_status(403), BLOCKING_STATES)
++
++
++class ProbeUrlTests(unittest.TestCase):
++    def _session(self, status, text=""):
++        response = MagicMock(status_code=status, text=text, url="https://x.test/")
++        session = MagicMock()
++        session.get.return_value = response
++        return session
++
++    def test_captcha_in_200_is_reported_as_blocked_not_ok(self):
++        r = probe_url("https://x.test/", session=self._session(200, "<html>Please solve the CAPTCHA</html>"))
++        self.assertEqual(r["state"], "blocked")
++
++    def test_http_429_is_rate_limited(self):
++        self.assertEqual(probe_url("https://x.test/", session=self._session(429))["state"], "rate_limited")
++
++    def test_timeout_and_network_errors_never_raise(self):
++        session = MagicMock()
++        session.get.side_effect = requests.Timeout()
++        self.assertEqual(probe_url("https://x.test/", session=session)["state"], "timeout")
++        session.get.side_effect = requests.ConnectionError()
++        self.assertEqual(probe_url("https://x.test/", session=session)["state"], "network_error")
++
++
++class PreflightTests(unittest.TestCase):
++    def test_blocked_store_is_listed_but_does_not_fail_globally(self):
++        def fake_probe(url, session=None, timeout=15.0):
++            if "walmart" in url:
++                return {"url": url, "status": 403, "state": "forbidden"}
++            return {"url": url, "status": 200, "state": "ok"}
++
++        cwd = os.getcwd()
++        with tempfile.TemporaryDirectory() as tmp:
++            os.chdir(tmp)
++            try:
++                with patch("preflight.probe_url", side_effect=fake_probe):
++                    codigo = preflight.main()
++                self.assertEqual(codigo, 0)
++                with open("preflight_health.json", encoding="utf-8") as fh:
++                    health = json.load(fh)
++                self.assertEqual(health["blocked_stores"], ["Walmart MX"])
++                self.assertEqual(health["stores"]["Chedraui"]["state"], "ok")
++                with open("preflight.env", encoding="utf-8") as fh:
++                    env = fh.read()
++                self.assertIn("PREFLIGHT_BLOCKED_STORES=Walmart MX", env)
++            finally:
++                os.chdir(cwd)
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/tools/descubrir_apis_navegador.py b/tools/descubrir_apis_navegador.py
+index 5e855d5..91fb788 100644
+--- a/tools/descubrir_apis_navegador.py
++++ b/tools/descubrir_apis_navegador.py
+@@ -1,21 +1,20 @@
+ # tools/descubrir_apis_navegador.py
+-import os
+-import json
++"""Descubre endpoints JSON que una página pública consulta al cargarse.
++
++Usa Playwright normal (sin stealth ni ocultar la automatización). Solo registra qué
++hosts/URLs JSON se piden; no evade CAPTCHA/WAF.
++"""
+ import asyncio
++import json
+ import logging
+-import random
++import os
+ from urllib.parse import urlparse
++
+ from playwright.async_api import async_playwright
+-from playwright_stealth import stealth_async
+ 
+ logging.basicConfig(level=logging.INFO)
+ logger = logging.getLogger("DexterH4ck.ApiDiscover")
+ 
+-# Pool de User-Agents comerciales actualizados para la inspección
+-USER_AGENTS = [
+-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+-]
+ 
+ async def descubrir_endpoints():
+     url_objetivo = os.environ.get("NETWORK_DISCOVERY_URL")
+@@ -28,82 +27,46 @@ async def descubrir_endpoints():
+         logger.error("Falta la variable de entorno NETWORK_DISCOVERY_URL. Abortando.")
+         return
+ 
+-    logger.info(f"Iniciando inspección camuflada sobre la URL: {url_objetivo}")
++    logger.info("Iniciando inspección de red sobre la URL: %s", url_objetivo)
+     endpoints_capturados = {}
+ 
+     async with async_playwright() as p:
+-        # Lanzamiento con desactivación explícita de marcas de automatización (WAF Bypass)
+-        browser = await p.chromium.launch(
+-            headless=True,
+-            args=[
+-                "--disable-blink-features=AutomationControlled",
+-                "--no-sandbox",
+-                "--disable-infobars",
+-                "--disable-dev-shm-usage",
+-                "--window-size=1920,1080"
+-            ]
+-        )
+-
+-        # Configuración de contexto simulando un entorno orgánico interactivo de México
+-        context = await browser.new_context(
+-            user_agent=random.choice(USER_AGENTS),
+-            locale="es-MX",
+-            timezone_id="America/Mexico_City",
+-            viewport={"width": 1920, "height": 1080}
+-        )
+-
++        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
++        context = await browser.new_context(locale="es-MX", timezone_id="America/Mexico_City")
+         page = await context.new_page()
+ 
+-        # Inyección de scripts avanzados para eliminar rastros de automatización en el motor Blink
+-        await page.add_init_script("""
+-            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+-            window.chrome = { runtime: {} };
+-            Object.defineProperty(navigator, 'languages', {get: () => ['es-MX', 'es', 'en-US', 'en']});
+-        """)
+-
+-        # Aplicación nativa de la librería de sigilo
+-        await stealth_async(page)
+-
+-        # Interceptor de respuestas de red en tiempo real
+         async def interceptar_respuesta(response):
+             try:
+                 content_type = response.headers.get("content-type", "").lower()
+-                # Captura solo tráfico útil: llamadas REST JSON, APIs internas o GraphQL
++                # Solo tráfico útil: llamadas REST JSON o GraphQL
+                 if "application/json" in content_type or "graphql" in response.url:
+                     url_completa = response.url
+-                    parsed_url = urlparse(url_completa)
+-                    host = parsed_url.netloc
+-                    
+-                    if host not in endpoints_capturados:
+-                        endpoints_capturados[host] = []
+-                        
+-                    # Evitamos almacenar duplicados exactos en el reporte final
+-                    if url_completa not in endpoints_capturados[host]:
+-                        endpoints_capturados[host].append(url_completa)
+-                        logger.info(f"[CAPTURA JSON] EndPoint detectado en {host} -> {url_completa[:90]}...")
+-            except Exception:
+-                pass
++                    host = urlparse(url_completa).netloc
++                    lista = endpoints_capturados.setdefault(host, [])
++                    if url_completa not in lista:
++                        lista.append(url_completa)
++                        logger.info("[CAPTURA JSON] Endpoint en %s -> %s...", host, url_completa[:90])
++            except Exception as exc:
++                logger.debug("Respuesta no inspeccionable: %s", exc)
+ 
+-        # Vinculación del evento de escucha de red
+-        page.on("response", interceptar_response=interceptar_respuesta)
++        page.on("response", interceptar_respuesta)
+ 
+         try:
+-            # Esperamos a que el DOM esté listo o la red se estabilice
+-            await page.goto(url_objetivo, wait_until="domcontentloaded", timeout=45000)
+-            logger.info(f"Página base cargada de forma exitosa. Esperando {wait_ms} ms para capturar peticiones asíncronas...")
++            respuesta = await page.goto(url_objetivo, wait_until="domcontentloaded", timeout=45000)
++            if respuesta is not None and respuesta.status >= 400:
++                logger.warning("La página respondió HTTP %s; el resultado puede estar incompleto.", respuesta.status)
++            logger.info("Página cargada. Esperando %s ms para capturar peticiones asíncronas...", wait_ms)
+             await asyncio.sleep(wait_ms / 1000.0)
+         except Exception as e:
+-            logger.error(f"Error o timeout controlado durante el renderizado dinámico: {str(e)}")
++            logger.error("Error o timeout durante el renderizado: %s", e)
+         finally:
+             await context.close()
+             await browser.close()
+ 
+-    # Escritura defensiva del reporte de diagnóstico
+-    output_file = "network_endpoints.json"
+-    with open(output_file, "w", encoding="utf-8") as f:
++    with open("network_endpoints.json", "w", encoding="utf-8") as f:
+         json.dump(endpoints_capturados, f, ensure_ascii=False, indent=2)
+-        
+-    logger.info(f"Análisis perimetral completado. Archivo '{output_file}' generado con {len(endpoints_capturados)} hosts mapeados.")
++    logger.info("Archivo 'network_endpoints.json' generado con %d hosts.", len(endpoints_capturados))
++
+ 
+ if __name__ == "__main__":
+     asyncio.run(descubrir_endpoints())
+diff --git a/tools/diagnostico_fuentes.py b/tools/diagnostico_fuentes.py
+index ae88e5d..6c79acd 100644
+--- a/tools/diagnostico_fuentes.py
++++ b/tools/diagnostico_fuentes.py
+@@ -1,98 +1,64 @@
+ # tools/diagnostico_fuentes.py
+ """Diagnóstico de endpoints públicos de tiendas en México.
+-Utiliza firmas TLS/JA3 indetectables mediante curl_cffi para evitar falsos
+-positivos de bloqueo en el runner y clasifica los estados de red.
++
++Usa requests legítimos con User-Agent honesto y clasifica cada código HTTP en un
++estado distinto (ok, forbidden, rate_limited, not_found, timeout, ...). No intenta
++evadir CAPTCHA/WAF ni suplantar identidad.
+ """
+ from __future__ import annotations
++
+ import json
+ import logging
+-import random
++import os
++import sys
+ from pathlib import Path
+-from curl_cffi import requests as curl_requests
++
++sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
++
++import requests  # noqa: E402
++
++from core.source_resilience import STORE_TARGETS, probe_url  # noqa: E402
+ 
+ logging.basicConfig(level=logging.INFO)
+ logger = logging.getLogger("DexterH4ck.Diagnostics")
+ 
+-TARGETS = {
+-    "Walmart MX": [
+-        "https://walmart.com.mx",
+-        "https://walmart.com.mx"
+-    ],
+-    "Bodega Aurrera": [
+-        "https://bodegaaurrera.com.mx",
+-        "https://bodegaaurrera.com.mx"
+-    ],
+-    "Soriana": [
+-        "https://soriana.com",
+-        "https://soriana.com"
+-    ],
+-    "Chedraui": [
+-        "https://chedraui.com.mx"
+-    ],
+-    "Mercado Libre MX": [
+-        "https://mercadolibre.com",
+-        "https://mercadolibre.com.mx"
+-    ],
+-    "Amazon MX": [
+-        "https://amazon.com.mx",
+-        "https://amazon.com.mx"
+-    ],
+-}
++# Endpoints opcionales configurados por variables de entorno (solo se reporta si existen).
++ENV_ENDPOINTS = (
++    "WALMART_GRAPHQL_URL", "BODEGA_GRAPHQL_URL", "CHEDRAUI_VTEX_ENDPOINT",
++    "SORIANA_API_ENDPOINT", "COPPEL_API_ENDPOINT", "SUBURBIA_API_ENDPOINT",
++    "AMAZON_API_ENDPOINT",
++)
+ 
+-USER_AGENTS_POOL = [
+-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+-]
+ 
+-def probe(session: curl_requests.Session, url: str) -> dict:
+-    headers = {
+-        "User-Agent": random.choice(USER_AGENTS_POOL),
+-        "Accept": "text/html,application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+-        "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
+-        "Cache-Control": "no-cache",
+-        "Connection": "keep-alive"
+-    }
+-    try:
+-        # Se establece impersonate='chrome' para evadir retos perimetrales automatizados en el diagnóstico
+-        r = session.get(url, headers=headers, timeout=15, allow_redirects=True)
+-        
+-        if r.status_code < 400:
+-            state = "ok"
+-        elif r.status_code in (401, 403, 412, 429):
+-            state = "forbidden"
+-        elif r.status_code == 404:
+-            state = "not_found"
+-        elif r.status_code == 429:
+-            state = "rate_limited"
+-        elif r.status_code >= 500:
+-            state = "server_error"
+-        else:
+-            state = "http_error"
+-            
+-        return {"status": r.status_code, "final_url": r.url, "state": state}
+-    except Exception as exc:
+-        return {"status": None, "state": "network_error", "error": type(exc).__name__}
++def probe(session: requests.Session, url: str) -> dict:
++    result = probe_url(url, session=session, timeout=15)
++    if result.get("final_url") == url:
++        result.pop("final_url")
++    return result
++
+ 
+ def main() -> int:
+-    report = {}
+-    logger.info("Iniciando escaneo perimetral de salud de endpoints públicos...")
+-    
+-    # Se inicializa el cliente robusto unificado con suplantación de firmas
+-    with curl_requests.Session(impersonate="chrome") as session:
+-        for store, urls in TARGETS.items():
+-            report[store] = [{"url": u, **probe(session, u)} for u in urls]
+-            
+-    # Escritura segura del reporte serializado para el artefacto de GitHub Actions
++    report: dict = {}
++    logger.info("Iniciando diagnóstico de salud de endpoints públicos...")
++    with requests.Session() as session:
++        for store, urls in STORE_TARGETS.items():
++            report[store] = [probe(session, u) for u in urls]
++    report["_endpoints_opcionales"] = {
++        name: ("configurado" if os.environ.get(name, "").strip() else "no configurado")
++        for name in ENV_ENDPOINTS
++    }
+     Path("diagnostico_fuentes.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+-    
++
+     print("\n=== RESUMEN DE DIAGNÓSTICO DE RED ===")
+     for store, rows in report.items():
+-        # CORREGIDO: Alternamos comillas triples externas para anidar las comillas de los diccionarios limpiamente sin backslashes
+-        resumen_tienda = ", ".join(f"{r['state']}={r.get('status')}" for r in rows)
+-        print(f"{store}: {resumen_tienda}")
+-        
++        if store.startswith("_"):
++            continue
++        print(f"{store}: " + ", ".join(f"{r['state']}={r.get('status')}" for r in rows))
++    for name, estado in report["_endpoints_opcionales"].items():
++        print(f"{name}: {estado}")
++    # El diagnóstico informa; un bloqueo individual no es un fallo global.
+     return 0
+ 
++
+ if __name__ == "__main__":
+-    import sys
+     sys.exit(main())
