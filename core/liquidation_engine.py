@@ -193,6 +193,7 @@ def evaluate_product(product):
     ):
         if any(x in texto for x in needles) and label not in condiciones:
             condiciones.append(label)
+    result["condiciones"] = condiciones
     return result
 
 def is_liquidation(product):
