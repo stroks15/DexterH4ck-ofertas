@@ -1,3 +1,4 @@
+# monitor_ofertas.py
 import html
 import json
 import os
@@ -133,7 +134,7 @@ def _candidato_de_tienda_objetivo(item):
         ("liverpool", "Liverpool"),
         ("amazon", "Amazon MX"),
         ("mercado libre", "Mercado Libre MX"),
-        ("mercadolibre", "Mercado Libre MX"),
+        ("mercadolibre", "Market Libre MX"),
         ("coppel", "Coppel"),
         ("suburbia", "Suburbia"),
         ("oferstock", "Oferstock"),
@@ -181,8 +182,8 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
 
 def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     """
-    Orquestación Paralela Avanzada: Consume microservicios internos e inyecta
-    los fallbacks dinámicos de Soriana y Amazon MX de forma segura.
+    Orquestación Paralela Avanzada: Ejecuta todas las fuentes de datos comerciales
+    mapeadas en hilos concurrentes independientes reduciendo drásticamente el tiempo de ejecución.
     """
     logger.info("Iniciando despacho asincrónico multihilo de scrapers de liquidación...")
     candidatos_totales = []
@@ -190,19 +191,16 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     api_scraper = ApiStoresScraper(contexto_ficticio)
     vtex_scraper = VtexStoresScraper(contexto_ficticio)
 
-    # Lógica de enrutamiento dinámico para Soriana y Amazon MX
     def consultar_amazon():
         endpoint = os.environ.get("AMAZON_API_ENDPOINT")
         if endpoint:
             try:
-                # Si existe API dedicada, la consume con curl_cffi robusto
                 session = curl_requests.Session(impersonate="chrome")
                 res = session.get(endpoint, timeout=20.0)
                 if res.status_code == 200: return res.json()
             except Exception as e:
                 logger.error(f"[AMAZON API] Fallo intermitente: {str(e)}")
-        # Fallback legítimo integrado: Ejecuta raspado controlado del catálogo de ofertas
-        logger.info("[AMAZON] Ejecutando fallback alternativo sobre canales públicos...")
+        logger.info("[AMAZON] Ejecutando fallback de extracción pública sobre la tienda...")
         return buscar_todas(filtro_tienda="amazon")
 
     def consultar_soriana():
@@ -213,12 +211,14 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
                 res = session.get(endpoint, timeout=20.0)
                 if res.status_code == 200: return res.json()
             except Exception as e:
-                logger.error(f"[SORIANA API] Error de pasarela: {str(e)}")
-        logger.info("[SORIANA] Endpoint API ausente. Saltando a extracción por índice de búsqueda...")
+                logger.error(f"[SORIANA API] Fallo en gateway: {str(e)}")
+        logger.info("[SORIANA] Endpoint ausente. Saltando a extracción por índice de búsqueda...")
         return buscar_todas(filtro_tienda="soriana")
 
-    # Mapeo unificado de hilos para procesamiento concurrente rápido
+    # Mapeo de hilos asíncronos para todas las tiendas del ecosistema
     tareas = {
         "API_Walmart": lambda: api_scraper.fetch_walmart_bodega_graphql("walmart", "liquidacion"),
         "API_Bodega": lambda: api_scraper.fetch_walmart_bodega_graphql("bodega", "liquidacion"),
         "API_Chedraui": lambda: api_scraper.fetch_chedraui_vtex(),
+        "API_MercadoLibre": lambda: api_scraper.fetch_mercado_libre_api("liquidacion"),
+        "VTEX_Coppel": lambda: vtex_scraper.fetch_coppel_liquidations("liquidacion"),
