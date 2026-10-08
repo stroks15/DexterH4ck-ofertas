@@ -13,7 +13,6 @@ on:
       - "config/**"
       - "tests/**"
   schedule:
-    # Cada 15 minutos, desplazado 7 minutos para evitar el pico de cada hora.
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
 
@@ -28,20 +27,17 @@ jobs:
   revisar:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           clean: true
-
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
-
       - name: Instalar dependencias
         shell: bash
         run: |
@@ -58,7 +54,6 @@ jobs:
           else
             echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
           fi
-
       - name: Cachear binarios de Playwright
         if: hashFiles('requirements-browser.txt') != ''
         uses: actions/cache@v4
@@ -66,24 +61,16 @@ jobs:
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-browser.txt') }}
-
       - name: Instalar navegadores para captura JSON (opcional)
         if: hashFiles('requirements-browser.txt') != ''
         shell: bash
         run: |
           set -euo pipefail
           if python -c "import playwright" >/dev/null 2>&1; then
-            echo "Instalando binarios de Playwright: Chromium + WebKit."
-            if [ "${{ steps.playwright-cache.outputs.cache-hit }}" = "true" ]; then
-              echo "Caché de Playwright encontrada; se verifican/instalan los navegadores solicitados."
-            else
-              echo "Caché de Playwright no encontrada; se instalarán los navegadores."
-            fi
             python -m playwright install --with-deps chromium webkit
           else
             echo "::notice::Playwright no está instalado; no se descargan binarios de navegador."
           fi
-
       - name: Verificar secretos de Telegram
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -91,8 +78,6 @@ jobs:
         run: |
           test -n "$TELEGRAM_TOKEN" || { echo "::error::Falta el secret TELEGRAM_TOKEN"; exit 1; }
           test -n "$TELEGRAM_CHAT_ID" || { echo "::error::Falta el secret TELEGRAM_CHAT_ID"; exit 1; }
-          echo "Secretos de Telegram detectados correctamente."
-
       - name: Verificar credenciales de IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -100,7 +85,6 @@ jobs:
         run: |
           test -n "$GEMINI_API_KEY" || echo "::warning::GEMINI_API_KEY no está configurada; el monitor funcionará sin Gemini."
           test -n "$GROQ_API_KEY" || echo "::warning::GROQ_API_KEY no está configurada; el monitor funcionará sin Groq."
-
       - name: Diagnosticar acceso real a APIs de IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -111,7 +95,7 @@ jobs:
           if [ -z "$GEMINI_API_KEY" ]; then
             echo "::warning::Gemini: secret ausente en Actions."
           else
-            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15               "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY")
+            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15 "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY")
             case "$code" in
               200) echo "Gemini: clave presente y API accesible (HTTP 200)." ;;
               400|401|403) echo "::error::Gemini: clave presente pero rechazada o solicitud inválida (HTTP $code)." ;;
@@ -122,7 +106,7 @@ jobs:
           if [ -z "$GROQ_API_KEY" ]; then
             echo "::warning::Groq: secret ausente en Actions."
           else
-            code=$(curl -sS -o /tmp/groq-models.json -w "%{http_code}" --max-time 15               -H "Authorization: Bearer $GROQ_API_KEY"               -H "Content-Type: application/json"               "https://api.groq.com/openai/v1/models")
+            code=$(curl -sS -o /tmp/groq-models.json -w "%{http_code}" --max-time 15 -H "Authorization: Bearer $GROQ_API_KEY" -H "Content-Type: application/json" "https://api.groq.com/openai/v1/models")
             case "$code" in
               200) echo "Groq: clave presente y API accesible (HTTP 200)." ;;
               401|403) echo "::error::Groq: clave presente pero rechazada (HTTP $code)." ;;
@@ -130,7 +114,6 @@ jobs:
               *) echo "::warning::Groq: API respondió HTTP $code." ;;
             esac
           fi
-
       - name: Verificar token opcional de Mercado Libre
         env:
           MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
@@ -140,10 +123,8 @@ jobs:
           else
             echo "::notice::MERCADOLIBRE_ACCESS_TOKEN no configurado; Mercado Libre seguirá usando búsqueda pública + historial."
           fi
-
       - name: Validar sintaxis Python
-        run: python -m py_compile core/product_identifiers.py core/network_json.py scrapers/browser_network.py tools/descubrir_apis_navegador.py tests/test_product_identifiers.py monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py scrapers/whatsapp_channels.py core/scraper_base.py core/source_resilience.py core/offer_identity.py scrapers/api_stores.py scrapers/vtex_stores.py scrapers/comunidades_web.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
-
+        run: python -m compileall -q .
       - name: Pruebas deterministas de liquidaciones extremas
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -151,15 +132,12 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m unittest discover -s tests -p "test_*.py" -v
-
       - name: Preflight - detectar errores antes del monitor
         run: |
           python preflight.py
           cat preflight.env >> "$GITHUB_ENV"
-
       - name: Diagnosticar endpoints de tiendas
         run: python tools/diagnostico_fuentes.py
-
       - name: Guardar diagnóstico de fuentes
         if: always()
         uses: actions/upload-artifact@v4
@@ -167,7 +145,6 @@ jobs:
           name: diagnostico-fuentes
           path: diagnostico_fuentes.json
           if-no-files-found: ignore
-
       - name: Guardar diagnóstico de preflight
         if: always()
         uses: actions/upload-artifact@v4
@@ -175,7 +152,6 @@ jobs:
           name: preflight-health
           path: preflight_health.json
           if-no-files-found: ignore
-
       - name: Ejecutar monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -195,18 +171,23 @@ jobs:
           ML_API_TIMEOUT: "12"
           ML_API_DELAY: "0.20"
           ML_API_REQUIRE_TOKEN: "false"
-          PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com"
+          PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com/rss"
           WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
           BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
           WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
+          CHEDRAUI_VTEX_ENDPOINT: ${{ vars.CHEDRAUI_VTEX_ENDPOINT }}
+          SORIANA_API_ENDPOINT: ${{ vars.SORIANA_API_ENDPOINT }}
+          COPPEL_API_ENDPOINT: ${{ vars.COPPEL_API_ENDPOINT }}
+          SUBURBIA_API_ENDPOINT: ${{ vars.SUBURBIA_API_ENDPOINT }}
+          AMAZON_API_ENDPOINT: ${{ vars.AMAZON_API_ENDPOINT }}
+          ML_QUERIES: ${{ vars.ML_QUERIES }}
           NETWORK_BROWSER_ENABLED: "true"
           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
           NETWORK_BROWSER_WAIT_MS: "6500"
           NETWORK_BROWSER_MAX_RESPONSES: "20"
           TELEGRAM_STICKER_LIQUIDACION: ${{ vars.TELEGRAM_STICKER_LIQUIDACION }}
         run: python monitor_ofertas.py
-
       - name: Guardar historial con commit directo seguro
         shell: bash
         run: |
@@ -223,33 +204,23 @@ jobs:
             exit 0
           fi
           git commit -m "Actualiza historial de ofertas [skip ci]"
-
           for intento in {1..5}; do
-            echo "Intento de Push de historial $intento/5..."
             git fetch origin main
-
-            if git push origin HEAD:main; then
-              echo "Historial actualizado."
-              exit 0
-            fi
-
-            echo "Push concurrente; sincronizando intento $intento..."
+            if git push origin HEAD:main; then exit 0; fi
             git reset --soft HEAD~1
             git checkout -- historial_ofertas.json
             git fetch origin main
-            git merge --ff-only origin/main 2>/dev/null || {
-              echo "La rama avanzó mientras se ejecutaba el monitor; se conserva el historial local como siguiente ciclo."
-              exit 0
-            }
+            git merge --ff-only origin/main 2>/dev/null || exit 0
             sleep $((intento * 2))
           done
           echo "::warning::No se pudo publicar el historial en este ciclo; el monitor sí terminó correctamente."
           exit 0
-
       - name: Guardar diagnóstico final del monitor
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: monitor-health-final
-          path: preflight_health.json
+          path: |
+            preflight_health.json
+            monitor_health.json
           if-no-files-found: ignore
