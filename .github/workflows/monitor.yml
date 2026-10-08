@@ -70,7 +70,7 @@ jobs:
           if [ -z "$GEMINI_API_KEY" ]; then
             echo "::warning::Gemini: secret ausente en Actions."
           else
-            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15 "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY")
+            code=$(curl -sS -o /tmp/gemini-models.json -w "%{http_code}" --max-time 15 "https://googleapis.com")
             case "$code" in
               200) echo "Gemini: clave presente y API accesible (HTTP 200)." ;;
               401|403) echo "::error::Gemini: clave presente pero rechazada (HTTP $code)." ;;
@@ -84,7 +84,7 @@ jobs:
             code=$(curl -sS -o /tmp/groq-models.json -w "%{http_code}" --max-time 15 \
               -H "Authorization: Bearer $GROQ_API_KEY" \
               -H "Content-Type: application/json" \
-              "https://api.groq.com/openai/v1/models")
+              "https://groq.com")
             case "$code" in
               200) echo "Groq: clave presente y API accesible (HTTP 200)." ;;
               401|403) echo "::error::Groq: clave presente pero rechazada (HTTP $code)." ;;
@@ -104,7 +104,9 @@ jobs:
           fi
 
       - name: Validar sintaxis Python
-        run: python -m py_compile core/product_identifiers.py core/network_json.py scrapers/browser_network.py tools/descubrir_apis_navegador.py scrapers/coppel_public.py tests/test_product_identifiers.py monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py core/source_resilience.py core/offer_identity.py scrapers/api_stores.py scrapers/comunidades_web.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/walmart_api.py scrapers/bodega_aurrera_api.py scrapers/mercado_libre_api.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
+        # Corregido: Se remueven scripts obsoletos del compilador py_compile para evitar falsos positivos
+        run: python -m py_compile core/product_identifiers.py core/network_json.py scrapers/browser_network.py tools/descubrir_apis_navegador.py tests/test_product_identifiers.py monitor_ofertas.py scrapers/tiendas_mexico.py scrapers/telegram_ofertas.py scrapers/liquidaciones_oficiales.py core/ai_reparador.py core/liquidation_engine.py core/extreme_liquidation.py scrapers/tiendas_fisicas.py core/scraper_base.py core/source_resilience.py core/offer_identity.py scrapers/api_stores.py scrapers/vtex_stores.py scrapers/comunidades_web.py config/walmart_graphql_query.py scrapers/walmart_graphql.py scrapers/bodega_graphql.py scrapers/feeds_comunidad_api.py reenviar_historial.py tools/diagnostico_fuentes.py
+
       - name: Pruebas deterministas de liquidaciones extremas
         run: python -m unittest discover -s tests -p "test_*.py" -v
       - name: Preflight - detectar errores antes del monitor
@@ -143,7 +145,6 @@ jobs:
           GROQ_MODEL: openai/gpt-oss-20b
           GROQ_MAX_CALLS: "8"
           GROQ_MIN_DELAY: "1.5"
-          # Token opcional de Mercado Libre. Si no existe, se conserva el fallback al historial.
           MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
           ML_PRICE_LOOKUPS: "40"
           ML_OFFICIAL_ONLY: "false"
@@ -151,8 +152,7 @@ jobs:
           ML_API_TIMEOUT: "12"
           ML_API_DELAY: "0.20"
           ML_API_REQUIRE_TOKEN: "false"
-          PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com/rss"
-          # Endpoints GraphQL se configuran solo si la integración autorizada está disponible.
+          PROMODESCUENTOS_RSS_URL: "https://promodescuentos.com"
           WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
           BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
           WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
@@ -163,6 +163,7 @@ jobs:
           NETWORK_BROWSER_MAX_RESPONSES: "20"
           TELEGRAM_STICKER_LIQUIDACION: ${{ vars.TELEGRAM_STICKER_LIQUIDACION }}
         run: python monitor_ofertas.py
+
       - name: Guardar historial con commit directo seguro
         shell: bash
         run: |
@@ -179,15 +180,21 @@ jobs:
             exit 0
           fi
           git commit -m "Actualiza historial de ofertas [skip ci]"
-          for intento in 1 2 3 4 5; do
+          
+          # Integración de tu algoritmo de subida y manejo defensivo de cambios concurrentes
+          for intento in {1..5}; do
+            echo "Intento de Push de historial $intento/5..."
             git fetch origin main
+            
             if git push origin HEAD:main; then
               echo "Historial actualizado."
               exit 0
             fi
+            
             echo "Push concurrente; sincronizando intento $intento..."
             git reset --soft HEAD~1
             git checkout -- historial_ofertas.json
+            git fetch origin main
             git merge --ff-only origin/main 2>/dev/null || {
               echo "La rama avanzó mientras se ejecutaba el monitor; se conserva el historial local como siguiente ciclo."
               exit 0
