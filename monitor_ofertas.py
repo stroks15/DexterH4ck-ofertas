@@ -24,6 +24,7 @@ from core.product_identifiers import canonical_product_identifier
 # Integración nativa de nuestras nuevas capas de servicios robustas
 from scrapers.api_stores import ApiStoresScraper
 from scrapers.vtex_stores import VtexStoresScraper
+from scrapers.whatsapp_channels import buscar_whatsapp
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
 from scrapers.liquidazona import buscar_liquidazona_walmart
@@ -71,8 +72,10 @@ def limpiar_titulo_producto(titulo, url=""):
     texto = re.split(
         r"\b(?:precio\s+(?:actual|final|de\s+oferta)|antes|ahorra|hasta\s+\d+\s+mensualidades?|mensualidades?\s+fijas?|precio\s+anterior|precio\s+regular)\b",
         texto, maxsplit=1, flags=re.I,
-    )[0]
-    texto = re.sub(r"(?:^|[|·–—-])\s*\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", texto)
+    )
+    if isinstance(texto, list) and len(texto) > 0:
+        texto = texto[0]
+    texto = re.sub(r"(?:^|[|·–—-])\s*\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", str(texto))
     texto = re.sub(r"\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", texto)
     texto = re.sub(r"\s{2,}", " ", texto).strip(" \t\r\n-–—|·,;:")
     letras = re.findall(r"[A-Za-zÁÉÍÓÚáéíóúÑñÜü]{2,}", texto)
@@ -122,6 +125,47 @@ def es_enlace_producto_directo(url):
             return any(p in path for p in patrones)
     return len(path.strip("/")) > 12
 
+def es_enlace_valido_sin_error(url: str) -> bool:
+    """Valida que el link del producto no contenga errores estructurales."""
+    if not url or not isinstance(url, str):
+        return False
+    parsed = urlparse(url.strip())
+    if not parsed.scheme in ["http", "https"] or not parsed.netloc:
+        return False
+    path_lower = parsed.path.lower()
+    if any(err in path_lower for err in ["null", "undefined", "{productid}"]):
+        return False
+    return True
+
+def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
+    """
+    Regla estricta del 95% al 99%: Se mandan una única vez si no existen 
+    en el historial y el link del producto es completamente válido.
+    """
+    precio_actual = float(item.get("precio_actual") or item.get("price") or 0)
+    precio_anterior = item.get("precio_anterior")
+    descuento = item.get("descuento", 0)
+    
+    if not descuento and precio_anterior and float(precio_anterior) > precio_actual:
+        descuento = round((1 - precio_actual / float(precio_anterior)) * 100)
+
+    if 95 <= descuento <= 99:
+        identificador_producto = item.get("id") or canonical_product_identifier(item.get("url", ""))
+        tienda_canonica = canonical_store(item.get("tienda", ""))
+        clave_historial = f"{tienda_canonica}_{identificador_producto}"
+        
+        if clave_historial in historial_local:
+            logger.info(f"[BOMBA OMITIDA] Ya fue enviada previamente: {clave_historial}")
+            return False
+            
+        if not es_enlace_valido_sin_error(item.get("url", "")):
+            logger.warning(f"[BOMBA RECHAZADA] Enlace con errores: {item.get('url')}")
+            return False
+            
+        logger.info(f"[💣 BOMBA EMITIDA] Nueva liquidación extrema única del {descuento}%")
+        return True
+    return True
+
 def _candidato_de_tienda_objetivo(item):
     if str(item.get("tipo_fuente") or "").upper() == "FISICA":
         return True
@@ -134,7 +178,7 @@ def _candidato_de_tienda_objetivo(item):
         ("liverpool", "Liverpool"),
         ("amazon", "Amazon MX"),
         ("mercado libre", "Mercado Libre MX"),
-        ("mercadolibre", "Market Libre MX"),
+        ("mercadolibre", "Mercado Libre MX"),
         ("coppel", "Coppel"),
         ("suburbia", "Suburbia"),
         ("oferstock", "Oferstock"),
@@ -142,7 +186,7 @@ def _candidato_de_tienda_objetivo(item):
     if any(alias in tienda for alias, _ in aliases):
         return True
     origen = str(item.get("origen_link") or item.get("origen") or "").lower()
-    return origen in ("telegram", "liquidazona") and bool(item.get("url"))
+    return origen in ("telegram", "liquidazona", "whatsapp") and bool(item.get("url"))
 
 def enviar_telegram(texto, imagen=None, sticker_id=None):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
@@ -150,7 +194,6 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
     global _ultimo_envio_telegram
     
     session = curl_requests.Session(impersonate="chrome")
-    
     espera = 3.2 - (time.monotonic() - _ultimo_envio_telegram)
     if espera > 0:
         time.sleep(espera)
@@ -181,44 +224,5 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
             endpoint = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
 
 def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
-    """
-    Orquestación Paralela Avanzada: Ejecuta todas las fuentes de datos comerciales
-    mapeadas en hilos concurrentes independientes reduciendo drásticamente el tiempo de ejecución.
-    """
+    """Orquestación Paralela: Consume microservicios internos e inyecta hilos concurrentes."""
     logger.info("Iniciando despacho asincrónico multihilo de scrapers de liquidación...")
-    candidatos_totales = []
-
-    api_scraper = ApiStoresScraper(contexto_ficticio)
-    vtex_scraper = VtexStoresScraper(contexto_ficticio)
-
-    def consultar_amazon():
-        endpoint = os.environ.get("AMAZON_API_ENDPOINT")
-        if endpoint:
-            try:
-                session = curl_requests.Session(impersonate="chrome")
-                res = session.get(endpoint, timeout=20.0)
-                if res.status_code == 200: return res.json()
-            except Exception as e:
-                logger.error(f"[AMAZON API] Fallo intermitente: {str(e)}")
-        logger.info("[AMAZON] Ejecutando fallback de extracción pública sobre la tienda...")
-        return buscar_todas(filtro_tienda="amazon")
-
-    def consultar_soriana():
-        endpoint = os.environ.get("SORIANA_API_ENDPOINT")
-        if endpoint:
-            try:
-                session = curl_requests.Session(impersonate="chrome")
-                res = session.get(endpoint, timeout=20.0)
-                if res.status_code == 200: return res.json()
-            except Exception as e:
-                logger.error(f"[SORIANA API] Fallo en gateway: {str(e)}")
-        logger.info("[SORIANA] Endpoint ausente. Saltando a extracción por índice de búsqueda...")
-        return buscar_todas(filtro_tienda="soriana")
-
-    # Mapeo de hilos asíncronos para todas las tiendas del ecosistema
-    tareas = {
-        "API_Walmart": lambda: api_scraper.fetch_walmart_bodega_graphql("walmart", "liquidacion"),
-        "API_Bodega": lambda: api_scraper.fetch_walmart_bodega_graphql("bodega", "liquidacion"),
-        "API_Chedraui": lambda: api_scraper.fetch_chedraui_vtex(),
-        "API_MercadoLibre": lambda: api_scraper.fetch_mercado_libre_api("liquidacion"),
-        "VTEX_Coppel": lambda: vtex_scraper.fetch_coppel_liquidations("liquidacion"),
