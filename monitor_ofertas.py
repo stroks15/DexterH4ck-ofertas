@@ -21,7 +21,8 @@ from core.offer_identity import canonical_store, deduplicate_candidates, identit
 from core.product_identifiers import canonical_product_identifier
 
 # Integración nativa de nuestras nuevas capas de servicios robustas
-from scrapers.api_stores import buscar_api_first
+from scrapers.api_stores import ApiStoresScraper
+from scrapers.vtex_stores import VtexStoresScraper
 from scrapers.feeds_comunidad_api import parsear_feed_comunidad_espejo
 from scrapers.comunidades_web import buscar_comunidades_web
 from scrapers.liquidazona import buscar_liquidazona_walmart
@@ -147,7 +148,6 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
         raise RuntimeError("Faltan TELEGRAM_TOKEN o TELEGRAM_CHAT_ID")
     global _ultimo_envio_telegram
     
-    # Session corporativa con curl_cffi para evitar bloqueos del gateway de la API de Telegram
     session = curl_requests.Session(impersonate="chrome")
     
     espera = 3.2 - (time.monotonic() - _ultimo_envio_telegram)
@@ -178,42 +178,47 @@ def enviar_telegram(texto, imagen=None, sticker_id=None):
         except Exception:
             imagen = None
             endpoint = f"https://telegram.org{TELEGRAM_TOKEN}/sendMessage"
-            
+
 def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     """
-    Mejora Arquitectónica Core: Ejecuta de manera paralela real todas las 
-    fuentes comerciales mapeadas para optimizar los 15 minutos de GitHub Actions.
+    Orquestación Paralela Avanzada: Consume microservicios internos e inyecta
+    los fallbacks dinámicos de Soriana y Amazon MX de forma segura.
     """
     logger.info("Iniciando despacho asincrónico multihilo de scrapers de liquidación...")
     candidatos_totales = []
 
-    # Diccionario de hilos de ejecución de APIs directas sin colisiones
-    tareas = {
-        "API_Walmart": lambda: buscar_api_first(contexto_ficticio, "walmart", "liquidacion"),
-        "API_Bodega": lambda: buscar_api_first(contexto_ficticio, "bodega aurrera", "liquidacion"),
-        "API_Chedraui": lambda: buscar_api_first(contexto_ficticio, "chedraui", "ofertas"),
-        "API_MercadoLibre": lambda: buscar_api_first(contexto_ficticio, "mercado libre", "liquidacion"),
-        "Fisicas_Locales": lambda: buscar_tiendas_fisicas(),
-        "Telegram_Feeds": lambda: buscar_telegram(),
-        "Liquidaciones_Oficiales": lambda: buscar_liquidaciones_oficiales(),
-        "Liquidazona_Engine": lambda: buscar_liquidazona_walmart(),
-        "Comunidades_Web": lambda: buscar_comunidades_web(),
-        "Feed_Comunidad": lambda: parsear_feed_comunidad_espejo()
-    }
+    api_scraper = ApiStoresScraper(contexto_ficticio)
+    vtex_scraper = VtexStoresScraper(contexto_ficticio)
 
-    # Despacho en paralelo usando hilos aislados para evitar fugas por caídas de una sola tienda
-    with ThreadPoolExecutor(max_workers=6) as executor:
-        futuros_mapeados = {executor.submit(func): nombre for nombre, func in tareas.items()}
-        
-        for futuro in as_completed(futuros_mapeados):
-            nombre_tarea = futuros_mapeados[futuro]
+    # Lógica de enrutamiento dinámico para Soriana y Amazon MX
+    def consultar_amazon():
+        endpoint = os.environ.get("AMAZON_API_ENDPOINT")
+        if endpoint:
             try:
-                resultados = futuro.result()
-                if resultados and isinstance(resultados, list):
-                    logger.info(f"[POOL MATCH] {nombre_tarea} retornó {len(resultados)} candidatos.")
-                    candidatos_totales.extend(resultados)
+                # Si existe API dedicada, la consume con curl_cffi robusto
+                session = curl_requests.Session(impersonate="chrome")
+                res = session.get(endpoint, timeout=20.0)
+                if res.status_code == 200: return res.json()
             except Exception as e:
-                # Manejo de excepciones en el pool: registra el error pero continúa con otras tareas
-                logger.error(f"[POOL ERROR] {nombre_tarea} falló: {type(e).__name__}: {str(e)}")
-    
-    return candidatos_totales
+                logger.error(f"[AMAZON API] Fallo intermitente: {str(e)}")
+        # Fallback legítimo integrado: Ejecuta raspado controlado del catálogo de ofertas
+        logger.info("[AMAZON] Ejecutando fallback alternativo sobre canales públicos...")
+        return buscar_todas(filtro_tienda="amazon")
+
+    def consultar_soriana():
+        endpoint = os.environ.get("SORIANA_API_ENDPOINT")
+        if endpoint:
+            try:
+                session = curl_requests.Session(impersonate="chrome")
+                res = session.get(endpoint, timeout=20.0)
+                if res.status_code == 200: return res.json()
+            except Exception as e:
+                logger.error(f"[SORIANA API] Error de pasarela: {str(e)}")
+        logger.info("[SORIANA] Endpoint API ausente. Saltando a extracción por índice de búsqueda...")
+        return buscar_todas(filtro_tienda="soriana")
+
+    # Mapeo unificado de hilos para procesamiento concurrente rápido
+    tareas = {
+        "API_Walmart": lambda: api_scraper.fetch_walmart_bodega_graphql("walmart", "liquidacion"),
+        "API_Bodega": lambda: api_scraper.fetch_walmart_bodega_graphql("bodega", "liquidacion"),
+        "API_Chedraui": lambda: api_scraper.fetch_chedraui_vtex(),
