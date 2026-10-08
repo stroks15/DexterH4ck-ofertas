@@ -23,24 +23,44 @@ jobs:
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
+        with:
+          clean: true
+
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Instalar dependencia de navegador
+          cache: pip
+
+      - name: Instalar dependencias base
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt -r requirements-browser.txt
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Instalar dependencia de navegador y Playwright
+        run: |
+          if [ -f requirements-browser.txt ]; then pip install -r requirements-browser.txt; fi
           python -m playwright install --with-deps chromium
+
       - name: Capturar endpoints JSON
         env:
           NETWORK_DISCOVERY_URL: ${{ inputs.url }}
           NETWORK_DISCOVERY_WAIT_MS: ${{ inputs.wait_ms }}
         run: |
           python tools/descubrir_apis_navegador.py
-          cat network_endpoints.json
+          # Validación defensiva: Solo intenta listar el contenido si el archivo fue generado con éxito
+          if [ -f network_endpoints.json ]; then
+            echo "Endpoints JSON capturados exitosamente:"
+            cat network_endpoints.json
+          else
+            echo "::warning::El script finalizó pero no se generó network_endpoints.json (posible bloqueo o sin tráfico JSON)."
+            echo "{}" > network_endpoints.json
+          fi
+
       - name: Publicar diagnóstico
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: network-endpoints
           path: network_endpoints.json
+          if-no-files-found: ignore
