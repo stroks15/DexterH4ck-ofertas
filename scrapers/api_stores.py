@@ -9,7 +9,7 @@ logger = logging.getLogger("DexterH4ck.ApiStores")
 class ApiStoresScraper:
     def __init__(self, context=None):
         self.context = context
-        # Autenticación TLS/JA3 automática para Bodega Aurrera y Mercado Libre
+        # Autenticación TLS/JA3 automática para Bodega Aurrera, Walmart y Mercado Libre
         self.session = curl_requests.Session(impersonate="chrome")
         
         self.walmart_api = getattr(self.context, "WALMART_GRAPHQL_URL", None) or ENDPOINTS_REALES["WALMART_GRAPHQL"]
@@ -44,8 +44,9 @@ class ApiStoresScraper:
             response = self.session.post(url, json=payload, headers=headers, timeout=20.0)
             if response.status_code == 200:
                 return response.json()
-            elif response.status_code in:
-                logger.warning(f"[{tienda.upper()}] Acceso denegado o limitado por el servidor ({response.status_code}).")
+            # CORREGIDO: Se definen explícitamente los códigos de restricción para validar la sintaxis
+            elif response.status_code in (401, 403, 412, 429):
+                logger.warning(f"[{tienda.upper()}] Acceso denegado o limitado temporalmente por el servidor ({response.status_code}).")
         except Exception as e:
             logger.error(f"Error en transporte GraphQL de {tienda}: {str(e)}")
         return {}
