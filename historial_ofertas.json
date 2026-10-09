@@ -29657,9 +29657,9 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BKLyKlgdspoHG7x3roMY4MhFI3ardw9gTC%2BPpY%2B5VoSK2n8%2BaJFwGh0ZnDiR0fdVzev2%2BO0kpFGT6fg%2FIeLTdPOJoL7vzg77mkMAvX0FaU9LX%2BDzmwE5OWoKhZVFsCa3ytuu1oKs7r2SGTylB7cpPXSw%2B3dhzTCrwYU3MRXXwlmxNeOAE72hJBM9i4x%2FB%2BXHIkIRFR4%3D",
-    "precio_actual": 3771.0,
-    "precio_maximo": 4500.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BO6naGkIAR6VU%2BdLEm2N26Qr5%2BtXwdQcH73WZbhTkp%2FbSP23lZVYedM8j9k82%2F8uMIyu21o7Mt5p%2F1GYaO1BeQS2SN8GCmrSrqME3fgFy8VPW3%2FLDpa9Fe3VQU%2BAJqmBuHEC1oUCLGogWhefCiTPgLQad4MfhOB15naB7mc5DoOVqdXndJwp4OACMptcKH2s5mhnv79H49VmYj2n",
+    "precio_actual": 6199.0,
+    "precio_maximo": 6199.0,
     "descuento": 21,
     "puntuacion": 25,
     "extremo": {
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-09T00:47:48.971778+00:00",
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -38655,6 +38655,222 @@
     "precio_actual": 544.0,
     "precio_maximo": 544.0,
     "ultima_actualizacion": "2026-10-09T00:47:48.971778+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0clfnlzfk": {
+    "tienda": "Amazon",
+    "titulo": "B0CLFNLZFK",
+    "url": "https://www.amazon.com.mx/dp/B0CLFNLZFK",
+    "precio_actual": 675.34,
+    "precio_maximo": 2429.1,
+    "ultima_actualizacion": "2026-10-09T06:54:32.571380+00:00",
+    "precio_alertado": 675.34
+  },
+  "amazon|code:b0dp86cx6x": {
+    "tienda": "Amazon",
+    "titulo": "Calentador De Agua Para Hogar Instantáneo Para Regadera Gas LP |Perillas Reguladoras | Ahorro De Hasta un 80% De Gas| 6/12 Litros Por Minuto (6 Litros)",
+    "url": "https://www.amazon.com.mx/dp/B0DP86CX6X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 899.0,
+    "precio_maximo": 2299.0,
+    "ultima_actualizacion": "2026-10-09T06:54:28.777679+00:00",
+    "precio_alertado": 899.0
+  },
+  "amazon|code:b0chlbpmyf": {
+    "tienda": "Amazon",
+    "titulo": "B0CHLBPMYF",
+    "url": "https://www.amazon.com.mx/dp/B0CHLBPMYF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2114.75,
+    "precio_maximo": 5074.0,
+    "ultima_actualizacion": "2026-10-09T06:54:36.336903+00:00",
+    "precio_alertado": 2114.75
+  },
+  "amazon|code:b014ekq5aa": {
+    "tienda": "Amazon",
+    "titulo": "Amazon Basics - Regleta de protección contra sobretensiones de 6 Tomas, 200 Julio, 0.60 MTS, Color Negro, Paquete de 2",
+    "url": "https://www.amazon.com.mx/dp/B014EKQ5AA?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 199.0,
+    "precio_maximo": 324.9,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b094dxvpnl": {
+    "tienda": "Amazon",
+    "titulo": "B094DXVPNL",
+    "url": "https://www.amazon.com.mx/dp/B094DXVPNL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 114.0,
+    "precio_maximo": 183.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gxgngl82": {
+    "tienda": "Amazon",
+    "titulo": "B0GXGNGL82",
+    "url": "https://www.amazon.com.mx/dp/B0GXGNGL82?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 199.0,
+    "precio_maximo": 298.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0108e958u": {
+    "tienda": "Amazon",
+    "titulo": "B0108E958U",
+    "url": "https://www.amazon.com.mx/dp/B0108E958U?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 66.0,
+    "precio_maximo": 98.13,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b007r2ld1e": {
+    "tienda": "Amazon",
+    "titulo": "B007R2LD1E",
+    "url": "https://www.amazon.com.mx/dp/B007R2LD1E?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1262.38,
+    "precio_maximo": 1869.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dyr8d7yc": {
+    "tienda": "Amazon",
+    "titulo": "B0DYR8D7YC",
+    "url": "https://www.amazon.com.mx/dp/B0DYR8D7YC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4340.04,
+    "precio_maximo": 5500.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fly6y2ts": {
+    "tienda": "Amazon",
+    "titulo": "B0FLY6Y2TS",
+    "url": "https://www.amazon.com.mx/dp/B0FLY6Y2TS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 399.0,
+    "precio_maximo": 498.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bcxbpj75": {
+    "tienda": "Amazon",
+    "titulo": "B0BCXBPJ75",
+    "url": "https://www.amazon.com.mx/dp/B0BCXBPJ75?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 373.82,
+    "precio_maximo": 461.5,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0b39hhvgv": {
+    "tienda": "Amazon",
+    "titulo": "B0B39HHVGV",
+    "url": "https://www.amazon.com.mx/dp/B0B39HHVGV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 131.12,
+    "precio_maximo": 149.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00el3n2lg": {
+    "tienda": "Amazon",
+    "titulo": "Speedo Deluxe Ventilator Mesh Equipment Bag, Blue Grotto",
+    "url": "https://www.amazon.com.mx/dp/B00EL3N2LG",
+    "precio_actual": 365.0,
+    "precio_maximo": 393.04,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gx2ttjz5": {
+    "tienda": "Amazon",
+    "titulo": "B0GX2TTJZ5",
+    "url": "https://www.amazon.com.mx/dp/B0GX2TTJZ5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1419.0,
+    "precio_maximo": 1419.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08cy62rq6": {
+    "tienda": "Amazon",
+    "titulo": "B08CY62RQ6",
+    "url": "https://www.amazon.com.mx/dp/B08CY62RQ6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 203.0,
+    "precio_maximo": 203.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:participa en la ruleta para ganar hasta de en productos nivea y cetaphil ojo solo en la app": {
+    "tienda": "Amazon",
+    "titulo": "PARTICIPA EN LA RULETA PARA GANAR HASTA DE DESCUENTO EN PRODUCTOS NIVEA Y CETAPHIL, OJO SOLO EN LA APP",
+    "url": "https://www.amazon.com.mx/b?node=203867441011&linkCode=sl2&tag=ofertones03-20&linkId=25b7b8138c8505d2d3b2f20705b18d24&ref_=as_li_ss_tl&ascsubtag=srctok-740f0e9134432560&btn_type=ss&btn_ref=srctok-740f0e9134432560",
+    "precio_actual": 150.0,
+    "precio_maximo": 150.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01ncxcy4l": {
+    "tienda": "Amazon",
+    "titulo": "B01NCXCY4L",
+    "url": "https://www.amazon.com.mx/dp/B01NCXCY4L?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=a1e64688b02ba471ccd062250954df22&ref_=as_li_ss_tl&ascsubtag=srctok-6f2722461f6fb9ad&btn_type=ss&btn_ref=srctok-6f2722461f6fb9ad",
+    "precio_actual": 550.0,
+    "precio_maximo": 550.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dglvw188": {
+    "tienda": "Amazon",
+    "titulo": "B0DGLVW188",
+    "url": "https://www.amazon.com.mx/dp/B0DGLVW188?th=1&linkCode=sl2&tag=axfire-20&linkId=646200219bacf7a03c2573f6bb3cf4c3&ref_=as_li_ss_tl&ascsubtag=srctok-05750aa1ffcc1bd3&btn_type=ss&btn_ref=srctok-05750aa1ffcc1bd3",
+    "precio_actual": 1722.0,
+    "precio_maximo": 1722.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fqc89lhj": {
+    "tienda": "Amazon",
+    "titulo": "B0FQC89LHJ",
+    "url": "https://www.amazon.com.mx/dp/B0FQC89LHJ?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=461f3b9c574303d1f7a2698b4bf84cf0&ref_=as_li_ss_tl&ascsubtag=srctok-07ceda1f1802f8bc&btn_type=ss&btn_ref=srctok-07ceda1f1802f8bc",
+    "precio_actual": 1922.0,
+    "precio_maximo": 1922.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01n3al6p8": {
+    "tienda": "Amazon",
+    "titulo": "B01N3AL6P8",
+    "url": "https://www.amazon.com.mx/dp/B01N3AL6P8?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=1b13b51e571df861979df630f983e33b&ref_=as_li_ss_tl&ascsubtag=srctok-1496e18181bf4b41&btn_type=ss&btn_ref=srctok-1496e18181bf4b41",
+    "precio_actual": 328.0,
+    "precio_maximo": 328.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cxdmvyvh": {
+    "tienda": "Amazon",
+    "titulo": "B0CXDMVYVH",
+    "url": "https://www.amazon.com.mx/Turin-Baileys-Original-Chocolates-Vitrolero/dp/B0CXDMVYVH?pf_rd_r=0K2KJ738E9FF715MH8HF&pf_rd_p=a7473688-d8aa-4d0f-9b9c-e643948ff043&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&ascsubtag=srctok-358175eb6d081076&btn_type=ss&btn_ref=srctok-3ec6a05a7d511276&linkCode=sl2&tag=axfire-20&linkId=7655b03214351b6c38ef0a64817c9bd6&ref_=as_li_ss_tl",
+    "precio_actual": 191.0,
+    "precio_maximo": 191.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cz5nzskn": {
+    "tienda": "Amazon",
+    "titulo": "B0CZ5NZSKN",
+    "url": "https://www.amazon.com.mx/STANLEY-All-Day-Julienne-Refrigeraci%C3%B3n/dp/B0CZ5NZSKN?pf_rd_r=J6Z68ZC04APSEWNXKNYV&pf_rd_p=a7473688-d8aa-4d0f-9b9c-e643948ff043&sbo=9ZOMT9Jm0JH%2Ft%2BWi68iDSA%3D%3D&th=1&ascsubtag=srctok-480651aef71cb4f7&btn_type=ss&btn_ref=srctok-3db72051252a2b4c&linkCode=sl2&tag=axfire-20&linkId=4faf29b1ed01a6b2b49ffbaea85020b4&ref_=as_li_ss_tl",
+    "precio_actual": 1724.0,
+    "precio_maximo": 1724.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fdh5zrdm": {
+    "tienda": "Amazon",
+    "titulo": "B0FDH5ZRDM",
+    "url": "https://www.amazon.com.mx/dp/B0FDH5ZRDM?ascsubtag=srctok-7b662ca536d7b9d4&btn_type=ss&btn_ref=srctok-3a229cd7328ac75d&linkCode=sl2&tag=axfire-20&linkId=5c9408093d269b4f30b1de9dd3434c77&ref_=as_li_ss_tl",
+    "precio_actual": 789.0,
+    "precio_maximo": 789.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b084yybqn8": {
+    "tienda": "Amazon",
+    "titulo": "B084YYBQN8",
+    "url": "https://www.amazon.com.mx/dp/B084YYBQN8?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=033985c2b95f46b24bff23cc52823ded&ref_=as_li_ss_tl&ascsubtag=srctok-16bed4fce4cb383a&btn_type=ss&btn_ref=srctok-16bed4fce4cb383a",
+    "precio_actual": 1745.0,
+    "precio_maximo": 1745.0,
+    "ultima_actualizacion": "2026-10-09T06:54:27.954601+00:00",
     "precio_alertado": null
   }
 }
