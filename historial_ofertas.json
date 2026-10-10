@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAVo0iblpFD8%2BtuX7rDTUNlA3stPFp8JOHpXWK9v75%2BUnMbivbJsh5NSdbBjvwFFO4nRgnNvIKKHcsf0Yjxa0RzgBrM%2B02RrNvo%2FRK%2BImOV9lRVw5AGSbfLAhjjI3ygJ4H5WOoovq8BblcVqg0nAUmzBSREzGTzTz0UmchEvvrM%2BYdu7TSZJxQpzK0TPkuydE78uE7Y%3D",
-    "precio_actual": 989.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BK6myvXfEsn0o5Oc53A602%2FDwwtDwrGrpamMq6up2jF2nyB3S8EGFBD7E139hX1n87FcH6gVy0ScUgzdxaiunh708GkIlblETELzjFTCVdE5mZctY2LX4Uc7JpPmPdBZzDgo9WfOmV43Hw35UPH3Sfeo36%2BqdY0SnEC92EVe%2F7%2BFBkdl4mzDOCP1rCDBtvNNiEa2Sjc%3D",
+    "precio_actual": 147.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-10T09:11:01.308983+00:00",
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -36062,8 +36062,8 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists/be9820b7-a6b3-4e4a-9dc5-2e74e3c39906?matt_tool=35824865&forceInApp=true",
-    "precio_actual": 600.0,
-    "precio_maximo": 800.0,
+    "precio_actual": 2100.0,
+    "precio_maximo": 3000.0,
     "descuento": 25,
     "puntuacion": 29,
     "extremo": {
@@ -36080,7 +36080,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-07T16:46:45.035242+00:00",
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
     "precio_alertado": null
   },
   "amazon|code:b00iphku50": {
@@ -39780,6 +39780,168 @@
     "precio_actual": 197.0,
     "precio_maximo": 197.0,
     "ultima_actualizacion": "2026-10-10T09:11:01.308983+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0876ww63m": {
+    "tienda": "Amazon",
+    "titulo": "B0876WW63M",
+    "url": "https://www.amazon.com.mx/dp/B0876WW63M?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 83.16,
+    "precio_maximo": 254.46,
+    "ultima_actualizacion": "2026-10-10T15:25:08.849426+00:00",
+    "precio_alertado": 83.16
+  },
+  "amazon|code:b010asii32": {
+    "tienda": "Amazon",
+    "titulo": "B010ASII32",
+    "url": "https://www.amazon.com.mx/gp/product/B010ASII32?smid=AVDBXBAVVSXLQ&th=1&linkCode=sl2&tag=ofertones03-20&linkId=e11a867ecd11320598f37f57836ab176&ref_=as_li_ss_tl&ascsubtag=srctok-3c93e2cb972754e9&btn_type=ss&btn_ref=srctok-3c93e2cb972754e9",
+    "precio_actual": 298.29,
+    "precio_maximo": 708.19,
+    "ultima_actualizacion": "2026-10-10T15:25:12.504272+00:00",
+    "precio_alertado": 298.29
+  },
+  "amazon|code:b01cyutsb0": {
+    "tienda": "Amazon",
+    "titulo": "B01CYUTSB0",
+    "url": "https://www.amazon.com.mx/dp/B01CYUTSB0?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 49.99,
+    "precio_maximo": 92.75,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gsrn575f": {
+    "tienda": "Amazon",
+    "titulo": "B0GSRN575F",
+    "url": "https://www.amazon.com.mx/dp/B0GSRN575F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 27990.0,
+    "precio_maximo": 47599.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0012336nm": {
+    "tienda": "Amazon",
+    "titulo": "B0012336NM",
+    "url": "https://www.amazon.com.mx/dp/B0012336NM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3199.0,
+    "precio_maximo": 5299.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dhy9jsnv": {
+    "tienda": "Amazon",
+    "titulo": "B0DHY9JSNV",
+    "url": "https://www.amazon.com.mx/dp/B0DHY9JSNV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 138.4,
+    "precio_maximo": 225.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f826t56w": {
+    "tienda": "Amazon",
+    "titulo": "B0F826T56W",
+    "url": "https://www.amazon.com.mx/dp/B0F826T56W?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3717.75,
+    "precio_maximo": 5999.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0frhbz96f": {
+    "tienda": "Amazon",
+    "titulo": "B0FRHBZ96F",
+    "url": "https://www.amazon.com.mx/dp/B0FRHBZ96F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 899.0,
+    "precio_maximo": 1399.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bttrxl3f": {
+    "tienda": "Amazon",
+    "titulo": "B0BTTRXL3F",
+    "url": "https://www.amazon.com.mx/dp/B0BTTRXL3F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 26999.0,
+    "precio_maximo": 40998.99,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01fzcrfdc": {
+    "tienda": "Amazon",
+    "titulo": "B01FZCRFDC",
+    "url": "https://www.amazon.com.mx/dp/B01FZCRFDC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 413.0,
+    "precio_maximo": 590.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07rkyrlrs": {
+    "tienda": "Amazon",
+    "titulo": "Conair CLS2ES Quita Pelusa Recargable, Blanco",
+    "url": "https://www.amazon.com.mx/dp/B07RKYRLRS",
+    "precio_actual": 546.85,
+    "precio_maximo": 699.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08x2rcfbl": {
+    "tienda": "Amazon",
+    "titulo": "B08X2RCFBL",
+    "url": "https://www.amazon.com.mx/dp/B08X2RCFBL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 293.72,
+    "precio_maximo": 376.99,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bzd4wr2w": {
+    "tienda": "Amazon",
+    "titulo": "B0BZD4WR2W",
+    "url": "https://www.amazon.com.mx/dp/B0BZD4WR2W",
+    "precio_actual": 3576.0,
+    "precio_maximo": 4334.28,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b000gkw6ry": {
+    "tienda": "Amazon",
+    "titulo": "Fun World - Accesorio oficial de disfraz de película de miedo \"Waasss-Up\", negro y blanco, Talla única",
+    "url": "https://www.amazon.com.mx/dp/B000GKW6RY",
+    "precio_actual": 359.53,
+    "precio_maximo": 391.07,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f4fs7yhn": {
+    "tienda": "Amazon",
+    "titulo": "B0F4FS7YHN",
+    "url": "https://www.amazon.com.mx/dp/B0F4FS7YHN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 9289.0,
+    "precio_maximo": 9289.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f2kpgvth": {
+    "tienda": "Amazon",
+    "titulo": "B0F2KPGVTH",
+    "url": "https://www.amazon.com.mx/dp/B0F2KPGVTH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 8899.0,
+    "precio_maximo": 8899.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00692172706203": {
+    "tienda": "Walmart MX",
+    "titulo": "Congelador 9 Pies Hisense Horizontal Negro",
+    "url": "https://www.walmart.com.mx/ip/Congelador-9-Pies-Hisense-Horizontal-Negro/00692172706203?athAsset=eyJhdGhjcGlkIjoiMDA2OTIxNzI3MDYyMDMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 7590.0,
+    "precio_maximo": 10990.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750642560039": {
+    "tienda": "Walmart MX",
+    "titulo": "Servilletas Pétalo 420 pzas",
+    "url": "https://www.walmart.com.mx/ip/Servilletas-Petalo-420-pzas/00750642560039?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NDI1NjAwMzkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 47.0,
+    "precio_maximo": 56.0,
+    "ultima_actualizacion": "2026-10-10T15:25:08.167401+00:00",
     "precio_alertado": null
   }
 }
