@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDHUddW3ELbI8lgo3rZTqMWHJo6pkDTs12N%2F5vH%2FQrlWLoEm1gyYGWx8Eq2I27S9hH%2Fq56rRwWXFzUSl74NpUre9DU%2F9nAekn9SgkWpzlB6G8lh6nda2JhjvQ2Chlw3v2VwsIp7rGANodlI%2BgLwIGPyNq2HuUTQ5qbubYNdImOUxu4BCdPkUtXPCjFJgzG4di9ZYrQ%3D%3D",
-    "precio_actual": 604.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIcfE6T7GqSARUEPDxpL1S%2BTP0eAqkjKrwdYxoCRfnIwUfR%2Fvm5gYUeolW9aagVTI1YJYz6z69xYABq1p%2FOE2leGjZZIXMacHbPLe87aC0KncAEKm%2B7oSnJD8f2IlLu0o1d7dTOv5%2FHdGtf%2BcDd6GUcxpcCEUBejYHGcBOHms6pOshljH96EK2hLrXDQhtSgHWxU9hk%3D",
+    "precio_actual": 869.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-09T23:31:32.669941+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BBGGnxmKDR06H2gJ8OYv%2Fo8mmqeLPxQalzOdJcSDS54%2B8ShtqP8wI9yZ33jwhba%2F3%2F8NEAsLfyW7HYJ6NGtrLeLORO78SmlK674b1Zh7q1cxQzfqDF5VeEEQqFMJJe1ZdQHc188n31kzH9d5zzQ3yNu9aJx%2B1mxUtcrDARcFlJMpMLH4DSAXhbg%2F8SHHifQ1xuHqk6E%3D",
-    "precio_actual": 1758.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BJNHV3NVOv4XbpG%2FDlWPMOEoPO3h9gdKRt1eFrlh52A1MVIfgPWJktsjgUm0dJS8o3xzvrvPz7zaiXmulJ90PZtQfDr2M%2BU3iTfOE%2FZjvCVR0g37C%2BNESRKDlns0izATRKODiu96Vz9bf1pW2u8csC3icZAwloP%2B6yrucLy6eMKvsZPoOckRm17YOzoe%2BLVaxwbzBDY%3D",
+    "precio_actual": 656.0,
     "precio_maximo": 6199.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-09T23:31:32.669941+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -36654,9 +36654,9 @@
     "tienda": "Walmart MX",
     "titulo": "Toallitas Húmedas Huggies con 1440 Piezas",
     "url": "https://www.walmart.com.mx/ip/Toallitas-Humedas-Huggies-con-1440-Piezas/00750194341306?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxOTQzNDEzMDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 359.0,
+    "precio_actual": 389.0,
     "precio_maximo": 669.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00880609671756": {
@@ -36717,9 +36717,9 @@
     "tienda": "Walmart MX",
     "titulo": "iPhone 15 Apple 128GB eSIM Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-15-Apple-128GB-eSIM-Negro-Reacondicionado/00085359892010?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwMTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 7499.0,
+    "precio_actual": 7049.0,
     "precio_maximo": 12999.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00789176083851": {
@@ -36753,18 +36753,18 @@
     "tienda": "Walmart MX",
     "titulo": "Tequila Don Julio 70 Cristalino 700 ml",
     "url": "https://www.walmart.com.mx/ip/Tequila-Don-Julio-70-Cristalino-700-ml/00500028105626?athAsset=eyJhdGhjcGlkIjoiMDA1MDAwMjgxMDU2MjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 729.0,
+    "precio_actual": 648.0,
     "precio_maximo": 1181.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750103504318": {
     "tienda": "Walmart MX",
     "titulo": "MAESTRO DOBEL DIAMANTE 700ML",
     "url": "https://www.walmart.com.mx/ip/MAESTRO-DOBEL-DIAMANTE-700ML/00750103504318?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDM1MDQzMTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 690.0,
+    "precio_actual": 659.0,
     "precio_maximo": 1118.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750940184216": {
@@ -36852,9 +36852,9 @@
     "tienda": "Walmart MX",
     "titulo": "Sofá Reclinable Atlas del descanso 2 Plazas Oxford",
     "url": "https://www.walmart.com.mx/ip/Sofa-Reclinable-Atlas-del-descanso-2-Plazas-Oxford/00750830469232?athAsset=eyJhdGhjcGlkIjoiMDA3NTA4MzA0NjkyMzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 14359.0,
+    "precio_actual": 13199.0,
     "precio_maximo": 20969.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750153732305": {
@@ -37104,99 +37104,99 @@
     "tienda": "Walmart MX",
     "titulo": "Apple iPhone 17 Pro 5G 256 GB - Color Naranja Cósmico Reacondicionado.",
     "url": "https://www.walmart.com.mx/ip/Apple-iPhone-17-Pro-5G-256-GB-Color-Naranja-Cosmico-Reacondicionado/00067405375080?athAsset=eyJhdGhjcGlkIjoiMDAwNjc0MDUzNzUwODAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 20499.0,
+    "precio_actual": 19449.0,
     "precio_maximo": 26648.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00067405374648": {
     "tienda": "Walmart MX",
     "titulo": "Apple iPhone 17 5G 512GB - Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/Apple-iPhone-17-5G-512GB-Negro-Reacondicionado/00067405374648?athAsset=eyJhdGhjcGlkIjoiMDAwNjc0MDUzNzQ2NDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 18649.0,
+    "precio_actual": 17699.0,
     "precio_maximo": 24243.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00075328778426": {
     "tienda": "Walmart MX",
     "titulo": "Apple iPhone 16 Pro Max 512Gb Titanio Negro Esim Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/Apple-iPhone-16-Pro-Max-512Gb-Titanio-Negro-Esim-Reacondicionado/00075328778426?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwNzUzMjg3Nzg0MjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 17199.0,
+    "precio_actual": 16299.0,
     "precio_maximo": 22358.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085359892066": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 16 Apple 128GB Esim Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-16-Apple-128GB-Esim-Negro-Reacondicionado/00085359892066?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwNjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 11149.0,
+    "precio_actual": 10549.0,
     "precio_maximo": 14493.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085359893120": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 16e Apple 128GB Esim Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-16e-Apple-128GB-Esim-Negro-Reacondicionado/00085359893120?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTMxMjAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 7299.0,
+    "precio_actual": 6899.0,
     "precio_maximo": 9488.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085359892056": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 15 Pro Max Apple 256GB eSIM Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-15-Pro-Max-Apple-256GB-eSIM-Negro-Reacondicionado/00085359892056?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwNTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 12699.0,
+    "precio_actual": 12049.0,
     "precio_maximo": 16508.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085359892025": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 15 Plus Apple 128GB eSIM Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-15-Plus-Apple-128GB-eSIM-Negro-Reacondicionado/00085359892025?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwMjUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 8199.0,
+    "precio_actual": 7749.0,
     "precio_maximo": 10658.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085369892796": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 14 Pro Max Apple 128GB eSIM Morado Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-14-Pro-Max-Apple-128GB-eSIM-Morado-Reacondicionado/00085369892796?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNjk4OTI3OTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 9349.0,
+    "precio_actual": 8849.0,
     "precio_maximo": 12153.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085369892781": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 14 Pro Apple 256GB eSIM Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-14-Pro-Apple-256GB-eSIM-Negro-Reacondicionado/00085369892781?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNjk4OTI3ODEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 8999.0,
+    "precio_actual": 8549.0,
     "precio_maximo": 11698.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00085369892751": {
     "tienda": "Walmart MX",
     "titulo": "iPhone 14 Apple 128GB eSIM Negro Reacondicionado",
     "url": "https://www.walmart.com.mx/ip/iPhone-14-Apple-128GB-eSIM-Negro-Reacondicionado/00085369892751?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNjk4OTI3NTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
-    "precio_actual": 5549.0,
+    "precio_actual": 5249.0,
     "precio_maximo": 7213.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00001722292220": {
     "tienda": "Walmart MX",
     "titulo": "Apple Watch Ultra 2 de 49 Mm, 4 G, Resistente (Natural), con Caja de Titanio y Correa Negra Ocean de Talla Única (Modelo A2986) (Reacondicionado).",
     "url": "https://www.walmart.com.mx/ip/Apple-Watch-Ultra-2-de-49-Mm-4-G-Resistente-Natural-con-Caja-de-Titanio-y-Correa-Negra-Ocean-de-Talla-Unica-Modelo-A2986-Reacondicionado/00001722292220?athAsset=eyJhdGhjcGlkIjoiMDAwMDE3MjIyOTIyMjAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 7649.0,
+    "precio_actual": 7249.0,
     "precio_maximo": 9943.7,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00065776832832": {
@@ -37284,9 +37284,9 @@
     "tienda": "Walmart MX",
     "titulo": "Licuadora Oster con Vaso de Vidrio y 6 velocidades más pulso Roja",
     "url": "https://www.walmart.com.mx/ip/Licuadora-Oster-con-Vaso-de-Vidrio-y-6-velocidades-mas-pulso-Roja/00005389116842?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTY4NDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 795.0,
+    "precio_actual": 664.0,
     "precio_maximo": 999.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750081003763": {
@@ -37302,18 +37302,18 @@
     "tienda": "Walmart MX",
     "titulo": "CONSOLA NINTENDO SWITCH 2 256 GB NEGRO edición global",
     "url": "https://www.walmart.com.mx/ip/CONSOLA-NINTENDO-SWITCH-2-256-GB-NEGRO-edicion-global/00471127951336?athAsset=eyJhdGhjcGlkIjoiMDA0NzExMjc5NTEzMzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 10499.0,
+    "precio_actual": 9999.0,
     "precio_maximo": 12999.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00088304952841": {
     "tienda": "Walmart MX",
     "titulo": "Secadora Whirlpool 20 Kg Blanca",
     "url": "https://www.walmart.com.mx/ip/Secadora-Whirlpool-20-Kg-Blanca/00088304952841?athAsset=eyJhdGhjcGlkIjoiMDAwODgzMDQ5NTI4NDEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 9890.0,
+    "precio_actual": 10390.0,
     "precio_maximo": 12190.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750045900184": {
@@ -37392,18 +37392,18 @@
     "tienda": "Walmart MX",
     "titulo": "2025 Apple 11 Pulgadas iPad A16 Wi-Fi 128GB - Plateado",
     "url": "https://www.walmart.com.mx/ip/2025-Apple-11-Pulgadas-iPad-A16-Wi-Fi-128GB-Plateado/00019595008623?athAsset=eyJhdGhjcGlkIjoiMDAwMTk1OTUwMDg2MjMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 10047.0,
+    "precio_actual": 8719.0,
     "precio_maximo": 12056.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00005389117628": {
     "tienda": "Walmart MX",
     "titulo": "Freidora de Aire Oster Digital 7.5L de Capacidad Negro",
     "url": "https://www.walmart.com.mx/ip/Freidora-de-Aire-Oster-Digital-7-5L-de-Capacidad-Negro/00005389117628?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTc2MjgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 1488.0,
+    "precio_actual": 1413.0,
     "precio_maximo": 1790.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750102600460": {
@@ -37464,9 +37464,9 @@
     "tienda": "Walmart MX",
     "titulo": "Bocina Portátil Efecto Luz LED Bluetooth JBL PartyBox Encore Essential 2",
     "url": "https://www.walmart.com.mx/ip/Bocina-Portatil-Efecto-Luz-LED-Bluetooth-JBL-PartyBox-Encore-Essential-2/00005003641105?athAsset=eyJhdGhjcGlkIjoiMDAwMDUwMDM2NDExMDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 4229.0,
+    "precio_actual": 4059.0,
     "precio_maximo": 4999.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750200471661": {
@@ -37752,9 +37752,9 @@
     "tienda": "Walmart MX",
     "titulo": "Batidora de inmersión Oster con Función Turbo Blanca",
     "url": "https://www.walmart.com.mx/ip/Batidora-de-inmersion-Oster-con-Funcion-Turbo-Blanca/00003426447888?athAsset=eyJhdGhjcGlkIjoiMDAwMDM0MjY0NDc4ODgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 539.0,
+    "precio_actual": 512.0,
     "precio_maximo": 599.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750103131168": {
@@ -38444,10 +38444,10 @@
   "walmart|code:00001094222776": {
     "tienda": "Walmart MX",
     "titulo": "Cafetera Genio S Plus Cápsulas Dolce Gusto Automática Krups KRUPS GENIO S PLUS",
-    "url": "https://www.walmart.com.mx/ip/Cafetera-Genio-S-Plus-Capsulas-Dolce-Gusto-Automatica-Krups-KRUPS-GENIO-S-PLUS/00001094222776?athAsset=eyJhdGhjcGlkIjoiMDAwMDEwOTQyMjI3NzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
-    "precio_actual": 1799.0,
-    "precio_maximo": 1799.0,
-    "ultima_actualizacion": "2026-10-08T22:48:31.561236+00:00",
+    "url": "https://www.walmart.com.mx/ip/Cafetera-Genio-S-Plus-Capsulas-Dolce-Gusto-Automatica-Krups-KRUPS-GENIO-S-PLUS/00001094222776?athAsset=eyJhdGhjcGlkIjoiMDAwMDEwOTQyMjI3NzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 2399.0,
+    "precio_maximo": 2399.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750649509531": {
@@ -39366,6 +39366,231 @@
     "precio_actual": 3281.0,
     "precio_maximo": 3281.0,
     "ultima_actualizacion": "2026-10-09T23:31:32.669941+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h6c5ngx4": {
+    "tienda": "Amazon",
+    "titulo": "B0H6C5NGX4",
+    "url": "https://www.amazon.com.mx/dp/B0H6C5NGX4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 999.0,
+    "precio_maximo": 3298.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.878953+00:00",
+    "precio_alertado": 999.0
+  },
+  "amazon|code:b0fcymvc66": {
+    "tienda": "Amazon",
+    "titulo": "B0FCYMVC66",
+    "url": "https://www.amazon.com.mx/dp/B0FCYMVC66?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 812.42,
+    "precio_maximo": 2000.0,
+    "ultima_actualizacion": "2026-10-10T02:46:46.506335+00:00",
+    "precio_alertado": 812.42
+  },
+  "amazon|code:b0b6gkv165": {
+    "tienda": "Amazon",
+    "titulo": "B0B6GKV165",
+    "url": "https://www.amazon.com.mx/dp/B0B6GKV165?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 499.0,
+    "precio_maximo": 1099.0,
+    "ultima_actualizacion": "2026-10-10T02:46:50.153515+00:00",
+    "precio_alertado": 499.0
+  },
+  "amazon|code:b0bxb7d6w4": {
+    "tienda": "Amazon",
+    "titulo": "B0BXB7D6W4",
+    "url": "https://www.amazon.com.mx/dp/B0BXB7D6W4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 399.0,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-10T02:46:53.778670+00:00",
+    "precio_alertado": 399.0
+  },
+  "amazon|code:b0fhrxmmcq": {
+    "tienda": "Amazon",
+    "titulo": "adidas Chamarra México FMF Copa del Mundo 26 Hombre Fútbol Negro",
+    "url": "https://www.amazon.com.mx/dp/B0FHRXMMCQ",
+    "precio_actual": 1048.3,
+    "precio_maximo": 1799.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c59cln29": {
+    "tienda": "Amazon",
+    "titulo": "B0C59CLN29",
+    "url": "https://www.amazon.com.mx/dp/B0C59CLN29?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 349.99,
+    "precio_maximo": 499.98,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d1fxxx3j": {
+    "tienda": "Amazon",
+    "titulo": "B0D1FXXX3J",
+    "url": "https://www.amazon.com.mx/dp/B0D1FXXX3J?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 146.99,
+    "precio_maximo": 198.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dlhc4ypy": {
+    "tienda": "Amazon",
+    "titulo": "B0DLHC4YPY",
+    "url": "https://www.amazon.com.mx/dp/B0DLHC4YPY",
+    "precio_actual": 820.55,
+    "precio_maximo": 1097.87,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09pmgbkdm": {
+    "tienda": "Amazon",
+    "titulo": "B09PMGBKDM",
+    "url": "https://www.amazon.com.mx/dp/B09PMGBKDM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 387.17,
+    "precio_maximo": 438.04,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0csvlw6ql": {
+    "tienda": "Amazon",
+    "titulo": "B0CSVLW6QL",
+    "url": "https://www.amazon.com.mx/dp/B0CSVLW6QL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 229.46,
+    "precio_maximo": 252.77,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08w7tb64p": {
+    "tienda": "Amazon",
+    "titulo": "B08W7TB64P",
+    "url": "https://www.amazon.com.mx/dp/B08W7TB64P?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 331.96,
+    "precio_maximo": 362.49,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ccpry5yg": {
+    "tienda": "Amazon",
+    "titulo": "B0CCPRY5YG",
+    "url": "https://www.amazon.com.mx/dp/B0CCPRY5YG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1139.04,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fdvb5r9n": {
+    "tienda": "Amazon",
+    "titulo": "Philips Multigroom Serie 3000 Recortadora Todo en Uno para Hombre",
+    "url": "https://www.amazon.com.mx/dp/B0FDVB5R9N",
+    "precio_actual": 789.0,
+    "precio_maximo": 789.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dk2h5vjp": {
+    "tienda": "Amazon",
+    "titulo": "B0DK2H5VJP",
+    "url": "https://www.amazon.com.mx/dp/B0DK2H5VJP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1393.46,
+    "precio_maximo": 1393.46,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fjs3xl45": {
+    "tienda": "Amazon",
+    "titulo": "B0FJS3XL45",
+    "url": "https://www.amazon.com.mx/Gen%C3%A9rico-Halloween-Calabazas-Decorativas-Decoracion/dp/B0FJS3XL45?crid=3NV4N7UPTGYSN&dib=eyJ2IjoiMSJ9.hzPibsR4foq8YjhH34oeA6eAAuqWYLnktwzcP165A2ByAy2rYrW8Wo45cUXpK0AzvGaFkdnZkjB57XuqSxVj5jcpHSrCorzJJpWRATjLPUt-PJPViKv4BU8-V1yM6yMWJyfbqEAO2g0IpCZ9cPG4W6dCduHDI3FL8_lLLk8AmgwCCSQbBVZlaK0vgicWFG7HatPCdi3u-zg5qXNDEMZ85uMIwHYecZ3PIN5Mkj5Nvi6wE98_Voq41ee2BcA9OhsWNmNLndpacqIosvPlb_h88sC6-Y274My58sAqM8tcJAs.-Gf1OYT6-VCJGCwzkeCk1PLHLT08Y9Xd1nYeDcIoq-4&dib_tag=se&keywords=halloween%2Bdecoracion%2Binterior&qid=1791591206&sprefix=ha%2Caps%2C223&sr=8-34&ufe=app_do%3Aamzn1.fos.de93fa6a-174c-4df7-be7c-5bc8e9c5a71b&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=befd014df4fa8f0f07973f21ab7233d7&ref_=as_li_ss_tl&ascsubtag=srctok-00a98b9f915c5d31&btn_type=ss&btn_ref=srctok-00a98b9f915c5d31",
+    "precio_actual": 149.0,
+    "precio_maximo": 149.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00jhksmju": {
+    "tienda": "Amazon",
+    "titulo": "B00JHKSMJU",
+    "url": "https://www.amazon.com.mx/dp/B00JHKSMJU?ascsubtag=srctok-57fbb7cdf78ba886&btn_type=ss&btn_ref=srctok-260adc783b528927&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=3eb9d1614ef867c882203ece174e8501&ref_=as_li_ss_tl",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0chkspsqw": {
+    "tienda": "Amazon",
+    "titulo": "B0CHKSPSQW",
+    "url": "https://www.amazon.com.mx/dp/B0CHKSPSQW?psc=1&pf_rd_p=b0df69fe-bc55-4dc4-8ebf-23a5b3259374&pf_rd_r=9X350KHA0SKGA0DFN2QK&pd_rd_wg=zIXTZ&pd_rd_w=BY7nz&content-id=amzn1.sym.b0df69fe-bc55-4dc4-8ebf-23a5b3259374&pd_rd_r=3924f9da-95db-4ef3-8284-bab70776db47&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=sl2&tag=liquidapromosmx-20&linkId=a296a5b5b3873dd6a049fd94a5464296&ref_=as_li_ss_tl&ascsubtag=srctok-53714ae2cc5b10fb&btn_type=ss&btn_ref=srctok-53714ae2cc5b10fb",
+    "precio_actual": 519.0,
+    "precio_maximo": 519.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fnr6qg8s": {
+    "tienda": "Amazon",
+    "titulo": "B0FNR6QG8S",
+    "url": "https://www.amazon.com.mx/dp/B0FNR6QG8S?aod=1&th=1&ascsubtag=srctok-0e1aca1626df0c66&btn_type=ss&btn_ref=srctok-506d119623995ef1&linkCode=sl2&tag=liquidapromosmx-20&linkId=736332571daa8a6f2ba2f6ec4a22abd0&ref_=as_li_ss_tl",
+    "precio_actual": 754.0,
+    "precio_maximo": 754.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08cz9r2d5": {
+    "tienda": "Amazon",
+    "titulo": "B08CZ9R2D5",
+    "url": "https://www.amazon.com.mx/dp/B08CZ9R2D5?pf_rd_p=b0df69fe-bc55-4dc4-8ebf-23a5b3259374&pf_rd_r=WRVEPAA9ZAJHKRSQY380&pd_rd_wg=E4xn6&pd_rd_w=6oEtL&content-id=amzn1.sym.b0df69fe-bc55-4dc4-8ebf-23a5b3259374&pd_rd_r=62f24db5-5703-4ec1-9426-2ec686f56f85&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=76a10ce73145cac7d532b796d91d8e29&ref_=as_li_ss_tl&ascsubtag=srctok-3ce04d49c2162f6c&btn_type=ss&btn_ref=srctok-3ce04d49c2162f6c",
+    "precio_actual": 179.0,
+    "precio_maximo": 179.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07l4xw3qg": {
+    "tienda": "Amazon",
+    "titulo": "B07L4XW3QG",
+    "url": "https://www.amazon.com.mx/dp/B07L4XW3QG?psc=1&pf_rd_p=b0df69fe-bc55-4dc4-8ebf-23a5b3259374&pf_rd_r=WRVEPAA9ZAJHKRSQY380&pd_rd_wg=E4xn6&pd_rd_w=6oEtL&content-id=amzn1.sym.b0df69fe-bc55-4dc4-8ebf-23a5b3259374&pd_rd_r=62f24db5-5703-4ec1-9426-2ec686f56f85&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&linkCode=sl2&tag=liquidapromosmx-20&linkId=09c984ed27ea0501fb61b55dd8e9cecd&ref_=as_li_ss_tl&ascsubtag=srctok-22157913a89428f7&btn_type=ss&btn_ref=srctok-22157913a89428f7",
+    "precio_actual": 822.0,
+    "precio_maximo": 822.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09qrqlcqw": {
+    "tienda": "Amazon",
+    "titulo": "B09QRQLCQW",
+    "url": "https://www.amazon.com.mx/Barbie-Signature-Colecci%C3%B3n-Supergirl-adelante/dp/B09QRQLCQW?pf_rd_r=R52ZQCQ1NP21KJDZ5TWP&pf_rd_p=ae4c1272-2dbd-4e68-a577-767865888790&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&ascsubtag=srctok-4f3d458d26c3e54d&btn_type=ss&btn_ref=srctok-0f9a2f6ab2579f2d&linkCode=sl2&tag=liquidapromosmx-20&linkId=ebaa30358534cf7fd4c1fcc7e25e573d&ref_=as_li_ss_tl",
+    "precio_actual": 502.0,
+    "precio_maximo": 502.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750619800132": {
+    "tienda": "Walmart MX",
+    "titulo": "Bomba Hidroneumática Jet 1 HP 60L/Min Tanque 52 Litros Autocebante AUTOQB90 Munich",
+    "url": "https://www.walmart.com.mx/ip/Bomba-Hidroneumatica-Jet-1-HP-60L-Min-Tanque-52-Litros-Autocebante-AUTOQB90-Munich/00750619800132?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2MTk4MDAxMzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 2169.0,
+    "precio_maximo": 4109.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750043524576": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente en Polvo Ace Limpieza Rápida, con Oxígeno Activo y Fácil Disolución, Lava Ropa Blanca y De Color, 7 Cargas (756 g)",
+    "url": "https://www.walmart.com.mx/ip/Detergente-en-Polvo-Ace-Limpieza-Rapida-con-Oxigeno-Activo-y-Facil-Disolucion-Lava-Ropa-Blanca-y-De-Color-7-Cargas-756-g/00750043524576?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDM1MjQ1NzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 33.0,
+    "precio_maximo": 38.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00890247453705": {
+    "tienda": "Walmart MX",
+    "titulo": "APPLE IPHONE 17 256GB ESIM VERDE NUEVO",
+    "url": "https://www.walmart.com.mx/ip/APPLE-IPHONE-17-256GB-ESIM-VERDE-NUEVO/00890247453705?athAsset=eyJhdGhjcGlkIjoiMDA4OTAyNDc0NTM3MDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 19499.0,
+    "precio_maximo": 19499.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00001749901372": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente en polvo Multiusos Maestro Limpio 2 Kg",
+    "url": "https://www.walmart.com.mx/ip/Detergente-en-polvo-Multiusos-Maestro-Limpio-2-Kg/00001749901372?athAsset=eyJhdGhjcGlkIjoiMDAwMDE3NDk5MDEzNzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 56.0,
+    "precio_maximo": 56.0,
+    "ultima_actualizacion": "2026-10-10T02:46:42.351642+00:00",
     "precio_alertado": null
   }
 }
