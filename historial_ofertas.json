@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOo6Rixmx80fRDs%2BzdjTbH8uhp545ETpOuoUEcSeAHceyT%2FIJaW%2Bh80eWL%2FVICywBWFc45mAe1KsjKFTIZ1hlxVy1uUITuar7p5im7XziHfUBSUAwgofrBH8sqeh%2FQ71Fhs1R7j%2F5lG%2FXVSgDTdI%2BdlKzTxfHGg9ZXc4jOMyDfE%2BelTmJvHU%2FNF6gYL1FqeTpva0AZ%2BjpWz3D6BF4Q%3D%3D",
-    "precio_actual": 666.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIKjbOkQ%2BpbxawNRsY5edSLPl%2FvwX%2Fybi6WHKrf0I7L4ZwWa1vVCzovBta7Dk741BLa9VjWyd5wxsUbwf36y9epZF13QpobsJNdu7GqjdBuxFBI6%2FVduDER3hsbaWJ%2BoTrC0l4KbMAVfVKMFR2tFZ3cYf%2F9vKkwpfLa70N60L6z%2BQQ09LlQvF16coLa8miQ72yDmCQw%3D",
+    "precio_actual": 277.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BB5d5arZaM1Bct%2BcvqL4vG0MSk5An6za%2BSAbZTNosvYRFCJ5WOyn0YZFs7DA9nnwrIlzYDzrA%2BrqmPThoqdsj1ecOWvpyy6msU2%2FhM5rtJLxtOkwLvOy0Vb5ar1R0YQWudeVadXFeLZSND5G5Q%2BsaElEOtXRWOhZHJCygzQNg3DHyvEIX%2BYdMQIEGjKbHMIosqUEc0ZXIpS4HYM%2FSQ%3D%3D",
-    "precio_actual": 1632.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BHnGh6c%2BRzk2A7X%2FJ%2FtbKQRl8f2xn5HFu%2BBhsxKTbDwJiNJmubH8SIYgWcWW%2B5Pg2WzpEn4%2BongwL4%2FcnGVIOs%2F93mqXKFWwa3KWR9uSJ0IEqkkcGkb4BUA8aLclO2m5q2MCZXdJ4C%2FAfWLLi6%2BB0sQrqJ60OSdLHb79JPSkYx90S9YO89NHmwalsPsBKNB2j9M3NPw%3D",
+    "precio_actual": 824.0,
     "precio_maximo": 2500.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -37967,10 +37967,10 @@
   "amazon|code:b0ghbjcnvl": {
     "tienda": "Amazon",
     "titulo": "B0GHBJCNVL",
-    "url": "https://www.amazon.com.mx/dp/B0GHBJCNVL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 1139.98,
+    "url": "https://www.amazon.com.mx/dp/B0GHBJCNVL?th=1&psc=1&linkCode=sl2&tag=yteliquidapromos-20&linkId=f4dfbba82ae6582abd279c49d1b8b671&ref_=as_li_ss_tl&ascsubtag=srctok-06215af4235e1961&btn_type=ss&btn_ref=srctok-06215af4235e1961",
+    "precio_actual": 1139.0,
     "precio_maximo": 1899.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0czyx677f": {
@@ -38889,6 +38889,105 @@
     "precio_actual": 60.0,
     "precio_maximo": 60.0,
     "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:amazon bikini para mujer ch m g": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Bikini para Mujer (CH-M-G)",
+    "url": "https://www.promodescuentos.com/ofertas/amazon-bikini-para-mujer-ch-m-g-1198471",
+    "precio_actual": 164.0,
+    "precio_maximo": 164.0,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08jnjj3l4": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i PH56BZQZE4W92399PHAF",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_PH56BZQZE4W92399PHAF?linkCode=ml1&tag=liquidahorros--20&linkId=ee76e6c73d16daa2be4a0eb0f04b32ee&ascsubtag=srctok-4a55f413978382c3&btn_type=ss&btn_ref=srctok-4a55f413978382c3",
+    "precio_actual": 11.9,
+    "precio_maximo": 143.0,
+    "ultima_actualizacion": "2026-10-11T23:10:21.144666+00:00",
+    "precio_alertado": 11.9
+  },
+  "amazon|code:b0c7nlc6fh": {
+    "tienda": "Amazon",
+    "titulo": "B0C7NLC6FH",
+    "url": "https://www.amazon.com.mx/dp/B0C7NLC6FH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 293.0,
+    "precio_maximo": 853.75,
+    "ultima_actualizacion": "2026-10-11T23:10:24.846021+00:00",
+    "precio_alertado": 293.0
+  },
+  "amazon|code:b08bntvxln": {
+    "tienda": "Amazon",
+    "titulo": "B08BNTVXLN",
+    "url": "https://www.amazon.com.mx/dp/B08BNTVXLN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 716.26,
+    "precio_maximo": 2134.38,
+    "ultima_actualizacion": "2026-10-11T23:10:28.754299+00:00",
+    "precio_alertado": 716.26
+  },
+  "amazon|code:b0flk5bsnh": {
+    "tienda": "Amazon",
+    "titulo": "HISEMY Sistema de Ducha Combo 2 en 1, Regadera de Lluvia 6 Pulgadas + Ducha de Mano, Acabado Cromado Ajustable con Manguera de 1.5m, Fácil Instalación, Regadera para Baño Moderna",
+    "url": "https://www.amazon.com.mx/dp/B0FLK5BSNH",
+    "precio_actual": 184.26,
+    "precio_maximo": 498.0,
+    "ultima_actualizacion": "2026-10-11T23:10:32.495899+00:00",
+    "precio_alertado": 184.26
+  },
+  "amazon|code:b0gy3kzp92": {
+    "tienda": "Amazon",
+    "titulo": "B0GY3KZP92",
+    "url": "https://www.amazon.com.mx/dp/B0GY3KZP92?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2247.42,
+    "precio_maximo": 3499.0,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0932pl9bf": {
+    "tienda": "Amazon",
+    "titulo": "¡NUEVA CORREA PARA AIRTAG EN NARANJA ELÉCTRICO!",
+    "url": "https://www.amazon.com.mx/dp/B0932PL9BF",
+    "precio_actual": 518.99,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bym5hq8j": {
+    "tienda": "Amazon",
+    "titulo": "B0BYM5HQ8J",
+    "url": "https://www.amazon.com.mx/dp/B0BYM5HQ8J?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 379.0,
+    "precio_maximo": 549.0,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fjblgptk": {
+    "tienda": "Amazon",
+    "titulo": "B0FJBLGPTK",
+    "url": "https://www.amazon.com.mx/dp/B0FJBLGPTK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 380.28,
+    "precio_maximo": 502.99,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0g4b54dr1": {
+    "tienda": "Amazon",
+    "titulo": "B0G4B54DR1",
+    "url": "https://www.amazon.com.mx/dp/B0G4B54DR1?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 17950.0,
+    "precio_maximo": 17950.0,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00sjpctn4": {
+    "tienda": "Amazon",
+    "titulo": "B00SJPCTN4",
+    "url": "https://www.amazon.com.mx/dp/B00SJPCTN4?th=1&linkCode=sl2&tag=yteliquidapromos-20&linkId=885a8c5c6dff16c3e2e7d86e73809cb2&ref_=as_li_ss_tl&ascsubtag=srctok-342b05c436f95026&btn_type=ss&btn_ref=srctok-342b05c436f95026",
+    "precio_actual": 727.0,
+    "precio_maximo": 727.0,
+    "ultima_actualizacion": "2026-10-11T23:10:20.576534+00:00",
     "precio_alertado": null
   }
 }
