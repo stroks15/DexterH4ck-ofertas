@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BADEkdS%2Ff7ILH7%2FAB10T8Oj2OkGG6Gi4ej0j2c%2Bym3auPHe8rNI25HW9wwea1J4zSRSSb%2FVyNK36aw7TUpiYHsiX0sv6anShYabmdAoXe43KEjpRapri3GC8yNOo%2BXSn%2BXDjFYBeTuoDpIV%2F6YO%2FijIaTkHYLO6ZoxwzJRX%2FIacs1rB7jLeLTQxpFIEvCQoGPNOU%2F9k%3D",
-    "precio_actual": 2364.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BEGpMqYFWL2Xs%2B%2FE9KfWyQX8umXwpZpLXSkxHVFW5%2Bmrgaa6a%2FhNRA2t4YRuQut4uD4fRUAuiv4adfJlfQpJogcSiSOPGiIOLk2c3WA6XHy3sH7NGzA27yludd2%2FGDvy%2BHUEFra478UEbYIakZejpw6JOwPwPxLBV0niND0MX%2BTK3YwtvmAJvIkXa3EE1cYNwzCqflQ%3D",
+    "precio_actual": 128.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-11T01:30:13.195700+00:00",
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -36486,6 +36486,1140 @@
     "precio_actual": 1199.0,
     "precio_maximo": 1199.0,
     "ultima_actualizacion": "2026-10-11T01:30:13.195700+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d4z9bzv2": {
+    "tienda": "Amazon",
+    "titulo": "B0D4Z9BZV2",
+    "url": "https://www.amazon.com.mx/dp/B0D4Z9BZV2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2999.0,
+    "precio_maximo": 6999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:56.634027+00:00",
+    "precio_alertado": 2999.0
+  },
+  "amazon|code:b0gx1w277x": {
+    "tienda": "Amazon",
+    "titulo": "B0GX1W277X",
+    "url": "https://www.amazon.com.mx/dp/B0GX1W277X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2108.05,
+    "precio_maximo": 4499.0,
+    "ultima_actualizacion": "2026-10-11T01:52:00.267594+00:00",
+    "precio_alertado": 2108.05
+  },
+  "amazon|code:b0ffmmkxkm": {
+    "tienda": "Amazon",
+    "titulo": "B0FFMMKXKM",
+    "url": "https://www.amazon.com.mx/dp/B0FFMMKXKM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 837.65,
+    "precio_maximo": 1273.96,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bvbzhhg6": {
+    "tienda": "Amazon",
+    "titulo": "B0BVBZHHG6",
+    "url": "https://www.amazon.com.mx/dp/B0BVBZHHG6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1631.95,
+    "precio_maximo": 2199.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gvjrhvsq": {
+    "tienda": "Amazon",
+    "titulo": "B0GVJRHVSQ",
+    "url": "https://www.amazon.com.mx/dp/B0GVJRHVSQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 7399.88,
+    "precio_maximo": 7399.88,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ctpcm39q": {
+    "tienda": "Amazon",
+    "titulo": "B0CTPCM39Q",
+    "url": "https://www.amazon.com.mx/dp/B0CTPCM39Q?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4909.0,
+    "precio_maximo": 4909.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103045255": {
+    "tienda": "Walmart MX",
+    "titulo": "Pan blanco Bimbo Artesano original 567 g",
+    "url": "https://www.walmart.com.mx/ip/Pan-blanco-Bimbo-Artesano-original-567-g/00750103045255?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDMwNDUyNTUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 55.0,
+    "precio_maximo": 567.0,
+    "ultima_actualizacion": "2026-10-11T01:51:38.444967+00:00",
+    "precio_alertado": 55.0
+  },
+  "walmart|code:00750100805742": {
+    "tienda": "Walmart MX",
+    "titulo": "Cereal Kellogg's Zucaritas Original 860 g",
+    "url": "https://www.walmart.com.mx/ip/Cereal-Kellogg-s-Zucaritas-Original-860-g/00750100805742?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDA4MDU3NDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 95.0,
+    "precio_maximo": 860.0,
+    "ultima_actualizacion": "2026-10-11T01:51:42.099689+00:00",
+    "precio_alertado": 95.0
+  },
+  "walmart|code:00750100805710": {
+    "tienda": "Walmart MX",
+    "titulo": "Cereal Kellogg's Choco Krispis Original 560 g",
+    "url": "https://www.walmart.com.mx/ip/Cereal-Kellogg-s-Choco-Krispis-Original-560-g/00750100805710?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDA4MDU3MTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 67.0,
+    "precio_maximo": 560.0,
+    "ultima_actualizacion": "2026-10-11T01:51:45.739570+00:00",
+    "precio_alertado": 67.0
+  },
+  "walmart|code:00858168460042": {
+    "tienda": "Walmart MX",
+    "titulo": "Aspiradora Robot PrettyCare Trapeadora Inteligente Automatica Wifi App C2",
+    "url": "https://www.walmart.com.mx/ip/Aspiradora-Robot-PrettyCare-Trapeadora-Inteligente-Automatica-Wifi-App-C2/00858168460042?athAsset=eyJhdGhjcGlkIjoiMDA4NTgxNjg0NjAwNDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 1499.0,
+    "precio_maximo": 3799.0,
+    "ultima_actualizacion": "2026-10-11T01:51:52.998248+00:00",
+    "precio_alertado": 1499.0
+  },
+  "walmart|code:00088796196493": {
+    "tienda": "Walmart MX",
+    "titulo": "Pista de Juguete Hot Wheels Mario Kart Senda Arcoíris",
+    "url": "https://www.walmart.com.mx/ip/Pista-de-Juguete-Hot-Wheels-Mario-Kart-Senda-Arcoiris/00088796196493?athAsset=eyJhdGhjcGlkIjoiMDAwODg3OTYxOTY0OTMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 2185.0,
+    "precio_maximo": 4369.0,
+    "ultima_actualizacion": "2026-10-11T01:51:49.368585+00:00",
+    "precio_alertado": 2185.0
+  },
+  "walmart|code:00880609671756": {
+    "tienda": "Walmart MX",
+    "titulo": "Pantalla 55 pulgadas LG NANO 4K UHD AI NU855 SMART TV webOS 2026",
+    "url": "https://www.walmart.com.mx/ip/Pantalla-55-pulgadas-LG-NANO-4K-UHD-AI-NU855-SMART-TV-webOS-2026/00880609671756?athAsset=eyJhdGhjcGlkIjoiMDA4ODA2MDk2NzE3NTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 8499.0,
+    "precio_maximo": 15499.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750955284362": {
+    "tienda": "Walmart MX",
+    "titulo": "Sérum rellenador Loreal Revitalift ácido hialurónico 30 ml",
+    "url": "https://www.walmart.com.mx/ip/Serum-rellenador-Loreal-Revitalift-acido-hialuronico-30-ml/00750955284362?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQzNjIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 206.0,
+    "precio_maximo": 365.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750955245555": {
+    "tienda": "Walmart MX",
+    "titulo": "Agua micelar Garnier skin active todo en 1 piel sensible 400 ml",
+    "url": "https://www.walmart.com.mx/ip/Agua-micelar-Garnier-skin-active-todo-en-1-piel-sensible-400-ml/00750955245555?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyNDU1NTUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 103.0,
+    "precio_maximo": 180.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750955287546": {
+    "tienda": "Walmart MX",
+    "titulo": "Sérum booster Garnier skin active anti imperfecciones con ácido salicílico y vitamina c 30 ml",
+    "url": "https://www.walmart.com.mx/ip/Serum-booster-Garnier-skin-active-anti-imperfecciones-con-acido-salicilico-y-vitamina-c-30-ml/00750955287546?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODc1NDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 143.0,
+    "precio_maximo": 250.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00360054174452": {
+    "tienda": "Walmart MX",
+    "titulo": "Agua micelar Garnier skin active en aceite 400 ml",
+    "url": "https://www.walmart.com.mx/ip/Agua-micelar-Garnier-skin-active-en-aceite-400-ml/00360054174452?athAsset=eyJhdGhjcGlkIjoiMDAzNjAwNTQxNzQ0NTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 106.0,
+    "precio_maximo": 185.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750955284404": {
+    "tienda": "Walmart MX",
+    "titulo": "Crema facial Garnier skin active hidratante express aclara tono uniforme 50 ml",
+    "url": "https://www.walmart.com.mx/ip/Crema-facial-Garnier-skin-active-hidratante-express-aclara-tono-uniforme-50-ml/00750955284404?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQ0MDQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 100.0,
+    "precio_maximo": 175.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00789176083851": {
+    "tienda": "Walmart MX",
+    "titulo": "Cocina Integral Madesa Emilly Sin Tarja 229cm Marrón. Madesa Emilly",
+    "url": "https://www.walmart.com.mx/ip/Cocina-Integral-Madesa-Emilly-Sin-Tarja-229cm-Marron-Madesa-Emilly/00789176083851?athAsset=eyJhdGhjcGlkIjoiMDA3ODkxNzYwODM4NTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 5249.0,
+    "precio_maximo": 8899.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750940184213": {
+    "tienda": "Walmart MX",
+    "titulo": "Pantalla 65 pulgadas Samsung Crystal U8200H 4K Smart TV (2026)",
+    "url": "https://www.walmart.com.mx/ip/Pantalla-65-pulgadas-Samsung-Crystal-U8200H-4K-Smart-TV-2026/00750940184213?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NDAxODQyMTMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 8790.0,
+    "precio_maximo": 14599.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00019112002389": {
+    "tienda": "Walmart MX",
+    "titulo": "Máquina De Coser Recta Singer Heavy Duty 4423 Gris 110-120 V gris 17.5",
+    "url": "https://www.walmart.com.mx/ip/Maquina-De-Coser-Recta-Singer-Heavy-Duty-4423-Gris-110-120-V-gris-17-5/00019112002389?athAsset=eyJhdGhjcGlkIjoiMDAwMTkxMTIwMDIzODkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 4469.0,
+    "precio_maximo": 6999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104000159": {
+    "tienda": "Walmart MX",
+    "titulo": "Pechuga de Pavo San Rafael Balance 250g rebanadas delgadas",
+    "url": "https://www.walmart.com.mx/ip/Pechuga-de-Pavo-San-Rafael-Balance-250g-rebanadas-delgadas/00750104000159?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQwMDAxNTkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 86.0,
+    "precio_maximo": 126.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750830469232": {
+    "tienda": "Walmart MX",
+    "titulo": "Sofá Reclinable Atlas del descanso 2 Plazas Oxford",
+    "url": "https://www.walmart.com.mx/ip/Sofa-Reclinable-Atlas-del-descanso-2-Plazas-Oxford/00750830469232?athAsset=eyJhdGhjcGlkIjoiMDA3NTA4MzA0NjkyMzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 13199.0,
+    "precio_maximo": 19269.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00692172706203": {
+    "tienda": "Walmart MX",
+    "titulo": "Congelador 9 Pies Hisense Horizontal Negro",
+    "url": "https://www.walmart.com.mx/ip/Congelador-9-Pies-Hisense-Horizontal-Negro/00692172706203?athAsset=eyJhdGhjcGlkIjoiMDA2OTIxNzI3MDYyMDMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 7590.0,
+    "precio_maximo": 10990.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750153732305": {
+    "tienda": "Walmart MX",
+    "titulo": "Bicicleta BENOTTO FLOWER POWER R16 1V Frenos Vbrake",
+    "url": "https://www.walmart.com.mx/ip/Bicicleta-BENOTTO-FLOWER-POWER-R16-1V-Frenos-Vbrake/00750153732305?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxNTM3MzIzMDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 3169.0,
+    "precio_maximo": 4599.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00045030024834": {
+    "tienda": "Walmart MX",
+    "titulo": "Laptop HP 245 G10 14\" HD Ryzen 3 7330U 8GB RAM 512GB SSD FreeDOS - Teclado Español.",
+    "url": "https://www.walmart.com.mx/ip/Laptop-HP-245-G10-14-HD-Ryzen-3-7330U-8GB-RAM-512GB-SSD-FreeDOS-Teclado-Espanol/00045030024834?athAsset=eyJhdGhjcGlkIjoiMDAwNDUwMzAwMjQ4MzQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 6839.0,
+    "precio_maximo": 9779.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750954667102": {
+    "tienda": "Walmart MX",
+    "titulo": "Suavizante de Telas Suavitel Cuidado Superior Fresca Primavera 4.8 L",
+    "url": "https://www.walmart.com.mx/ip/Suavizante-de-Telas-Suavitel-Cuidado-Superior-Fresca-Primavera-4-8-L/00750954667102?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTQ2NjcxMDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 145.0,
+    "precio_maximo": 200.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103694066": {
+    "tienda": "Walmart MX",
+    "titulo": "Play House 2 en 1 Prinsel Ice Cream",
+    "url": "https://www.walmart.com.mx/ip/Play-House-2-en-1-Prinsel-Ice-Cream/00750103694066?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDM2OTQwNjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 2899.0,
+    "precio_maximo": 3999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750647510472": {
+    "tienda": "Walmart MX",
+    "titulo": "Leche Condensada La Lechera Original Lata 375g",
+    "url": "https://www.walmart.com.mx/ip/Leche-Condensada-La-Lechera-Original-Lata-375g/00750647510472?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NDc1MTA0NzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 24.0,
+    "precio_maximo": 33.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00046296848805": {
+    "tienda": "Walmart MX",
+    "titulo": "Motoneta ITALIKA DS150 NEGRA",
+    "url": "https://www.walmart.com.mx/ip/Motoneta-ITALIKA-DS150-NEGRA/00046296848805?athAsset=eyJhdGhjcGlkIjoiMDAwNDYyOTY4NDg4MDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 25999.0,
+    "precio_maximo": 35499.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00004178900186": {
+    "tienda": "Walmart MX",
+    "titulo": "Sopa instantánea Maruchan Instant Lunch con camarón limón y habanero 64 g",
+    "url": "https://www.walmart.com.mx/ip/Sopa-instantanea-Maruchan-Instant-Lunch-con-camaron-limon-y-habanero-64-g/00004178900186?athAsset=eyJhdGhjcGlkIjoiMDAwMDQxNzg5MDAxODYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 14.0,
+    "precio_maximo": 19.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750955284032": {
+    "tienda": "Walmart MX",
+    "titulo": "Crema facial L'Oréal revitalift día ácido hialurónico 50 ml",
+    "url": "https://www.walmart.com.mx/ip/Crema-facial-L-Oreal-revitalift-dia-acido-hialuronico-50-ml/00750955284032?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQwMzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 191.0,
+    "precio_maximo": 259.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104000384": {
+    "tienda": "Walmart MX",
+    "titulo": "Jamón de pavo FUD virginia 450 g",
+    "url": "https://www.walmart.com.mx/ip/Jamon-de-pavo-FUD-virginia-450-g/00750104000384?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQwMDAzODQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 76.0,
+    "precio_maximo": 101.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750305273873": {
+    "tienda": "Walmart MX",
+    "titulo": "MOTOCICLETA BAJAJ PULSAR N250 FI ABS UG NEGRO 2026",
+    "url": "https://www.walmart.com.mx/ip/MOTOCICLETA-BAJAJ-PULSAR-N250-FI-ABS-UG-NEGRO-2026/00750305273873?athAsset=eyJhdGhjcGlkIjoiMDA3NTAzMDUyNzM4NzMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 68999.0,
+    "precio_maximo": 91499.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750666410000": {
+    "tienda": "Walmart MX",
+    "titulo": "Motocicleta Chopper ITALIKA TC250 GRIS",
+    "url": "https://www.walmart.com.mx/ip/Motocicleta-Chopper-ITALIKA-TC250-GRIS/00750666410000?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NjY0MTAwMDAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 40999.0,
+    "precio_maximo": 53999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00067405375080": {
+    "tienda": "Walmart MX",
+    "titulo": "Apple iPhone 17 Pro 5G 256 GB - Color Naranja Cósmico Reacondicionado.",
+    "url": "https://www.walmart.com.mx/ip/Apple-iPhone-17-Pro-5G-256-GB-Color-Naranja-Cosmico-Reacondicionado/00067405375080?athAsset=eyJhdGhjcGlkIjoiMDAwNjc0MDUzNzUwODAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 19449.0,
+    "precio_maximo": 25283.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00067405374648": {
+    "tienda": "Walmart MX",
+    "titulo": "Apple iPhone 17 5G 512GB - Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/Apple-iPhone-17-5G-512GB-Negro-Reacondicionado/00067405374648?athAsset=eyJhdGhjcGlkIjoiMDAwNjc0MDUzNzQ2NDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 17699.0,
+    "precio_maximo": 23008.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00075328778426": {
+    "tienda": "Walmart MX",
+    "titulo": "Apple iPhone 16 Pro Max 512Gb Titanio Negro Esim Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/Apple-iPhone-16-Pro-Max-512Gb-Titanio-Negro-Esim-Reacondicionado/00075328778426?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwNzUzMjg3Nzg0MjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 16299.0,
+    "precio_maximo": 21188.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085359892066": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 16 Apple 128GB Esim Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-16-Apple-128GB-Esim-Negro-Reacondicionado/00085359892066?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwNjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 10549.0,
+    "precio_maximo": 13713.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085359893120": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 16e Apple 128GB Esim Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-16e-Apple-128GB-Esim-Negro-Reacondicionado/00085359893120?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTMxMjAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 6899.0,
+    "precio_maximo": 8968.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085359892056": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 15 Pro Max Apple 256GB eSIM Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-15-Pro-Max-Apple-256GB-eSIM-Negro-Reacondicionado/00085359892056?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwNTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 12049.0,
+    "precio_maximo": 15663.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085359892025": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 15 Plus Apple 128GB eSIM Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-15-Plus-Apple-128GB-eSIM-Negro-Reacondicionado/00085359892025?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwMjUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 7749.0,
+    "precio_maximo": 10073.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085359892010": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 15 Apple 128GB eSIM Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-15-Apple-128GB-eSIM-Negro-Reacondicionado/00085359892010?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNTk4OTIwMTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 7049.0,
+    "precio_maximo": 9163.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085369892796": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 14 Pro Max Apple 128GB eSIM Morado Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-14-Pro-Max-Apple-128GB-eSIM-Morado-Reacondicionado/00085369892796?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNjk4OTI3OTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 8849.0,
+    "precio_maximo": 11503.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085369892781": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 14 Pro Apple 256GB eSIM Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-14-Pro-Apple-256GB-eSIM-Negro-Reacondicionado/00085369892781?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNjk4OTI3ODEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 8549.0,
+    "precio_maximo": 11113.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00085369892751": {
+    "tienda": "Walmart MX",
+    "titulo": "iPhone 14 Apple 128GB eSIM Negro Reacondicionado",
+    "url": "https://www.walmart.com.mx/ip/iPhone-14-Apple-128GB-eSIM-Negro-Reacondicionado/00085369892751?conditionGroupCode=2&athAsset=eyJhdGhjcGlkIjoiMDAwODUzNjk4OTI3NTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1500",
+    "precio_actual": 5249.0,
+    "precio_maximo": 6823.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00001722292220": {
+    "tienda": "Walmart MX",
+    "titulo": "Apple Watch Ultra 2 de 49 Mm, 4 G, Resistente (Natural), con Caja de Titanio y Correa Negra Ocean de Talla Única (Modelo A2986) (Reacondicionado).",
+    "url": "https://www.walmart.com.mx/ip/Apple-Watch-Ultra-2-de-49-Mm-4-G-Resistente-Natural-con-Caja-de-Titanio-y-Correa-Negra-Ocean-de-Talla-Unica-Modelo-A2986-Reacondicionado/00001722292220?athAsset=eyJhdGhjcGlkIjoiMDAwMDE3MjIyOTIyMjAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 7249.0,
+    "precio_maximo": 9423.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00065776832832": {
+    "tienda": "Walmart MX",
+    "titulo": "Apple Watch Ultra (GPS + Cellular, 49mm) - Caja de Titanio con Correa Ocean Band Medianache, Talla única (Reacondicionado)",
+    "url": "https://www.walmart.com.mx/ip/Apple-Watch-Ultra-GPS-Cellular-49mm-Caja-de-Titanio-con-Correa-Ocean-Band-Medianache-Talla-unica-Reacondicionado/00065776832832?athAsset=eyJhdGhjcGlkIjoiMDAwNjU3NzY4MzI4MzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 5199.0,
+    "precio_maximo": 6758.7,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750047801840": {
+    "tienda": "Walmart MX",
+    "titulo": "Galletas Marias 720g",
+    "url": "https://www.walmart.com.mx/ip/Galletas-Marias-720g/00750047801840?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDc4MDE4NDAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 69.0,
+    "precio_maximo": 86.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750107112007": {
+    "tienda": "Walmart MX",
+    "titulo": "Refresco Squirt sabor toronja 2 l",
+    "url": "https://www.walmart.com.mx/ip/Refresco-Squirt-sabor-toronja-2-l/00750107112007?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDcxMTIwMDciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 28.0,
+    "precio_maximo": 35.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750102054066": {
+    "tienda": "Walmart MX",
+    "titulo": "Producto Lácteo Combinado Nutri Entero Lacti-Pro Max 1 l",
+    "url": "https://www.walmart.com.mx/ip/Producto-Lacteo-Combinado-Nutri-Entero-Lacti-Pro-Max-1-l/00750102054066?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDIwNTQwNjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 20.0,
+    "precio_maximo": 25.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00075976331930": {
+    "tienda": "Walmart MX",
+    "titulo": "Laptop HP G10 AMD Ryzen 3 4GB RAM 256GB SSD más Impresora HP Multifuncional Color WiFi",
+    "url": "https://www.walmart.com.mx/ip/Laptop-HP-G10-AMD-Ryzen-3-4GB-RAM-256GB-SSD-mas-Impresora-HP-Multifuncional-Color-WiFi/00075976331930?athAsset=eyJhdGhjcGlkIjoiMDAwNzU5NzYzMzE5MzAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 7997.0,
+    "precio_maximo": 9998.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750045900184": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente líquido MAS Color color 4.8 l",
+    "url": "https://www.walmart.com.mx/ip/Detergente-liquido-MAS-Color-color-4-8-l/00750045900184?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDU5MDAxODQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 175.0,
+    "precio_maximo": 215.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750043525804": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente Líquido Ariel Limpieza Profunda a la Primera 4.8L Rinde 50% Más Cargas'",
+    "url": "https://www.walmart.com.mx/ip/Detergente-Liquido-Ariel-Limpieza-Profunda-a-la-Primera-4-8L-Rinde-50-Mas-Cargas/00750043525804?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDM1MjU4MDQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 200.0,
+    "precio_maximo": 247.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750043525802": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente Líquido Ariel Revitacolor Limpieza a la Primera en Colores 4.8 l",
+    "url": "https://www.walmart.com.mx/ip/Detergente-Liquido-Ariel-Revitacolor-Limpieza-a-la-Primera-en-Colores-4-8-l/00750043525802?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDM1MjU4MDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 200.0,
+    "precio_maximo": 247.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00005003641105": {
+    "tienda": "Walmart MX",
+    "titulo": "Bocina Portátil Efecto Luz LED Bluetooth JBL PartyBox Encore Essential 2",
+    "url": "https://www.walmart.com.mx/ip/Bocina-Portatil-Efecto-Luz-LED-Bluetooth-JBL-PartyBox-Encore-Essential-2/00005003641105?athAsset=eyJhdGhjcGlkIjoiMDAwMDUwMDM2NDExMDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 4059.0,
+    "precio_maximo": 4999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00471127951336": {
+    "tienda": "Walmart MX",
+    "titulo": "CONSOLA NINTENDO SWITCH 2 256 GB NEGRO edición global",
+    "url": "https://www.walmart.com.mx/ip/CONSOLA-NINTENDO-SWITCH-2-256-GB-NEGRO-edicion-global/00471127951336?athAsset=eyJhdGhjcGlkIjoiMDA0NzExMjc5NTEzMzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 9999.0,
+    "precio_maximo": 11999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750955284949": {
+    "tienda": "Walmart MX",
+    "titulo": "Sérum facial Garnier skin active express aclara anti-manchas 30 ml",
+    "url": "https://www.walmart.com.mx/ip/Serum-facial-Garnier-skin-active-express-aclara-anti-manchas-30-ml/00750955284949?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQ5NDkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 128.0,
+    "precio_maximo": 154.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00001250266656": {
+    "tienda": "Walmart MX",
+    "titulo": "Bordadora Máquina Semi-profesional Brother Bp1530lmx",
+    "url": "https://www.walmart.com.mx/ip/Bordadora-Maquina-Semi-profesional-Brother-Bp1530lmx/00001250266656?athAsset=eyJhdGhjcGlkIjoiMDAwMDEyNTAyNjY2NTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 24839.0,
+    "precio_maximo": 29999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00019595008623": {
+    "tienda": "Walmart MX",
+    "titulo": "2025 Apple 11 Pulgadas iPad A16 Wi-Fi 128GB - Plateado",
+    "url": "https://www.walmart.com.mx/ip/2025-Apple-11-Pulgadas-iPad-A16-Wi-Fi-128GB-Plateado/00019595008623?athAsset=eyJhdGhjcGlkIjoiMDAwMTk1OTUwMDg2MjMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 10047.0,
+    "precio_maximo": 12056.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750102600460": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente en polvo Roma multiusos biodegradable 1 kg",
+    "url": "https://www.walmart.com.mx/ip/Detergente-en-polvo-Roma-multiusos-biodegradable-1-kg/00750102600460?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDI2MDA0NjAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 36.0,
+    "precio_maximo": 43.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750642566269": {
+    "tienda": "Walmart MX",
+    "titulo": "Papel higiénico Pétalo Rendimax 32 rollos de 220 hojas dobles",
+    "url": "https://www.walmart.com.mx/ip/Papel-higienico-Petalo-Rendimax-32-rollos-de-220-hojas-dobles/00750642566269?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NDI1NjYyNjkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 169.0,
+    "precio_maximo": 201.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750642560039": {
+    "tienda": "Walmart MX",
+    "titulo": "Servilletas Pétalo 420 pzas",
+    "url": "https://www.walmart.com.mx/ip/Servilletas-Petalo-420-pzas/00750642560039?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NDI1NjAwMzkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 47.0,
+    "precio_maximo": 56.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103048666": {
+    "tienda": "Walmart MX",
+    "titulo": "Tortillas de harina Tía Rosa Tortillinas 561 g",
+    "url": "https://www.walmart.com.mx/ip/Tortillas-de-harina-Tia-Rosa-Tortillinas-561-g/00750103048666?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDMwNDg2NjYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 34.0,
+    "precio_maximo": 40.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00088304952841": {
+    "tienda": "Walmart MX",
+    "titulo": "Secadora Whirlpool 20 Kg Blanca",
+    "url": "https://www.walmart.com.mx/ip/Secadora-Whirlpool-20-Kg-Blanca/00088304952841?athAsset=eyJhdGhjcGlkIjoiMDAwODgzMDQ5NTI4NDEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 10390.0,
+    "precio_maximo": 12190.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750108016050": {
+    "tienda": "Walmart MX",
+    "titulo": "Shampoo íntimo Benzal femenino tecnología odor-block hipoalergénico sin jabón 240 ml",
+    "url": "https://www.walmart.com.mx/ip/Shampoo-intimo-Benzal-femenino-tecnologia-odor-block-hipoalergenico-sin-jabon-240-ml/00750108016050?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDgwMTYwNTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 89.0,
+    "precio_maximo": 105.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750101040785": {
+    "tienda": "Walmart MX",
+    "titulo": "Café soluble Great Value colombiano gourmet 200 g",
+    "url": "https://www.walmart.com.mx/ip/Cafe-soluble-Great-Value-colombiano-gourmet-200-g/00750101040785?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDEwNDA3ODUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 138.0,
+    "precio_maximo": 161.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104009791": {
+    "tienda": "Walmart MX",
+    "titulo": "Yoghurt Yoplait griego skyr batido natural 750 g",
+    "url": "https://www.walmart.com.mx/ip/Yoghurt-Yoplait-griego-skyr-batido-natural-750-g/00750104009791?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQwMDk3OTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 101.0,
+    "precio_maximo": 116.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750105861106": {
+    "tienda": "Walmart MX",
+    "titulo": "Leche evaporada Carnation clavel 360 g",
+    "url": "https://www.walmart.com.mx/ip/Leche-evaporada-Carnation-clavel-360-g/00750105861106?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDU4NjExMDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 22.0,
+    "precio_maximo": 25.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750647510354": {
+    "tienda": "Walmart MX",
+    "titulo": "Cremador para café Coffee Mate en polvo 1.2 kg",
+    "url": "https://www.walmart.com.mx/ip/Cremador-para-cafe-Coffee-Mate-en-polvo-1-2-kg/00750647510354?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NDc1MTAzNTQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 150.0,
+    "precio_maximo": 170.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00759000201246": {
+    "tienda": "Walmart MX",
+    "titulo": "Vick VapoRub alivia rápido la congestión nasal para respirar mejor 50g",
+    "url": "https://www.walmart.com.mx/ip/Vick-VapoRub-alivia-rapido-la-congestion-nasal-para-respirar-mejor-50g/00759000201246?athAsset=eyJhdGhjcGlkIjoiMDA3NTkwMDAyMDEyNDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 145.0,
+    "precio_maximo": 165.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750665822134": {
+    "tienda": "Walmart MX",
+    "titulo": "Smartphone Honor Magic 8 Lite 8+256 GB Rojo Cobrizo Desbloqueado",
+    "url": "https://www.walmart.com.mx/ip/Smartphone-Honor-Magic-8-Lite-8-256-GB-Rojo-Cobrizo-Desbloqueado/00750665822134?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NjU4MjIxMzQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 5999.0,
+    "precio_maximo": 6779.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750081002918": {
+    "tienda": "Walmart MX",
+    "titulo": "Pan Bimbo blanco 620 g",
+    "url": "https://www.walmart.com.mx/ip/Pan-Bimbo-blanco-620-g/00750081002918?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwODEwMDI5MTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 49.0,
+    "precio_maximo": 55.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750081002240": {
+    "tienda": "Walmart MX",
+    "titulo": "Botana Barcel Takis Fuego 240 g",
+    "url": "https://www.walmart.com.mx/ip/Botana-Barcel-Takis-Fuego-240-g/00750081002240?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwODEwMDIyNDAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 54.0,
+    "precio_maximo": 61.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750129560012": {
+    "tienda": "Walmart MX",
+    "titulo": "Leche Santa Clara entera 1 l",
+    "url": "https://www.walmart.com.mx/ip/Leche-Santa-Clara-entera-1-l/00750129560012?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMjk1NjAwMTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 33.0,
+    "precio_maximo": 37.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750225248092": {
+    "tienda": "Walmart MX",
+    "titulo": "Bebida vegetal Nature's Heart sabor almendra sin azúcar 946 ml",
+    "url": "https://www.walmart.com.mx/ip/Bebida-vegetal-Nature-s-Heart-sabor-almendra-sin-azucar-946-ml/00750225248092?athAsset=eyJhdGhjcGlkIjoiMDA3NTAyMjUyNDgwOTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 40.0,
+    "precio_maximo": 45.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103395631": {
+    "tienda": "Walmart MX",
+    "titulo": "Fórmula para alimentación Pediasure enteral especializada sabor chocolate 237 ml",
+    "url": "https://www.walmart.com.mx/ip/Formula-para-alimentacion-Pediasure-enteral-especializada-sabor-chocolate-237-ml/00750103395631?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDMzOTU2MzEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 58.0,
+    "precio_maximo": 65.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750105591495": {
+    "tienda": "Walmart MX",
+    "titulo": "Yoghurt bebible Alpura multi sabor 10 pzas 220 g c/u",
+    "url": "https://www.walmart.com.mx/ip/Yoghurt-bebible-Alpura-multi-sabor-10-pzas-220-g-c-u/00750105591495?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDU1OTE0OTUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 108.0,
+    "precio_maximo": 120.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00019002109500": {
+    "tienda": "Walmart MX",
+    "titulo": "Kit Camara Portatil DJI Osmo Pocket 3 Creator Combo - Negro",
+    "url": "https://www.walmart.com.mx/ip/Kit-Camara-Portatil-DJI-Osmo-Pocket-3-Creator-Combo-Negro/00019002109500?athAsset=eyJhdGhjcGlkIjoiMDAwMTkwMDIxMDk1MDAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 10197.0,
+    "precio_maximo": 11318.67,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750045900012": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente líquido Persil Universal 6.64Lt",
+    "url": "https://www.walmart.com.mx/ip/Detergente-liquido-Persil-Universal-6-64Lt/00750045900012?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDU5MDAwMTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 229.0,
+    "precio_maximo": 255.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750045900029": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente líquido MAS colores intensos 6.64 l",
+    "url": "https://www.walmart.com.mx/ip/Detergente-liquido-MAS-colores-intensos-6-64-l/00750045900029?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDU5MDAwMjkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 229.0,
+    "precio_maximo": 255.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103131168": {
+    "tienda": "Walmart MX",
+    "titulo": "Refresco Pepsi regular 1.5 l",
+    "url": "https://www.walmart.com.mx/ip/Refresco-Pepsi-regular-1-5-l/00750103131168?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDMxMzExNjgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 24.0,
+    "precio_maximo": 26.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00075976331929": {
+    "tienda": "Walmart MX",
+    "titulo": "Laptop Dell 2K Touch Intel Core i5 13th 8GB RAM 512GB SSD más Audifonos Bluetooth JBL Tune 520",
+    "url": "https://www.walmart.com.mx/ip/Laptop-Dell-2K-Touch-Intel-Core-i5-13th-8GB-RAM-512GB-SSD-mas-Audifonos-Bluetooth-JBL-Tune-520/00075976331929?athAsset=eyJhdGhjcGlkIjoiMDAwNzU5NzYzMzE5MjkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 11897.0,
+    "precio_maximo": 12999.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750154562870": {
+    "tienda": "Walmart MX",
+    "titulo": "Estufa Whirlpool 30 Pulgadas Acero Inox",
+    "url": "https://www.walmart.com.mx/ip/Estufa-Whirlpool-30-Pulgadas-Acero-Inox/00750154562870?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxNTQ1NjI4NzAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 12749.0,
+    "precio_maximo": 13929.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104540314": {
+    "tienda": "Walmart MX",
+    "titulo": "Atún Dolores aleta amarilla en agua 140 g",
+    "url": "https://www.walmart.com.mx/ip/Atun-Dolores-aleta-amarilla-en-agua-140-g/00750104540314?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQ1NDAzMTQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 21.0,
+    "precio_maximo": 22.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00000007500234": {
+    "tienda": "Walmart MX",
+    "titulo": "Aceite vegetal 1-2-3 1 l",
+    "url": "https://www.walmart.com.mx/ip/Aceite-vegetal-1-2-3-1-l/00000007500234?athAsset=eyJhdGhjcGlkIjoiMDAwMDAwMDc1MDAyMzQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 43.0,
+    "precio_maximo": 43.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750105536750": {
+    "tienda": "Walmart MX",
+    "titulo": "Leche Santa Clara entera caja con 6 pzas de 1 l c/u",
+    "url": "https://www.walmart.com.mx/ip/Leche-Santa-Clara-entera-caja-con-6-pzas-de-1-l-c-u/00750105536750?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDU1MzY3NTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 170.0,
+    "precio_maximo": 170.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750642565418": {
+    "tienda": "Walmart MX",
+    "titulo": "Papel higiénico Kleenex Elegance Cottonelle 30 rollos con 215 hojas dobles c/u",
+    "url": "https://www.walmart.com.mx/ip/Papel-higienico-Kleenex-Elegance-Cottonelle-30-rollos-con-215-hojas-dobles-c-u/00750642565418?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2NDI1NjU0MTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 209.0,
+    "precio_maximo": 209.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750105923545": {
+    "tienda": "Walmart MX",
+    "titulo": "Agua de manantial Sta. María 6 botellas de 1 L c/u",
+    "url": "https://www.walmart.com.mx/ip/Agua-de-manantial-Sta-Maria-6-botellas-de-1-L-c-u/00750105923545?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDU5MjM1NDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 50.0,
+    "precio_maximo": 50.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750100330631": {
+    "tienda": "Walmart MX",
+    "titulo": "Mayonesa McCormick con limón 870 g",
+    "url": "https://www.walmart.com.mx/ip/Mayonesa-McCormick-con-limon-870-g/00750100330631?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDAzMzA2MzEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 104.0,
+    "precio_maximo": 104.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750105536751": {
+    "tienda": "Walmart MX",
+    "titulo": "Leche Santa Clara deslactosada caja con 6 pzas 1 l c/u",
+    "url": "https://www.walmart.com.mx/ip/Leche-Santa-Clara-deslactosada-caja-con-6-pzas-1-l-c-u/00750105536751?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDU1MzY3NTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 173.0,
+    "precio_maximo": 173.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750102540338": {
+    "tienda": "Walmart MX",
+    "titulo": "Limpiador Multiusos Pinol El Original 5.1 l",
+    "url": "https://www.walmart.com.mx/ip/Limpiador-Multiusos-Pinol-El-Original-5-1-l/00750102540338?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDI1NDAzMzgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 148.0,
+    "precio_maximo": 148.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750100013144": {
+    "tienda": "Walmart MX",
+    "titulo": "Pan Bimbo Multigrano 610 g",
+    "url": "https://www.walmart.com.mx/ip/Pan-Bimbo-Multigrano-610-g/00750100013144?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDAwMTMxNDQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 75.0,
+    "precio_maximo": 75.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750047803427": {
+    "tienda": "Walmart MX",
+    "titulo": "Papas fritas Sabritas sal 240 g",
+    "url": "https://www.walmart.com.mx/ip/Papas-fritas-Sabritas-sal-240-g/00750047803427?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDc4MDM0MjciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 86.0,
+    "precio_maximo": 86.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750100330154": {
+    "tienda": "Walmart MX",
+    "titulo": "Mayonesa McCormick con limón 625 g",
+    "url": "https://www.walmart.com.mx/ip/Mayonesa-McCormick-con-limon-625-g/00750100330154?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDAzMzAxNTQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 62.0,
+    "precio_maximo": 62.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750100310548": {
+    "tienda": "Walmart MX",
+    "titulo": "Atún Herdez en agua 130 g",
+    "url": "https://www.walmart.com.mx/ip/Atun-Herdez-en-agua-130-g/00750100310548?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDAzMTA1NDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 24.0,
+    "precio_maximo": 24.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750047800798": {
+    "tienda": "Walmart MX",
+    "titulo": "Papas fritas Ruffles sabor queso 185 g",
+    "url": "https://www.walmart.com.mx/ip/Papas-fritas-Ruffles-sabor-queso-185-g/00750047800798?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDc4MDA3OTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 61.0,
+    "precio_maximo": 61.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00880107311389": {
+    "tienda": "Walmart MX",
+    "titulo": "Ramen de pollo Samyang a la carbonara picante 130 g",
+    "url": "https://www.walmart.com.mx/ip/Ramen-de-pollo-Samyang-a-la-carbonara-picante-130-g/00880107311389?athAsset=eyJhdGhjcGlkIjoiMDA4ODAxMDczMTEzODkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 45.0,
+    "precio_maximo": 45.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104009517": {
+    "tienda": "Walmart MX",
+    "titulo": "Yoghurt Yoplait griego natural sin azúcar 1 kg",
+    "url": "https://www.walmart.com.mx/ip/Yoghurt-Yoplait-griego-natural-sin-azucar-1-kg/00750104009517?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQwMDk1MTciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 100.0,
+    "precio_maximo": 100.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00089470001013": {
+    "tienda": "Walmart MX",
+    "titulo": "Yogurt Chobani griego non-fat plain 907 g",
+    "url": "https://www.walmart.com.mx/ip/Yogurt-Chobani-griego-non-fat-plain-907-g/00089470001013?athAsset=eyJhdGhjcGlkIjoiMDAwODk0NzAwMDEwMTMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 155.0,
+    "precio_maximo": 155.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750102550008": {
+    "tienda": "Walmart MX",
+    "titulo": "Producto a base de leche Yakult 40 LT 5 pack de 80 ml c/u",
+    "url": "https://www.walmart.com.mx/ip/Producto-a-base-de-leche-Yakult-40-LT-5-pack-de-80-ml-c-u/00750102550008?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDI1NTAwMDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 44.0,
+    "precio_maximo": 44.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104009147": {
+    "tienda": "Walmart MX",
+    "titulo": "Yoghurt Yoplait Griego natural 1 kg",
+    "url": "https://www.walmart.com.mx/ip/Yoghurt-Yoplait-Griego-natural-1-kg/00750104009147?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQwMDkxNDciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 98.0,
+    "precio_maximo": 98.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750104009002": {
+    "tienda": "Walmart MX",
+    "titulo": "Yoghurt Yoplait natural con probióticos 1 kg",
+    "url": "https://www.walmart.com.mx/ip/Yoghurt-Yoplait-natural-con-probioticos-1-kg/00750104009002?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDQwMDkwMDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 57.0,
+    "precio_maximo": 57.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00081829001239": {
+    "tienda": "Walmart MX",
+    "titulo": "Yogurt Griego Chobani cherry berry sin azúcar añadida 190 g",
+    "url": "https://www.walmart.com.mx/ip/Yogurt-Griego-Chobani-cherry-berry-sin-azucar-anadida-190-g/00081829001239?athAsset=eyJhdGhjcGlkIjoiMDAwODE4MjkwMDEyMzkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 38.0,
+    "precio_maximo": 38.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00081829001515": {
+    "tienda": "Walmart MX",
+    "titulo": "Yogurt Griego Chobani vainilla sin azúcar añadida 190 g",
+    "url": "https://www.walmart.com.mx/ip/Yogurt-Griego-Chobani-vainilla-sin-azucar-anadida-190-g/00081829001515?athAsset=eyJhdGhjcGlkIjoiMDAwODE4MjkwMDE1MTUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 38.0,
+    "precio_maximo": 38.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00001707710208": {
+    "tienda": "Walmart MX",
+    "titulo": "Bebida a base de leche Lifeway Kefir baja en grasa sabor natural 236 ml",
+    "url": "https://www.walmart.com.mx/ip/Bebida-a-base-de-leche-Lifeway-Kefir-baja-en-grasa-sabor-natural-236-ml/00001707710208?athAsset=eyJhdGhjcGlkIjoiMDAwMDE3MDc3MTAyMDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 38.0,
+    "precio_maximo": 38.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00081829001536": {
+    "tienda": "Walmart MX",
+    "titulo": "Yogurt griego Chobani 20 g de proteína Mango 190 g",
+    "url": "https://www.walmart.com.mx/ip/Yogurt-griego-Chobani-20-g-de-proteina-Mango-190-g/00081829001536?athAsset=eyJhdGhjcGlkIjoiMDAwODE4MjkwMDE1MzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 38.0,
+    "precio_maximo": 38.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00019621415742": {
+    "tienda": "Walmart MX",
+    "titulo": "Cartas Coleccionables Pokemon TCG Mega Evolution Pitch Black Elite Trainer Box en Ingles",
+    "url": "https://www.walmart.com.mx/ip/Cartas-Coleccionables-Pokemon-TCG-Mega-Evolution-Pitch-Black-Elite-Trainer-Box-en-Ingles/00019621415742?athAsset=eyJhdGhjcGlkIjoiMDAwMTk2MjE0MTU3NDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 1099.0,
+    "precio_maximo": 1099.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750116501082": {
+    "tienda": "Walmart MX",
+    "titulo": "Probióticos Enterogermina Suspensión de Bacillus Clausii con 4 Billones de UFC de Probióticos 10 Ampolletas de 5 ml.",
+    "url": "https://www.walmart.com.mx/ip/Probioticos-Enterogermina-Suspension-de-Bacillus-Clausii-con-4-Billones-de-UFC-de-Probioticos-10-Ampolletas-de-5-ml/00750116501082?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMTY1MDEwODIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 522.0,
+    "precio_maximo": 522.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750626790785": {
+    "tienda": "Walmart MX",
+    "titulo": "Jabón líquido para manos Blumen kiwi antibacterial extra suave 2.1 l",
+    "url": "https://www.walmart.com.mx/ip/Jabon-liquido-para-manos-Blumen-kiwi-antibacterial-extra-suave-2-1-l/00750626790785?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2MjY3OTA3ODUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 84.0,
+    "precio_maximo": 84.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00400580852410": {
+    "tienda": "Walmart MX",
+    "titulo": "Antitranspirante para pies Curitas foot expert silver active 150 ml",
+    "url": "https://www.walmart.com.mx/ip/Antitranspirante-para-pies-Curitas-foot-expert-silver-active-150-ml/00400580852410?athAsset=eyJhdGhjcGlkIjoiMDA0MDA1ODA4NTI0MTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 94.0,
+    "precio_maximo": 94.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750954607888": {
+    "tienda": "Walmart MX",
+    "titulo": "Jabón Líquido Corporal Palmolive Naturals Cereza y Leche de Coco 390 ml",
+    "url": "https://www.walmart.com.mx/ip/Jabon-Liquido-Corporal-Palmolive-Naturals-Cereza-y-Leche-de-Coco-390-ml/00750954607888?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTQ2MDc4ODgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 67.0,
+    "precio_maximo": 67.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00400580001975": {
+    "tienda": "Walmart MX",
+    "titulo": "Desodorante para pies Curitas Fresh Active en aerosol 150 ml",
+    "url": "https://www.walmart.com.mx/ip/Desodorante-para-pies-Curitas-Fresh-Active-en-aerosol-150-ml/00400580001975?athAsset=eyJhdGhjcGlkIjoiMDA0MDA1ODAwMDE5NzUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 90.0,
+    "precio_maximo": 90.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750194348916": {
+    "tienda": "Walmart MX",
+    "titulo": "Jabón líquido para manos Escudo antibacterial protección neutra 225 ml",
+    "url": "https://www.walmart.com.mx/ip/Jabon-liquido-para-manos-Escudo-antibacterial-proteccion-neutra-225-ml/00750194348916?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxOTQzNDg5MTYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 42.0,
+    "precio_maximo": 42.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750630625065": {
+    "tienda": "Walmart MX",
+    "titulo": "Desodorante antitranspirante Rexona powder en aerosol 210 ml",
+    "url": "https://www.walmart.com.mx/ip/Desodorante-antitranspirante-Rexona-powder-en-aerosol-210-ml/00750630625065?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2MzA2MjUwNjUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1504",
+    "precio_actual": 86.0,
+    "precio_maximo": 86.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00000007507681": {
+    "tienda": "Walmart MX",
+    "titulo": "Desodorante Antitranspirante Rexona Clinical Classic 58g",
+    "url": "https://www.walmart.com.mx/ip/Desodorante-Antitranspirante-Rexona-Clinical-Classic-58g/00000007507681?athAsset=eyJhdGhjcGlkIjoiMDAwMDAwMDc1MDc2ODEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 120.0,
+    "precio_maximo": 120.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750101736776": {
+    "tienda": "Walmart MX",
+    "titulo": "Toallas femeninas Kotex Regular con alas flujo abundante 40 piezas",
+    "url": "https://www.walmart.com.mx/ip/Toallas-femeninas-Kotex-Regular-con-alas-flujo-abundante-40-piezas/00750101736776?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDE3MzY3NzYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 60.0,
+    "precio_maximo": 60.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103662206": {
+    "tienda": "Walmart MX",
+    "titulo": "Papel higiénico Regio Luxury Almond Touch 18 rollos",
+    "url": "https://www.walmart.com.mx/ip/Papel-higienico-Regio-Luxury-Almond-Touch-18-rollos/00750103662206?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDM2NjIyMDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 211.0,
+    "precio_maximo": 211.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750102541593": {
+    "tienda": "Walmart MX",
+    "titulo": "Suavizante de telas Ensueño Max frescura primaveral 5.1 l",
+    "url": "https://www.walmart.com.mx/ip/Suavizante-de-telas-Ensueno-Max-frescura-primaveral-5-1-l/00750102541593?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDI1NDE1OTMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 130.0,
+    "precio_maximo": 130.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750103590538": {
+    "tienda": "Walmart MX",
+    "titulo": "Limpiador Multiusos Líquido Fabuloso Fresca Lavanda 5 L",
+    "url": "https://www.walmart.com.mx/ip/Limpiador-Multiusos-Liquido-Fabuloso-Fresca-Lavanda-5-L/00750103590538?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDM1OTA1MzgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 151.0,
+    "precio_maximo": 151.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750043515073": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente en Polvo Ariel Limpieza Profunda a la Primera Polvo Ultra Fino 4 kg",
+    "url": "https://www.walmart.com.mx/ip/Detergente-en-Polvo-Ariel-Limpieza-Profunda-a-la-Primera-Polvo-Ultra-Fino-4-kg/00750043515073?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNDM1MTUwNzMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 175.0,
+    "precio_maximo": 175.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750102540305": {
+    "tienda": "Walmart MX",
+    "titulo": "Limpiador Multiusos Pinol El Original 3.78 l",
+    "url": "https://www.walmart.com.mx/ip/Limpiador-Multiusos-Pinol-El-Original-3-78-l/00750102540305?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDI1NDAzMDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 345.0,
+    "precio_maximo": 345.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750119941390": {
+    "tienda": "Walmart MX",
+    "titulo": "Detergente líquido Persil Universal 4.65Lt",
+    "url": "https://www.walmart.com.mx/ip/Detergente-liquido-Persil-Universal-4-65Lt/00750119941390?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMTk5NDEzOTAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 175.0,
+    "precio_maximo": 175.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750954607364": {
+    "tienda": "Walmart MX",
+    "titulo": "Lavatrastes Líquido Axion Limón 100% Efectivo Arrancagrasa 1.1 L",
+    "url": "https://www.walmart.com.mx/ip/Lavatrastes-Liquido-Axion-Limon-100-Efectivo-Arrancagrasa-1-1-L/00750954607364?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTQ2MDczNjQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 56.0,
+    "precio_maximo": 56.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750633932347": {
+    "tienda": "Walmart MX",
+    "titulo": "Jabón Líquido para Trastes Salvo Limón Remueve Grasa, Rinde hasta 50% Más*, 1.2L",
+    "url": "https://www.walmart.com.mx/ip/Jabon-Liquido-para-Trastes-Salvo-Limon-Remueve-Grasa-Rinde-hasta-50-Mas-1-2L/00750633932347?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2MzM5MzIzNDciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 63.0,
+    "precio_maximo": 63.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00890247453705": {
+    "tienda": "Walmart MX",
+    "titulo": "APPLE IPHONE 17 256GB ESIM VERDE NUEVO",
+    "url": "https://www.walmart.com.mx/ip/APPLE-IPHONE-17-256GB-ESIM-VERDE-NUEVO/00890247453705?athAsset=eyJhdGhjcGlkIjoiMDA4OTAyNDc0NTM3MDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 19499.0,
+    "precio_maximo": 19499.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00316843018965": {
+    "tienda": "Walmart MX",
+    "titulo": "Batería T-Fal Family Cook Gris 13 piezas",
+    "url": "https://www.walmart.com.mx/ip/Bateria-T-Fal-Family-Cook-Gris-13-piezas/00316843018965?athAsset=eyJhdGhjcGlkIjoiMDAzMTY4NDMwMTg5NjUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 3199.0,
+    "precio_maximo": 3199.0,
+    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
     "precio_alertado": null
   }
 }
