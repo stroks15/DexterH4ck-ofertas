@@ -81,6 +81,40 @@ def buscar_todas(filtro_tienda=None) -> list:
     return productos_encontrados
 
 
+def _parsear_precio(texto) -> float:
+    """'$1,299.00' -> 1299.0 (lanza ValueError si no hay número)."""
+    limpio = re.sub(r"[^0-9.]", "", str(texto or "").replace(",", ""))
+    return float(limpio)
+
+
+# Selectores habituales del precio tachado ("antes"). Si la tienda no los usa, no se asume nada.
+SELECTORES_PRECIO_ANTERIOR = (".strike-through .value", ".strike-through", ".list .value", "del", "s")
+
+
+def _nodo_precio_actual(card):
+    """Nodo del precio vigente: prioriza '.sales .value' y nunca toma el precio tachado."""
+    nodo = card.select_one(".sales .value")
+    if nodo is not None:
+        return nodo
+    for candidato in card.select(".value"):
+        if candidato.find_parent(class_="strike-through") is None:
+            return candidato
+    return None
+
+
+def _precio_anterior_html(card, precio_actual: float):
+    """Precio de referencia explícito del listado; None si no existe o no es mayor al actual."""
+    for selector in SELECTORES_PRECIO_ANTERIOR:
+        for nodo in card.select(selector):
+            try:
+                valor = _parsear_precio(nodo.get("content") or nodo.get_text(" ", strip=True))
+            except ValueError:
+                continue
+            if valor > precio_actual > 0:
+                return valor
+    return None
+
+
 def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
     """Análisis sintáctico básico del HTML extraído."""
     soup = BeautifulSoup(html_source, "html.parser")
@@ -113,9 +147,10 @@ def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
         for card in soup.select(".product-card"):
             try:
                 link_el = card.select_one("a.product-title-link")
-                precio_el = card.select_one(".value")
+                precio_el = _nodo_precio_actual(card)
                 if link_el and precio_el:
-                    precio_actual = float(precio_el.text.replace("$", "").replace(",", "").strip())
+                    precio_actual = _parsear_precio(precio_el.get("content") or precio_el.text)
+                    precio_anterior = _precio_anterior_html(card, precio_actual)
                     url_final = urljoin("https://www.soriana.com", link_el.get("href", ""))
                     resultados.append({
                         "id": card.get("data-pid") or _hash_id(url_final),
@@ -124,7 +159,7 @@ def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
                         "brand": "Soriana",
                         "url": url_final,
                         "precio_actual": precio_actual,
-                        "precio_anterior": None,
+                        "precio_anterior": precio_anterior,
                         "tienda": "Soriana",
                         "tipo_fuente": "WEB_FALLBACK",
                     })

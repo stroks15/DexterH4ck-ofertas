@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import logging
 from typing import Any
+from urllib.parse import quote_plus
 
 import requests
 
@@ -18,6 +19,7 @@ from config.endpoints import ENDPOINT_ENV_VARS, get_endpoint
 from core.network_json import extract_products
 from core.scraper_base import BaseScraper, ScraperContext, run_scrapers_parallel
 from core.source_resilience import classify_status
+from scrapers.discovery_utils import ESTADOS_CORTE, TERMINOS_LIQUIDACION, env_int, env_terminos
 
 try:  # La capa VTEX es opcional
     from scrapers.vtex_stores import VtexStoresScraper
@@ -39,34 +41,62 @@ class JsonEndpointAdapter(BaseScraper):
         self.endpoint = (endpoint if endpoint is not None else get_endpoint(self.endpoint_name)).strip()
         self.last_status: dict[str, Any] = {"state": "not_run"}
 
+    def _urls(self) -> list[str]:
+        """Expande {q} (términos de liquidación) y {page}; sin marcadores, una sola URL."""
+        if "{q}" not in self.endpoint and "{page}" not in self.endpoint:
+            return [self.endpoint]
+        prefijo = self.endpoint_name.split("_")[0]
+        terminos = env_terminos(f"{prefijo}_QUERIES", TERMINOS_LIQUIDACION) if "{q}" in self.endpoint else ("",)
+        paginas = env_int(f"{prefijo}_PAGES", 2, 1, 5) if "{page}" in self.endpoint else 1
+        return [self.endpoint.replace("{q}", quote_plus(t)).replace("{page}", str(p))
+                for t in terminos for p in range(1, paginas + 1)]
+
+    def _pedir(self, url: str):
+        """(estado, payload). Nunca lanza."""
+        try:
+            response = self.get(url)
+        except requests.Timeout:
+            return "timeout", None, None
+        except requests.RequestException as exc:
+            return "network_error", None, type(exc).__name__
+        state = classify_status(response.status_code)
+        if state != "ok":
+            logger.warning("[%s] API respondió HTTP %s (%s).", self.store, response.status_code, state)
+            return state, None, response.status_code
+        try:
+            return "ok", response.json(), None
+        except ValueError:
+            return "invalid_response", None, None
+
     def discover(self) -> list[dict[str, Any]]:
         if not self.endpoint:
             self.last_status = {"state": "not_configured",
                                 "detail": f"{ENDPOINT_ENV_VARS.get(self.endpoint_name, 'endpoint')} no configurado"}
             logger.info("[%s] %s no configurado; fuente API omitida.", self.store, ENDPOINT_ENV_VARS.get(self.endpoint_name))
             return []
-        try:
-            response = self.get(self.endpoint)
-        except requests.Timeout:
-            self.last_status = {"state": "timeout"}
-            return []
-        except requests.RequestException as exc:
-            self.last_status = {"state": "network_error", "error": type(exc).__name__}
-            return []
-        state = classify_status(response.status_code)
-        if state != "ok":
-            self.last_status = {"state": state, "http": response.status_code}
-            logger.warning("[%s] API respondió HTTP %s (%s).", self.store, response.status_code, state)
-            return []
-        try:
-            payload = response.json()
-        except ValueError:
-            self.last_status = {"state": "invalid_response"}
-            return []
-        rows = extract_products(payload, self.home or self.endpoint, self.store)
-        for row in rows:
-            row["origen_link"] = "api_publica"
-        self.last_status = {"state": "ok", "count": len(rows)}
+        rows: list[dict[str, Any]] = []
+        vistos: set = set()
+        ultimo: dict[str, Any] | None = None
+        for url in self._urls():
+            estado, payload, extra = self._pedir(url)
+            if estado != "ok":
+                ultimo = {"state": estado}
+                if isinstance(extra, int):
+                    ultimo["http"] = extra
+                if estado in ESTADOS_CORTE:      # bloqueo/credencial/endpoint: no se insiste
+                    break
+                continue
+            for row in extract_products(payload, self.home or self.endpoint, self.store):
+                clave = row.get("id") or row.get("url")
+                if clave in vistos:
+                    continue
+                vistos.add(clave)
+                row["origen_link"] = "api_publica"
+                rows.append(row)
+        if rows:
+            self.last_status = {"state": "ok", "count": len(rows)}
+        else:
+            self.last_status = ultimo or {"state": "ok", "count": 0}
         return rows
 
 

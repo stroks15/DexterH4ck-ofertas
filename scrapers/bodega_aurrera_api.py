@@ -8,16 +8,17 @@ import time
 
 import requests
 
-from core.source_resilience import BLOCKING_STATES, classify_status
+from core.source_resilience import classify_status
 
 from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
+from scrapers.discovery_utils import TERMINOS_LIQUIDACION, buscar_graphql_paginado, env_int, env_terminos
 from scrapers.bodega_graphql import BodegaGraphQLParser
 
 
 LAST_STATUS: dict = {"state": "not_run"}
 
 
-def consultar_liquidaciones_bodega_api(termino_busqueda: str) -> dict:
+def consultar_liquidaciones_bodega_api(termino_busqueda: str, pagina: int = 1, tamano: int = 40) -> dict:
     endpoint = os.getenv("BODEGA_GRAPHQL_URL", "").strip()
     store_id = os.getenv("BODEGA_STORE_ID", "").strip() or "0000003001"  # una variable vacía no debe anular el valor por defecto
     if not endpoint:
@@ -29,8 +30,8 @@ def consultar_liquidaciones_bodega_api(termino_busqueda: str) -> dict:
         "variables": {
             "searchQuery": termino_busqueda,
             "facetFilters": "[]",
-            "page": 1,
-            "size": 40,
+            "page": pagina,
+            "size": tamano,
             "storeId": store_id,
         },
     }
@@ -70,12 +71,10 @@ def consultar_liquidaciones_bodega_api(termino_busqueda: str) -> dict:
 
 
 def buscar_bodega_graphql(terminos=None, marcas_prioritarias=None) -> list[dict]:
+    """Busca liquidaciones por varios términos y páginas (WALMART_QUERIES/BODEGA_QUERIES y *_PAGES)."""
     parser = BodegaGraphQLParser(marcas_prioritarias=marcas_prioritarias)
-    resultados = []
-    for termino in terminos or ("liquidacion", "remate", "oferta", "outlet"):
-        payload = consultar_liquidaciones_bodega_api(termino)
-        resultados.extend(parser.parsear_respuesta_busqueda(payload))
-        # Fuente bloqueada/no disponible: no se insiste con más términos en este ciclo.
-        if LAST_STATUS.get("state") in BLOCKING_STATES or LAST_STATUS.get("state") in ("not_configured", "unauthorized", "not_found"):
-            break
-    return resultados
+    terminos = tuple(terminos) if terminos else env_terminos("BODEGA_QUERIES", TERMINOS_LIQUIDACION)
+    return buscar_graphql_paginado(
+        consultar_liquidaciones_bodega_api, parser, terminos,
+        paginas=env_int("BODEGA_PAGES", 2, 1, 5), tamano=40, estado=LAST_STATUS,
+    )
