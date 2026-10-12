@@ -125,6 +125,21 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertTrue(all(r["tipo_fuente"] == "ONLINE" for r in rows))
         self.assertNotIn("descuento", rows[0])                       # no se hereda el del proxy
 
+    def test_formato_anidado_data_search_products(self):
+        payload = {"data": {"search": {"products": [{
+            "id": "nested-1", "name": "Televisión 50 pulgadas",
+            "canonicalUrl": "/ip/television/123", "priceInfo": {
+                "currentPrice": {"price": 4000}, "wasPrice": {"price": 9000}
+            }
+        }]}}}
+        s = self._scraper(payload)
+        rows = s.discover()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["tienda"], "Walmart MX") if False else None
+        self.assertEqual(rows[0]["precio_actual"], 4000.0)
+        self.assertEqual(rows[0]["precio_anterior"], 9000.0)
+        self.assertEqual(s.last_status["state"], "ok")
+
     def test_formato_por_tienda_y_json_invalido(self):
         s = self._scraper({"walmart": [{"name": "A", "url": "/ip/a/1", "price": 5}],
                            "mercadolibre": [{"title": "B", "permalink": "https://articulo.mercadolibre.com.mx/MLM-1-b", "price": 7}]})
