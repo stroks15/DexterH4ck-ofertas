@@ -235,8 +235,9 @@ function pedirJSON(url, cacheKey) {
   });
   const code = response.getResponseCode();
   if (code < 200 || code >= 300) {
+    // Propagar el código al JSON de diagnóstico para distinguir 403, 404, 429 y 5xx.
     console.warn("HTTP " + code + " en fuente " + cacheKey);
-    return null;
+    throw new Error("HTTP " + code + " en fuente " + cacheKey);
   }
 
   const body = response.getContentText();
@@ -245,7 +246,7 @@ function pedirJSON(url, cacheKey) {
     data = JSON.parse(body);
   } catch (err) {
     console.warn("Respuesta no JSON en fuente " + cacheKey);
-    return null;
+    throw new Error("Respuesta no JSON en fuente " + cacheKey);
   }
 
   // Apps Script limita el tamaño de cada valor de caché.
