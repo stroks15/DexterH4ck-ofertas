@@ -83,12 +83,21 @@ def nivel_extremo(precio, referencia=None):
         return "EXTREMO"
     return "normal"
 
-def senal_terminacion_liquidacion(precio, tienda):
-    """Señal de liquidación física por terminación conocida en México.
+def es_fuente_fisica(item):
+    """True solo para capturas de sucursal (tipo_fuente == FISICA)."""
+    return str((item or {}).get("tipo_fuente") or "").strip().upper() == "FISICA"
 
-    No depende del texto de la publicación y aporta +30 al score. Es una señal,
-    no una garantía de inventario: la disponibilidad local debe verificarse.
+
+def senal_terminacion_liquidacion(precio, tienda, fisica=False):
+    """Señal de liquidación por terminación de centavos (SOLO tiendas FÍSICAS).
+
+    Las terminaciones .01/.02/.03 (Walmart/Bodega) y .02/.05 (Soriana) son exclusivas de
+    liquidaciones en sucursal. En Walmart.com.mx / Bodegaaurrera.com.mx las liquidaciones
+    online son rebajas matemáticas sobre el precio de lista y NO usan esas terminaciones,
+    así que sin ``fisica=True`` esta función siempre devuelve False.
     """
+    if not fisica:
+        return False
     try:
         texto = f"{float(precio):.2f}"
     except (TypeError, ValueError):
@@ -101,8 +110,8 @@ def senal_terminacion_liquidacion(precio, tienda):
     return False
 
 
-def senal_terminacion_walmart(precio, tienda):
-    return senal_terminacion_liquidacion(precio, tienda)
+def senal_terminacion_walmart(precio, tienda, fisica=False):
+    return senal_terminacion_liquidacion(precio, tienda, fisica=fisica)
 
 def _precios_en_html(html):
     valores=[]
@@ -143,7 +152,7 @@ def analizar_precio_extremo(item, session=None):
     señales=[]
     if nivel != "normal":
         señales.append("precio_extremo")
-    if senal_terminacion_liquidacion(precio, tienda):
+    if senal_terminacion_liquidacion(precio, tienda, fisica=es_fuente_fisica(item)):
         señales.append("liquidacion_terminacion_centavos")
     oficial=es_producto_oficial(url,tienda)
     if oficial:

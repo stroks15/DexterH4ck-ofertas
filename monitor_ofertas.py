@@ -17,6 +17,7 @@ import requests
 
 from core.liquidation_engine import evaluate_product, calculate_discount
 from core.extreme_liquidation import analizar_precio_extremo
+from core.price_sanitizer import coincide_con_medida, sanear_par_precios, texto_del_item
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from core.product_identifiers import canonical_product_identifier
 from core.source_resilience import HONEST_USER_AGENT, classify_status
@@ -54,9 +55,26 @@ def cargar_historial():
     try:
         with open(HISTORIAL_FILE, "r", encoding="utf-8") as archivo:
             data = json.load(archivo)
-            return data if isinstance(data, dict) else {}
+            return _sanear_historial(data) if isinstance(data, dict) else {}
     except (OSError, json.JSONDecodeError, TypeError):
         return {}
+
+def _sanear_historial(historial: dict) -> dict:
+    """Repara entradas contaminadas por el bug de gramajes (p. ej. "567 g" guardado como
+    precio_maximo=567). El máximo corregido pasa a ser el precio actual observado."""
+    reparadas = 0
+    for entrada in historial.values():
+        if not isinstance(entrada, dict):
+            continue
+        maximo = entrada.get("precio_maximo")
+        if maximo and coincide_con_medida(maximo, entrada.get("titulo")):
+            actual = _num(entrada.get("precio_actual"))
+            if actual and actual < _num(maximo):
+                entrada["precio_maximo"] = actual
+                reparadas += 1
+    if reparadas:
+        logger.warning("Historial: %d entradas con precio_maximo igual a un gramaje fueron reparadas.", reparadas)
+    return historial
 
 def guardar_historial(historial):
     if len(historial) > MAX_HISTORIAL:
@@ -213,7 +231,7 @@ VARIABLES_OPCIONALES = (
     "BODEGA_GRAPHQL_URL", "BODEGA_STORE_ID", "BODEGA_GRAPHQL_QUERY",
     "CHEDRAUI_VTEX_ENDPOINT", "SORIANA_API_ENDPOINT", "COPPEL_API_ENDPOINT",
     "SUBURBIA_API_ENDPOINT", "AMAZON_API_ENDPOINT", "ML_QUERIES",
-    "MERCADOLIBRE_ACCESS_TOKEN",
+    "MERCADOLIBRE_ACCESS_TOKEN", "APPS_SCRIPT_PROXY_URL",
 )
 
 
@@ -233,11 +251,24 @@ def calcular_datos(item: dict, entrada_historial: dict | None = None):
 
     La referencia es conservadora: se usa el precio anterior explícito de la oferta
     si es válido; solo si no existe se recurre al precio máximo del historial.
+    Ambos pasan por la sanitización estricta: un gramaje/tamaño ("875g", "1kg", "400ml")
+    jamás puede actuar como precio de referencia.
     """
-    actual = _num(item.get("precio_actual", item.get("price")))
-    anterior = _num(item.get("precio_anterior", item.get("previous_price")))
+    texto = texto_del_item(item)
+    actual, anterior, motivo = sanear_par_precios(
+        item.get("precio_actual", item.get("price")),
+        item.get("precio_anterior", item.get("previous_price")),
+        texto,
+    )
+    if motivo and motivo not in ("anterior_no_mayor",):
+        logger.warning("[PRECIO SANEADO] %s | %s | actual=%r anterior=%r -> %s",
+                       item.get("tienda"), str(item.get("titulo") or "")[:60],
+                       item.get("precio_actual"), item.get("precio_anterior"), motivo)
+    actual = actual or 0.0
     maximo = _num((entrada_historial or {}).get("precio_maximo"))
-    if actual > 0 and anterior > actual:
+    if maximo and coincide_con_medida(maximo, texto):
+        maximo = 0.0                      # historial contaminado por un gramaje
+    if actual > 0 and anterior and anterior > actual:
         referencia = anterior
     elif actual > 0 and maximo > actual:
         referencia = maximo
@@ -435,6 +466,12 @@ def definir_fuentes(sesion: requests.Session | None = None) -> list:
     for scraper in ApiStoresScraper().scrapers:
         fuentes.append(Fuente(f"api:{scraper.store}", {canonical_store(scraper.store)},
                               scraper.discover, lambda s=scraper: s.last_status))
+
+    # Proxy unificado en Google Apps Script (Walmart, Bodega, Mercado Libre, Chedraui, Soriana).
+    # Sin tiendas asociadas: un preflight bloqueado de una tienda no debe apagar el proxy completo.
+    from scrapers.google_proxy_scraper import GoogleProxyScraper
+    proxy = GoogleProxyScraper()
+    fuentes.append(Fuente("proxy:google_apps_script", set(), proxy.discover, lambda: proxy.last_status))
 
     # Legacy/browser en paralelo
     fuentes.append(Fuente("legacy:tiendas_mexico", {"amazon", "soriana", "liverpool"},

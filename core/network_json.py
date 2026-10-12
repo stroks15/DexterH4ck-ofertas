@@ -9,6 +9,8 @@ import re
 from typing import Any
 from urllib.parse import urljoin
 
+from core.price_sanitizer import coincide_con_medida, parse_price
+
 CURRENT_KEYS=("price","currentPrice","salePrice","sellingPrice","offerPrice","precio","precioActual","finalPrice","salesPrice")
 REFERENCE_KEYS=("originalPrice","listPrice","regularPrice","compareAtPrice","wasPrice","previousPrice","precioAnterior","precioRegular","priceBeforeDiscount","list_price","regular_price")
 TITLE_KEYS=("name","title","productName","productTitle","nombre","displayName")
@@ -16,17 +18,12 @@ URL_KEYS=("url","link","permalink","canonicalUrl","productUrl","productURL")
 ID_KEYS=("id","productId","productID","sku","itemId","upc","gtin")
 
 def number(value: Any) -> float|None:
-    if isinstance(value,dict):
-        for key in ("value","amount","price"):
-            if key in value: return number(value[key])
-        return None
-    if isinstance(value,(int,float)): return float(value)
-    if value in (None,""): return None
-    match=re.search(r"-?\d+(?:\.\d+)?",str(value).replace("$","").replace(",",""))
-    if not match: return None
-    try:
-        n=float(match.group(0)); return n if n>=0 else None
-    except ValueError: return None
+    """Precio estricto: solo números reales o montos limpios ("$1,299.00").
+
+    Antes se extraía el primer número de cualquier texto, de modo que "875g" o "1 kg"
+    terminaban como precio. Ahora cualquier cadena con unidades se rechaza.
+    """
+    return parse_price(value)
 
 def _first(node,keys):
     for key in keys:
@@ -69,6 +66,8 @@ def extract_products(payload: Any,base_url="",store="JSON"):
         if not product_url.startswith(("http://","https://")): continue
         reference=_nested_price(node,REFERENCE_KEYS)
         if reference is not None and reference<=current: reference=None
+        if reference is not None and coincide_con_medida(reference,f"{title} {node.get('description') or ''} {node.get('size') or ''}") and (1-current/reference)*100>=50:
+            reference=None   # la "referencia" era un gramaje/medida del producto, no un precio
         product_id=_first(node,ID_KEYS)
         brand=_first(node,("brand","brandName","marca"))
         if isinstance(brand,dict): brand=brand.get("name") or brand.get("value") or ""

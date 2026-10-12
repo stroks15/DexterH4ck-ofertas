@@ -97,7 +97,15 @@ Los endpoints de terceros solo deben configurarse cuando estén documentados o a
 - Walmart/Bodega: `.03`, `.02`, `.01`
 - Soriana: `.02`, `.05`
 
-Estas señales agregan **+30 puntos** y pueden generar alerta aunque no exista precio anterior online. No implican stock garantizado en sucursal.
+Estas terminaciones son **exclusivas de liquidaciones en sucursal (FÍSICAS)**. Solo suman **+30 puntos** cuando el candidato trae `tipo_fuente == "FISICA"`. En Walmart.com.mx y Bodegaaurrera.com.mx (web/APIs/proxy) las liquidaciones son rebajas matemáticas sobre el precio de lista, por lo que el detector online se basa únicamente en caídas reales de precio (50–99%). No implican stock garantizado en sucursal.
+
+### Sanitización de precios
+
+`core/price_sanitizer.py` impide que un tamaño/gramaje (`875g`, `1kg`, `400ml`) se interprete como `precio_anterior`: solo se aceptan nodos numéricos de precio (p. ej. `priceInfo.wasPrice.price`) o montos limpios (`$1,299.00`), y se descarta toda referencia que coincida con una medida declarada en el título. El historial contaminado se repara al cargarse.
+
+### Proxy de Google Apps Script
+
+`scrapers/google_proxy_scraper.py` consume por GET (`allow_redirects=True`, Apps Script responde 302) la Web App indicada en `APPS_SCRIPT_PROXY_URL` (Walmart, Bodega Aurrera, Mercado Libre, Chedraui y Soriana). La URL nunca se registra en logs.
 
 ### Política de descuentos
 
