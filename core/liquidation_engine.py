@@ -144,8 +144,8 @@ def score_product(product, discount=None):
         indicators.append("ultima_pieza_outlet")
 
     extreme = analizar_precio_extremo(product)
-    # Liquidaciones físicas por centavos: señal independiente del texto.
-    # Se aplica a Walmart/Bodega (.01/.02/.03) y Soriana (.02/.05).
+    # Liquidaciones por centavos: SOLO capturas FÍSICAS (tipo_fuente == "FISICA").
+    # Online (web/APIs) esta señal nunca se emite: ahí cuentan las caídas de precio reales.
     if "liquidacion_terminacion_centavos" in extreme.get("senales", []):
         score += 30
         indicators.append("liquidacion_centavos_fisica")
