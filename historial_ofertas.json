@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BO8DUWT1AJOJaPY%2BnddBeG5zTPw5fHV2ERvBmQ6zIEpES94lwm4exFCHeSeWDC%2FTb5fBmcimB3nbOxm38lmzi%2B%2BnStdM0Z3VS%2FhRsrXg7qtksIqzws7XMZXUEd9h67ZWG8lWihf6TNjvVTIpUAj%2BRAPco2eDvBsIPZBEP28NyBBak%2FJYA3LJGXYfMhl3sgM5h2ljgX6CrjidB6%2Fb9w%3D%3D",
-    "precio_actual": 204.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOIO5EwWpgmCynQMraoXau8NxMXMQWguimIXB0wRCrMZLGMTkrj6ZKdSfoQygkdkdfLcpZRoHsZQUk68FO6YYoU2893jkXknA3ywo9MfHlWxOq1N69e9WvSuBwzDXEOn5MiGhdeTGVYEPsK6fAc%2FeSirNZcL15X%2BwHIVKu4uUI9mPo4H8LTcVH7CEa0r1ucjY3%2F%2FZw%3D%3D",
+    "precio_actual": 60.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-12T03:06:00.258349+00:00",
+    "ultima_actualizacion": "2026-10-12T04:13:01.221784+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -38481,9 +38481,9 @@
     "tienda": "Walmart MX",
     "titulo": "Freidora de Aire Oster Digital 6L de Capacidad Negro",
     "url": "https://www.walmart.com.mx/ip/Freidora-de-Aire-Oster-Digital-6L-de-Capacidad-Negro/00005389117591?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTc1OTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 1319.0,
+    "precio_actual": 1299.0,
     "precio_maximo": 1552.0,
-    "ultima_actualizacion": "2026-10-12T03:06:00.258349+00:00",
+    "ultima_actualizacion": "2026-10-12T04:13:01.221784+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750043524576": {
@@ -39249,6 +39249,24 @@
     "precio_actual": 1976.57,
     "precio_maximo": 2999.99,
     "ultima_actualizacion": "2026-10-12T03:49:43.352448+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fx22s7pl": {
+    "tienda": "Amazon",
+    "titulo": "B0FX22S7PL",
+    "url": "https://www.amazon.com.mx/dp/B0FX22S7PL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 269.51,
+    "precio_maximo": 377.69,
+    "ultima_actualizacion": "2026-10-12T04:13:01.221784+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b019k9q3zw": {
+    "tienda": "Amazon",
+    "titulo": "B019K9Q3ZW",
+    "url": "https://www.amazon.com.mx/gp/product/B019K9Q3ZW?smid=AVDBXBAVVSXLQ&ascsubtag=srctok-0881aeb89fcae0bb&btn_type=ss&btn_ref=srctok-0668c81562a3e71b&th=1&linkCode=sl2&tag=ofertones03-20&linkId=f32d7e995bc1ad57e01954bd4c5cb6c7&ref_=as_li_ss_tl",
+    "precio_actual": 32.94,
+    "precio_maximo": 41.18,
+    "ultima_actualizacion": "2026-10-12T04:13:01.221784+00:00",
     "precio_alertado": null
   }
 }
