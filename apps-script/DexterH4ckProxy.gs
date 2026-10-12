@@ -94,7 +94,8 @@ function doGet(e) {
 
   const unicas = deduplicar(ofertas);
   const exitosas = fuentes.filter(f => f.estado === "ok" || f.estado === "partial").length;
-  const status = exitosas ? (errores.length ? "partial" : "success") : "error";
+  const hayIncidencias = errores.length > 0 || fuentes.some(f => f.estado === "partial" || f.estado === "error");
+  const status = exitosas ? (hayIncidencias ? "partial" : "success") : "error";
 
   return ContentService.createTextOutput(JSON.stringify({
     status: status,
@@ -144,7 +145,7 @@ function buscarChedraui(termino) {
       nombre: p.productName,
       actual: offer.Price,
       anterior: offer.ListPrice,
-      url: p.link,
+      url: urlAbsoluta("https://www.chedraui.com.mx", p.link),
       imagen: imagen
     });
   }).filter(Boolean);
@@ -208,7 +209,7 @@ function buscarConfigurada(propiedad, tienda, base, termino) {
       nombre: p.name || p.title || p.productName,
       actual: actual,
       anterior: anterior,
-      url: ruta ? (String(ruta).indexOf("http") === 0 ? ruta : baseSeguro + ruta) : "",
+      url: urlAbsoluta(baseSeguro, ruta),
       imagen: imagen
     });
   }).filter(Boolean);
@@ -252,6 +253,14 @@ function pedirJSON(url, cacheKey) {
     try { cache.put(key, body, CFG.cacheSegundos); } catch (ignored) {}
   }
   return data;
+}
+
+
+function urlAbsoluta(base, ruta) {
+  const valor = String(ruta || "").trim();
+  if (!valor) return "";
+  if (/^https?:\/\//i.test(valor)) return valor;
+  return base.replace(/\/$/, "") + "/" + valor.replace(/^\//, "");
 }
 
 function normalizar(p) {
