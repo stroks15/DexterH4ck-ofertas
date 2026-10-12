@@ -87,4 +87,4 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules tests.test_source_status tests.test_monitor_flow -v
+          python -m unittest tests.test_store_discovery_regressions tests.test_product_identifiers tests.test_network_json tests.test_monitor_rules tests.test_source_status tests.test_monitor_flow tests.test_price_sanitizer -v

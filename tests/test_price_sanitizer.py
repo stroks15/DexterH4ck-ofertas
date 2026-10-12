@@ -160,5 +160,41 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertEqual(s2.last_status["state"], "invalid_response")
 
 
+    def test_proxy_english_offers_contract_and_source_health(self):
+        payload = {
+            "status": "partial",
+            "total_detected": 1,
+            "fuentes": [{"tienda": "MERCADO_LIBRE", "estado": "ok", "ofertas": 1}],
+            "offers": [{
+                "tienda": "MERCADO_LIBRE",
+                "id": "MLM123",
+                "nombre": "Audífonos",
+                "url": "https://articulo.mercadolibre.com.mx/MLM-123-audifonos",
+                "precio_actual": 100,
+                "precio_anterior": 250,
+                "descuento": 60
+            }]
+        }
+        s = self._scraper(payload)
+        rows = s.discover()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["tienda"], "Mercado Libre MX")
+        self.assertEqual(rows[0]["precio_actual"], 100.0)
+        self.assertEqual(s.last_status["state"], "ok")
+        self.assertEqual(s.last_status["proxy_status"], "partial")
+        self.assertEqual(s.last_status["fuentes"][0]["tienda"], "MERCADO_LIBRE")
+
+    def test_proxy_empty_offers_is_empty_not_invalid_json(self):
+        s = self._scraper({
+            "status": "success",
+            "total_detected": 0,
+            "fuentes": [{"tienda": "MERCADO_LIBRE", "estado": "ok", "ofertas": 0}],
+            "offers": []
+        })
+        self.assertEqual(s.discover(), [])
+        self.assertEqual(s.last_status["state"], "empty")
+        self.assertEqual(s.last_status["proxy_status"], "success")
+
+
 if __name__ == "__main__":
     unittest.main()

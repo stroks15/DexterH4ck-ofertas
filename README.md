@@ -110,3 +110,27 @@ Estas terminaciones son **exclusivas de liquidaciones en sucursal (FÍSICAS)**. 
 ### Política de descuentos
 
 El monitor investiga **50–99%**. Los rangos de diagnóstico son **50–69%, 70–89%, 90–94% y 95–99%**. Toda liquidación **90–99%** con referencia válida se fuerza como alerta prioritaria y lleva el emoji **💣** al inicio. El 95/99% no es el único objetivo.
+
+
+## Proxy Google Apps Script — versión corregida
+
+El código fuente para pegar en el editor de Apps Script está en
+`apps-script/DexterH4ckProxy.gs`. La versión anterior construía URLs con
+`{encodeURIComponent(termino)}` literal, que generaba URLs inválidas.
+
+### Instalación
+
+1. Abre el proyecto de Google Apps Script que ya despliegas como Web App.
+2. Copia el contenido de `apps-script/DexterH4ckProxy.gs` al editor y guarda.
+3. En **Configuración del proyecto → Propiedades del script**, configura opcionalmente:
+   - `WALMART_JSON_SEARCH_URL`
+   - `BODEGA_JSON_SEARCH_URL`
+   - `SORIANA_JSON_SEARCH_URL`
+4. Cada valor opcional debe ser una URL HTTPS de una fuente JSON autorizada que contenga el marcador `{q}`. No uses una página HTML de búsqueda como si fuera una API.
+5. Actualiza la implementación de Web App para que use la nueva versión.
+6. Prueba `.../exec?q=liquidacion` en el navegador. El JSON devuelve `offers`, `fuentes`, `errores` y `total_detected`.
+7. Mantén la URL de implementación en el secreto de GitHub `APPS_SCRIPT_PROXY_URL`; nunca la pegues en el repositorio.
+
+Mercado Libre y Chedraui se consultan mediante sus formatos de catálogo previstos en el script; su disponibilidad puede cambiar. Walmart, Bodega Aurrera y Soriana quedan como `not_configured` hasta que se proporcione una API JSON que funcione. Esto evita informar falsamente que una tienda fue consultada con éxito. La caché dura cuatro minutos y el parámetro `q` permite probar una búsqueda individual.
+
+La integración Python reconoce la clave `offers` en inglés y conserva el estado de salud de las fuentes reportado por el proxy. Esta implementación no garantiza ofertas en cada ejecución: la disponibilidad real debe confirmarse en el JSON de la Web App.
