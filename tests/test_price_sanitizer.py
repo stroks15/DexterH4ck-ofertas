@@ -126,7 +126,7 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertNotIn("descuento", rows[0])                       # no se hereda el del proxy
 
     def test_formato_anidado_data_search_products(self):
-        payload = {"data": {"search": {"products": [{
+        payload = {"walmart": {"data": {"search": {"products": [{
             "id": "nested-1", "name": "Televisión 50 pulgadas",
             "canonicalUrl": "/ip/television/123", "priceInfo": {
                 "currentPrice": {"price": 4000}, "wasPrice": {"price": 9000}
