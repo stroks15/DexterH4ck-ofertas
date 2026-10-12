@@ -99,7 +99,7 @@ function doGet(e) {
 
   return ContentService.createTextOutput(JSON.stringify({
     status: status,
-    version: "2.1.0",
+    version: "2.1.2",
     generated_at: new Date().toISOString(),
     tiendas_monitoreadas: fuentes.map(f => f.tienda),
     total_detected: unicas.length,
@@ -221,7 +221,7 @@ function pedirJSON(url, cacheKey) {
   }
 
   const cache = CacheService.getScriptCache();
-  const key = "dexter-proxy-v2:" + cacheKey;
+  const key = "dexter-proxy-v212:" + cacheKey;
   const cached = cache.get(key);
   if (cached) {
     try { return JSON.parse(cached); } catch (ignored) { cache.remove(key); }
