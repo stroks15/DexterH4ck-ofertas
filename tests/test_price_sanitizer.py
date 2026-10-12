@@ -140,6 +140,15 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertEqual(rows[0]["precio_anterior"], 9000.0)
         self.assertEqual(s.last_status["state"], "ok")
 
+    def test_infiere_tienda_por_dominio_si_falta_campo_tienda(self):
+        s = self._scraper({"ofertas": [{
+            "name": "Televisión", "url": "https://www.walmart.com.mx/ip/tv/123",
+            "price": 4000, "listPrice": 9000
+        }]})
+        rows = s.discover()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["tienda"], "Walmart MX")
+
     def test_formato_por_tienda_y_json_invalido(self):
         s = self._scraper({"walmart": [{"name": "A", "url": "/ip/a/1", "price": 5}],
                            "mercadolibre": [{"title": "B", "permalink": "https://articulo.mercadolibre.com.mx/MLM-1-b", "price": 7}]})
