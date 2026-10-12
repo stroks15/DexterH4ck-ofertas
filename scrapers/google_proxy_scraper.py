@@ -258,33 +258,44 @@ class GoogleProxyScraper(BaseScraper):
                 continue
             vistos.add(clave)
             rows.append(producto)
+        # Preservar el diagnóstico del proxy incluso cuando no devuelve productos.
+        proxy_errors = payload.get("errores") if isinstance(payload, dict) else None
+        diagnostico = {
+            "proxy_status": proxy_status or None,
+            "count": len(rows),
+            "rows_seen": len(filas),
+            "rejected_rows": descartadas,
+        }
+        if isinstance(proxy_sources, list):
+            diagnostico["fuentes"] = proxy_sources
+        if isinstance(proxy_errors, list) and proxy_errors:
+            # Los mensajes de error vienen del proxy; no contienen credenciales.
+            diagnostico["errores_proxy"] = proxy_errors[:30]
+
         if rows:
-            self.last_status = {"state": "ok", "count": len(rows), "rows_seen": len(filas),
-                                "rejected_rows": descartadas}
-            if proxy_status:
-                self.last_status["proxy_status"] = proxy_status
-            if isinstance(proxy_sources, list):
-                self.last_status["fuentes"] = proxy_sources
+            diagnostico["state"] = "ok" if proxy_status in ("", "success") else "partial"
+            self.last_status = diagnostico
         else:
+            tiene_lista_productos = isinstance(payload, dict) and any(
+                isinstance(payload.get(k), list) for k in ("offers", "ofertas", "productos", "results")
+            )
             if proxy_status == "error":
                 estado = "error"
-            elif filas:
+                detalle = "el proxy reportó un fallo global"
+            elif proxy_status == "partial":
+                estado = "partial"
+                detalle = "el proxy tuvo errores parciales y no devolvió ofertas válidas"
+            elif proxy_status == "success" or tiene_lista_productos:
                 estado = "empty"
-            elif isinstance(payload, dict) and any(k in payload for k in ("offers", "ofertas", "productos", "results")):
-                estado = "empty"
+                detalle = ("se encontraron filas, pero ninguna pasó la normalización"
+                           if filas else "el proxy respondió sin ofertas")
             else:
                 estado = "invalid_response"
-            self.last_status = {"state": estado, "count": 0, "rows_seen": len(filas),
-                                "rejected_rows": descartadas,
-                                "detail": "el proxy reportó un fallo global" if proxy_status == "error"
-                                else ("el JSON no contiene filas de producto reconocibles" if not filas
-                                else "se encontraron filas, pero ninguna pasó la normalización")}
-            if proxy_status:
-                self.last_status["proxy_status"] = proxy_status
-            if isinstance(proxy_sources, list):
-                self.last_status["fuentes"] = proxy_sources
-            logger.warning("[Google Proxy] %s: filas=%s, descartadas=%s.",
-                           self.last_status["detail"], len(filas), descartadas)
+                detalle = "el JSON no contiene filas de producto ni un estado reconocido"
+            diagnostico.update({"state": estado, "detail": detalle})
+            self.last_status = diagnostico
+            logger.warning("[Google Proxy] %s: filas=%s, descartadas=%s, estado_proxy=%s.",
+                           detalle, len(filas), descartadas, proxy_status or "sin estado")
         return rows
 
 
