@@ -20,7 +20,7 @@ from __future__ import annotations
 import logging
 import os
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 
@@ -65,6 +65,25 @@ def _canonica(valor: Any) -> str | None:
     for alias, nombre in TIENDAS:
         if any(a in texto for a in alias):
             return nombre
+    return None
+
+
+def _tienda_por_url(url: str) -> str | None:
+    """Infiere la tienda por dominio cuando el proxy entrega una fila sin campo tienda."""
+    try:
+        host = (urlparse(str(url or "")).hostname or "").lower().rstrip(".")
+    except ValueError:
+        return None
+    dominios = {
+        "Walmart MX": ("walmart.com.mx",),
+        "Bodega Aurrera": ("bodegaaurrera.com.mx",),
+        "Mercado Libre MX": ("mercadolibre.com.mx", "mercadolibre.com", "mercadolibre.com.ar"),
+        "Chedraui": ("chedraui.com.mx",),
+        "Soriana": ("soriana.com",),
+    }
+    for tienda, bases in dominios.items():
+        if any(host == base or host.endswith("." + base) for base in bases):
+            return tienda
     return None
 
 
@@ -180,9 +199,9 @@ class GoogleProxyScraper(BaseScraper):
         return unicas
 
     def _normalizar(self, fila: dict, tienda_heredada: str | None) -> dict[str, Any] | None:
-        tienda = _canonica(_primero(fila, K_TIENDA)) or tienda_heredada
         titulo = str(_primero(fila, K_TITULO) or "").strip()
         url = str(_primero(fila, K_URL) or "").strip()
+        tienda = _canonica(_primero(fila, K_TIENDA)) or tienda_heredada or _tienda_por_url(url)
         if not tienda or not titulo or not url:
             return None
         url = urljoin(HOSTS.get(tienda, "") + "/", url)
