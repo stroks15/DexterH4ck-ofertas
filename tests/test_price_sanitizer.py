@@ -56,7 +56,7 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(rows[0]["descuento"], 59)
 
     def test_walmart_online_termina_en_01_sin_rebaja_no_es_candidato(self):
-        payload = {"walmart": {"data": {"search": {"products": [{
+        payload = {"data": {"search": {"products": [{
             "id": "2", "name": "Producto", "canonicalUrl": "/ip/p/2",
             "priceInfo": {"currentPrice": {"price": 849.01}}}]}}}
         self.assertEqual(WalmartGraphQLParser().parsear_respuesta_busqueda(payload), [])
