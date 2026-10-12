@@ -31620,9 +31620,9 @@
     "titulo": "lists",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos/lists",
-    "precio_actual": 405.0,
-    "precio_maximo": 1504.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists",
+    "precio_actual": 4389.0,
+    "precio_maximo": 6000.0,
     "descuento": 0,
     "puntuacion": 5,
     "extremo": {
@@ -31639,7 +31639,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-12T03:49:43.352448+00:00",
     "precio_alertado": null
   },
   "chedraui|title:tomates cherry naturesweet glorys 467g": {
@@ -39213,6 +39213,42 @@
     "precio_actual": 59.0,
     "precio_maximo": 59.0,
     "ultima_actualizacion": "2026-10-12T03:21:42.938978+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f34bzmg9": {
+    "tienda": "Amazon",
+    "titulo": "B0F34BZMG9",
+    "url": "https://www.amazon.com.mx/dp/B0F34BZMG9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 714.5,
+    "precio_maximo": 1999.0,
+    "ultima_actualizacion": "2026-10-12T03:49:44.020327+00:00",
+    "precio_alertado": 714.5
+  },
+  "amazon|code:b0ccrmk33d": {
+    "tienda": "Amazon",
+    "titulo": "B0CCRMK33D",
+    "url": "https://www.amazon.com.mx/dp/B0CCRMK33D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 360.99,
+    "precio_maximo": 648.45,
+    "ultima_actualizacion": "2026-10-12T03:49:43.352448+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:1302970267": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Spider-Man: Brand New Day - The Art Of The Movie",
+    "url": "https://www.amazon.com.mx/dp/1302970267?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 531.41,
+    "precio_maximo": 865.0,
+    "ultima_actualizacion": "2026-10-12T03:49:43.352448+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bmgszmw9": {
+    "tienda": "Amazon",
+    "titulo": "B0BMGSZMW9",
+    "url": "https://www.amazon.com.mx/dp/B0BMGSZMW9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1976.57,
+    "precio_maximo": 2999.99,
+    "ultima_actualizacion": "2026-10-12T03:49:43.352448+00:00",
     "precio_alertado": null
   }
 }
