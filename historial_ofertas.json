@@ -39169,5 +39169,32 @@
     "precio_maximo": 349.0,
     "ultima_actualizacion": "2026-10-12T03:06:00.258349+00:00",
     "precio_alertado": null
+  },
+  "amazon|code:b0dmcbkklb": {
+    "tienda": "Amazon",
+    "titulo": "B0DMCBKKLB",
+    "url": "https://www.amazon.com.mx/dp/B0DMCBKKLB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 5199.0,
+    "precio_maximo": 10035.75,
+    "ultima_actualizacion": "2026-10-12T03:12:58.694954+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hj4223ng": {
+    "tienda": "Amazon",
+    "titulo": "B0HJ4223NG",
+    "url": "https://www.amazon.com.mx/dp/B0HJ4223NG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 6599.0,
+    "precio_maximo": 8248.75,
+    "ultima_actualizacion": "2026-10-12T03:12:58.694954+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0djdhwjyc": {
+    "tienda": "Amazon",
+    "titulo": "B0DJDHWJYC",
+    "url": "https://www.amazon.com.mx/dp/B0DJDHWJYC?ascsubtag=ppr-mx-614568947&linkCode=sl2&tag=yteliquidapromos-20&linkId=da2a49b0752add9107c8701be4e0f43a&ref_=as_li_ss_tl&btn_type=ss&btn_ref=srctok-25ac10785c5a2e33",
+    "precio_actual": 2599.0,
+    "precio_maximo": 2599.0,
+    "ultima_actualizacion": "2026-10-12T03:12:58.694954+00:00",
+    "precio_alertado": null
   }
 }
