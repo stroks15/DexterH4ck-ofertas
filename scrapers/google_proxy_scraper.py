@@ -32,7 +32,7 @@ logger = logging.getLogger("DexterH4ck.GoogleProxy")
 
 ENV_URL = "APPS_SCRIPT_PROXY_URL"
 
-LISTA_KEYS = ("ofertas", "productos", "products", "items", "data", "results", "resultados", "deals")
+LISTA_KEYS = ("ofertas", "offers", "productos", "products", "items", "data", "results", "resultados", "deals")
 
 # Alias de tienda (en minúsculas, sin acentos/espacios) -> nombre canónico del monitor.
 TIENDAS = (
@@ -242,6 +242,8 @@ class GoogleProxyScraper(BaseScraper):
         payload = self._descargar()
         if payload is None:
             return []
+        proxy_status = str(payload.get("status") or "") if isinstance(payload, dict) else ""
+        proxy_sources = payload.get("fuentes") if isinstance(payload, dict) else None
         filas = self._filas(payload)
         rows: list[dict[str, Any]] = []
         descartadas = 0
@@ -259,12 +261,28 @@ class GoogleProxyScraper(BaseScraper):
         if rows:
             self.last_status = {"state": "ok", "count": len(rows), "rows_seen": len(filas),
                                 "rejected_rows": descartadas}
+            if proxy_status:
+                self.last_status["proxy_status"] = proxy_status
+            if isinstance(proxy_sources, list):
+                self.last_status["fuentes"] = proxy_sources
         else:
-            estado = "empty" if filas else "invalid_response"
+            if proxy_status == "error":
+                estado = "error"
+            elif filas:
+                estado = "empty"
+            elif isinstance(payload, dict) and any(k in payload for k in ("offers", "ofertas", "productos", "results")):
+                estado = "empty"
+            else:
+                estado = "invalid_response"
             self.last_status = {"state": estado, "count": 0, "rows_seen": len(filas),
                                 "rejected_rows": descartadas,
-                                "detail": "el JSON no contiene filas de producto reconocibles" if not filas
-                                else "se encontraron filas, pero ninguna pasó la normalización"}
+                                "detail": "el proxy reportó un fallo global" if proxy_status == "error"
+                                else ("el JSON no contiene filas de producto reconocibles" if not filas
+                                else "se encontraron filas, pero ninguna pasó la normalización")}
+            if proxy_status:
+                self.last_status["proxy_status"] = proxy_status
+            if isinstance(proxy_sources, list):
+                self.last_status["fuentes"] = proxy_sources
             logger.warning("[Google Proxy] %s: filas=%s, descartadas=%s.",
                            self.last_status["detail"], len(filas), descartadas)
         return rows
