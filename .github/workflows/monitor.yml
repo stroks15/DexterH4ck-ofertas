@@ -189,6 +189,7 @@ jobs:
           GROQ_MAX_CALLS: "8"
           GROQ_MIN_DELAY: "1.5"
           MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
+          APPS_SCRIPT_PROXY_URL: ${{ secrets.APPS_SCRIPT_PROXY_URL }}
           ML_PRICE_LOOKUPS: "40"
           ML_OFFICIAL_ONLY: "false"
           ML_API_LIMIT: "50"
