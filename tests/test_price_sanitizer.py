@@ -56,7 +56,7 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(rows[0]["descuento"], 59)
 
     def test_walmart_online_termina_en_01_sin_rebaja_no_es_candidato(self):
-        payload = {"data": {"search": {"products": [{
+        payload = {"walmart": {"data": {"search": {"products": [{
             "id": "2", "name": "Producto", "canonicalUrl": "/ip/p/2",
             "priceInfo": {"currentPrice": {"price": 849.01}}}]}}}
         self.assertEqual(WalmartGraphQLParser().parsear_respuesta_busqueda(payload), [])
@@ -131,11 +131,11 @@ class GoogleProxyTests(unittest.TestCase):
             "canonicalUrl": "/ip/television/123", "priceInfo": {
                 "currentPrice": {"price": 4000}, "wasPrice": {"price": 9000}
             }
-        }]}}}
+        }]}}}}
         s = self._scraper(payload)
         rows = s.discover()
         self.assertEqual(len(rows), 1)
-        self.assertEqual(rows[0]["tienda"], "Walmart MX") if False else None
+        self.assertEqual(rows[0]["tienda"], "Walmart MX")
         self.assertEqual(rows[0]["precio_actual"], 4000.0)
         self.assertEqual(rows[0]["precio_anterior"], 9000.0)
         self.assertEqual(s.last_status["state"], "ok")
