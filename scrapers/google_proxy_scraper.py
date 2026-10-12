@@ -128,33 +128,56 @@ class GoogleProxyScraper(BaseScraper):
     # --------------------------------------------------------------- parseo
     @staticmethod
     def _filas(payload: Any) -> list[tuple[dict, str | None]]:
-        """Aplana el JSON en (fila, tienda_heredada)."""
+        """Aplana respuestas de Apps Script y catálogos anidados sin perder la tienda.
+
+        Acepta listas planas, {ofertas:[...]}, {walmart:[...]}, y estructuras como
+        {data:{search:{products:[...]}}} o {data:{walmart:[...]}}.
+        """
         filas: list[tuple[dict, str | None]] = []
+        vistos: set[int] = set()
 
-        def volcar(lista: Any, tienda: str | None) -> None:
-            if isinstance(lista, list):
-                for fila in lista:
+        def recorrer(nodo: Any, tienda: str | None = None) -> None:
+            if isinstance(nodo, list):
+                for fila in nodo:
                     if isinstance(fila, dict):
-                        filas.append((fila, tienda))
+                        # Un objeto producto suele tener al menos un campo de título/precio/URL.
+                        tiene_campos_producto = any(
+                            clave in fila for clave in (*K_TITULO, *K_URL, *K_ACTUAL, "priceInfo", "prices")
+                        )
+                        if tiene_campos_producto:
+                            filas.append((fila, tienda))
+                        else:
+                            recorrer(fila, tienda)
+                return
+            if not isinstance(nodo, dict) or id(nodo) in vistos:
+                return
+            vistos.add(id(nodo))
 
-        if isinstance(payload, list):
-            volcar(payload, None)
-        elif isinstance(payload, dict):
-            encontrado = False
+            # Algunas respuestas encapsulan la lista en una clave conocida.
             for clave in LISTA_KEYS:
-                if isinstance(payload.get(clave), list):
-                    volcar(payload[clave], None)
-                    encontrado = True
-                elif isinstance(payload.get(clave), dict):      # {"data": {"walmart": [...]}}
-                    for sub, lista in payload[clave].items():
-                        volcar(lista, _canonica(sub))
-                        encontrado = True
-            if not encontrado:                                   # {"walmart": [...], "soriana": [...]}
-                for sub, lista in payload.items():
-                    tienda = _canonica(sub)
-                    if tienda:
-                        volcar(lista, tienda)
-        return filas
+                if clave in nodo and isinstance(nodo[clave], (list, dict)):
+                    recorrer(nodo[clave], _canonica(clave) or tienda)
+
+            # Las claves por tienda heredan el nombre de la tienda a sus productos.
+            for clave, valor in nodo.items():
+                tienda_hija = _canonica(clave) or tienda
+                if isinstance(valor, (dict, list)):
+                    if clave not in LISTA_KEYS:
+                        recorrer(valor, tienda_hija)
+
+            # Payload de producto directo, no encapsulado en una lista.
+            if any(clave in nodo for clave in (*K_TITULO, *K_URL, *K_ACTUAL, "priceInfo", "prices")):
+                filas.append((nodo, tienda))
+
+        recorrer(payload)
+        # Evitar que una misma lista se visite por la clave conocida y por el recorrido genérico.
+        unicas: list[tuple[dict, str | None]] = []
+        ids: set[int] = set()
+        for fila, tienda in filas:
+            if id(fila) not in ids:
+                ids.add(id(fila))
+                unicas.append((fila, tienda))
+        return unicas
 
     def _normalizar(self, fila: dict, tienda_heredada: str | None) -> dict[str, Any] | None:
         tienda = _canonica(_primero(fila, K_TIENDA)) or tienda_heredada
@@ -200,18 +223,31 @@ class GoogleProxyScraper(BaseScraper):
         payload = self._descargar()
         if payload is None:
             return []
+        filas = self._filas(payload)
         rows: list[dict[str, Any]] = []
+        descartadas = 0
         vistos: set = set()
-        for fila, tienda in self._filas(payload):
+        for fila, tienda in filas:
             producto = self._normalizar(fila, tienda)
             if not producto:
+                descartadas += 1
                 continue
             clave = (producto["tienda"], producto["id"])
             if clave in vistos:
                 continue
             vistos.add(clave)
             rows.append(producto)
-        self.last_status = {"state": "ok", "count": len(rows)}
+        if rows:
+            self.last_status = {"state": "ok", "count": len(rows), "rows_seen": len(filas),
+                                "rejected_rows": descartadas}
+        else:
+            estado = "empty" if filas else "invalid_response"
+            self.last_status = {"state": estado, "count": 0, "rows_seen": len(filas),
+                                "rejected_rows": descartadas,
+                                "detail": "el JSON no contiene filas de producto reconocibles" if not filas
+                                else "se encontraron filas, pero ninguna pasó la normalización"}
+            logger.warning("[Google Proxy] %s: filas=%s, descartadas=%s.",
+                           self.last_status["detail"], len(filas), descartadas)
         return rows
 
 
