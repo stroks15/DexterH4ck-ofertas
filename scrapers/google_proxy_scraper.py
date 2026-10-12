@@ -220,13 +220,18 @@ class GoogleProxyScraper(BaseScraper):
             logger.warning("[Google Proxy] referencia descartada (%s): %s", motivo, titulo[:60])
 
         producto_id = _primero(fila, K_ID)
-        return self.normalize(
+        normalizado = self.normalize(
             title=titulo, url=url, price=actual, previous_price=anterior,
             id=str(producto_id) if producto_id is not None else url,
             marca=str(fila.get("marca") or fila.get("brand") or ""),
             categoria=str(fila.get("categoria") or fila.get("category") or ""),
             imagen=fila.get("imagen") or fila.get("image") or None,
-        ) | {
+        )
+        # BaseScraper.normalize puede rechazar precios/filas adicionales; no aplicar
+        # el operador | a None, porque convertiría un descarte normal en una excepción.
+        if not normalizado:
+            return None
+        return normalizado | {
             "tienda": tienda,
             "origen_link": "google_proxy",
             "api": "google_apps_script",
