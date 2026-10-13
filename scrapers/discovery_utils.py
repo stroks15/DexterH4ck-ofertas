@@ -8,7 +8,7 @@ from typing import Any, Callable, Iterable
 from core.source_resilience import BLOCKING_STATES
 
 # Estados tras los cuales NO se insiste con más términos/páginas contra la misma fuente.
-ESTADOS_CORTE = set(BLOCKING_STATES) | {"not_configured", "unauthorized", "not_found"}
+ESTADOS_CORTE = set(BLOCKING_STATES) | {"not_configured", "unauthorized", "not_found", "redirect"}
 
 # Términos de búsqueda orientados a liquidación (sobrescribibles por variable de entorno).
 TERMINOS_LIQUIDACION = (

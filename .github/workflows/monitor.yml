@@ -190,6 +190,8 @@ jobs:
           GROQ_MIN_DELAY: "1.5"
           MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
           APPS_SCRIPT_PROXY_URL: ${{ secrets.APPS_SCRIPT_PROXY_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           ML_PRICE_LOOKUPS: "40"
           ML_OFFICIAL_ONLY: "false"
           ML_API_LIMIT: "50"
@@ -200,6 +202,7 @@ jobs:
           WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
           BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
           WALMART_STORE_ID: ${{ vars.WALMART_STORE_ID }}
+          WALMART_TENANT: ${{ vars.WALMART_TENANT }}
           BODEGA_STORE_ID: ${{ vars.BODEGA_STORE_ID }}
           CHEDRAUI_VTEX_ENDPOINT: ${{ vars.CHEDRAUI_VTEX_ENDPOINT }}
           SORIANA_API_ENDPOINT: ${{ vars.SORIANA_API_ENDPOINT }}

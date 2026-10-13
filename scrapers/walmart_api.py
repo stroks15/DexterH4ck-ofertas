@@ -10,6 +10,7 @@ import requests
 
 from core.source_resilience import classify_status
 
+from config.endpoints import get_store_id
 from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
 from scrapers.discovery_utils import TERMINOS_LIQUIDACION, buscar_graphql_paginado, env_int, env_terminos
 from scrapers.walmart_graphql import WalmartGraphQLParser
@@ -20,7 +21,7 @@ LAST_STATUS: dict = {"state": "not_run"}
 
 def consultar_liquidaciones_walmart_api(termino_busqueda: str, pagina: int = 1, tamano: int = 40) -> dict:
     endpoint = os.getenv("WALMART_GRAPHQL_URL", "").strip()
-    store_id = os.getenv("WALMART_STORE_ID", "").strip() or "0000003362"  # una variable vacía no debe anular el valor por defecto
+    store_id = get_store_id("WALMART")  # una variable vacía no debe anular el valor por defecto (2033)
     if not endpoint:
         LAST_STATUS["state"] = "not_configured"
         return {}
@@ -45,10 +46,16 @@ def consultar_liquidaciones_walmart_api(termino_busqueda: str, pagina: int = 1, 
         "Origin": "https://www.walmart.com.mx",
         "Referer": "https://www.walmart.com.mx/",
         "X-Apollo-Operation-Name": "SearchAndFilter",
+        "Tenant": os.getenv("WALMART_TENANT", "").strip() or "WM_MEXICO",
     }
     time.sleep(random.uniform(2.5, 4.5))
     try:
-        response = requests.post(endpoint, json=payload, headers=headers, timeout=15)
+        # Sin seguir redirecciones: un 3xx hacia telemetría/publicidad no es una respuesta del catálogo.
+        response = requests.post(endpoint, json=payload, headers=headers, timeout=15, allow_redirects=False)
+        if 300 <= response.status_code < 400:
+            LAST_STATUS["state"] = "redirect"
+            print(f"[Walmart GraphQL] HTTP {response.status_code}: redirección ignorada (endpoint inválido o bloqueo).")
+            return {}
         if response.status_code != 200:
             LAST_STATUS["state"] = classify_status(response.status_code)
             print(f"[Walmart GraphQL] HTTP {response.status_code} ({LAST_STATUS['state']})")
