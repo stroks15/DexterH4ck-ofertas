@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BBILekF8ED%2Fb5CbjHqAD9Qm2VAxIViUcVwykcs8qSvEz%2Bu2mg9gBL%2BEbAXyxcgoyU6L8wEuiL8qNRYWEYkqi8jeT1yOeoOz2o1bVdUOM1pLHfFhnCJ%2FVcqKv9dyj%2F5dYGjEqBCo50zzUJqiTG6uVlUMq4NzaSH0sQF8UEXZPJsi0qjj%2BnMQH6o3%2FTNAdr2rj08LhKY4%3D",
-    "precio_actual": 204.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOWrKWlqvkZ8Ahvj8Fpoiz%2FJFJl1T4SaAKpVM2xtcQr9kdrbfq69jN6T03RKGDgBGN3x5iOm8zq0AV7VakklRP%2FnuVPID2fWfuTqFvgpsVbVsCd4vbjrYDy9Ula4BP4Sz3Bj3lAiWrKlW8jT4tqIuE6bgCRxJMiEZAWRW4ixtfOIKHardePcDPw19zwS9g7bRikJdl8%3D",
+    "precio_actual": 2009.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-13T08:29:26.732661+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -36608,37 +36608,37 @@
   "walmart|code:00750955245555": {
     "tienda": "Walmart MX",
     "titulo": "Agua micelar Garnier skin active todo en 1 piel sensible 400 ml",
-    "url": "https://www.walmart.com.mx/ip/Agua-micelar-Garnier-skin-active-todo-en-1-piel-sensible-400-ml/00750955245555?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyNDU1NTUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
-    "precio_actual": 103.0,
+    "url": "https://www.walmart.com.mx/ip/Agua-micelar-Garnier-skin-active-todo-en-1-piel-sensible-400-ml/00750955245555?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyNDU1NTUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 149.0,
     "precio_maximo": 180.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750955287546": {
     "tienda": "Walmart MX",
     "titulo": "Sérum booster Garnier skin active anti imperfecciones con ácido salicílico y vitamina c 30 ml",
-    "url": "https://www.walmart.com.mx/ip/Serum-booster-Garnier-skin-active-anti-imperfecciones-con-acido-salicilico-y-vitamina-c-30-ml/00750955287546?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODc1NDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
-    "precio_actual": 143.0,
+    "url": "https://www.walmart.com.mx/ip/Serum-booster-Garnier-skin-active-anti-imperfecciones-con-acido-salicilico-y-vitamina-c-30-ml/00750955287546?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODc1NDYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 154.0,
     "precio_maximo": 250.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00360054174452": {
     "tienda": "Walmart MX",
     "titulo": "Agua micelar Garnier skin active en aceite 400 ml",
-    "url": "https://www.walmart.com.mx/ip/Agua-micelar-Garnier-skin-active-en-aceite-400-ml/00360054174452?athAsset=eyJhdGhjcGlkIjoiMDAzNjAwNTQxNzQ0NTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
-    "precio_actual": 106.0,
+    "url": "https://www.walmart.com.mx/ip/Agua-micelar-Garnier-skin-active-en-aceite-400-ml/00360054174452?athAsset=eyJhdGhjcGlkIjoiMDAzNjAwNTQxNzQ0NTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 149.0,
     "precio_maximo": 185.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750955284404": {
     "tienda": "Walmart MX",
     "titulo": "Crema facial Garnier skin active hidratante express aclara tono uniforme 50 ml",
-    "url": "https://www.walmart.com.mx/ip/Crema-facial-Garnier-skin-active-hidratante-express-aclara-tono-uniforme-50-ml/00750955284404?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQ0MDQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
-    "precio_actual": 100.0,
+    "url": "https://www.walmart.com.mx/ip/Crema-facial-Garnier-skin-active-hidratante-express-aclara-tono-uniforme-50-ml/00750955284404?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQ0MDQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 107.76,
     "precio_maximo": 175.0,
-    "ultima_actualizacion": "2026-10-12T19:29:00.637305+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00789176083851": {
@@ -36761,10 +36761,10 @@
   "walmart|code:00750955284032": {
     "tienda": "Walmart MX",
     "titulo": "Crema facial L'Oréal revitalift día ácido hialurónico 50 ml",
-    "url": "https://www.walmart.com.mx/ip/Crema-facial-L-Oreal-revitalift-dia-acido-hialuronico-50-ml/00750955284032?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQwMzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
-    "precio_actual": 191.0,
+    "url": "https://www.walmart.com.mx/ip/Crema-facial-L-Oreal-revitalift-dia-acido-hialuronico-50-ml/00750955284032?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQwMzIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 259.0,
     "precio_maximo": 259.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750104000384": {
@@ -36995,10 +36995,10 @@
   "walmart|code:00750955284949": {
     "tienda": "Walmart MX",
     "titulo": "Sérum facial Garnier skin active express aclara anti-manchas 30 ml",
-    "url": "https://www.walmart.com.mx/ip/Serum-facial-Garnier-skin-active-express-aclara-anti-manchas-30-ml/00750955284949?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQ5NDkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
-    "precio_actual": 128.0,
+    "url": "https://www.walmart.com.mx/ip/Serum-facial-Garnier-skin-active-express-aclara-anti-manchas-30-ml/00750955284949?athAsset=eyJhdGhjcGlkIjoiMDA3NTA5NTUyODQ5NDkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 154.0,
     "precio_maximo": 154.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00001250266656": {
@@ -37014,9 +37014,9 @@
     "tienda": "Walmart MX",
     "titulo": "2025 Apple 11 Pulgadas iPad A16 Wi-Fi 128GB - Plateado",
     "url": "https://www.walmart.com.mx/ip/2025-Apple-11-Pulgadas-iPad-A16-Wi-Fi-128GB-Plateado/00019595008623?athAsset=eyJhdGhjcGlkIjoiMDAwMTk1OTUwMDg2MjMiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 10047.0,
+    "precio_actual": 9019.0,
     "precio_maximo": 12056.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750102600460": {
@@ -37157,10 +37157,10 @@
   "walmart|code:00750225248092": {
     "tienda": "Walmart MX",
     "titulo": "Bebida vegetal Nature's Heart sabor almendra sin azúcar 946 ml",
-    "url": "https://www.walmart.com.mx/ip/Bebida-vegetal-Nature-s-Heart-sabor-almendra-sin-azucar-946-ml/00750225248092?athAsset=eyJhdGhjcGlkIjoiMDA3NTAyMjUyNDgwOTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
-    "precio_actual": 45.0,
+    "url": "https://www.walmart.com.mx/ip/Bebida-vegetal-Nature-s-Heart-sabor-almendra-sin-azucar-946-ml/00750225248092?athAsset=eyJhdGhjcGlkIjoiMDA3NTAyMjUyNDgwOTIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 40.0,
     "precio_maximo": 45.0,
-    "ultima_actualizacion": "2026-10-12T19:29:00.637305+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750103395631": {
@@ -37509,9 +37509,9 @@
     "tienda": "Walmart MX",
     "titulo": "Desodorante antitranspirante Rexona powder en aerosol 210 ml",
     "url": "https://www.walmart.com.mx/ip/Desodorante-antitranspirante-Rexona-powder-en-aerosol-210-ml/00750630625065?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2MzA2MjUwNjUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1504",
-    "precio_actual": 86.0,
-    "precio_maximo": 86.0,
-    "ultima_actualizacion": "2026-10-11T01:51:37.906174+00:00",
+    "precio_actual": 97.0,
+    "precio_maximo": 97.0,
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00000007507681": {
@@ -38094,9 +38094,9 @@
     "tienda": "Walmart MX",
     "titulo": "MAESTRO DOBEL DIAMANTE 700ML",
     "url": "https://www.walmart.com.mx/ip/MAESTRO-DOBEL-DIAMANTE-700ML/00750103504318?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDM1MDQzMTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 659.0,
+    "precio_actual": 639.0,
     "precio_maximo": 1068.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750940184216": {
@@ -38129,10 +38129,10 @@
   "walmart|code:00005389116842": {
     "tienda": "Walmart MX",
     "titulo": "Licuadora Oster con Vaso de Vidrio y 6 velocidades más pulso Roja",
-    "url": "https://www.walmart.com.mx/ip/Licuadora-Oster-con-Vaso-de-Vidrio-y-6-velocidades-mas-pulso-Roja/00005389116842?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTY4NDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 664.0,
+    "url": "https://www.walmart.com.mx/ip/Licuadora-Oster-con-Vaso-de-Vidrio-y-6-velocidades-mas-pulso-Roja/00005389116842?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTY4NDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 999.0,
     "precio_maximo": 999.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00770515209173": {
@@ -38327,10 +38327,10 @@
   "walmart|code:00005389117628": {
     "tienda": "Walmart MX",
     "titulo": "Freidora de Aire Oster Digital 7.5L de Capacidad Negro",
-    "url": "https://www.walmart.com.mx/ip/Freidora-de-Aire-Oster-Digital-7-5L-de-Capacidad-Negro/00005389117628?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTc2MjgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 1413.0,
+    "url": "https://www.walmart.com.mx/ip/Freidora-de-Aire-Oster-Digital-7-5L-de-Capacidad-Negro/00005389117628?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTc2MjgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 1790.0,
     "precio_maximo": 1790.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750200471609": {
@@ -38382,9 +38382,9 @@
     "tienda": "Walmart MX",
     "titulo": "Sandwichera Hamilton Beach Panini Gourmet Negra",
     "url": "https://www.walmart.com.mx/ip/Sandwichera-Hamilton-Beach-Panini-Gourmet-Negra/00004009425460?athAsset=eyJhdGhjcGlkIjoiMDAwMDQwMDk0MjU0NjAiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 798.0,
+    "precio_actual": 799.0,
     "precio_maximo": 949.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750302628444": {
@@ -38417,19 +38417,19 @@
   "walmart|code:00880609218777": {
     "tienda": "Walmart MX",
     "titulo": "Lavadora Samsung 22 kg Blanca Mod. WA22A3350GW/AX Carga Superior",
-    "url": "https://www.walmart.com.mx/ip/Lavadora-Samsung-22-kg-Blanca-Mod-WA22A3350GW-AX-Carga-Superior/00880609218777?athAsset=eyJhdGhjcGlkIjoiMDA4ODA2MDkyMTg3NzciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 13486.0,
+    "url": "https://www.walmart.com.mx/ip/Lavadora-Samsung-22-kg-Blanca-Mod-WA22A3350GW-AX-Carga-Superior/00880609218777?athAsset=eyJhdGhjcGlkIjoiMDA4ODA2MDkyMTg3NzciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 14299.0,
     "precio_maximo": 15508.9,
-    "ultima_actualizacion": "2026-10-12T03:06:00.258349+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00003426447888": {
     "tienda": "Walmart MX",
     "titulo": "Batidora de inmersión Oster con Función Turbo Blanca",
-    "url": "https://www.walmart.com.mx/ip/Batidora-de-inmersion-Oster-con-Funcion-Turbo-Blanca/00003426447888?athAsset=eyJhdGhjcGlkIjoiMDAwMDM0MjY0NDc4ODgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 512.0,
+    "url": "https://www.walmart.com.mx/ip/Batidora-de-inmersion-Oster-con-Funcion-Turbo-Blanca/00003426447888?athAsset=eyJhdGhjcGlkIjoiMDAwMDM0MjY0NDc4ODgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 599.0,
     "precio_maximo": 599.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00075763861473": {
@@ -38481,9 +38481,9 @@
     "tienda": "Walmart MX",
     "titulo": "Freidora de Aire Oster Digital 6L de Capacidad Negro",
     "url": "https://www.walmart.com.mx/ip/Freidora-de-Aire-Oster-Digital-6L-de-Capacidad-Negro/00005389117591?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTc1OTEiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 1299.0,
+    "precio_actual": 1319.0,
     "precio_maximo": 1552.0,
-    "ultima_actualizacion": "2026-10-12T04:13:01.221784+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750043524576": {
@@ -38561,10 +38561,10 @@
   "walmart|code:00005389116839": {
     "tienda": "Walmart MX",
     "titulo": "Licuadora Oster con Vaso de Vidrio y 6 Velocidades más Pulso Gris",
-    "url": "https://www.walmart.com.mx/ip/Licuadora-Oster-con-Vaso-de-Vidrio-y-6-Velocidades-mas-Pulso-Gris/00005389116839?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTY4MzkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 918.0,
+    "url": "https://www.walmart.com.mx/ip/Licuadora-Oster-con-Vaso-de-Vidrio-y-6-Velocidades-mas-Pulso-Gris/00005389116839?athAsset=eyJhdGhjcGlkIjoiMDAwMDUzODkxMTY4MzkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 999.0,
     "precio_maximo": 999.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00742951504000": {
@@ -38705,10 +38705,10 @@
   "walmart|code:00001094222774": {
     "tienda": "Walmart MX",
     "titulo": "Cafetera de Cápsulas Krups Dolce Gusto Genio S Blanca",
-    "url": "https://www.walmart.com.mx/ip/Cafetera-de-Capsulas-Krups-Dolce-Gusto-Genio-S-Blanca/00001094222774?athAsset=eyJhdGhjcGlkIjoiMDAwMDEwOTQyMjI3NzQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
-    "precio_actual": 3259.0,
+    "url": "https://www.walmart.com.mx/ip/Cafetera-de-Capsulas-Krups-Dolce-Gusto-Genio-S-Blanca/00001094222774?athAsset=eyJhdGhjcGlkIjoiMDAwMDEwOTQyMjI3NzQiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 1490.0,
     "precio_maximo": 3259.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   },
   "walmart|code:00304538729907": {
@@ -40140,6 +40140,33 @@
     "precio_actual": 144.0,
     "precio_maximo": 144.0,
     "ultima_actualizacion": "2026-10-13T14:53:34.838547+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0csk5ggqr": {
+    "tienda": "Amazon",
+    "titulo": "B0CSK5GGQR",
+    "url": "https://www.amazon.com.mx/dp/B0CSK5GGQR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 94.0,
+    "precio_maximo": 199.0,
+    "ultima_actualizacion": "2026-10-13T14:59:19.597944+00:00",
+    "precio_alertado": 94.0
+  },
+  "walmart|code:00750626790669": {
+    "tienda": "Walmart MX",
+    "titulo": "Jabón líquido para manos Blumen cherry 2.1 l",
+    "url": "https://www.walmart.com.mx/ip/Jabon-liquido-para-manos-Blumen-cherry-2-1-l/00750626790669?athAsset=eyJhdGhjcGlkIjoiMDA3NTA2MjY3OTA2NjkiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1510",
+    "precio_actual": 75.0,
+    "precio_maximo": 84.0,
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750108680275": {
+    "tienda": "Walmart MX",
+    "titulo": "Agua Epura 20 l únicamente líquido",
+    "url": "https://www.walmart.com.mx/ip/Agua-Epura-20-l-unicamente-liquido/00750108680275?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDg2ODAyNzUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 51.0,
+    "precio_maximo": 51.0,
+    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
     "precio_alertado": null
   }
 }
