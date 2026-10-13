@@ -11,7 +11,12 @@
  *   - SORIANA_JSON_SEARCH_URL
  *
  * Cada URL configurable debe ser una API JSON autorizada y contener {q}.
- * No se intenta eludir CAPTCHA, WAF ni controles de acceso.
+ * Si la plantilla trae un marcador roto como {encodeURIComponent(termino)}, se
+ * normaliza a {q} y el término se codifica una sola vez en el servidor.
+ * No se intenta eludir CAPTCHA, WAF ni controles de acceso: si una tienda
+ * configurable responde con bloqueo, HTTP de error o un JSON sin filas
+ * reconocibles, se reporta como "not_configured" (con el campo "motivo") sin
+ * afectar a las demás y sin contarla como éxito.
  */
 
 const CFG = Object.freeze({
@@ -43,6 +48,7 @@ function doGet(e) {
     let consultasOk = 0;
     let consultasError = 0;
     let sinConfigurar = false;
+    let motivo = "";
 
     terminos.forEach(termino => {
       try {
@@ -53,6 +59,7 @@ function doGet(e) {
         }
         if (resultado && resultado.estado === "not_configured") {
           sinConfigurar = true;
+          if (!motivo) motivo = String(resultado.motivo || "").slice(0, 120);
           return;
         }
         if (!Array.isArray(resultado)) {
@@ -81,15 +88,17 @@ function doGet(e) {
     let estado = "ok";
     if (consultasOk === 0 && sinConfigurar) estado = "not_configured";
     else if (consultasOk === 0) estado = "error";
-    else if (consultasError > 0) estado = "partial";
+    else if (consultasError > 0 || sinConfigurar) estado = "partial";
 
-    fuentes.push({
+    const fuente = {
       tienda: adaptador.nombre,
       estado: estado,
       consultas_ok: consultasOk,
       consultas_error: consultasError,
       ofertas: filas
-    });
+    };
+    if (sinConfigurar && motivo) fuente.motivo = motivo;
+    fuentes.push(fuente);
   });
 
   const unicas = deduplicar(ofertas);
@@ -99,7 +108,7 @@ function doGet(e) {
 
   return ContentService.createTextOutput(JSON.stringify({
     status: status,
-    version: "2.1.0",
+    version: "2.2.0",
     generated_at: new Date().toISOString(),
     tiendas_monitoreadas: fuentes.map(f => f.tienda),
     total_detected: unicas.length,
@@ -166,23 +175,44 @@ function buscarSoriana(termino) {
     "https://www.soriana.com", termino);
 }
 
+/**
+ * Corrige marcadores rotos que se cuelan al copiar la URL a las Propiedades del
+ * script, p. ej. {encodeURIComponent(termino)} o ${encodeURIComponent(termino)},
+ * y los deja como {q}. El término se codifica después, una sola vez.
+ */
+function normalizarPlantilla(plantilla) {
+  return String(plantilla || "").trim()
+    .replace(/\$?\{\s*encodeURIComponent\(\s*\w+\s*\)\s*\}/g, "{q}")
+    .replace(/%7Bq%7D/gi, "{q}");
+}
+
 function buscarConfigurada(propiedad, tienda, base, termino) {
-  const plantilla = PropertiesService.getScriptProperties().getProperty(propiedad);
-  if (!plantilla) return { estado: "not_configured" };
+  const cruda = PropertiesService.getScriptProperties().getProperty(propiedad);
+  if (!cruda) return { estado: "not_configured", motivo: "propiedad_ausente" };
+  const plantilla = normalizarPlantilla(cruda);
   if (plantilla.indexOf("{q}") < 0 || !/^https:\/\//i.test(plantilla)) {
-    throw new Error(propiedad + " debe ser una URL HTTPS que contenga {q}");
+    return { estado: "not_configured", motivo: "plantilla_invalida" };
   }
 
   const url = plantilla.replace(/\{q\}/g, encodeURIComponent(termino));
-  const json = pedirJSON(url, tienda.toLowerCase() + ":" + termino);
-  if (!json) return null;
+  let json;
+  try {
+    json = pedirJSON(url, tienda.toLowerCase() + ":" + termino);
+  } catch (err) {
+    // WAF, endpoint cambiado o respuesta que no es JSON: se aísla solo esta tienda,
+    // sin romper el flujo general ni reportar un éxito falso.
+    const motivo = String(err && err.message ? err.message : err).slice(0, 120);
+    console.warn(tienda + ": " + motivo);
+    return { estado: "not_configured", motivo: motivo };
+  }
+  if (!json) return { estado: "not_configured", motivo: "json_vacio" };
 
   let productos = [];
   if (Array.isArray(json)) productos = json;
   else if (json.products && Array.isArray(json.products.items)) productos = json.products.items;
   else if (Array.isArray(json.results)) productos = json.results;
   else if (Array.isArray(json.products)) productos = json.products;
-  else return null;
+  else return { estado: "not_configured", motivo: "json_sin_filas_reconocibles" };
 
   const baseSeguro = base;
   return productos.map(p => {
@@ -264,6 +294,27 @@ function urlAbsoluta(base, ruta) {
   return base.replace(/\/$/, "") + "/" + valor.replace(/^\//, "");
 }
 
+// Unidades de medida estándar: un número pegado a una de ellas ("875g", "1 kg",
+// "400 ml") es un gramaje del título, nunca un precio.
+const UNIDADES_MEDIDA = "kg|kgs|kilos?|kilogramos?|gr|grs|gramos?|g|mg|ml|mls|cc|lt|lts|litros?|l|" +
+  "oz|onzas?|lb|lbs|libras?|pzas?|pzs?|pz|piezas?|pack|paquetes?|" +
+  "cm|mm|mts?|metros?|m|gb|tb|mb|mah|w|watts?|v|hz|pulgadas?|pulg|in|rollos?|hojas?|capsulas?|cápsulas?|tabletas?";
+
+function medidasDelTitulo(texto) {
+  const medidas = [];
+  const re = new RegExp("(^|[^\\w.$,])(\\d+(?:[.,]\\d+)?)\\s*(" + UNIDADES_MEDIDA +
+    ")(?![A-Za-zÁÉÍÓÚáéíóúÑñ])", "gi");
+  const cadena = String(texto || "");
+  let m;
+  while ((m = re.exec(cadena)) !== null) {
+    const n = parseFloat(m[2].replace(",", "."));
+    if (!Number.isFinite(n)) continue;
+    medidas.push(n);
+    if (/^(kg|kgs|kilos?|kilogramos?|l|lt|lts|litros?)$/i.test(m[3])) medidas.push(n * 1000);
+  }
+  return medidas;
+}
+
 function normalizar(p) {
   const actual = Number(p.actual);
   const anterior = Number(p.anterior);
@@ -278,6 +329,9 @@ function normalizar(p) {
 
   const descuento = Math.round((1 - actual / anterior) * 100);
   if (descuento < CFG.minDescuento || descuento > CFG.maxDescuento) return null;
+  // Anti-bug de gramajes: si el "precio anterior" coincide con una medida del título
+  // (875 de "875g", 1000 de "1 kg"), es un nodo contaminado y fabricaría un descuento falso.
+  if (medidasDelTitulo(nombre).some(medida => Math.abs(anterior - medida) < 0.005)) return null;
 
   return {
     tienda: p.tienda,

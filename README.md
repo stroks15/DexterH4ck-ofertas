@@ -81,7 +81,7 @@ La interfaz común está en `core/scraper_base.py`. Los requests usan timeouts, 
 
 ### Variables opcionales API-first
 
-- `WALMART_GRAPHQL_URL`, `WALMART_STORE_ID`, `WALMART_GRAPHQL_QUERY`
+- `WALMART_GRAPHQL_URL`, `WALMART_STORE_ID` (por defecto `2033`), `WALMART_TENANT` (por defecto `WM_MEXICO`), `WALMART_GRAPHQL_QUERY`
 - `BODEGA_GRAPHQL_URL`, `BODEGA_STORE_ID`, `BODEGA_GRAPHQL_QUERY`
 - `CHEDRAUI_VTEX_ENDPOINT`
 - `SORIANA_API_ENDPOINT`
@@ -111,12 +111,19 @@ Estas terminaciones son **exclusivas de liquidaciones en sucursal (FÍSICAS)**. 
 
 El monitor investiga **50–99%**. Los rangos de diagnóstico son **50–69%, 70–89%, 90–94% y 95–99%**. Toda liquidación **90–99%** con referencia válida se fuerza como alerta prioritaria y lleva el emoji **💣** al inicio. El 95/99% no es el único objetivo.
 
+Una oferta de **95–99%** solo se envía si (1) nunca se envió antes —historial local y, si está configurado, Supabase—, (2) su enlace es válido (sin `null`/`undefined`/marcadores sin resolver) y (3) el mensaje lleva el 💣 al inicio.
+
+### Historial en Supabase (opcional)
+
+Para que "enviada una sola vez" sobreviva a rebases y ejecuciones efímeras de CI, configura los secretos `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` en GitHub Actions y ejecuta una vez el bloque `alertas_enviadas` de `supabase/liquidaciones_schema.sql` en tu proyecto (RLS activo, sin políticas: solo la clave de servicio accede). Sin esos secretos el monitor usa únicamente `historial_ofertas.json`; si Supabase falla en un ciclo, el historial local sigue bloqueando los reenvíos.
+
 
 ## Proxy Google Apps Script — versión corregida
 
 El código fuente para pegar en el editor de Apps Script está en
-`apps-script/DexterH4ckProxy.gs`. La versión anterior construía URLs con
-`{encodeURIComponent(termino)}` literal, que generaba URLs inválidas.
+`apps-script/DexterH4ckProxy.gs` (v2.2.0). La versión anterior construía URLs con
+`{encodeURIComponent(termino)}` literal, que generaba URLs inválidas; ahora ese marcador
+roto en las Propiedades del script se normaliza a `{q}` y el término se codifica una sola vez.
 
 ### Instalación
 
@@ -131,6 +138,6 @@ El código fuente para pegar en el editor de Apps Script está en
 6. Prueba `.../exec?q=liquidacion` en el navegador. El JSON devuelve `offers`, `fuentes`, `errores` y `total_detected`.
 7. Mantén la URL de implementación en el secreto de GitHub `APPS_SCRIPT_PROXY_URL`; nunca la pegues en el repositorio.
 
-Mercado Libre y Chedraui se consultan mediante sus formatos de catálogo previstos en el script; su disponibilidad puede cambiar. Walmart, Bodega Aurrera y Soriana quedan como `not_configured` hasta que se proporcione una API JSON que funcione. Esto evita informar falsamente que una tienda fue consultada con éxito. La caché dura cuatro minutos y el parámetro `q` permite probar una búsqueda individual.
+Mercado Libre y Chedraui se consultan mediante sus formatos de catálogo previstos en el script; su disponibilidad puede cambiar. Walmart, Bodega Aurrera y Soriana quedan como `not_configured` hasta que se proporcione una API JSON que funcione, y también cuando su endpoint responde con bloqueo/HTTP de error, una página que no es JSON o un JSON sin filas reconocibles; en ese caso `fuentes[].motivo` indica la causa real (`HTTP 403…`, `json_sin_filas_reconocibles`…) y las demás tiendas siguen normal. Esto evita informar falsamente que una tienda fue consultada con éxito. El script también descarta como contaminada cualquier oferta cuyo precio anterior coincida con un gramaje del título (`875g`, `1 kg`). La caché dura cuatro minutos y el parámetro `q` permite probar una búsqueda individual.
 
 La integración Python reconoce la clave `offers` en inglés y conserva el estado de salud de las fuentes reportado por el proxy. Esta implementación no garantiza ofertas en cada ejecución: la disponibilidad real debe confirmarse en el JSON de la Web App.

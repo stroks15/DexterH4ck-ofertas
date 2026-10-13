@@ -17,6 +17,7 @@ import requests
 
 from core.liquidation_engine import evaluate_product, calculate_discount
 from core.extreme_liquidation import analizar_precio_extremo
+from core import supabase_history
 from core.price_sanitizer import coincide_con_medida, sanear_par_precios, texto_del_item
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from core.product_identifiers import canonical_product_identifier
@@ -188,7 +189,13 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
         if not es_enlace_valido_sin_error(item.get("url", "")):
             logger.warning(f"[BOMBA RECHAZADA] Enlace con errores: {item.get('url')}")
             return False
-            
+
+        # Historial centralizado (opcional): sobrevive a rebases y ejecuciones efímeras de CI.
+        # Si Supabase no está configurado o falla, el historial local de arriba sigue mandando.
+        if supabase_history.ya_enviada(history_key(item)) is True:
+            logger.info(f"[BOMBA OMITIDA] Ya registrada en Supabase: {clave_historial}")
+            return False
+
         logger.info(f"[💣 BOMBA EMITIDA] Nueva liquidación extrema única del {descuento}%")
         return True
     return True
@@ -341,7 +348,8 @@ def formatear_alerta(alerta: dict) -> str:
     item = alerta["item"]
     bomba = alerta["bomba"]
     tipo = "VERDE" if es_enlace_producto_directo(item.get("url")) else "ROJO"
-    marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\n" if bomba else ""
+    # El 💣 es obligatorio en todo el rango 95-99 %, aunque la bandera de bomba no venga marcada.
+    marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\n" if (bomba or 95 <= (alerta.get("descuento") or 0) <= 99) else ""
     lineas = [
         f"{marca}{formato_alerta_tipo(tipo)} <b>{html.escape(str(item.get('titulo') or ''))}</b>",
         f"🏪 {html.escape(str(item.get('tienda') or 'Tienda'))}",
@@ -677,6 +685,8 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
             if isinstance(entrada, dict):
                 entrada["precio_alertado"] = alerta["actual"]
                 entrada["ultima_actualizacion"] = datetime.now(timezone.utc).isoformat()
+            if 95 <= (alerta.get("descuento") or 0) <= 99:
+                supabase_history.registrar_envio(history_key(alerta["item"]), alerta["item"], alerta["descuento"])
         else:
             fallidas += 1
     pendientes = max(0, len(alertas) - MAX_ALERTAS_POR_CICLO)
