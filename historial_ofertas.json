@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNBR8rZUDHFy8ZtOh7kY2WdpOMdDjzaIQgX4M4MoBFg9GDjF7N9k7vzJ8E7jYWX%2FR0B0Na4Nm3wqtJQo8lUUovNcMgv8XC9ABxpizIZUfmfk2Jnz7cQ%2ByHQg%2BWwvXsaL3SBfjikb5l1J1JczGa5yRKqHPEkm8J06EAb0zCKY8%2BdQrWYU9G5reOrPgA7Pr1dhHMOARvc%3D",
-    "precio_actual": 1487.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDmvML%2BqjgHxZVyQkKBVYe7jp64OmFhMOOCZgYkFaRBkcKvTTWSfI4IaMjeUP83GiF%2FtcoH37rWdZjzczlO%2FXFkgB3WEWyKe2zv0HZ%2FTkkrIfdMFRvueBnQdRC46%2F3hKqlXA45%2F5kkhroSbyBawUJIfeBwC6O61R%2FM86YHIEGiQK9b7WoxCKX54IsUOr9OQ1CQhy3A%3D%3D",
+    "precio_actual": 680.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-12T19:29:00.637305+00:00",
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BK%2B52GcVmG%2FVkSZVRXkZqSqcG1a%2FDVFLBWn7DOB2DJXhQ25QY7NyCzvVwuf41NQvKjzIl9ipGhf%2B%2BuBS2Df3gLLQLDMVYMps3gENOQcWx247hp8viI6VrY72YR6anbIGE7BoKh0qAtmHBMPnGddZki7WwhFZaDmZCZ3iCrG%2FaQzQqNBb1sdyczYpotlDKwZdvGs8UfA%3D",
-    "precio_actual": 1914.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BNjQfclnQJ0UWHzOVb9dlYePmoP7cB2dcXi%2FH2N4LxYwuxsxtxWqBdL3kRslT3IrUyuMA2dhzfd8i6wHmgkT1OBiMS35mU3Hd19t1atc7wpsgBGggMBw8ZRDbQebqWRpDE1GDd8heHhURt3FBHQQMy3jUUsOfd2Y9C6r0h7fCYcRmtMaFSfHYHR8yeqH%2BGhoJmu9xNhYC%2F4l3ANgBA%3D%3D",
+    "precio_actual": 1788.0,
     "precio_maximo": 2500.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-12T19:29:00.637305+00:00",
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -31620,9 +31620,9 @@
     "titulo": "lists",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists",
-    "precio_actual": 4389.0,
-    "precio_maximo": 6000.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquid/lists",
+    "precio_actual": 27319.0,
+    "precio_maximo": 30799.0,
     "descuento": 0,
     "puntuacion": 5,
     "extremo": {
@@ -31639,7 +31639,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-12T03:49:43.352448+00:00",
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
     "precio_alertado": null
   },
   "chedraui|title:tomates cherry naturesweet glorys 467g": {
@@ -39591,6 +39591,204 @@
     "precio_actual": 98.0,
     "precio_maximo": 98.0,
     "ultima_actualizacion": "2026-10-12T19:29:00.637305+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:amazon monitor gamer lg 24 ips fhd 144hz": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Monitor gamer LG 24\" IPS/FHD/144HZ",
+    "url": "https://www.promodescuentos.com/ofertas/monitor-gamer-lg-24-ipsfhd144hz-1198692",
+    "precio_actual": 1670.0,
+    "precio_maximo": 1670.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dn4ds94d": {
+    "tienda": "Amazon",
+    "titulo": "B0DN4DS94D",
+    "url": "https://www.amazon.com.mx/dp/B0DN4DS94D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 179.0,
+    "precio_maximo": 429.0,
+    "ultima_actualizacion": "2026-10-13T01:40:11.704282+00:00",
+    "precio_alertado": 179.0
+  },
+  "amazon|code:b00wn2by7g": {
+    "tienda": "Amazon",
+    "titulo": "B00WN2BY7G",
+    "url": "https://www.amazon.com.mx/dp/B00WN2BY7G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 385.0,
+    "precio_maximo": 899.0,
+    "ultima_actualizacion": "2026-10-13T01:40:15.567468+00:00",
+    "precio_alertado": 385.0
+  },
+  "amazon|code:b0dskj4zpv": {
+    "tienda": "Amazon",
+    "titulo": "B0DSKJ4ZPV",
+    "url": "https://www.amazon.com.mx/dp/B0DSKJ4ZPV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 29.99,
+    "precio_maximo": 69.0,
+    "ultima_actualizacion": "2026-10-13T01:40:19.410821+00:00",
+    "precio_alertado": 29.99
+  },
+  "mercadolibre|title:labial en barra hidratante mate de maybelline": {
+    "tienda": "Mercado Libre",
+    "titulo": "LABIAL EN BARRA HIDRATANTE MATE DE MAYBELLINE",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BBEdFJov7vgElEprJeoMaTlM6hFihcvcWk6t%2F3OibsHzYtunmtOc8tCdmi3djEn4En3tI%2Fa3e0sPrSUjqUH26PXEGTJOE4Y%2BCSTn6D0XFBgFUW0Trnz93PfNu3iXfJ6gpYgdkryY1dqqNQGvKdhbzders0tCrJXBPQHUGUs9vp5hQb1AbhPzU9hAbDQK82O9mXYgN5I%3D",
+    "precio_actual": 102.0,
+    "precio_maximo": 219.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00wqw8s18": {
+    "tienda": "Amazon",
+    "titulo": "B00WQW8S18",
+    "url": "https://www.amazon.com.mx/dp/B00WQW8S18?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 79.0,
+    "precio_maximo": 160.0,
+    "ultima_actualizacion": "2026-10-13T01:40:23.274382+00:00",
+    "precio_alertado": 79.0
+  },
+  "amazon|code:b0b3ft3t3d": {
+    "tienda": "Amazon",
+    "titulo": "L'ANGE HAIR Cepillo secador de titanio 2 en 1 Le Volume | Cepillo de aire caliente todo en uno con cuerpo ovalado | Moldeador para cabello suave y sin frizz para todo tipo de cabel",
+    "url": "https://www.amazon.com.mx/dp/B0B3FT3T3D",
+    "precio_actual": 764.0,
+    "precio_maximo": 1378.26,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bwz23kgb": {
+    "tienda": "Amazon",
+    "titulo": "B0BWZ23KGB",
+    "url": "https://www.amazon.com.mx/dp/B0BWZ23KGB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 379.0,
+    "precio_maximo": 660.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d9mlcv3m": {
+    "tienda": "Amazon",
+    "titulo": "Canel´s Gomitas Tueni Rebanadas, Sabores fresa,durazno y mango, 454gr",
+    "url": "https://www.amazon.com.mx/dp/B0D9MLCV3M",
+    "precio_actual": 48.16,
+    "precio_maximo": 79.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0108afhk4": {
+    "tienda": "Amazon",
+    "titulo": "B0108AFHK4",
+    "url": "https://www.amazon.com.mx/dp/B0108AFHK4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 88.0,
+    "precio_maximo": 142.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08qqrh2z9": {
+    "tienda": "Amazon",
+    "titulo": "B08QQRH2Z9",
+    "url": "https://www.amazon.com.mx/dp/B08QQRH2Z9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 830.53,
+    "precio_maximo": 1253.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fcy8cnn4": {
+    "tienda": "Amazon",
+    "titulo": "LEGO Gato de la Buena Suerte Kit de construcción y Pieza Decorativa de la Buena Suerte con una Figura Que invita a Entrar 40813",
+    "url": "https://www.amazon.com.mx/dp/B0FCY8CNN4",
+    "precio_actual": 569.0,
+    "precio_maximo": 749.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gql86lyx": {
+    "tienda": "Amazon",
+    "titulo": "B0GQL86LYX",
+    "url": "https://www.amazon.com.mx/dp/B0GQL86LYX",
+    "precio_actual": 238.0,
+    "precio_maximo": 298.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:0762497173": {
+    "tienda": "Amazon",
+    "titulo": "Amazon: Harry Potter: The Monster Book of Monsters: It Roams and Chomps!",
+    "url": "https://www.amazon.com.mx/dp/0762497173?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 263.62,
+    "precio_maximo": 294.02,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b078ycyywr": {
+    "tienda": "Amazon",
+    "titulo": "B078YCYYWR",
+    "url": "https://www.amazon.com.mx/dp/B078YCYYWR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 285.0,
+    "precio_maximo": 285.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bxkcspf1": {
+    "tienda": "Amazon",
+    "titulo": "B0BXKCSPF1",
+    "url": "https://www.amazon.com.mx/Multifuncional-Caliente-Voluminizador-Negativos-Antiencrespamiento/dp/B0BXKCSPF1?pf_rd_r=NCD6BXND89D2HTCE1M33&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=Tc8eqSFhUl4VwMzbE4fw%2Fw%3D%3D&th=1&ascsubtag=srctok-7d918493051efe1c&btn_type=ss&btn_ref=srctok-2c5a0f4fe50e4da2&linkCode=sl2&tag=liquidapromosmx-20&linkId=a67d5b721d81ae31d914a60ab2c1bcfd&ref_=as_li_ss_tl",
+    "precio_actual": 257.0,
+    "precio_maximo": 257.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fwqpbm23": {
+    "tienda": "Amazon",
+    "titulo": "B0FWQPBM23",
+    "url": "https://www.amazon.com.mx/dp/B0FWQPBM23?linkCode=sl2&tag=axfire-20&linkId=94b4fd59f270d1979a317d638da9ed0d&ref_=as_li_ss_tl&ascsubtag=srctok-63d80f45a272f8c3&btn_type=ss&btn_ref=srctok-63d80f45a272f8c3",
+    "precio_actual": 298.0,
+    "precio_maximo": 298.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fjfh5plj": {
+    "tienda": "Amazon",
+    "titulo": "B0FJFH5PLJ",
+    "url": "https://www.amazon.com.mx/Disfraces-disfraces-Halloween-aterradores-dementor/dp/B0FJFH5PLJ?dib=eyJ2IjoiMSJ9.pf3qdzat19R-_TJ99-hQTfCV14k3HQJsoRNAqC06JOxahsFsSwoVlYuOwHSypl9VfeM_RxQrAgDMdxntG1KwPkAjh5uHv6A7U-st37L8gbLomtYZWAq-XWFrE_pCXvME3TSUBCw3A7LtN5HdzhSeWctlQZAyScl5-TLAeTuz_iM8YbOdBkFvtILykVdUyU99UvF7wj-bhfqdzxMuQ3VNwoSGo_S9ArrEQju5oW04dk4.k9Tm7ctQJ2V-Qr6S6jcXxyTAn9KhWqWL4DSQOKBTeAk&dib_tag=se&m=A3NM974JIKVXOE&marketplaceID=A1AM78C64UM0Y8&qid=1791845702&s=merchant-items&sr=1-40&ufe=app_do%3Aamzn1.fos.de93fa6a-174c-4df7-be7c-5bc8e9c5a71b&xpid=XlUMkBBlhhObM&th=1&psc=1&ascsubtag=srctok-0d616576a7fe07bf&btn_type=ss&btn_ref=srctok-56c293030f03a4ed&linkCode=sl2&tag=liquidapromosmx-20&linkId=cd11739345f58c9608d821533a7af061&ref_=as_li_ss_tl",
+    "precio_actual": 169.0,
+    "precio_maximo": 169.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cwd7gc2l": {
+    "tienda": "Amazon",
+    "titulo": "B0CWD7GC2L",
+    "url": "https://www.amazon.com.mx/dp/B0CWD7GC2L?th=1&psc=1&ascsubtag=srctok-66a1c5bdcbcbb437&btn_type=ss&btn_ref=srctok-5b964444407ffa40&linkCode=sl2&tag=liquidapromosmx-20&linkId=22e7600f282d26289023ff0360679c34&ref_=as_li_ss_tl",
+    "precio_actual": 6999.0,
+    "precio_maximo": 6999.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gjgd5b12": {
+    "tienda": "Amazon",
+    "titulo": "B0GJGD5B12",
+    "url": "https://www.amazon.com.mx/Cloe-Bolsa-Bowling-Grande-Acolchada/dp/B0GJGD5B12?th=1&ascsubtag=srctok-0198af1c63f08a1a&btn_type=ss&btn_ref=srctok-53a98c19fbdccca0&linkCode=sl2&tag=liquidapromosmx-20&linkId=30aa5d6e867b202993be5ff7bc1a953e&ref_=as_li_ss_tl",
+    "precio_actual": 1199.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dt6qkd4d": {
+    "tienda": "Amazon",
+    "titulo": "B0DT6QKD4D",
+    "url": "https://www.amazon.com.mx/dp/B0DT6QKD4D?psc=1&ascsubtag=srctok-24615c783ceb0118&btn_type=ss&btn_ref=srctok-1672d36ac8c04512&linkCode=sl2&tag=liquidapromosmx-20&linkId=333d652ffaabb5e88fe46d7efd51a737&ref_=as_li_ss_tl",
+    "precio_actual": 2245.0,
+    "precio_maximo": 2245.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d3sn68rg": {
+    "tienda": "Amazon",
+    "titulo": "B0D3SN68RG",
+    "url": "https://www.amazon.com.mx/gp/product/B0D3SN68RG?smid=AVDBXBAVVSXLQ&psc=1&ascsubtag=srctok-1aa9aaeb0e102ec0&btn_type=ss&btn_ref=srctok-74d8bb5ad907ba54&linkCode=sl2&tag=liquidapromosmx-20&linkId=206a4f8c4c483f9a4342c8e4e6039e47&ref_=as_li_ss_tl",
+    "precio_actual": 128.0,
+    "precio_maximo": 128.0,
+    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
     "precio_alertado": null
   }
 }
