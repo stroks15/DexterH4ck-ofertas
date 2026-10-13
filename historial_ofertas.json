@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOWrKWlqvkZ8Ahvj8Fpoiz%2FJFJl1T4SaAKpVM2xtcQr9kdrbfq69jN6T03RKGDgBGN3x5iOm8zq0AV7VakklRP%2FnuVPID2fWfuTqFvgpsVbVsCd4vbjrYDy9Ula4BP4Sz3Bj3lAiWrKlW8jT4tqIuE6bgCRxJMiEZAWRW4ixtfOIKHardePcDPw19zwS9g7bRikJdl8%3D",
-    "precio_actual": 2009.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BAEfrqjcdE6sX%2B3kzIkstX3%2BmeB8AwGhBViAVCEs07hCdqw%2Bqbb9u3nx1MyNQ3IC6Bx0uxzQmcaFyr9FN6sLcTxvynV6Q8dyEa0ynTm23sVeJcXdqytBRY3wGoXRDsRFtpk%2BiIc8Qvh6Q1LqgT6RDLZqx%2BB1INfhnSpFccCsHkmJJncWI2hOnukamSa5NpL%2B12oJMeM%3D",
+    "precio_actual": 648.0,
     "precio_maximo": 4984.1,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BPPgYThPDofN4UJaVqWiVr7ZpUkIzdydVuMyuPMWZ89aeWIFxJZN6F4AXcKSC09UzJk0P0rqg5oDN3eLvku6VMRbNtf%2F9QBenrPVeDy9k4OMdbvb3pzaFZ8WgO3zY2mwKksPyhkzQq3ern3o9m1CPdARHqzhbI%2BzeB0pn67zPdKNJefbc5YIoMT5HBlW6t4U7xbsf5ZptSiz9FkE3w%3D%3D",
-    "precio_actual": 312.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BFLfKuTSLvnmFnbkxVKe9e7Guh%2BN8IZCocxI8AXNI319jg2oyaqL6g7hiywTsg44QYZ7Mhg7fMcrJHXN56WQaDvCI%2BjwDnGNIyZPVErLV3CMByA0jyM5gDb2PwTl4bTboKvI1wXQIBFfg6Uu9wWihrk2GbfeC%2FKdAF7RkKyFX06j%2F4HjVeWpqPgzLpA%2Bl9jDy2t9xQ%3D%3D",
+    "precio_actual": 805.0,
     "precio_maximo": 2500.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-13T08:29:26.732661+00:00",
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -39830,10 +39830,10 @@
   "amazon|code:b08h3pcgwt": {
     "tienda": "Amazon",
     "titulo": "B08H3PCGWT",
-    "url": "https://www.amazon.com.mx/dp/B08H3PCGWT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 2000.46,
+    "url": "https://www.amazon.com.mx/dp/B08H3PCGWT?linkCode=sl2&tag=axfire-20&linkId=3efd783a605a73d7aba01897d1df767c&ref_=as_li_ss_tl&ascsubtag=srctok-7064e849893a38a3&btn_type=ss&btn_ref=srctok-7064e849893a38a3",
+    "precio_actual": 2003.0,
     "precio_maximo": 3356.07,
-    "ultima_actualizacion": "2026-10-13T08:29:26.732661+00:00",
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0f9nkp788": {
@@ -40167,6 +40167,168 @@
     "precio_actual": 51.0,
     "precio_maximo": 51.0,
     "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:amazon juego de 12 contenedores mixcolor tramontina": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Juego de 12 Contenedores MixColor TRAMONTINA",
+    "url": "https://www.promodescuentos.com/ofertas/amazon-juego-de-contenedores-mixcolor-tramontina-12-piezas-1198792",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01cgn8wxk": {
+    "tienda": "Amazon",
+    "titulo": "B01CGN8WXK",
+    "url": "https://www.amazon.com.mx/dp/B01CGN8WXK",
+    "precio_actual": 664.3,
+    "precio_maximo": 2850.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.842309+00:00",
+    "precio_alertado": 664.3
+  },
+  "bodega|title:sclick": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "sclick",
+    "url": "https://ad.soicos.com/sclick?aid=45567&pid=11487&dl=https://www.bodegaaurrera.com.mx/ip/Colchon-Inflable-Ozark-Trail-Individual-azul/00694213891646%3Ffrom%3D/search",
+    "precio_actual": 99.0,
+    "precio_maximo": 249.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h2v8r6lm": {
+    "tienda": "Amazon",
+    "titulo": "B0H2V8R6LM",
+    "url": "https://www.amazon.com.mx/dp/B0H2V8R6LM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 69.0,
+    "precio_maximo": 149.0,
+    "ultima_actualizacion": "2026-10-13T16:27:37.616469+00:00",
+    "precio_alertado": 69.0
+  },
+  "amazon|code:b07qp2wd44": {
+    "tienda": "Amazon",
+    "titulo": "Casio A168WEM-1VT Reloj para Unisex Adulto, Plata/Negro",
+    "url": "https://www.amazon.com.mx/dp/B07QP2WD44?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 703.95,
+    "precio_maximo": 1445.0,
+    "ultima_actualizacion": "2026-10-13T16:27:41.396154+00:00",
+    "precio_alertado": 703.95
+  },
+  "amazon|code:b0f83ssbc2": {
+    "tienda": "Amazon",
+    "titulo": "B0F83SSBC2",
+    "url": "https://www.amazon.com.mx/dp/B0F83SSBC2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 839.0,
+    "precio_maximo": 1660.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fpzhslyr": {
+    "tienda": "Amazon",
+    "titulo": "B0FPZHSLYR",
+    "url": "https://www.amazon.com.mx/dp/B0FPZHSLYR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 629.51,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bs8rljyq": {
+    "tienda": "Amazon",
+    "titulo": "B0BS8RLJYQ",
+    "url": "https://www.amazon.com.mx/dp/B0BS8RLJYQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 219.99,
+    "precio_maximo": 389.03,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ddznzf76": {
+    "tienda": "Amazon",
+    "titulo": "B0DDZNZF76",
+    "url": "https://www.amazon.com.mx/dp/B0DDZNZF76?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 7899.6,
+    "precio_maximo": 12999.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h1nkglvf": {
+    "tienda": "Amazon",
+    "titulo": "B0H1NKGLVF",
+    "url": "https://www.amazon.com.mx/dp/B0H1NKGLVF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 160.0,
+    "precio_maximo": 259.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cb1d82nb": {
+    "tienda": "Amazon",
+    "titulo": "B0CB1D82NB",
+    "url": "https://www.amazon.com.mx/dp/B0CB1D82NB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 549.99,
+    "precio_maximo": 799.99,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fkmcbkfm": {
+    "tienda": "Amazon",
+    "titulo": "B0FKMCBKFM",
+    "url": "https://www.amazon.com.mx/dp/B0FKMCBKFM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 16837.36,
+    "precio_maximo": 23999.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ftbfh9b5": {
+    "tienda": "Amazon",
+    "titulo": "B0FTBFH9B5",
+    "url": "https://www.amazon.com.mx/dp/B0FTBFH9B5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 69.0,
+    "precio_maximo": 92.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f34vnpy2": {
+    "tienda": "Amazon",
+    "titulo": "B0F34VNPY2",
+    "url": "https://www.amazon.com.mx/dp/B0F34VNPY2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 667.0,
+    "precio_maximo": 889.78,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0107qp1ve": {
+    "tienda": "Amazon",
+    "titulo": "Aquaphor Baby Healing Ointment - For Chapped Skin, Diaper Rash and Minor Scratches - 7 oz. Tube",
+    "url": "https://www.amazon.com.mx/dp/B0107QP1VE",
+    "precio_actual": 304.0,
+    "precio_maximo": 395.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fdh17d9h": {
+    "tienda": "Amazon",
+    "titulo": "B0FDH17D9H",
+    "url": "https://www.amazon.com.mx/dp/B0FDH17D9H?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=e25faf5957f0a8b05617abeb4bdd6b04&ref_=as_li_ss_tl&ascsubtag=srctok-5fd70ac55c4dfa08&btn_type=ss&btn_ref=srctok-5fd70ac55c4dfa08",
+    "precio_actual": 629.0,
+    "precio_maximo": 629.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c2byydsv": {
+    "tienda": "Amazon",
+    "titulo": "B0C2BYYDSV",
+    "url": "https://www.amazon.com.mx/dp/B0C2BYYDSV?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=df2bb623845c57b805b9ba5a21ef4cb9&ref_=as_li_ss_tl&ascsubtag=srctok-3a7ac9f174f4e8fd&btn_type=ss&btn_ref=srctok-3a7ac9f174f4e8fd",
+    "precio_actual": 117.0,
+    "precio_maximo": 117.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gsvtrrtd": {
+    "tienda": "Amazon",
+    "titulo": "B0GSVTRRTD",
+    "url": "https://www.amazon.com.mx/dp/B0GSVTRRTD?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=911bd6bd6582c48b49cd7806a9eb5434&ref_=as_li_ss_tl&ascsubtag=srctok-33eb4963847a7f9a&btn_type=ss&btn_ref=srctok-33eb4963847a7f9a",
+    "precio_actual": 899.0,
+    "precio_maximo": 899.0,
+    "ultima_actualizacion": "2026-10-13T16:27:33.154303+00:00",
     "precio_alertado": null
   }
 }
