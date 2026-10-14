@@ -29245,9 +29245,9 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BOhJfKQLgbt8dwU4vrX78%2BOSzKS0awQ%2FAWbnIAcyPuSS58rQibjV6G47PHaV3OLKJo%2BtB7WAAcsW69QSCxyWqc4ViArrFKl8AObX6qS4s1aQkSTpsAeGqxgVs1YML%2Byzhbjq9pBZn1Ra7yo1vH4QJj%2FO9GcydlnuiESaq66HaqD8b3tmAdOw5rQnNNZVC5Gk7VF%2BSQ%3D%3D",
-    "precio_actual": 1134.0,
-    "precio_maximo": 4984.1,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BM8LUYgk4bilNBPj05A4Av68sp7I1tuHprvNfNOZyctN5La1gvb67TPPonMm%2FXUOTXSWWrQyVNUg11EUSMsJw5XNkjpuV5RRQwQmWEien%2FfdTFz1ZRyWnNjOj12CvQOyte0WL7V%2BU9w5WAIZqZ6eQRZJjkWW38LUZKk12B7A4PZLixXxzcqqANiNSk4BtJF5ZblAuBA%3D",
+    "precio_actual": 2999.0,
+    "precio_maximo": 5000.0,
     "descuento": 0,
     "puntuacion": 5,
     "extremo": {
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-14T05:25:56.358800+00:00",
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -31621,7 +31621,7 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.mercadolibre.com.mx/social/liquid/lists",
-    "precio_actual": 27319.0,
+    "precio_actual": 25458.0,
     "precio_maximo": 30799.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -31639,7 +31639,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-13T01:40:10.981487+00:00",
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
     "precio_alertado": null
   },
   "chedraui|title:tomates cherry naturesweet glorys 467g": {
@@ -40860,6 +40860,150 @@
     "precio_actual": 699.0,
     "precio_maximo": 699.0,
     "ultima_actualizacion": "2026-10-14T05:25:56.358800+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dyr4gdhj": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO EUCERIN SOLAR BRONCEADO",
+    "url": "https://www.amazon.com.mx/dp/B0DYR4GDHJ",
+    "precio_actual": 193.0,
+    "precio_maximo": 650.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.691280+00:00",
+    "precio_alertado": 193.0
+  },
+  "amazon|code:b0cjbpqtt2": {
+    "tienda": "Amazon",
+    "titulo": "B0CJBPQTT2",
+    "url": "https://www.amazon.com.mx/dp/B0CJBPQTT2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 80.0,
+    "precio_maximo": 267.9,
+    "ultima_actualizacion": "2026-10-14T10:37:50.449926+00:00",
+    "precio_alertado": 80.0
+  },
+  "amazon|code:b07c5t3dkw": {
+    "tienda": "Amazon",
+    "titulo": "B07C5T3DKW",
+    "url": "https://www.amazon.com.mx/dp/B07C5T3DKW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 182.0,
+    "precio_maximo": 499.0,
+    "ultima_actualizacion": "2026-10-14T10:37:54.343359+00:00",
+    "precio_alertado": 182.0
+  },
+  "amazon|code:b0gglsbq3l": {
+    "tienda": "Amazon",
+    "titulo": "B0GGLSBQ3L",
+    "url": "https://www.amazon.com.mx/dp/B0GGLSBQ3L?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1109.63,
+    "precio_maximo": 2999.0,
+    "ultima_actualizacion": "2026-10-14T10:37:58.101780+00:00",
+    "precio_alertado": 1109.63
+  },
+  "amazon|code:b0fwk18hct": {
+    "tienda": "Amazon",
+    "titulo": "B0FWK18HCT",
+    "url": "https://www.amazon.com.mx/dp/B0FWK18HCT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.0,
+    "precio_maximo": 219.0,
+    "ultima_actualizacion": "2026-10-14T10:38:01.911494+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b000ealhhg": {
+    "tienda": "Amazon",
+    "titulo": "B000EALHHG",
+    "url": "https://www.amazon.com.mx/dp/B000EALHHG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 398.57,
+    "precio_maximo": 777.35,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f52fb4sh": {
+    "tienda": "Amazon",
+    "titulo": "B0F52FB4SH",
+    "url": "https://www.amazon.com.mx/dp/B0F52FB4SH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 899.0,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dnr5znyx": {
+    "tienda": "Amazon",
+    "titulo": "B0DNR5ZNYX",
+    "url": "https://www.amazon.com.mx/dp/B0DNR5ZNYX?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 141.55,
+    "precio_maximo": 259.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08wwkjgdv": {
+    "tienda": "Amazon",
+    "titulo": "B08WWKJGDV",
+    "url": "https://www.amazon.com.mx/dp/B08WWKJGDV",
+    "precio_actual": 1985.86,
+    "precio_maximo": 3499.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08hj4vtlx": {
+    "tienda": "Amazon",
+    "titulo": "B08HJ4VTLX",
+    "url": "https://www.amazon.com.mx/dp/B08HJ4VTLX?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 319.0,
+    "precio_maximo": 540.11,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d7zz2scy": {
+    "tienda": "Amazon",
+    "titulo": "B0D7ZZ2SCY",
+    "url": "https://www.amazon.com.mx/dp/B0D7ZZ2SCY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 149.99,
+    "precio_maximo": 249.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f4dzdzgk": {
+    "tienda": "Amazon",
+    "titulo": "B0F4DZDZGK",
+    "url": "https://www.amazon.com.mx/dp/B0F4DZDZGK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 719.4,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "telegram|title:sclick": {
+    "tienda": "Telegram",
+    "titulo": "sclick",
+    "url": "https://ad.soicos.com/sclick?aid=45567&pid=11897&dl=https://www.sams.com.mx/ip/balsamo-para-labios-sol-de-janeiro-brazilian-kiss-cupuacu-6-2-g/981055306%3Ffrom%3D/search",
+    "precio_actual": 285.0,
+    "precio_maximo": 408.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h3knq4l6": {
+    "tienda": "Amazon",
+    "titulo": "B0H3KNQ4L6",
+    "url": "https://www.amazon.com.mx/dp/B0H3KNQ4L6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 764.0,
+    "precio_maximo": 764.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h3pgnkw2": {
+    "tienda": "Amazon",
+    "titulo": "B0H3PGNKW2",
+    "url": "https://www.amazon.com.mx/dp/B0H3PGNKW2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 184.0,
+    "precio_maximo": 184.0,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gs371grk": {
+    "tienda": "Amazon",
+    "titulo": "B0GS371GRK",
+    "url": "https://www.amazon.com.mx/dp/B0GS371GRK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 963.01,
+    "precio_maximo": 963.01,
+    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
     "precio_alertado": null
   }
 }
