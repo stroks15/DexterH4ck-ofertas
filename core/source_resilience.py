@@ -44,7 +44,7 @@ class SourceCircuit:
             server = float(retry_after)
         except (TypeError, ValueError):
             server = 0.0
-        delay = server if server > 0 else min(12.0, 2.0 ** attempt)
+        delay = server if server > 0 else min(12.0, 2.0**attempt)
         delay += random.uniform(0.15, 0.65)
         time.sleep(delay)
 
@@ -100,10 +100,10 @@ def classify_status(status: int | None) -> str:
     if 300 <= status < 400:
         return "redirect"
     exact = {
-        400: "bad_request",        # solicitud/endpoint mal formado
-        401: "unauthorized",       # credencial inválida o ausente
-        403: "forbidden",          # acceso denegado/bloqueado
-        404: "not_found",          # endpoint o producto inexistente
+        400: "bad_request",  # solicitud/endpoint mal formado
+        401: "unauthorized",  # credencial inválida o ausente
+        403: "forbidden",  # acceso denegado/bloqueado
+        404: "not_found",  # endpoint o producto inexistente
         408: "timeout",
         409: "conflict",
         429: "rate_limited",

@@ -5,6 +5,7 @@ Usa requests legítimos con User-Agent honesto y clasifica cada código HTTP en 
 estado distinto (ok, forbidden, rate_limited, not_found, timeout, ...). No intenta
 evadir CAPTCHA/WAF ni suplantar identidad.
 """
+
 from __future__ import annotations
 
 import json
@@ -24,8 +25,12 @@ logger = logging.getLogger("DexterH4ck.Diagnostics")
 
 # Endpoints opcionales configurados por variables de entorno (solo se reporta si existen).
 ENV_ENDPOINTS = (
-    "WALMART_GRAPHQL_URL", "BODEGA_GRAPHQL_URL", "CHEDRAUI_VTEX_ENDPOINT",
-    "SORIANA_API_ENDPOINT", "COPPEL_API_ENDPOINT", "SUBURBIA_API_ENDPOINT",
+    "WALMART_GRAPHQL_URL",
+    "BODEGA_GRAPHQL_URL",
+    "CHEDRAUI_VTEX_ENDPOINT",
+    "SORIANA_API_ENDPOINT",
+    "COPPEL_API_ENDPOINT",
+    "SUBURBIA_API_ENDPOINT",
     "AMAZON_API_ENDPOINT",
 )
 
@@ -44,8 +49,7 @@ def main() -> int:
         for store, urls in STORE_TARGETS.items():
             report[store] = [probe(session, u) for u in urls]
     report["_endpoints_opcionales"] = {
-        name: ("configurado" if os.environ.get(name, "").strip() else "no configurado")
-        for name in ENV_ENDPOINTS
+        name: ("configurado" if os.environ.get(name, "").strip() else "no configurado") for name in ENV_ENDPOINTS
     }
     Path("diagnostico_fuentes.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 

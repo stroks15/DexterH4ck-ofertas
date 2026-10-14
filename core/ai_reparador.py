@@ -29,13 +29,28 @@ _ai_cache = {}
 _ai_unavailable_reported = False
 
 ALLOWED_HOSTS = {
-    "soriana.com", "www.soriana.com", "coppel.com", "www.coppel.com",
-    "suburbia.com.mx", "www.suburbia.com.mx", "oferstock.com.mx",
-    "www.oferstock.com.mx", "walmart.com.mx", "www.walmart.com.mx",
-    "bodegaaurrera.com.mx", "www.bodegaaurrera.com.mx", "chedraui.com.mx",
-    "www.chedraui.com.mx", "liverpool.com.mx", "www.liverpool.com.mx",
-    "amazon.com.mx", "www.amazon.com.mx", "mercadolibre.com.mx",
-    "www.mercadolibre.com.mx", "meli.la", "amzn.to",
+    "soriana.com",
+    "www.soriana.com",
+    "coppel.com",
+    "www.coppel.com",
+    "suburbia.com.mx",
+    "www.suburbia.com.mx",
+    "oferstock.com.mx",
+    "www.oferstock.com.mx",
+    "walmart.com.mx",
+    "www.walmart.com.mx",
+    "bodegaaurrera.com.mx",
+    "www.bodegaaurrera.com.mx",
+    "chedraui.com.mx",
+    "www.chedraui.com.mx",
+    "liverpool.com.mx",
+    "www.liverpool.com.mx",
+    "amazon.com.mx",
+    "www.amazon.com.mx",
+    "mercadolibre.com.mx",
+    "www.mercadolibre.com.mx",
+    "meli.la",
+    "amzn.to",
 }
 
 
@@ -71,7 +86,7 @@ def _backoff(attempt, response=None):
     if response is not None and response.status_code == 429:
         base = _retry_after(response, 2)
     else:
-        base = min(2 ** attempt, 12)
+        base = min(2**attempt, 12)
     return min(base + random.uniform(0.1, 0.8), 30.0)
 
 
@@ -268,7 +283,9 @@ def _ai(prompt):
         return result
 
     if not _ai_unavailable_reported:
-        print("IA: Gemini/Groq no disponibles; se continúa con extracción determinista. Se silencia este aviso durante el resto de la ejecución.")
+        print(
+            "IA: Gemini/Groq no disponibles; se continúa con extracción determinista. Se silencia este aviso durante el resto de la ejecución."
+        )
         _ai_unavailable_reported = True
     return {}
 

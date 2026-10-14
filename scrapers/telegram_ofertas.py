@@ -27,16 +27,17 @@ PRICE_RE = re.compile(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?
 URL_RE = re.compile(r"https?://[^\s<>]+")
 
 
-
-
 def limpiar_titulo_producto(titulo, url=""):
     """Limpia títulos contaminados por precios/metadatos de tarjetas de tienda."""
     from urllib.parse import unquote, urlparse
+
     texto = html.unescape(str(titulo or ""))
     texto = re.sub(r"\s+", " ", texto).strip(" \t\r\n-–—|·")
     texto = re.split(
         r"\b(?:precio\s+(?:actual|final|de\s+oferta)|antes|ahorra|hasta\s+\d+\s+mensualidades?|mensualidades?\s+fijas?|precio\s+anterior|precio\s+regular)\b",
-        texto, maxsplit=1, flags=re.I,
+        texto,
+        maxsplit=1,
+        flags=re.I,
     )[0]
     texto = re.sub(r"(?:^|[|·–—-])\s*\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", texto)
     texto = re.sub(r"\$\s*[0-9][0-9,]*(?:\s+[0-9]{2})?(?:\.[0-9]{1,2})?", " ", texto)
@@ -56,6 +57,7 @@ def limpiar_titulo_producto(titulo, url=""):
             pass
     return texto[:180]
 
+
 def _prices(text):
     out = []
     for value in PRICE_RE.findall(text or ""):
@@ -67,12 +69,15 @@ def _prices(text):
             pass
     return out
 
+
 def urlparse_safe(url):
     try:
         from urllib.parse import urlparse
+
         return urlparse(url).netloc.lower().split(":")[0]
     except Exception:
         return ""
+
 
 def _condiciones(text):
     low = (text or "").lower()
@@ -91,17 +96,25 @@ def _condiciones(text):
         condiciones.append("Amazon Prime")
     return condiciones
 
+
 def _store(text):
     low = (text or "").lower()
     for name, needles in [
-        ("Mercado Libre", ("mercadolibre", "meli.la")), ("Amazon", ("amazon.com.mx", "amzn.to")),
-        ("Walmart", ("walmart",)), ("Bodega Aurrera", ("bodegaaurrera",)),
-        ("Chedraui", ("chedraui",)), ("Soriana", ("soriana",)), ("Liverpool", ("liverpool",)),
-        ("Coppel", ("coppel",)), ("Suburbia", ("suburbia",)), ("Oferstock", ("oferstock",)),
+        ("Mercado Libre", ("mercadolibre", "meli.la")),
+        ("Amazon", ("amazon.com.mx", "amzn.to")),
+        ("Walmart", ("walmart",)),
+        ("Bodega Aurrera", ("bodegaaurrera",)),
+        ("Chedraui", ("chedraui",)),
+        ("Soriana", ("soriana",)),
+        ("Liverpool", ("liverpool",)),
+        ("Coppel", ("coppel",)),
+        ("Suburbia", ("suburbia",)),
+        ("Oferstock", ("oferstock",)),
     ]:
         if any(x in low for x in needles):
             return name
     return "Telegram"
+
 
 def _esperar_gemini():
     global _last_ai_call
@@ -110,6 +123,7 @@ def _esperar_gemini():
     if restante > 0:
         time.sleep(restante)
     _last_ai_call = time.monotonic()
+
 
 def _candidate(source, text, session=None):
     urls = [u.rstrip(".,;:!?)]}>'\"") for u in URL_RE.findall(text or "")]
@@ -122,9 +136,18 @@ def _candidate(source, text, session=None):
     # Prefer URLs that identify a supported store/product. The first URL in a
     # Telegram post is often an affiliate/shortener or an image/tracking link.
     store_hints = (
-        "amazon.com.mx", "amzn.to", "walmart.com.mx", "bodegaaurrera.com.mx",
-        "mercadolibre.com.mx", "meli.la", "chedraui.com.mx", "soriana.com",
-        "liverpool.com.mx", "coppel.com", "suburbia.com.mx", "oferstock.com.mx",
+        "amazon.com.mx",
+        "amzn.to",
+        "walmart.com.mx",
+        "bodegaaurrera.com.mx",
+        "mercadolibre.com.mx",
+        "meli.la",
+        "chedraui.com.mx",
+        "soriana.com",
+        "liverpool.com.mx",
+        "coppel.com",
+        "suburbia.com.mx",
+        "oferstock.com.mx",
     )
     ordered = sorted(
         external,
@@ -140,7 +163,15 @@ def _candidate(source, text, session=None):
 
     # Resolve short/affiliate redirects when possible, then re-evaluate the
     # store from the final URL instead of keeping the original guess.
-    if session and urlparse_safe(url) in ("amzn.to", "meli.la", "mercadolibre.com", "mercadolibre.com", "bit.ly", "tidd.ly", "link.amazon"):
+    if session and urlparse_safe(url) in (
+        "amzn.to",
+        "meli.la",
+        "mercadolibre.com",
+        "mercadolibre.com",
+        "bit.ly",
+        "tidd.ly",
+        "link.amazon",
+    ):
         try:
             r = session.get(url, headers=HEADERS, allow_redirects=True, timeout=12)
             if r.url and not r.url.startswith(("https://t.me/", "https://telegram.me/")):
@@ -162,7 +193,10 @@ def _candidate(source, text, session=None):
         if not vals:
             continue
         ll = line.lower()
-        if any(x in ll for x in ("precio final", "precio oferta", "precio de oferta", "a tan sólo", "a solo", "ahora", "desde")):
+        if any(
+            x in ll
+            for x in ("precio final", "precio oferta", "precio de oferta", "a tan sólo", "a solo", "ahora", "desde")
+        ):
             actual = vals[-1]
         if any(x in ll for x in ("precio anterior", "antes", "original")):
             anterior = vals[-1]
@@ -173,7 +207,20 @@ def _candidate(source, text, session=None):
         anterior = min(bigger) if bigger else None
 
     low = text.lower()
-    liquidacion = any(x in low for x in ("liquidación", "liquidacion", "remate", "outlet", "última pieza", "ultima pieza", "saldo", "reacondicionado", "error de precio"))
+    liquidacion = any(
+        x in low
+        for x in (
+            "liquidación",
+            "liquidacion",
+            "remate",
+            "outlet",
+            "última pieza",
+            "ultima pieza",
+            "saldo",
+            "reacondicionado",
+            "error de precio",
+        )
+    )
     global _ai_calls
     ai = {}
     if _ai_calls < MAX_TELEGRAM_AI:
@@ -189,7 +236,11 @@ def _candidate(source, text, session=None):
     if not tienda and ai.get("tienda"):
         tienda = str(ai["tienda"]).strip()
     liquidacion = liquidacion or bool(ai.get("liquidacion"))
-    descuento = round((1 - actual / anterior) * 100) if actual and anterior and anterior > actual else int(ai.get("descuento") or 0)
+    descuento = (
+        round((1 - actual / anterior) * 100)
+        if actual and anterior and anterior > actual
+        else int(ai.get("descuento") or 0)
+    )
     condiciones = _condiciones(text)
 
     if not titulo:
@@ -202,13 +253,22 @@ def _candidate(source, text, session=None):
     if not actual or not url:
         return None
     return {
-        "tienda": tienda, "titulo": titulo[:180], "marca": marca, "categoria": categoria,
-        "precio_actual": actual, "precio_anterior": anterior, "descuento": descuento,
-        "url": url, "liquidacion": liquidacion,
+        "tienda": tienda,
+        "titulo": titulo[:180],
+        "marca": marca,
+        "categoria": categoria,
+        "precio_actual": actual,
+        "precio_anterior": anterior,
+        "descuento": descuento,
+        "url": url,
+        "liquidacion": liquidacion,
         "outlet": any(x in low for x in ("outlet", "reacondicionado", "open box")),
         "condiciones": condiciones,
-        "origen": source, "origen_link": "Telegram", "publicacion": html.unescape(text[:4000]),
+        "origen": source,
+        "origen_link": "Telegram",
+        "publicacion": html.unescape(text[:4000]),
     }
+
 
 def buscar_telegram(session):
     resultados = []

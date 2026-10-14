@@ -5,6 +5,7 @@ NO se hardcodean endpoints internos/no documentados. Cada endpoint se configura 
 variable de entorno (opcional). Si una variable no existe, el valor es "" y la
 fuente correspondiente se reporta como `not_configured` sin afectar a las demás.
 """
+
 import os
 
 # nombre lógico -> variable de entorno

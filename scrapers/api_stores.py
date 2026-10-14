@@ -7,6 +7,7 @@ Un bloqueo o error de una tienda nunca se convierte en "success" y nunca detiene
 demás. Los endpoints se configuran por variables de entorno; no se hardcodean
 endpoints internos y no se intenta evadir CAPTCHA/WAF.
 """
+
 from __future__ import annotations
 
 import logging
@@ -48,8 +49,11 @@ class JsonEndpointAdapter(BaseScraper):
         prefijo = self.endpoint_name.split("_")[0]
         terminos = env_terminos(f"{prefijo}_QUERIES", TERMINOS_LIQUIDACION) if "{q}" in self.endpoint else ("",)
         paginas = env_int(f"{prefijo}_PAGES", 2, 1, 5) if "{page}" in self.endpoint else 1
-        return [self.endpoint.replace("{q}", quote_plus(t)).replace("{page}", str(p))
-                for t in terminos for p in range(1, paginas + 1)]
+        return [
+            self.endpoint.replace("{q}", quote_plus(t)).replace("{page}", str(p))
+            for t in terminos
+            for p in range(1, paginas + 1)
+        ]
 
     def _pedir(self, url: str):
         """(estado, payload). Nunca lanza."""
@@ -70,9 +74,13 @@ class JsonEndpointAdapter(BaseScraper):
 
     def discover(self) -> list[dict[str, Any]]:
         if not self.endpoint:
-            self.last_status = {"state": "not_configured",
-                                "detail": f"{ENDPOINT_ENV_VARS.get(self.endpoint_name, 'endpoint')} no configurado"}
-            logger.info("[%s] %s no configurado; fuente API omitida.", self.store, ENDPOINT_ENV_VARS.get(self.endpoint_name))
+            self.last_status = {
+                "state": "not_configured",
+                "detail": f"{ENDPOINT_ENV_VARS.get(self.endpoint_name, 'endpoint')} no configurado",
+            }
+            logger.info(
+                "[%s] %s no configurado; fuente API omitida.", self.store, ENDPOINT_ENV_VARS.get(self.endpoint_name)
+            )
             return []
         rows: list[dict[str, Any]] = []
         vistos: set = set()
@@ -83,7 +91,7 @@ class JsonEndpointAdapter(BaseScraper):
                 ultimo = {"state": estado}
                 if isinstance(extra, int):
                     ultimo["http"] = extra
-                if estado in ESTADOS_CORTE:      # bloqueo/credencial/endpoint: no se insiste
+                if estado in ESTADOS_CORTE:  # bloqueo/credencial/endpoint: no se insiste
                     break
                 continue
             for row in extract_products(payload, self.home or self.endpoint, self.store):
@@ -109,6 +117,7 @@ class WalmartAdapter(BaseScraper):
 
     def discover(self) -> list[dict[str, Any]]:
         from scrapers import walmart_api
+
         rows = walmart_api.buscar_walmart_graphql()
         self.last_status = dict(walmart_api.LAST_STATUS)
         if self.last_status.get("state") == "ok":
@@ -125,6 +134,7 @@ class BodegaAdapter(BaseScraper):
 
     def discover(self) -> list[dict[str, Any]]:
         from scrapers import bodega_aurrera_api
+
         rows = bodega_aurrera_api.buscar_bodega_graphql()
         self.last_status = dict(bodega_aurrera_api.LAST_STATUS)
         if self.last_status.get("state") == "ok":
@@ -144,9 +154,11 @@ class MercadoLibreAdapter(BaseScraper):
     def discover(self) -> list[dict[str, Any]]:
         import os
         from scrapers.mercado_libre_api import MercadoLibreApi
+
         if not os.getenv("MERCADOLIBRE_ACCESS_TOKEN", "").strip():
-            logger.info("[Mercado Libre MX] MERCADOLIBRE_ACCESS_TOKEN no configurado; "
-                        "se usa búsqueda pública + historial.")
+            logger.info(
+                "[Mercado Libre MX] MERCADOLIBRE_ACCESS_TOKEN no configurado; " "se usa búsqueda pública + historial."
+            )
         api = MercadoLibreApi()
         rows = api.discover()
         if api.circuit.paused:
@@ -158,9 +170,15 @@ class MercadoLibreAdapter(BaseScraper):
 
 
 def _adapter(name: str, endpoint_name: str, home: str):
-    return type(f"{name}Adapter", (JsonEndpointAdapter,), {
-        "store": name, "endpoint_name": endpoint_name, "home": home,
-    })
+    return type(
+        f"{name}Adapter",
+        (JsonEndpointAdapter,),
+        {
+            "store": name,
+            "endpoint_name": endpoint_name,
+            "home": home,
+        },
+    )
 
 
 SorianaAdapter = _adapter("Soriana", "SORIANA_API", "https://www.soriana.com")

@@ -7,6 +7,7 @@ pero jamás detiene el resto del monitor: este script siempre termina con códig
 y deja siempre `preflight_health.json` y `preflight.env`.
 No intenta evadir CAPTCHA/WAF.
 """
+
 from __future__ import annotations
 
 import json
@@ -36,7 +37,9 @@ def ejecutar_diagnostico_conectividad(url: str, nombre_tienda: str) -> str:
     """Compatibilidad: devuelve el estado clasificado de una URL ('ok', 'blocked', ...)."""
     resultado = probe_url(url)
     if resultado["state"] != "ok":
-        logger.warning("[%s] preflight %s -> %s (HTTP %s)", nombre_tienda, url, resultado["state"], resultado.get("status"))
+        logger.warning(
+            "[%s] preflight %s -> %s (HTTP %s)", nombre_tienda, url, resultado["state"], resultado.get("status")
+        )
     return resultado["state"]
 
 
@@ -53,8 +56,13 @@ def ejecutar_preflight(targets: dict[str, list[str]] | None = None) -> dict:
         for tienda, resumen in pool.map(_una, list(targets)):
             tiendas[tienda] = resumen
             nivel = logging.INFO if resumen["state"] == "ok" else logging.WARNING
-            logger.log(nivel, "[%s] preflight: %s%s", tienda, resumen["state"],
-                       " (se omitirá en este ciclo)" if resumen["blocked"] else "")
+            logger.log(
+                nivel,
+                "[%s] preflight: %s%s",
+                tienda,
+                resumen["state"],
+                " (se omitirá en este ciclo)" if resumen["blocked"] else "",
+            )
 
     bloqueadas = [t for t, r in tiendas.items() if r["blocked"]]
     return {
@@ -76,9 +84,15 @@ def main() -> int:
     try:
         health = ejecutar_preflight()
     except Exception as exc:  # el preflight no debe convertir un fallo propio en fallo global
-        logger.error("Preflight falló de forma inesperada (%s: %s); no se bloquea ninguna fuente.", type(exc).__name__, exc)
-        health = {"generated_at": datetime.now(timezone.utc).isoformat(), "stores": {},
-                  "blocked_stores": [], "error": f"{type(exc).__name__}: {exc}"}
+        logger.error(
+            "Preflight falló de forma inesperada (%s: %s); no se bloquea ninguna fuente.", type(exc).__name__, exc
+        )
+        health = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "stores": {},
+            "blocked_stores": [],
+            "error": f"{type(exc).__name__}: {exc}",
+        }
     escribir_salidas(health)
     print("=== PREFLIGHT ===")
     for tienda, r in health["stores"].items():

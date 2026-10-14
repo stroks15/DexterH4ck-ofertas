@@ -14,13 +14,14 @@ from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
 from scrapers.discovery_utils import TERMINOS_LIQUIDACION, buscar_graphql_paginado, env_int, env_terminos
 from scrapers.bodega_graphql import BodegaGraphQLParser
 
-
 LAST_STATUS: dict = {"state": "not_run"}
 
 
 def consultar_liquidaciones_bodega_api(termino_busqueda: str, pagina: int = 1, tamano: int = 40) -> dict:
     endpoint = os.getenv("BODEGA_GRAPHQL_URL", "").strip()
-    store_id = os.getenv("BODEGA_STORE_ID", "").strip() or "0000003001"  # una variable vacía no debe anular el valor por defecto
+    store_id = (
+        os.getenv("BODEGA_STORE_ID", "").strip() or "0000003001"
+    )  # una variable vacía no debe anular el valor por defecto
     if not endpoint:
         LAST_STATUS["state"] = "not_configured"
         return {}
@@ -75,6 +76,10 @@ def buscar_bodega_graphql(terminos=None, marcas_prioritarias=None) -> list[dict]
     parser = BodegaGraphQLParser(marcas_prioritarias=marcas_prioritarias)
     terminos = tuple(terminos) if terminos else env_terminos("BODEGA_QUERIES", TERMINOS_LIQUIDACION)
     return buscar_graphql_paginado(
-        consultar_liquidaciones_bodega_api, parser, terminos,
-        paginas=env_int("BODEGA_PAGES", 2, 1, 5), tamano=40, estado=LAST_STATUS,
+        consultar_liquidaciones_bodega_api,
+        parser,
+        terminos,
+        paginas=env_int("BODEGA_PAGES", 2, 1, 5),
+        tamano=40,
+        estado=LAST_STATUS,
     )

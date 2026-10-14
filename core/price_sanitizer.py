@@ -43,8 +43,18 @@ _MEDIDA = re.compile(
 )
 
 _CAMPOS_TEXTO = (
-    "titulo", "title", "nombre", "name", "description", "descripcion",
-    "presentacion", "contenido", "gramaje", "size", "tamano", "tamaño",
+    "titulo",
+    "title",
+    "nombre",
+    "name",
+    "description",
+    "descripcion",
+    "presentacion",
+    "contenido",
+    "gramaje",
+    "size",
+    "tamano",
+    "tamaño",
 )
 
 
@@ -84,9 +94,8 @@ def extraer_medidas(texto: Any) -> set[float]:
             continue
         medidas.add(n)
         unidad = m.group("u").lower()
-        if unidad in ("kg", "kgs", "kilo", "kilos", "kilogramo", "kilogramos",
-                      "l", "lt", "lts", "litro", "litros"):
-            medidas.add(n * 1000)        # 1 kg -> 1000 g ; 1 l -> 1000 ml
+        if unidad in ("kg", "kgs", "kilo", "kilos", "kilogramo", "kilogramos", "l", "lt", "lts", "litro", "litros"):
+            medidas.add(n * 1000)  # 1 kg -> 1000 g ; 1 l -> 1000 ml
     return medidas
 
 
@@ -111,7 +120,7 @@ def sanear_par_precios(actual: Any, anterior: Any, texto: Any = "") -> tuple[flo
     previo_crudo = anterior
     previo = parse_price(anterior)
     if previo_crudo not in (None, "", 0, 0.0) and previo is None:
-        return precio, None, "anterior_no_numerico"          # p. ej. "875g"
+        return precio, None, "anterior_no_numerico"  # p. ej. "875g"
     if precio is None:
         return None, None, "actual_invalido"
     if previo is not None and previo <= precio:

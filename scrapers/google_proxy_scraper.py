@@ -15,6 +15,7 @@ Notas técnicas:
 - Es una fuente ONLINE: no se heredan ``tipo_fuente`` ni puntajes/descuentos precalculados
   del proxy. El descuento lo recalcula el monitor desde precios saneados.
 """
+
 from __future__ import annotations
 
 import logging
@@ -55,8 +56,17 @@ K_TITULO = ("titulo", "title", "nombre", "name", "productName", "displayName")
 K_URL = ("url", "link", "permalink", "canonicalUrl", "productUrl")
 K_ID = ("id", "productId", "sku", "itemId", "upc", "gtin")
 K_ACTUAL = ("precio_actual", "currentPrice", "price", "precio", "salePrice", "sellingPrice", "offerPrice")
-K_ANTERIOR = ("precio_anterior", "wasPrice", "previous_price", "originalPrice", "listPrice",
-              "regularPrice", "precio_lista", "precio_regular", "original_price")
+K_ANTERIOR = (
+    "precio_anterior",
+    "wasPrice",
+    "previous_price",
+    "originalPrice",
+    "listPrice",
+    "regularPrice",
+    "precio_lista",
+    "precio_regular",
+    "original_price",
+)
 K_TIENDA = ("tienda", "store", "source", "fuente", "retailer", "marketplace")
 
 
@@ -140,8 +150,10 @@ class GoogleProxyScraper(BaseScraper):
             return response.json()
         except ValueError:
             # Típico cuando el despliegue no es público y Google devuelve una página de login HTML.
-            self.last_status = {"state": "invalid_response",
-                                "detail": "la respuesta no es JSON (¿acceso del despliegue = 'Cualquier persona'?)"}
+            self.last_status = {
+                "state": "invalid_response",
+                "detail": "la respuesta no es JSON (¿acceso del despliegue = 'Cualquier persona'?)",
+            }
             return None
 
     # --------------------------------------------------------------- parseo
@@ -221,7 +233,10 @@ class GoogleProxyScraper(BaseScraper):
 
         producto_id = _primero(fila, K_ID)
         return self.normalize(
-            title=titulo, url=url, price=actual, previous_price=anterior,
+            title=titulo,
+            url=url,
+            price=actual,
+            previous_price=anterior,
             id=str(producto_id) if producto_id is not None else url,
             marca=str(fila.get("marca") or fila.get("brand") or ""),
             categoria=str(fila.get("categoria") or fila.get("category") or ""),
@@ -230,7 +245,7 @@ class GoogleProxyScraper(BaseScraper):
             "tienda": tienda,
             "origen_link": "google_proxy",
             "api": "google_apps_script",
-            "tipo_fuente": "ONLINE",   # nunca FISICA: las terminaciones .01/.02/.03 no aplican
+            "tipo_fuente": "ONLINE",  # nunca FISICA: las terminaciones .01/.02/.03 no aplican
         }
 
     # ----------------------------------------------------------------- API
@@ -259,8 +274,12 @@ class GoogleProxyScraper(BaseScraper):
             vistos.add(clave)
             rows.append(producto)
         if rows:
-            self.last_status = {"state": "ok", "count": len(rows), "rows_seen": len(filas),
-                                "rejected_rows": descartadas}
+            self.last_status = {
+                "state": "ok",
+                "count": len(rows),
+                "rows_seen": len(filas),
+                "rejected_rows": descartadas,
+            }
             if proxy_status:
                 self.last_status["proxy_status"] = proxy_status
             if isinstance(proxy_sources, list):
@@ -274,17 +293,28 @@ class GoogleProxyScraper(BaseScraper):
                 estado = "empty"
             else:
                 estado = "invalid_response"
-            self.last_status = {"state": estado, "count": 0, "rows_seen": len(filas),
-                                "rejected_rows": descartadas,
-                                "detail": "el proxy reportó un fallo global" if proxy_status == "error"
-                                else ("el JSON no contiene filas de producto reconocibles" if not filas
-                                else "se encontraron filas, pero ninguna pasó la normalización")}
+            self.last_status = {
+                "state": estado,
+                "count": 0,
+                "rows_seen": len(filas),
+                "rejected_rows": descartadas,
+                "detail": (
+                    "el proxy reportó un fallo global"
+                    if proxy_status == "error"
+                    else (
+                        "el JSON no contiene filas de producto reconocibles"
+                        if not filas
+                        else "se encontraron filas, pero ninguna pasó la normalización"
+                    )
+                ),
+            }
             if proxy_status:
                 self.last_status["proxy_status"] = proxy_status
             if isinstance(proxy_sources, list):
                 self.last_status["fuentes"] = proxy_sources
-            logger.warning("[Google Proxy] %s: filas=%s, descartadas=%s.",
-                           self.last_status["detail"], len(filas), descartadas)
+            logger.warning(
+                "[Google Proxy] %s: filas=%s, descartadas=%s.", self.last_status["detail"], len(filas), descartadas
+            )
         return rows
 
 

@@ -32,9 +32,11 @@ KEYWORDS_LIQUIDACION = {
     "error de precio": 15,
 }
 
+
 def normalize_text(value):
     text = re.sub(r"\s+", " ", str(value or "").lower()).strip()
     return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
+
 
 def _load_json(path, default):
     try:
@@ -43,10 +45,12 @@ def _load_json(path, default):
     except (OSError, json.JSONDecodeError, TypeError):
         return default
 
+
 def _config():
     categorias = _load_json(CONFIG_CATEGORIAS, {"categorias": [], "alta_demanda": [], "aliases": {}})
     marcas = _load_json(CONFIG_MARCAS, {})
     return categorias, marcas
+
 
 def infer_category(product):
     categorias, _ = _config()
@@ -60,30 +64,36 @@ def infer_category(product):
             if normalize_text(category) == key:
                 return category
 
-    text = normalize_text(" ".join(str(product.get(k, "")) for k in (
-        "titulo", "title", "nombre", "description", "descripcion", "subcategoria"
-    )))
+    text = normalize_text(
+        " ".join(
+            str(product.get(k, "")) for k in ("titulo", "title", "nombre", "description", "descripcion", "subcategoria")
+        )
+    )
     aliases = categorias.get("aliases", {})
     for alias in sorted(aliases, key=lambda x: len(normalize_text(x)), reverse=True):
         if re.search(rf"(?<!\w){re.escape(normalize_text(alias))}(?!\w)", text):
             return aliases[alias]
     return ""
 
+
 def detect_priority_brand(product):
     _, brands = _config()
     explicit = str(product.get("marca") or product.get("brand") or "").strip()
-    text = normalize_text(" ".join(str(product.get(k, "")) for k in (
-        "titulo", "title", "nombre", "description", "descripcion", "marca", "brand"
-    )))
+    text = normalize_text(
+        " ".join(
+            str(product.get(k, ""))
+            for k in ("titulo", "title", "nombre", "description", "descripcion", "marca", "brand")
+        )
+    )
     for category, values in brands.items():
         for brand in values:
             normalized = normalize_text(brand)
             if normalized and (
-                normalized == normalize_text(explicit)
-                or re.search(rf"(?<!\w){re.escape(normalized)}(?!\w)", text)
+                normalized == normalize_text(explicit) or re.search(rf"(?<!\w){re.escape(normalized)}(?!\w)", text)
             ):
                 return brand, category
     return explicit, ""
+
 
 def calculate_discount(old_price, new_price):
     try:
@@ -95,6 +105,7 @@ def calculate_discount(old_price, new_price):
     except (TypeError, ValueError):
         return 0
 
+
 def score_product(product, discount=None):
     categorias, _ = _config()
     if discount is None:
@@ -103,9 +114,12 @@ def score_product(product, discount=None):
             product.get("price", product.get("precio_actual", 0)),
         )
 
-    text = normalize_text(" ".join(str(product.get(k, "")) for k in (
-        "titulo", "title", "nombre", "description", "descripcion", "liquidacion", "indicadores"
-    )))
+    text = normalize_text(
+        " ".join(
+            str(product.get(k, ""))
+            for k in ("titulo", "title", "nombre", "description", "descripcion", "liquidacion", "indicadores")
+        )
+    )
     indicators = []
     # El descuento es el componente principal: aporta de 5 a 100 puntos.
     # 50% = ~53 puntos; 90% = ~91; 99% = 100. Los demás indicadores
@@ -120,10 +134,7 @@ def score_product(product, discount=None):
         indicators.append(f"marca:{brand}")
 
     category = infer_category(product)
-    high_demand = any(
-        normalize_text(category) == normalize_text(x)
-        for x in categorias.get("alta_demanda", [])
-    )
+    high_demand = any(normalize_text(category) == normalize_text(x) for x in categorias.get("alta_demanda", []))
     if high_demand:
         score += 15
         indicators.append(f"categoria_alta:{category}")
@@ -136,9 +147,7 @@ def score_product(product, discount=None):
         score += min(keyword_bonus, 25)
         indicators.append("liquidacion")
 
-    last_piece_outlet = any(
-        term in text for term in ("ultima pieza", "ultimas piezas", "outlet", "clearance")
-    )
+    last_piece_outlet = any(term in text for term in ("ultima pieza", "ultimas piezas", "outlet", "clearance"))
     if product.get("outlet") is True or last_piece_outlet:
         score += 10
         indicators.append("ultima_pieza_outlet")
@@ -171,6 +180,7 @@ def score_product(product, discount=None):
         "extremo": extreme,
     }
 
+
 def evaluate_product(product):
     result = score_product(product)
     result["es_liquidacion"] = 5 <= result["descuento"] <= 99
@@ -179,9 +189,9 @@ def evaluate_product(product):
     # sirve para ordenar/priorizar. El porcentaje es el criterio de elegibilidad.
     result["recomendado"] = result["es_liquidacion"] or "liquidacion_centavos_fisica" in result["indicadores"]
 
-    texto = " ".join(str(product.get(k, "")) for k in (
-        "titulo", "description", "descripcion", "publicacion", "condiciones"
-    )).lower()
+    texto = " ".join(
+        str(product.get(k, "")) for k in ("titulo", "description", "descripcion", "publicacion", "condiciones")
+    ).lower()
     condiciones = list(product.get("condiciones") or [])
     for needles, label in (
         (("cupón", "cupon", "coupon", "código promocional"), "cupón"),
@@ -195,6 +205,7 @@ def evaluate_product(product):
             condiciones.append(label)
     result["condiciones"] = condiciones
     return result
+
 
 def is_liquidation(product):
     return evaluate_product(product)["recomendado"]

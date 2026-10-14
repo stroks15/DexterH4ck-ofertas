@@ -15,7 +15,6 @@ import time
 
 import requests
 
-
 DEFAULT_HEADERS = {
     "User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
     "Accept-Language": "es-MX,es;q=0.9,en;q=0.7",
@@ -54,7 +53,7 @@ class BaseScraper(ABC):
         for attempt in range(self.context.max_retries + 1):
             # Aumenta moderadamente el timeout en cada intento para evitar que
             # conexiones lentas de catálogos públicos se queden colgadas.
-            timeout = min(base_timeout * (1.35 ** attempt), 45.0)
+            timeout = min(base_timeout * (1.35**attempt), 45.0)
             try:
                 response = self.session.get(url, timeout=timeout, **kwargs)
 
@@ -67,7 +66,7 @@ class BaseScraper(ABC):
                 if retry_after and retry_after.replace(".", "", 1).isdigit():
                     delay = min(float(retry_after), 20.0)
                 else:
-                    delay = min(1.0 * (2 ** attempt), 12.0)
+                    delay = min(1.0 * (2**attempt), 12.0)
 
                 # Jitter evita que varias tiendas vuelvan a golpear al mismo
                 # tiempo al recuperarse de un 429/503.
@@ -80,14 +79,15 @@ class BaseScraper(ABC):
             except requests.RequestException as exc:
                 last_error = exc
                 if attempt < self.context.max_retries:
-                    delay = min(1.0 * (2 ** attempt), 12.0)
+                    delay = min(1.0 * (2**attempt), 12.0)
                     delay += __import__("random").uniform(0.20, 0.90)
                     time.sleep(delay)
 
         raise last_error or RuntimeError(f"{self.store}: request failed")
 
-    def normalize(self, *, title: str, url: str, price: Any,
-                  previous_price: Any = None, **extra: Any) -> dict[str, Any]:
+    def normalize(
+        self, *, title: str, url: str, price: Any, previous_price: Any = None, **extra: Any
+    ) -> dict[str, Any]:
         return {
             "tienda": self.store,
             "titulo": str(title or "").strip(),

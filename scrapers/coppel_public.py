@@ -51,8 +51,7 @@ def extract_products_from_next_data(html: str, url: str) -> list[dict[str, Any]]
         title = node.get("name") or node.get("productName") or node.get("title")
         current = node.get("price") or node.get("salePrice") or node.get("sellingPrice")
         previous = (
-            node.get("listPrice") or node.get("regularPrice") or
-            node.get("originalPrice") or node.get("compareAtPrice")
+            node.get("listPrice") or node.get("regularPrice") or node.get("originalPrice") or node.get("compareAtPrice")
         )
         if title and current is not None:
             candidates.append((str(title), current, previous, node))
@@ -78,11 +77,13 @@ def extract_products_from_next_data(html: str, url: str) -> list[dict[str, Any]]
         if isinstance(brand, dict):
             brand = brand.get("name") or ""
         detected_brand, _ = detect_priority_brand({"titulo": title, "marca": brand})
-        category = infer_category({
-            "titulo": title,
-            "marca": detected_brand or brand,
-            "categoria": node.get("category") or "",
-        })
+        category = infer_category(
+            {
+                "titulo": title,
+                "marca": detected_brand or brand,
+                "categoria": node.get("category") or "",
+            }
+        )
         discount = round((1 - current / previous) * 100) if previous and previous > current else 0
         product_url = node.get("url") or node.get("permalink") or context["url"]
         sku = node.get("sku") or node.get("id") or context.get("sku") or ""
@@ -90,23 +91,25 @@ def extract_products_from_next_data(html: str, url: str) -> list[dict[str, Any]]
         if identity in seen:
             continue
         seen.add(identity)
-        output.append({
-            "id": sku or context.get("sku") or node.get("id"),
-            "titulo": title,
-            "nombre": title,
-            "marca": detected_brand or brand,
-            "categoria": category,
-            "precio_actual": current,
-            "precio_anterior": previous if previous and previous > current else None,
-            "descuento": discount,
-            "url": product_url,
-            "score": discount,
-            "puntuacion": discount,
-            "es_bomba": discount >= 90,
-            "tienda": "Coppel",
-            "sku": sku,
-            "origen_link": "coppel_next_data",
-        })
+        output.append(
+            {
+                "id": sku or context.get("sku") or node.get("id"),
+                "titulo": title,
+                "nombre": title,
+                "marca": detected_brand or brand,
+                "categoria": category,
+                "precio_actual": current,
+                "precio_anterior": previous if previous and previous > current else None,
+                "descuento": discount,
+                "url": product_url,
+                "score": discount,
+                "puntuacion": discount,
+                "es_bomba": discount >= 90,
+                "tienda": "Coppel",
+                "sku": sku,
+                "origen_link": "coppel_next_data",
+            }
+        )
     return output
 
 

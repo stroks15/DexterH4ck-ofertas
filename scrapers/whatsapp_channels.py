@@ -5,6 +5,7 @@ No usa stealth, no modifica fingerprints ni oculta la automatización. Si el
 navegador no está disponible o el canal responde con error/bloqueo, se reporta en
 LAST_STATUS y el resto del monitor continúa.
 """
+
 import asyncio
 import hashlib
 import html
@@ -46,14 +47,19 @@ class WhatsAppChannelScraper:
         from playwright.async_api import async_playwright
 
         candidatos_encontrados = []
-        canales = [c for c in self._cargar_canales()
-                   if isinstance(c, dict) and str(c.get("tipo", "")).lower() == "whatsapp_channel"]
+        canales = [
+            c
+            for c in self._cargar_canales()
+            if isinstance(c, dict) and str(c.get("tipo", "")).lower() == "whatsapp_channel"
+        ]
         if not canales:
             LAST_STATUS["state"] = "not_configured"
             return candidatos_encontrados
 
         try:
-            wait_ms = int(getattr(self.context, "NETWORK_BROWSER_WAIT_MS", os.getenv("NETWORK_BROWSER_WAIT_MS", "7000")))
+            wait_ms = int(
+                getattr(self.context, "NETWORK_BROWSER_WAIT_MS", os.getenv("NETWORK_BROWSER_WAIT_MS", "7000"))
+            )
         except (ValueError, TypeError):
             wait_ms = 7000
 
@@ -88,18 +94,20 @@ class WhatsAppChannelScraper:
                             texto = bloque.get_text(" ", strip=True)
                             for link in re.findall(r"https?://[^\s]+", texto):
                                 url_limpia = link.rstrip(",.;:\"')")
-                                candidatos_encontrados.append({
-                                    "id": hashlib.sha1((url_limpia + nombre).encode("utf-8")).hexdigest()[:16],
-                                    "name": html.unescape(texto[:120]) + "...",
-                                    "titulo": html.unescape(texto[:120]),
-                                    "brand": "Canal Ofertas",
-                                    "url": url_limpia,
-                                    "precio_actual": 0.0,  # el motor cruza esto con el historial local
-                                    "precio_anterior": None,
-                                    "tienda": "WhatsApp_Feed",
-                                    "origen_link": "whatsapp",
-                                    "tipo_fuente": "WEB_FALLBACK",
-                                })
+                                candidatos_encontrados.append(
+                                    {
+                                        "id": hashlib.sha1((url_limpia + nombre).encode("utf-8")).hexdigest()[:16],
+                                        "name": html.unescape(texto[:120]) + "...",
+                                        "titulo": html.unescape(texto[:120]),
+                                        "brand": "Canal Ofertas",
+                                        "url": url_limpia,
+                                        "precio_actual": 0.0,  # el motor cruza esto con el historial local
+                                        "precio_anterior": None,
+                                        "tienda": "WhatsApp_Feed",
+                                        "origen_link": "whatsapp",
+                                        "tipo_fuente": "WEB_FALLBACK",
+                                    }
+                                )
                     except Exception as err:  # un canal roto no detiene a los demás
                         logger.error("[WHATSAPP] Error en canal '%s': %s", nombre, err)
                         estados.append("error")

@@ -17,7 +17,7 @@ class ResilienceTests(unittest.TestCase):
         scraper = DummyScraper(ScraperContext(timeout=10, max_retries=3))
         values = []
         for attempt in range(4):
-            values.append(min(10 * (1.35 ** attempt), 45.0))
+            values.append(min(10 * (1.35**attempt), 45.0))
         self.assertEqual(values[0], 10)
         self.assertLessEqual(values[-1], 45)
 

@@ -41,11 +41,24 @@ class ParsePriceTests(unittest.TestCase):
 
 class ParserTests(unittest.TestCase):
     def _payload(self, was, name="Arroz Morelos 875g"):
-        return {"data": {"search": {"products": [{
-            "id": "1", "name": name, "canonicalUrl": "/ip/arroz/1",
-            "priceInfo": {"currentPrice": {"price": 32.5}, "wasPrice": {"price": was},
-                          "priceString": "875g"},
-        }]}}}
+        return {
+            "data": {
+                "search": {
+                    "products": [
+                        {
+                            "id": "1",
+                            "name": name,
+                            "canonicalUrl": "/ip/arroz/1",
+                            "priceInfo": {
+                                "currentPrice": {"price": 32.5},
+                                "wasPrice": {"price": was},
+                                "priceString": "875g",
+                            },
+                        }
+                    ]
+                }
+            }
+        }
 
     def test_walmart_no_toma_gramaje_como_was_price(self):
         self.assertEqual(WalmartGraphQLParser().parsear_respuesta_busqueda(self._payload(875)), [])
@@ -56,9 +69,20 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(rows[0]["descuento"], 59)
 
     def test_walmart_online_termina_en_01_sin_rebaja_no_es_candidato(self):
-        payload = {"data": {"search": {"products": [{
-            "id": "2", "name": "Producto", "canonicalUrl": "/ip/p/2",
-            "priceInfo": {"currentPrice": {"price": 849.01}}}]}}}
+        payload = {
+            "data": {
+                "search": {
+                    "products": [
+                        {
+                            "id": "2",
+                            "name": "Producto",
+                            "canonicalUrl": "/ip/p/2",
+                            "priceInfo": {"currentPrice": {"price": 849.01}},
+                        }
+                    ]
+                }
+            }
+        }
         self.assertEqual(WalmartGraphQLParser().parsear_respuesta_busqueda(payload), [])
 
     def test_extract_products_no_usa_gramaje_como_referencia(self):
@@ -69,14 +93,24 @@ class ParserTests(unittest.TestCase):
 
 class TerminacionesTests(unittest.TestCase):
     def test_online_no_suma_30(self):
-        item = {"tienda": "Walmart MX", "titulo": "Licuadora", "precio_actual": 849.01,
-                "precio_anterior": 1000.0, "url": "https://www.walmart.com.mx/ip/x/1"}
+        item = {
+            "tienda": "Walmart MX",
+            "titulo": "Licuadora",
+            "precio_actual": 849.01,
+            "precio_anterior": 1000.0,
+            "url": "https://www.walmart.com.mx/ip/x/1",
+        }
         self.assertNotIn("liquidacion_terminacion_centavos", analizar_precio_extremo(item)["senales"])
         self.assertNotIn("liquidacion_centavos_fisica", evaluate_product(item)["indicadores"])
 
     def test_fisica_si_suma_30(self):
-        item = {"tienda": "Walmart MX", "titulo": "Licuadora", "precio_actual": 849.01,
-                "tipo_fuente": "FISICA", "url": "https://www.walmart.com.mx/ip/x/1"}
+        item = {
+            "tienda": "Walmart MX",
+            "titulo": "Licuadora",
+            "precio_actual": 849.01,
+            "tipo_fuente": "FISICA",
+            "url": "https://www.walmart.com.mx/ip/x/1",
+        }
         self.assertIn("liquidacion_centavos_fisica", evaluate_product(item)["indicadores"])
         self.assertTrue(senal_terminacion_liquidacion(849.02, "Bodega Aurrera", fisica=True))
         self.assertFalse(senal_terminacion_liquidacion(849.02, "Bodega Aurrera"))
@@ -84,11 +118,14 @@ class TerminacionesTests(unittest.TestCase):
 
 class MonitorTests(unittest.TestCase):
     def test_calcular_datos_ignora_referencia_gramaje_e_historial_contaminado(self):
-        item = {"tienda": "Walmart MX", "titulo": "Pan blanco Bimbo 567 g",
-                "precio_actual": 55.0, "precio_anterior": 567.0}
+        item = {
+            "tienda": "Walmart MX",
+            "titulo": "Pan blanco Bimbo 567 g",
+            "precio_actual": 55.0,
+            "precio_anterior": 567.0,
+        }
         self.assertEqual(mo.calcular_datos(item), (55.0, 0.0, 0))
-        self.assertEqual(mo.calcular_datos({**item, "precio_anterior": None},
-                                           {"precio_maximo": 567.0}), (55.0, 0.0, 0))
+        self.assertEqual(mo.calcular_datos({**item, "precio_anterior": None}, {"precio_maximo": 567.0}), (55.0, 0.0, 0))
 
     def test_historial_contaminado_se_repara(self):
         h = {"k": {"titulo": "Cereal 860 g", "precio_actual": 95.0, "precio_maximo": 860.0}}
@@ -109,29 +146,53 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertEqual(s.last_status["state"], "not_configured")
 
     def test_usa_allow_redirects_y_normaliza(self):
-        payload = {"ofertas": [
-            {"tienda": "walmart", "nombre": "TV 50", "url": "/ip/tv/1", "precio": 4000, "precio_anterior": 9000, "descuento": 99},
-            {"tienda": "Bodega Aurrera", "name": "Arroz 875g", "url": "/ip/arroz/2", "price": 30, "listPrice": 875},
-            {"tienda": "Soriana", "title": "Atún", "link": "https://www.soriana.com/atun/1.html", "price": "$10.50"},
-        ]}
+        payload = {
+            "ofertas": [
+                {
+                    "tienda": "walmart",
+                    "nombre": "TV 50",
+                    "url": "/ip/tv/1",
+                    "precio": 4000,
+                    "precio_anterior": 9000,
+                    "descuento": 99,
+                },
+                {"tienda": "Bodega Aurrera", "name": "Arroz 875g", "url": "/ip/arroz/2", "price": 30, "listPrice": 875},
+                {
+                    "tienda": "Soriana",
+                    "title": "Atún",
+                    "link": "https://www.soriana.com/atun/1.html",
+                    "price": "$10.50",
+                },
+            ]
+        }
         s = self._scraper(payload)
         rows = s.discover()
         self.assertTrue(s.get.call_args.kwargs["allow_redirects"])
         self.assertEqual(len(rows), 3)
         self.assertEqual(rows[0]["tienda"], "Walmart MX")
         self.assertEqual(rows[0]["url"], "https://www.walmart.com.mx/ip/tv/1")
-        self.assertEqual(rows[1]["precio_anterior"], None)          # 875 era el gramaje
+        self.assertEqual(rows[1]["precio_anterior"], None)  # 875 era el gramaje
         self.assertEqual(rows[2]["precio_actual"], 10.5)
         self.assertTrue(all(r["tipo_fuente"] == "ONLINE" for r in rows))
-        self.assertNotIn("descuento", rows[0])                       # no se hereda el del proxy
+        self.assertNotIn("descuento", rows[0])  # no se hereda el del proxy
 
     def test_formato_anidado_data_search_products(self):
-        payload = {"walmart": {"data": {"search": {"products": [{
-            "id": "nested-1", "name": "Televisión 50 pulgadas",
-            "canonicalUrl": "/ip/television/123", "priceInfo": {
-                "currentPrice": {"price": 4000}, "wasPrice": {"price": 9000}
+        payload = {
+            "walmart": {
+                "data": {
+                    "search": {
+                        "products": [
+                            {
+                                "id": "nested-1",
+                                "name": "Televisión 50 pulgadas",
+                                "canonicalUrl": "/ip/television/123",
+                                "priceInfo": {"currentPrice": {"price": 4000}, "wasPrice": {"price": 9000}},
+                            }
+                        ]
+                    }
+                }
             }
-        }]}}}}
+        }
         s = self._scraper(payload)
         rows = s.discover()
         self.assertEqual(len(rows), 1)
@@ -141,39 +202,55 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertEqual(s.last_status["state"], "ok")
 
     def test_infiere_tienda_por_dominio_si_falta_campo_tienda(self):
-        s = self._scraper({"ofertas": [{
-            "name": "Televisión", "url": "https://www.walmart.com.mx/ip/tv/123",
-            "price": 4000, "listPrice": 9000
-        }]})
+        s = self._scraper(
+            {
+                "ofertas": [
+                    {
+                        "name": "Televisión",
+                        "url": "https://www.walmart.com.mx/ip/tv/123",
+                        "price": 4000,
+                        "listPrice": 9000,
+                    }
+                ]
+            }
+        )
         rows = s.discover()
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["tienda"], "Walmart MX")
 
     def test_formato_por_tienda_y_json_invalido(self):
-        s = self._scraper({"walmart": [{"name": "A", "url": "/ip/a/1", "price": 5}],
-                           "mercadolibre": [{"title": "B", "permalink": "https://articulo.mercadolibre.com.mx/MLM-1-b", "price": 7}]})
+        s = self._scraper(
+            {
+                "walmart": [{"name": "A", "url": "/ip/a/1", "price": 5}],
+                "mercadolibre": [
+                    {"title": "B", "permalink": "https://articulo.mercadolibre.com.mx/MLM-1-b", "price": 7}
+                ],
+            }
+        )
         self.assertEqual({r["tienda"] for r in s.discover()}, {"Walmart MX", "Mercado Libre MX"})
         s2 = GoogleProxyScraper(url="https://x.test/exec")
-        resp = MagicMock(status_code=200); resp.json.side_effect = ValueError()
+        resp = MagicMock(status_code=200)
+        resp.json.side_effect = ValueError()
         s2.get = MagicMock(return_value=resp)
         self.assertEqual(s2.discover(), [])
         self.assertEqual(s2.last_status["state"], "invalid_response")
-
 
     def test_proxy_english_offers_contract_and_source_health(self):
         payload = {
             "status": "partial",
             "total_detected": 1,
             "fuentes": [{"tienda": "MERCADO_LIBRE", "estado": "ok", "ofertas": 1}],
-            "offers": [{
-                "tienda": "MERCADO_LIBRE",
-                "id": "MLM123",
-                "nombre": "Audífonos",
-                "url": "https://articulo.mercadolibre.com.mx/MLM-123-audifonos",
-                "precio_actual": 100,
-                "precio_anterior": 250,
-                "descuento": 60
-            }]
+            "offers": [
+                {
+                    "tienda": "MERCADO_LIBRE",
+                    "id": "MLM123",
+                    "nombre": "Audífonos",
+                    "url": "https://articulo.mercadolibre.com.mx/MLM-123-audifonos",
+                    "precio_actual": 100,
+                    "precio_anterior": 250,
+                    "descuento": 60,
+                }
+            ],
         }
         s = self._scraper(payload)
         rows = s.discover()
@@ -185,12 +262,14 @@ class GoogleProxyTests(unittest.TestCase):
         self.assertEqual(s.last_status["fuentes"][0]["tienda"], "MERCADO_LIBRE")
 
     def test_proxy_empty_offers_is_empty_not_invalid_json(self):
-        s = self._scraper({
-            "status": "success",
-            "total_detected": 0,
-            "fuentes": [{"tienda": "MERCADO_LIBRE", "estado": "ok", "ofertas": 0}],
-            "offers": []
-        })
+        s = self._scraper(
+            {
+                "status": "success",
+                "total_detected": 0,
+                "fuentes": [{"tienda": "MERCADO_LIBRE", "estado": "ok", "ofertas": 0}],
+                "offers": [],
+            }
+        )
         self.assertEqual(s.discover(), [])
         self.assertEqual(s.last_status["state"], "empty")
         self.assertEqual(s.last_status["proxy_status"], "success")

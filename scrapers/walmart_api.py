@@ -15,7 +15,6 @@ from config.walmart_graphql_query import WALMART_GRAPHQL_QUERY
 from scrapers.discovery_utils import TERMINOS_LIQUIDACION, buscar_graphql_paginado, env_int, env_terminos
 from scrapers.walmart_graphql import WalmartGraphQLParser
 
-
 LAST_STATUS: dict = {"state": "not_run"}
 
 
@@ -82,6 +81,10 @@ def buscar_walmart_graphql(terminos=None, marcas_prioritarias=None) -> list[dict
     parser = WalmartGraphQLParser(marcas_prioritarias=marcas_prioritarias)
     terminos = tuple(terminos) if terminos else env_terminos("WALMART_QUERIES", TERMINOS_LIQUIDACION)
     return buscar_graphql_paginado(
-        consultar_liquidaciones_walmart_api, parser, terminos,
-        paginas=env_int("WALMART_PAGES", 2, 1, 5), tamano=40, estado=LAST_STATUS,
+        consultar_liquidaciones_walmart_api,
+        parser,
+        terminos,
+        paginas=env_int("WALMART_PAGES", 2, 1, 5),
+        tamano=40,
+        estado=LAST_STATUS,
     )

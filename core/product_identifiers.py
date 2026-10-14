@@ -103,6 +103,7 @@ def canonical_product_identifier(store: str, url: str) -> dict[str, str]:
 def expand_mercadolibre_url(url: str, session=None) -> str:
     """Expande enlaces cortos con HEAD; devuelve la URL original ante fallo."""
     import requests
+
     value = str(url or "").strip()
     if not value:
         return ""

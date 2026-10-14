@@ -3,7 +3,6 @@ import unittest
 from scrapers.walmart_graphql import WalmartGraphQLParser
 from scrapers.bodega_graphql import BodegaGraphQLParser
 
-
 PAYLOAD = {
     "data": {
         "search": {
@@ -42,7 +41,7 @@ class WalmartGraphQLTests(unittest.TestCase):
         self.assertEqual(row["precio_actual"], 849.01)
         self.assertEqual(row["precio_anterior"], 1699.0)
         self.assertEqual(row["descuento"], 50)
-        self.assertFalse(row["es_bomba"])   # 50 % no es bomba; las terminaciones .01 ya no puntúan online
+        self.assertFalse(row["es_bomba"])  # 50 % no es bomba; las terminaciones .01 ya no puntúan online
         self.assertEqual(row["tienda"], "Walmart MX")
 
     def test_bodega_cambia_dominio_y_tienda(self):
