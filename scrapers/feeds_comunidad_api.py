@@ -89,7 +89,9 @@ def parsear_feed_comunidad_espejo() -> list[dict]:
         return []
 
     if getattr(feed, "bozo", False):
-        LOG.warning("[FEED ALTERNATIVO] RSS con advertencia de parseo: %s", getattr(feed, "bozo_exception", "desconocida"))
+        LOG.warning(
+            "[FEED ALTERNATIVO] RSS con advertencia de parseo: %s", getattr(feed, "bozo_exception", "desconocida")
+        )
 
     output = []
     seen = set()
@@ -133,23 +135,25 @@ def parsear_feed_comunidad_espejo() -> list[dict]:
         if not current or not (50 <= discount <= 99):
             continue
 
-        output.append({
-            "id": f"feed:{getattr(entry, 'id', '') or community_url}",
-            "nombre": title,
-            "titulo": title,
-            "marca": "",
-            "precio_actual": current,
-            "precio_anterior": reference,
-            "descuento": discount,
-            "url": url,
-            "score": min(100, discount + 10),
-            "puntuacion": min(100, discount + 10),
-            "es_bomba": discount >= 90,
-            "tienda": store,
-            "origen_link": "feed_comunidad",
-            "url_evidencia_comunidad": community_url,
-            "tipo_fuente": "COMUNIDAD",
-        })
+        output.append(
+            {
+                "id": f"feed:{getattr(entry, 'id', '') or community_url}",
+                "nombre": title,
+                "titulo": title,
+                "marca": "",
+                "precio_actual": current,
+                "precio_anterior": reference,
+                "descuento": discount,
+                "url": url,
+                "score": min(100, discount + 10),
+                "puntuacion": min(100, discount + 10),
+                "es_bomba": discount >= 90,
+                "tienda": store,
+                "origen_link": "feed_comunidad",
+                "url_evidencia_comunidad": community_url,
+                "tipo_fuente": "COMUNIDAD",
+            }
+        )
 
     LOG.info("[FEED ALTERNATIVO] %d alertas válidas", len(output))
     return output

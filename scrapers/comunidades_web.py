@@ -3,6 +3,7 @@
 Solo consume páginas públicas. La comunidad es una señal de descubrimiento; la
 publicación final exige una URL directa de la tienda y precios coherentes.
 """
+
 from __future__ import annotations
 
 import html
@@ -11,7 +12,6 @@ from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
-
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; DexterH4ck-Ofertas/1.0)",
@@ -39,8 +39,7 @@ CURRENT = re.compile(
     r"\D{0,30}\$?\s*([0-9][0-9,.]*)"
 )
 REFERENCE = re.compile(
-    r"(?i)(?:antes|precio\s+(?:anterior|regular|de\s+lista)|original)"
-    r"\D{0,30}\$?\s*([0-9][0-9,.]*)"
+    r"(?i)(?:antes|precio\s+(?:anterior|regular|de\s+lista)|original)" r"\D{0,30}\$?\s*([0-9][0-9,.]*)"
 )
 DISCOUNT = re.compile(r"(?<!\d)([5-9]\d)\s*%\s*(?:de\s*)?(?:descuento|off|rebaja)?", re.I)
 

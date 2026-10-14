@@ -146,7 +146,10 @@ class MercadoLibreApi:
         if response is None or response.status_code >= 400:
             status = response.status_code if response is not None else "network"
             if status in (401, 403, 404):
-                LOG.warning("[MELI API] acceso no disponible HTTP=%s; se activa fallback web/indexado y no se reintenta en este ciclo.", status)
+                LOG.warning(
+                    "[MELI API] acceso no disponible HTTP=%s; se activa fallback web/indexado y no se reintenta en este ciclo.",
+                    status,
+                )
             else:
                 LOG.warning("[MELI API] búsqueda %r HTTP=%s", query, status)
             return []
@@ -203,29 +206,33 @@ class MercadoLibreApi:
                     continue
 
                 score = min(100, discount + (15 if official_id else 0))
-                results.append({
-                    "id": item_id,
-                    "item_id": item_id,
-                    "nombre": item.get("title") or "",
-                    "titulo": item.get("title") or "",
-                    "marca": _brand(item),
-                    "precio_actual": current,
-                    "precio_anterior": reference,
-                    "descuento": discount,
-                    "url": url,
-                    "score": score,
-                    "puntuacion": score,
-                    "es_bomba": discount >= 90,
-                    "tienda": "Mercado Libre MX",
-                    "categoria": item.get("category_id") or "",
-                    "official_store_id": official_id,
-                    "origen_link": "mercadolibre_api",
-                    "api": api_source,
-                })
+                results.append(
+                    {
+                        "id": item_id,
+                        "item_id": item_id,
+                        "nombre": item.get("title") or "",
+                        "titulo": item.get("title") or "",
+                        "marca": _brand(item),
+                        "precio_actual": current,
+                        "precio_anterior": reference,
+                        "descuento": discount,
+                        "url": url,
+                        "score": score,
+                        "puntuacion": score,
+                        "es_bomba": discount >= 90,
+                        "tienda": "Mercado Libre MX",
+                        "categoria": item.get("category_id") or "",
+                        "official_store_id": official_id,
+                        "origen_link": "mercadolibre_api",
+                        "api": api_source,
+                    }
+                )
 
         LOG.info(
             "[MELI API] %d candidatos válidos; %d consultas de precio; official_only=%s",
-            len(results), lookups, self.official_only,
+            len(results),
+            lookups,
+            self.official_only,
         )
         return results
 

@@ -1,5 +1,6 @@
 # scrapers/discovery_utils.py
 """Utilidades compartidas para descubrir más liquidaciones por tienda (términos y paginación)."""
+
 from __future__ import annotations
 
 import os
@@ -12,8 +13,14 @@ ESTADOS_CORTE = set(BLOCKING_STATES) | {"not_configured", "unauthorized", "not_f
 
 # Términos de búsqueda orientados a liquidación (sobrescribibles por variable de entorno).
 TERMINOS_LIQUIDACION = (
-    "liquidacion", "remate", "outlet", "rebajas",
-    "ultimas piezas", "precio final", "mega rebajas", "descuento",
+    "liquidacion",
+    "remate",
+    "outlet",
+    "rebajas",
+    "ultimas piezas",
+    "precio final",
+    "mega rebajas",
+    "descuento",
 )
 
 

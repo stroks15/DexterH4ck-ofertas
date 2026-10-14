@@ -11,9 +11,21 @@ from scrapers.vtex_stores import VtexStoresScraper
 
 
 def _payload(n, desde=0):
-    return {"data": {"search": {"products": [
-        {"id": str(desde + i), "name": f"Producto {desde + i}", "canonicalUrl": f"/ip/p/{desde + i}",
-         "priceInfo": {"currentPrice": {"price": 10}, "wasPrice": {"price": 100}}} for i in range(n)]}}}
+    return {
+        "data": {
+            "search": {
+                "products": [
+                    {
+                        "id": str(desde + i),
+                        "name": f"Producto {desde + i}",
+                        "canonicalUrl": f"/ip/p/{desde + i}",
+                        "priceInfo": {"currentPrice": {"price": 10}, "wasPrice": {"price": 100}},
+                    }
+                    for i in range(n)
+                ]
+            }
+        }
+    }
 
 
 class _Parser:
@@ -28,11 +40,11 @@ class PaginationTests(unittest.TestCase):
 
         def consultar(termino, pagina=1, tamano=40):
             llamadas.append((termino, pagina))
-            return _payload(40) if pagina == 1 else _payload(3)       # misma pág. 1 en ambos términos
+            return _payload(40) if pagina == 1 else _payload(3)  # misma pág. 1 en ambos términos
 
         r = du.buscar_graphql_paginado(consultar, _Parser(), ["a", "b"], paginas=3, tamano=40, estado=estado)
         self.assertEqual(llamadas, [("a", 1), ("a", 2), ("b", 1), ("b", 2)])
-        self.assertEqual(len({x["id"] for x in r}), len(r))            # sin duplicados entre términos
+        self.assertEqual(len({x["id"] for x in r}), len(r))  # sin duplicados entre términos
 
     def test_block_stops_the_whole_source_but_keeps_what_was_found(self):
         estado = {"state": "ok"}
@@ -45,7 +57,7 @@ class PaginationTests(unittest.TestCase):
 
         r = du.buscar_graphql_paginado(consultar, _Parser(), ["a", "b", "c"], 2, 40, estado)
         self.assertEqual(len(r), 2)
-        self.assertEqual(estado["state"], "rate_limited")             # no se disfraza de éxito
+        self.assertEqual(estado["state"], "rate_limited")  # no se disfraza de éxito
 
     def test_timeout_skips_term_not_source(self):
         estado = {"state": "ok"}
@@ -67,8 +79,13 @@ class PaginationTests(unittest.TestCase):
 
 class VtexTests(unittest.TestCase):
     def _producto(self, pid, sellers):
-        return {"productId": pid, "productName": f"Prod {pid}", "link": f"/prod-{pid}/p", "brand": "M",
-                "items": [{"sellers": sellers}]}
+        return {
+            "productId": pid,
+            "productName": f"Prod {pid}",
+            "link": f"/prod-{pid}/p",
+            "brand": "M",
+            "items": [{"sellers": sellers}],
+        }
 
     def _oferta(self, price, lista, qty=5):
         return {"commertialOffer": {"Price": price, "ListPrice": lista, "AvailableQuantity": qty}}
@@ -100,9 +117,11 @@ class VtexTests(unittest.TestCase):
 
     def test_block_without_rows_is_reported(self):
         v = VtexStoresScraper(endpoint="https://x.test/api/search")
+
         def pedir(params):
             v.last_status = {"state": "forbidden", "http": 403}
             return "forbidden", None
+
         v._pedir_pagina = pedir
         self.assertEqual(v.discover(), [])
         self.assertEqual(v.last_status["state"], "forbidden")
@@ -110,8 +129,9 @@ class VtexTests(unittest.TestCase):
 
 class GenericAdapterTests(unittest.TestCase):
     def test_placeholders_expand_terms_and_pages(self):
-        a = type("S", (JsonEndpointAdapter,), {"store": "Soriana", "endpoint_name": "SORIANA_API", "home": "https://h"})(
-            endpoint="https://api.t/search?q={q}&page={page}")
+        a = type(
+            "S", (JsonEndpointAdapter,), {"store": "Soriana", "endpoint_name": "SORIANA_API", "home": "https://h"}
+        )(endpoint="https://api.t/search?q={q}&page={page}")
         with patch.dict(os.environ, {"SORIANA_QUERIES": "remate,outlet", "SORIANA_PAGES": "2"}):
             urls = a._urls()
         self.assertEqual(len(urls), 4)

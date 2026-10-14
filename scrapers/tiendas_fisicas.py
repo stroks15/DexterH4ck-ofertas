@@ -13,9 +13,7 @@ HEADERS = {
     "Accept-Language": "es-MX,es;q=0.9",
 }
 
-PRECIO_RE = re.compile(
-    r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)"
-)
+PRECIO_RE = re.compile(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)")
 
 # Son sucursales físicas/remates que el usuario pidió vigilar.
 # El scraper solo publica una oportunidad cuando encuentra precio + evidencia
@@ -69,9 +67,19 @@ TIENDAS_FISICAS = [
 ]
 
 PALABRAS = (
-    "liquidacion", "liquidación", "remate", "oferta", "ofertas", "outlet",
-    "saldo", "saldos", "ultima pieza", "última pieza", "precio especial",
-    "rebaja", "descuento",
+    "liquidacion",
+    "liquidación",
+    "remate",
+    "oferta",
+    "ofertas",
+    "outlet",
+    "saldo",
+    "saldos",
+    "ultima pieza",
+    "última pieza",
+    "precio especial",
+    "rebaja",
+    "descuento",
 )
 
 
@@ -134,7 +142,9 @@ def buscar_tiendas_fisicas(session=None):
                     timeout=20,
                 )
                 if response.status_code == 429:
-                    print(f"Fisicas/{tienda['nombre']}: Google HTTP 429; se detiene el resto de consultas de esta sucursal para no empeorar el bloqueo.")
+                    print(
+                        f"Fisicas/{tienda['nombre']}: Google HTTP 429; se detiene el resto de consultas de esta sucursal para no empeorar el bloqueo."
+                    )
                     google_bloqueado = True
                     continue
                 if response.status_code >= 400:
@@ -151,10 +161,12 @@ def buscar_tiendas_fisicas(session=None):
                         continue
 
                     contexto = " ".join(
-                        x for x in [
+                        x
+                        for x in [
                             resultado.get_text(" ", strip=True),
                             enlace.get_text(" ", strip=True),
-                        ] if x
+                        ]
+                        if x
                     )
                     low = contexto.lower()
                     if not any(palabra in low for palabra in PALABRAS):
@@ -182,24 +194,26 @@ def buscar_tiendas_fisicas(session=None):
                     categoria = infer_category({"titulo": titulo, "marca": marca})
                     descuento = round((1 - actual / referencia) * 100) if referencia and referencia > actual else 0
 
-                    resultados.append({
-                        "tienda": tienda["nombre"],
-                        "sucursal": tienda["nombre"],
-                        "direccion": tienda["direccion"],
-                        "titulo": titulo[:180],
-                        "marca": marca,
-                        "categoria": categoria,
-                        "precio_actual": actual,
-                        "precio_anterior": referencia,
-                        "descuento": descuento,
-                        "url": url,
-                        "liquidacion": True,
-                        "outlet": any(x in low for x in ("outlet", "saldo", "remate")),
-                        "tipo_fuente": "FISICA",
-                        "origen": "Web pública indexada",
-                        "origen_link": "Google",
-                        "evidencia": contexto[:1200],
-                    })
+                    resultados.append(
+                        {
+                            "tienda": tienda["nombre"],
+                            "sucursal": tienda["nombre"],
+                            "direccion": tienda["direccion"],
+                            "titulo": titulo[:180],
+                            "marca": marca,
+                            "categoria": categoria,
+                            "precio_actual": actual,
+                            "precio_anterior": referencia,
+                            "descuento": descuento,
+                            "url": url,
+                            "liquidacion": True,
+                            "outlet": any(x in low for x in ("outlet", "saldo", "remate")),
+                            "tipo_fuente": "FISICA",
+                            "origen": "Web pública indexada",
+                            "origen_link": "Google",
+                            "evidencia": contexto[:1200],
+                        }
+                    )
 
             except requests.RequestException as error:
                 print(f"Fisicas/{tienda['nombre']}: {error}")

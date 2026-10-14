@@ -38,11 +38,13 @@ class SupabaseQueryTests(unittest.TestCase):
             get.return_value = _resp(200, [])
             self.assertIs(sh.ya_enviada("walmart:2"), False)
             get.return_value = _resp(500)
-            self.assertIsNone(sh.ya_enviada("walmart:3"))          # desconocido, no "False"
+            self.assertIsNone(sh.ya_enviada("walmart:3"))  # desconocido, no "False"
 
     def test_network_error_is_unknown_not_exception(self):
-        with patch.dict(os.environ, ENTORNO, clear=True), \
-                patch("core.supabase_history.requests.get", side_effect=requests.ConnectionError("x")):
+        with (
+            patch.dict(os.environ, ENTORNO, clear=True),
+            patch("core.supabase_history.requests.get", side_effect=requests.ConnectionError("x")),
+        ):
             self.assertIsNone(sh.ya_enviada("walmart:1"))
 
     def test_query_uses_service_key_headers_and_no_redirects(self):
@@ -55,8 +57,13 @@ class SupabaseQueryTests(unittest.TestCase):
             self.assertEqual(kwargs["params"]["clave"], "eq.walmart:1")
 
     def test_registrar_envio_posts_row_ignoring_duplicates(self):
-        item = {"tienda": "Walmart MX", "titulo": "TV 55", "precio_actual": 50, "precio_anterior": 1000,
-                "url": "https://www.walmart.com.mx/ip/tv/123"}
+        item = {
+            "tienda": "Walmart MX",
+            "titulo": "TV 55",
+            "precio_actual": 50,
+            "precio_anterior": 1000,
+            "url": "https://www.walmart.com.mx/ip/tv/123",
+        }
         with patch.dict(os.environ, ENTORNO, clear=True), patch("core.supabase_history.requests.post") as post:
             post.return_value = _resp(201)
             self.assertTrue(sh.registrar_envio("walmart:123", item, 95))
@@ -66,9 +73,11 @@ class SupabaseQueryTests(unittest.TestCase):
             self.assertIn("ignore-duplicates", kwargs["headers"]["Prefer"])
 
     def test_secrets_never_logged(self):
-        with patch.dict(os.environ, ENTORNO, clear=True), \
-                patch("core.supabase_history.requests.get", return_value=_resp(500)), \
-                self.assertLogs("DexterH4ck.Supabase", level="WARNING") as logs:
+        with (
+            patch.dict(os.environ, ENTORNO, clear=True),
+            patch("core.supabase_history.requests.get", return_value=_resp(500)),
+            self.assertLogs("DexterH4ck.Supabase", level="WARNING") as logs,
+        ):
             sh.ya_enviada("walmart:1")
         salida = "\n".join(logs.output)
         self.assertNotIn("clave-de-prueba", salida)

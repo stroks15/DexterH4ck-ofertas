@@ -4,18 +4,39 @@ Una misma oferta puede llegar por API, scraper oficial, RSS, Telegram o
 comunidad con IDs y URLs diferentes. Este módulo genera identidades estables
 sin usar el precio como parte de la identidad.
 """
+
 from __future__ import annotations
 
 import re
 import unicodedata
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
-
 TRACKING_PARAMS = {
-    "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term",
-    "tag", "linkcode", "ref", "ref_", "psc", "smid", "pd_rd_i", "pd_rd_r",
-    "pd_rd_w", "pd_rd_wg", "pf_rd_p", "pf_rd_r", "camp", "creative",
-    "creativeasin", "ascsubtag", "affid", "affiliate", "aff", "irclickid",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term",
+    "tag",
+    "linkcode",
+    "ref",
+    "ref_",
+    "psc",
+    "smid",
+    "pd_rd_i",
+    "pd_rd_r",
+    "pd_rd_w",
+    "pd_rd_wg",
+    "pf_rd_p",
+    "pf_rd_r",
+    "camp",
+    "creative",
+    "creativeasin",
+    "ascsubtag",
+    "affid",
+    "affiliate",
+    "aff",
+    "irclickid",
 }
 
 STORE_ALIASES = {
@@ -56,7 +77,8 @@ def canonical_url(url: object) -> str:
         if not parsed.netloc:
             return ""
         query = [
-            (key, value) for key, value in parse_qsl(parsed.query, keep_blank_values=True)
+            (key, value)
+            for key, value in parse_qsl(parsed.query, keep_blank_values=True)
             if key.lower() not in TRACKING_PARAMS and not key.lower().startswith("utm_")
         ]
         path = re.sub(r"/+", "/", parsed.path or "/").rstrip("/") or "/"
@@ -72,13 +94,13 @@ def product_code(url: object) -> str:
     path = urlparse(value).path
 
     patterns = (
-        r"/dp/([A-Z0-9]{10})(?:/|$)",                    # Amazon
-        r"/gp/product/([A-Z0-9]{10})(?:/|$)",            # Amazon
-        r"/tienda/pdp/[^/]+/([0-9]{6,})(?:/|$)",         # Liverpool
-        r"/pdp/[^/]+/([0-9]{6,})(?:/|$)",                # Liverpool/Coppel variants
-        r"/ip/[^/]+/([0-9]{6,})(?:/|$)",                 # Walmart/Bodega
-        r"/mlm-([0-9]+)(?:/|$)",                         # Mercado Libre
-        r"/p/[^/]+/([0-9]{6,})(?:/|$)",                  # Chedraui/Soriana/etc.
+        r"/dp/([A-Z0-9]{10})(?:/|$)",  # Amazon
+        r"/gp/product/([A-Z0-9]{10})(?:/|$)",  # Amazon
+        r"/tienda/pdp/[^/]+/([0-9]{6,})(?:/|$)",  # Liverpool
+        r"/pdp/[^/]+/([0-9]{6,})(?:/|$)",  # Liverpool/Coppel variants
+        r"/ip/[^/]+/([0-9]{6,})(?:/|$)",  # Walmart/Bodega
+        r"/mlm-([0-9]+)(?:/|$)",  # Mercado Libre
+        r"/p/[^/]+/([0-9]{6,})(?:/|$)",  # Chedraui/Soriana/etc.
     )
     for pattern in patterns:
         match = re.search(pattern, path, re.I)
@@ -120,7 +142,9 @@ def identity_keys(item: dict) -> set[str]:
 def history_key(item: dict) -> str:
     keys = identity_keys(item)
     # Prefer code, luego título, luego URL para que el registro sea estable.
-    return sorted(keys, key=lambda key: (0 if "|code:" in key else 1 if "|title:" in key else 2, key))[0] if keys else ""
+    return (
+        sorted(keys, key=lambda key: (0 if "|code:" in key else 1 if "|title:" in key else 2, key))[0] if keys else ""
+    )
 
 
 def candidate_quality(item: dict) -> tuple:

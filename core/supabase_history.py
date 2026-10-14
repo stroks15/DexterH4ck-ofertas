@@ -27,8 +27,7 @@ TIMEOUT = 8
 
 def _config() -> tuple[str, str] | None:
     url = os.environ.get("SUPABASE_URL", "").strip().rstrip("/")
-    clave = (os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "").strip()
-             or os.environ.get("SUPABASE_KEY", "").strip())
+    clave = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "").strip() or os.environ.get("SUPABASE_KEY", "").strip()
     if not url or not clave or not url.lower().startswith("https://"):
         return None
     return url, clave

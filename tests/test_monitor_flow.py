@@ -9,9 +9,12 @@ from scrapers.api_stores import JsonEndpointAdapter, api_first_scrapers
 
 def _item(precio, anterior, tienda="Walmart MX", ident="123456789"):
     return {
-        "tienda": tienda, "titulo": "Pantalla Smart TV Ejemplo 55 pulgadas",
+        "tienda": tienda,
+        "titulo": "Pantalla Smart TV Ejemplo 55 pulgadas",
         "url": f"https://www.walmart.com.mx/ip/pantalla/{ident}",
-        "precio_actual": precio, "precio_anterior": anterior, "origen_link": "api",
+        "precio_actual": precio,
+        "precio_anterior": anterior,
+        "origen_link": "api",
     }
 
 
@@ -25,11 +28,13 @@ class OrchestrationIsolationTests(unittest.TestCase):
             mon.Fuente("api:Chedraui", {"chedraui"}, lambda: [_item(100, 1000, "Chedraui")]),
             mon.Fuente("api:Soriana", {"soriana"}, lambda: [_item(100, 1000, "Soriana")]),
         ]
-        with patch.object(mon, "definir_fuentes", return_value=fuentes), \
-                patch.dict(os.environ, {"PREFLIGHT_BLOCKED_STORES": "Soriana"}):
+        with (
+            patch.object(mon, "definir_fuentes", return_value=fuentes),
+            patch.dict(os.environ, {"PREFLIGHT_BLOCKED_STORES": "Soriana"}),
+        ):
             candidatos = mon.ejecutar_orquestacion_paralela()
         estados = {f["fuente"]: f["estado"] for f in mon.ULTIMO_REPORTE_FUENTES["fuentes"]}
-        self.assertEqual(estados["api:Walmart MX"], "error")           # el error NO se disfraza de ok
+        self.assertEqual(estados["api:Walmart MX"], "error")  # el error NO se disfraza de ok
         self.assertEqual(estados["api:Chedraui"], "ok")
         self.assertEqual(estados["api:Soriana"], "skipped_preflight")  # solo ESA tienda se omite
         self.assertEqual(len(candidatos), 1)
@@ -81,8 +86,12 @@ class TelegramTests(unittest.TestCase):
         respuesta = MagicMock(status_code=403)
         sesion = MagicMock()
         sesion.post.return_value = respuesta
-        with patch.object(mon, "TELEGRAM_TOKEN", "TOKEN"), patch.object(mon, "TELEGRAM_CHAT_ID", "1"), \
-                patch.object(mon.requests, "Session", return_value=sesion), patch.object(mon.time, "sleep"):
+        with (
+            patch.object(mon, "TELEGRAM_TOKEN", "TOKEN"),
+            patch.object(mon, "TELEGRAM_CHAT_ID", "1"),
+            patch.object(mon.requests, "Session", return_value=sesion),
+            patch.object(mon.time, "sleep"),
+        ):
             self.assertFalse(mon.enviar_telegram("hola"))
         self.assertTrue(sesion.post.call_args[0][0].startswith("https://api.telegram.org/botTOKEN/"))
 
@@ -111,9 +120,15 @@ class HistoryTests(unittest.TestCase):
             os.chdir(tmp)
             try:
                 with patch.object(mon, "MAX_HISTORIAL", 2):
-                    mon.guardar_historial({"a": {"ultima_actualizacion": "1"}, "b": {"ultima_actualizacion": "3"},
-                                           "c": {"ultima_actualizacion": "2"}})
+                    mon.guardar_historial(
+                        {
+                            "a": {"ultima_actualizacion": "1"},
+                            "b": {"ultima_actualizacion": "3"},
+                            "c": {"ultima_actualizacion": "2"},
+                        }
+                    )
                 import json
+
                 self.assertEqual(set(json.load(open(mon.HISTORIAL_FILE, encoding="utf-8"))), {"b", "c"})
             finally:
                 os.chdir(cwd)
@@ -122,9 +137,15 @@ class HistoryTests(unittest.TestCase):
 class ApiFirstAdaptersTests(unittest.TestCase):
     def test_unconfigured_endpoints_are_reported_not_failed(self):
         with patch.dict(os.environ, {}, clear=False):
-            for var in ("SORIANA_API_ENDPOINT", "COPPEL_API_ENDPOINT", "SUBURBIA_API_ENDPOINT",
-                        "AMAZON_API_ENDPOINT", "CHEDRAUI_VTEX_ENDPOINT", "LIVERPOOL_API_ENDPOINT",
-                        "OFERSTOCK_API_ENDPOINT"):
+            for var in (
+                "SORIANA_API_ENDPOINT",
+                "COPPEL_API_ENDPOINT",
+                "SUBURBIA_API_ENDPOINT",
+                "AMAZON_API_ENDPOINT",
+                "CHEDRAUI_VTEX_ENDPOINT",
+                "LIVERPOOL_API_ENDPOINT",
+                "OFERSTOCK_API_ENDPOINT",
+            ):
                 os.environ.pop(var, None)
             for scraper in api_first_scrapers():
                 if scraper.store in ("Walmart MX", "Bodega Aurrera", "Mercado Libre MX"):
@@ -163,8 +184,18 @@ class ApiFirstAdaptersTests(unittest.TestCase):
 
     def test_one_store_per_target_and_each_isolated(self):
         stores = {s.store for s in api_first_scrapers()}
-        for tienda in ("Walmart MX", "Bodega Aurrera", "Chedraui", "Soriana", "Liverpool", "Amazon MX",
-                       "Mercado Libre MX", "Coppel", "Suburbia", "Oferstock"):
+        for tienda in (
+            "Walmart MX",
+            "Bodega Aurrera",
+            "Chedraui",
+            "Soriana",
+            "Liverpool",
+            "Amazon MX",
+            "Mercado Libre MX",
+            "Coppel",
+            "Suburbia",
+            "Oferstock",
+        ):
             self.assertIn(tienda, stores)
 
 
@@ -176,16 +207,17 @@ class HttpRecordTests(unittest.TestCase):
     def test_all_rejected_requests_are_not_reported_as_empty_success(self):
         self.assertEqual(mon.estado_desde_http([403, 403, 429]), "forbidden")
         self.assertEqual(mon.estado_desde_http([503]), "unavailable")
-        self.assertEqual(mon.estado_desde_http([200, 403]), None)   # alguna respondió: no es bloqueo total
+        self.assertEqual(mon.estado_desde_http([200, 403]), None)  # alguna respondió: no es bloqueo total
         self.assertEqual(mon.estado_desde_http([]), None)
         import requests as rq
+
         self.assertEqual(mon.estado_desde_http([rq.Timeout()]), "timeout")
 
     def test_source_that_swallows_403_is_reported_forbidden(self):
         import requests as rq
 
         def scraper_que_traga_errores():
-            rq.Session().get("http://127.0.0.1:9/")   # cualquier salida registrada
+            rq.Session().get("http://127.0.0.1:9/")  # cualquier salida registrada
             return []
 
         def falso_send(self, request, **kw):
@@ -195,6 +227,7 @@ class HttpRecordTests(unittest.TestCase):
 
         fuente = mon.Fuente("legacy:demo", set(), scraper_que_traga_errores)
         import requests.sessions as rs
+
         with patch.object(mon, "definir_fuentes", return_value=[fuente]):
             mon._instalar_registro_http()
             # El envoltorio guarda el 'send' original en su cierre; se sustituye por uno simulado (sin red).

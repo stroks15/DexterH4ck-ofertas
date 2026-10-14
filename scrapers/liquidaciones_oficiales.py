@@ -107,9 +107,7 @@ FUENTES = [
     },
 ]
 
-PRICE_RE = re.compile(
-    r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)"
-)
+PRICE_RE = re.compile(r"\$\s*([0-9]{1,3}(?:,[0-9]{3})*(?:\.[0-9]{1,2})?|[0-9]+(?:\.[0-9]{1,2})?)")
 
 
 def _prices(text):
@@ -133,7 +131,19 @@ def _is_product(url, source):
         allowed_host = allowed_host or host.endswith("despensa.bodegaaurrera.com.mx")
     if not host or not allowed_host:
         return False
-    if any(x in path for x in ("/search", "/buscar", "/catalogo", "/ofertas", "/marcas", "/home", "/precios-liquidacion", "/promociones")):
+    if any(
+        x in path
+        for x in (
+            "/search",
+            "/buscar",
+            "/catalogo",
+            "/ofertas",
+            "/marcas",
+            "/home",
+            "/precios-liquidacion",
+            "/promociones",
+        )
+    ):
         return False
     return any(p in path for p in source["patrones"]) or (source["host"] == "chedraui.com.mx" and path.endswith("/p"))
 
@@ -149,7 +159,6 @@ def _title_from(node):
     return text[:220]
 
 
-
 def _labelled_prices(text):
     """Extrae precio actual/referencia usando etiquetas, nunca por simple posición."""
     text = " ".join((text or "").split())
@@ -159,9 +168,8 @@ def _labelled_prices(text):
         rf"ahora\s*:?\s*{money}",
         rf"precio\s+en\s+rojo\s*:?\s*{money}",
     )
-    reference_patterns = (
-        rf"(?:antes|precio\s+(?:anterior|regular)|precio\s+de\s+lista|original)\s*:?\s*{money}",
-    )
+    reference_patterns = (rf"(?:antes|precio\s+(?:anterior|regular)|precio\s+de\s+lista|original)\s*:?\s*{money}",)
+
     def first(patterns):
         for pattern in patterns:
             m = re.search(pattern, text, re.I)
@@ -171,6 +179,7 @@ def _labelled_prices(text):
                 except (TypeError, ValueError):
                     pass
         return None
+
     actual = first(actual_patterns)
     reference = first(reference_patterns)
     # En listados de Liverpool el formato normal es "$actual $regular".
@@ -182,6 +191,7 @@ def _labelled_prices(text):
     if actual and reference and reference <= actual:
         reference = None
     return actual, reference
+
 
 def _offer_prices(offers):
     """Extrae precio actual y precio de lista cuando la tienda los publica estructurados."""
@@ -201,8 +211,15 @@ def _offer_prices(offers):
 
     current = number(offers.get("price") or offers.get("lowPrice"))
     reference = None
-    for key in ("compareAtPrice", "listPrice", "wasPrice", "regularPrice",
-                "originalPrice", "previousPrice", "priceBefore"):
+    for key in (
+        "compareAtPrice",
+        "listPrice",
+        "wasPrice",
+        "regularPrice",
+        "originalPrice",
+        "previousPrice",
+        "priceBefore",
+    ):
         reference = number(offers.get(key))
         if reference and (not current or reference > current):
             break
@@ -218,8 +235,11 @@ def _offer_prices(offers):
         kind = " ".join(str(spec.get(k, "")) for k in ("name", "description", "priceType", "@type")).lower()
         if candidate and current is None and ("sale" in kind or "offer" in kind or "actual" in kind):
             current = candidate
-        elif candidate and current and candidate > current and any(
-            word in kind for word in ("list", "regular", "original", "strike", "reference", "was")
+        elif (
+            candidate
+            and current
+            and candidate > current
+            and any(word in kind for word in ("list", "regular", "original", "strike", "reference", "was"))
         ):
             reference = candidate
 
@@ -258,21 +278,23 @@ def _from_json_ld(soup, source, seen):
             if isinstance(brand_value, dict):
                 brand_value = brand_value.get("name")
             brand, _ = detect_priority_brand({"titulo": title, "marca": brand_value or ""})
-            results.append({
-                "tienda": source["tienda"],
-                "titulo": title,
-                "marca": brand,
-                "categoria": infer_category({"titulo": title, "marca": brand}),
-                "precio_actual": price,
-                "precio_anterior": previous,
-                "descuento": round((1 - price / previous) * 100, 2) if previous and previous > price else 0,
-                "url": url,
-                "liquidacion": True,
-                "outlet": True,
-                "tipo_fuente": "LIQUIDACION_OFICIAL",
-                "origen": source["url"],
-                "origen_link": source["url"],
-            })
+            results.append(
+                {
+                    "tienda": source["tienda"],
+                    "titulo": title,
+                    "marca": brand,
+                    "categoria": infer_category({"titulo": title, "marca": brand}),
+                    "precio_actual": price,
+                    "precio_anterior": previous,
+                    "descuento": round((1 - price / previous) * 100, 2) if previous and previous > price else 0,
+                    "url": url,
+                    "liquidacion": True,
+                    "outlet": True,
+                    "tipo_fuente": "LIQUIDACION_OFICIAL",
+                    "origen": source["url"],
+                    "origen_link": source["url"],
+                }
+            )
     return results
 
 
@@ -289,13 +311,25 @@ def _listing_links(soup, source):
             continue
         text = " ".join(anchor.get_text(" ", strip=True).lower().split())
         haystack = parsed.path.lower() + " " + text
-        if any(x in haystack for x in (
-            "page=", "pagina", "siguiente", "remates", "liquidacion",
-            "liquidación", "ofertas", "rebajas", "promociones", "outlet"
-        )):
+        if any(
+            x in haystack
+            for x in (
+                "page=",
+                "pagina",
+                "siguiente",
+                "remates",
+                "liquidacion",
+                "liquidación",
+                "ofertas",
+                "rebajas",
+                "promociones",
+                "outlet",
+            )
+        ):
             if href not in found:
                 found.append(href)
     return found[:20]
+
 
 def _from_links(soup, source, seen):
     results = []
@@ -330,21 +364,23 @@ def _from_links(soup, source, seen):
                 continue
         brand, _ = detect_priority_brand({"titulo": title})
         seen.add(href)
-        results.append({
-            "tienda": source["tienda"],
-            "titulo": title,
-            "marca": brand,
-            "categoria": infer_category({"titulo": title, "marca": brand}),
-            "precio_actual": actual,
-            "precio_anterior": previous,
-            "descuento": round((1 - actual / previous) * 100) if previous and previous > actual else 0,
-            "url": href,
-            "liquidacion": True,
-            "outlet": True,
-            "tipo_fuente": "LIQUIDACION_OFICIAL",
-            "origen": source["url"],
-            "origen_link": source["url"],
-        })
+        results.append(
+            {
+                "tienda": source["tienda"],
+                "titulo": title,
+                "marca": brand,
+                "categoria": infer_category({"titulo": title, "marca": brand}),
+                "precio_actual": actual,
+                "precio_anterior": previous,
+                "descuento": round((1 - actual / previous) * 100) if previous and previous > actual else 0,
+                "url": href,
+                "liquidacion": True,
+                "outlet": True,
+                "tipo_fuente": "LIQUIDACION_OFICIAL",
+                "origen": source["url"],
+                "origen_link": source["url"],
+            }
+        )
     return results
 
 
@@ -379,7 +415,9 @@ def buscar_liquidaciones_oficiales(session=None):
                     print(f"Oficial/{source['tienda']}: HTTP {response.status_code} en {url}")
                     continue
                 soup = BeautifulSoup(response.text, "html.parser")
-                seen = {item.get("url") for item in resultados if item.get("tienda") == source["tienda"] and item.get("url")}
+                seen = {
+                    item.get("url") for item in resultados if item.get("tienda") == source["tienda"] and item.get("url")
+                }
                 encontrados = _from_json_ld(soup, local_source, seen)
                 encontrados.extend(_from_links(soup, local_source, seen))
                 for item in encontrados:

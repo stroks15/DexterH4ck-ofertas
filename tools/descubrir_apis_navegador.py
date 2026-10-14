@@ -4,6 +4,7 @@
 Usa Playwright normal (sin stealth ni ocultar la automatización). Solo registra qué
 hosts/URLs JSON se piden; no evade CAPTCHA/WAF.
 """
+
 import asyncio
 import json
 import logging

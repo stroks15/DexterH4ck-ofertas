@@ -5,6 +5,7 @@ El endpoint se configura con CHEDRAUI_VTEX_ENDPOINT (URL de búsqueda de catálo
 por ejemplo `.../api/catalog_system/pub/products/search`). Si no está configurado, la
 fuente se reporta como `not_configured` y no afecta a las demás tiendas.
 """
+
 from __future__ import annotations
 
 import logging
@@ -76,16 +77,18 @@ class VtexStoresScraper(BaseScraper):
                 continue
             reference = list_price if list_price and list_price > price else None
             discount = round((1 - price / reference) * 100) if reference else 0
-            rows.append(self.normalize(
-                title=title,
-                url=urljoin(self.home + "/", link),
-                price=price,
-                previous_price=reference,
-                id=product.get("productId"),
-                marca=str(product.get("brand") or ""),
-                descuento=discount,
-                api="vtex",
-            ))
+            rows.append(
+                self.normalize(
+                    title=title,
+                    url=urljoin(self.home + "/", link),
+                    price=price,
+                    previous_price=reference,
+                    id=product.get("productId"),
+                    marca=str(product.get("brand") or ""),
+                    descuento=discount,
+                    api="vtex",
+                )
+            )
         return rows
 
     def _pedir_pagina(self, params: dict) -> tuple[str, Any]:
@@ -122,8 +125,7 @@ class VtexStoresScraper(BaseScraper):
         for termino in terminos:
             for pagina in range(paginas):
                 desde = pagina * self.PAGE_SIZE
-                params = {"_from": str(desde), "_to": str(desde + self.PAGE_SIZE - 1),
-                          "O": "OrderByBestDiscountDESC"}
+                params = {"_from": str(desde), "_to": str(desde + self.PAGE_SIZE - 1), "O": "OrderByBestDiscountDESC"}
                 if termino:
                     params["ft"] = termino
                 estado, payload = self._pedir_pagina(params)
@@ -149,8 +151,11 @@ class VtexStoresScraper(BaseScraper):
             if ultimo_error:
                 self.last_status["partial"] = ultimo_error
         elif ultimo_error:
-            self.last_status = dict(self.last_status) if self.last_status.get("state") not in ("not_run", "ok") \
+            self.last_status = (
+                dict(self.last_status)
+                if self.last_status.get("state") not in ("not_run", "ok")
                 else {"state": ultimo_error}
+            )
         else:
             self.last_status = {"state": "ok", "count": 0}
         return rows

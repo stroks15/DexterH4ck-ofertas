@@ -19,9 +19,11 @@ def _resp(status=200, payload=None, json_error=False):
 
 class WalmartApiConfigTests(unittest.TestCase):
     def _llamar(self, entorno, respuesta):
-        with patch.dict(os.environ, entorno, clear=True), \
-                patch("scrapers.walmart_api.time.sleep"), \
-                patch("scrapers.walmart_api.requests.post", return_value=respuesta) as post:
+        with (
+            patch.dict(os.environ, entorno, clear=True),
+            patch("scrapers.walmart_api.time.sleep"),
+            patch("scrapers.walmart_api.requests.post", return_value=respuesta) as post,
+        ):
             resultado = walmart_api.consultar_liquidaciones_walmart_api("liquidacion")
         return resultado, post
 

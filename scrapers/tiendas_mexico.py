@@ -38,11 +38,13 @@ def buscar_todas(filtro_tienda=None) -> list:
     LAST_STATUS.clear()
 
     session = requests.Session()
-    session.headers.update({
-        "User-Agent": HONEST_USER_AGENT,
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
-    })
+    session.headers.update(
+        {
+            "User-Agent": HONEST_USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "es-MX,es;q=0.9,en-US;q=0.8,en;q=0.7",
+        }
+    )
 
     tiendas = [filtro_tienda.lower()] if filtro_tienda else list(URLS_BUSQUEDA)
     for tienda in tiendas:
@@ -65,8 +67,12 @@ def buscar_todas(filtro_tienda=None) -> list:
                     productos_encontrados.extend(_parsear_html_por_tienda(response.text, tienda, target_url))
                 else:
                     LAST_STATUS[tienda] = estado
-                    logger.warning("[%s] HTTP %s (%s); se omite la tienda en este ciclo.",
-                                   tienda.upper(), response.status_code, estado)
+                    logger.warning(
+                        "[%s] HTTP %s (%s); se omite la tienda en este ciclo.",
+                        tienda.upper(),
+                        response.status_code,
+                        estado,
+                    )
                     # 403/429/5xx/etc.: no se insiste con más términos contra la misma tienda.
                     break
             except requests.Timeout:
@@ -129,17 +135,19 @@ def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
                 if titulo_el and link_el and precio_el:
                     precio_actual = float(re.sub(r"[^0-9.]", "", precio_el.text.replace(",", "")) or 0)
                     url_final = urljoin("https://www.amazon.com.mx", link_el.get("href", ""))
-                    resultados.append({
-                        "id": contenedor.get("data-asin") or _hash_id(url_final),
-                        "name": titulo_el.text.strip(),
-                        "titulo": titulo_el.text.strip(),
-                        "brand": "Amazon",
-                        "url": url_final,
-                        "precio_actual": precio_actual,
-                        "precio_anterior": None,  # la referencia sale del historial JSON
-                        "tienda": "Amazon MX",
-                        "tipo_fuente": "WEB_FALLBACK",
-                    })
+                    resultados.append(
+                        {
+                            "id": contenedor.get("data-asin") or _hash_id(url_final),
+                            "name": titulo_el.text.strip(),
+                            "titulo": titulo_el.text.strip(),
+                            "brand": "Amazon",
+                            "url": url_final,
+                            "precio_actual": precio_actual,
+                            "precio_anterior": None,  # la referencia sale del historial JSON
+                            "tienda": "Amazon MX",
+                            "tipo_fuente": "WEB_FALLBACK",
+                        }
+                    )
             except (ValueError, AttributeError, TypeError):
                 continue
 
@@ -152,17 +160,19 @@ def _parsear_html_por_tienda(html_source, tienda, origen_url) -> list:
                     precio_actual = _parsear_precio(precio_el.get("content") or precio_el.text)
                     precio_anterior = _precio_anterior_html(card, precio_actual)
                     url_final = urljoin("https://www.soriana.com", link_el.get("href", ""))
-                    resultados.append({
-                        "id": card.get("data-pid") or _hash_id(url_final),
-                        "name": link_el.text.strip(),
-                        "titulo": link_el.text.strip(),
-                        "brand": "Soriana",
-                        "url": url_final,
-                        "precio_actual": precio_actual,
-                        "precio_anterior": precio_anterior,
-                        "tienda": "Soriana",
-                        "tipo_fuente": "WEB_FALLBACK",
-                    })
+                    resultados.append(
+                        {
+                            "id": card.get("data-pid") or _hash_id(url_final),
+                            "name": link_el.text.strip(),
+                            "titulo": link_el.text.strip(),
+                            "brand": "Soriana",
+                            "url": url_final,
+                            "precio_actual": precio_actual,
+                            "precio_anterior": precio_anterior,
+                            "tienda": "Soriana",
+                            "tipo_fuente": "WEB_FALLBACK",
+                        }
+                    )
             except (ValueError, AttributeError, TypeError):
                 continue
 
@@ -185,11 +195,22 @@ def es_url_producto(url, base_url=None):
                 base_host = base_host[4:]
             if base_host and not (host == base_host or host.endswith("." + base_host)):
                 return False
-        if any(x in path for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")):
+        if any(
+            x in path
+            for x in ("/search", "/buscar", "/ofertas", "/oferta", "/catalogo", "/marcas", "/home", "/social/")
+        ):
             return False
         patrones = (
-            "/ip/", "/dp/", "/gp/product/", "/mlm-", "/p/", "/pdp/",
-            "/tienda/pdp/", "/producto/", "/product/", "/item/"
+            "/ip/",
+            "/dp/",
+            "/gp/product/",
+            "/mlm-",
+            "/p/",
+            "/pdp/",
+            "/tienda/pdp/",
+            "/producto/",
+            "/product/",
+            "/item/",
         )
         if any(p in path for p in patrones):
             return True

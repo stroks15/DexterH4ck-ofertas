@@ -9,9 +9,7 @@ from core.price_sanitizer import sanear_par_precios
 
 class WalmartGraphQLParser:
     def __init__(self, marcas_prioritarias=None, tienda="Walmart MX", dominio="https://www.walmart.com.mx"):
-        self.marcas_prioritarias = {
-            str(m).strip().lower() for m in (marcas_prioritarias or []) if str(m).strip()
-        }
+        self.marcas_prioritarias = {str(m).strip().lower() for m in (marcas_prioritarias or []) if str(m).strip()}
         self.tienda = tienda
         self.dominio = dominio.rstrip("/")
 
@@ -27,7 +25,7 @@ class WalmartGraphQLParser:
         nodo = price_info.get(clave)
         if isinstance(nodo, dict):
             return nodo.get("price")
-        return nodo   # número crudo; parse_price rechaza cualquier cadena con unidades
+        return nodo  # número crudo; parse_price rechaza cualquier cadena con unidades
 
     @staticmethod
     def _discount(current, previous):
@@ -76,21 +74,23 @@ class WalmartGraphQLParser:
                 if descuento < 50:
                     continue
 
-                productos.append({
-                    "id": prod.get("id") or prod.get("productId") or prod.get("upc"),
-                    "titulo": nombre,
-                    "nombre": nombre,
-                    "marca": brand,
-                    "precio_actual": current,
-                    "precio_anterior": previous,
-                    "descuento": descuento,
-                    "url": url,
-                    "score_api": min(score, 100),
-                    "es_bomba": descuento >= 90,
-                    "tienda": self.tienda,
-                    "origen_link": "graphql",
-                    "api": "walmart_graphql",
-                })
+                productos.append(
+                    {
+                        "id": prod.get("id") or prod.get("productId") or prod.get("upc"),
+                        "titulo": nombre,
+                        "nombre": nombre,
+                        "marca": brand,
+                        "precio_actual": current,
+                        "precio_anterior": previous,
+                        "descuento": descuento,
+                        "url": url,
+                        "score_api": min(score, 100),
+                        "es_bomba": descuento >= 90,
+                        "tienda": self.tienda,
+                        "origen_link": "graphql",
+                        "api": "walmart_graphql",
+                    }
+                )
         except (AttributeError, TypeError, ValueError):
             return []
         return productos

@@ -4,6 +4,7 @@ Este módulo NO intenta evadir CAPTCHA/WAF, modificar fingerprints, usar stealth
 resolver desafíos. Su objetivo es reutilizar la sesión/cookies que el sitio entrega
 normalmente al navegador y capturar respuestas JSON/XHR públicas.
 """
+
 from __future__ import annotations
 
 import json
@@ -19,7 +20,10 @@ def _sources() -> list[dict[str, Any]]:
     if not raw:
         return [
             {"store": "Walmart MX", "url": "https://www.walmart.com.mx/search?q=oferta"},
-            {"store": "Bodega Aurrera", "url": "https://despensa.bodegaaurrera.com.mx/browse/cupones-y-bonificaciones/rebajas-y-mas/8171461_3848205"},
+            {
+                "store": "Bodega Aurrera",
+                "url": "https://despensa.bodegaaurrera.com.mx/browse/cupones-y-bonificaciones/rebajas-y-mas/8171461_3848205",
+            },
             {"store": "Soriana", "url": "https://www.soriana.com/ofertas/"},
             {"store": "Liverpool", "url": "https://www.liverpool.com.mx/tienda?s=promociones"},
             {"store": "Suburbia", "url": "https://www.suburbia.com.mx/tienda?s=promociones"},
@@ -135,15 +139,9 @@ def buscar_network_browser() -> list[dict[str, Any]]:
                     results.extend(_extract_embedded_json(page, store))
 
                     if response is not None and response.status >= 400:
-                        print(
-                            f"NetworkBrowser:{store}: navegación HTTP "
-                            f"{response.status} en {page.url}"
-                        )
+                        print(f"NetworkBrowser:{store}: navegación HTTP " f"{response.status} en {page.url}")
                 except Exception as exc:
-                    print(
-                        f"NetworkBrowser:{store}: "
-                        f"{type(exc).__name__}: {exc}"
-                    )
+                    print(f"NetworkBrowser:{store}: " f"{type(exc).__name__}: {exc}")
                 finally:
                     try:
                         context.close()

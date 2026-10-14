@@ -13,10 +13,21 @@ from core.source_resilience import BLOCKING_STATES, classify_status, probe_url
 class ClassifyStatusTests(unittest.TestCase):
     def test_codes_map_to_distinct_states(self):
         esperado = {
-            200: "ok", 301: "redirect", 302: "redirect", 400: "bad_request",
-            401: "unauthorized", 403: "forbidden", 404: "not_found", 408: "timeout",
-            409: "conflict", 429: "rate_limited", 500: "server_error",
-            502: "unavailable", 503: "unavailable", 504: "unavailable", None: "network_error",
+            200: "ok",
+            301: "redirect",
+            302: "redirect",
+            400: "bad_request",
+            401: "unauthorized",
+            403: "forbidden",
+            404: "not_found",
+            408: "timeout",
+            409: "conflict",
+            429: "rate_limited",
+            500: "server_error",
+            502: "unavailable",
+            503: "unavailable",
+            504: "unavailable",
+            None: "network_error",
         }
         for codigo, estado in esperado.items():
             self.assertEqual(classify_status(codigo), estado, codigo)
