@@ -3,6 +3,10 @@
 La capa base NO intenta evadir CAPTCHA/WAF ni falsificar identidad de aplicaciones.
 Centraliza timeouts, reintentos conservadores, User-Agent honesto y normalización
 de resultados para que los adaptadores puedan usar APIs/documentos públicos.
+
+Respaldo opcional: si la petición normal falla con 403/412/503, timeout o error de conexión
+y existe SCRAPERAPI_KEY, ``get()`` reintenta UNA vez vía ScraperAPI (ver core/network_manager.py).
+Sin clave, con cuota agotada o con credenciales en la petición, el comportamiento es el de siempre.
 """
 
 from __future__ import annotations
@@ -14,6 +18,8 @@ from typing import Any, Iterable
 import time
 
 import requests
+
+from core.network_manager import get_scraperapi_manager
 
 DEFAULT_HEADERS = {
     "User-Agent": "DexterH4ck-ofertas/2.0 (+deal-monitor; es-MX)",
@@ -46,6 +52,28 @@ class BaseScraper(ABC):
         raise NotImplementedError
 
     def get(self, url: str, **kwargs: Any) -> requests.Response:
+        """GET con reintentos conservadores y respaldo opcional vía ScraperAPI.
+
+        kwargs propios: ``render=True`` permite escalar a render JS si el proxy normal falla;
+        ``allow_fallback=False`` desactiva el respaldo para esta llamada.
+        """
+        render = bool(kwargs.pop("render", False))
+        allow_fallback = bool(kwargs.pop("allow_fallback", True))
+        # Con auth/cookies nunca se envía nada a un tercero.
+        if kwargs.get("auth") or kwargs.get("cookies"):
+            allow_fallback = False
+        if not allow_fallback:
+            return self._get_direct(url, **kwargs)
+
+        full_url = url
+        if kwargs.get("params"):
+            full_url = requests.Request("GET", url, params=kwargs["params"]).prepare().url or url
+        headers = {**self.session.headers, **(kwargs.get("headers") or {})}
+        return get_scraperapi_manager().run(
+            lambda: self._get_direct(url, **kwargs), full_url, render=render, headers=headers
+        )
+
+    def _get_direct(self, url: str, **kwargs: Any) -> requests.Response:
         base_timeout = float(kwargs.pop("timeout", self.context.timeout))
         last_error: Exception | None = None
         transient = {408, 425, 429, 500, 502, 503, 504, 522, 524}
@@ -57,8 +85,8 @@ class BaseScraper(ABC):
             try:
                 response = self.session.get(url, timeout=timeout, **kwargs)
 
-                # 401/403/412/451 no se "combaten" con más tráfico: normalmente
-                # significan política de acceso o contenido condicionado.
+                # 401/403/412/451 no se "combaten" con más tráfico directo: se devuelven tal cual
+                # y, si hay respaldo configurado, get() hace UN intento vía ScraperAPI.
                 if response.status_code not in transient:
                     return response
 
