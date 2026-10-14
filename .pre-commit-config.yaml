@@ -1,0 +1,26 @@
+# Uso local:  pip install pre-commit && pre-commit install
+# Revisar todo:  pre-commit run --all-files
+#
+# Los archivos que el bot reescribe solos (historial, health) y los .patch
+# se excluyen: son datos/diffs, no código, y los hooks los alterarían.
+exclude: '^(historial_ofertas\.json|monitor_health\.json|preflight_health\.json|diagnostico_fuentes\.json|.*\.patch)$'
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-ast            # detecta SyntaxError antes del commit
+      - id: check-yaml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: detect-private-key
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args: ["--maxkb=2048"]
+
+  - repo: https://github.com/psf/black
+    rev: 26.10.1
+    hooks:
+      - id: black
