@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BAKDy26UBcO5IHPG4WA4goOdfXdkDLp44qtfDegUsUP5yMvyPT04hGFpJED%2FbmoYPNJZUYnhY2SjJRZTJ5fFOXpeNRZRTWUkNEgU4U9xaXHZN9oxVg5FzxE%2FbEg7d4iJhlnmMfvoKXlHG2PZCQ6UDXkR22Zbv9%2Fo35Z7qIPiVdpCevk%2FrVwue7d5SfnST6GHJeUUy8zNbpOtW5N6vfcCIWB3yBu%2F3t753zPaJZmZ0P4eHG31IRpCNclIZfvofnnCWUIgcg%3D%3D",
-    "precio_actual": 776.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BBV10iLAgATPC%2BtghdeVPSQx%2BzCnOSIKPsmDE8uj1ms708em1iLqP4vUlX7iZgvic1NBNnKQFbd6cEAoHn4rxnD4jENG4VCoGGtBIifUJ4VIKlVUGJjKyvPHlTaaI3aPOOO6sj6i5bycAiZKmDt7j4hB6HCmidnfU5WLWU2%2B5jPzcltpooCEXM%2BoDG%2Bg8U6ddQ1dC89FuPGYFoxx8vhUtAW6gKt6IrKd8SdrNgjSd8IbhdyldW9cYI%2FnIW6xLS7jG4mz1w%3D%3D",
+    "precio_actual": 1415.0,
     "precio_maximo": 2800.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-14T18:52:44.916181+00:00",
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -41391,6 +41391,87 @@
     "precio_actual": 644.0,
     "precio_maximo": 644.0,
     "ultima_actualizacion": "2026-10-14T18:52:44.916181+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f9f5lbts": {
+    "tienda": "Amazon",
+    "titulo": "B0F9F5LBTS",
+    "url": "https://www.amazon.com.mx/dp/B0F9F5LBTS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.99,
+    "precio_maximo": 250.0,
+    "ultima_actualizacion": "2026-10-14T19:13:12.011046+00:00",
+    "precio_alertado": 99.99
+  },
+  "amazon|code:b075v3wtd3": {
+    "tienda": "Amazon",
+    "titulo": "B075V3WTD3",
+    "url": "https://www.amazon.com.mx/dp/B075V3WTD3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 563.45,
+    "precio_maximo": 1099.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b082x1cz6l": {
+    "tienda": "Amazon",
+    "titulo": "B082X1CZ6L",
+    "url": "https://www.amazon.com.mx/dp/B082X1CZ6L?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 80.33,
+    "precio_maximo": 145.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gxg516vp": {
+    "tienda": "Amazon",
+    "titulo": "B0GXG516VP",
+    "url": "https://www.amazon.com.mx/dp/B0GXG516VP?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 79.0,
+    "precio_maximo": 126.9,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09643b9m6": {
+    "tienda": "Amazon",
+    "titulo": "B09643B9M6",
+    "url": "https://www.amazon.com.mx/dp/B09643B9M6?ascsubtag=srctok-1bd4c906fa1f52f5&btn_type=ss&btn_ref=srctok-1a8d7a793b6ef631&th=1&psc=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=a0ec186c6339ffcab991f5187ac8d5db&ref_=as_li_ss_tl",
+    "precio_actual": 650.0,
+    "precio_maximo": 650.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cb7w2p85": {
+    "tienda": "Amazon",
+    "titulo": "B0CB7W2P85",
+    "url": "https://www.amazon.com.mx/dp/B0CB7W2P85?ascsubtag=srctok-7a6fdf5ad476f3ea&btn_type=ss&btn_ref=srctok-5857a0641c04adec&th=1&psc=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=421555802b7b0eeaed1f677312043a63&ref_=as_li_ss_tl",
+    "precio_actual": 714.0,
+    "precio_maximo": 714.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dzpbwn1l": {
+    "tienda": "Amazon",
+    "titulo": "B0DZPBWN1L",
+    "url": "https://www.amazon.com.mx/dp/B0DZPBWN1L?th=1&ascsubtag=srctok-4fbb6eac5f5a5e87&btn_type=ss&btn_ref=srctok-1a31c04fa7cba695&linkCode=sl2&tag=liquidapromosmx-20&linkId=504895ab3661f1cc9049810db31546a5&ref_=as_li_ss_tl",
+    "precio_actual": 144.0,
+    "precio_maximo": 144.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00hc6eywu": {
+    "tienda": "Amazon",
+    "titulo": "B00HC6EYWU",
+    "url": "https://www.amazon.com.mx/dp/B00HC6EYWU?ascsubtag=srctok-7c69c3b78c377b80&btn_type=ss&btn_ref=srctok-62a9f81cee14e63b&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=a4ef50e4d302c078090e85d634497452&ref_=as_li_ss_tl",
+    "precio_actual": 147.0,
+    "precio_maximo": 147.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f53rqppv": {
+    "tienda": "Amazon",
+    "titulo": "B0F53RQPPV",
+    "url": "https://www.amazon.com.mx/dp/B0F53RQPPV?ascsubtag=srctok-24c7e96ebd3d24e3&btn_type=ss&btn_ref=srctok-47568265579e01d2&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=da9cd4745b3ed3f2624f8d4fc4da71a1&ref_=as_li_ss_tl",
+    "precio_actual": 299.0,
+    "precio_maximo": 299.0,
+    "ultima_actualizacion": "2026-10-14T19:13:11.489772+00:00",
     "precio_alertado": null
   }
 }
