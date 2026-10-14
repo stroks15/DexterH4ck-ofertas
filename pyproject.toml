@@ -1,0 +1,12 @@
+[tool.black]
+# Las líneas del proyecto son largas (hasta ~120); 88 reflowearía casi todo el código.
+line-length = 120
+target-version = ["py311"]
+extend-exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | node_modules
+)/
+'''
