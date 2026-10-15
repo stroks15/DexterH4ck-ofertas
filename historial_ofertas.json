@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMfg4%2BZo2LP5W5HzxMBpDr3l3r04rgbwjmY3m1cIwE4bv9DmdNHtPQW0Dz%2BTFWyEOy8GbVB1PvZsIoNbfmIeVIHRMCACxgPGSa6LLMiLFiKFSWRw9iIHCo2GRHljMZgZ1JHCiitr3xa%2BcHanFtrulJ3502ClcP39NeRSDMR5GdW7R0Z9PKme0TuSOlWFwoIbUe7uEb4%3D",
-    "precio_actual": 2079.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMemx0BDbZf2g4EtP79DcNTvL8sfuvMeOjysv4j%2FURblhfrBApLaiMKJlyliPBqSyw3q3Bj%2BU%2B0HbTBQYjKUkgmjKXUEfM0QJYG2HNY4c1qCVBqWc3vwdPdOEGPjnqCmHCFK2NohRLqFV7eJak6GWkcxCM2D0nNNVz0GDmula8NxVfc0T4irPqkm9robCQNeU4Lg12c%3D",
+    "precio_actual": 1899.0,
     "precio_maximo": 5000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-15T05:53:23.234458+00:00",
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -36752,10 +36752,10 @@
   "walmart|code:00004178900186": {
     "tienda": "Walmart MX",
     "titulo": "Sopa instantánea Maruchan Instant Lunch con camarón limón y habanero 64 g",
-    "url": "https://www.walmart.com.mx/ip/Sopa-instantanea-Maruchan-Instant-Lunch-con-camaron-limon-y-habanero-64-g/00004178900186?athAsset=eyJhdGhjcGlkIjoiMDAwMDQxNzg5MDAxODYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 15.0,
+    "url": "https://www.walmart.com.mx/ip/Sopa-instantanea-Maruchan-Instant-Lunch-con-camaron-limon-y-habanero-64-g/00004178900186?athAsset=eyJhdGhjcGlkIjoiMDAwMDQxNzg5MDAxODYiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 19.0,
     "precio_maximo": 19.0,
-    "ultima_actualizacion": "2026-10-14T19:42:23.546782+00:00",
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750955284032": {
@@ -42089,10 +42089,10 @@
   "walmart|code:00078974289505": {
     "tienda": "Walmart MX",
     "titulo": "Crema de avellanas Nutella con cacao 350 g",
-    "url": "https://www.walmart.com.mx/ip/Crema-de-avellanas-Nutella-con-cacao-350-g/00078974289505?athAsset=eyJhdGhjcGlkIjoiMDAwNzg5NzQyODk1MDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 86.0,
+    "url": "https://www.walmart.com.mx/ip/Crema-de-avellanas-Nutella-con-cacao-350-g/00078974289505?athAsset=eyJhdGhjcGlkIjoiMDAwNzg5NzQyODk1MDUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 98.0,
     "precio_maximo": 98.0,
-    "ultima_actualizacion": "2026-10-14T19:42:23.546782+00:00",
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750105534900": {
@@ -42822,6 +42822,105 @@
     "precio_actual": 79.0,
     "precio_maximo": 79.0,
     "ultima_actualizacion": "2026-10-15T05:53:23.234458+00:00",
+    "precio_alertado": null
+  },
+  "liverpool|title:liverpool smartwatch huawei watch fit 4": {
+    "tienda": "Liverpool",
+    "titulo": "Liverpool: Smartwatch Huawei Watch Fit 4",
+    "url": "https://www.promodescuentos.com/ofertas/huawei-watch-fit-4-1199242",
+    "precio_actual": 1199.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07b4ml8qm": {
+    "tienda": "Amazon",
+    "titulo": "B07B4ML8QM",
+    "url": "https://www.amazon.com.mx/dp/B07B4ML8QM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 802.13,
+    "precio_maximo": 2676.0,
+    "ultima_actualizacion": "2026-10-15T10:37:38.727452+00:00",
+    "precio_alertado": 802.13
+  },
+  "amazon|code:b0gwmkqldq": {
+    "tienda": "Amazon",
+    "titulo": "B0GWMKQLDQ",
+    "url": "https://www.amazon.com.mx/dp/B0GWMKQLDQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1799.4,
+    "precio_maximo": 4499.0,
+    "ultima_actualizacion": "2026-10-15T10:37:42.438571+00:00",
+    "precio_alertado": 1799.4
+  },
+  "amazon|code:b0g4cwwrcj": {
+    "tienda": "Amazon",
+    "titulo": "B0G4CWWRCJ",
+    "url": "https://www.amazon.com.mx/dp/B0G4CWWRCJ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 300.3,
+    "precio_maximo": 599.0,
+    "ultima_actualizacion": "2026-10-15T10:37:46.143058+00:00",
+    "precio_alertado": 300.3
+  },
+  "amazon|code:b0d543r1m6": {
+    "tienda": "Amazon",
+    "titulo": "B0D543R1M6",
+    "url": "https://www.amazon.com.mx/dp/B0D543R1M6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 89.0,
+    "precio_maximo": 179.0,
+    "ultima_actualizacion": "2026-10-15T10:37:49.848302+00:00",
+    "precio_alertado": 89.0
+  },
+  "amazon|code:b0dhsxq74g": {
+    "tienda": "Amazon",
+    "titulo": "B0DHSXQ74G",
+    "url": "https://www.amazon.com.mx/dp/B0DHSXQ74G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2039.6,
+    "precio_maximo": 3999.0,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cytbgt78": {
+    "tienda": "Amazon",
+    "titulo": "B0CYTBGT78",
+    "url": "https://www.amazon.com.mx/dp/B0CYTBGT78?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 653.0,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cgt5f8kl": {
+    "tienda": "Amazon",
+    "titulo": "B0CGT5F8KL",
+    "url": "https://www.amazon.com.mx/dp/B0CGT5F8KL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 450.0,
+    "precio_maximo": 670.0,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dtmcpsy4": {
+    "tienda": "Amazon",
+    "titulo": "B0DTMCPSY4",
+    "url": "https://www.amazon.com.mx/dp/B0DTMCPSY4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 499.6,
+    "precio_maximo": 738.31,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d962xyp6": {
+    "tienda": "Amazon",
+    "titulo": "B0D962XYP6",
+    "url": "https://www.amazon.com.mx/dp/B0D962XYP6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.99,
+    "precio_maximo": 129.99,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fw96brj8": {
+    "tienda": "Amazon",
+    "titulo": "B0FW96BRJ8",
+    "url": "https://www.amazon.com.mx/dp/B0FW96BRJ8?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 156.0,
+    "precio_maximo": 190.0,
+    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
     "precio_alertado": null
   }
 }
