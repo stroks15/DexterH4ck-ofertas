@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BIdRYosD0YB0ACtX%2FYihyeDvIKr%2Fcv%2B%2FBz4gF3RDq07cFF2CYjVgAcL8L4YPupY38RIRBB4bMHmFyfMHrqpHLKbJYapyzx%2BWHlmvblu3fHB6XBZMGtUrnLizCW4VjHN0p53r19oNjHtFtKWXHahQO%2FDGRWpaxzxoIVnkHFTROHdx6SKe9%2FNQeLvpxPEJZJwW42S0jTw%3D",
-    "precio_actual": 3291.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BMPMIn47J%2BLoNOCJXL6CdNBaGKrDkt%2Frfukg4x5MK9gHOP4C41Q2o1R3QqU0HlFafKMh5kGsxRLtQIG2jwaB9bqZ4LZ6JaNRHWCfFP4oLGn4lKjob4jeq4CZXZqYqlWdUrBKrD3kjrqpb0wT%2FIY7sMHKpS5%2B1DzaTzyFNzNjNgW4pQ9RKq5r6NHQD9ZrdoaOWnbm3mo4xSY9bzDKYjq7kB8v1mbPucAxYcfC0n85tE9S3EAYnX%2Ft7nE61seAFPGgoJ8z8Q%3D%3D",
+    "precio_actual": 1724.0,
     "precio_maximo": 10000.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-15T19:20:21.581982+00:00",
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -36142,8 +36142,8 @@
     "titulo": "B0CNQ4DJRV",
     "marca": "",
     "categoria": "",
-    "url": "https://www.amazon.com.mx/Paris-Infallible-Setting-Fijador-maquillaje/dp/B0CNQ4DJRV?pf_rd_r=W9RTV8MBS55QZ99TDF9F&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1&ascsubtag=srctok-4d97d19b120ba473&btn_type=ss&btn_ref=srctok-4ee23142a63ddeb3&linkCode=sl2&tag=liquidapromosmx-20&linkId=981def22b8093873a5286017d31b43a1&ref_=as_li_ss_tl",
-    "precio_actual": 185.0,
+    "url": "https://www.amazon.com.mx/LOr%C3%A9al-Paris-maquillaje-duraci%C3%B3n-Infallible/dp/B0CNQ4DJRV?pf_rd_p=a8422b71-27d5-4a7d-8254-0c9e97c83f02&pf_rd_r=QAB7VJFTEK2C5D1CV448&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1&linkCode=sl2&tag=liquidapromos01-20&linkId=eb01ccc30e6334aa5ab1057a5215ade7&ref_=as_li_ss_tl&ascsubtag=srctok-3059a7d89405bc1d&btn_type=ss&btn_ref=srctok-3059a7d89405bc1d",
+    "precio_actual": 206.0,
     "precio_maximo": 206.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -36161,7 +36161,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-12T19:29:00.637305+00:00",
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0h2ccp53q": {
@@ -40162,11 +40162,11 @@
   },
   "walmart|code:00750108680275": {
     "tienda": "Walmart MX",
-    "titulo": "Agua Epura 20 l únicamente líquido",
-    "url": "https://www.walmart.com.mx/ip/Agua-Epura-20-l-unicamente-liquido/00750108680275?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDg2ODAyNzUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
-    "precio_actual": 51.0,
-    "precio_maximo": 51.0,
-    "ultima_actualizacion": "2026-10-13T14:59:18.938372+00:00",
+    "titulo": "Garrafón de Agua Epura 20 l únicamente líquido",
+    "url": "https://www.walmart.com.mx/ip/Garrafon-de-Agua-Epura-20-l-unicamente-liquido/00750108680275?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDg2ODAyNzUiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true",
+    "precio_actual": 68.0,
+    "precio_maximo": 68.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
     "precio_alertado": null
   },
   "amazon|title:amazon juego de 12 contenedores mixcolor tramontina": {
@@ -41927,10 +41927,10 @@
   "walmart|code:00750064803198": {
     "tienda": "Walmart MX",
     "titulo": "Bicicleta Fija De Spinning X-Rush Spinx 8kg Color Blanco",
-    "url": "https://www.walmart.com.mx/ip/Bicicleta-Fija-De-Spinning-X-Rush-Spinx-8kg-Color-Blanco/00750064803198?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNjQ4MDMxOTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
-    "precio_actual": 3399.0,
+    "url": "https://www.walmart.com.mx/ip/Bicicleta-Fija-De-Spinning-X-Rush-Spinx-8kg-Color-Blanco/00750064803198?athAsset=eyJhdGhjcGlkIjoiMDA3NTAwNjQ4MDMxOTgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
+    "precio_actual": 2099.0,
     "precio_maximo": 3399.0,
-    "ultima_actualizacion": "2026-10-15T19:20:21.581982+00:00",
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750067201624": {
@@ -43281,6 +43281,150 @@
     "precio_actual": 63.0,
     "precio_maximo": 63.0,
     "ultima_actualizacion": "2026-10-15T19:20:21.581982+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:mercado libre monitor 27 lg qhd ips 2560x1440 27 ref rate 100hz negro": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Mercado Libre: Monitor 27\" LG Qhd Ips (2560x1440) 27 Ref Rate 100hz Negro",
+    "url": "https://www.promodescuentos.com/ofertas/monitor-27-lg-qhd-ips-2560x1440-27-ref-rate-100hz-negro-1199448",
+    "precio_actual": 2506.0,
+    "precio_maximo": 2506.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:mercado libre monitor gamer 27 lg ultragear pantalla fhd ips overclock de 144 hz nvidia g sync 99 tiempo de respuesta 1ms": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Mercado Libre: Monitor Gamer 27\" LG Ultragear Pantalla FHd IPS Overclock De 144 Hz, Nvidia G-sync 99%, Tiempo de Respuesta 1ms",
+    "url": "https://www.promodescuentos.com/ofertas/mercado-libre-monitor-gamer-27-lg-ultragear-pantalla-fhd-ips-overclock-de-144-hz-nvidia-g-sync-99-tiempo-de-respuesta-1ms-1199433",
+    "precio_actual": 2305.0,
+    "precio_maximo": 2305.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d7zs4snc": {
+    "tienda": "Amazon",
+    "titulo": "B0D7ZS4SNC",
+    "url": "https://www.amazon.com.mx/dp/B0D7ZS4SNC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.0,
+    "precio_maximo": 259.0,
+    "ultima_actualizacion": "2026-10-15T22:31:11.374138+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b07256ftgg": {
+    "tienda": "Amazon",
+    "titulo": "B07256FTGG",
+    "url": "https://www.amazon.com.mx/dp/B07256FTGG?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=08ac660c885b4385b06c626416fa0d21&ref_=as_li_ss_tl&ascsubtag=srctok-0d5ec7db9ef9b5f8&btn_type=ss&btn_ref=srctok-0d5ec7db9ef9b5f8",
+    "precio_actual": 168.0,
+    "precio_maximo": 396.0,
+    "ultima_actualizacion": "2026-10-15T22:31:15.011093+00:00",
+    "precio_alertado": 168.0
+  },
+  "amazon|code:b07g4bl3p2": {
+    "tienda": "Amazon",
+    "titulo": "B07G4BL3P2",
+    "url": "https://www.amazon.com.mx/dp/B07G4BL3P2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 384.3,
+    "precio_maximo": 812.0,
+    "ultima_actualizacion": "2026-10-15T22:31:18.661905+00:00",
+    "precio_alertado": 384.3
+  },
+  "amazon|code:b0h2gnrv8t": {
+    "tienda": "Amazon",
+    "titulo": "B0H2GNRV8T",
+    "url": "https://www.amazon.com.mx/dp/B0H2GNRV8T?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.0,
+    "precio_maximo": 199.0,
+    "ultima_actualizacion": "2026-10-15T22:31:22.418394+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b01eo2kp2m": {
+    "tienda": "Amazon",
+    "titulo": "B01EO2KP2M",
+    "url": "https://www.amazon.com.mx/dp/B01EO2KP2M?th=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=b1b08139e69af95b5a30cd8e37ab24ff&ref_=as_li_ss_tl&ascsubtag=srctok-3be3f3519fdda61d&btn_type=ss&btn_ref=srctok-3be3f3519fdda61d",
+    "precio_actual": 61.0,
+    "precio_maximo": 115.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cc5jdhmy": {
+    "tienda": "Amazon",
+    "titulo": "B0CC5JDHMY",
+    "url": "https://www.amazon.com.mx/dp/B0CC5JDHMY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 109.99,
+    "precio_maximo": 199.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0csyr4hrd": {
+    "tienda": "Amazon",
+    "titulo": "B0CSYR4HRD",
+    "url": "https://www.amazon.com.mx/dp/B0CSYR4HRD",
+    "precio_actual": 686.82,
+    "precio_maximo": 1185.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c7czqh3y": {
+    "tienda": "Amazon",
+    "titulo": "B0C7CZQH3Y",
+    "url": "https://www.amazon.com.mx/dp/B0C7CZQH3Y",
+    "precio_actual": 414.0,
+    "precio_maximo": 699.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dslct63k": {
+    "tienda": "Amazon",
+    "titulo": "B0DSLCT63K",
+    "url": "https://www.amazon.com.mx/dp/B0DSLCT63K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 449.0,
+    "precio_maximo": 749.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:apple airpods 5 con estuche de carga inalambrica distribuidor autorizado": {
+    "tienda": "Mercado Libre",
+    "titulo": "Apple AirPods 5 con estuche de carga inalámbrica - Distribuidor Autorizado",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJhz7s6wke8SeEXjmE9etgVt%2BkF8UbHyK4TW2Skeu%2BqVwLU%2Fbd4mERAZxnlJawaco6Df1FPvZVxJFIXqbbLUrrgp0b925LSjHsuJJbKghDTeFAiiSf5%2F8Jp1Dkkd54y07eVe1uR%2FhtefxNkzUqp%2F%2BNSEeFP5tN%2Fr2z%2BcFP%2BuP1gOHzT4fy4o%2BLXrh40KzSM4E9ZNaahkmw%3D%3D",
+    "precio_actual": 2905.0,
+    "precio_maximo": 4500.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dq8nd15w": {
+    "tienda": "Amazon",
+    "titulo": "BATIDORA MULTISTICK MUELLER 800W 4 EN 1",
+    "url": "https://www.amazon.com.mx/dp/B0DQ8ND15W",
+    "precio_actual": 760.62,
+    "precio_maximo": 1082.23,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fbvrygcy": {
+    "tienda": "Amazon",
+    "titulo": "B0FBVRYGCY",
+    "url": "https://www.amazon.com.mx/dp/B0FBVRYGCY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 198.0,
+    "precio_maximo": 238.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00uo5f5z6": {
+    "tienda": "Amazon",
+    "titulo": "B00UO5F5Z6",
+    "url": "https://www.amazon.com.mx/BC171ES-Cepillo-Tecnolog%C3%ADa-Cer%C3%A1mica-Turmalina/dp/B00UO5F5Z6?pf_rd_p=a8422b71-27d5-4a7d-8254-0c9e97c83f02&pf_rd_r=32ZH6ZEMM9MG2D302RCQ&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&ufe=app_do%3Aamzn1.fos.06fa9770-d92c-4c52-90c1-2e1c2a45e1df&linkCode=sl2&tag=liquidapromos01-20&linkId=98c5a668f589fc177ee56ca4f091faae&ref_=as_li_ss_tl&ascsubtag=srctok-4f7a82c3206d4037&btn_type=ss&btn_ref=srctok-4f7a82c3206d4037",
+    "precio_actual": 559.0,
+    "precio_maximo": 559.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b074y8lm6t": {
+    "tienda": "Amazon",
+    "titulo": "B074Y8LM6T",
+    "url": "https://www.amazon.com.mx/Nyx-Professional-Makeup-Delineador-Prueba/dp/B074Y8LM6T?pf_rd_p=a8422b71-27d5-4a7d-8254-0c9e97c83f02&pf_rd_r=FMENPE3JVVVPE81XSPCM&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1&linkCode=sl2&tag=liquidapromos01-20&linkId=33cd9bf429add432167bfc83d242f397&ref_=as_li_ss_tl&ascsubtag=srctok-46a1da7b119631fc&btn_type=ss&btn_ref=srctok-46a1da7b119631fc",
+    "precio_actual": 163.0,
+    "precio_maximo": 163.0,
+    "ultima_actualizacion": "2026-10-15T22:31:10.872598+00:00",
     "precio_alertado": null
   }
 }
