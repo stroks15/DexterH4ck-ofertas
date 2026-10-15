@@ -29245,9 +29245,9 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMemx0BDbZf2g4EtP79DcNTvL8sfuvMeOjysv4j%2FURblhfrBApLaiMKJlyliPBqSyw3q3Bj%2BU%2B0HbTBQYjKUkgmjKXUEfM0QJYG2HNY4c1qCVBqWc3vwdPdOEGPjnqCmHCFK2NohRLqFV7eJak6GWkcxCM2D0nNNVz0GDmula8NxVfc0T4irPqkm9robCQNeU4Lg12c%3D",
-    "precio_actual": 1899.0,
-    "precio_maximo": 5000.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BEK7neSh3tM4Ix9Pw9BApxRWYtXg%2BYz371zoN1eW%2FdltW9CJ1Jzmv8kICuFDfvPYvH6%2BCVPgSwRGOiUYlm09s29YRrC8zfYsYitHwMWCS%2B3cNtsIWJji%2B0sT%2F41dXt0xs%2Fsli9aBJwKKHDI7MdSKJ2x6UUsr0xj5CTn3Eoy22TtgA0nmbduRDBTw%2FHjifgwtKxs9Dg%3D%3D",
+    "precio_actual": 1010.11,
+    "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
     "extremo": {
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosyte&matt_tool=34796773&forceInApp=true&ref=BLk0iYKBkQUMUNSgo8vyN2ObMEZM%2F60nJR4hNQm58Rub%2FfCm3NQw4WnmPVQCjwu1vPa5UCafw9mTgfZ4990PsAsfUMo%2FiwbdD67kAXOLOtFtwJ01WC%2BFuwyyIWG1J%2BE3LGIiyb69J9WEN0vUAAREwbGCdf9IX0GziLh5x8K%2FC5yacdbjLOOoaQlaq7NZL0AAnycBRaYTHJpPcaQfQKp%2FsRL3uyF6DJh798lugON%2B4RTFoHplVcqp3DJ%2BYvT9Ql3SqQRN",
-    "precio_actual": 1299.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BGlnI1bkxFsIIGhcR4%2Fxi4UdlfSXj2RDXaJouPgTAR4hW1zQH92GyMz52ytVUSsvxskGi4kG4QTeA0JY%2B9r0mJ7L06ZezoZtobaRZiyYNO64t1%2FlrxJdviKm0f1%2F2J7gx6MrWv%2BAcaNQ4tPmropbsJcNXolQlvh8e07tlqLadJlR4MQaDaYIByVAr9Z9VWJm3cK5E%2BE%3D",
+    "precio_actual": 818.0,
     "precio_maximo": 2800.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-15T05:53:23.234458+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -31620,8 +31620,8 @@
     "titulo": "lists",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists",
-    "precio_actual": 3386.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos/lists",
+    "precio_actual": 600.0,
     "precio_maximo": 30799.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -31639,7 +31639,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-15T05:53:23.234458+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   },
   "chedraui|title:tomates cherry naturesweet glorys 467g": {
@@ -32830,7 +32830,7 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.amazon.com.mx/dp/B0FMS95QCV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 533.0,
+    "precio_actual": 530.82,
     "precio_maximo": 679.0,
     "descuento": 22,
     "puntuacion": 26,
@@ -32848,7 +32848,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T23:17:23.454867+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0h5t7mn2k": {
@@ -36062,7 +36062,7 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists/be9820b7-a6b3-4e4a-9dc5-2e74e3c39906?matt_tool=35824865&forceInApp=true",
-    "precio_actual": 700.0,
+    "precio_actual": 600.0,
     "precio_maximo": 1400.0,
     "descuento": 25,
     "puntuacion": 29,
@@ -36080,7 +36080,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-13T14:53:34.838547+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   },
   "amazon|code:b00iphku50": {
@@ -42332,10 +42332,10 @@
   "amazon|code:b07fn93ww7": {
     "tienda": "Amazon",
     "titulo": "B07FN93WW7",
-    "url": "https://www.amazon.com.mx/dp/B07FN93WW7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 2877.25,
+    "url": "https://www.amazon.com.mx/dp/B07FN93WW7?th=1&ascsubtag=srctok-6e4f002479bb316b&btn_type=ss&btn_ref=srctok-3b764a2bf74d27f8&linkCode=sl2&tag=axfire-20&linkId=6807517b23db256c3f2e71cdafcd8b2a&ref_=as_li_ss_tl",
+    "precio_actual": 2877.0,
     "precio_maximo": 6916.0,
-    "ultima_actualizacion": "2026-10-14T22:45:45.179841+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": 2877.25
   },
   "amazon|code:b0d79kgf39": {
@@ -42719,10 +42719,10 @@
   "amazon|code:b0cqpg9t3j": {
     "tienda": "Amazon",
     "titulo": "B0CQPG9T3J",
-    "url": "https://www.amazon.com.mx/dp/B0CQPG9T3J?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 5877.57,
+    "url": "https://www.amazon.com.mx/dp/B0CQPG9T3J?th=1&linkCode=sl2&tag=axfire-20&linkId=5137c42d2f9502d67510abc635980fc9&ref_=as_li_ss_tl&ascsubtag=srctok-5dd1712b17c32914&btn_type=ss&btn_ref=srctok-5dd1712b17c32914",
+    "precio_actual": 5877.0,
     "precio_maximo": 10999.0,
-    "ultima_actualizacion": "2026-10-15T05:53:23.234458+00:00",
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0f3jv3yt5": {
@@ -42921,6 +42921,159 @@
     "precio_actual": 156.0,
     "precio_maximo": 190.0,
     "ultima_actualizacion": "2026-10-15T10:37:38.148462+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fk9ywmwj": {
+    "tienda": "Amazon",
+    "titulo": "B0FK9YWMWJ",
+    "url": "https://www.amazon.com.mx/dp/B0FK9YWMWJ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 539.4,
+    "precio_maximo": 1499.0,
+    "ultima_actualizacion": "2026-10-15T15:21:56.507404+00:00",
+    "precio_alertado": 539.4
+  },
+  "amazon|code:b0cny7215w": {
+    "tienda": "Amazon",
+    "titulo": "B0CNY7215W",
+    "url": "https://www.amazon.com.mx/dp/B0CNY7215W?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 999.0,
+    "precio_maximo": 2199.0,
+    "ultima_actualizacion": "2026-10-15T15:22:00.368351+00:00",
+    "precio_alertado": 999.0
+  },
+  "amazon|code:b0h6xmwvjk": {
+    "tienda": "Amazon",
+    "titulo": "B0H6XMWVJK",
+    "url": "https://www.amazon.com.mx/dp/B0H6XMWVJK?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 13299.3,
+    "precio_maximo": 27999.0,
+    "ultima_actualizacion": "2026-10-15T15:22:04.257101+00:00",
+    "precio_alertado": 13299.3
+  },
+  "amazon|code:b0ghy4pr3n": {
+    "tienda": "Amazon",
+    "titulo": "B0GHY4PR3N",
+    "url": "https://www.amazon.com.mx/dp/B0GHY4PR3N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 498.87,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-10-15T15:22:08.128814+00:00",
+    "precio_alertado": 498.87
+  },
+  "amazon|code:b0hg1r6tl3": {
+    "tienda": "Amazon",
+    "titulo": "B0HG1R6TL3",
+    "url": "https://www.amazon.com.mx/dp/B0HG1R6TL3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3499.3,
+    "precio_maximo": 6999.0,
+    "ultima_actualizacion": "2026-10-15T15:22:12.062786+00:00",
+    "precio_alertado": 3499.3
+  },
+  "amazon|code:b01cu4m222": {
+    "tienda": "Amazon",
+    "titulo": "B01CU4M222",
+    "url": "https://www.amazon.com.mx/dp/B01CU4M222?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 40.0,
+    "precio_maximo": 75.01,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hg1m3v1y": {
+    "tienda": "Amazon",
+    "titulo": "B0HG1M3V1Y",
+    "url": "https://www.amazon.com.mx/dp/B0HG1M3V1Y?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4899.3,
+    "precio_maximo": 8999.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h1vf8f8m": {
+    "tienda": "Amazon",
+    "titulo": "B0H1VF8F8M",
+    "url": "https://www.amazon.com.mx/dp/B0H1VF8F8M",
+    "precio_actual": 5099.0,
+    "precio_maximo": 8499.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0djy2w5zd": {
+    "tienda": "Amazon",
+    "titulo": "B0DJY2W5ZD",
+    "url": "https://www.amazon.com.mx/dp/B0DJY2W5ZD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1099.0,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d1y62ttq": {
+    "tienda": "Amazon",
+    "titulo": "SHANDABULIU Disfraz Inflable de Dinosaurio para Adultos, Disfraz de Halloween, Divertido para Christmas y Fiestas (1.5-1.9m Adulto)",
+    "url": "https://www.amazon.com.mx/dp/B0D1Y62TTQ",
+    "precio_actual": 398.0,
+    "precio_maximo": 599.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b098d1cyx4": {
+    "tienda": "Amazon",
+    "titulo": "B098D1CYX4",
+    "url": "https://www.amazon.com.mx/dp/B098D1CYX4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 541.49,
+    "precio_maximo": 599.99,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h1124bgd": {
+    "tienda": "Amazon",
+    "titulo": "FOCHIER F Marcadores a base de agua 36-color,punta de pincel y punta fina",
+    "url": "https://www.amazon.com.mx/dp/B0H1124BGD",
+    "precio_actual": 99.99,
+    "precio_maximo": 99.99,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dwt164bs": {
+    "tienda": "Amazon",
+    "titulo": "Michael Kors Women Sm Satchel Handbag, Negro",
+    "url": "https://www.amazon.com.mx/dp/B0DWT164BS",
+    "precio_actual": 2489.94,
+    "precio_maximo": 2489.94,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gwkbrm8d": {
+    "tienda": "Amazon",
+    "titulo": "B0GWKBRM8D",
+    "url": "https://www.amazon.com.mx/dp/B0GWKBRM8D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 239.0,
+    "precio_maximo": 239.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fst3ttv2": {
+    "tienda": "Amazon",
+    "titulo": "B0FST3TTV2",
+    "url": "https://www.amazon.com.mx/dp/B0FST3TTV2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2341.95,
+    "precio_maximo": 2341.95,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0br3m8xhk": {
+    "tienda": "Amazon",
+    "titulo": "B0BR3M8XHK",
+    "url": "https://www.amazon.com.mx/dp/B0BR3M8XHK?th=1&ascsubtag=srctok-62d6b0f3a3ce94d0&btn_type=ss&btn_ref=srctok-50ec2c919ed31683&linkCode=sl2&tag=axfire-20&linkId=d48a71b1c4e9bcc70611cc9e69ac3032&ref_=as_li_ss_tl",
+    "precio_actual": 299.0,
+    "precio_maximo": 299.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f6ctcp3l": {
+    "tienda": "Amazon",
+    "titulo": "B0F6CTCP3L",
+    "url": "https://www.amazon.com.mx/dp/B0F6CTCP3L?psc=1&ascsubtag=srctok-1792da4b16bfda28&btn_type=ss&btn_ref=srctok-02cbb0cc338fdbb1&linkCode=sl2&tag=axfire-20&linkId=57be508e8ef35112884b6059abff0b0f&ref_=as_li_ss_tl",
+    "precio_actual": 1811.0,
+    "precio_maximo": 1811.0,
+    "ultima_actualizacion": "2026-10-15T15:21:55.484748+00:00",
     "precio_alertado": null
   }
 }
