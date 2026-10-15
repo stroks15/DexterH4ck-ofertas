@@ -7,6 +7,7 @@ from urllib.parse import quote_plus, urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
+from core.network_manager import get_scraperapi_manager
 from core.source_resilience import BLOCK_SIGNATURES, HONEST_USER_AGENT, classify_status
 
 logger = logging.getLogger("DexterH4ck.TiendasMexico")
@@ -33,6 +34,8 @@ def buscar_todas(filtro_tienda=None) -> list:
 
     Si una tienda responde 403/429/5xx o muestra un reto, se registra el estado real en
     LAST_STATUS y se deja de consultar ESA tienda en este ciclo; las demás continúan.
+    Si hay SCRAPERAPI_KEY, un 403/412/503 o timeout se reintenta UNA vez vía ScraperAPI
+    (ver core/network_manager.py) antes de darlo por bloqueado.
     """
     productos_encontrados = []
     LAST_STATUS.clear()
@@ -56,7 +59,13 @@ def buscar_todas(filtro_tienda=None) -> list:
             target_url = plantilla.format(q=quote_plus(termino))
             try:
                 logger.info("[%s] Extrayendo listado público: %s", tienda.upper(), target_url)
-                response = session.get(target_url, timeout=25.0)
+                manager = get_scraperapi_manager()
+                response = manager.run(
+                    lambda: session.get(target_url, timeout=25.0),
+                    target_url,
+                    render=manager.render_for(tienda),
+                    headers=session.headers,
+                )
                 estado = classify_status(response.status_code)
                 if estado == "ok":
                     cuerpo = (response.text or "").lower()
