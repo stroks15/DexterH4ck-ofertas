@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BMo76DA25VRmFAhQl06Kb7rzDWSvpXVnK0KNmLILNFt%2Fc4qFobBKmGvE6lwTUas0HmNHGqr1EfjdGdsjqu%2BG4fmub20xKYDxVA6gV1uGGT%2FNNdNxncWsN4fFlN4W3fcwpbumF45JFfowupuxVMz6ZaoEDcgg2jsuto2tuP54BPn0Tc%2BOuptwwtSWJJ3WvlZBV6BaY2M%3D",
-    "precio_actual": 690.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BIJ%2B4z3G53mrO0C94K3LhM8k0pMVPxSBJTYSJQ0bxVwC3HaloFZIllylXLQQLdsIsoSGURv3%2BoqF0wKNaDsdUypfGTqr1R7SpVBm8Bn7Ri8kmqA%2FYWPSIwABv9gOuAogzlZJaXFwrQJCFMnaRGhsHlLEpPTJDxakaW4EOnzC6kmdEJar4kSeky0KP0Sxwfvpm27DQr4%3D",
+    "precio_actual": 666.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-16T09:59:26.098465+00:00",
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -43875,6 +43875,114 @@
     "precio_actual": 484.9,
     "precio_maximo": 484.9,
     "ultima_actualizacion": "2026-10-16T09:59:26.098465+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b001o8mi2k": {
+    "tienda": "Amazon",
+    "titulo": "B001O8MI2K",
+    "url": "https://www.amazon.com.mx/dp/B001O8MI2K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 950.0,
+    "precio_maximo": 3920.0,
+    "ultima_actualizacion": "2026-10-16T14:49:43.260688+00:00",
+    "precio_alertado": 950.0
+  },
+  "amazon|code:b0h2hbx91w": {
+    "tienda": "Amazon",
+    "titulo": "B0H2HBX91W",
+    "url": "https://www.amazon.com.mx/dp/B0H2HBX91W?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 89.0,
+    "precio_maximo": 199.0,
+    "ultima_actualizacion": "2026-10-16T14:49:47.068976+00:00",
+    "precio_alertado": 89.0
+  },
+  "amazon|code:b07rkyrlrs": {
+    "tienda": "Amazon",
+    "titulo": "B07RKYRLRS",
+    "url": "https://www.amazon.com.mx/dp/B07RKYRLRS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 349.0,
+    "precio_maximo": 699.0,
+    "ultima_actualizacion": "2026-10-16T14:49:50.884389+00:00",
+    "precio_alertado": 349.0
+  },
+  "amazon|code:b00p2cb9oc": {
+    "tienda": "Amazon",
+    "titulo": "B00P2CB9OC",
+    "url": "https://www.amazon.com.mx/dp/B00P2CB9OC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 199.0,
+    "precio_maximo": 384.78,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cn1t5hf1": {
+    "tienda": "Amazon",
+    "titulo": "B0CN1T5HF1",
+    "url": "https://www.amazon.com.mx/dp/B0CN1T5HF1?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 144.0,
+    "precio_maximo": 269.0,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b06xb1plhr": {
+    "tienda": "Amazon",
+    "titulo": "B06XB1PLHR",
+    "url": "https://www.amazon.com.mx/dp/B06XB1PLHR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 26.53,
+    "precio_maximo": 44.02,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h2wwnfbz": {
+    "tienda": "Amazon",
+    "titulo": "B0H2WWNFBZ",
+    "url": "https://www.amazon.com.mx/dp/B0H2WWNFBZ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 809.4,
+    "precio_maximo": 1279.0,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ffq98b5s": {
+    "tienda": "Amazon",
+    "titulo": "B0FFQ98B5S",
+    "url": "https://www.amazon.com.mx/dp/B0FFQ98B5S?th=1&ascsubtag=srctok-225dfd3a940b2677&btn_type=ss&btn_ref=srctok-7c6b604301791810&linkCode=sl2&tag=ofertones03-20&linkId=1b3da2aff8fa86403c1298fb3faaf177&ref_=as_li_ss_tl",
+    "precio_actual": 25.0,
+    "precio_maximo": 37.5,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gcb452xw": {
+    "tienda": "Amazon",
+    "titulo": "B0GCB452XW",
+    "url": "https://www.amazon.com.mx/dp/B0GCB452XW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2077.0,
+    "precio_maximo": 2799.0,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h2zqx9vj": {
+    "tienda": "Amazon",
+    "titulo": "B0H2ZQX9VJ",
+    "url": "https://www.amazon.com.mx/dp/B0H2ZQX9VJ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1684.83,
+    "precio_maximo": 1684.83,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d7cpbfnr": {
+    "tienda": "Amazon",
+    "titulo": "B0D7CPBFNR",
+    "url": "https://www.amazon.com.mx/dp/B0D7CPBFNR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 769.99,
+    "precio_maximo": 769.99,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dycy7xdb": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i GQBPKSZQJWWYB3YHRZE8",
+    "url": "https://www.amazon.com.mx/dp/B0DYCY7XDB/ref=cm_sw_r_as_gl_api_gl_i_GQBPKSZQJWWYB3YHRZE8?linkCode=ml1&tag=liquidahorros--20&linkId=a16c818dc473e1ddb20901639b814124&ascsubtag=srctok-47f9d33c55f4e4f8&btn_type=ss&btn_ref=srctok-47f9d33c55f4e4f8",
+    "precio_actual": 11.0,
+    "precio_maximo": 11.0,
+    "ultima_actualizacion": "2026-10-16T14:49:42.558251+00:00",
     "precio_alertado": null
   }
 }
