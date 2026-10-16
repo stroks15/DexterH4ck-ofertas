@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJA3BbYKWCjLv%2BROgquCJpircTYU4NzjgmHAawPJoOXMkEiR%2B9pI4xXQ6gtO3aouNaW6E%2Ba9AljdE5GYx8fkdUargwtTkN5eNNwxW9M9VEgI9vTccLRK1Ir%2BuuVdU4zumnVe1SguBf1nO0Rmf1ZIrcGGQji7Hzw8OU8EEXyLdqtOlUUpyYESGiA48X8OMTW%2BceAtZ%2Bc%3D",
-    "precio_actual": 121.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BB%2FDdfxmWvS8ygO%2B2Cl69q3prHguxhpop30NtTqMkUEz7imU4ouYujRBN%2Fs1lXIeYOSSy4o3s2vsqzuYnbELeW03aHFCxSy4uKk%2BT57LOeyqhnqqacozhowCrjI4lcLu0z1rqKLMxSq7CSfIdN%2BFs1ogfblFEWtYNSVNO9HM5oo3QIM%2BmNoDWJbPC84ocdaUiziNlhs%3D",
+    "precio_actual": 3149.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-16T00:45:08.164100+00:00",
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BD05cPpLMoJ10qDE7PeljKYp2cz4AFPhmfnZw%2BVvy2wYdCIxS4aUJ%2FM3B7j%2F4fKAxJDuS3zANX%2FxewJ%2BtyL2THMSGX%2B2r9kh5v5KHuPF3gIk8q6RT6K2LoXPJJOVlD6UbSzOTOZDWm%2Flu2qkWxjv67rMGUj2AlCUQbTP3TmVxdLOQvRjdgJaqJzgNb6Fax6KyjBzyqF52cTU7lNhIl7ZALmz7CWv5LSmWi5jO8gUTH0RP9zn1Of3JtH14OQKY0CN1yqLjXueuEcUULTn",
-    "precio_actual": 1650.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BIgp3z%2FCqgmr9uif7f4ebUu1ijc56WhORZCC%2BFtEOr%2BSlgilSO%2F%2Fy9Hc%2FKc4QbgBueRmbSxSeUMpv9OHI5E6OMeNcsioCwRR349uXYAGPO2vfUD5zc%2By6I%2B1XBEy9Sjx5iKG5o7Hi2axDG0eWBhhymOBn6THrT2BkG7w1t8UwHG6z4yWhWj4RjQXxJD1x2GEv3xyTAg%3D",
+    "precio_actual": 1774.0,
     "precio_maximo": 10000.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-16T00:45:08.164100+00:00",
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -43560,6 +43560,159 @@
     "precio_actual": 210.0,
     "precio_maximo": 210.0,
     "ultima_actualizacion": "2026-10-16T00:45:08.164100+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fzd14glw": {
+    "tienda": "Amazon",
+    "titulo": "B0FZD14GLW",
+    "url": "https://www.amazon.com.mx/dp/B0FZD14GLW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 279.0,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-16T05:13:35.730875+00:00",
+    "precio_alertado": 279.0
+  },
+  "amazon|code:b0bfnlp3yq": {
+    "tienda": "Amazon",
+    "titulo": "B0BFNLP3YQ",
+    "url": "https://www.amazon.com.mx/dp/B0BFNLP3YQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 582.34,
+    "precio_maximo": 1265.75,
+    "ultima_actualizacion": "2026-10-16T05:13:39.421832+00:00",
+    "precio_alertado": 582.34
+  },
+  "amazon|code:b0cskj44lb": {
+    "tienda": "Amazon",
+    "titulo": "PRECIO MAS BAJO TERMÓMETRO PANDA PARA BEBÉ",
+    "url": "https://www.amazon.com.mx/dp/B0CSKJ44LB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 78.0,
+    "precio_maximo": 159.84,
+    "ultima_actualizacion": "2026-10-16T05:13:32.032982+00:00",
+    "precio_alertado": 78.0
+  },
+  "amazon|code:b0cttwdszq": {
+    "tienda": "Amazon",
+    "titulo": "B0CTTWDSZQ",
+    "url": "https://www.amazon.com.mx/dp/B0CTTWDSZQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 599.99,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-16T05:13:43.167221+00:00",
+    "precio_alertado": 599.99
+  },
+  "amazon|code:b001q4huno": {
+    "tienda": "Amazon",
+    "titulo": "B001Q4HUNO",
+    "url": "https://www.amazon.com.mx/dp/B001Q4HUNO?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 209.36,
+    "precio_maximo": 401.46,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d5bkz159": {
+    "tienda": "Amazon",
+    "titulo": "B0D5BKZ159",
+    "url": "https://www.amazon.com.mx/dp/B0D5BKZ159?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 98.0,
+    "precio_maximo": 179.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dhxzffwv": {
+    "tienda": "Amazon",
+    "titulo": "aosu 2K QHD cámaras de seguridad solares inalámbricas para exteriores",
+    "url": "https://www.amazon.com.mx/dp/B0DHXZFFWV",
+    "precio_actual": 3913.89,
+    "precio_maximo": 5556.02,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07ybxn8dg": {
+    "tienda": "Amazon",
+    "titulo": "B07YBXN8DG",
+    "url": "https://www.amazon.com.mx/dp/B07YBXN8DG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 279.0,
+    "precio_maximo": 399.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f8r7f5pt": {
+    "tienda": "Amazon",
+    "titulo": "B0F8R7F5PT",
+    "url": "https://www.amazon.com.mx/dp/B0F8R7F5PT",
+    "precio_actual": 292.6,
+    "precio_maximo": 399.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fj4b58pg": {
+    "tienda": "Amazon",
+    "titulo": "B0FJ4B58PG",
+    "url": "https://www.amazon.com.mx/dp/B0FJ4B58PG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1891.35,
+    "precio_maximo": 2598.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dtkj8h36": {
+    "tienda": "Amazon",
+    "titulo": "B0DTKJ8H36",
+    "url": "https://www.amazon.com.mx/dp/B0DTKJ8H36?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 462.64,
+    "precio_maximo": 531.37,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h3jd7zk2": {
+    "tienda": "Amazon",
+    "titulo": "B0H3JD7ZK2",
+    "url": "https://www.amazon.com.mx/dp/B0H3JD7ZK2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 219.0,
+    "precio_maximo": 219.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08m12chyb": {
+    "tienda": "Amazon",
+    "titulo": "B08M12CHYB",
+    "url": "https://www.amazon.com.mx/dp/B08M12CHYB?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=1edbb27f877a547a6fce74f46208caef&ref_=as_li_ss_tl&ascsubtag=srctok-0ba3f70cbab4920f&btn_type=ss&btn_ref=srctok-0ba3f70cbab4920f",
+    "precio_actual": 318.0,
+    "precio_maximo": 318.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c353thr6": {
+    "tienda": "Amazon",
+    "titulo": "B0C353THR6",
+    "url": "https://www.amazon.com.mx/dp/B0C353THR6?th=1&linkCode=sl2&tag=axfire-20&linkId=c95fb412c89294e77f8bfcf1b429e0ac&ref_=as_li_ss_tl&ascsubtag=srctok-162521ee0a80576c&btn_type=ss&btn_ref=srctok-162521ee0a80576c",
+    "precio_actual": 208.0,
+    "precio_maximo": 208.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09gwckxdz": {
+    "tienda": "Amazon",
+    "titulo": "B09GWCKXDZ",
+    "url": "https://www.amazon.com.mx/dp/B09GWCKXDZ?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=96a52418a395741ae9a9b38f3d606861&ref_=as_li_ss_tl&ascsubtag=srctok-07fe8b9d9a80d993&btn_type=ss&btn_ref=srctok-07fe8b9d9a80d993",
+    "precio_actual": 149.0,
+    "precio_maximo": 149.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dpnkhyvr": {
+    "tienda": "Amazon",
+    "titulo": "B0DPNKHYVR",
+    "url": "https://www.amazon.com.mx/dp/B0DPNKHYVR?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=34b0ac02a9f1d038ac4e495a2d20b10a&ref_=as_li_ss_tl&ascsubtag=srctok-2f5490ee95ce1025&btn_type=ss&btn_ref=srctok-2f5490ee95ce1025",
+    "precio_actual": 449.0,
+    "precio_maximo": 449.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00750100752842": {
+    "tienda": "Walmart MX",
+    "titulo": "Crema corporal Lubriderm reparación intensiva 400 ml",
+    "url": "https://www.walmart.com.mx/ip/Crema-corporal-Lubriderm-reparacion-intensiva-400-ml/00750100752842?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMDA3NTI4NDIiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1504",
+    "precio_actual": 140.0,
+    "precio_maximo": 140.0,
+    "ultima_actualizacion": "2026-10-16T05:13:31.427698+00:00",
     "precio_alertado": null
   }
 }
