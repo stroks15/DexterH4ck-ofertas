@@ -44803,5 +44803,23 @@
     "precio_maximo": 26999.0,
     "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
     "precio_alertado": null
+  },
+  "bodega|title:bodega aurrera varios lego en": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Bodega Aurrera: varios Lego en liquidación",
+    "url": "https://www.promodescuentos.com/ofertas/bodega-aurrera-varios-lego-en-liquidacion-1199867",
+    "precio_actual": 460.0,
+    "precio_maximo": 460.0,
+    "ultima_actualizacion": "2026-10-17T12:32:58.484515+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f9fjts6d": {
+    "tienda": "Amazon",
+    "titulo": "B0F9FJTS6D",
+    "url": "https://www.amazon.com.mx/dp/B0F9FJTS6D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 68.0,
+    "precio_maximo": 128.6,
+    "ultima_actualizacion": "2026-10-17T12:32:58.484515+00:00",
+    "precio_alertado": null
   }
 }
