@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BPk3iSll9TRXGdgKZD8pq1QPjrVwtnOP9WhX2gIgLEVrGv9BlMPl1H6dJzhcbA2VVaAxRBqxHDq43N%2BKid39M%2FtF5Pzo5eXk%2Bnrc4fB21jtD6IWjkSRnzq18Pb7kCJwBT1KwvqIsFOduyxA0%2FltAtx2JPH4YOwqsDy7m%2BX9tWz%2BWY9TpYwoDgZlbqmvsneVtTGmJW4s%3D",
-    "precio_actual": 749.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BM9FfR0RCxUSOrfNnS10VR5ihYhx%2Buk%2F0XFy%2Bp3G6LNQgqPMbBDRYx8Hp7z14RgVqCYvZ4N%2FxcaNwpx0efBecYcef5pgnr6tAPSloWLnlOzKwe6QpQoyrqCf0WVU%2FHfxQFQJOcuQepTxupO0O8IM8XWlKW7%2Fpw4%2FAnDVNkXf3EmIs1%2FOl%2BxA3v2mcvJfLB1GydV747Ovh3bejUWhNT6iFLZVA1TmRFLS1ASKyMz%2Fk5kMOkJAPxgWTAmNNPHH9OtfAHL3",
+    "precio_actual": 604.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-17T04:18:56.568894+00:00",
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -31216,7 +31216,7 @@
     "marca": "",
     "categoria": "",
     "url": "https://www.amazon.com.mx/dp/B07JM7DR7K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 819.0,
+    "precio_actual": 759.94,
     "precio_maximo": 1899.0,
     "descuento": 57,
     "puntuacion": 60,
@@ -31234,8 +31234,8 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-06T14:10:59.928647+00:00",
-    "precio_alertado": 819.0
+    "ultima_actualizacion": "2026-10-17T08:42:29.721476+00:00",
+    "precio_alertado": 759.94
   },
   "amazon|code:b07gprwfc5": {
     "tienda": "Amazon",
@@ -40973,10 +40973,10 @@
   "telegram|title:sclick": {
     "tienda": "Telegram",
     "titulo": "sclick",
-    "url": "https://ad.soicos.com/sclick?aid=45567&pid=11897&dl=https://www.sams.com.mx/ip/balsamo-para-labios-sol-de-janeiro-brazilian-kiss-cupuacu-6-2-g/981055306%3Ffrom%3D/search",
-    "precio_actual": 285.0,
-    "precio_maximo": 408.0,
-    "ultima_actualizacion": "2026-10-14T10:37:46.041469+00:00",
+    "url": "https://ad.soicos.com/sclick?aid=45567&pid=11897&dl=https://www.sams.com.mx/ip/pantalla-tcl-55-qled-google-tv-55q63k/981036711",
+    "precio_actual": 3975.38,
+    "precio_maximo": 11047.36,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0h3knq4l6": {
@@ -44681,11 +44681,11 @@
   "amazon|code:b07w6xt4lc": {
     "tienda": "Amazon",
     "titulo": "B07W6XT4LC",
-    "url": "https://www.amazon.com.mx/dp/B07W6XT4LC?smid=AVDBXBAVVSXLQ&linkCode=sl2&tag=liquidapromosmx-20&linkId=7d24a690d9c9c9a733ab586111c9a79a&ref_=as_li_ss_tl&ascsubtag=srctok-7babd4c073fc045e&btn_type=ss&btn_ref=srctok-7babd4c073fc045e",
-    "precio_actual": 277.0,
-    "precio_maximo": 277.0,
-    "ultima_actualizacion": "2026-10-17T04:18:56.568894+00:00",
-    "precio_alertado": null
+    "url": "https://www.amazon.com.mx/dp/B07W6XT4LC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 291.58,
+    "precio_maximo": 813.0,
+    "ultima_actualizacion": "2026-10-17T08:42:26.046046+00:00",
+    "precio_alertado": 291.58
   },
   "amazon|code:b0f2dyzgbv": {
     "tienda": "Amazon",
@@ -44703,6 +44703,105 @@
     "precio_actual": 2630.0,
     "precio_maximo": 2630.0,
     "ultima_actualizacion": "2026-10-17T04:18:56.568894+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:mercado libre colchon individual nooz essential 16 cm en caja espuma firme": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Mercado Libre: Colchón individual Nooz Essential 16 cm en caja espuma firme",
+    "url": "https://www.promodescuentos.com/ofertas/colchon-individual-nooz-essential-16-cm-en-caja-espuma-firme-1199851",
+    "precio_actual": 2184.0,
+    "precio_maximo": 2184.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h46slb7m": {
+    "tienda": "Amazon",
+    "titulo": "B0H46SLB7M",
+    "url": "https://www.amazon.com.mx/dp/B0H46SLB7M?smid=AVDBXBAVVSXLQ&th=1&linkCode=sl2&tag=ofertones03-20&linkId=136ef8b92716a4ccf253e5060a2bdb11&ref_=as_li_ss_tl&ascsubtag=srctok-6649dc4a4280546e&btn_type=ss&btn_ref=srctok-6649dc4a4280546e",
+    "precio_actual": 81.0,
+    "precio_maximo": 258.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.590509+00:00",
+    "precio_alertado": 81.0
+  },
+  "amazon|code:b09k4lt3yb": {
+    "tienda": "Amazon",
+    "titulo": "B09K4LT3YB",
+    "url": "https://www.amazon.com.mx/dp/B09K4LT3YB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 399.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-17T08:42:22.256821+00:00",
+    "precio_alertado": 399.0
+  },
+  "amazon|code:b0d51pff92": {
+    "tienda": "Amazon",
+    "titulo": "B0D51PFF92",
+    "url": "https://www.amazon.com.mx/dp/B0D51PFF92?smid=AVDBXBAVVSXLQ&psc=1&linkCode=sl2&tag=ofertones03-20&linkId=b496ec89bc11963222e70185c1c9373f&ref_=as_li_ss_tl&ascsubtag=srctok-7a0c318fe9a21a92&btn_type=ss&btn_ref=srctok-7a0c318fe9a21a92",
+    "precio_actual": 120.0,
+    "precio_maximo": 249.52,
+    "ultima_actualizacion": "2026-10-17T08:42:33.404683+00:00",
+    "precio_alertado": 120.0
+  },
+  "amazon|code:b0f83wg68d": {
+    "tienda": "Amazon",
+    "titulo": "B0F83WG68D",
+    "url": "https://www.amazon.com.mx/dp/B0F83WG68D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 558.4,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gxkhzd19": {
+    "tienda": "Amazon",
+    "titulo": "¡ACTIVA TODO TU CUERPO DESDE CASA CON ESTA PLATAFORMA VIBRATORIA!",
+    "url": "https://www.amazon.com.mx/dp/B0GXKHZD19",
+    "precio_actual": 899.0,
+    "precio_maximo": 1399.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fxxgl75d": {
+    "tienda": "Amazon",
+    "titulo": "¡ALFOMBRAS IMPECABLES SIN ESFUERZO! LIMPIADOR PORTÁTIL DE MANCHAS CON 17 KPA",
+    "url": "https://www.amazon.com.mx/dp/B0FXXGL75D",
+    "precio_actual": 1499.97,
+    "precio_maximo": 2299.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fv85vsn3": {
+    "tienda": "Amazon",
+    "titulo": "B0FV85VSN3",
+    "url": "https://www.amazon.com.mx/dp/B0FV85VSN3",
+    "precio_actual": 199.0,
+    "precio_maximo": 298.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0bnbnz5g1": {
+    "tienda": "Amazon",
+    "titulo": "B0BNBNZ5G1",
+    "url": "https://www.amazon.com.mx/dp/B0BNBNZ5G1?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 528.94,
+    "precio_maximo": 679.9,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f9yn73dh": {
+    "tienda": "Amazon",
+    "titulo": "B0F9YN73DH",
+    "url": "https://www.amazon.com.mx/dp/B0F9YN73DH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 189.0,
+    "precio_maximo": 189.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|code:b0hj6n5d4x": {
+    "tienda": "Mercado Libre",
+    "titulo": "B0HJ6N5D4X",
+    "url": "https://www.amazon.com.mx/dp/B0HJ6N5D4X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 26999.0,
+    "precio_maximo": 26999.0,
+    "ultima_actualizacion": "2026-10-17T08:42:18.061364+00:00",
     "precio_alertado": null
   }
 }
