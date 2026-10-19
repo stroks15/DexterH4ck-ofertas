@@ -287,6 +287,19 @@ def _num(valor) -> float:
         return 0.0
 
 
+def descuento_declarado_telegram(item: dict) -> int:
+    """Descuento (50-99) que declara un mensaje de Telegram que no trae precio anterior; 0 si no aplica.
+
+    Regla de los grupos/canales de Telegram: basta con que el descuento esté entre 50 % y 99 %,
+    en cualquier tienda. Solo vale para ``origen_link == "Telegram"``: las demás fuentes siguen
+    exigiendo una referencia de precio real.
+    """
+    if str(item.get("origen_link") or "").strip().lower() != "telegram":
+        return 0
+    valor = _num(item.get("descuento_declarado"))
+    return int(round(valor)) if MIN_DESCUENTO <= valor <= MAX_DESCUENTO else 0
+
+
 def calcular_datos(item: dict, entrada_historial: dict | None = None):
     """Devuelve (precio_actual, precio_referencia, descuento).
 
@@ -403,8 +416,10 @@ def formatear_alerta(alerta: dict) -> str:
     lineas = [
         f"{marca}{formato_alerta_tipo(tipo)} <b>{html.escape(str(item.get('titulo') or ''))}</b>",
         f"🏪 {html.escape(str(item.get('tienda') or 'Tienda'))}",
-        f"💰 ${alerta['actual']:,.2f} MXN (antes ${alerta['referencia']:,.2f})",
-        f"📉 {alerta['descuento']}% de descuento",
+        f"💰 ${alerta['actual']:,.2f} MXN"
+        + (f" (antes ${alerta['referencia']:,.2f})" if alerta.get("referencia") else ""),
+        f"📉 {alerta['descuento']}% de descuento"
+        + ("" if alerta.get("referencia") else " (indicado en el mensaje de Telegram)"),
     ]
     ev = alerta.get("evaluacion") or {}
     if ev.get("puntuacion") is not None:
@@ -755,6 +770,8 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
             actual, referencia, descuento = calcular_datos(item, entrada)
             if actual <= 0:
                 continue
+            if not referencia:
+                descuento = descuento_declarado_telegram(item) or descuento
             item["precio_actual"] = actual
             item["precio_anterior"] = referencia or None
             item["descuento"] = descuento

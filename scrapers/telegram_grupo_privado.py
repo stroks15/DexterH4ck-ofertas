@@ -38,6 +38,8 @@ import time
 
 import requests
 
+from core.discount_text import descuento_declarado
+
 MIN_DESCUENTO_GRUPO = 50
 MAX_DESCUENTO_GRUPO = 99
 OFFSET_FILE = "tg_grupo_offset.json"
@@ -81,10 +83,12 @@ def _url_de_botones(mensaje: dict) -> str | None:
 
 
 def parsear_oferta(texto: str, mensaje: dict | None = None) -> dict | None:
-    descuento_match = DESCUENTO_RE.search(texto)
-    if not descuento_match:
-        return None
-    descuento = int(descuento_match.group(1))
+    descuento = descuento_declarado(texto)
+    if descuento is None:
+        descuento_match = DESCUENTO_RE.search(texto)
+        if not descuento_match:
+            return None
+        descuento = int(descuento_match.group(1))
 
     lineas = [l.strip() for l in texto.splitlines() if l.strip()]
     tienda = lineas[0] if lineas else "Telegram"

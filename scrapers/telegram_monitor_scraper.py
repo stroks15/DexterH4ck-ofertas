@@ -21,8 +21,9 @@ Mercado Libre, Amazon, Coppel, Suburbia, Liverpool), incluyendo enlaces ocultos 
 botones y acortadores (amzn.to, meli.la...). Cada precio pasa por ``core.price_sanitizer``
 (un gramaje como "875g" o "1 kg" jamás actúa como precio de referencia).
 
-Reglas de negocio: solo se emiten ofertas con descuento calculado entre 50 % y 99 %, o sin
-referencia (el monitor puede usar el historial). Las de 95-99 % salen marcadas con
+Reglas de negocio: solo se emiten ofertas con descuento entre 50 % y 99 %, calculado con el
+precio anterior o, si el mensaje no lo trae, el porcentaje que el propio mensaje declara
+(``descuento_declarado``). Sin ningún descuento legible el monitor puede usar el historial. Las de 95-99 % salen marcadas con
 ``bomba_candidata``; la regla "una sola vez" (historial local + Supabase), la validación del
 enlace y el 💣 al inicio del mensaje las aplica ``monitor_ofertas.procesar_candidatos`` /
 ``formatear_alerta`` sobre cualquier fuente, de modo que este módulo no puede saltárselas.
@@ -43,6 +44,7 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 
+from core.discount_text import descuento_declarado
 from core.liquidation_engine import detect_priority_brand, infer_category
 from core.price_sanitizer import parse_price, sanear_par_precios
 from core.source_resilience import HONEST_USER_AGENT, SourceCircuit, classify_status
@@ -264,10 +266,19 @@ def _armar(seg, url, tienda, origen, prioridad, tachados, origen_url):
     if motivo:
         logger.debug("[%s] referencia descartada (%s): %s", origen, motivo, url)
     descuento = 0
+    declarado = None
     if anterior:
         descuento = round((1 - actual / anterior) * 100)
         if not MIN_DESCUENTO <= descuento <= MAX_DESCUENTO:
             return None
+    else:
+        # Sin precio anterior (muy común en estos grupos): la única regla es que el propio
+        # mensaje declare un descuento de 50-99 %, en cualquier tienda.
+        declarado = descuento_declarado(seg)
+        if declarado is not None:
+            if not MIN_DESCUENTO <= declarado <= MAX_DESCUENTO:
+                return None
+            descuento = declarado
     titulo = _titulo(seg, url)
     if len(titulo) < 5:
         return None
@@ -281,6 +292,7 @@ def _armar(seg, url, tienda, origen, prioridad, tachados, origen_url):
         "precio_actual": actual,
         "precio_anterior": anterior,
         "descuento": descuento,
+        "descuento_declarado": declarado,
         "url": url,
         "liquidacion": any(x in low for x in _LIQUIDACION),
         "outlet": any(x in low for x in ("outlet", "reacondicionado", "open box")),
