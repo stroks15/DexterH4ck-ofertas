@@ -7,6 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from core.ai_reparador import analizar_publicacion, reparar_url
+from core.discount_text import descuento_declarado
 from core.liquidation_engine import detect_priority_brand, infer_category
 
 TELEGRAM_CHANNELS = [
@@ -260,6 +261,7 @@ def _candidate(source, text, session=None):
         "precio_actual": actual,
         "precio_anterior": anterior,
         "descuento": descuento,
+        "descuento_declarado": None if anterior else descuento_declarado(text),
         "url": url,
         "liquidacion": liquidacion,
         "outlet": any(x in low for x in ("outlet", "reacondicionado", "open box")),
