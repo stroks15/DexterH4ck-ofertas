@@ -839,6 +839,22 @@ def main() -> int:
     enviadas, fallidas = enviar_alertas(alertas, historial)
     guardar_historial(historial)
 
+    # Grupo privado de Telegram (ej. "Walmart Oferstock NACIONAL"): fuente
+    # aparte e intencionalmente SIN las reglas del resto del pipeline, solo
+    # el 50%-99% que el propio mensaje reporta. Ver scrapers/telegram_grupo_privado.py.
+    try:
+        from scrapers.telegram_grupo_privado import revisar_grupo_privado
+
+        enviadas_grupo, candidatos_grupo = revisar_grupo_privado(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID)
+        if candidatos_grupo:
+            logger.info(
+                "Grupo privado Telegram: %d candidatos con 50-99%%, %d enviadas.",
+                candidatos_grupo,
+                enviadas_grupo,
+            )
+    except Exception as exc:
+        logger.warning("Grupo privado Telegram: error (%s), se omite este ciclo.", exc)
+
     estados = [f["estado"] for f in reporte.get("fuentes", [])]
     con_fallo = [f["fuente"] for f in reporte.get("fuentes", []) if f["estado"] not in ESTADOS_SIN_FALLO]
     logger.info(

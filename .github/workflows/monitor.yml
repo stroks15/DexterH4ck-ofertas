@@ -180,6 +180,7 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GRUPO_FUENTE_CHAT_ID: ${{ secrets.GRUPO_FUENTE_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.8-flash
           GEMINI_MAX_CALLS: "6"
@@ -236,6 +237,9 @@ jobs:
           git config user.name "bot-ofertas"
           git config user.email "bot-ofertas@users.noreply.github.com"
           git add historial_ofertas.json
+          if [ -f tg_grupo_offset.json ]; then
+            git add tg_grupo_offset.json
+          fi
           if git diff --cached --quiet; then
             echo "Historial sin cambios."
             exit 0
@@ -254,6 +258,9 @@ jobs:
             echo "Push concurrente; sincronizando intento $intento..."
             git reset --soft HEAD~1
             git checkout -- historial_ofertas.json
+            if [ -f tg_grupo_offset.json ]; then
+              git checkout -- tg_grupo_offset.json 2>/dev/null || true
+            fi
             git fetch origin main
             git merge --ff-only origin/main 2>/dev/null || {
               echo "La rama avanzó mientras se ejecutaba el monitor; se conserva el historial local como siguiente ciclo."

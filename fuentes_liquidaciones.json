@@ -30,6 +30,15 @@
       "url": "https://www.oferstock.com.mx/#",
       "autolectura": false,
       "estado": "pendiente_integracion"
+    },
+    {
+      "nombre": "Walmart Oferstock NACIONAL (grupo privado)",
+      "tipo": "telegram_grupo_privado",
+      "url": "https://t.me/+fodYmLiA5rdiMzkx",
+      "autolectura": true,
+      "estado": "integrado",
+      "modulo": "scrapers/telegram_grupo_privado.py",
+      "nota": "Requiere que el bot sea miembro del grupo (no hay vista web pública para enlaces de invitación) y el secret GRUPO_FUENTE_CHAT_ID con el ID numérico del grupo. Regla especial: se reenvía CUALQUIER mensaje con 50%-99% de descuento reportado en el propio texto, sin exigir precio anterior ni enlace validado como en el resto del pipeline. Siempre incluye el SKU si el mensaje lo trae."
     }
   ],
   "whatsapp": [
