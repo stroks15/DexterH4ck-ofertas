@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BNVhVOai%2Fbn%2F8RbpJmtCnSl6amU0%2F5pvkSbS5fqJSg4pt0EX1Px3Tb5UZMXSQxJi3F2o17uiD8LCkOQJsrAqKdNNOgsM7MR5tvtNjv2b5Qrs7NpephepFLywq7Gv21yHmeAgwzxRf57z%2Fjsf%2B9y4frj1b8BRCT70I5GXNL%2BBZMMljuUlXKl9RJQwMFc8eYqYoqpy2ajHopYmmHCMGt9CyGTNJrox1UwXGTVBRTGDmDU%2BupUA23dS3XpfH58HZ1PSlZyo",
-    "precio_actual": 398.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BB%2FDdfxmWvS8ygO%2B2Cl69q3prHguxhpop30NtTqMkUEz7imU4ouYujRBN%2Fs1lXIeYOSSy4o3s2vsqzuYnbELeW03aHFCxSy4uKk%2BT57LOeyqhnqqacozhowCrjI4lcLu0z1rqKLMxSq7CSfIdN%2BFs1ogfblFEWtYNSVNO9HM5oo3QIM%2BmNoDWJbPC84ocdaUiziNlhs%3D",
+    "precio_actual": 3149.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-18T23:47:55.917694+00:00",
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -46935,6 +46935,87 @@
     "precio_actual": 579.0,
     "precio_maximo": 579.0,
     "ultima_actualizacion": "2026-10-18T23:47:55.917694+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0czlkvgcr": {
+    "tienda": "Amazon",
+    "titulo": "B0CZLKVGCR",
+    "url": "https://www.amazon.com.mx/dp/B0CZLKVGCR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 350.35,
+    "precio_maximo": 629.0,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h9z71pjk": {
+    "tienda": "Amazon",
+    "titulo": "NBA 2K27 - PlayStation 5 - Edición estándar",
+    "url": "https://www.amazon.com.mx/dp/B0H9Z71PJK",
+    "precio_actual": 929.83,
+    "precio_maximo": 1450.38,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0b1ld56bm": {
+    "tienda": "Amazon",
+    "titulo": "B0B1LD56BM",
+    "url": "https://www.amazon.com.mx/dp/B0B1LD56BM",
+    "precio_actual": 489.98,
+    "precio_maximo": 690.0,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gf2ysf9y": {
+    "tienda": "Amazon",
+    "titulo": "¡ARMA TU MINI MUNDO SANRIO! HELLO KITTY SERIE 4",
+    "url": "https://www.amazon.com.mx/dp/B0GF2YSF9Y",
+    "precio_actual": 369.96,
+    "precio_maximo": 473.23,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gmknh4lb": {
+    "tienda": "Amazon",
+    "titulo": "B0GMKNH4LB",
+    "url": "https://www.amazon.com.mx/dp/B0GMKNH4LB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1910.07,
+    "precio_maximo": 2445.16,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0895bwkrs": {
+    "tienda": "Amazon",
+    "titulo": "B0895BWKRS",
+    "url": "https://www.amazon.com.mx/dp/B0895BWKRS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 225.25,
+    "precio_maximo": 265.0,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gr8qg67f": {
+    "tienda": "Amazon",
+    "titulo": "B0GR8QG67F",
+    "url": "https://www.amazon.com.mx/dp/B0GR8QG67F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1466.79,
+    "precio_maximo": 1543.99,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01akwsyh8": {
+    "tienda": "Amazon",
+    "titulo": "B01AKWSYH8",
+    "url": "https://www.amazon.com.mx/dp/B01AKWSYH8?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 63.5,
+    "precio_maximo": 63.5,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h2vxjl1r": {
+    "tienda": "Amazon",
+    "titulo": "B0H2VXJL1R",
+    "url": "https://www.amazon.com.mx/Calentador-Temperaturas-Calentamiento-Conservaci%C3%B3n-Calentadores/dp/B0H2VXJL1R?pf_rd_r=0NHDEZ8MC9XFXB9E0NQF&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1&ascsubtag=srctok-69329c3c77e3ac2e&btn_type=ss&btn_ref=srctok-3f8444ab5890cca8&linkCode=sl2&tag=yteliquidapromos-20&linkId=808945e0390bd72df3e108be7bed10ce&ref_=as_li_ss_tl",
+    "precio_actual": 389.0,
+    "precio_maximo": 389.0,
+    "ultima_actualizacion": "2026-10-19T01:56:09.444131+00:00",
     "precio_alertado": null
   }
 }
