@@ -47242,5 +47242,59 @@
     "precio_maximo": 649.0,
     "ultima_actualizacion": "2026-10-19T09:17:02.293714+00:00",
     "precio_alertado": 649.0
+  },
+  "amazon|title:iniu 100w cable usb c a c 2m cable cargador tipo c carga rapida": {
+    "tienda": "Amazon MX",
+    "titulo": "INIU 100W Cable USB C a C, [2m] Cable Cargador Tipo C Carga Rápida",
+    "url": "https://www.promodescuentos.com/ofertas/iniu-100w-cable-usb-c-a-c-2m-cable-cargador-tipo-c-carga-rapida-1200201",
+    "precio_actual": 82.0,
+    "precio_maximo": 82.0,
+    "ultima_actualizacion": "2026-10-19T13:09:12.145668+00:00",
+    "precio_alertado": null
+  },
+  "bodega|code:00750639684641": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Cubrebocas Reutilizables BIOMSK Kids 5 piezas",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750639684641",
+    "precio_actual": 50.0,
+    "precio_maximo": 249.0,
+    "ultima_actualizacion": "2026-10-19T13:09:12.855596+00:00",
+    "precio_alertado": 50.0
+  },
+  "walmart|code:00088667832424": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock",
+    "url": "https://www.walmart.com.mx/ip/Reloj-Invicta-26973-Hombre-Acero/00088667832424",
+    "precio_actual": 1699.0,
+    "precio_maximo": 5998.0,
+    "ultima_actualizacion": "2026-10-19T13:09:16.656909+00:00",
+    "precio_alertado": 1699.0
+  },
+  "walmart|code:00841096499982": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock NACIONAL",
+    "url": "https://www.walmart.com.mx/ip/Montable-electrico-INJUSA-Ride-on-Bumper-Car-Verde-6V/00841096499982",
+    "precio_actual": 1086.0,
+    "precio_maximo": 3102.0,
+    "ultima_actualizacion": "2026-10-19T13:09:20.576341+00:00",
+    "precio_alertado": 1086.0
+  },
+  "bodega|code:00019087301162": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "RESTOCK -65%",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00019087301162",
+    "precio_actual": 1747.0,
+    "precio_maximo": 4990.0,
+    "ultima_actualizacion": "2026-10-19T13:09:24.507897+00:00",
+    "precio_alertado": 1747.0
+  },
+  "bodega|code:00001781785248": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Altavoz Portátil Bose Soundlink Flex II 2da Generación Blue Dusk",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00001781785248",
+    "precio_actual": 3249.0,
+    "precio_maximo": 3249.0,
+    "ultima_actualizacion": "2026-10-19T13:09:12.145668+00:00",
+    "precio_alertado": null
   }
 }
