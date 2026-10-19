@@ -563,6 +563,24 @@ def definir_fuentes(sesion: requests.Session | None = None) -> list:
         Fuente("legacy:tiendas_fisicas", set(), _lazy("scrapers.tiendas_fisicas", "buscar_tiendas_fisicas", sesion))
     )
     fuentes.append(Fuente("comunidad:telegram", set(), _lazy("scrapers.telegram_ofertas", "buscar_telegram", sesion)))
+    # Telegram (adaptador unificado): dos workers aislados. Si la sesión de Telethon se retrasa o cae,
+    # ni los canales públicos ni los scrapers de tiendas esperan por ella (cada fuente corre en su hilo).
+    fuentes.append(
+        Fuente(
+            "comunidad:telegram_publico",
+            set(),
+            _lazy("scrapers.telegram_monitor_scraper", "buscar_telegram_publico", sesion),
+            _lazy_attr("scrapers.telegram_monitor_scraper", "STATUS_PUBLICO"),
+        )
+    )
+    fuentes.append(
+        Fuente(
+            "comunidad:telegram_privado",
+            set(),
+            _lazy("scrapers.telegram_monitor_scraper", "buscar_telegram_privado"),
+            _lazy_attr("scrapers.telegram_monitor_scraper", "STATUS_PRIVADO"),
+        )
+    )
     fuentes.append(
         Fuente(
             "comunidad:whatsapp",
@@ -775,7 +793,16 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
         except Exception as exc:  # un candidato defectuoso no detiene el ciclo
             logger.warning("Candidato descartado por error (%s): %s", type(exc).__name__, exc)
 
-    alertas.sort(key=lambda a: (a["bomba"], (a["evaluacion"] or {}).get("puntuacion", 0), a["descuento"]), reverse=True)
+    # Bombas primero; después las fuentes prioritarias (p. ej. Grupo Walmart Channel); luego puntuación y descuento.
+    alertas.sort(
+        key=lambda a: (
+            a["bomba"],
+            int(a["item"].get("prioridad_fuente") or 0),
+            (a["evaluacion"] or {}).get("puntuacion", 0),
+            a["descuento"],
+        ),
+        reverse=True,
+    )
     return alertas
 
 

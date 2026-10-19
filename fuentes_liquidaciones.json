@@ -1,13 +1,45 @@
 {
   "version": 1,
-  "nota": "Las comunidades sirven para descubrir candidatos. El bot no las trata como prueba de precio: intenta verificar siempre en la página oficial del producto. Las fuentes de WhatsApp/Facebook no se leen automáticamente solo por su enlace.",
+  "nota": "Las comunidades sirven para descubrir candidatos. El bot no las trata como prueba de precio: intenta verificar siempre en la página oficial del producto. Las fuentes de WhatsApp/Facebook no se leen automáticamente solo por su enlace. Los canales con estado 'activo' y autolectura=true los lee scrapers/telegram_monitor_scraper.py.",
   "fuentes": [
+    {
+      "nombre": "Grupo Walmart Channel",
+      "tipo": "telegram_privado",
+      "lectura": "telethon",
+      "prioridad": 10,
+      "invite_env": "TELEGRAM_WALMART_INVITE",
+      "chat_id_env": "TELEGRAM_WALMART_CHAT_ID",
+      "titulo_hint": "walmart",
+      "autolectura": true,
+      "estado": "activo",
+      "nota": "Fuente prioritaria. Se lee con una cuenta de usuario ya unida al grupo (Telethon). El enlace de invitación NO se guarda aquí: el repositorio es público; va en el secret TELEGRAM_WALMART_INVITE."
+    },
+    {
+      "nombre": "LiquidaZona Oficial",
+      "tipo": "telegram_canal",
+      "lectura": "web_preview",
+      "url": "https://t.me/LiquidaZonaOficial",
+      "prioridad": 5,
+      "autolectura": true,
+      "estado": "activo"
+    },
+    {
+      "nombre": "Ofertas Perronas MX",
+      "tipo": "telegram_canal",
+      "lectura": "web_preview",
+      "url": "https://t.me/ofertasperronasmx",
+      "prioridad": 5,
+      "autolectura": true,
+      "estado": "activo"
+    },
     {
       "nombre": "Ofertones México",
       "tipo": "telegram_canal",
       "url": "https://t.me/OfertonesMexico",
-      "autolectura": false,
-      "estado": "pendiente_integracion"
+      "autolectura": true,
+      "estado": "activo",
+      "lectura": "web_preview",
+      "prioridad": 5
     },
     {
       "nombre": "LiquidAhorros Oficial Ofertones México",
