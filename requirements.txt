@@ -2,3 +2,4 @@ requests
 curl_cffi
 beautifulsoup4
 feedparser
+telethon>=1.36,<2
