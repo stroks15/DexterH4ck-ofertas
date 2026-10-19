@@ -47206,5 +47206,41 @@
     "precio_maximo": 99.0,
     "ultima_actualizacion": "2026-10-19T07:45:10.908958+00:00",
     "precio_alertado": null
+  },
+  "amazon|code:8425432022": {
+    "tienda": "Amazon MX",
+    "titulo": "Papel de calidad para leer en silencio y encontrar sentido a tu vida — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/8425432022?tag=ofertasperr05-20",
+    "precio_actual": 132.0,
+    "precio_maximo": 285.0,
+    "ultima_actualizacion": "2026-10-19T09:16:55.011850+00:00",
+    "precio_alertado": 132.0
+  },
+  "amazon|code:b0fr8yln6w": {
+    "tienda": "Amazon MX",
+    "titulo": "NUNCA HABÍA ESTADO TAN BARATO — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0FR8YLN6W?tag=ofertasperr05-20",
+    "precio_actual": 164.0,
+    "precio_maximo": 329.16,
+    "ultima_actualizacion": "2026-10-19T09:16:58.669289+00:00",
+    "precio_alertado": 164.0
+  },
+  "mercadolibre|title:tenis reebok classic leather unisex casual": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Tenis Reebok Classic Leather Unisex Casual",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BOjJ3TQkhbq%2FfT%2BwRHYue%2BSsQXkvr2v8UJpQ%2Bq8DXh8R3UsY92cv6vLSSqUx7fTncMrT12uUIZwDOPsD17NYVWDF8nGlEJ42%2B96EL6uNzglBMKjXL8dBwjq8NjBzUh2j9RxSJD3Byi3hNbLeLxuo%2Bh5WdIU77psdf32w0w%2BXY14jJO06bBl9w4YbOqnc%2BDmZW8mBgBHwFB4xJHiKJglr2mVsHI1QfSXiVgMEGo%2BrtodMFChfLPPMXJyCThbIlTVyX7uVD8TF0ddP5Gw%3D",
+    "precio_actual": 2518.0,
+    "precio_maximo": 2518.0,
+    "ultima_actualizacion": "2026-10-19T09:16:54.350688+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f7j1zqzb": {
+    "tienda": "Amazon MX",
+    "titulo": "Modo cooperativo split‑screen con chat de voz y video en vivo, raro en juegos de Switch 2 — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0F7J1ZQZB?tag=ofertasperr05-20",
+    "precio_actual": 649.0,
+    "precio_maximo": 649.0,
+    "ultima_actualizacion": "2026-10-19T09:17:02.293714+00:00",
+    "precio_alertado": 649.0
   }
 }
