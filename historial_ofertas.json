@@ -48205,5 +48205,86 @@
     "precio_maximo": 3376.54,
     "ultima_actualizacion": "2026-10-20T09:44:56.719702+00:00",
     "precio_alertado": null
+  },
+  "walmart|code:00694462520501": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock",
+    "url": "https://www.walmart.com.mx/ip/Juego-de-Cuchillos-Hecef-13-Piezas-Acero-Inoxidable-Con-Bloque-y-Tijeras/00694462520501",
+    "precio_actual": 599.0,
+    "precio_maximo": 2144.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.754060+00:00",
+    "precio_alertado": 599.0
+  },
+  "bodega|code:00333787570828": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Limpiador Facial y Corporal La Roche-Posay Effaclar Microexfoliante en Gel 400 ml",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00333787570828",
+    "precio_actual": 440.0,
+    "precio_maximo": 879.0,
+    "ultima_actualizacion": "2026-10-20T14:35:34.419689+00:00",
+    "precio_alertado": 440.0
+  },
+  "walmart|code:00750052724958": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock NACIONAL",
+    "url": "https://www.walmart.com.mx/ip/Playera-Deportiva-Wilson-para-Hombre-Manga-Corta-Color-Verde-Talla-G/00750052724958",
+    "precio_actual": 170.0,
+    "precio_maximo": 339.0,
+    "ultima_actualizacion": "2026-10-20T14:35:38.257464+00:00",
+    "precio_alertado": 170.0
+  },
+  "amazon|code:b07myc5dx1": {
+    "tienda": "Amazon",
+    "titulo": "B07MYC5DX1",
+    "url": "https://www.amazon.com.mx/dp/B07MYC5DX1?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 46.56,
+    "precio_maximo": 85.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.171403+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09ymtwdxj": {
+    "tienda": "Amazon",
+    "titulo": "B09YMTWDXJ",
+    "url": "https://www.amazon.com.mx/dp/B09YMTWDXJ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 947.0,
+    "precio_maximo": 1549.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.171403+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dtkhm9b4": {
+    "tienda": "Amazon",
+    "titulo": "B0DTKHM9B4",
+    "url": "https://www.amazon.com.mx/dp/B0DTKHM9B4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 526.49,
+    "precio_maximo": 837.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.171403+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0gw9mbzj9": {
+    "tienda": "Amazon",
+    "titulo": "B0GW9MBZJ9",
+    "url": "https://www.amazon.com.mx/dp/B0GW9MBZJ9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 7616.33,
+    "precio_maximo": 11999.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.171403+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d4wn9wvx": {
+    "tienda": "Amazon",
+    "titulo": "B0D4WN9WVX",
+    "url": "https://www.amazon.com.mx/dp/B0D4WN9WVX?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 579.0,
+    "precio_maximo": 772.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.171403+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01fhowya2": {
+    "tienda": "Amazon",
+    "titulo": "B01FHOWYA2",
+    "url": "https://www.amazon.com.mx/dp/B01FHOWYA2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 990.0,
+    "precio_maximo": 990.0,
+    "ultima_actualizacion": "2026-10-20T14:35:30.171403+00:00",
+    "precio_alertado": null
   }
 }
