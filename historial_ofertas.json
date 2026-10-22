@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BJgX0knPJHgkPcvA%2FA0Q4%2BtUoEMQ2ji9pSSKVeXpocGOErXbuKZdzGLy%2FRYupqW32CeuhV3WgPcOg5veew3F8tcVGVrxm7x2x2PXBPa9amTQDm9dqDiRvgLmZGCPeWqO4IzJ%2FVQdZTfNZtE8zEGTtussHPB5GFcXRSlapqrIoUCewsOlMjN4SI3vIb1xpdwSl%2Fm2QQ%3D%3D",
-    "precio_actual": 132.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BIFSSCp%2BXFV7YNueF6MxRh5w7aPCFVQ01S6zp1u5Huv9PvO%2F%2FmkIvulh7M7HYHQQcCBlUCI3CbcWxjbnbukoCJl8g66S7UDsokonZ0e7oVRst14KT0yc0NyRpGxsZhjfthm2SEpNvo7pJMb1aHROyZNE0Q9yCVNxHRbq4GPFSTV9i4pZ1yy9jS3oKgHg74OsVMvIFg%3D%3D",
+    "precio_actual": 293.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -50238,6 +50238,123 @@
     "precio_actual": 3579.0,
     "precio_maximo": 3579.0,
     "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:100w cable usb c a c 2m cable cargador tipo c": {
+    "tienda": "Amazon MX",
+    "titulo": "100W Cable USB C a C, [2m] Cable Cargador Tipo C",
+    "url": "https://www.promodescuentos.com/ofertas/100w-cable-usb-c-a-c-2m-cable-cargador-tipo-c-1200923",
+    "precio_actual": 77.0,
+    "precio_maximo": 77.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dk5d8hyh": {
+    "tienda": "Amazon",
+    "titulo": "B0DK5D8HYH",
+    "url": "https://www.amazon.com.mx/dp/B0DK5D8HYH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 239.0,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-22T11:47:38.071694+00:00",
+    "precio_alertado": 239.0
+  },
+  "walmart|code:00750231572007": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock",
+    "url": "https://www.walmart.com.mx/ip/Colchon-Queen-en-Caja-Cloud-Luuna-24-cm-Medio-Firme-Confort-Premium/00750231572007",
+    "precio_actual": 8540.0,
+    "precio_maximo": 23719.0,
+    "ultima_actualizacion": "2026-10-22T11:47:30.638667+00:00",
+    "precio_alertado": 8540.0
+  },
+  "amazon|code:b0872mhvmg": {
+    "tienda": "Amazon",
+    "titulo": "B0872MHVMG",
+    "url": "https://www.amazon.com.mx/dp/B0872MHVMG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 393.42,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-22T11:47:41.874711+00:00",
+    "precio_alertado": 393.42
+  },
+  "amazon|code:b071lj1z1z": {
+    "tienda": "Amazon",
+    "titulo": "B071LJ1Z1Z",
+    "url": "https://www.amazon.com.mx/dp/B071LJ1Z1Z?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 643.43,
+    "precio_maximo": 1299.0,
+    "ultima_actualizacion": "2026-10-22T11:47:45.505141+00:00",
+    "precio_alertado": 643.43
+  },
+  "walmart|code:00750052719946": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock NACIONAL",
+    "url": "https://www.walmart.com.mx/ip/Sudadera-Wilson-Talla-G-Deportiva-con-Cierre-y-Capucha-de-French-Terry-Rosa/00750052719946",
+    "precio_actual": 175.0,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-10-22T11:47:34.305143+00:00",
+    "precio_alertado": 175.0
+  },
+  "amazon|code:b0h2d938zn": {
+    "tienda": "Amazon",
+    "titulo": "B0H2D938ZN",
+    "url": "https://www.amazon.com.mx/dp/B0H2D938ZN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 49.0,
+    "precio_maximo": 89.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ff3rc4v4": {
+    "tienda": "Amazon",
+    "titulo": "B0FF3RC4V4",
+    "url": "https://www.amazon.com.mx/dp/B0FF3RC4V4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 209.0,
+    "precio_maximo": 369.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08f3w312q": {
+    "tienda": "Amazon",
+    "titulo": "B08F3W312Q",
+    "url": "https://www.amazon.com.mx/dp/B08F3W312Q?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 286.3,
+    "precio_maximo": 478.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:estilo denim atemporal chaqueta trucker de levis": {
+    "tienda": "Mercado Libre",
+    "titulo": "ESTILO DENIM ATEMPORAL: CHAQUETA TRUCKER DE LEVI’S",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BEaJqmuCqtr1zmhSV0T1HD6Xde1M0hUNi4l5X7FjghwglxAjBN7PvjCb%2FZmJ5UCIIOfFj%2BCh4yATGeTAkutu4rXHkyEfUPCtRPkoKvrOQsc2jXpnoFVHeKFxRk%2BwgvlNpTXj9pBsCvbv3zHdQyfFBy32XTM62cU00B701U0lo68hPu5w2Ozfy7fyHWcHlrBUfWtsiw%3D%3D",
+    "precio_actual": 881.0,
+    "precio_maximo": 1399.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b094x33wvc": {
+    "tienda": "Amazon",
+    "titulo": "B094X33WVC",
+    "url": "https://www.amazon.com.mx/gp/product/B094X33WVC?smid=AVDBXBAVVSXLQ&psc=1&ascsubtag=srctok-2989a49a72f18082&btn_type=ss&btn_ref=srctok-68e57bb823b870ca&linkCode=sl2&tag=ofertones03-20&linkId=a116ada8209efda0798f634e5ed83a77&ref_=as_li_ss_tl",
+    "precio_actual": 286.43,
+    "precio_maximo": 444.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:monitor gamer samsung 27 odyssey fhd va 180 hz g3 color negro": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Monitor Gamer Samsung 27'' Odyssey, Fhd Va,180 Hz, G3 Color Negro",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BB63qgqTcq8yfgaqhQgvPj1WMMxLYlEdIu9jLyWxJU%2BynJGi8ibDb3yXNncnAumlmGECQs0WXMFeEmhm6VfCaBsGiy3fYYBcQYcYW0NYod52nvtRVUVL6qEV4MIY%2BEHrUD28RF6sSiO%2Bhy%2FomWuuPSKB%2FvYYfGQkNXtxCbK2RrWYjhKixOnaQRqoHFbvVm%2BJB%2FV%2FiWU%3D",
+    "precio_actual": 6999.0,
+    "precio_maximo": 6999.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "bodega|code:00750195391784": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Vaso Brillante Stitch Varios Diseños 1 pieza",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750195391784",
+    "precio_actual": 1.0,
+    "precio_maximo": 1.0,
+    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
     "precio_alertado": null
   }
 }
