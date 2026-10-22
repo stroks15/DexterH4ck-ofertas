@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BIFSSCp%2BXFV7YNueF6MxRh5w7aPCFVQ01S6zp1u5Huv9PvO%2F%2FmkIvulh7M7HYHQQcCBlUCI3CbcWxjbnbukoCJl8g66S7UDsokonZ0e7oVRst14KT0yc0NyRpGxsZhjfthm2SEpNvo7pJMb1aHROyZNE0Q9yCVNxHRbq4GPFSTV9i4pZ1yy9jS3oKgHg74OsVMvIFg%3D%3D",
-    "precio_actual": 293.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BGxKK1ezt2cZvPMZjifaiNASPYppKoJ7P8yJYx2Q95%2FMlMMUWu%2FDV7Ewu0MwgAJ3TJQ7RZm234yJRKpkirQULVt2UJyjD2F40Ln5LjLWJFoj3B0zv1ilNhdcjRxB0V80hYlGbRsQdcX4zmHlhXCEhS%2BB7YYqAXY2FNr3PxfOdSM5luwkc97hA%2BExKYSa5XqCyfE9P6I%3D",
+    "precio_actual": 378.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BKgQGqsjTwX%2BE7m0gKoX3B3JU4BEmmFSdKQjV6cbSsmEzP20TS%2BILTXfyBD7Uj%2FjjWs61FXd57WhVA6m97wLLGDhFnOrXtoShsOxxxxi2ncApYQ2dsuy3O%2FiIBt8PkDEdpdgUn%2F5SsoeWLqSN4JGiPt6Lv%2BqP%2FLgM6sTqc%2FtJPUGAMjDTr0v3nVvpJfLMSBt1nANMJeBCskDtzm5I0PFOHtLyExYoLP%2Bpd73uIPjtZsG8KkZJ%2FQuuCCqTsMvcMAOqobgZg%3D%3D",
-    "precio_actual": 585.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BAMq2qAtCoCpR7B3muR1cOf7jV%2BDjINPXc4b5UhfDKpSQ1%2B1CyJUF0Qom43Iby9W7ZpsiScUI6HgSCJavFm3PAS8g0zmkzDgwlFL86CKn3lTZZ1NHN1DpkNnO12kZ5uh8cbm7EzbZfGQs029WPyFBCUrCAok80f9s0vPqs%2B12dPvwKXYuXxGZdodCXs8tRfm8B8IfVg%3D",
+    "precio_actual": 1583.0,
     "precio_maximo": 31999.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -36472,11 +36472,11 @@
   },
   "amazon|code:b0dbhrwrkc": {
     "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i NRKR1WYT1X5DMJXX3HSW",
-    "url": "https://www.amazon.com.mx/dp/B0DBHRWRKC/ref=cm_sw_r_as_gl_api_gl_i_NRKR1WYT1X5DMJXX3HSW?linkCode=ml1&tag=liquidahorros--20&linkId=8f3aeb8f2b4d6645170ac5eef8506107&ascsubtag=srctok-4792821d0e010e42&btn_type=ss&btn_ref=srctok-4792821d0e010e42",
-    "precio_actual": 199.0,
-    "precio_maximo": 199.0,
-    "ultima_actualizacion": "2026-10-11T01:30:13.195700+00:00",
+    "titulo": "B0DBHRWRKC",
+    "url": "https://www.amazon.com.mx/dp/B0DBHRWRKC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 179.1,
+    "precio_maximo": 209.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
     "precio_alertado": null
   },
   "amazon|code:b01m5h9ucv": {
@@ -50355,6 +50355,159 @@
     "precio_actual": 1.0,
     "precio_maximo": 1.0,
     "ultima_actualizacion": "2026-10-22T11:47:29.926886+00:00",
+    "precio_alertado": null
+  },
+  "amazon|title:amazon listerine enjuague bucal cool mint zero alcohol 500 ml envio gratis sin prime": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Listerine, Enjuague Bucal Cool Mint Zero Alcohol 500 Ml | envío gratis sin prime",
+    "url": "https://www.promodescuentos.com/ofertas/amazon-listerine-enjuague-bucal-cool-mint-zero-alcohol-500-ml-envio-gratis-sin-prime-1200948",
+    "precio_actual": 48.0,
+    "precio_maximo": 48.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f9nn791s": {
+    "tienda": "Amazon MX",
+    "titulo": "300 ft² de telaraña con 100 arañas reales hacen tu casa embrujada sin gastar una fortuna — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0F9NN791S?tag=ofertasperr05-20",
+    "precio_actual": 99.0,
+    "precio_maximo": 269.0,
+    "ultima_actualizacion": "2026-10-22T16:09:26.231148+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b0gshgqxl5": {
+    "tienda": "Amazon",
+    "titulo": "B0GSHGQXL5",
+    "url": "https://www.amazon.com.mx/dp/B0GSHGQXL5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 465.52,
+    "precio_maximo": 1189.3,
+    "ultima_actualizacion": "2026-10-22T16:09:29.939329+00:00",
+    "precio_alertado": 465.52
+  },
+  "amazon|code:b0ggl6dnk7": {
+    "tienda": "Amazon",
+    "titulo": "B0GGL6DNK7",
+    "url": "https://www.amazon.com.mx/dp/B0GGL6DNK7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1212.68,
+    "precio_maximo": 2999.0,
+    "ultima_actualizacion": "2026-10-22T16:09:33.634665+00:00",
+    "precio_alertado": 1212.68
+  },
+  "amazon|code:b002xq1x4g": {
+    "tienda": "Amazon",
+    "titulo": "B002XQ1X4G",
+    "url": "https://www.amazon.com.mx/dp/B002XQ1X4G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1303.56,
+    "precio_maximo": 2842.0,
+    "ultima_actualizacion": "2026-10-22T16:09:37.336901+00:00",
+    "precio_alertado": 1303.56
+  },
+  "amazon|code:b07tmpw5ns": {
+    "tienda": "Amazon",
+    "titulo": "B07TMPW5NS",
+    "url": "https://www.amazon.com.mx/dp/B07TMPW5NS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 349.0,
+    "precio_maximo": 749.0,
+    "ultima_actualizacion": "2026-10-22T16:09:41.027332+00:00",
+    "precio_alertado": 349.0
+  },
+  "amazon|code:b0bf6j4b13": {
+    "tienda": "Amazon",
+    "titulo": "B0BF6J4B13",
+    "url": "https://www.amazon.com.mx/dp/B0BF6J4B13?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 795.0,
+    "precio_maximo": 1499.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0czpp1s8n": {
+    "tienda": "Amazon",
+    "titulo": "B0CZPP1S8N",
+    "url": "https://www.amazon.com.mx/dp/B0CZPP1S8N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2299.0,
+    "precio_maximo": 3999.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c9trd6vn": {
+    "tienda": "Amazon",
+    "titulo": "B0C9TRD6VN",
+    "url": "https://www.amazon.com.mx/dp/B0C9TRD6VN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 435.69,
+    "precio_maximo": 633.79,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "telegram|title:ja1135 100": {
+    "tienda": "Telegram",
+    "titulo": "JA1135 100",
+    "url": "https://www.nike.com/mx/t/tenis-para-hombre-air-jordan-4-retro-comic-bkgSIOUl/JA1135-100?CP=EUNS_AFF_AWIN_MX_1210970_Ofertones+Mexico_1432218&utm_source=awin_Ofertones+Mexico&utm_medium=affiliate&utm_campaign=1210970&utm_content=1432218&awc=117547_1792685284_20ee71878be095da6ef8d67de10f01c0",
+    "precio_actual": 3749.0,
+    "precio_maximo": 4999.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0djvvr6p3": {
+    "tienda": "Amazon",
+    "titulo": "B0DJVVR6P3",
+    "url": "https://www.amazon.com.mx/dp/B0DJVVR6P3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 897.99,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00qnucv0i": {
+    "tienda": "Amazon",
+    "titulo": "Hamilton Beach - Batidora, Rojo 2.25 | libras",
+    "url": "https://www.amazon.com.mx/dp/B00QNUCV0I",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00jj6l6py": {
+    "tienda": "Amazon",
+    "titulo": "B00JJ6L6PY",
+    "url": "https://www.amazon.com.mx/dp/B00JJ6L6PY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4430.19,
+    "precio_maximo": 4430.19,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h14444xk": {
+    "tienda": "Amazon",
+    "titulo": "B0H14444XK",
+    "url": "https://www.amazon.com.mx/dp/B0H14444XK?linkCode=sl2&tag=liquidapromos01-20&linkId=a3c656f434293890050c74c3688790cf&ref_=as_li_ss_tl&ascsubtag=srctok-1521108bdf30ceb9&btn_type=ss&btn_ref=srctok-1521108bdf30ceb9",
+    "precio_actual": 249.0,
+    "precio_maximo": 249.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hj3rj5v9": {
+    "tienda": "Amazon",
+    "titulo": "B0HJ3RJ5V9",
+    "url": "https://www.amazon.com.mx/Yuya-Dual-M%C3%A1scara-Aceites-Esenciales/dp/B0HJ3RJ5V9?dib=eyJ2IjoiMSJ9.k1rqS5gRYkhFGhd14_qf19z6C3JwBrMCPFT9eWQGbfF3s-p0JmTSfx2H_Sf6JuQ9vjs48knFpO0thsIGV0Dk8Y95U4mCp7QAobimbQVPg-jneHN3BXYq6u1Bu_cI-4-GLSI_WhUmiHQGCd3KVbWhX3Vhn9cXCXQCpD788QN33buNTijHDUFJKCrXSHT-ievUwyUNYE-gCYrpIFSs-9I535JcXqL9Ep9FlFFPlxyyp-mZxRQSxqrea7QTK96tjT999iwejOpd5fse_Gi41EhuUvqrUeS09AaEDUniQC3oL0c.mCC5r6mO5ffuXq7MRnb7eeDmiS303SSYxuWBxjET92o&dib_tag=se&qid=1792684120&s=beauty&sr=1-22&ufe=app_do%3Aamzn1.fos.de93fa6a-174c-4df7-be7c-5bc8e9c5a71b&linkCode=sl2&tag=liquidapromos01-20&linkId=e31d91589acd7f60a2aa321184abcfc7&ref_=as_li_ss_tl&ascsubtag=srctok-7eeb81e9b81d3aac&btn_type=ss&btn_ref=srctok-7eeb81e9b81d3aac",
+    "precio_actual": 239.0,
+    "precio_maximo": 239.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:bota tipo dr martens casual hombre workland 71300 vino": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Bota Tipo Dr Martens Casual Hombre Workland 71300 Vino",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BDwmynaEF43KTMduskufnAa7uRFBta%2Bg2NfF6fppDZbyBsWHbCWms4cZNDp5vm7RSiAQJW8xylV8AaB7K0wYnKl1txYpv5eqsSwCIxoG9sewDtFzhMtpRRd2kcff2%2FEEgg9ZzxUWe0wOZbo0VMbKBnba5uwKey8fGtIVBmyTGCEZWzxg88PS7Zb50e0sFKJh9dP9u8gWQL%2Bey52KT8T9vHvAXJqeTq0ae8CaWsA6x7q16ZrfVK7NEh7E8Z6KkOwoHxQ%3D",
+    "precio_actual": 1226.0,
+    "precio_maximo": 1226.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:bharara rome extradose homme 100ml edp spray caballero": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Bharara Rome Extradose Homme 100ml Edp Spray - Caballero",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx/lists/c387b8dc-fb34-4891-9e5d-c93c56532fd5?matt_tool=11154996&forceInApp=true",
+    "precio_actual": 1458.0,
+    "precio_maximo": 1458.0,
+    "ultima_actualizacion": "2026-10-22T16:09:25.660820+00:00",
     "precio_alertado": null
   }
 }
