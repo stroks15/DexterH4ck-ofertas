@@ -29245,8 +29245,8 @@
     "titulo": "ofertonesmexico",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BHKcIA2tmZm1dUlivATIsYJHCKWt%2FPc9d60zV84%2Bc10SSyqE6oiSTM2zJ%2BCYlAOS3wEFfeKbarrHorMjpSYIoME6QYN27vI3Vdb9eK0z4wESYzbRTUW3q58MV%2FDqLTl5C2cE3wQIfR4synFZrhS%2FyjzwA9x%2Bv6%2FcIYbZGb9vSqLM0%2BWbm900cA7JRpRMQ0oWMCuJgFE%3D",
-    "precio_actual": 635.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=especialista&matt_tool=35824865&forceInApp=true&ref=BJgX0knPJHgkPcvA%2FA0Q4%2BtUoEMQ2ji9pSSKVeXpocGOErXbuKZdzGLy%2FRYupqW32CeuhV3WgPcOg5veew3F8tcVGVrxm7x2x2PXBPa9amTQDm9dqDiRvgLmZGCPeWqO4IzJ%2FVQdZTfNZtE8zEGTtussHPB5GFcXRSlapqrIoUCewsOlMjN4SI3vIb1xpdwSl%2Fm2QQ%3D%3D",
+    "precio_actual": 132.0,
     "precio_maximo": 8000.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -29264,7 +29264,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-22T01:03:16.313315+00:00",
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09dm87qx6": {
@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BIybvQVE3Jk%2F0Lur%2Fr3UT%2BnyHbWZeR8xUsBdqmROuMUxrejXbcPuWWT2YbjD1JgJbJf8j42Hql5IER32O5g%2FYN34tqc4twZ2%2FDkBzTMzduY7ilSfRI0A0dPCV%2Bfnb235HPQB%2BLPwLIam129gBYvXhw07%2FxpnxOClLLI1LV3Nxni1vhTZvhUeNjqs%2FM6%2B9TeJ2kbn37A%3D",
-    "precio_actual": 1771.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BKgQGqsjTwX%2BE7m0gKoX3B3JU4BEmmFSdKQjV6cbSsmEzP20TS%2BILTXfyBD7Uj%2FjjWs61FXd57WhVA6m97wLLGDhFnOrXtoShsOxxxxi2ncApYQ2dsuy3O%2FiIBt8PkDEdpdgUn%2F5SsoeWLqSN4JGiPt6Lv%2BqP%2FLgM6sTqc%2FtJPUGAMjDTr0v3nVvpJfLMSBt1nANMJeBCskDtzm5I0PFOHtLyExYoLP%2Bpd73uIPjtZsG8KkZJ%2FQuuCCqTsMvcMAOqobgZg%3D%3D",
+    "precio_actual": 585.0,
     "precio_maximo": 31999.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-22T01:03:16.313315+00:00",
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -31620,8 +31620,8 @@
     "titulo": "lists",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos/lists",
-    "precio_actual": 800.0,
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists",
+    "precio_actual": 282.0,
     "precio_maximo": 30799.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -31639,7 +31639,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-21T15:29:27.178113+00:00",
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
     "precio_alertado": null
   },
   "chedraui|title:tomates cherry naturesweet glorys 467g": {
@@ -38516,10 +38516,10 @@
   "walmart|code:00750303494148": {
     "tienda": "Walmart MX",
     "titulo": "Pack de cerveza Victoria ambar con 24 botellas de 210 ml c/u",
-    "url": "https://www.walmart.com.mx/ip/Pack-de-cerveza-Victoria-ambar-con-24-botellas-de-210-ml-c-u/00750303494148?athAsset=eyJhdGhjcGlkIjoiMDA3NTAzMDM0OTQxNDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 279.0,
+    "url": "https://www.walmart.com.mx/ip/Pack-de-cerveza-Victoria-ambar-con-24-botellas-de-210-ml-c-u/00750303494148?athAsset=eyJhdGhjcGlkIjoiMDA3NTAzMDM0OTQxNDgiLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 312.0,
     "precio_maximo": 312.0,
-    "ultima_actualizacion": "2026-10-11T19:34:50.042126+00:00",
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
     "precio_alertado": null
   },
   "walmart|code:00750106419109": {
@@ -43752,13 +43752,13 @@
     "precio_alertado": 507.5
   },
   "amazon|code:b0bs937bnf": {
-    "tienda": "Amazon",
-    "titulo": "B0BS937BNF",
-    "url": "https://www.amazon.com.mx/dp/B0BS937BNF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 812.0,
+    "tienda": "Amazon MX",
+    "titulo": "Con notas de naranja y abedul, brinda una frescura cítrica que dura todo el día — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0BS937BNF?tag=ofertasperr05-20",
+    "precio_actual": 700.0,
     "precio_maximo": 2065.99,
-    "ultima_actualizacion": "2026-10-16T09:59:34.426689+00:00",
-    "precio_alertado": 812.0
+    "ultima_actualizacion": "2026-10-22T06:07:14.058635+00:00",
+    "precio_alertado": 700.0
   },
   "amazon|code:b07p8qpmqv": {
     "tienda": "Amazon",
@@ -45851,10 +45851,10 @@
   "walmart|code:00750111818337": {
     "tienda": "Walmart MX",
     "titulo": "Carriola con sistema de viaje Ethan Lifestyle by infanti",
-    "url": "https://www.walmart.com.mx/ip/Carriola-con-sistema-de-viaje-Ethan-Lifestyle-by-infanti/00750111818337?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMTE4MTgzMzciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L1300",
-    "precio_actual": 3306.0,
+    "url": "https://www.walmart.com.mx/ip/Carriola-con-sistema-de-viaje-Ethan-Lifestyle-by-infanti/00750111818337?athAsset=eyJhdGhjcGlkIjoiMDA3NTAxMTE4MTgzMzciLCJhdGhzdGlkIjoiQ1MwMjAiLCJhdGhhbmNpZCI6Ikl0ZW1DYXJvdXNlbCIsImF0aHJrIjowLjB9&athena=true&athbdg=L6000",
+    "precio_actual": 6611.0,
     "precio_maximo": 6611.0,
-    "ultima_actualizacion": "2026-10-18T05:52:17.754228+00:00",
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
     "precio_alertado": 3306.0
   },
   "walmart|code:00062235629935": {
@@ -49818,13 +49818,13 @@
     "precio_alertado": null
   },
   "amazon|code:b0bk56clfs": {
-    "tienda": "Amazon",
-    "titulo": "B0BK56CLFS",
-    "url": "https://www.amazon.com.mx/dp/B0BK56CLFS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "tienda": "Amazon MX",
+    "titulo": "Manija de aleación y latón reversible, privacidad instantánea en baño y dormitorio — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0BK56CLFS?tag=ofertasperr05-20",
     "precio_actual": 199.55,
-    "precio_maximo": 249.0,
-    "ultima_actualizacion": "2026-10-21T22:45:49.936063+00:00",
-    "precio_alertado": null
+    "precio_maximo": 499.0,
+    "ultima_actualizacion": "2026-10-22T06:07:17.768936+00:00",
+    "precio_alertado": 199.55
   },
   "amazon|code:b0d5c2j8qm": {
     "tienda": "Amazon",
@@ -50112,6 +50112,132 @@
     "precio_actual": 385.0,
     "precio_maximo": 469.0,
     "ultima_actualizacion": "2026-10-22T01:03:16.313315+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00006ibfa": {
+    "tienda": "Amazon MX",
+    "titulo": "Con 6 tomacorrientes UL listados, amplía tus puntos de energía sin complicaciones — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B00006IBFA?tag=ofertasperr05-20",
+    "precio_actual": 80.9,
+    "precio_maximo": 342.93,
+    "ultima_actualizacion": "2026-10-22T06:07:10.318756+00:00",
+    "precio_alertado": 80.9
+  },
+  "mercadolibre|title:carrito para mandado plegable portatil capacidad de carga 250 kg": {
+    "tienda": "Mercado Libre",
+    "titulo": "Carrito Para Mandado Plegable Portátil Capacidad de carga 250 kg",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BCpICHOodWfGndjkKaoX6L2%2B6QHRVccB9q2J9dEYlenM1TtXFkOK%2FnK4T3N6lYcE1QX8CERfGPoRmd8Fg98EEjNuc9DHgukj9UFW5g58vHMy6Of2ZpuTVlH%2FkvFUywKTqo15qdvi9rtZKMuhrCIerD6fOxD7Ce%2Bbp3VtNXsXUWCbmS5PbrCpEM0GZ5%2Fpa2AR4twrBdI%3D",
+    "precio_actual": 687.0,
+    "precio_maximo": 1553.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h22b382p": {
+    "tienda": "Amazon",
+    "titulo": "B0H22B382P",
+    "url": "https://www.amazon.com.mx/dp/B0H22B382P?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 400.0,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-22T06:07:21.460897+00:00",
+    "precio_alertado": 400.0
+  },
+  "amazon|code:b0cz9lh53b": {
+    "tienda": "Amazon",
+    "titulo": "B0CZ9LH53B",
+    "url": "https://www.amazon.com.mx/dp/B0CZ9LH53B?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 497.93,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-10-22T06:07:25.210328+00:00",
+    "precio_alertado": 497.93
+  },
+  "amazon|code:b0d8k7lz7z": {
+    "tienda": "Amazon",
+    "titulo": "B0D8K7LZ7Z",
+    "url": "https://www.amazon.com.mx/dp/B0D8K7LZ7Z?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 649.0,
+    "precio_maximo": 1297.1,
+    "ultima_actualizacion": "2026-10-22T06:07:28.911305+00:00",
+    "precio_alertado": 649.0
+  },
+  "amazon|code:b0d93t6dp4": {
+    "tienda": "Amazon",
+    "titulo": "B0D93T6DP4",
+    "url": "https://www.amazon.com.mx/dp/B0D93T6DP4?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 483.96,
+    "precio_maximo": 729.99,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f7xd3ggv": {
+    "tienda": "Amazon",
+    "titulo": "B0F7XD3GGV",
+    "url": "https://www.amazon.com.mx/dp/B0F7XD3GGV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 571.12,
+    "precio_maximo": 799.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08hh5hq2n": {
+    "tienda": "Amazon",
+    "titulo": "B08HH5HQ2N",
+    "url": "https://www.amazon.com.mx/dp/B08HH5HQ2N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 266.15,
+    "precio_maximo": 357.34,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fjmqqq1h": {
+    "tienda": "Amazon",
+    "titulo": "B0FJMQQQ1H",
+    "url": "https://www.amazon.com.mx/dp/B0FJMQQQ1H?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4829.0,
+    "precio_maximo": 6549.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:organizador de zapatos organizador closet zapato 3 en 1 zapatero mueble para zapatos perchero 8 ganchos barra para ropa 18 pares 6 niveles organizador rack estante cubierta plastic": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Organizador De Zapatos Organizador Closet Zapato 3 En 1 Zapatero Mueble Para Zapatos Perchero 8 Ganchos Barra Para Ropa 18 Pares 6 Niveles Organizador Rack Estante Cubierta Plastic",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BGayzbhwBeSd28nvW0pH0UjDtJPn3jxytVcVLzZWZR7UjpI7GqzkqHGesWZEp2PF2FdJ8MvKIPP6XZwAdsl0KbhVZTz4z9d61FHg4RsxK6oskL0ZuvBurGy9seMY5IazFe1xJVVmZ5O1lzXbYtcEcg2g3K7EQ5FykqZXq493fn82WrghtT1YDr41ulFB4a8syrhtJSn27boZpJDvX5U7ILykyozmGwODGA54jx0kX8n5hr42uvY2h6BC3drp78%2FSdtwPgA%3D%3D",
+    "precio_actual": 463.0,
+    "precio_maximo": 463.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d7yv617g": {
+    "tienda": "Amazon",
+    "titulo": "B0D7YV617G",
+    "url": "https://www.amazon.com.mx/MXCOCO-Halloween-lluminaci%C3%B3n-Impermeables-Decorativas/dp/B0D7YV617G?pd_rd_w=MuTqx&content-id=amzn1.sym.82522888-658c-4b32-abc4-2ecbc55fe821&pf_rd_p=82522888-658c-4b32-abc4-2ecbc55fe821&pf_rd_r=2F9R0J3PC12J1ZQC77AW&pd_rd_wg=n1pEy&pd_rd_r=28c2a59e-764c-4153-8ee6-54337399d15f&pd_rd_i=B0D7YV617G&psc=1&linkCode=sl2&tag=axfire-20&linkId=c7e34715e6d5c5351d91b1f773ede285&ref_=as_li_ss_tl&ascsubtag=srctok-17b7bdf22fd96e0b&btn_type=ss&btn_ref=srctok-17b7bdf22fd96e0b",
+    "precio_actual": 99.0,
+    "precio_maximo": 99.0,
+    "ultima_actualizacion": "2026-10-22T06:07:32.737528+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b08bjg3qwy": {
+    "tienda": "Amazon",
+    "titulo": "B08BJG3QWY",
+    "url": "https://www.amazon.com.mx/dp/B08BJG3QWY?linkCode=sl2&tag=axfire-20&linkId=b8ee94396f2831311a857d6efbaaa7e1&ref_=as_li_ss_tl&ascsubtag=srctok-7947c0e9d69adb1b&btn_type=ss&btn_ref=srctok-7947c0e9d69adb1b",
+    "precio_actual": 399.0,
+    "precio_maximo": 399.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01jg5ug1w": {
+    "tienda": "Amazon",
+    "titulo": "B01JG5UG1W",
+    "url": "https://www.amazon.com.mx/VERSACE-Dylan-Homme-Toilette-Sealed/dp/B01JG5UG1W?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BHQMFBX1GSX9&dib=eyJ2IjoiMSJ9.GqrXxfeYD6mHE3phygccbXFnxdm4rmuq77Y6AruTdTK4523xbqNJV-GPcK_15mBp-E5kmeIZABcJUSB05Xi2vpmyU-uWYc-f7LGZ0-Fhz-SrA9SBU07PgdcTky9UOZ7pSLo4HIPbsECd-AwpqCMT_a3kjFp-paHYijw_5dsdKF96MTaZZhDaBleA_85_OWUAFhp-Uksm3MeONNpUwi6Qnj1A1CUty1HTYqPsKZVw1XcSFex6Y_NQCvDZnqQwqWoNeq2vKkTcDRkA50Erw4Bn3mPnwQ8X5QX58xjNswZxKMQ.SP2dxsHc9yamWUu-h2WLgp4-vdSTU8GqIuwca8i-A6Y&dib_tag=se&keywords=VERSACE+Dylan+Blue+Pour+Homme+Eau+De+Toilette&qid=1792641543&sprefix=versace+dylan+blue+pour+homme+eau+de+toilette%2Caps%2C314&sr=8-5&ufe=app_do%3Aamzn1.fos.de93fa6a-174c-4df7-be7c-5bc8e9c5a71b&ascsubtag=srctok-6ff35636c39c9b9a&btn_type=ss&btn_ref=srctok-672cf1d80f690c4f&linkCode=sl2&tag=axfire-20&linkId=e4d34878f7a6dcd1217f4bae701d63ad&ref_=as_li_ss_tl",
+    "precio_actual": 1286.0,
+    "precio_maximo": 1286.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fjms7dj2": {
+    "tienda": "Amazon MX",
+    "titulo": "Caja dorada de 34 mm y acero de 8 pulgadas, resistente a 50 m, perfecto para actividades acuáticas sin sacrificar… — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B0FJMS7DJ2?tag=ofertasperr05-20",
+    "precio_actual": 3579.0,
+    "precio_maximo": 3579.0,
+    "ultima_actualizacion": "2026-10-22T06:07:09.638382+00:00",
     "precio_alertado": null
   }
 }
