@@ -51184,5 +51184,77 @@
     "precio_maximo": 3199.0,
     "ultima_actualizacion": "2026-10-23T06:39:26.647347+00:00",
     "precio_alertado": null
+  },
+  "liverpool|title:liverpool cementerium y seasons h hasta el 70": {
+    "tienda": "Liverpool",
+    "titulo": "Liverpool: CEMENTERIUM y SEASONS H hasta el 70%",
+    "url": "https://www.liverpool.com.mx/tienda/N-itKjJVOzlW3THTpNVAR0bg?s=cementerium",
+    "precio_actual": 155.0,
+    "precio_maximo": 155.0,
+    "ultima_actualizacion": "2026-10-23T12:10:43.212928+00:00",
+    "precio_alertado": null
+  },
+  "liverpool|title:liverpool bola de agua halloween 70": {
+    "tienda": "Liverpool",
+    "titulo": "Liverpool: Bola de agua Halloween -70%",
+    "url": "https://www.promodescuentos.com/ofertas/liverpool-bola-de-agua-halloween-1201141",
+    "precio_actual": 296.0,
+    "precio_maximo": 296.0,
+    "ultima_actualizacion": "2026-10-23T12:10:43.212928+00:00",
+    "precio_alertado": null
+  },
+  "bodega|code:00750665821632": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Smartphone Samsung Galaxy S25 Ultra 256 GB Azul Desbloqueado",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750665821632",
+    "precio_actual": 16500.0,
+    "precio_maximo": 32999.0,
+    "ultima_actualizacion": "2026-10-23T12:10:43.915210+00:00",
+    "precio_alertado": 16500.0
+  },
+  "bodega|code:00750305647212": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Extractor Pump in Style Hands-Free Medela con bolsas de 25pzs",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750305647212",
+    "precio_actual": 4547.0,
+    "precio_maximo": 9094.0,
+    "ultima_actualizacion": "2026-10-23T12:10:51.442943+00:00",
+    "precio_alertado": 4547.0
+  },
+  "walmart|code:00088796104607": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock",
+    "url": "https://www.walmart.com.mx/ip/Movil-Fisher-Price-Newborn-Toys-3-en-1-Suenos-de-Mariposa/00088796104607?athbdg=L1600&from=/search",
+    "precio_actual": 850.0,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-10-23T12:10:55.309505+00:00",
+    "precio_alertado": 850.0
+  },
+  "bodega|code:00750665821639": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Smartphone Samsung Galaxy S25 Ultra 512 GB Plata Desbloqueado",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750665821639",
+    "precio_actual": 18000.0,
+    "precio_maximo": 35999.0,
+    "ultima_actualizacion": "2026-10-23T12:10:47.612817+00:00",
+    "precio_alertado": 18000.0
+  },
+  "mercadolibre|title:arbol navidad pino navideno 1 60 m denso frondoso hogar": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Arbol Navidad Pino Navideño 1.60 M Denso Frondoso Hogar",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BJ2y6WYwpZXHGiVBfB0xRIgEnfzGqsqYSnD8NFbS%2BqnEt%2BRZFcXkLweEJ5zkf5h51Bn7QTnm9wW4DVCWZ%2BEvmo4RxmhpQ2vv5mCTFy%2Bx%2FaTuHeOvOokzMozq7eN%2F%2F8oTwgVIdLKguBXuGsl%2B8mMIzgzK8RjycCzwC%2BELl1Hdv9RllpnJd17RjIsN7Wnq5nWm8%2ByX9w%3D%3D",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-10-23T12:10:43.212928+00:00",
+    "precio_alertado": null
+  },
+  "bodega|code:00750617451555": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Botana para Perro Pedigree Dentastix Adulto Razas Pequeñas Res 15.8 gr",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750617451555",
+    "precio_actual": 8.5,
+    "precio_maximo": 8.5,
+    "ultima_actualizacion": "2026-10-23T12:10:43.212928+00:00",
+    "precio_alertado": null
   }
 }
