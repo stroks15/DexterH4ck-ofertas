@@ -64,11 +64,24 @@ def ejecutar_preflight(targets: dict[str, list[str]] | None = None) -> dict:
                 " (se omitirá en este ciclo)" if resumen["blocked"] else "",
             )
 
+    proxy_configurado = bool(os.environ.get("APPS_SCRIPT_PROXY_URL", "").strip())
+    if proxy_configurado:
+        # El preflight web directo no representa la disponibilidad del proxy de Apps Script.
+        # Si existe proxy configurado, ninguna tienda se bloquea preventivamente: el monitor
+        # decidirá por el resultado real del adaptador API/proxy y reportará sus errores.
+        for nombre, resumen in tiendas.items():
+            if resumen.get("blocked"):
+                resumen["direct_state"] = resumen.get("state")
+                resumen["state"] = "ok_via_proxy"
+                resumen["blocked"] = False
+                resumen["proxy_configured"] = True
+                logger.info("[%s] acceso directo no disponible; preflight permite la fuente vía Apps Script proxy.", nombre)
     bloqueadas = [t for t, r in tiendas.items() if r["blocked"]]
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "stores": tiendas,
         "blocked_stores": bloqueadas,
+        "apps_script_proxy_configured": proxy_configurado,
     }
 
 
