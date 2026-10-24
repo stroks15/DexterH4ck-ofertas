@@ -106,7 +106,19 @@ class ScraperApiManager:
         if not self._reserve_credit():
             return session.get(url, timeout=timeout, **kwargs)
         target = self._target_url(url, kwargs.pop("params", None))
-        return session.get(endpoint, params={"api_key": api_key, "url": target}, timeout=timeout, **kwargs)
+        try:
+            return session.get(
+                endpoint,
+                params={"api_key": api_key, "url": target},
+                timeout=timeout,
+                **kwargs,
+            )
+        except requests.RequestException as exc:
+            # La URL del proveedor puede contener la clave en query params;
+            # no propagar el texto original para evitar filtrarla en logs.
+            raise requests.RequestException(
+                f"Fallo de transporte del proxy ({type(exc).__name__}); URL redactada."
+            ) from None
 
 
 class BaseScraper(ABC):
