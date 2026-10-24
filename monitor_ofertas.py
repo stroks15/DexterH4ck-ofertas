@@ -88,19 +88,39 @@ def _sanear_historial(historial: dict) -> dict:
     return historial
 
 
+_HISTORIAL_LOCK = threading.RLock()
+
+
 def guardar_historial(historial):
-    if len(historial) > MAX_HISTORIAL:
-        historial = dict(
-            sorted(
-                historial.items(),
-                key=lambda par: (par[1].get("ultima_actualizacion", "") if isinstance(par[1], dict) else ""),
-                reverse=True,
-            )[:MAX_HISTORIAL]
-        )
-    temporal = f"{HISTORIAL_FILE}.tmp"
-    with open(temporal, "w", encoding="utf-8") as archivo:
-        json.dump(historial, archivo, ensure_ascii=False, indent=2)
-    os.replace(temporal, HISTORIAL_FILE)
+    """Escritura atómica del historial local, sincronizada entre hilos del proceso."""
+    with _HISTORIAL_LOCK:
+        datos = historial
+        if len(datos) > MAX_HISTORIAL:
+            datos = dict(
+                sorted(
+                    datos.items(),
+                    key=lambda par: (
+                        par[1].get("ultima_actualizacion", "")
+                        if isinstance(par[1], dict)
+                        else ""
+                    ),
+                    reverse=True,
+                )[:MAX_HISTORIAL]
+            )
+        temporal = f"{HISTORIAL_FILE}.tmp"
+        try:
+            with open(temporal, "w", encoding="utf-8") as archivo:
+                json.dump(datos, archivo, ensure_ascii=False, indent=2)
+                archivo.flush()
+                os.fsync(archivo.fileno())
+            os.replace(temporal, HISTORIAL_FILE)
+        except OSError:
+            try:
+                if os.path.exists(temporal):
+                    os.remove(temporal)
+            except OSError:
+                pass
+            raise
 
 
 def limpiar_titulo_producto(titulo, url=""):
@@ -184,44 +204,52 @@ def es_enlace_valido_sin_error(url: str) -> bool:
 
 
 def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
-    """
-    Regla estricta del 95% al 99%: Se mandan una única vez si no existen
-    en el historial y el link del producto es completamente válido.
-    """
-    precio_actual = float(item.get("precio_actual") or item.get("price") or 0)
-    precio_anterior = item.get("precio_anterior")
-    descuento = item.get("descuento", 0)
+    """Valida bombas del 95–99 % usando exclusivamente history_key(item)."""
+    try:
+        precio_actual = _num(item.get("precio_actual") or item.get("price"))
+        precio_anterior = _num(item.get("precio_anterior"))
+        descuento = _num(item.get("descuento"))
 
-    if not descuento and precio_anterior and float(precio_anterior) > precio_actual:
-        descuento = round((1 - precio_actual / float(precio_anterior)) * 100)
+        if not descuento and precio_actual > 0 and precio_anterior > precio_actual:
+            descuento = round((1 - precio_actual / precio_anterior) * 100)
 
-    if 95 <= descuento <= 99:
-        contexto_producto = canonical_product_identifier(item.get("tienda", ""), item.get("url", ""))
-        identificador_producto = (
-            item.get("id") or contexto_producto.get("product_id") or contexto_producto.get("url") or item.get("url", "")
-        )
-        tienda_canonica = canonical_store(item.get("tienda", ""))
-        clave_historial = f"{tienda_canonica}_{identificador_producto}"
+        if not 95 <= descuento <= 99:
+            return True
 
-        entrada_actual = historial_local.get(history_key(item))
-        ya_alertada = isinstance(entrada_actual, dict) and entrada_actual.get("precio_alertado") is not None
-        if clave_historial in historial_local or ya_alertada:
-            logger.info(f"[BOMBA OMITIDA] Ya fue enviada previamente: {clave_historial}")
+        clave = history_key(item)
+        if not isinstance(clave, str) or not clave.strip():
+            logger.warning("[BOMBA RECHAZADA] history_key(item) vacío.")
             return False
+
+        if clave in historial_local:
+            entrada = historial_local.get(clave)
+            if not isinstance(entrada, dict) or entrada.get("precio_alertado") is not None:
+                logger.info("[BOMBA OMITIDA] Ya existe en historial local: %s", clave)
+                return False
 
         if not es_enlace_valido_sin_error(item.get("url", "")):
-            logger.warning(f"[BOMBA RECHAZADA] Enlace con errores: {item.get('url')}")
+            logger.warning("[BOMBA RECHAZADA] Enlace inválido: %s", item.get("url"))
             return False
 
-        # Historial centralizado (opcional): sobrevive a rebases y ejecuciones efímeras de CI.
-        # Si Supabase no está configurado o falla, el historial local de arriba sigue mandando.
-        if supabase_history.ya_enviada(history_key(item)) is True:
-            logger.info(f"[BOMBA OMITIDA] Ya registrada en Supabase: {clave_historial}")
+        central = supabase_history.ya_enviada(clave)
+        if central is True:
+            logger.info("[BOMBA OMITIDA] Ya registrada en Supabase: %s", clave)
             return False
+        if central is None and supabase_history.habilitado():
+            logger.warning(
+                "[BOMBA] Supabase no pudo confirmar la unicidad; "
+                "se utiliza el historial local. llave=%s",
+                clave,
+            )
 
-        logger.info(f"[💣 BOMBA EMITIDA] Nueva liquidación extrema única del {descuento}%")
+        logger.info("[BOMBA VALIDADA] Descuento=%s%% llave=%s", descuento, clave)
         return True
-    return True
+    except (TypeError, ValueError, ZeroDivisionError) as exc:
+        logger.warning("[BOMBA RECHAZADA] Datos inválidos (%s).", type(exc).__name__)
+        return False
+    except Exception:
+        logger.exception("[BOMBA RECHAZADA] Error inesperado de validación.")
+        return False
 
 
 def _candidato_de_tienda_objetivo(item):
@@ -622,40 +650,53 @@ def definir_fuentes(sesion: requests.Session | None = None) -> list:
     return fuentes
 
 
-def _ejecutar_fuente(fuente: Fuente, salida: dict, semaforo: threading.Semaphore) -> None:
+def _ejecutar_fuente(
+    fuente: Fuente,
+    salida: dict,
+    semaforo: threading.Semaphore,
+    salida_lock: threading.Lock,
+) -> None:
     inicio = time.monotonic()
     registro = {"fuente": fuente.nombre, "estado": "error", "candidatos": 0, "segundos": 0.0}
-    with semaforo:
-        _TLS.http = []
-        try:
-            items = fuente.funcion() or []
-            if not isinstance(items, list):
-                registro.update(estado="invalid_response", error=f"tipo inesperado: {type(items).__name__}")
-            else:
-                fuente.resultado = [i for i in items if isinstance(i, dict)]
-                registro["candidatos"] = len(fuente.resultado)
-                estado = {}
-                if fuente.estado_fn:
-                    try:
-                        estado = fuente.estado_fn() or {}
-                    except Exception as exc:  # leer el estado jamás tumba la fuente
-                        estado = {}
-                        logger.debug("estado_fn de %s falló: %s", fuente.nombre, exc)
-                declarado = str(estado.get("state") or "")
-                if declarado and declarado not in ("not_run", "ok"):
-                    registro["estado"] = declarado
-                    if estado.get("http"):
-                        registro["http"] = estado["http"]
-                elif fuente.resultado:
-                    registro["estado"] = "ok"
+    try:
+        with semaforo:
+            _TLS.http = []
+            try:
+                items = fuente.funcion() or []
+                if not isinstance(items, list):
+                    registro.update(estado="invalid_response", error=f"tipo inesperado: {type(items).__name__}")
                 else:
-                    # Sin resultados: ¿realmente vacía o todas sus peticiones fueron rechazadas?
-                    registro["estado"] = estado_desde_http(_TLS.http) or "empty"
-        except Exception as exc:  # aislamiento: un fallo no afecta a otras fuentes
-            registro.update(estado="error", error=f"{type(exc).__name__}: {exc}"[:300])
-            logger.error("[%s] fallo aislado: %s", fuente.nombre, registro["error"])
+                    resultados = [i for i in items if isinstance(i, dict)]
+                    registro["candidatos"] = len(resultados)
+                    estado = {}
+                    if fuente.estado_fn:
+                        try:
+                            estado = fuente.estado_fn() or {}
+                    except Exception as exc:
+                        logger.debug("estado_fn de %s falló: %s", fuente.nombre, type(exc).__name__)
+                    declarado = str(estado.get("state") or "")
+                    if declarado and declarado not in ("not_run", "ok"):
+                        registro["estado"] = declarado
+                        if estado.get("http") is not None:
+                            registro["http"] = estado["http"]
+                    elif resultados:
+                        registro["estado"] = "ok"
+                    else:
+                        registro["estado"] = estado_desde_http(getattr(_TLS, "http", [])) or "empty"
+                    fuente.resultado = resultados
+            except Exception as exc:
+                registro.update(estado="error", error=f"{type(exc).__name__}: {exc}"[:300])
+                logger.error("[%s] fallo aislado: %s", fuente.nombre, registro["error"])
+    except Exception as exc:
+        registro.update(estado="error", error=f"{type(exc).__name__}: {exc}"[:300])
+
     registro["segundos"] = round(time.monotonic() - inicio, 1)
-    salida[fuente.nombre] = registro
+    with salida_lock:
+        # Timeout es un estado terminal del ciclo; un worker tardío no lo reemplaza.
+        if salida.get(fuente.nombre, {}).get("estado") == "timeout":
+            logger.debug("[%s] terminó tarde; se conserva timeout.", fuente.nombre)
+            return
+        salida[fuente.nombre] = registro
 
 
 def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
@@ -666,6 +707,7 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     fuentes = definir_fuentes()
     bloqueadas = _tiendas_bloqueadas()
     salida: dict = {}
+    salida_lock = threading.Lock()
     hilos: list[tuple[Fuente, threading.Thread]] = []
     semaforo = threading.Semaphore(FUENTES_CONCURRENCIA)
 
@@ -680,7 +722,10 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
             logger.warning("[%s] omitida: la tienda no pasó el preflight (las demás continúan).", fuente.nombre)
             continue
         hilo = threading.Thread(
-            target=_ejecutar_fuente, args=(fuente, salida, semaforo), name=f"src-{fuente.nombre}", daemon=True
+            target=_ejecutar_fuente,
+            args=(fuente, salida, semaforo, salida_lock),
+            name=f"src-{fuente.nombre}",
+            daemon=True,
         )
         hilo.start()
         hilos.append((fuente, hilo))
@@ -688,16 +733,21 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     limite = time.monotonic() + FUENTES_TIMEOUT_TOTAL
     for fuente, hilo in hilos:
         hilo.join(max(0.0, limite - time.monotonic()))
-        if hilo.is_alive():
-            salida.setdefault(
-                fuente.nombre,
-                {"fuente": fuente.nombre, "estado": "timeout", "candidatos": 0, "segundos": FUENTES_TIMEOUT_TOTAL},
-            )
-            logger.error("[%s] timeout: se abandona esta fuente y el monitor continúa.", fuente.nombre)
+        with salida_lock:
+            if hilo.is_alive():
+                salida[fuente.nombre] = {
+                    "fuente": fuente.nombre,
+                    "estado": "timeout",
+                    "candidatos": 0,
+                    "segundos": round(FUENTES_TIMEOUT_TOTAL, 1),
+                }
+                logger.error("[%s] timeout; se excluye esta fuente del ciclo.", fuente.nombre)
 
     candidatos: list = []
     for fuente in fuentes:
-        if salida.get(fuente.nombre, {}).get("estado") != "timeout":
+        with salida_lock:
+            estado_final = salida.get(fuente.nombre, {}).get("estado")
+        if estado_final != "timeout":
             candidatos.extend(fuente.resultado)
 
     ULTIMO_REPORTE_FUENTES = {
@@ -824,31 +874,84 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
 
 
 def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
+    """Envía alertas y persiste las bombas confirmadas en caliente."""
     enviadas = fallidas = 0
+    limite = alertas[:MAX_ALERTAS_POR_CICLO]
     sticker = os.environ.get("TELEGRAM_STICKER_LIQUIDACION", "").strip() or None
-    for alerta in alertas[:MAX_ALERTAS_POR_CICLO]:
+
+    for indice, alerta in enumerate(limite):
+        item = alerta["item"]
+        descuento = _num(alerta.get("descuento"))
+        es_bomba_prioritaria = 95 <= descuento <= 99
+        clave = history_key(item)
+        if not isinstance(clave, str) or not clave.strip():
+            logger.error("[ALERTA OMITIDA] history_key(item) vacío.")
+            fallidas += 1
+            continue
+
         try:
             ok = enviar_telegram(
                 formatear_alerta(alerta),
-                imagen=alerta["item"].get("imagen"),
-                sticker_id=sticker if alerta["bomba"] else None,
+                imagen=item.get("imagen"),
+                sticker_id=sticker if alerta.get("bomba") else None,
             )
         except RuntimeError as exc:
             logger.error("%s", exc)
-            return enviadas, fallidas + len(alertas[:MAX_ALERTAS_POR_CICLO]) - enviadas - fallidas
-        if ok:
-            enviadas += 1
-            entrada = historial.get(alerta["clave"])
-            if isinstance(entrada, dict):
-                entrada["precio_alertado"] = alerta["actual"]
-                entrada["ultima_actualizacion"] = datetime.now(timezone.utc).isoformat()
-            if 95 <= (alerta.get("descuento") or 0) <= 99:
-                supabase_history.registrar_envio(history_key(alerta["item"]), alerta["item"], alerta["descuento"])
-        else:
+            fallidas += len(limite) - indice
+            break
+        except Exception as exc:
+            logger.exception("Error inesperado enviando alerta (%s).", type(exc).__name__)
             fallidas += 1
-    pendientes = max(0, len(alertas) - MAX_ALERTAS_POR_CICLO)
+            continue
+
+        if not ok:
+            fallidas += 1
+            continue
+
+        enviadas += 1
+        ahora = datetime.now(timezone.utc).isoformat()
+        entrada = historial.get(clave)
+        if not isinstance(entrada, dict):
+            entrada = {}
+            historial[clave] = entrada
+        entrada.update({
+            "tienda": item.get("tienda"),
+            "titulo": item.get("titulo"),
+            "url": item.get("url"),
+            "precio_actual": alerta.get("actual"),
+            "precio_alertado": alerta.get("actual"),
+            "ultima_actualizacion": ahora,
+        })
+
+        if es_bomba_prioritaria:
+            # Persistencia local inmediata tras la confirmación de Telegram.
+            try:
+                guardar_historial(historial)
+            except OSError as exc:
+                logger.error(
+                    "[BOMBA] Telegram confirmó el envío, pero falló el JSON local (%s).",
+                    type(exc).__name__,
+                )
+
+            # Misma llave canónica que la validación de unicidad.
+            try:
+                registrada = supabase_history.registrar_envio(
+                    clave, item, int(round(descuento))
+                )
+                if not registrada:
+                    logger.error(
+                        "[BOMBA] Enviada a Telegram, pero Supabase no confirmó el registro. llave=%s",
+                        clave,
+                    )
+            except Exception as exc:
+                logger.exception(
+                    "[BOMBA] Error guardando el registro central (%s).",
+                    type(exc).__name__,
+                )
+
+    pendientes = max(0, len(alertas) - len(limite))
     if pendientes:
-        logger.info("%d alertas quedan para el siguiente ciclo (límite %d).", pendientes, MAX_ALERTAS_POR_CICLO)
+        logger.info("%d alertas quedan pendientes; límite=%d.", pendientes, MAX_ALERTAS_POR_CICLO)
     return enviadas, fallidas
 
 
@@ -871,6 +974,11 @@ def main() -> int:
         return 1
 
     historial = cargar_historial()
+    try:
+        from core.scraper_base import ScraperApiManager
+        ScraperApiManager().reset_cycle()
+    except Exception as exc:
+        logger.warning("No se pudo reiniciar el contador de proxy (%s).", type(exc).__name__)
     candidatos = ejecutar_orquestacion_paralela()
     reporte = ULTIMO_REPORTE_FUENTES
     try:
