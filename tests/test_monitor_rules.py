@@ -1,7 +1,10 @@
 import unittest
+from unittest.mock import patch
 
+from core.offer_identity import history_key
+from core import supabase_history
 from core.liquidation_engine import calculate_discount, score_product
-from monitor_ofertas import MIN_DESCUENTO, MAX_DESCUENTO, calcular_datos
+from monitor_ofertas import MIN_DESCUENTO, MAX_DESCUENTO, calcular_datos, validar_y_filtrar_bomba
 
 
 class TestMonitorRules(unittest.TestCase):
@@ -24,6 +27,27 @@ class TestMonitorRules(unittest.TestCase):
         )
         self.assertEqual(reference, 1000)
         self.assertEqual(discount, 90)
+
+
+    def test_bomba_usa_exactamente_history_key(self):
+        item = {
+            "tienda": "Walmart MX",
+            "titulo": "Televisión de prueba",
+            "url": "https://www.walmart.com.mx/ip/television/123456",
+            "precio_actual": 4,
+            "precio_anterior": 100,
+            "descuento": 96,
+        }
+        clave = history_key(item)
+        with patch.object(supabase_history, "ya_enviada", return_value=False):
+            # Una llave heredada diferente no debe bloquear por coincidencia accidental.
+            self.assertTrue(
+                validar_y_filtrar_bomba(item, {"walmart_123456": {"precio_alertado": 4}})
+            )
+            # La llave canónica sí bloquea una oferta ya alertada.
+            self.assertFalse(
+                validar_y_filtrar_bomba(item, {clave: {"precio_alertado": 4}})
+            )
 
 
 if __name__ == "__main__":
