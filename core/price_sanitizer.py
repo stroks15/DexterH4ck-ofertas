@@ -126,7 +126,7 @@ def sanear_par_precios(actual: Any, anterior: Any, texto: Any = "") -> tuple[flo
     if previo is not None and previo <= precio:
         return precio, None, "anterior_no_mayor"
     if previo is not None and coincide_con_medida(previo, texto):
-        # Solo es dañino si fabricaría un descuento alto; con ese ratio no es una rebaja real.
-        if (1 - precio / previo) * 100 >= 50:
-            return precio, None, "anterior_igual_a_gramaje"
+        # Cualquier coincidencia con una magnitud del título invalida la referencia,
+        # independientemente del descuento calculado. Nunca convertir un gramaje en precio.
+        return precio, None, "anterior_igual_a_gramaje"
     return precio, previo, ""
