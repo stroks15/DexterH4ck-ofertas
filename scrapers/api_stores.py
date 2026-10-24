@@ -192,7 +192,7 @@ class VtexCatalogAdapter(BaseScraper):
         return self.endpoint.rstrip("/") + "/api/catalog_system/pub/products/search"
 
     def _queries(self) -> list[str]:
-        prefix = self.endpoint_env.removesuffix("_VTEX_ENDPOINT")
+        prefix = self.endpoint_env.removesuffix("_ENDPOINT")
         raw = os.environ.get(f"{prefix}_QUERIES", "").strip()
         return [q.strip() for q in raw.split("|") if q.strip()] if raw else list(TERMINOS_LIQUIDACION[:3])
 
@@ -266,7 +266,7 @@ class VtexCatalogAdapter(BaseScraper):
             return []
         prefix = self.endpoint_env.removesuffix("_VTEX_ENDPOINT")
         try:
-            pages = max(1, min(5, int(os.environ.get(f"{prefix}_VTEX_PAGES", "1"))))
+            pages = max(1, min(5, int(os.environ.get(f"{prefix}_PAGES", "1"))))
         except (TypeError, ValueError):
             pages = 1
 
