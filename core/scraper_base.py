@@ -11,6 +11,10 @@ from abc import ABC, abstractmethod
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import Any, Iterable
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+import logging
+import os
+import threading
 import time
 
 import requests
@@ -28,6 +32,81 @@ class ScraperContext:
     max_retries: int = 2
     max_workers: int = 8
     headers: dict[str, str] = field(default_factory=lambda: dict(DEFAULT_HEADERS))
+
+
+
+logger = logging.getLogger("DexterH4ck.ScraperApiManager")
+
+
+class ScraperApiManager:
+    """Singleton con límite de créditos de proxy por ciclo de proceso."""
+
+    _instance = None
+    _instance_lock = threading.Lock()
+
+    def __new__(cls):
+        with cls._instance_lock:
+            if cls._instance is None:
+                cls._instance = super().__new__(cls)
+                cls._instance._initialized = False
+        return cls._instance
+
+    def __init__(self):
+        if self._initialized:
+            return
+        with self._instance_lock:
+            if self._initialized:
+                return
+            self._state_lock = threading.Lock()
+            self._credits_used = 0
+            self._credit_limit = self._read_limit()
+            self._warned_limit = False
+            self._initialized = True
+
+    @staticmethod
+    def _read_limit() -> int:
+        try:
+            return max(0, int(os.environ.get("MAX_PROXY_CREDITS_PER_CYCLE", "100")))
+        except (TypeError, ValueError):
+            logger.warning("Límite de créditos inválido; se usa 100.")
+            return 100
+
+    def reset_cycle(self) -> None:
+        with self._state_lock:
+            self._credits_used = 0
+            self._credit_limit = self._read_limit()
+            self._warned_limit = False
+
+    def _reserve_credit(self) -> bool:
+        with self._state_lock:
+            if self._credits_used >= self._credit_limit:
+                if not self._warned_limit:
+                    logger.warning("Cuota de proxy agotada (%d/%d); se usará HTTP directo.", self._credits_used, self._credit_limit)
+                    self._warned_limit = True
+                return False
+            self._credits_used += 1
+            return True
+
+    @staticmethod
+    def _target_url(url: str, params: Any) -> str:
+        if not params:
+            return url
+        parts = urlsplit(url)
+        current = parse_qsl(parts.query, keep_blank_values=True)
+        extra = list(params.items()) if isinstance(params, dict) else list(params)
+        return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(current + extra, doseq=True), parts.fragment))
+
+    def request(self, session: requests.Session, url: str, **kwargs: Any) -> requests.Response:
+        enabled = os.environ.get("SCRAPER_API_ENABLED", "true").strip().lower() in {"1", "true", "yes", "si"}
+        api_key = os.environ.get("SCRAPER_API_KEY", "").strip()
+        endpoint = os.environ.get("SCRAPER_API_ENDPOINT", "https://api.scraperapi.com").strip()
+        timeout = kwargs.pop("timeout", 10.0)
+        if not enabled or not api_key or not endpoint:
+            return session.get(url, timeout=timeout, **kwargs)
+        if not self._reserve_credit():
+            return session.get(url, timeout=timeout, **kwargs)
+        target = self._target_url(url, kwargs.pop("params", None))
+        return session.get(endpoint, params={"api_key": api_key, "url": target}, timeout=timeout, **kwargs)
 
 
 class BaseScraper(ABC):
@@ -55,7 +134,7 @@ class BaseScraper(ABC):
             # conexiones lentas de catálogos públicos se queden colgadas.
             timeout = min(base_timeout * (1.35**attempt), 45.0)
             try:
-                response = self.session.get(url, timeout=timeout, **kwargs)
+                response = ScraperApiManager().request(self.session, url, timeout=timeout, **kwargs)
 
                 # 401/403/412/451 no se "combaten" con más tráfico: normalmente
                 # significan política de acceso o contenido condicionado.
