@@ -70,7 +70,7 @@ def ejecutar_preflight(targets: dict[str, list[str]] | None = None) -> dict:
         # Si existe proxy configurado, ninguna tienda se bloquea preventivamente: el monitor
         # decidirá por el resultado real del adaptador API/proxy y reportará sus errores.
         for nombre, resumen in tiendas.items():
-            if resumen.get("blocked"):
+            if resumen.get("state") != "ok":
                 resumen["direct_state"] = resumen.get("state")
                 resumen["state"] = "ok_via_proxy"
                 resumen["blocked"] = False
