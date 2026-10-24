@@ -31,6 +31,8 @@ class ParsePriceTests(unittest.TestCase):
         self.assertFalse(coincide_con_medida(55, "Pan 567 g"))
 
     def test_sanear_par_descarta_referencia_gramaje(self):
+        # Incluso si no fabricaría un descuento >=50%, el gramaje nunca es precio.
+        self.assertEqual(sanear_par_precios(400, 500, "Cereal 500 g"), (400.0, None, "anterior_igual_a_gramaje"))
         actual, anterior, motivo = sanear_par_precios(55, 567, "Pan blanco Bimbo 567 g")
         self.assertEqual((actual, anterior, motivo), (55.0, None, "anterior_igual_a_gramaje"))
         actual, anterior, motivo = sanear_par_precios(55, "567g", "Pan")

@@ -11,8 +11,9 @@ endpoints internos y no se intenta evadir CAPTCHA/WAF.
 from __future__ import annotations
 
 import logging
+import os
 from typing import Any
-from urllib.parse import quote_plus
+from urllib.parse import quote_plus, urljoin, urlparse
 
 import requests
 
@@ -169,6 +170,187 @@ class MercadoLibreAdapter(BaseScraper):
         return rows
 
 
+class VtexCatalogAdapter(BaseScraper):
+    """Adaptador del catálogo público de VTEX, habilitado solo con endpoint explícito."""
+
+    store = "VTEX"
+    endpoint_env = ""
+    home = ""
+    PAGE_SIZE = 50
+
+    def __init__(self, context: ScraperContext | None = None, endpoint: str | None = None):
+        super().__init__(context)
+        self.endpoint = str(endpoint if endpoint is not None else os.environ.get(self.endpoint_env, "")).strip()
+        self.last_status: dict[str, Any] = {"state": "not_run"}
+
+    def _search_url(self) -> str:
+        parsed = urlparse(self.endpoint)
+        if parsed.scheme not in ("http", "https") or not parsed.netloc:
+            return ""
+        if "/api/catalog_system/pub/products/search" in parsed.path:
+            return self.endpoint
+        return self.endpoint.rstrip("/") + "/api/catalog_system/pub/products/search"
+
+    def _queries(self) -> list[str]:
+        prefix = self.endpoint_env.removesuffix("_ENDPOINT")
+        raw = os.environ.get(f"{prefix}_QUERIES", "").strip()
+        return [q.strip() for q in raw.split("|") if q.strip()] if raw else list(TERMINOS_LIQUIDACION[:3])
+
+    @staticmethod
+    def _positive_price(value: Any) -> float | None:
+        try:
+            price = float(value)
+        except (TypeError, ValueError):
+            return None
+        return price if price > 0 else None
+
+    def _prices(self, product: dict) -> tuple[float | None, float | None]:
+        best = None
+        for sku in product.get("items") or []:
+            if not isinstance(sku, dict):
+                continue
+            for seller in sku.get("sellers") or []:
+                if not isinstance(seller, dict):
+                    continue
+                offer = seller.get("commertialOffer") or {}
+                if not isinstance(offer, dict):
+                    continue
+                try:
+                    available = float(offer.get("AvailableQuantity") or 0)
+                except (TypeError, ValueError):
+                    available = 0
+                if available <= 0:
+                    continue
+                price = self._positive_price(offer.get("Price"))
+                if price is None:
+                    continue
+                reference = None
+                for field in ("ListPrice", "PriceWithoutDiscount"):
+                    candidate = self._positive_price(offer.get(field))
+                    if candidate is not None and candidate > price:
+                        reference = candidate
+                        break
+                discount = (1 - price / reference) if reference else 0
+                ranking = (discount, -price)
+                if best is None or ranking > best[0]:
+                    best = (ranking, price, reference)
+        return (best[1], best[2]) if best else (None, None)
+
+    def _normalize_product(self, product: dict) -> dict | None:
+        price, reference = self._prices(product)
+        if price is None:
+            return None
+        name = str(product.get("productName") or product.get("productTitle") or "").strip()
+        link = str(product.get("link") or "").strip()
+        if not name or not link:
+            return None
+        url = urljoin(self.home.rstrip("/") + "/", link)
+        row = self.normalize(
+            title=name,
+            url=url,
+            price=price,
+            previous_price=reference,
+            id=str(product.get("productId") or product.get("productReference") or "") or None,
+            origen_link="vtex_catalogo_publico",
+        )
+        row["descuento"] = round((1 - price / reference) * 100) if reference and reference > price else 0
+        row["tipo_fuente"] = "ONLINE"
+        return row
+
+    def discover(self) -> list[dict[str, Any]]:
+        if not self.endpoint:
+            self.last_status = {"state": "not_configured", "detail": f"{self.endpoint_env} no configurado"}
+            return []
+        endpoint = self._search_url()
+        if not endpoint:
+            self.last_status = {"state": "invalid_endpoint", "count": 0}
+            return []
+        prefix = self.endpoint_env.removesuffix("_VTEX_ENDPOINT")
+        try:
+            pages = max(1, min(5, int(os.environ.get(f"{prefix}_PAGES", "1"))))
+        except (TypeError, ValueError):
+            pages = 1
+
+        products: dict[str, dict] = {}
+        errors: list[str] = []
+        for query in self._queries():
+            for page in range(pages):
+                try:
+                    response = self.get(
+                        endpoint,
+                        params={"ft": query, "_from": page * self.PAGE_SIZE, "_to": (page + 1) * self.PAGE_SIZE - 1},
+                    )
+                except requests.Timeout:
+                    errors.append("timeout")
+                    break
+                except requests.RequestException as exc:
+                    errors.append("network_error")
+                    logger.warning("[%s] VTEX error de red (%s).", self.store, type(exc).__name__)
+                    break
+
+                state = classify_status(response.status_code)
+                if state != "ok":
+                    errors.append(state)
+                    logger.warning("[%s] VTEX HTTP %s (%s).", self.store, response.status_code, state)
+                    if response.status_code in (401, 403, 404, 429, 451):
+                        break
+                    continue
+                try:
+                    payload = response.json()
+                except ValueError:
+                    errors.append("invalid_response")
+                    break
+                if not isinstance(payload, list):
+                    errors.append("invalid_response")
+                    break
+                for product in payload:
+                    if isinstance(product, dict):
+                        key = str(product.get("productId") or product.get("link") or product.get("productName") or "")
+                        if key:
+                            products.setdefault(key, product)
+                if len(payload) < self.PAGE_SIZE:
+                    break
+
+        rows = []
+        for product in products.values():
+            try:
+                row = self._normalize_product(product)
+                if row:
+                    rows.append(row)
+            except (TypeError, ValueError, KeyError) as exc:
+                logger.debug("[%s] Producto VTEX omitido (%s).", self.store, type(exc).__name__)
+
+        if rows:
+            self.last_status = {"state": "ok", "count": len(rows)}
+        elif errors:
+            self.last_status = {"state": errors[-1], "count": 0}
+        else:
+            self.last_status = {"state": "empty", "count": 0}
+        return rows
+
+
+class CoppelVtexAdapter(VtexCatalogAdapter):
+    store = "Coppel"
+    endpoint_env = "COPPEL_VTEX_ENDPOINT"
+    home = "https://www.coppel.com"
+
+
+class LiverpoolVtexAdapter(VtexCatalogAdapter):
+    store = "Liverpool"
+    endpoint_env = "LIVERPOOL_API_ENDPOINT"
+    home = "https://www.liverpool.com.mx"
+
+    def __init__(self, context: ScraperContext | None = None, endpoint: str | None = None):
+        fallback = os.environ.get("LIVERPOOL_VTEX_ENDPOINT", "").strip()
+        super().__init__(context, endpoint=endpoint or os.environ.get(self.endpoint_env, "").strip() or fallback)
+
+
+class SuburbiaVtexAdapter(VtexCatalogAdapter):
+    store = "Suburbia"
+    endpoint_env = "SUBURBIA_API_ENDPOINT"
+    home = "https://www.suburbia.com.mx"
+
+
 def _adapter(name: str, endpoint_name: str, home: str):
     return type(
         f"{name}Adapter",
@@ -193,16 +375,31 @@ ChedrauiJsonAdapter = _adapter("Chedraui", "CHEDRAUI_VTEX", "https://www.chedrau
 def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScraper]:
     """Un adaptador independiente por cada tienda objetivo."""
     chedraui = VtexStoresScraper(context) if VtexStoresScraper else ChedrauiJsonAdapter(context)
+    liverpool = (
+        LiverpoolVtexAdapter(context)
+        if os.environ.get("LIVERPOOL_API_ENDPOINT", "").strip() or os.environ.get("LIVERPOOL_VTEX_ENDPOINT", "").strip()
+        else LiverpoolAdapter(context)
+    )
+    coppel = (
+        CoppelVtexAdapter(context)
+        if os.environ.get("COPPEL_VTEX_ENDPOINT", "").strip()
+        else CoppelAdapter(context)
+    )
+    suburbia = (
+        SuburbiaVtexAdapter(context)
+        if os.environ.get("SUBURBIA_API_ENDPOINT", "").strip()
+        else SuburbiaAdapter(context)
+    )
     return [
         WalmartAdapter(context),
         BodegaAdapter(context),
         chedraui,
         SorianaAdapter(context),
-        LiverpoolAdapter(context),
+        liverpool,
         AmazonAdapter(context),
         MercadoLibreAdapter(context),
-        CoppelAdapter(context),
-        SuburbiaAdapter(context),
+        coppel,
+        suburbia,
         OferstockAdapter(context),
     ]
 

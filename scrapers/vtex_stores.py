@@ -77,8 +77,7 @@ class VtexStoresScraper(BaseScraper):
                 continue
             reference = list_price if list_price and list_price > price else None
             discount = round((1 - price / reference) * 100) if reference else 0
-            rows.append(
-                self.normalize(
+            fila = self.normalize(
                     title=title,
                     url=urljoin(self.home + "/", link),
                     price=price,
@@ -88,7 +87,8 @@ class VtexStoresScraper(BaseScraper):
                     descuento=discount,
                     api="vtex",
                 )
-            )
+            fila["tipo_fuente"] = "ONLINE"
+            rows.append(fila)
         return rows
 
     def _pedir_pagina(self, params: dict) -> tuple[str, Any]:
