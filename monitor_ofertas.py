@@ -196,16 +196,10 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
         descuento = round((1 - precio_actual / float(precio_anterior)) * 100)
 
     if 95 <= descuento <= 99:
-        contexto_producto = canonical_product_identifier(item.get("tienda", ""), item.get("url", ""))
-        identificador_producto = (
-            item.get("id") or contexto_producto.get("product_id") or contexto_producto.get("url") or item.get("url", "")
-        )
-        tienda_canonica = canonical_store(item.get("tienda", ""))
-        clave_historial = f"{tienda_canonica}_{identificador_producto}"
-
-        entrada_actual = historial_local.get(history_key(item))
+        clave_historial = history_key(item)
+        entrada_actual = historial_local.get(clave_historial)
         ya_alertada = isinstance(entrada_actual, dict) and entrada_actual.get("precio_alertado") is not None
-        if clave_historial in historial_local or ya_alertada:
+        if ya_alertada:
             logger.info(f"[BOMBA OMITIDA] Ya fue enviada previamente: {clave_historial}")
             return False
 
@@ -215,7 +209,7 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
 
         # Historial centralizado (opcional): sobrevive a rebases y ejecuciones efímeras de CI.
         # Si Supabase no está configurado o falla, el historial local de arriba sigue mandando.
-        if supabase_history.ya_enviada(history_key(item)) is True:
+        if supabase_history.ya_enviada(clave_historial) is True:
             logger.info(f"[BOMBA OMITIDA] Ya registrada en Supabase: {clave_historial}")
             return False
 
@@ -441,6 +435,7 @@ class Fuente:
     funcion: Callable[[], list]
     estado_fn: Callable[[], Any] = None
     resultado: list = field(default_factory=list)
+    abandonada: threading.Event = field(default_factory=threading.Event)
 
 
 ULTIMO_REPORTE_FUENTES: dict = {}
@@ -655,7 +650,8 @@ def _ejecutar_fuente(fuente: Fuente, salida: dict, semaforo: threading.Semaphore
             registro.update(estado="error", error=f"{type(exc).__name__}: {exc}"[:300])
             logger.error("[%s] fallo aislado: %s", fuente.nombre, registro["error"])
     registro["segundos"] = round(time.monotonic() - inicio, 1)
-    salida[fuente.nombre] = registro
+    if not fuente.abandonada.is_set():  # un hilo ya expirado no debe sobrescribir el reporte
+        salida[fuente.nombre] = registro
 
 
 def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
@@ -689,10 +685,13 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     for fuente, hilo in hilos:
         hilo.join(max(0.0, limite - time.monotonic()))
         if hilo.is_alive():
-            salida.setdefault(
-                fuente.nombre,
-                {"fuente": fuente.nombre, "estado": "timeout", "candidatos": 0, "segundos": FUENTES_TIMEOUT_TOTAL},
-            )
+            fuente.abandonada.set()
+            salida[fuente.nombre] = {
+                "fuente": fuente.nombre,
+                "estado": "timeout",
+                "candidatos": 0,
+                "segundos": FUENTES_TIMEOUT_TOTAL,
+            }
             logger.error("[%s] timeout: se abandona esta fuente y el monitor continúa.", fuente.nombre)
 
     candidatos: list = []
@@ -835,7 +834,7 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
             )
         except RuntimeError as exc:
             logger.error("%s", exc)
-            return enviadas, fallidas + len(alertas[:MAX_ALERTAS_POR_CICLO]) - enviadas - fallidas
+            return enviadas, len(alertas[:MAX_ALERTAS_POR_CICLO]) - enviadas
         if ok:
             enviadas += 1
             entrada = historial.get(alerta["clave"])
