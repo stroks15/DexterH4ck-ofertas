@@ -15,6 +15,14 @@ class PreflightAppsScriptProxyTests(unittest.TestCase):
         self.assertFalse(result["stores"]["Walmart MX"]["blocked"])
         self.assertEqual(result["blocked_stores"], [])
 
+    def test_http_412_direct_is_allowed_via_proxy(self):
+        targets = {"Walmart MX": ["https://www.walmart.com.mx/"]}
+        failed_probe = {"url": targets["Walmart MX"][0], "status": 412, "state": "http_error"}
+        with patch.dict(os.environ, {"APPS_SCRIPT_PROXY_URL": "https://script.google.com/macros/s/test/exec"}, clear=False), patch.object(preflight, "probe_url", return_value=failed_probe):
+            result = preflight.ejecutar_preflight(targets)
+        self.assertEqual(result["stores"]["Walmart MX"]["state"], "ok_via_proxy")
+        self.assertEqual(result["blocked_stores"], [])
+
     def test_direct_block_remains_blocked_without_proxy(self):
         targets = {"Walmart MX": ["https://www.walmart.com.mx/"]}
         blocked_probe = {"url": targets["Walmart MX"][0], "status": 403, "state": "forbidden"}
