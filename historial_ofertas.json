@@ -51688,5 +51688,50 @@
     "precio_maximo": 279.0,
     "ultima_actualizacion": "2026-10-24T07:16:48.540495+00:00",
     "precio_alertado": null
+  },
+  "bodega|code:00770706234990": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Mesa de Centro Rectangular RTA Estilo Moderno Color Blanco",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00770706234990",
+    "precio_actual": 531.0,
+    "precio_maximo": 1769.0,
+    "ultima_actualizacion": "2026-10-24T12:09:02.327354+00:00",
+    "precio_alertado": 531.0
+  },
+  "bodega|code:00062235656190": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Licuadora Ninja Profesional Plus Duo 7 Programas 1200 Watts Jarra 2.1L con Auto-iQ Color Negro",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00062235656190",
+    "precio_actual": 1990.0,
+    "precio_maximo": 3999.0,
+    "ultima_actualizacion": "2026-10-24T12:08:58.672578+00:00",
+    "precio_alertado": 1990.0
+  },
+  "mercadolibre|title:juego de mesa uno elite formula1 edicion basica 7 jlv42": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Juego De Mesa UNO Elite Formula1 Edición Básica 7+ JLV42",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BPZACQ7qvJ5ugw%2BPyowTIb2THzqrd8nHFOhUHLWRXUocDDuSi%2BG4mT%2FRYIBtVU72lYL8x1GVPTstABF2xyH8Mp45vkMLgJUq54DssIeF9%2Bcisot7dxsYxnKMUEkBO2Uboesro%2BeP2gFG2OfoMUfHZjawmXoEUfWNyV3hx3bCHuBGlV19c04Z%2F5P0hP%2Fkm9aiIKtk9eP%2F5qUwQpPg%2F%2B476yfMfBDJebZYruSieWZo2ltBceIJld2vfoQgj2D6ysOCOK7%2Bqg%3D%3D",
+    "precio_actual": 499.0,
+    "precio_maximo": 499.0,
+    "ultima_actualizacion": "2026-10-24T12:08:58.071531+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:xerjoff v eau de parfum 100ml erba pura unisex": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Xerjoff V Eau De Parfum 100ml Erba Pura Unisex",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx/lists/c387b8dc-fb34-4891-9e5d-c93c56532fd5?matt_tool=11154996&forceInApp=true",
+    "precio_actual": 3886.0,
+    "precio_maximo": 3886.0,
+    "ultima_actualizacion": "2026-10-24T12:08:58.071531+00:00",
+    "precio_alertado": null
+  },
+  "bodega|code:00750628667316": {
+    "tienda": "Bodega Aurrera",
+    "titulo": "Encendedor Prichos Estufa Y Chico Varios Colores 1 Juego",
+    "url": "https://www.bodegaaurrera.com.mx/ip/00750628667316",
+    "precio_actual": 25.0,
+    "precio_maximo": 25.0,
+    "ultima_actualizacion": "2026-10-24T12:08:58.071531+00:00",
+    "precio_alertado": null
   }
 }
