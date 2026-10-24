@@ -739,7 +739,9 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     for fuente, hilo in hilos:
         hilo.join(max(0.0, limite - time.monotonic()))
         with salida_lock:
-            if hilo.is_alive():
+            # Si el worker ya publicó su resultado final, se conserva aunque el
+            # hilo aún esté saliendo. Solo se marca timeout si no publicó estado.
+            if hilo.is_alive() and fuente.nombre not in salida:
                 salida[fuente.nombre] = {
                     "fuente": fuente.nombre,
                     "estado": "timeout",
