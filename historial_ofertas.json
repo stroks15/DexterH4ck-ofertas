@@ -29657,8 +29657,8 @@
     "titulo": "liquidapromos",
     "marca": "",
     "categoria": "",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromoscmm&matt_tool=34796773&forceInApp=true&ref=BML2OzLvHbJVBhrHTcCnzZE2hPLTvrBwSizSGdcJ2Qeu%2FevVWb2nSV7INsRJyAqDhEUjTdjqWr6b1rxTGbWZFm5xrtNRjTtwkEoQD7qFt%2FdHHMyiCrhCN7jbw1ovoN5GfI0du4nGfHUDienbSOBhFAvUlceDOk1ozJr5XIj5WjZQsTbYagD4qx6UpfZuida06Fpl63cqSgeYwzvrWBrHP3pysrRUEonIVnXhC7fZGPF%2B%2FuxRIVn8olt6gYnBHQ5LqqPTmg%3D%3D",
-    "precio_actual": 923.0,
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BGAiCSgh2bLawoZIuSx9yssVoUczypY57t1sb5GEA2qUnLjv61CAueGwptGWiLdGJ4ivJHnp4a0%2F3keOLRUebCwVRGgKsDUoEZoaPSPrA8rf1DlfZ8ynk4wefIy5ja2O9J07%2FB7K8XzpuARnpCJ6aZ8%2B4bSfmxg4k%2FR%2Fv8%2BfK7tRUHOKhHlyOhRTGQorCF8AKBK54qvCI4BUHN6J7sMgZn%2BERZYXe%2FTk9UjtDVPNdX1%2BZAuvZRcDtyZzjpFD%2BwHTEZgJOg%3D%3D",
+    "precio_actual": 321.0,
     "precio_maximo": 31999.0,
     "descuento": 21,
     "puntuacion": 25,
@@ -29676,7 +29676,7 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-23T06:39:26.647347+00:00",
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
     "precio_alertado": null
   },
   "telegram|code:b0cts7223w": {
@@ -34121,11 +34121,11 @@
   },
   "amazon|code:b0dg9gffbd": {
     "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i WEQDBQTCZE39052BDRF9",
+    "titulo": "B0DG9GFFBD",
     "marca": "",
     "categoria": "",
-    "url": "https://www.amazon.com.mx/dp/B0DG9GFFBD/ref=cm_sw_r_as_gl_api_gl_i_WEQDBQTCZE39052BDRF9?linkCode=ml1&tag=liquidahorros--20&linkId=c5bdf66d1a28e6b7b1a65445ddcfb7b0&ascsubtag=srctok-1ab3ce947d8bf89c&btn_type=ss&btn_ref=srctok-1ab3ce947d8bf89c",
-    "precio_actual": 2299.0,
+    "url": "https://www.amazon.com.mx/dp/B0DG9GFFBD?smid=AVDBXBAVVSXLQ&linkCode=sl2&tag=liquidapromosmx-20&linkId=e5f7608de60b01fd8b5f168c15b4bb53&ref_=as_li_ss_tl&ascsubtag=srctok-63cead9aff04d48f&btn_type=ss&btn_ref=srctok-63cead9aff04d48f",
+    "precio_actual": 809.0,
     "precio_maximo": 2299.0,
     "descuento": 0,
     "puntuacion": 5,
@@ -34143,8 +34143,8 @@
       "publicable_como_extremo": false,
       "publicable_como_95_99": false
     },
-    "ultima_actualizacion": "2026-10-07T02:43:43.202372+00:00",
-    "precio_alertado": null
+    "ultima_actualizacion": "2026-10-24T02:11:56.701073+00:00",
+    "precio_alertado": 809.0
   },
   "amazon|code:b003tnitjo": {
     "tienda": "Amazon",
@@ -39128,10 +39128,10 @@
   "amazon|code:b0gy5vj65j": {
     "tienda": "Amazon",
     "titulo": "B0GY5VJ65J",
-    "url": "https://www.amazon.com.mx/dp/B0GY5VJ65J?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 1997.1,
+    "url": "https://www.amazon.com.mx/dp/B0GY5VJ65J?ascsubtag=srctok-43c11d2c11633971&btn_type=ss&btn_ref=srctok-13a2977811f45780&linkCode=sl2&tag=liquidapromosmx-20&linkId=d11b4caf779b0528d77bf5b83ec0e1af&ref_=as_li_ss_tl",
+    "precio_actual": 1997.0,
     "precio_maximo": 3699.0,
-    "ultima_actualizacion": "2026-10-12T03:06:00.258349+00:00",
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0gyclxgkn": {
@@ -51255,6 +51255,240 @@
     "precio_actual": 8.5,
     "precio_maximo": 8.5,
     "ultima_actualizacion": "2026-10-23T12:10:43.212928+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:mercado libre cuadra botas caballero en piel de bovino con 50 off": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Mercado Libre: Cuadra Botas Caballero En Piel De Bovino con 50% OFF!!",
+    "url": "https://www.promodescuentos.com/ofertas/botas-cuadra-50-de-descuento-excelente-1201280",
+    "precio_actual": 2797.0,
+    "precio_maximo": 2797.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "walmart|code:00020071000000": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock NACIONAL",
+    "url": "https://www.walmart.com.mx/ip/Papa-en-gajo-1003-OTRAS-GUARNICIONES-sazonada-por-kilo/00020071000000",
+    "precio_actual": 9.5,
+    "precio_maximo": 95.0,
+    "ultima_actualizacion": "2026-10-24T02:11:37.579164+00:00",
+    "precio_alertado": 9.5
+  },
+  "amazon|code:b0hc5p4g5d": {
+    "tienda": "Amazon MX",
+    "titulo": "Hoja 3CR13 resistente y mango antideslizante, perfecto para carne en BBQ y camping — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0HC5P4G5D?tag=ofertasperr05-20",
+    "precio_actual": 48.51,
+    "precio_maximo": 249.0,
+    "ultima_actualizacion": "2026-10-24T02:11:45.241324+00:00",
+    "precio_alertado": 48.51
+  },
+  "amazon|code:b0f3ll85m2": {
+    "tienda": "Amazon",
+    "titulo": "B0F3LL85M2",
+    "url": "https://www.amazon.com.mx/dp/B0F3LL85M2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 883.0,
+    "precio_maximo": 2598.0,
+    "ultima_actualizacion": "2026-10-24T02:11:52.926666+00:00",
+    "precio_alertado": 883.0
+  },
+  "walmart|code:00750306057087": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Oferstock",
+    "url": "https://www.walmart.com.mx/ip/Bocina-Recargable-Bluetooth-Portatil-Radio-Fm-Con-Luz-Led/00750306057087",
+    "precio_actual": 599.0,
+    "precio_maximo": 1399.0,
+    "ultima_actualizacion": "2026-10-24T02:11:41.342176+00:00",
+    "precio_alertado": 599.0
+  },
+  "amazon|code:b091lfqn2q": {
+    "tienda": "Amazon MX",
+    "titulo": "Balón oficial NBA DRV Plus de 29.5 pulgadas, agarre y retención de aire que resiste cualquier cancha exterior — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B091LFQN2Q?tag=ofertasperr05-20",
+    "precio_actual": 258.3,
+    "precio_maximo": 582.67,
+    "ultima_actualizacion": "2026-10-24T02:11:49.136081+00:00",
+    "precio_alertado": 258.3
+  },
+  "amazon|code:b00b9g4qtk": {
+    "tienda": "Amazon",
+    "titulo": "B00B9G4QTK",
+    "url": "https://www.amazon.com.mx/dp/B00B9G4QTK?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=7a5af72183977d097b4edca54320d7db&ref_=as_li_ss_tl&ascsubtag=srctok-76d9890fb8a26eaf&btn_type=ss&btn_ref=srctok-76d9890fb8a26eaf",
+    "precio_actual": 355.0,
+    "precio_maximo": 735.0,
+    "ultima_actualizacion": "2026-10-24T02:12:00.468881+00:00",
+    "precio_alertado": 355.0
+  },
+  "mercadolibre|title:horno de microondas mirage mwd020e color plata 0 7 ft3 espejo": {
+    "tienda": "Mercado Libre",
+    "titulo": "Horno de microondas Mirage Mwd020e Color Plata 0.7 Ft3 Espejo",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BDfnZD5RoCnlgG3987uqqrNbV5lfr6%2FOwufzBzwJBksHJMnRkzmQbPS1aoFUHBnPd819Vc6%2BJ8FGV39hrOi7G%2BqF7rq5HR1UXQe%2Bk77895%2BpCuKeOJRZx8UA1dsqmXhyTv%2BZg3PwcrwrqrSRyQSXwoR9Bagl1YrDKy8s%2BnT9D4bLsFIGA%2FdIYSeF0Zy5I%2B3UruYNOog%3D",
+    "precio_actual": 1236.0,
+    "precio_maximo": 2500.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fqk3h1bs": {
+    "tienda": "Amazon",
+    "titulo": "B0FQK3H1BS",
+    "url": "https://www.amazon.com.mx/dp/B0FQK3H1BS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1249.0,
+    "precio_maximo": 2499.0,
+    "ultima_actualizacion": "2026-10-24T02:12:04.380242+00:00",
+    "precio_alertado": 1249.0
+  },
+  "amazon|code:b0d9pk1mv8": {
+    "tienda": "Amazon",
+    "titulo": "B0D9PK1MV8",
+    "url": "https://www.amazon.com.mx/dp/B0D9PK1MV8?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 298.0,
+    "precio_maximo": 569.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ck983fsc": {
+    "tienda": "Amazon",
+    "titulo": "B0CK983FSC",
+    "url": "https://www.amazon.com.mx/dp/B0CK983FSC?smid=AVDBXBAVVSXLQ&th=1&linkCode=sl2&tag=ofertones03-20&linkId=0448ba45aaf17602a1a194b101ef1c25&ref_=as_li_ss_tl&ascsubtag=srctok-6098f5d954f4b9c6&btn_type=ss&btn_ref=srctok-6098f5d954f4b9c6",
+    "precio_actual": 130.5,
+    "precio_maximo": 231.77,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c286q17d": {
+    "tienda": "Amazon",
+    "titulo": "B0C286Q17D",
+    "url": "https://www.amazon.com.mx/dp/B0C286Q17D?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 168.0,
+    "precio_maximo": 298.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dn6tygl7": {
+    "tienda": "Amazon",
+    "titulo": "B0DN6TYGL7",
+    "url": "https://www.amazon.com.mx/dp/B0DN6TYGL7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 359.24,
+    "precio_maximo": 639.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f4fs7yhn": {
+    "tienda": "Amazon",
+    "titulo": "¡CINE EN CASA A LO GRANDE! HISENSE SMART TV 4K DE 75 PULGADAS",
+    "url": "https://www.amazon.com.mx/dp/B0F4FS7YHN",
+    "precio_actual": 10499.0,
+    "precio_maximo": 18399.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h48hmjz7": {
+    "tienda": "Amazon",
+    "titulo": "B0H48HMJZ7",
+    "url": "https://www.amazon.com.mx/dp/B0H48HMJZ7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 941.31,
+    "precio_maximo": 1599.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f63m5nwd": {
+    "tienda": "Amazon",
+    "titulo": "B0F63M5NWD",
+    "url": "https://www.amazon.com.mx/dp/B0F63M5NWD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1494.0,
+    "precio_maximo": 2490.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0g5m8ry59": {
+    "tienda": "Amazon",
+    "titulo": "B0G5M8RY59",
+    "url": "https://www.amazon.com.mx/dp/B0G5M8RY59?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 238.07,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0brk74qdk": {
+    "tienda": "Amazon",
+    "titulo": "¡LLEVA TUS BEBIDAS BIEN FRÍAS A TODAS PARTES!",
+    "url": "https://www.amazon.com.mx/dp/B0BRK74QDK",
+    "precio_actual": 481.16,
+    "precio_maximo": 689.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fms7gcj3": {
+    "tienda": "Amazon",
+    "titulo": "B0FMS7GCJ3",
+    "url": "https://www.amazon.com.mx/dp/B0FMS7GCJ3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1199.2,
+    "precio_maximo": 1499.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:kit taladro inalambrico impacto y atornillador sin escobillas ironhoof xmmxf195rb color rojo": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Kit Taladro Inalámbrico Impacto y Atornillador sin Escobillas Ironhoof XMMXF195RB Color Rojo",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BLVgLM4j3rzXDPR9xB4FK6uOvNVLjQNh%2BO8PQRCp0CdXO5ujBXopfO%2FWr8DjyoiH9hxBB4AAQJdzdgRtLDdm50MvYrxfY%2FWdvuOZ1mG8oo182s%2BbxryfA5gwJmsJXK5fjZQmK%2BIJ%2FT0kEl27X80fD09F0nZ%2BZNeGxLlSUenUbo%2BmdzbgBlf3NEyWurZGLlXERnF7HZ9dRSvaUc0nL1%2BlZbtchMQco%2BejNQX17EztO4YWQJ%2F3ea%2BOlI5vR%2BCM1AyipIQLLg%3D%3D",
+    "precio_actual": 1869.0,
+    "precio_maximo": 1869.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fg2vwzmd": {
+    "tienda": "Amazon",
+    "titulo": "B0FG2VWZMD",
+    "url": "https://www.amazon.com.mx/dp/B0FG2VWZMD?psc=1&linkCode=sl2&tag=ofertonesbelleza-20&linkId=cf39d4dd2d7aa299a86460a138cf79ec&ref_=as_li_ss_tl&ascsubtag=srctok-3df23e1f921965dd&btn_type=ss&btn_ref=srctok-3df23e1f921965dd",
+    "precio_actual": 57.0,
+    "precio_maximo": 57.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b003848say": {
+    "tienda": "Amazon",
+    "titulo": "B003848SAY",
+    "url": "https://www.amazon.com.mx/dp/B003848SAY?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 296.0,
+    "precio_maximo": 296.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07ydytsrj": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i C57Q0BST99J6M6Q5R7SD",
+    "url": "https://www.amazon.com.mx/dp/B07YDYTSRJ/ref=cm_sw_r_as_gl_api_gl_i_C57Q0BST99J6M6Q5R7SD?linkCode=ml1&tag=liquidahorros--20&linkId=aaf8fd23739a61c859f2fcb2acab34ee&ascsubtag=srctok-7cae6fb0d9375cab&btn_type=ss&btn_ref=srctok-7cae6fb0d9375cab",
+    "precio_actual": 300.0,
+    "precio_maximo": 300.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hc9sj9fb": {
+    "tienda": "Amazon",
+    "titulo": "146 1424575",
+    "url": "https://www.amazon.com.mx/Ofrenda-Velas-Artesanales-Calavera-Cempas%C3%BAchil/dp/B0HC9SJ9FB/146-1424575-2609226?pd_rd_w=jyo11&content-id=amzn1.sym.2ee5c69a-4fe8-4903-be81-438449b4b1b3&pf_rd_p=2ee5c69a-4fe8-4903-be81-438449b4b1b3&pf_rd_r=SFKXE8VT3HGTN20N6Q62&pd_rd_wg=aweFg&pd_rd_r=959c042c-82d8-475a-abe6-40353b10cfdd&pd_rd_i=B0HC9SJ9FB&psc=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=a3900a86205172eaf15ad31bca0646c5&ref_=as_li_ss_tl",
+    "precio_actual": 250.0,
+    "precio_maximo": 250.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0glm4szzt": {
+    "tienda": "Amazon",
+    "titulo": "B0GLM4SZZT",
+    "url": "https://www.amazon.com.mx/ALLJOY-Masajeador-ba%C3%B1o-calor-para/dp/B0GLM4SZZT?pf_rd_r=MFYRFW2EGN2KRBV1X0Q7&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&ascsubtag=srctok-408c478238ef587a&btn_type=ss&btn_ref=srctok-50255a4a83dc177f&linkCode=sl2&tag=liquidapromosmx-20&linkId=9a483894f1fc203b6fb69a251ca80d75&ref_=as_li_ss_tl",
+    "precio_actual": 1139.0,
+    "precio_maximo": 1139.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0d4q8t9qx": {
+    "tienda": "Amazon",
+    "titulo": "B0D4Q8T9QX",
+    "url": "https://www.amazon.com.mx/Taza-Viaje-Aislada-40-Inoxidable/dp/B0D4Q8T9QX?pf_rd_r=J06SPVHQYHPKVK3XY4SB&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&ascsubtag=srctok-28e8e9db2a48741d&btn_type=ss&btn_ref=srctok-16d7762c00106ec4&linkCode=sl2&tag=liquidapromosmx-20&linkId=942929c0cc555e4de8b3101afd66645b&ref_=as_li_ss_tl",
+    "precio_actual": 119.0,
+    "precio_maximo": 119.0,
+    "ultima_actualizacion": "2026-10-24T02:11:36.453920+00:00",
     "precio_alertado": null
   }
 }
