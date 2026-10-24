@@ -77,14 +77,18 @@ def _sanear_historial(historial: dict) -> dict:
     for entrada in historial.values():
         if not isinstance(entrada, dict):
             continue
-        maximo = entrada.get("precio_maximo")
-        if maximo and coincide_con_medida(maximo, entrada.get("titulo")):
-            actual = _num(entrada.get("precio_actual"))
-            if actual and actual < _num(maximo):
-                entrada["precio_maximo"] = actual
+        titulo = texto_del_item(entrada)
+        actual = _num(entrada.get("precio_actual") or entrada.get("precio"))
+        for campo in ("precio_maximo", "precio_anterior", "wasPrice", "listPrice", "precio_referencia"):
+            referencia = entrada.get(campo)
+            if referencia and coincide_con_medida(referencia, titulo):
+                if campo == "precio_maximo" and actual:
+                    entrada[campo] = actual
+                else:
+                    entrada[campo] = None
                 reparadas += 1
     if reparadas:
-        logger.warning("Historial: %d entradas con precio_maximo igual a un gramaje fueron reparadas.", reparadas)
+        logger.warning("Historial: %d campos contaminados por gramajes fueron reparados.", reparadas)
     return historial
 
 
@@ -282,7 +286,7 @@ FUENTES_CONCURRENCIA = 6
 MONITOR_HEALTH_FILE = "monitor_health.json"
 
 # Estados de fuente que NO son un fallo (no hubo error real de acceso).
-ESTADOS_SIN_FALLO = {"ok", "empty", "not_configured", "skipped_preflight"}
+ESTADOS_SIN_FALLO = {"ok", "ok_via_proxy", "empty", "not_configured", "skipped_preflight"}
 # Estados que indican que la fuente sí respondió con datos o vacía (para detectar caída total).
 ESTADOS_RESPONDIO = {"ok", "empty"}
 
