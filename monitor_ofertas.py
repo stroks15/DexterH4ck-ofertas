@@ -217,12 +217,35 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
         if not descuento and precio_actual > 0 and precio_anterior > precio_actual:
             descuento = round((1 - precio_actual / precio_anterior) * 100)
 
-        if not 95 <= descuento <= 99:
-            return True
+# 1. Validar el rango de descuento primero (Filtro rápido)
 
-        clave = history_key(item)
-        if not isinstance(clave, str) or not clave.strip():
-            logger.warning("[BOMBA RECHAZADA] history_key(item) vacío.")
+if not 95 <= descuento <= 99:
+
+    return True
+
+clave_historial = history_key(item)
+
+# 2. Validar que la clave sea válida (De la rama main)
+
+if not isinstance(clave_historial, str) or not clave_historial.strip():
+
+    logger.warning("[BOMBA RECHAZADA] history_key(item) vacío.")
+
+    return False
+
+# 3. Verificar si ya fue alertada (De tu rama de fix)
+
+entrada_actual = historial_local.get(clave_historial)
+
+ya_alertada = isinstance(entrada_actual, dict) and entrada_actual.get("precio_alertado") is not None
+
+if ya_alertada:
+
+    logger.info(f"[BOMBA OMITIDA] Ya fue enviada previamente: {clave_historial}")
+
+    # Nota: Asegúrate de si aquí debes retornar True, False o continuar el flujo según tu diseño.
+
+return False
             return False
 
         if clave in historial_local:
@@ -235,8 +258,14 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
             logger.warning("[BOMBA RECHAZADA] Enlace inválido: %s", item.get("url"))
             return False
 
+        # Historial centralizado (opcional): sobrevive a rebases y ejecuciones efímeras de CI.
+
+        # Si Supabase no está configurado o falla, el historial local de arriba sigue mandando.
+
         central = supabase_history.ya_enviada(clave)
+
         if central is True:
+
             logger.info("[BOMBA OMITIDA] Ya registrada en Supabase: %s", clave)
             return False
         if central is None and supabase_history.habilitado():
@@ -478,6 +507,7 @@ class Fuente:
     funcion: Callable[[], list]
     estado_fn: Callable[[], Any] = None
     resultado: list = field(default_factory=list)
+    abandonada: threading.Event = field(default_factory=threading.Event)
 
 
 ULTIMO_REPORTE_FUENTES: dict = {}
@@ -701,9 +731,13 @@ def _ejecutar_fuente(
 
     registro["segundos"] = round(time.monotonic() - inicio, 1)
     with salida_lock:
-        # Timeout es un estado terminal del ciclo; un worker tardío no lo reemplaza.
-        if salida.get(fuente.nombre, {}).get("estado") == "timeout":
+
+        # Un hilo ya expirado o en estado terminal de timeout no debe sobrescribir el reporte.
+
+        if fuente.abandonada.is_set() or salida.get(fuente.nombre, {}).get("estado") == "timeout":
+
             logger.debug("[%s] terminó tarde; se conserva timeout.", fuente.nombre)
+
             return
         salida[fuente.nombre] = registro
 
@@ -743,17 +777,28 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
     for fuente, hilo in hilos:
         hilo.join(max(0.0, limite - time.monotonic()))
         with salida_lock:
-            # Si el worker ya publicó su resultado final, se conserva aunque el
-            # hilo aún esté saliendo. Solo se marca timeout si no publicó estado.
-            if hilo.is_alive() and fuente.nombre not in salida:
-                salida[fuente.nombre] = {
-                    "fuente": fuente.nombre,
-                    "estado": "timeout",
-                    "candidatos": 0,
-                    "segundos": round(FUENTES_TIMEOUT_TOTAL, 1),
-                }
-                logger.error("[%s] timeout; se excluye esta fuente del ciclo.", fuente.nombre)
 
+            # Si el worker ya publicó su resultado final, se conserva aunque el
+
+            # hilo aún esté saliendo. Solo se marca timeout si no publicó estado.
+
+            if hilo.is_alive() and fuente.nombre not in salida:
+
+                fuente.abandonada.set()
+
+                salida[fuente.nombre] = {
+
+                    "fuente": fuente.nombre,
+
+                    "estado": "timeout",
+
+                    "candidatos": 0,
+
+                    "segundos": round(FUENTES_TIMEOUT_TOTAL, 1),
+
+                }
+
+                logger.error("[%s] timeout; se abandona esta fuente del ciclo y el monitor continúa.", fuente.nombre)
     candidatos: list = []
     for fuente in fuentes:
         with salida_lock:
@@ -908,9 +953,32 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
             )
         except RuntimeError as exc:
             logger.error("%s", exc)
+            return enviadas, len(alertas[:MAX_ALERTAS_POR_CICLO]) - enviadas
+
+        if ok:
+
+            enviadas += 1
+
+            entrada = historial.get(alerta["clave"])
+
+            if isinstance(entrada, dict):
+
+                entrada["precio_alertado"] = alerta["actual"]
+
+                entrada["ultima_actualizacion"] = datetime.now(timezone.utc).isoformat()
+
+            if 95 <= (alerta.get("descuento") or 0) <= 99:
+
+                supabase_history.registrar_envio(history_key(alerta["item"]), alerta["item"], alerta["descuento"])
+
+        else:
+
             fallidas += len(limite) - indice
+
             break
+
         except Exception as exc:
+
             logger.exception("Error inesperado enviando alerta (%s).", type(exc).__name__)
             fallidas += 1
             continue
