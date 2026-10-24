@@ -340,6 +340,10 @@ class LiverpoolVtexAdapter(VtexCatalogAdapter):
     endpoint_env = "LIVERPOOL_API_ENDPOINT"
     home = "https://www.liverpool.com.mx"
 
+    def __init__(self, context: ScraperContext | None = None, endpoint: str | None = None):
+        fallback = os.environ.get("LIVERPOOL_VTEX_ENDPOINT", "").strip()
+        super().__init__(context, endpoint=endpoint or os.environ.get(self.endpoint_env, "").strip() or fallback)
+
 
 class SuburbiaVtexAdapter(VtexCatalogAdapter):
     store = "Suburbia"
