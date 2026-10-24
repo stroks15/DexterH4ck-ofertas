@@ -183,7 +183,21 @@ function buscarSoriana(termino) {
 function normalizarPlantilla(plantilla) {
   return String(plantilla || "").trim()
     .replace(/\$?\{\s*encodeURIComponent\(\s*\w+\s*\)\s*\}/g, "{q}")
+    .replace(/\$?\{\s*(?:q|query|termino|term|searchTerm)\s*\}/gi, "{q}")
     .replace(/%7Bq%7D/gi, "{q}");
+}
+
+function hostAutorizado(plantilla, tienda) {
+  const hosts = {
+    WALMART: ["walmart.com.mx"],
+    BODEGA_AURRERA: ["bodegaaurrera.com.mx"],
+    SORIANA: ["soriana.com"]
+  };
+  const permitidos = hosts[tienda] || [];
+  const coincidencia = String(plantilla || "").match(/^https:\/\/([^\/?#:]+)(?::\d+)?(?:[\/?#]|$)/i);
+  if (!coincidencia) return false;
+  const host = coincidencia[1].toLowerCase();
+  return permitidos.some(dominio => host === dominio || host.endsWith("." + dominio));
 }
 
 function buscarConfigurada(propiedad, tienda, base, termino) {
@@ -192,6 +206,9 @@ function buscarConfigurada(propiedad, tienda, base, termino) {
   const plantilla = normalizarPlantilla(cruda);
   if (plantilla.indexOf("{q}") < 0 || !/^https:\/\//i.test(plantilla)) {
     return { estado: "not_configured", motivo: "plantilla_invalida" };
+  }
+  if (!hostAutorizado(plantilla, tienda)) {
+    return { estado: "not_configured", motivo: "host_no_autorizado" };
   }
 
   const url = plantilla.replace(/\{q\}/g, encodeURIComponent(termino));
