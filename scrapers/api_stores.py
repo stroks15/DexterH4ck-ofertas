@@ -254,6 +254,7 @@ class VtexCatalogAdapter(BaseScraper):
             origen_link="vtex_catalogo_publico",
         )
         row["descuento"] = round((1 - price / reference) * 100) if reference and reference > price else 0
+        row["tipo_fuente"] = "ONLINE"
         return row
 
     def discover(self) -> list[dict[str, Any]]:
@@ -336,8 +337,14 @@ class CoppelVtexAdapter(VtexCatalogAdapter):
 
 class LiverpoolVtexAdapter(VtexCatalogAdapter):
     store = "Liverpool"
-    endpoint_env = "LIVERPOOL_VTEX_ENDPOINT"
+    endpoint_env = "LIVERPOOL_API_ENDPOINT"
     home = "https://www.liverpool.com.mx"
+
+
+class SuburbiaVtexAdapter(VtexCatalogAdapter):
+    store = "Suburbia"
+    endpoint_env = "SUBURBIA_API_ENDPOINT"
+    home = "https://www.suburbia.com.mx"
 
 
 def _adapter(name: str, endpoint_name: str, home: str):
@@ -366,13 +373,18 @@ def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScrape
     chedraui = VtexStoresScraper(context) if VtexStoresScraper else ChedrauiJsonAdapter(context)
     liverpool = (
         LiverpoolVtexAdapter(context)
-        if os.environ.get("LIVERPOOL_VTEX_ENDPOINT", "").strip()
+        if os.environ.get("LIVERPOOL_API_ENDPOINT", "").strip() or os.environ.get("LIVERPOOL_VTEX_ENDPOINT", "").strip()
         else LiverpoolAdapter(context)
     )
     coppel = (
         CoppelVtexAdapter(context)
         if os.environ.get("COPPEL_VTEX_ENDPOINT", "").strip()
         else CoppelAdapter(context)
+    )
+    suburbia = (
+        SuburbiaVtexAdapter(context)
+        if os.environ.get("SUBURBIA_API_ENDPOINT", "").strip()
+        else SuburbiaAdapter(context)
     )
     return [
         WalmartAdapter(context),
@@ -383,7 +395,7 @@ def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScrape
         AmazonAdapter(context),
         MercadoLibreAdapter(context),
         coppel,
-        SuburbiaAdapter(context),
+        suburbia,
         OferstockAdapter(context),
     ]
 
