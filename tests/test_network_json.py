@@ -96,6 +96,7 @@ class NetworkJsonTests(unittest.TestCase):
         self.assertEqual(rows[0]["precio_actual"], 50)
         self.assertEqual(rows[0]["precio_anterior"], 100)
         self.assertEqual(rows[0]["descuento"], 50)
+        self.assertEqual(rows[0]["tipo_fuente"], "ONLINE")
         self.assertEqual(adapter.last_status["state"], "ok")
 
 
