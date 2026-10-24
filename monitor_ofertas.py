@@ -677,8 +677,8 @@ def _ejecutar_fuente(
                     if fuente.estado_fn:
                         try:
                             estado = fuente.estado_fn() or {}
-                    except Exception as exc:
-                        logger.debug("estado_fn de %s falló: %s", fuente.nombre, type(exc).__name__)
+                        except Exception as exc:
+                            logger.debug("estado_fn de %s falló: %s", fuente.nombre, type(exc).__name__)
                     declarado = str(estado.get("state") or "")
                     if declarado and declarado not in ("not_run", "ok"):
                         registro["estado"] = declarado
