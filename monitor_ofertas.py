@@ -451,10 +451,10 @@ def formatear_alerta(alerta: dict) -> str:
     tipo = "VERDE" if es_enlace_producto_directo(item.get("url")) else "ROJO"
     if extremo:
         nivel = "ULTRA EXTREMO" if extremo.get("nivel") == "ULTRA_EXTREMO" else "EXTREMO"
-        marca = f"💣 <b>{nivel} — PRECIO VERIFICADO</b>\\n"
+        marca = f"💣 <b>{nivel} — PRECIO VERIFICADO</b>\n"
     else:
         # El 💣 es obligatorio en todo el rango 90-99 %, aunque la bandera no venga marcada.
-        marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\\n" if (bomba or 90 <= (alerta.get("descuento") or 0) <= 99) else ""
+        marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\n" if (bomba or 90 <= (alerta.get("descuento") or 0) <= 99) else ""
     lineas = [
         f"{marca}{formato_alerta_tipo(tipo)} <b>{html.escape(str(item.get('titulo') or ''))}</b>",
         f"🏪 {html.escape(str(item.get('tienda') or 'Tienda'))}",
@@ -475,7 +475,7 @@ def formatear_alerta(alerta: dict) -> str:
     if ev.get("condiciones"):
         lineas.append("⚠️ Condiciones: " + html.escape(", ".join(map(str, ev["condiciones"]))))
     lineas.append(f"🔗 {item.get('url', '')}")
-    return "\\n".join(lineas)
+    return "\n".join(lineas)
 
 
 # ---------------------------------------------------------------------------
