@@ -101,7 +101,9 @@ def calculate_discount(old_price, new_price):
         new_price = float(new_price)
         if old_price <= 0 or new_price <= 0 or old_price <= new_price:
             return 0
-        return round(((old_price - new_price) / old_price) * 100)
+        # Todo precio vigente es > 0; por redondeo un descuento real de 99.5% puede dar 100.
+        # El monitor admite 50–99%, así que se limita a 99 para no perder las mejores liquidaciones.
+        return min(99, round(((old_price - new_price) / old_price) * 100))
     except (TypeError, ValueError):
         return 0
 
