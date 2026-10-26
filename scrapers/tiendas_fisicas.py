@@ -91,7 +91,7 @@ def precios(texto):
     for valor in PRECIO_RE.findall(texto or ""):
         try:
             numero = float(valor.replace(",", ""))
-            if 1 <= numero <= 2_000_000:
+            if 0 < numero <= 2_000_000:
                 encontrados.append(numero)
         except ValueError:
             pass
