@@ -19,6 +19,11 @@ class TestExtremePrices(unittest.TestCase):
         self.assertEqual(calculate_discount(200, 1), 99)
         self.assertEqual(calculate_discount(1000, 1), 99)
 
+    def test_physical_scraper_keeps_prices_below_one_peso(self):
+        from scrapers.tiendas_fisicas import precios
+
+        self.assertEqual(precios("Liquidación $0.50 antes $25.00"), [0.5, 25.0])
+
     def test_official_host(self):
         self.assertTrue(es_producto_oficial("https://www.walmart.com.mx/ip/item", "Walmart MX"))
         self.assertFalse(es_producto_oficial("https://walmart.com.mx.example.invalid/item", "Walmart MX"))
