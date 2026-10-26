@@ -447,17 +447,27 @@ def enviar_telegram(texto, imagen=None, sticker_id=None) -> bool:
 def formatear_alerta(alerta: dict) -> str:
     item = alerta["item"]
     bomba = alerta["bomba"]
+    extremo = alerta.get("precio_extremo")
     tipo = "VERDE" if es_enlace_producto_directo(item.get("url")) else "ROJO"
-    # El 💣 es obligatorio en todo el rango 95-99 %, aunque la bandera de bomba no venga marcada.
-    marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\n" if (bomba or 95 <= (alerta.get("descuento") or 0) <= 99) else ""
+    if extremo:
+        nivel = "ULTRA EXTREMO" if extremo.get("nivel") == "ULTRA_EXTREMO" else "EXTREMO"
+        marca = f"💣 <b>{nivel} — PRECIO VERIFICADO</b>\\n"
+    else:
+        # El 💣 es obligatorio en todo el rango 90-99 %, aunque la bandera no venga marcada.
+        marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\\n" if (bomba or 90 <= (alerta.get("descuento") or 0) <= 99) else ""
     lineas = [
         f"{marca}{formato_alerta_tipo(tipo)} <b>{html.escape(str(item.get('titulo') or ''))}</b>",
         f"🏪 {html.escape(str(item.get('tienda') or 'Tienda'))}",
         f"💰 ${alerta['actual']:,.2f} MXN"
         + (f" (antes ${alerta['referencia']:,.2f})" if alerta.get("referencia") else ""),
-        f"📉 {alerta['descuento']}% de descuento"
-        + ("" if alerta.get("referencia") else " (indicado en el mensaje de Telegram)"),
     ]
+    if extremo:
+        lineas.append("🛡️ Precio comprobado en la ficha oficial de la tienda")
+    else:
+        lineas.append(
+            f"📉 {alerta['descuento']}% de descuento"
+            + ("" if alerta.get("referencia") else " (indicado en el mensaje de Telegram)")
+        )
     ev = alerta.get("evaluacion") or {}
     if ev.get("puntuacion") is not None:
         extra = f" · {', '.join(ev.get('indicadores', [])[:4])}" if ev.get("indicadores") else ""
@@ -465,7 +475,7 @@ def formatear_alerta(alerta: dict) -> str:
     if ev.get("condiciones"):
         lineas.append("⚠️ Condiciones: " + html.escape(", ".join(map(str, ev["condiciones"]))))
     lineas.append(f"🔗 {item.get('url', '')}")
-    return "\n".join(lineas)
+    return "\\n".join(lineas)
 
 
 # ---------------------------------------------------------------------------
@@ -854,6 +864,17 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
             item["descuento"] = descuento
 
             publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
+            precio_extremo = None
+            # Los precios <= $10 también son oportunidades por sí mismos, pero solo se
+            # publican cuando la ficha oficial confirma el precio; nunca por un título/comunidad.
+            if not publicable and 0 < actual <= 10:
+                try:
+                    verificacion_extremo = analizar_precio_extremo(item)
+                    if verificacion_extremo.get("publicable_como_extremo"):
+                        precio_extremo = verificacion_extremo
+                        publicable = True
+                except Exception as exc:
+                    logger.debug("No se pudo verificar precio extremo (%s).", type(exc).__name__)
             if (
                 publicable
                 and str(item.get("tipo_fuente") or "").upper() != "FISICA"
@@ -867,11 +888,19 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
                 publicable = False  # ya alertado a este precio (o menor)
 
             if publicable:
-                try:
-                    evaluacion = evaluate_product(item)
-                except Exception as exc:
-                    logger.warning("evaluate_product falló para %s: %s", url, exc)
-                    evaluacion = {"puntuacion": descuento, "indicadores": []}
+                if precio_extremo:
+                    puntuacion = 100 if precio_extremo.get("nivel") == "ULTRA_EXTREMO" else 90
+                    evaluacion = {
+                        "puntuacion": puntuacion,
+                        "indicadores": ["precio_extremo_verificado"],
+                        "condiciones": [],
+                    }
+                else:
+                    try:
+                        evaluacion = evaluate_product(item)
+                    except Exception as exc:
+                        logger.warning("evaluate_product falló para %s: %s", url, exc)
+                        evaluacion = {"puntuacion": descuento, "indicadores": []}
                 alertas.append(
                     {
                         "clave": clave,
@@ -880,6 +909,7 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
                         "referencia": referencia,
                         "descuento": descuento,
                         "evaluacion": evaluacion,
+                        "precio_extremo": precio_extremo,
                         "bomba": DESCUENTO_BOMBA <= descuento <= MAX_DESCUENTO and referencia > actual,
                     }
                 )
