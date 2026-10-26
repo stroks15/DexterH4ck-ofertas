@@ -1,6 +1,9 @@
+import json
 import os
 import re
 import time
+from datetime import datetime, timezone
+from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
 
 import requests
@@ -122,9 +125,53 @@ def _titulo_resultado(node, fallback):
     return fallback[:180]
 
 
+GOOGLE_COOLDOWN_FILE = Path(os.environ.get("FUENTES_COOLDOWN_FILE", "fuentes_cooldown.json"))
+DEFAULT_GOOGLE_COOLDOWN_SECONDS = 6 * 60 * 60
+
+
+def _google_cooldown_hasta() -> float:
+    """Lee el bloqueo persistente entre ejecuciones efímeras de GitHub Actions."""
+    try:
+        data = json.loads(GOOGLE_COOLDOWN_FILE.read_text(encoding="utf-8"))
+        return float(data.get("google_search_until", 0) or 0) if isinstance(data, dict) else 0.0
+    except (OSError, ValueError, TypeError):
+        return 0.0
+
+
+def _guardar_google_cooldown(segundos: int | None = None) -> None:
+    """Persiste el cooldown; un HTTP 429 detiene todas las consultas de Google del ciclo."""
+    try:
+        duracion = int(os.environ.get("GOOGLE_SEARCH_COOLDOWN_SECONDS", DEFAULT_GOOGLE_COOLDOWN_SECONDS))
+    except (TypeError, ValueError):
+        duracion = DEFAULT_GOOGLE_COOLDOWN_SECONDS
+    duracion = max(60, min(duracion, 7 * 24 * 60 * 60))
+    expira = time.time() + (segundos if segundos is not None else duracion)
+    data = {
+        "google_search_until": expira,
+        "reason": "HTTP 429 rate limit",
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+    }
+    temporal = GOOGLE_COOLDOWN_FILE.with_suffix(GOOGLE_COOLDOWN_FILE.suffix + ".tmp")
+    try:
+        GOOGLE_COOLDOWN_FILE.parent.mkdir(parents=True, exist_ok=True)
+        temporal.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        os.replace(temporal, GOOGLE_COOLDOWN_FILE)
+    except OSError as exc:
+        print(f"Tiendas físicas: no se pudo persistir cooldown de Google ({type(exc).__name__}).")
+        try:
+            temporal.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+
 def buscar_tiendas_fisicas(session=None):
     if "Google" in {x.strip() for x in os.environ.get("PREFLIGHT_SKIP_SOURCES", "").split(",") if x.strip()}:
         print("Tiendas físicas: Google omitido por preflight; no se generan errores 429.")
+        return []
+    expira = _google_cooldown_hasta()
+    if expira > time.time():
+        restante = int((expira - time.time()) / 60) + 1
+        print(f"Tiendas físicas: Google está en cooldown por HTTP 429; se reanudará en aproximadamente {restante} min.")
         return []
     session = session or requests.Session()
     session.headers.update(HEADERS)
@@ -142,11 +189,9 @@ def buscar_tiendas_fisicas(session=None):
                     timeout=20,
                 )
                 if response.status_code == 429:
-                    print(
-                        f"Fisicas/{tienda['nombre']}: Google HTTP 429; se detiene el resto de consultas de esta sucursal para no empeorar el bloqueo."
-                    )
-                    google_bloqueado = True
-                    continue
+                    print("Tiendas físicas: Google HTTP 429; se detienen todas las sucursales y se activa cooldown persistente.")
+                    _guardar_google_cooldown()
+                    return []
                 if response.status_code >= 400:
                     print(f"Fisicas/{tienda['nombre']}: Google HTTP {response.status_code}")
                     continue
