@@ -1,17 +1,6 @@
 name: Monitor de descuentos
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "**/*.py"
-      - "**/*.yml"
-      - "**/*.yaml"
-      - "requirements.txt"
-      - "requirements-browser.txt"
-      - "config/**"
-      - "tests/**"
   schedule:
     # Cada 15 minutos, desplazado 7 minutos para evitar el pico de cada hora.
     - cron: "7,22,37,52 * * * *"
