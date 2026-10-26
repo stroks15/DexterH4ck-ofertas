@@ -60,6 +60,30 @@ class TestMonitorRules(unittest.TestCase):
         guardar.assert_called_once_with(historial)
         registrar.assert_called_once_with(clave, item, 96)
 
+    def test_precio_extremo_oficial_sin_referencia_se_publica_sin_inventar_descuento(self):
+        item = {
+            "tienda": "Walmart MX",
+            "titulo": "Producto de prueba",
+            "url": "https://www.walmart.com.mx/ip/producto/123456",
+            "precio_actual": 1,
+            "precio_anterior": None,
+            "origen_link": "api",
+        }
+        verificacion = {
+            "publicable_como_extremo": True,
+            "nivel": "ULTRA_EXTREMO",
+            "precio_verificado": True,
+        }
+        with patch("monitor_ofertas.analizar_precio_extremo", return_value=verificacion):
+            alertas = __import__("monitor_ofertas").procesar_candidatos([item], {})
+
+        self.assertEqual(len(alertas), 1)
+        self.assertEqual(alertas[0]["descuento"], 0)
+        mensaje = __import__("monitor_ofertas").formatear_alerta(alertas[0])
+        self.assertIn("ULTRA EXTREMO", mensaje)
+        self.assertIn("Precio comprobado", mensaje)
+        self.assertNotIn("0% de descuento", mensaje)
+
     def test_bomba_usa_exactamente_history_key(self):
         item = {
             "tienda": "Walmart MX",
