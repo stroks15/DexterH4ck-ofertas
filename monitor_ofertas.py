@@ -463,6 +463,8 @@ def formatear_alerta(alerta: dict) -> str:
     ]
     if extremo:
         lineas.append("🛡️ Precio comprobado en la ficha oficial de la tienda")
+        if alerta.get("referencia") and 50 <= (alerta.get("descuento") or 0) <= 99:
+            lineas.append(f"📉 {alerta['descuento']}% de descuento")
     else:
         lineas.append(
             f"📉 {alerta['descuento']}% de descuento"
@@ -865,9 +867,9 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
 
             publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
             precio_extremo = None
-            # Los precios <= $10 también son oportunidades por sí mismos, pero solo se
-            # publican cuando la ficha oficial confirma el precio; nunca por un título/comunidad.
-            if not publicable and 0 < actual <= 10:
+            # Los precios <= $10 reciben su etiqueta especial solo si la ficha oficial
+            # confirma el monto. Si ya tienen descuento válido, la etiqueta no lo sustituye.
+            if 0 < actual <= 10:
                 try:
                     verificacion_extremo = analizar_precio_extremo(item)
                     if verificacion_extremo.get("publicable_como_extremo"):
