@@ -208,7 +208,7 @@ def es_enlace_valido_sin_error(url: str) -> bool:
 
 
 def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
-    """Valida bombas del 95–99 % usando exclusivamente history_key(item)."""
+    """Valida una alerta del 95–99 % usando exclusivamente history_key(item)."""
     try:
         precio_actual = _num(item.get("precio_actual") or item.get("price"))
         precio_anterior = _num(item.get("precio_anterior"))
@@ -217,61 +217,32 @@ def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
         if not descuento and precio_actual > 0 and precio_anterior > precio_actual:
             descuento = round((1 - precio_actual / precio_anterior) * 100)
 
-# 1. Validar el rango de descuento primero (Filtro rápido)
+        # Esta función se usa como filtro específico para bombas. No debe bloquear
+        # candidatos que no pertenezcan al rango crítico.
+        if not 95 <= descuento <= 99:
+            return True
 
-if not 95 <= descuento <= 99:
-
-    return True
-
-clave_historial = history_key(item)
-
-# 2. Validar que la clave sea válida (De la rama main)
-
-if not isinstance(clave_historial, str) or not clave_historial.strip():
-
-    logger.warning("[BOMBA RECHAZADA] history_key(item) vacío.")
-
-    return False
-
-# 3. Verificar si ya fue alertada (De tu rama de fix)
-
-entrada_actual = historial_local.get(clave_historial)
-
-ya_alertada = isinstance(entrada_actual, dict) and entrada_actual.get("precio_alertado") is not None
-
-if ya_alertada:
-
-    logger.info(f"[BOMBA OMITIDA] Ya fue enviada previamente: {clave_historial}")
-
-    # Nota: Asegúrate de si aquí debes retornar True, False o continuar el flujo según tu diseño.
-
-return False
+        clave = history_key(item)
+        if not isinstance(clave, str) or not clave.strip():
+            logger.warning("[BOMBA RECHAZADA] history_key(item) vacío.")
             return False
 
-        if clave in historial_local:
-            entrada = historial_local.get(clave)
-            if not isinstance(entrada, dict) or entrada.get("precio_alertado") is not None:
-                logger.info("[BOMBA OMITIDA] Ya existe en historial local: %s", clave)
-                return False
+        entrada = historial_local.get(clave)
+        if isinstance(entrada, dict) and entrada.get("precio_alertado") is not None:
+            logger.info("[BOMBA OMITIDA] Ya alertada localmente: %s", clave)
+            return False
 
         if not es_enlace_valido_sin_error(item.get("url", "")):
-            logger.warning("[BOMBA RECHAZADA] Enlace inválido: %s", item.get("url"))
+            logger.warning("[BOMBA RECHAZADA] Enlace inválido para %s.", clave)
             return False
 
-        # Historial centralizado (opcional): sobrevive a rebases y ejecuciones efímeras de CI.
-
-        # Si Supabase no está configurado o falla, el historial local de arriba sigue mandando.
-
         central = supabase_history.ya_enviada(clave)
-
         if central is True:
-
             logger.info("[BOMBA OMITIDA] Ya registrada en Supabase: %s", clave)
             return False
         if central is None and supabase_history.habilitado():
             logger.warning(
-                "[BOMBA] Supabase no pudo confirmar la unicidad; "
-                "se utiliza el historial local. llave=%s",
+                "[BOMBA] No se pudo verificar Supabase; se usará el historial local. llave=%s",
                 clave,
             )
 
@@ -280,8 +251,8 @@ return False
     except (TypeError, ValueError, ZeroDivisionError) as exc:
         logger.warning("[BOMBA RECHAZADA] Datos inválidos (%s).", type(exc).__name__)
         return False
-    except Exception:
-        logger.exception("[BOMBA RECHAZADA] Error inesperado de validación.")
+    except Exception as exc:
+        logger.warning("[BOMBA RECHAZADA] Error inesperado (%s).", type(exc).__name__)
         return False
 
 
@@ -930,16 +901,18 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
 
 
 def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
-    """Envía alertas y persiste las bombas confirmadas en caliente."""
-    enviadas = fallidas = 0
+    """Envía alertas y persiste inmediatamente las bombas confirmadas por Telegram."""
+    enviadas = 0
+    fallidas = 0
     limite = alertas[:MAX_ALERTAS_POR_CICLO]
     sticker = os.environ.get("TELEGRAM_STICKER_LIQUIDACION", "").strip() or None
 
     for indice, alerta in enumerate(limite):
-        item = alerta["item"]
+        item = alerta.get("item") or {}
         descuento = _num(alerta.get("descuento"))
         es_bomba_prioritaria = 95 <= descuento <= 99
         clave = history_key(item)
+
         if not isinstance(clave, str) or not clave.strip():
             logger.error("[ALERTA OMITIDA] history_key(item) vacío.")
             fallidas += 1
@@ -952,40 +925,18 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
                 sticker_id=sticker if alerta.get("bomba") else None,
             )
         except RuntimeError as exc:
-            logger.error("%s", exc)
-            return enviadas, len(alertas[:MAX_ALERTAS_POR_CICLO]) - enviadas
-
-        if ok:
-
-            enviadas += 1
-
-            entrada = historial.get(alerta["clave"])
-
-            if isinstance(entrada, dict):
-
-                entrada["precio_alertado"] = alerta["actual"]
-
-                entrada["ultima_actualizacion"] = datetime.now(timezone.utc).isoformat()
-
-            if 95 <= (alerta.get("descuento") or 0) <= 99:
-
-                supabase_history.registrar_envio(history_key(alerta["item"]), alerta["item"], alerta["descuento"])
-
-        else:
-
+            logger.error("Telegram no está listo: %s", exc)
             fallidas += len(limite) - indice
-
             break
-
         except Exception as exc:
-
             logger.exception("Error inesperado enviando alerta (%s).", type(exc).__name__)
             fallidas += 1
             continue
 
         if not ok:
-            fallidas += 1
-            continue
+            logger.error("[ALERTA FALLIDA] Telegram no confirmó el envío; llave=%s", clave)
+            fallidas += len(limite) - indice
+            break
 
         enviadas += 1
         ahora = datetime.now(timezone.utc).isoformat()
@@ -993,6 +944,7 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
         if not isinstance(entrada, dict):
             entrada = {}
             historial[clave] = entrada
+
         entrada.update({
             "tienda": item.get("tienda"),
             "titulo": item.get("titulo"),
@@ -1003,7 +955,7 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
         })
 
         if es_bomba_prioritaria:
-            # Persistencia local inmediata tras la confirmación de Telegram.
+            # Guardar JSON de forma síncrona inmediatamente después de Telegram.
             try:
                 guardar_historial(historial)
             except OSError as exc:
@@ -1012,25 +964,27 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
                     type(exc).__name__,
                 )
 
-            # Misma llave canónica que la validación de unicidad.
+            # Registrar con la misma clave canónica que usa la deduplicación.
             try:
                 registrada = supabase_history.registrar_envio(
                     clave, item, int(round(descuento))
                 )
-                if not registrada:
+                if not registrada and supabase_history.habilitado():
                     logger.error(
                         "[BOMBA] Enviada a Telegram, pero Supabase no confirmó el registro. llave=%s",
                         clave,
                     )
             except Exception as exc:
-                logger.exception(
-                    "[BOMBA] Error guardando el registro central (%s).",
+                logger.error(
+                    "[BOMBA] Error guardando en Supabase (%s). llave=%s",
                     type(exc).__name__,
+                    clave,
                 )
 
     pendientes = max(0, len(alertas) - len(limite))
     if pendientes:
         logger.info("%d alertas quedan pendientes; límite=%d.", pendientes, MAX_ALERTAS_POR_CICLO)
+    logger.info("Despacho Telegram finalizado: enviadas=%d fallidas=%d.", enviadas, fallidas)
     return enviadas, fallidas
 
 
