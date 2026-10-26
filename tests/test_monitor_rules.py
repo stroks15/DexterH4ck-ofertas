@@ -49,9 +49,11 @@ class TestMonitorRules(unittest.TestCase):
             "bomba": True,
         }
         historial = {clave: {"precio_alertado": None}}
-        with patch("monitor_ofertas.enviar_telegram", return_value=True), \\
-             patch("monitor_ofertas.guardar_historial") as guardar, \\
-             patch.object(supabase_history, "registrar_envio", return_value=True) as registrar:
+        with (
+            patch("monitor_ofertas.enviar_telegram", return_value=True),
+            patch("monitor_ofertas.guardar_historial") as guardar,
+            patch.object(supabase_history, "registrar_envio", return_value=True) as registrar,
+        ):
             enviadas, fallidas = enviar_alertas([alerta], historial)
         self.assertEqual((enviadas, fallidas), (1, 0))
         self.assertEqual(historial[clave]["precio_alertado"], 4)
