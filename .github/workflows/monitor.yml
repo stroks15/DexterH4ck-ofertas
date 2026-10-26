@@ -256,6 +256,9 @@ jobs:
           git config user.name "bot-ofertas"
           git config user.email "bot-ofertas@users.noreply.github.com"
           git add historial_ofertas.json
+          if [ -f fuentes_cooldown.json ]; then
+            git add fuentes_cooldown.json
+          fi
           if [ -f tg_grupo_offset.json ]; then
             git add tg_grupo_offset.json
           fi
