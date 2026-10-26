@@ -154,7 +154,7 @@ def _guardar_google_cooldown(segundos: int | None = None) -> None:
     temporal = GOOGLE_COOLDOWN_FILE.with_suffix(GOOGLE_COOLDOWN_FILE.suffix + ".tmp")
     try:
         GOOGLE_COOLDOWN_FILE.parent.mkdir(parents=True, exist_ok=True)
-        temporal.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        temporal.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         os.replace(temporal, GOOGLE_COOLDOWN_FILE)
     except OSError as exc:
         print(f"Tiendas físicas: no se pudo persistir cooldown de Google ({type(exc).__name__}).")
