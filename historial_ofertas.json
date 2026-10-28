@@ -5,213 +5,312 @@
     "url": "https://www.walmart.com.mx/ip/pantalla/111",
     "precio_actual": 50.0,
     "precio_alertado": 50.0,
-    "ultima_actualizacion": "2026-10-28T19:51:56.911340+00:00"
+    "ultima_actualizacion": "2026-10-28T23:44:47.592467+00:00"
   },
-  "mercadolibre|title:mercado libre 2 paneles de cortina para ventana": {
-    "tienda": "Mercado Libre MX",
-    "titulo": "Mercado Libre: 2 Paneles de cortina para ventana",
-    "url": "https://www.promodescuentos.com/ofertas/2-panele-de-cortina-para-ventana-1202288",
-    "precio_actual": 176.0,
-    "precio_maximo": 387.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+  "walmart|title:walmart universidad asador de carbon redondo de 56 cm en": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart Universidad: Asador de Carbón Redondo de 56 cm en Liquidación",
+    "url": "https://www.promodescuentos.com/ofertas/walmart-universidad-asador-de-carbon-redondo-de-56-cm-en-liquidacion-1202347",
+    "precio_actual": 1245.0,
+    "precio_maximo": 2490.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
-  },
-  "amazon|title:amazon asus rog swift monitor oled pg32ucdmr 4k": {
-    "tienda": "Amazon MX",
-    "titulo": "Amazon: ASUS ROG Swift Monitor OLED PG32UCDMR 4K",
-    "url": "https://www.promodescuentos.com/ofertas/amazon-asus-rog-swift-monitor-oled-pg32ucdmr-4k-1202282",
-    "precio_actual": 12910.0,
-    "precio_maximo": 12910.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b004stj0uu": {
-    "tienda": "Amazon",
-    "titulo": "B004STJ0UU",
-    "url": "https://www.amazon.com.mx/dp/B004STJ0UU",
-    "precio_actual": 689.0,
-    "precio_maximo": 1949.99,
-    "ultima_actualizacion": "2026-10-28T19:55:09.943774+00:00",
-    "precio_alertado": 689.0
-  },
-  "amazon|code:b0ff4rvrnv": {
-    "tienda": "Amazon",
-    "titulo": "B0FF4RVRNV",
-    "url": "https://www.amazon.com.mx/dp/B0FF4RVRNV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 149.95,
-    "precio_maximo": 399.98,
-    "ultima_actualizacion": "2026-10-28T19:55:13.772921+00:00",
-    "precio_alertado": 149.95
   },
   "mercadolibre|title:ofertonesmexico": {
     "tienda": "Mercado Libre",
     "titulo": "ofertonesmexico",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BJ8O86V8h3lANbzNArd4ilhg6ig3rcANitUvQdOPsgRZ32F6Mgvk54i2TZi0kBoeq29lzeCZLQakqJEeX%2BlGfg9SaA5F8W6K2EV9I57CtnBjD0hWsbV89DFNydsMwERkwwqtyuQIIc5OkL1IE3oTH94NFbvBPG30EiCn1IEPJvER4Gc0f2UDUrVCbuc%2B9rI6Zvfo0yA%3D",
-    "precio_actual": 4549.0,
-    "precio_maximo": 8000.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BEwmYwPJU6xOkIA9tu6AX9KOma8bCypWSAjm1iAy9l1QbKvcNXmhsz%2F65nlsoXy5KGJoIWX7flJh28RGt9wNz9f0lTprPHiRT3pztIxyKvNVDGsjdUBqT4YqlEihVF97ZDeHddGGnyRlZYzadeVjHwK%2Bt%2FP1Xm9R7k3W57uOX3il9voxpKhSWgfblQ6xsHvGYAam56U%3D",
+    "precio_actual": 2.06,
+    "precio_maximo": 250.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b09pc7g4c6": {
+  "amazon|code:b0gr26kfmh": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Cubrebocas KN95 Tapabocas",
+    "url": "https://www.amazon.com.mx/dp/B0GR26KFMH?tag=ofertasperr05-20",
+    "precio_actual": 159.0,
+    "precio_maximo": 1199.0,
+    "ultima_actualizacion": "2026-10-28T23:48:07.293635+00:00",
+    "precio_alertado": 159.0
+  },
+  "amazon|code:b0f9p4vy8k": {
     "tienda": "Amazon",
-    "titulo": "B09PC7G4C6",
-    "url": "https://www.amazon.com.mx/dp/B09PC7G4C6?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 622.05,
-    "precio_maximo": 1055.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "B0F9P4VY8K",
+    "url": "https://www.amazon.com.mx/dp/B0F9P4VY8K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 79.0,
+    "precio_maximo": 239.0,
+    "ultima_actualizacion": "2026-10-28T23:48:38.197223+00:00",
+    "precio_alertado": 79.0
   },
-  "amazon|code:b0bwyg57xf": {
+  "amazon|code:b07y3b7k92": {
     "tienda": "Amazon",
-    "titulo": "B0BWYG57XF",
-    "url": "https://www.amazon.com.mx/dp/B0BWYG57XF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 3699.0,
-    "precio_maximo": 5799.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "B07Y3B7K92",
+    "url": "https://www.amazon.com.mx/dp/B07Y3B7K92?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 40.22,
+    "precio_maximo": 108.51,
+    "ultima_actualizacion": "2026-10-28T23:48:41.957841+00:00",
+    "precio_alertado": 40.22
   },
-  "amazon|code:b0h73fblht": {
+  "amazon|code:b0h1ld9nrr": {
     "tienda": "Amazon",
-    "titulo": "B0H73FBLHT",
-    "url": "https://www.amazon.com.mx/dp/B0H73FBLHT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 3059.24,
-    "precio_maximo": 4299.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "B0H1LD9NRR",
+    "url": "https://www.amazon.com.mx/dp/B0H1LD9NRR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 89.0,
+    "precio_maximo": 239.0,
+    "ultima_actualizacion": "2026-10-28T23:48:45.721340+00:00",
+    "precio_alertado": 89.0
   },
-  "amazon|code:b0c6vsz9ct": {
+  "amazon|code:b0bj6yjkdx": {
+    "tienda": "Amazon MX",
+    "titulo": "Carga 20W PD en un mini de GaN de 48 g, la velocidad de un cargador premium sin el peso — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0BJ6YJKDX?tag=ofertasperr05-20",
+    "precio_actual": 182.4,
+    "precio_maximo": 499.0,
+    "ultima_actualizacion": "2026-10-28T23:48:11.650805+00:00",
+    "precio_alertado": 182.4
+  },
+  "amazon|code:b0c2dgkqn7": {
     "tienda": "Amazon",
-    "titulo": "B0C6VSZ9CT",
-    "url": "https://www.amazon.com.mx/dp/B0C6VSZ9CT?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 269.0,
-    "precio_maximo": 355.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "B0C2DGKQN7",
+    "url": "https://www.amazon.com.mx/dp/B0C2DGKQN7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 404.05,
+    "precio_maximo": 949.0,
+    "ultima_actualizacion": "2026-10-28T23:48:49.537730+00:00",
+    "precio_alertado": 404.05
   },
-  "telegram|title:b03ykpgip": {
-    "tienda": "Telegram",
-    "titulo": "B03ykPgip",
-    "url": "https://www.amazon.com.mx/dp/B03ykPgip",
-    "precio_actual": 88.0,
-    "precio_maximo": 114.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+  "amazon|code:b0dxn3gdhk": {
+    "tienda": "Amazon MX",
+    "titulo": "Ácido salicílico y ceramidas en un limpiador vegano, eficacia de spa a precio de supermercado — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B0DXN3GDHK?tag=ofertasperr05-20",
+    "precio_actual": 113.92,
+    "precio_maximo": 245.0,
+    "ultima_actualizacion": "2026-10-28T23:48:15.415236+00:00",
+    "precio_alertado": 113.92
   },
-  "amazon|code:b0gz37xhvv": {
+  "amazon|code:b08y66j5nd": {
+    "tienda": "Amazon MX",
+    "titulo": "Whisky escocés 7 años en barril americano, sabor premium a precio de mixto — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B08Y66J5ND?tag=ofertasperr05-20",
+    "precio_actual": 198.25,
+    "precio_maximo": 419.0,
+    "ultima_actualizacion": "2026-10-28T23:48:19.181968+00:00",
+    "precio_alertado": 198.25
+  },
+  "amazon|code:b09y1frp35": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: TOCOBO Cotton Soft Sun Stick SPF50+ PA+++ 19 g Barra Solar…",
+    "url": "https://www.amazon.com.mx/dp/B09Y1FRP35?tag=ofertasperr05-20",
+    "precio_actual": 220.0,
+    "precio_maximo": 449.0,
+    "ultima_actualizacion": "2026-10-28T23:48:23.082879+00:00",
+    "precio_alertado": 220.0
+  },
+  "amazon|code:b00gf9zbja": {
+    "tienda": "Amazon MX",
+    "titulo": "Cardamomo y menta marina en 100 ml que te mantiene fresco y seguro todo el día — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B00GF9ZBJA?tag=ofertasperr05-20",
+    "precio_actual": 195.99,
+    "precio_maximo": 389.0,
+    "ultima_actualizacion": "2026-10-28T23:48:26.880670+00:00",
+    "precio_alertado": 195.99
+  },
+  "amazon|code:b07z43h4dr": {
     "tienda": "Amazon",
-    "titulo": "B0GZ37XHVV",
-    "url": "https://www.amazon.com.mx/dp/B0GZ37XHVV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 399.0,
-    "precio_maximo": 498.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "titulo": "B07Z43H4DR",
+    "url": "https://www.amazon.com.mx/dp/B07Z43H4DR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 298.0,
+    "precio_maximo": 552.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dmnxrtmj": {
+    "tienda": "Amazon",
+    "titulo": "B0DMNXRTMJ",
+    "url": "https://www.amazon.com.mx/dp/B0DMNXRTMJ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 503.2,
+    "precio_maximo": 899.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "mercadolibre|title:liquidapromos": {
     "tienda": "Mercado Libre",
     "titulo": "liquidapromos",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos01&matt_tool=34796773&forceInApp=true&ref=BNkI8P6ymTs0GuijfmjJfItV0Ui%2FQzO1vpWgW7Ri25xi2exgWsuIULbbiugVjf6Uy%2BJEV9Fkp%2F0ZdwECZ3tw7I%2F7e4lR4I%2Fp55yPtah%2BP5PZqEV654FH58XCdAr0BohPKGtppewmNLqq7xaopkZ1SpJrR%2B9a2deeCLmFyVnrBBcvpDVnuCqmjR2siXLT%2BNv6PXL3C0Y%3D",
-    "precio_actual": 2055.0,
-    "precio_maximo": 2500.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromos02&matt_tool=34796773&forceInApp=true&ref=BITxfdQIZoC2z713IVezvGy41oDebIll2QfVqOkRkHzpcplQW9zlck24TLAxn9jfwNVBZXJChIEposJFU4jlLEQFd7rFavozFL8ZPJloA8vpB7iOr4eX2KUfjRqGh1nRGGWr3kiZjoRj6uGsY33pLPSWJbDE1miyBD7YAm%2Bbunu1ZhajZTYjvisnVFPWlF1qG6saIRU76qI9PPXjXCzJOm%2BkzTS7wtcuxhLC0RjyGlE5%2Fr%2FGY6NaU6B0x%2FF0oj3Dey3CJA%3D%3D",
+    "precio_actual": 2512.0,
+    "precio_maximo": 4500.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "mercadolibre|title:be9820b7 a6b3 4e4a 9dc5 2e74e3c": {
-    "tienda": "Mercado Libre",
-    "titulo": "be9820b7 a6b3 4e4a 9dc5 2e74e3c",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists/be9820b7-a6b3-4e4a-9dc5-2e74e3c39906?matt_tool=35824865&forceInApp=true",
-    "precio_actual": 500.0,
-    "precio_maximo": 600.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b07k1bw1xy": {
+  "amazon|code:b0869d64hl": {
     "tienda": "Amazon",
-    "titulo": "Montblanc - Agua de perfume espray Explorer by Mont Blanc, 100 ml (para hombre)",
-    "url": "https://www.amazon.com.mx/dp/B07K1BW1XY",
-    "precio_actual": 681.99,
-    "precio_maximo": 769.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "titulo": "B0869D64HL",
+    "url": "https://www.amazon.com.mx/dp/B0869D64HL",
+    "precio_actual": 1046.99,
+    "precio_maximo": 1795.05,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0c8znx9tq": {
+    "tienda": "Amazon",
+    "titulo": "B0C8ZNX9TQ",
+    "url": "https://www.amazon.com.mx/dp/B0C8ZNX9TQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 530.4,
+    "precio_maximo": 804.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dcz5zy88": {
+    "tienda": "Amazon",
+    "titulo": "B0DCZ5ZY88",
+    "url": "https://www.amazon.com.mx/dp/B0DCZ5ZY88?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 999.0,
+    "precio_maximo": 1499.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ck9sshhl": {
+    "tienda": "Amazon",
+    "titulo": "B0CK9SSHHL",
+    "url": "https://www.amazon.com.mx/dp/B0CK9SSHHL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 79.5,
+    "precio_maximo": 116.09,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fng9bdym": {
+    "tienda": "Amazon",
+    "titulo": "B0FNG9BDYM",
+    "url": "https://www.amazon.com.mx/dp/B0FNG9BDYM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 9999.0,
+    "precio_maximo": 14499.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ch1h5gxf": {
+    "tienda": "Amazon",
+    "titulo": "B0CH1H5GXF",
+    "url": "https://www.amazon.com.mx/dp/B0CH1H5GXF?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 5653.0,
+    "precio_maximo": 8199.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b06xdl821j": {
+    "tienda": "Amazon",
+    "titulo": "B06XDL821J",
+    "url": "https://www.amazon.com.mx/dp/B06XDL821J?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1664.0,
+    "precio_maximo": 2287.94,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h8mjcg8f": {
+    "tienda": "Amazon",
+    "titulo": "B0H8MJCG8F",
+    "url": "https://www.amazon.com.mx/dp/B0H8MJCG8F?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 967.05,
+    "precio_maximo": 1299.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00uhuj2qg": {
+    "tienda": "Amazon",
+    "titulo": "B00UHUJ2QG",
+    "url": "https://www.amazon.com.mx/dp/B00UHUJ2QG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 310.77,
+    "precio_maximo": 347.21,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:liquid": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BOZRF3Ndpy7JTrOuAgqlYNEmah32kk0NZwwuBf%2FPD%2B1l5JPNc2n8hEkmLm2Kfz1ho9Q%2Fuoua6TUDbPiJID3EDf2cclxAYu337NSnn88RtdlYXmWjNIQGoybITTP0GncxJq0L4jG6o0dumbazM0mODa57TUDEmqrIj%2B%2Bf9WTbdpnW0DDaXngdGfIDDcwJtQrWCD4rlxQ%3D",
+    "precio_actual": 21900.0,
+    "precio_maximo": 24339.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0ck9s7hbn": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i 21VHD7NCZDG4XWYNDX14",
-    "url": "https://www.amazon.com.mx/dp/B0CK9S7HBN/ref=cm_sw_r_as_gl_api_gl_i_21VHD7NCZDG4XWYNDX14?linkCode=ml1&tag=liquidahorros--20&linkId=484d72f7000573a4d459d214e899de45&ascsubtag=srctok-5e9d9252d50665d5&btn_type=ss&btn_ref=srctok-5e9d9252d50665d5",
+    "url": "https://www.amazon.com.mx/dp/B0CK9S7HBN/ref=cm_sw_r_as_gl_api_gl_i_21VHD7NCZDG4XWYNDX14?linkCode=ml1&tag=liquidahorros--20&linkId=484d72f7000573a4d459d214e899de45&ascsubtag=srctok-06df285dc551c5b2&btn_type=ss&btn_ref=srctok-06df285dc551c5b2",
     "precio_actual": 171.0,
     "precio_maximo": 179.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b088rskm7s": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i FNSE9N44P0FZZSWPSBXX",
-    "url": "https://www.amazon.com.mx/dp/B088RSKM7S/ref=cm_sw_r_as_gl_api_gl_i_FNSE9N44P0FZZSWPSBXX?linkCode=ml1&tag=liquidahorros--20&linkId=2c3742456af2f308e53e63c9e3da36cc&ascsubtag=srctok-140c153bf4d9d159&btn_type=ss&btn_ref=srctok-140c153bf4d9d159",
+    "url": "https://www.amazon.com.mx/dp/B088RSKM7S/ref=cm_sw_r_as_gl_api_gl_i_FNSE9N44P0FZZSWPSBXX?linkCode=ml1&tag=liquidahorros--20&linkId=2c3742456af2f308e53e63c9e3da36cc&ascsubtag=srctok-1f3990c040980be6&btn_type=ss&btn_ref=srctok-1f3990c040980be6",
     "precio_actual": 36.0,
     "precio_maximo": 36.85,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b07ym7wj5l": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i G1E2MKG96JS5BXAJKECE",
-    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_G1E2MKG96JS5BXAJKECE?linkCode=ml1&tag=liquidahorros--20&linkId=c3b69ab861a68494b773b51b21e68637&ascsubtag=srctok-6c922c9192e0dcae&btn_type=ss&btn_ref=srctok-6c922c9192e0dcae",
+    "url": "https://www.amazon.com.mx/dp/B07YM7WJ5L/ref=cm_sw_r_as_gl_api_gl_i_G1E2MKG96JS5BXAJKECE?linkCode=ml1&tag=liquidahorros--20&linkId=c3b69ab861a68494b773b51b21e68637&ascsubtag=srctok-071dd0e34a5281ba&btn_type=ss&btn_ref=srctok-071dd0e34a5281ba",
     "precio_actual": 38.0,
     "precio_maximo": 38.2,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b07mbhshv5": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i ATE0GN5ZHWJJ7S7K1CQV",
-    "url": "https://www.amazon.com.mx/dp/B07MBHSHV5/ref=cm_sw_r_as_gl_api_gl_i_ATE0GN5ZHWJJ7S7K1CQV?linkCode=ml1&tag=liquidahorros--20&linkId=9dd1860a308d260b194cf0d72935f8bf&ascsubtag=srctok-0f527cfb7b379c43&btn_type=ss&btn_ref=srctok-0f527cfb7b379c43",
+    "url": "https://www.amazon.com.mx/dp/B07MBHSHV5/ref=cm_sw_r_as_gl_api_gl_i_ATE0GN5ZHWJJ7S7K1CQV?linkCode=ml1&tag=liquidahorros--20&linkId=9dd1860a308d260b194cf0d72935f8bf&ascsubtag=srctok-64b3bd00d88cfdaf&btn_type=ss&btn_ref=srctok-64b3bd00d88cfdaf",
     "precio_actual": 156.0,
     "precio_maximo": 156.8,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07mcvwxf6": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i ZMQ1EF0YZEWZSAAMHYKX",
+    "url": "https://www.amazon.com.mx/dp/B07MCVWXF6/ref=cm_sw_r_as_gl_api_gl_i_ZMQ1EF0YZEWZSAAMHYKX?linkCode=ml1&tag=liquidahorros--20&linkId=d835d1cda0f1064b2f7ca52236fec72f&ascsubtag=srctok-02ae40498e36caa0&btn_type=ss&btn_ref=srctok-02ae40498e36caa0",
+    "precio_actual": 156.0,
+    "precio_maximo": 156.8,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0ck983fsc": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i VEQNJ2SHQGYENECDNYMM",
-    "url": "https://www.amazon.com.mx/dp/B0CK983FSC/ref=cm_sw_r_as_gl_api_gl_i_VEQNJ2SHQGYENECDNYMM?linkCode=ml1&tag=liquidahorros--20&linkId=f3a4967dac8bdee63967bd0c3477569f&ascsubtag=srctok-34713dcd7c2958fe&btn_type=ss&btn_ref=srctok-34713dcd7c2958fe",
+    "url": "https://www.amazon.com.mx/dp/B0CK983FSC/ref=cm_sw_r_as_gl_api_gl_i_VEQNJ2SHQGYENECDNYMM?linkCode=ml1&tag=liquidahorros--20&linkId=f3a4967dac8bdee63967bd0c3477569f&ascsubtag=srctok-665cdb23e46740b4&btn_type=ss&btn_ref=srctok-665cdb23e46740b4",
     "precio_actual": 130.0,
     "precio_maximo": 130.5,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "mercadolibre|title:decoraciones inflables navidenas papa noel pinguino reno 6ft": {
+  "mercadolibre|title:kit de taladro inalambrico destornillador electrico azul pinchan 2000 rpm incluye bateria y cargador iluminacion led 50 hz 60 hz": {
     "tienda": "Mercado Libre MX",
-    "titulo": "Decoraciones Inflables Navideñas Papá Noel Pingüino Reno 6ft",
-    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BGREWBQ4SxpMNeZGMEBnoTAPKpHYRqIhl9oa%2FkG0kNqs%2Fk4J%2FcECSKFdQSHFpyfa%2B8oFNcXvIk8Pqiw1RoVnnFEnZENnsJj%2B3pnju98ZbwQpVeUjedfg1bG9bg7SUaG29THksXP47UV4R%2BPlz%2FoJvCSXcLien1swR%2BzmthCRqu07Wsj7CGd47yUY4ayNxoYTpA1VFdUgPGkW%2BaQ0H83P9K%2BfPUmCm62L4UZjDCPrtWaofpqZ6gLoAopsYU8ONbYHeJpp",
-    "precio_actual": 1699.0,
-    "precio_maximo": 1699.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "titulo": "Kit De Taladro Inalámbrico Destornillador Eléctrico Azul Pinchan 2000 RPM Incluye batería y cargador Iluminación LED 50 Hz/60 Hz",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BPLv6aWypbIAQIcIDmvfsuutGPK0YbIXzd4UIWO063LTgZyoob8Jc%2B3z%2BcrvUaIiFvoEzkA4cSOc1GzjqWnOIGhhxaeNHeMGrYijOnV0VfpP8GsqwMr0ghL%2BRRO%2BUGq2Y55I7z31s0UYFgz54FqYmXRx99XDChwQnzY02n402J7ZmXnnz8ec6xhea%2FsToknmmf%2BvOzc%3D",
+    "precio_actual": 915.0,
+    "precio_maximo": 915.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0f8j4vpps": {
+  "amazon|code:b01jsh53pc": {
     "tienda": "Amazon MX",
-    "titulo": "Suela de soporte reforzado y cordones gruesos hacen del Upland el tenis ideal para skate y uso diario. — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
-    "url": "https://www.amazon.com.mx/dp/B0F8J4VPPS?tag=ofertasperr05-20",
-    "precio_actual": 899.0,
-    "precio_maximo": 899.0,
-    "ultima_actualizacion": "2026-10-28T19:55:02.411775+00:00",
-    "precio_alertado": 899.0
-  },
-  "mercadolibre|title:liquid": {
-    "tienda": "Mercado Libre",
-    "titulo": "liquid",
-    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BEgB89RogGURdERtJ0SHIoI%2FZ1Xmfi2KePY1DhkGj6G1NreLgCAlsBDC%2BbhP5rCXIDCl4cQwppygmj21RHCRww4HahMVhT4%2Bzw7DwFu49dGqNUiUdmnrcercSPX786PecqH0Xc7XSs2xoLKvnQGbMv0fpu%2FQ2aT4WZUv3O7kjQbMP0TUAj2nClD8wIiFsLYT%2Fn10GBdnMeQWZXCA8q%2Fm9KkISpFhdPbw5YgZCIqsvcaQ0CLyOsfyCjP8mtLRMTD%2F2i%2BW8alsUOxlXcX6",
-    "precio_actual": 31499.0,
-    "precio_maximo": 31499.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "Amazon: Ariana Grande",
+    "url": "https://www.amazon.com.mx/dp/B01JSH53PC?tag=ofertasperr05-20",
+    "precio_actual": 609.5,
+    "precio_maximo": 609.5,
+    "ultima_actualizacion": "2026-10-28T23:48:30.634325+00:00",
+    "precio_alertado": 609.5
   },
   "amazon|code:b0dn1nfkqw": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i 3408P5D6YBJ1H3N6CSJY",
-    "url": "https://www.amazon.com.mx/dp/B0DN1NFKQW/ref=cm_sw_r_as_gl_api_gl_i_3408P5D6YBJ1H3N6CSJY?linkCode=ml1&tag=liquidahorros--20&linkId=a001936fad8d0f67f73cf7932e66e25c&ascsubtag=srctok-589689bc298d65a5&btn_type=ss&btn_ref=srctok-589689bc298d65a5",
+    "url": "https://www.amazon.com.mx/dp/B0DN1NFKQW/ref=cm_sw_r_as_gl_api_gl_i_3408P5D6YBJ1H3N6CSJY?linkCode=ml1&tag=liquidahorros--20&linkId=a001936fad8d0f67f73cf7932e66e25c&ascsubtag=srctok-16d8221b5122d6aa&btn_type=ss&btn_ref=srctok-16d8221b5122d6aa",
     "precio_actual": 3299.0,
     "precio_maximo": 3299.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "telegram|title:0i9zawru": {
@@ -220,160 +319,106 @@
     "url": "https://a.co/d/0i9zawRU",
     "precio_actual": 3999.0,
     "precio_maximo": 3999.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0fr68yybg": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i GR2FD5JR75NA2PKQNFKC",
-    "url": "https://www.amazon.com.mx/dp/B0FR68YYBG/ref=cm_sw_r_as_gl_api_gl_i_GR2FD5JR75NA2PKQNFKC?linkCode=ml1&tag=liquidahorros--20&linkId=76bedd42755f300916d414942b72df9c&ascsubtag=srctok-2ffac21612ef60c7&btn_type=ss&btn_ref=srctok-2ffac21612ef60c7",
+    "url": "https://www.amazon.com.mx/dp/B0FR68YYBG/ref=cm_sw_r_as_gl_api_gl_i_GR2FD5JR75NA2PKQNFKC?linkCode=ml1&tag=liquidahorros--20&linkId=76bedd42755f300916d414942b72df9c&ascsubtag=srctok-220060937e6db0dc&btn_type=ss&btn_ref=srctok-220060937e6db0dc",
     "precio_actual": 599.0,
     "precio_maximo": 599.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b09j632rb1": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i DSDRAT4HZ37CTQ08AEEG",
-    "url": "https://www.amazon.com.mx/dp/B09J632RB1/ref=cm_sw_r_as_gl_api_gl_i_DSDRAT4HZ37CTQ08AEEG?linkCode=ml1&tag=liquidahorros--20&linkId=cf90e6a042486702efad7e1b5a2591e2&ascsubtag=srctok-27b710ca508ba363&btn_type=ss&btn_ref=srctok-27b710ca508ba363",
+    "url": "https://www.amazon.com.mx/dp/B09J632RB1/ref=cm_sw_r_as_gl_api_gl_i_DSDRAT4HZ37CTQ08AEEG?linkCode=ml1&tag=liquidahorros--20&linkId=cf90e6a042486702efad7e1b5a2591e2&ascsubtag=srctok-1cf4e26ce62cf44f&btn_type=ss&btn_ref=srctok-1cf4e26ce62cf44f",
     "precio_actual": 61.0,
     "precio_maximo": 61.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0csqgsg98": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i SJVTQWJ8QZA0T0V70Q3Z",
-    "url": "https://www.amazon.com.mx/dp/B0CSQGSG98/ref=cm_sw_r_as_gl_api_gl_i_SJVTQWJ8QZA0T0V70Q3Z?linkCode=ml1&tag=liquidahorros--20&linkId=79e4809ac9e8a16944144f80a79d10e9&ascsubtag=srctok-208745085e108712&btn_type=ss&btn_ref=srctok-208745085e108712",
+    "url": "https://www.amazon.com.mx/dp/B0CSQGSG98/ref=cm_sw_r_as_gl_api_gl_i_SJVTQWJ8QZA0T0V70Q3Z?linkCode=ml1&tag=liquidahorros--20&linkId=79e4809ac9e8a16944144f80a79d10e9&ascsubtag=srctok-022fbb93347296eb&btn_type=ss&btn_ref=srctok-022fbb93347296eb",
     "precio_actual": 1228.0,
     "precio_maximo": 1228.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0b1vyv2sr": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i VHQNX09K952XRRHD7B3R",
-    "url": "https://www.amazon.com.mx/dp/B0B1VYV2SR/ref=cm_sw_r_as_gl_api_gl_i_VHQNX09K952XRRHD7B3R?linkCode=ml1&tag=liquidahorros--20&linkId=a1e2492be730f4ed206d52e4e03ac7a9&ascsubtag=srctok-0b295d256de057d0&btn_type=ss&btn_ref=srctok-0b295d256de057d0",
+    "url": "https://www.amazon.com.mx/dp/B0B1VYV2SR/ref=cm_sw_r_as_gl_api_gl_i_VHQNX09K952XRRHD7B3R?linkCode=ml1&tag=liquidahorros--20&linkId=a1e2492be730f4ed206d52e4e03ac7a9&ascsubtag=srctok-62ad3572b3960fa5&btn_type=ss&btn_ref=srctok-62ad3572b3960fa5",
     "precio_actual": 250.0,
     "precio_maximo": 250.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b01jsh53pc": {
+  "amazon|code:b085q5tgpy": {
     "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i 9YJ61DZ44FMA9KNMTK48",
-    "url": "https://www.amazon.com.mx/dp/B01JSH53PC/ref=cm_sw_r_as_gl_api_gl_i_9YJ61DZ44FMA9KNMTK48?linkCode=ml1&tag=liquidahorros--20&linkId=6ffb94e167b585930c1425a44138e8fa&ascsubtag=srctok-38cd7d3546898d1a&btn_type=ss&btn_ref=srctok-38cd7d3546898d1a",
-    "precio_actual": 600.0,
-    "precio_maximo": 600.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "titulo": "B085Q5TGPY",
+    "url": "https://www.amazon.com.mx/gp/product/B085Q5TGPY?ascsubtag=srctok-5d81bcd5d838d110&btn_type=ss&btn_ref=srctok-143e992921164926&linkCode=sl2&tag=axfire-20&linkId=30640b1b29f6a3a8681cbbd99cfcf757&ref_=as_li_ss_tl",
+    "precio_actual": 342.0,
+    "precio_maximo": 342.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0dpxr1rn3": {
+  "amazon|code:b0h1kyrgnf": {
     "tienda": "Amazon",
-    "titulo": "B0DPXR1RN3",
-    "url": "https://www.amazon.com.mx/UTILIA-Juego-Mesas-Auxiliares-para/dp/B0DPXR1RN3?pf_rd_r=JE9PRDX08GNTSZYRFH8E&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromosmx-20&linkId=d6b438fc3610fe54f75f2691ad6c9fae&ref_=as_li_ss_tl&ascsubtag=srctok-620e4d4e8900fca8&btn_type=ss&btn_ref=srctok-620e4d4e8900fca8",
-    "precio_actual": 1269.0,
-    "precio_maximo": 1269.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "B0H1KYRGNF",
+    "url": "https://www.amazon.com.mx/dp/B0H1KYRGNF?ascsubtag=srctok-4749bf68294b9590&btn_type=ss&btn_ref=srctok-094eb176a2671d5f&th=1&linkCode=sl2&tag=liquidapromosmx-20&linkId=59cc0e2a40705df33bb29df21f7b4b83&ref_=as_li_ss_tl",
+    "precio_actual": 89.0,
+    "precio_maximo": 89.0,
+    "ultima_actualizacion": "2026-10-28T23:48:53.332814+00:00",
+    "precio_alertado": 89.0
   },
-  "amazon|code:b0bn4kj654": {
+  "amazon|code:b0dksxwll4": {
     "tienda": "Amazon",
-    "titulo": "B0BN4KJ654",
-    "url": "https://www.amazon.com.mx/gp/product/B0BN4KJ654?smid=AVDBXBAVVSXLQ&psc=1&ascsubtag=srctok-2103550b71e064c2&btn_type=ss&btn_ref=srctok-50892297aa43e37b&linkCode=sl2&tag=liquidapromosmx-20&linkId=6751a2d98b749cb3805cbafd054ddf1d&ref_=as_li_ss_tl",
-    "precio_actual": 108.0,
-    "precio_maximo": 108.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
+    "titulo": "B0DKSXWLL4",
+    "url": "https://www.amazon.com.mx/dp/B0DKSXWLL4?ascsubtag=srctok-0a0155c7907b1d62&btn_type=ss&btn_ref=srctok-2ec18b19f34033fc&linkCode=sl2&tag=liquidapromosmx-20&linkId=9a9542e6e8f86ac58489af1aec3f79f2&ref_=as_li_ss_tl",
+    "precio_actual": 119.0,
+    "precio_maximo": 119.0,
+    "ultima_actualizacion": "2026-10-28T23:48:57.113321+00:00",
+    "precio_alertado": 119.0
   },
-  "amazon|code:b0cszbp9nr": {
-    "tienda": "Amazon",
-    "titulo": "B0CSZBP9NR",
-    "url": "https://www.amazon.com.mx/Raganet-Autom%C3%A1tico-Protecci%C3%B3n-Transparente-Antiquemaduras/dp/B0CSZBP9NR?pf_rd_r=JE9PRDX08GNTSZYRFH8E&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromosmx-20&linkId=d7fab336b9c557d4077f57f199a825c1&ref_=as_li_ss_tl&ascsubtag=srctok-6cc427a2d5238aac&btn_type=ss&btn_ref=srctok-6cc427a2d5238aac",
-    "precio_actual": 229.0,
-    "precio_maximo": 229.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0dyfpvfbc": {
-    "tienda": "Amazon",
-    "titulo": "B0DYFPVFBC",
-    "url": "https://www.amazon.com.mx/dp/B0DYFPVFBC?smid=AVDBXBAVVSXLQ&linkCode=sl2&tag=liquidapromosmx-20&linkId=3715d54fe45d3cfaa2bf8bb528a866c1&ref_=as_li_ss_tl&ascsubtag=srctok-4d9a592b23dec3c7&btn_type=ss&btn_ref=srctok-4d9a592b23dec3c7",
-    "precio_actual": 589.0,
-    "precio_maximo": 589.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0hbz4scgd": {
-    "tienda": "Amazon",
-    "titulo": "B0HBZ4SCGD",
-    "url": "https://www.amazon.com.mx/dp/B0HBZ4SCGD?ascsubtag=srctok-2988d40d1e82fd28&btn_type=ss&btn_ref=srctok-23b810ff76220f49&linkCode=sl2&tag=liquidapromosmx-20&linkId=37a57d3dcd4844b8278bdd3f4f8639e2&ref_=as_li_ss_tl",
-    "precio_actual": 49.0,
-    "precio_maximo": 49.0,
-    "ultima_actualizacion": "2026-10-28T19:55:17.718638+00:00",
-    "precio_alertado": 49.0
-  },
-  "amazon|code:b0dgg1n7rh": {
-    "tienda": "Amazon",
-    "titulo": "B0DGG1N7RH",
-    "url": "https://www.amazon.com.mx/Sartenes-Antiadherente-Utensilios-Granito-Bater%C3%ADa/dp/B0DGG1N7RH?pf_rd_r=JE9PRDX08GNTSZYRFH8E&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromosmx-20&linkId=19b77d92824bde31ccac9485584c206f&ref_=as_li_ss_tl&ascsubtag=srctok-213c9a7613704138&btn_type=ss&btn_ref=srctok-213c9a7613704138",
-    "precio_actual": 897.0,
-    "precio_maximo": 897.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b086x87l34": {
-    "tienda": "Amazon",
-    "titulo": "B086X87L34",
-    "url": "https://www.amazon.com.mx/SONGMICS-Organizador-Ventilaci%C3%B3n-33-3x23x14cm-Transparente/dp/B086X87L34?pf_rd_r=JE9PRDX08GNTSZYRFH8E&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromosmx-20&linkId=d11eca9648b6e2cdf5aa11b06606208a&ref_=as_li_ss_tl&ascsubtag=srctok-22a5925c522cbafd&btn_type=ss&btn_ref=srctok-22a5925c522cbafd",
-    "precio_actual": 719.0,
-    "precio_maximo": 719.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0cn9rqw98": {
-    "tienda": "Amazon",
-    "titulo": "B0CN9RQW98",
-    "url": "https://www.amazon.com.mx/Raganet-Diferentes-Antideslizantes-Plastico-L%C3%ADquidos/dp/B0CN9RQW98?pf_rd_r=JE9PRDX08GNTSZYRFH8E&pf_rd_p=562161d9-b188-4a9f-acfe-e6d1a59a45b5&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&linkCode=sl2&tag=liquidapromosmx-20&linkId=32c789ae4c8788c9afeaaf6d0cbb2fe4&ref_=as_li_ss_tl&ascsubtag=srctok-4ddda36412e24e05&btn_type=ss&btn_ref=srctok-4ddda36412e24e05",
-    "precio_actual": 179.0,
-    "precio_maximo": 179.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:variedad de articulos pasan desde pesitos en walmart": {
-    "tienda": "Walmart",
-    "titulo": "Liquidación variedad de articulos pasan desde pesitos en walmart",
-    "url": "https://liquidapromos.com/oferta/6919",
-    "precio_actual": 5.0,
-    "precio_maximo": 5.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "mercadolibre|title:bharara king edp 1 litro 1000ml perfume para hombre": {
+  "mercadolibre|title:perfume eau de parfum liquid brun 100 ml french avenue amaderado vainilla": {
     "tienda": "Mercado Libre MX",
-    "titulo": "Bharara King Edp 1 Litro (1000ml) Perfume Para Hombre",
+    "titulo": "Perfume Eau de Parfum Liquid Brun 100 ml French Avenue Amaderado Vainilla",
     "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx/lists/c387b8dc-fb34-4891-9e5d-c93c56532fd5?matt_tool=11154996&forceInApp=true",
-    "precio_actual": 4149.0,
-    "precio_maximo": 4149.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "precio_actual": 621.0,
+    "precio_maximo": 621.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "mercadolibre|title:mercadolibre samsung galaxy s26 256 gb 12 gb galaxy ai camara triple violeta": {
-    "tienda": "Mercado Libre MX",
-    "titulo": "MercadoLibre: Samsung Galaxy S26+, 256 gb, 12 gb, Galaxy Ai, cámara triple violeta",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=tiktok&matt_tool=35824865&forceInApp=true&ref=BK%2F4Ku%2F%2F4ERNGxAkPKGoUIrVfDkL5UacxYyt73VAGdNk1zDKBpiGv8jsqNYg4OP5hXHDI%2F7TmxPXp%2F4bjZi6B6iWpL9DQAmX7VrVR5prj0t%2BKMZToc9RMchV3j%2BaREakzJDsxmRasYw1DtFUzBQLZH8nE9U7XI02UixQIt8nY42sCBsId69NHgU%2F9PoJybvspQmdjZQCbrbpTYlZfnOK0OEUhPD15s7F2L2zv330mGRkIvtM%2Fo9klbfsb%2Bi4MxWsIKkKmw%3D%3D",
-    "precio_actual": 13980.0,
-    "precio_maximo": 13980.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:walmart tarro marca mainstays con tapa y popote 400ml vidrio forma de barril con el 95 de": {
+  "walmart|title:walmart rastrillo para dama marca gillette venus intima 2pzs con el 85 de": {
     "tienda": "Walmart MX",
-    "titulo": "Walmart – Tarro marca Mainstays con Tapa y popote / 400ml Vidrio Forma de Barril con el 95% de descuento…",
-    "url": "https://liquidazona.com/ofertas/1-00-walmart-tarro-marca-mainstays-con-tapa-y-popote-400ml-vidrio-forma-de-barril-con-el-95-de-descuento/",
-    "precio_actual": 1.0,
-    "precio_maximo": 49.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "titulo": "Walmart – Rastrillo para dama marca Gillette Venus Íntima / 2pzs con el 85% de descuento…",
+    "url": "https://liquidazona.com/ofertas/15-00-walmart-rastrillo-para-dama-marca-gillette-venus-intima-2pzs-con-el-85-de-descuento/",
+    "precio_actual": 15.0,
+    "precio_maximo": 111.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart porta brochas marca prichos color azul con el 80 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Porta brochas marca Prichos / Color Azul con el 80% de descuento…",
+    "url": "https://liquidazona.com/ofertas/5-00-walmart-porta-brochas-marca-prichos-color-azul-con-el-80-de-descuento/",
+    "precio_actual": 5.0,
+    "precio_maximo": 25.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart columpio marca graco baby delight color azul con el 75 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Columpio marca Graco Baby Delight / Color Azul con el 75% de descuento…",
+    "url": "https://liquidazona.com/ofertas/600-00-walmart-columpio-marca-graco-baby-delight-color-azul-con-el-75-de-descuento/",
+    "precio_actual": 600.0,
+    "precio_maximo": 2399.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart panal para bebe marca parents choice etapa 1 44pzs con el 75 de": {
@@ -382,16 +427,34 @@
     "url": "https://liquidazona.com/ofertas/40-00-walmart-panal-para-bebe-marca-parents-choice-etapa-1-44pzs-con-el-75-de-descuento/",
     "precio_actual": 40.0,
     "precio_maximo": 150.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
-  "walmart|title:walmart plato para pizza marca regalos siglo xxi varios disenos con el 70 de": {
+  "walmart|title:walmart organizador marca pen gear 6 cajones color blanco con el 70 de": {
     "tienda": "Walmart MX",
-    "titulo": "Walmart – Plato para pizza marca Regalos Siglo XXI / Varios Diseños con el 70% de descuento…",
-    "url": "https://liquidazona.com/ofertas/9-00-walmart-plato-para-pizza-marca-regalos-siglo-xxi-varios-disenos-con-el-70-de-descuento/",
-    "precio_actual": 9.0,
-    "precio_maximo": 29.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "titulo": "Walmart – Organizador marca Pen Gear / 6 Cajones Color Blanco con el 70% de descuento…",
+    "url": "https://liquidazona.com/ofertas/30-00-walmart-organizador-marca-pen-gear-6-cajones-color-blanco-con-el-70-de-descuento/",
+    "precio_actual": 30.0,
+    "precio_maximo": 100.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart closet organizador marca mainstays 6 cajones color negro con el 70 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Clóset organizador marca Mainstays / 6 Cajones color Negro con el 70% de descuento…",
+    "url": "https://liquidazona.com/ofertas/390-00-walmart-closet-organizador-marca-mainstays-6-cajones-color-negro-con-el-70-de-descuento/",
+    "precio_actual": 390.0,
+    "precio_maximo": 1299.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart cesta para ropa marca clorox plegable bolsa lateral de malla color blanca con el 70 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Cesta para ropa marca Clorox / Plegable bolsa lateral de malla Color Blanca con el 70% de descuento…",
+    "url": "https://liquidazona.com/ofertas/26-00-walmart-cesta-para-ropa-marca-clorox-plegable-bolsa-lateral-de-malla-color-blanca-con-el-70-de-descuento/",
+    "precio_actual": 26.0,
+    "precio_maximo": 85.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart colchon inflable individual marca ozark trail color azul marino con el 60 de": {
@@ -400,52 +463,7 @@
     "url": "https://liquidazona.com/ofertas/99-00-walmart-colchon-inflable-individual-marca-ozark-trail-color-azul-marino-con-el-60-de-descuento/",
     "precio_actual": 99.0,
     "precio_maximo": 249.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:walmart sopa de pasta marca aurrera caracol y estrellas bolsa de 200gr con el 60 de": {
-    "tienda": "Walmart MX",
-    "titulo": "Walmart – Sopa de pasta marca Aurrera Caracol y Estrellas / Bolsa de 200gr con el 60% de descuento…",
-    "url": "https://liquidazona.com/ofertas/3-00-walmart-sopa-de-pasta-marca-aurrera-caracol-y-estrellas-bolsa-de-200gr-con-el-60-de-descuento/",
-    "precio_actual": 3.0,
-    "precio_maximo": 7.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:walmart alimento lacteo marca enfagrow etapa 3 1 1kg a partir de 1 ano con el 60 de": {
-    "tienda": "Walmart MX",
-    "titulo": "Walmart – Alimento lácteo marca Enfagrow Etapa 3 / 1.1kg a partir de 1 año con el 60% de descuento…",
-    "url": "https://liquidazona.com/ofertas/199-00-walmart-alimento-lacteo-marca-enfagrow-etapa-3-1-1kg-a-partir-de-1-ano-con-el-60-de-descuento/",
-    "precio_actual": 199.0,
-    "precio_maximo": 465.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:walmart inflable de halloween marca way to celebrate esqueleto pato con el 50 de": {
-    "tienda": "Walmart MX",
-    "titulo": "Walmart – Inflable de Halloween marca Way To Celebrate Esqueleto Pato con el 50% de descuento…",
-    "url": "https://liquidazona.com/ofertas/245-00-walmart-inflable-de-halloween-marca-way-to-celebrate-esqueleto-pato-con-el-50-de-descuento/",
-    "precio_actual": 245.0,
-    "precio_maximo": 499.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:walmart pasta a la carbonara marca dolores caja de 325gr con el 50 de": {
-    "tienda": "Walmart MX",
-    "titulo": "Walmart – Pasta a la carbonara marca Dolores / Caja de 325gr con el 50% de descuento…",
-    "url": "https://liquidazona.com/ofertas/34-00-walmart-pasta-a-la-carbonara-marca-dolores-caja-de-325gr-con-el-50-de-descuento/",
-    "precio_actual": 34.0,
-    "precio_maximo": 68.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
-    "precio_alertado": null
-  },
-  "walmart|title:walmart cereal marca kelloggs froot loops jumbo caja de 340gr con el 50 de": {
-    "tienda": "Walmart MX",
-    "titulo": "Walmart – Cereal marca Kellogg’s Froot Loops Jumbo / Caja de 340gr con el 50% de descuento…",
-    "url": "https://liquidazona.com/ofertas/40-00-walmart-cereal-marca-kelloggs-froot-loops-jumbo-caja-de-340gr-con-el-50-de-descuento/",
-    "precio_actual": 40.0,
-    "precio_maximo": 80.0,
-    "ultima_actualizacion": "2026-10-28T19:55:01.574257+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
     "precio_alertado": null
   },
   "chedraui|title:motocicleta veloci gps caiman black edition rvs 200cc 2021 negro": {
@@ -454,7 +472,16 @@
     "url": "https://www.chedraui.com.mx/motocicleta-veloci-gps-caiman-black-edition-rvs-200cc-2021-outlet-negro-6034783/p",
     "precio_actual": 17009.0,
     "precio_maximo": 39999.0,
-    "ultima_actualizacion": "2026-10-28T19:55:06.176495+00:00",
+    "ultima_actualizacion": "2026-10-28T23:48:34.434460+00:00",
     "precio_alertado": 17009.0
+  },
+  "walmart|title:walmart variedad de accesorios para el cuidado y limpieza personal marca cala hasta con el 60 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Variedad de accesorios para el cuidado y limpieza personal marca Cala hasta con el 60% de descuento…",
+    "url": "https://liquidazona.com/ofertas/10-00-walmart-variedad-de-accesorios-para-el-cuidado-y-limpieza-personal-marca-cala-hasta-con-el-60-de-descuento/",
+    "precio_actual": 10.0,
+    "precio_maximo": 10.0,
+    "ultima_actualizacion": "2026-10-28T23:48:05.994225+00:00",
+    "precio_alertado": null
   }
 }
