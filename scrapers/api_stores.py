@@ -103,7 +103,9 @@ class JsonEndpointAdapter(BaseScraper):
                 row["origen_link"] = "api_publica"
                 rows.append(row)
         if rows:
-            self.last_status = {"state": "ok", "count": len(rows)}
+            self.last_status = {"state": "partial" if ultimo else "ok", "count": len(rows)}
+            if ultimo:
+                self.last_status["last_error"] = ultimo
         else:
             self.last_status = ultimo or {"state": "ok", "count": 0}
         return rows
@@ -217,11 +219,15 @@ class VtexCatalogAdapter(BaseScraper):
                 offer = seller.get("commertialOffer") or {}
                 if not isinstance(offer, dict):
                     continue
+                raw_available = offer.get("AvailableQuantity")
+                if isinstance(raw_available, bool):
+                    continue
                 try:
-                    available = float(offer.get("AvailableQuantity") or 0)
-                except (TypeError, ValueError):
+                    available = float(raw_available or 0)
+                except (TypeError, ValueError, OverflowError):
                     available = 0
-                if available <= 0:
+                import math
+                if not math.isfinite(available) or available <= 0:
                     continue
                 price = self._positive_price(offer.get("Price"))
                 if price is None:
