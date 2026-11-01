@@ -198,11 +198,13 @@ class VtexCatalogAdapter(BaseScraper):
 
     @staticmethod
     def _positive_price(value: Any) -> float | None:
-        try:
-            price = float(value)
-        except (TypeError, ValueError):
+        """Acepta solo montos financieros limpios; rechaza booleanos y texto libre."""
+        from core.price_sanitizer import parse_price
+
+        if isinstance(value, bool):
             return None
-        return price if price > 0 else None
+        price = parse_price(value)
+        return price if price is not None and 0 < price <= 2_000_000 else None
 
     def _prices(self, product: dict) -> tuple[float | None, float | None]:
         best = None
