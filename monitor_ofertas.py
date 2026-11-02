@@ -324,18 +324,20 @@ def _num(valor) -> float:
         return 0.0
 
 
+def es_origen_telegram(item: dict) -> bool:
+    """Reconoce mensajes procedentes de Telegram aunque el canal tenga otro nombre."""
+    campos = ("origen_link", "origen", "fuente", "source", "canal", "channel", "nombre_fuente")
+    valores = " ".join(str(item.get(c) or "") for c in campos).casefold()
+    normalizado = re.sub(r"[^a-z0-9]+", " ", valores).strip()
+    return any(token in normalizado for token in ("telegram", "grupo walmart channel", "walmart channel"))
+
+
 def descuento_declarado_telegram(item: dict) -> int:
-    """Descuento (50-99) que declara un mensaje de Telegram que no trae precio anterior; 0 si no aplica.
-
-    Regla de los grupos/canales de Telegram: basta con que el descuento esté entre 50 % y 99 %,
-    en cualquier tienda. Solo vale para ``origen_link == "Telegram"``: las demás fuentes siguen
-    exigiendo una referencia de precio real.
-    """
-    if str(item.get("origen_link") or "").strip().lower() != "telegram":
+    """Descuento declarado válido para mensajes de Telegram (50–99%)."""
+    if not es_origen_telegram(item):
         return 0
-    valor = _num(item.get("descuento_declarado"))
+    valor = _num(item.get("descuento_declarado", item.get("descuento", 0)))
     return int(round(valor)) if MIN_DESCUENTO <= valor <= MAX_DESCUENTO else 0
-
 
 def calcular_datos(item: dict, entrada_historial: dict | None = None):
     """Devuelve (precio_actual, precio_referencia, descuento).
@@ -828,7 +830,7 @@ def _actualizar_historial(historial: dict, clave: str, item: dict, actual: float
 
 
 def procesar_candidatos(candidatos: list, historial: dict) -> list:
-    """Filtra, puntúa y devuelve las alertas ordenadas por prioridad. Actualiza el historial."""
+    """Telegram: la elegibilidad depende únicamente de descuento 50–99%; otras fuentes conservan filtros."""
     ahora = datetime.now(timezone.utc).isoformat()
     unicos, duplicados = deduplicate_candidates([c for c in candidatos if isinstance(c, dict)])
     logger.info("Candidatos: %d únicos (%d duplicados descartados).", len(unicos), duplicados)
@@ -836,16 +838,16 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
 
     for original in unicos:
         try:
-            if not _candidato_de_tienda_objetivo(original):
+            es_telegram = es_origen_telegram(original)
+            if not es_telegram and not _candidato_de_tienda_objetivo(original):
                 continue
             item = dict(original)
             url = str(item.get("url") or "").strip()
             if not es_enlace_valido_sin_error(url):
                 try:
                     from core.ai_reparador import reparar_url
-
                     url = str(reparar_url(url, item.get("tienda", ""), str(item.get("titulo", ""))) or "").strip()
-                except Exception as exc:  # sin IA se continúa con la URL original
+                except Exception as exc:
                     logger.debug("reparar_url no disponible: %s", exc)
                 if not es_enlace_valido_sin_error(url):
                     continue
@@ -859,78 +861,56 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
             actual, referencia, descuento = calcular_datos(item, entrada)
             if actual <= 0:
                 continue
-            if not referencia:
-                descuento = descuento_declarado_telegram(item) or descuento
+            declarado = descuento_declarado_telegram(item) if es_telegram else 0
+            if declarado:
+                descuento = declarado
             item["precio_actual"] = actual
             item["precio_anterior"] = referencia or None
             item["descuento"] = descuento
 
             publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
             precio_extremo = None
-            # Los precios <= $10 reciben su etiqueta especial solo si la ficha oficial
-            # confirma el monto. Si ya tienen descuento válido, la etiqueta no lo sustituye.
-            if 0 < actual <= 10:
-                try:
-                    verificacion_extremo = analizar_precio_extremo(item)
-                    if verificacion_extremo.get("publicable_como_extremo"):
-                        precio_extremo = verificacion_extremo
-                        publicable = True
-                except Exception as exc:
-                    logger.debug("No se pudo verificar precio extremo (%s).", type(exc).__name__)
-            if (
-                publicable
-                and str(item.get("tipo_fuente") or "").upper() != "FISICA"
-                and not es_enlace_producto_directo(url)
-            ):
-                publicable = False
-            if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
-                publicable = False
-            previo = (entrada or {}).get("precio_alertado")
-            if publicable and previo is not None and actual >= _num(previo) * 0.97:
-                publicable = False  # ya alertado a este precio (o menor)
+            # Para Telegram, el porcentaje es el único filtro comercial: no aplicar
+            # reglas de bomba, score, tienda, URL directa ni supresión por precio alertado.
+            if not es_telegram:
+                if 0 < actual <= 10:
+                    try:
+                        verificacion_extremo = analizar_precio_extremo(item)
+                        if verificacion_extremo.get("publicable_como_extremo"):
+                            precio_extremo = verificacion_extremo
+                            publicable = True
+                    except Exception as exc:
+                        logger.debug("No se pudo verificar precio extremo (%s).", type(exc).__name__)
+                if publicable and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_enlace_producto_directo(url):
+                    publicable = False
+                if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
+                    publicable = False
+                previo = (entrada or {}).get("precio_alertado")
+                if publicable and previo is not None and actual >= _num(previo) * 0.97:
+                    publicable = False
 
             if publicable:
                 if precio_extremo:
                     puntuacion = 100 if precio_extremo.get("nivel") == "ULTRA_EXTREMO" else 90
-                    evaluacion = {
-                        "puntuacion": puntuacion,
-                        "indicadores": ["precio_extremo_verificado"],
-                        "condiciones": [],
-                    }
+                    evaluacion = {"puntuacion": puntuacion, "indicadores": ["precio_extremo_verificado"], "condiciones": []}
                 else:
                     try:
                         evaluacion = evaluate_product(item)
                     except Exception as exc:
                         logger.warning("evaluate_product falló para %s: %s", url, exc)
                         evaluacion = {"puntuacion": descuento, "indicadores": []}
-                alertas.append(
-                    {
-                        "clave": clave,
-                        "item": item,
-                        "actual": actual,
-                        "referencia": referencia,
-                        "descuento": descuento,
-                        "evaluacion": evaluacion,
-                        "precio_extremo": precio_extremo,
-                        "bomba": DESCUENTO_BOMBA <= descuento <= MAX_DESCUENTO and referencia > actual,
-                    }
-                )
+                alertas.append({
+                    "clave": clave, "item": item, "actual": actual, "referencia": referencia,
+                    "descuento": descuento, "evaluacion": evaluacion, "precio_extremo": precio_extremo,
+                    "bomba": DESCUENTO_BOMBA <= descuento <= MAX_DESCUENTO and referencia > actual,
+                })
             _actualizar_historial(historial, clave, item, actual, referencia, ahora)
-        except Exception as exc:  # un candidato defectuoso no detiene el ciclo
+        except Exception as exc:
             logger.warning("Candidato descartado por error (%s): %s", type(exc).__name__, exc)
 
-    # Bombas primero; después las fuentes prioritarias (p. ej. Grupo Walmart Channel); luego puntuación y descuento.
-    alertas.sort(
-        key=lambda a: (
-            a["bomba"],
-            int(a["item"].get("prioridad_fuente") or 0),
-            (a["evaluacion"] or {}).get("puntuacion", 0),
-            a["descuento"],
-        ),
-        reverse=True,
-    )
+    alertas.sort(key=lambda a: (a["bomba"], int(a["item"].get("prioridad_fuente") or 0),
+                                (a["evaluacion"] or {}).get("puntuacion", 0), a["descuento"]), reverse=True)
     return alertas
-
 
 def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
     """Envía alertas y persiste inmediatamente las bombas confirmadas por Telegram."""
