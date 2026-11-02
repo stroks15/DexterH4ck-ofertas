@@ -870,8 +870,13 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
 
             publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
             precio_extremo = None
-            # Para Telegram, el porcentaje es el único filtro comercial: no aplicar
-            # reglas de bomba, score, tienda, URL directa ni supresión por precio alertado.
+            # Evita repetir una misma alerta entre ciclos para todas las fuentes,
+            # incluyendo Telegram. Solo vuelve a alertar si el precio cae al menos 3%.
+            previo = (entrada or {}).get("precio_alertado")
+            if publicable and previo is not None and actual >= _num(previo) * 0.97:
+                publicable = False
+
+            # Las validaciones comerciales adicionales se mantienen solo para fuentes no Telegram.
             if not es_telegram:
                 if 0 < actual <= 10:
                     try:
@@ -884,9 +889,6 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
                 if publicable and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_enlace_producto_directo(url):
                     publicable = False
                 if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
-                    publicable = False
-                previo = (entrada or {}).get("precio_alertado")
-                if publicable and previo is not None and actual >= _num(previo) * 0.97:
                     publicable = False
 
             if publicable:
