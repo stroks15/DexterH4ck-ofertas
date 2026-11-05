@@ -17,8 +17,8 @@ class TestMonitorRules(unittest.TestCase):
         self.assertEqual(calculate_discount(1000, 100), 90)
 
     def test_discount_component_scales_to_100(self):
-        self.assertEqual(score_product({"titulo": "producto"}, 0)["componente_descuento"], 5)
-        self.assertEqual(score_product({"titulo": "producto"}, 99)["componente_descuento"], 100)
+        self.assertEqual(score_product({"titulo": "producto"}, 0)["componente_descuento"], 0)
+        self.assertEqual(score_product({"titulo": "producto"}, 99)["componente_descuento"], 50)
 
     def test_history_reference_is_conservative(self):
         actual, reference, discount = calcular_datos(
@@ -81,8 +81,8 @@ class TestMonitorRules(unittest.TestCase):
         self.assertEqual(alertas[0]["descuento"], 0)
         mensaje = __import__("monitor_ofertas").formatear_alerta(alertas[0])
         self.assertIn("ULTRA EXTREMO", mensaje)
-        self.assertIn("Precio comprobado", mensaje)
-        self.assertNotIn("0% de descuento", mensaje)
+        self.assertIn("precio verificado", mensaje)
+        self.assertNotIn("0%", mensaje)
 
     def test_bomba_usa_exactamente_history_key(self):
         item = {

@@ -1,5 +1,6 @@
 {
   "categorias": [
+    "Tecnología",
     "Celulares",
     "Smartphones",
     "Tablets",
@@ -75,6 +76,7 @@
     "Accesorios Automotrices"
   ],
   "alta_demanda": [
+    "Tecnología",
     "Celulares",
     "Smartphones",
     "Laptops",
@@ -296,6 +298,8 @@
     "pilas": "Energía y Pilas",
     "baterias": "Energía y Pilas",
     "seguridad": "Seguridad",
-    "accesorios automotrices": "Accesorios Automotrices"
+    "accesorios automotrices": "Accesorios Automotrices",
+    "tecnologia": "Tecnología",
+    "tecnología": "Tecnología"
   }
 }

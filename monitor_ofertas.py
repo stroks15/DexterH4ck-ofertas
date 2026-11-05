@@ -18,7 +18,7 @@ import requests
 from core.liquidation_engine import evaluate_product, calculate_discount
 from core.extreme_liquidation import analizar_precio_extremo
 from core import supabase_history
-from core.price_sanitizer import coincide_con_medida, sanear_par_precios, texto_del_item
+from core.price_sanitizer import coincide_con_medida, sanear_par_precios, texto_del_item, sanitize_history
 from core.offer_identity import canonical_store, deduplicate_candidates, identity_keys, history_key
 from core.product_identifiers import canonical_product_identifier
 from core.source_resilience import HONEST_USER_AGENT, classify_status
@@ -71,24 +71,10 @@ def cargar_historial():
 
 
 def _sanear_historial(historial: dict) -> dict:
-    """Repara entradas contaminadas por el bug de gramajes (p. ej. "567 g" guardado como
-    precio_maximo=567). El máximo corregido pasa a ser el precio actual observado."""
-    reparadas = 0
-    for entrada in historial.values():
-        if not isinstance(entrada, dict):
-            continue
-        titulo = texto_del_item(entrada)
-        actual = _num(entrada.get("precio_actual") or entrada.get("precio"))
-        for campo in ("precio_maximo", "precio_anterior", "wasPrice", "listPrice", "precio_referencia"):
-            referencia = entrada.get(campo)
-            if referencia and coincide_con_medida(referencia, titulo):
-                if campo == "precio_maximo" and actual:
-                    entrada[campo] = actual
-                else:
-                    entrada[campo] = None
-                reparadas += 1
+    """Repara precios históricos contaminados por gramajes antes de usarlos."""
+    historial, reparadas = sanitize_history(historial)
     if reparadas:
-        logger.warning("Historial: %d campos contaminados por gramajes fueron reparados.", reparadas)
+        logger.warning("Historial: %d campos contaminados fueron reparados.", reparadas)
     return historial
 
 
@@ -195,16 +181,9 @@ def es_enlace_producto_directo(url):
 
 
 def es_enlace_valido_sin_error(url: str) -> bool:
-    """Valida que el link del producto no contenga errores estructurales."""
-    if not url or not isinstance(url, str):
-        return False
-    parsed = urlparse(url.strip())
-    if not parsed.scheme in ["http", "https"] or not parsed.netloc:
-        return False
-    path_lower = parsed.path.lower()
-    if any(err in path_lower for err in ["null", "undefined", "{productid}"]):
-        return False
-    return True
+    """Rechaza URLs sin esquema/host y marcadores sin resolver en ruta o query."""
+    from tools.telegram_bot import clean_product_url
+    return clean_product_url(url) is not None
 
 
 def validar_y_filtrar_bomba(item: dict, historial_local: dict) -> bool:
@@ -279,7 +258,7 @@ def _candidato_de_tienda_objetivo(item):
     return origen in ("telegram", "liquidazona", "whatsapp") and bool(item.get("url"))
 
 
-DESCUENTO_BOMBA = 90  # 90–99 % con referencia válida => alerta prioritaria 💣
+DESCUENTO_BOMBA = 90  # Campo de prioridad; el formato distingue ⚡ (90–94) de 💣 (95–99).
 MAX_ALERTAS_POR_CICLO = int(os.environ.get("MAX_ALERTAS_POR_CICLO", "25") or 25)
 FUENTES_TIMEOUT_TOTAL = float(os.environ.get("FUENTES_TIMEOUT_TOTAL", "540") or 540)
 FUENTES_CONCURRENCIA = 6
@@ -310,6 +289,7 @@ VARIABLES_OPCIONALES = (
     "ML_QUERIES",
     "MERCADOLIBRE_ACCESS_TOKEN",
     "APPS_SCRIPT_PROXY_URL",
+    "LEGACY_SEARCH_URLS_JSON",
 )
 
 
@@ -408,7 +388,7 @@ def enviar_telegram(texto, imagen=None, sticker_id=None) -> bool:
             if metodo == "sendPhoto":
                 response = session.post(
                     _telegram_api(metodo),
-                    data={"chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto[:1000], "parse_mode": "HTML"},
+                    data={"chat_id": TELEGRAM_CHAT_ID, "photo": imagen, "caption": texto[:1000], "parse_mode": "MarkdownV2"},
                     timeout=25,
                 )
             else:
@@ -417,7 +397,7 @@ def enviar_telegram(texto, imagen=None, sticker_id=None) -> bool:
                     data={
                         "chat_id": TELEGRAM_CHAT_ID,
                         "text": texto,
-                        "parse_mode": "HTML",
+                        "parse_mode": "MarkdownV2",
                         "disable_web_page_preview": False,
                     },
                     timeout=20,
@@ -447,39 +427,14 @@ def enviar_telegram(texto, imagen=None, sticker_id=None) -> bool:
 
 
 def formatear_alerta(alerta: dict) -> str:
-    item = alerta["item"]
-    bomba = alerta["bomba"]
-    extremo = alerta.get("precio_extremo")
-    tipo = "VERDE" if es_enlace_producto_directo(item.get("url")) else "ROJO"
-    if extremo:
-        nivel = "ULTRA EXTREMO" if extremo.get("nivel") == "ULTRA_EXTREMO" else "EXTREMO"
-        marca = f"💣 <b>{nivel} — PRECIO VERIFICADO</b>\n"
-    else:
-        # El 💣 es obligatorio en todo el rango 90-99 %, aunque la bandera no venga marcada.
-        marca = "💣 <b>LIQUIDACIÓN EXTREMA</b>\n" if (bomba or 90 <= (alerta.get("descuento") or 0) <= 99) else ""
-    lineas = [
-        f"{marca}{formato_alerta_tipo(tipo)} <b>{html.escape(str(item.get('titulo') or ''))}</b>",
-        f"🏪 {html.escape(str(item.get('tienda') or 'Tienda'))}",
-        f"💰 ${alerta['actual']:,.2f} MXN"
-        + (f" (antes ${alerta['referencia']:,.2f})" if alerta.get("referencia") else ""),
-    ]
-    if extremo:
-        lineas.append("🛡️ Precio comprobado en la ficha oficial de la tienda")
-        if alerta.get("referencia") and 50 <= (alerta.get("descuento") or 0) <= 99:
-            lineas.append(f"📉 {alerta['descuento']}% de descuento")
-    else:
-        lineas.append(
-            f"📉 {alerta['descuento']}% de descuento"
-            + ("" if alerta.get("referencia") else " (indicado en el mensaje de Telegram)")
-        )
-    ev = alerta.get("evaluacion") or {}
-    if ev.get("puntuacion") is not None:
-        extra = f" · {', '.join(ev.get('indicadores', [])[:4])}" if ev.get("indicadores") else ""
-        lineas.append(f"⭐ Puntuación {ev['puntuacion']}/100{html.escape(extra)}")
-    if ev.get("condiciones"):
-        lineas.append("⚠️ Condiciones: " + html.escape(", ".join(map(str, ev["condiciones"]))))
-    lineas.append(f"🔗 {item.get('url', '')}")
-    return "\n".join(lineas)
+    """Format a tiered alert using Telegram MarkdownV2 (single source of truth)."""
+    from tools.telegram_bot import format_alert
+    evaluacion = alerta.get("evaluacion") or {}
+    item = alerta.get("item") or {}
+    item.setdefault("marca", evaluacion.get("marca", ""))
+    item.setdefault("categoria", evaluacion.get("categoria", ""))
+    alerta["item"] = item
+    return format_alert(alerta)
 
 
 # ---------------------------------------------------------------------------
@@ -578,10 +533,18 @@ def _tiendas_bloqueadas() -> set:
 def _estado_tiendas_mexico():
     from scrapers import tiendas_mexico
 
-    estados = list(tiendas_mexico.LAST_STATUS.values())
-    if not estados or any(e == "ok" for e in estados):
-        return {"state": "ok"}
-    return {"state": estados[0]}
+    estados = [
+        value if isinstance(value, dict) else {"state": str(value)}
+        for value in tiendas_mexico.LAST_STATUS.values()
+    ]
+    if not estados:
+        return {"state": "not_run"}
+    if any(value.get("state") == "ok" for value in estados):
+        return {"state": "ok", "stores": estados}
+    if any(value.get("state") == "empty" for value in estados):
+        return {"state": "empty", "stores": estados}
+    first = estados[0]
+    return {"state": first.get("state", "unknown"), "http": first.get("http_status"), "reason": first.get("reason")}
 
 
 def _estado_modulo(modulo: str):
@@ -728,68 +691,92 @@ def _ejecutar_fuente(
 
 
 def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
-    """Orquestación paralela: cada fuente corre aislada, con timeout y estado real reportado."""
+    """Ejecuta API-first primero y solo después recurre al Spider HTML legacy."""
     global ULTIMO_REPORTE_FUENTES
-    logger.info("Iniciando despacho multihilo de scrapers de liquidación...")
+    logger.info("Iniciando despacho API-first de scrapers de liquidación...")
     _instalar_registro_http()
     fuentes = definir_fuentes()
     bloqueadas = _tiendas_bloqueadas()
     salida: dict = {}
     salida_lock = threading.Lock()
-    hilos: list[tuple[Fuente, threading.Thread]] = []
     semaforo = threading.Semaphore(FUENTES_CONCURRENCIA)
-
-    for fuente in fuentes:
-        if fuente.tiendas and fuente.tiendas <= bloqueadas:
-            salida[fuente.nombre] = {
-                "fuente": fuente.nombre,
-                "estado": "skipped_preflight",
-                "candidatos": 0,
-                "segundos": 0.0,
-            }
-            logger.warning("[%s] omitida: la tienda no pasó el preflight (las demás continúan).", fuente.nombre)
-            continue
-        hilo = threading.Thread(
-            target=_ejecutar_fuente,
-            args=(fuente, salida, semaforo, salida_lock),
-            name=f"src-{fuente.nombre}",
-            daemon=True,
-        )
-        hilo.start()
-        hilos.append((fuente, hilo))
-
     limite = time.monotonic() + FUENTES_TIMEOUT_TOTAL
-    for fuente, hilo in hilos:
-        hilo.join(max(0.0, limite - time.monotonic()))
-        with salida_lock:
 
-            # Si el worker ya publicó su resultado final, se conserva aunque el
+    legacy = next((f for f in fuentes if f.nombre == "legacy:tiendas_mexico"), None)
+    primarias = [f for f in fuentes if f is not legacy]
 
-            # hilo aún esté saliendo. Solo se marca timeout si no publicó estado.
-
-            if hilo.is_alive() and fuente.nombre not in salida:
-
-                fuente.abandonada.set()
-
+    def ejecutar_grupo(grupo: list[Fuente]) -> None:
+        hilos: list[tuple[Fuente, threading.Thread]] = []
+        for fuente in grupo:
+            if fuente.tiendas and fuente.tiendas <= bloqueadas:
                 salida[fuente.nombre] = {
-
-                    "fuente": fuente.nombre,
-
-                    "estado": "timeout",
-
-                    "candidatos": 0,
-
-                    "segundos": round(FUENTES_TIMEOUT_TOTAL, 1),
-
+                    "fuente": fuente.nombre, "estado": "skipped_preflight",
+                    "candidatos": 0, "segundos": 0.0,
                 }
+                logger.warning("[%s] omitida: la tienda no pasó el preflight (las demás continúan).", fuente.nombre)
+                continue
+            hilo = threading.Thread(
+                target=_ejecutar_fuente,
+                args=(fuente, salida, semaforo, salida_lock),
+                name=f"src-{fuente.nombre}", daemon=True,
+            )
+            hilo.start()
+            hilos.append((fuente, hilo))
 
-                logger.error("[%s] timeout; se abandona esta fuente del ciclo y el monitor continúa.", fuente.nombre)
+        for fuente, hilo in hilos:
+            hilo.join(max(0.0, limite - time.monotonic()))
+            with salida_lock:
+                if hilo.is_alive() and fuente.nombre not in salida:
+                    fuente.abandonada.set()
+                    salida[fuente.nombre] = {
+                        "fuente": fuente.nombre, "estado": "timeout", "candidatos": 0,
+                        "segundos": round(FUENTES_TIMEOUT_TOTAL, 1),
+                    }
+                    logger.error("[%s] timeout; se abandona esta fuente del ciclo y el monitor continúa.", fuente.nombre)
+
+    # Fase 1: APIs oficiales/JSON, comunidad y fuentes no-legacy.
+    ejecutar_grupo(primarias)
+
     candidatos: list = []
-    for fuente in fuentes:
-        with salida_lock:
-            estado_final = salida.get(fuente.nombre, {}).get("estado")
-        if estado_final != "timeout":
-            candidatos.extend(fuente.resultado)
+    tiendas_resueltas_por_api: set[str] = set()
+    for fuente in primarias:
+        if salida.get(fuente.nombre, {}).get("estado") == "timeout":
+            continue
+        candidatos.extend(fuente.resultado)
+        if fuente.nombre.startswith(("api:", "proxy:")):
+            for item in fuente.resultado:
+                if isinstance(item, dict):
+                    tiendas_resueltas_por_api.add(canonical_store(item.get("tienda") or item.get("store")))
+
+    # Fase 2: el Spider HTML se ejecuta solo para tiendas que no devolvieron
+    # productos desde la capa API-first. Una API vacía/no configurada permite fallback.
+    if legacy is not None:
+        from scrapers import tiendas_mexico
+        tiendas_legacy = set(tiendas_mexico._configured_urls())
+        pendientes = [
+            name for name in tiendas_legacy
+            if canonical_store(name) not in tiendas_resueltas_por_api
+            and canonical_store(name) not in bloqueadas
+        ]
+        if pendientes and time.monotonic() < limite:
+            legacy.funcion = lambda pending=tuple(sorted(pendientes)): tiendas_mexico.buscar_todas(filtro_tienda=pending)
+            legacy.tiendas = {canonical_store(name) for name in pendientes}
+            logger.info("Fallback Scrapling para tiendas sin resultados API: %s", ", ".join(sorted(pendientes)))
+            ejecutar_grupo([legacy])
+            if salida.get(legacy.nombre, {}).get("estado") != "timeout":
+                candidatos.extend(legacy.resultado)
+        else:
+            tiendas_mexico.LAST_STATUS.clear()
+            if not pendientes:
+                estado = "skipped_api_priority"
+                motivo = "Todas las tiendas legacy ya tuvieron resultados API-first."
+            else:
+                estado = "timeout"
+                motivo = "Se agotó el presupuesto de tiempo antes del fallback Scrapling."
+            tiendas_mexico.LAST_STATUS["legacy"] = {"state": estado, "reason": motivo}
+            salida[legacy.nombre] = {
+                "fuente": legacy.nombre, "estado": estado, "candidatos": 0, "segundos": 0.0,
+            }
 
     ULTIMO_REPORTE_FUENTES = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -797,10 +784,8 @@ def ejecutar_orquestacion_paralela(contexto_ficticio=None) -> list:
         "fuentes": [salida[f.nombre] for f in fuentes if f.nombre in salida],
     }
     for fila in ULTIMO_REPORTE_FUENTES["fuentes"]:
-        nivel = logging.INFO if fila["estado"] in ESTADOS_SIN_FALLO else logging.WARNING
-        logger.log(
-            nivel, "[FUENTE] %-34s estado=%-18s candidatos=%d", fila["fuente"], fila["estado"], fila["candidatos"]
-        )
+        nivel = logging.INFO if fila["estado"] in ESTADOS_SIN_FALLO or fila["estado"] == "skipped_api_priority" else logging.WARNING
+        logger.log(nivel, "[FUENTE] %-34s estado=%-18s candidatos=%d", fila["fuente"], fila["estado"], fila["candidatos"])
     return candidatos
 
 
@@ -867,6 +852,7 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
             item["precio_actual"] = actual
             item["precio_anterior"] = referencia or None
             item["descuento"] = descuento
+            item["descuento_verificado"] = bool(referencia and referencia > actual)
 
             publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
             precio_extremo = None
@@ -888,8 +874,8 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
                         logger.debug("No se pudo verificar precio extremo (%s).", type(exc).__name__)
                 if publicable and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_enlace_producto_directo(url):
                     publicable = False
-                if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
-                    publicable = False
+            if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
+                publicable = False
 
             if publicable:
                 if precio_extremo:
@@ -904,14 +890,19 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
                 alertas.append({
                     "clave": clave, "item": item, "actual": actual, "referencia": referencia,
                     "descuento": descuento, "evaluacion": evaluacion, "precio_extremo": precio_extremo,
-                    "bomba": DESCUENTO_BOMBA <= descuento <= MAX_DESCUENTO and referencia > actual,
+                    "bomba": DESCUENTO_BOMBA <= descuento <= MAX_DESCUENTO and (referencia > actual or es_telegram),
                 })
             _actualizar_historial(historial, clave, item, actual, referencia, ahora)
         except Exception as exc:
             logger.warning("Candidato descartado por error (%s): %s", type(exc).__name__, exc)
 
-    alertas.sort(key=lambda a: (a["bomba"], int(a["item"].get("prioridad_fuente") or 0),
-                                (a["evaluacion"] or {}).get("puntuacion", 0), a["descuento"]), reverse=True)
+    alertas.sort(key=lambda a: (
+        90 <= int(a.get("descuento") or 0) <= 99,
+        95 <= int(a.get("descuento") or 0) <= 99,
+        int(a["item"].get("prioridad_fuente") or 0),
+        (a["evaluacion"] or {}).get("puntuacion", 0),
+        a["descuento"],
+    ), reverse=True)
     return alertas
 
 def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
@@ -936,7 +927,7 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
             ok = enviar_telegram(
                 formatear_alerta(alerta),
                 imagen=item.get("imagen"),
-                sticker_id=sticker if alerta.get("bomba") else None,
+                sticker_id=sticker if 95 <= descuento <= 99 else None,
             )
         except RuntimeError as exc:
             logger.error("Telegram no está listo: %s", exc)

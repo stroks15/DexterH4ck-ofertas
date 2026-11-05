@@ -130,3 +130,35 @@ def sanear_par_precios(actual: Any, anterior: Any, texto: Any = "") -> tuple[flo
         # independientemente del descuento calculado. Nunca convertir un gramaje en precio.
         return precio, None, "anterior_igual_a_gramaje"
     return precio, previo, ""
+
+
+def sanitize_history(history: Any) -> tuple[dict, int]:
+    """Repair historical price fields in-place and return (history, repaired_count).
+
+    A contaminated maximum is reset to the current observed price, never promoted to
+    a reference. Other contaminated reference fields are nulled.
+    """
+    if not isinstance(history, dict):
+        return {}, 0
+    repaired = 0
+    for entry in history.values():
+        if not isinstance(entry, dict):
+            continue
+        title = texto_del_item(entry)
+        current_raw = entry.get("precio_actual") or entry.get("precio")
+        current = parse_price(current_raw)
+        if current is None or coincide_con_medida(current_raw, title):
+            if current_raw not in (None, ""):
+                entry["precio_actual"] = None
+                if "precio" in entry:
+                    entry["precio"] = None
+                repaired += 1
+            current = None
+        for field in ("precio_maximo", "precio_anterior", "precio_alertado", "wasPrice", "listPrice", "precio_referencia"):
+            raw = entry.get(field)
+            if raw in (None, "", 0, 0.0):
+                continue
+            if parse_price(raw) is None or coincide_con_medida(raw, title):
+                entry[field] = current if field == "precio_maximo" and current else None
+                repaired += 1
+    return history, repaired

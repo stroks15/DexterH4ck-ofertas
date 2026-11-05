@@ -1,5 +1,5 @@
-requests
-curl_cffi
-beautifulsoup4
-feedparser
+requests>=2.31,<3
+curl_cffi>=0.7
+beautifulsoup4>=4.12
+feedparser>=6.0
 telethon>=1.36,<2

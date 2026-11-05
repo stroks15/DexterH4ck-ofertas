@@ -2,8 +2,7 @@ name: Monitor de descuentos
 
 on:
   schedule:
-    # Cada 15 minutos, desplazado 7 minutos para evitar el pico de cada hora.
-    - cron: "7,22,37,52 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -48,30 +47,21 @@ jobs:
             echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
           fi
 
-      - name: Cachear binarios de Playwright
-        if: hashFiles('requirements-browser.txt') != ''
+      - name: Cachear Chromium para captura XHR normal
         uses: actions/cache@v4
         id: playwright-cache
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-browser.txt') }}
 
-      - name: Instalar navegadores para captura JSON (opcional)
-        if: hashFiles('requirements-browser.txt') != ''
+      - name: Instalar Chromium para captura XHR (sin stealth)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: python -m playwright install chromium
+
+      - name: Verificar Scrapling (sesiones HTTP respetuosas)
         shell: bash
         run: |
-          set -euo pipefail
-          if python -c "import playwright" >/dev/null 2>&1; then
-            echo "Instalando binarios de Playwright: Chromium + WebKit."
-            if [ "${{ steps.playwright-cache.outputs.cache-hit }}" = "true" ]; then
-              echo "Caché de Playwright encontrada; se verifican/instalan los navegadores solicitados."
-            else
-              echo "Caché de Playwright no encontrada; se instalarán los navegadores."
-            fi
-            python -m playwright install --with-deps chromium webkit
-          else
-            echo "::notice::Playwright no está instalado; no se descargan binarios de navegador."
-          fi
+          python -c "from scrapling.spiders import Spider; from scrapling.fetchers import FetcherSession; print('Scrapling Spider disponible')"
 
       - name: Verificar secretos de Telegram
         env:
@@ -179,6 +169,20 @@ jobs:
           path: preflight_health.json
           if-no-files-found: ignore
 
+      - name: Preparar contexto RAG con Firecrawl (opcional)
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          FIRECRAWL_RAG_URLS: ${{ vars.FIRECRAWL_RAG_URLS }}
+        run: python tools/firecrawl_rag_export.py
+
+      - name: Conservar contexto RAG de Firecrawl
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: firecrawl-rag-context
+          path: .cache/firecrawl/rag_context.jsonl
+          if-no-files-found: ignore
+
       - name: Ejecutar monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -201,6 +205,8 @@ jobs:
           TELEGRAM_WALMART_INVITE: ${{ secrets.TELEGRAM_WALMART_INVITE }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          FIRECRAWL_RAG_URLS: ${{ vars.FIRECRAWL_RAG_URLS }}
           ML_PRICE_LOOKUPS: "40"
           ML_OFFICIAL_ONLY: "false"
           ML_API_LIMIT: "50"
@@ -230,6 +236,7 @@ jobs:
           CHEDRAUI_VTEX_PAGES: ${{ vars.CHEDRAUI_VTEX_PAGES }}
           SORIANA_QUERIES: ${{ vars.SORIANA_QUERIES }}
           SORIANA_PAGES: ${{ vars.SORIANA_PAGES }}
+          LEGACY_SEARCH_URLS_JSON: ${{ vars.LEGACY_SEARCH_URLS_JSON }}
           NETWORK_BROWSER_ENABLED: "true"
           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
           NETWORK_BROWSER_WAIT_MS: "6500"

@@ -11,27 +11,6 @@ ROOT = Path(__file__).resolve().parent.parent
 CONFIG_CATEGORIAS = ROOT / "config" / "categorias_ofertas.json"
 CONFIG_MARCAS = ROOT / "marcas_prioritarias.json"
 
-KEYWORDS_LIQUIDACION = {
-    "liquidacion": 25,
-    "liquidación": 25,
-    "remate": 20,
-    "saldo": 20,
-    "saldos": 20,
-    "outlet": 15,
-    "ultima pieza": 15,
-    "última pieza": 15,
-    "ultimas piezas": 15,
-    "últimas piezas": 15,
-    "open box": 10,
-    "warehouse": 10,
-    "clearance": 10,
-    "oferta relampago": 10,
-    "oferta relámpago": 10,
-    "precio extremo": 20,
-    "precio error": 15,
-    "error de precio": 15,
-}
-
 
 def normalize_text(value):
     text = re.sub(r"\s+", " ", str(value or "").lower()).strip()
@@ -123,11 +102,9 @@ def score_product(product, discount=None):
         )
     )
     indicators = []
-    # El descuento es el componente principal: aporta de 5 a 100 puntos.
-    # 50% = ~53 puntos; 90% = ~91; 99% = 100. Los demás indicadores
-    # funcionan como bonos de prioridad, con tope final de 100.
+    # El descuento matemático real aporta hasta 50 puntos (99% = 50).
     descuento_normalizado = min(max(float(discount or 0), 0), 99)
-    discount_score = round(5 + (descuento_normalizado / 99) * 95)
+    discount_score = round((descuento_normalizado / 99) * 50)
     score = discount_score
 
     brand, brand_group = detect_priority_brand(product)
@@ -136,17 +113,13 @@ def score_product(product, discount=None):
         indicators.append(f"marca:{brand}")
 
     category = infer_category(product)
-    high_demand = any(normalize_text(category) == normalize_text(x) for x in categorias.get("alta_demanda", []))
+    high_demand = any(normalize_text(category) == normalize_text(x) for x in categorias.get("alta_demanda", [])) or any(term in normalize_text(category) for term in ("tecnologia", "consolas", "bebe", "hogar"))
     if high_demand:
         score += 15
         indicators.append(f"categoria_alta:{category}")
 
-    keyword_bonus = 0
-    for keyword, points in KEYWORDS_LIQUIDACION.items():
-        if normalize_text(keyword) in text:
-            keyword_bonus = max(keyword_bonus, points)
-    if keyword_bonus:
-        score += min(keyword_bonus, 25)
+    if "liquidacion" in text:
+        score += 10
         indicators.append("liquidacion")
 
     last_piece_outlet = any(term in text for term in ("ultima pieza", "ultimas piezas", "outlet", "clearance"))
@@ -162,16 +135,13 @@ def score_product(product, discount=None):
         indicators.append("liquidacion_centavos_fisica")
     if extreme["es_extremo"]:
         indicators.append("precio_extremo")
-        score += 15
         if extreme["url_oficial"]:
-            score += 5
             indicators.append("url_tienda_oficial")
         if extreme["precio_verificado"]:
-            score += 20
             indicators.append("precio_extremo_verificado")
 
     return {
-        "puntuacion": max(5, min(score, 100)),
+        "puntuacion": max(0, min(score, 100)),
         "componente_descuento": discount_score,
         "descuento": int(discount or 0),
         "marca": brand,
