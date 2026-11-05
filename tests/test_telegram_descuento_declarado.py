@@ -116,7 +116,7 @@ class MonitorReglaTelegramTests(unittest.TestCase):
         self.assertEqual(alertas[0]["descuento"], 70)
         texto = mon.formatear_alerta(alertas[0])
         self.assertNotIn("antes", texto)
-        self.assertIn("70% de descuento (indicado en el mensaje de Telegram)", texto)
+        self.assertIn("70% (REPORTADO POR LA FUENTE)", texto)
         self.assertNotIn("💣", texto)
 
     def test_95_a_99_declarado_lleva_bomba_y_se_envia_una_sola_vez(self):

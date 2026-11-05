@@ -61,10 +61,11 @@ class AlertRulesTests(unittest.TestCase):
         historial[alertas[0]["clave"]]["precio_alertado"] = 50
         self.assertEqual(mon.procesar_candidatos([_item(50, 1000)], historial), [])
 
-    def test_90_percent_with_valid_reference_is_bomb(self):
+    def test_90_percent_with_valid_reference_is_urgent_gold(self):
         alertas = mon.procesar_candidatos([_item(100, 1000)], {})
         self.assertEqual(len(alertas), 1)
-        self.assertTrue(alertas[0]["bomba"])
+        self.assertTrue(alertas[0]["bomba"])  # priority lane; formatter maps 90-94 to ⚡
+        self.assertTrue(mon.formatear_alerta(alertas[0]).startswith("⚡"))
 
     def test_below_min_discount_is_not_published(self):
         self.assertEqual(mon.procesar_candidatos([_item(600, 1000)], {}), [])

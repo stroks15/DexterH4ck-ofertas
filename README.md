@@ -75,7 +75,7 @@ Chedraui utiliza una estructura de URLs distinta a la ruta genérica `/search?q=
 El monitor mantiene dos capas de descubrimiento:
 
 1. **API-first** en `scrapers/api_stores.py`: Chedraui usa su catálogo VTEX y Mercado Libre usa su API pública. Walmart/Bodega y los demás adaptadores admiten endpoints JSON/GraphQL autorizados mediante variables de entorno.
-2. **Legacy paralelo** en `scrapers/tiendas_mexico.py`: cada tienda se ejecuta en un worker aislado para que un timeout o 429 no detenga a las demás.
+2. **Legacy como fallback** en `scrapers/tiendas_mexico.py`: Scrapling sólo consulta tiendas que no devolvieron productos en la fase API-first. El Spider mantiene cada dominio aislado y un bloqueo de una tienda no detiene las demás.
 
 La interfaz común está en `core/scraper_base.py`. Los requests usan timeouts, backoff y límites conservadores; el proyecto **no intenta saltar CAPTCHA/WAF ni falsificar la identidad de aplicaciones móviles**.
 
@@ -141,3 +141,31 @@ roto en las Propiedades del script se normaliza a `{q}` y el término se codific
 Mercado Libre y Chedraui se consultan mediante sus formatos de catálogo previstos en el script; su disponibilidad puede cambiar. Walmart, Bodega Aurrera y Soriana quedan como `not_configured` hasta que se proporcione una API JSON que funcione, y también cuando su endpoint responde con bloqueo/HTTP de error, una página que no es JSON o un JSON sin filas reconocibles; en ese caso `fuentes[].motivo` indica la causa real (`HTTP 403…`, `json_sin_filas_reconocibles`…) y las demás tiendas siguen normal. Esto evita informar falsamente que una tienda fue consultada con éxito. El script también descarta como contaminada cualquier oferta cuyo precio anterior coincida con un gramaje del título (`875g`, `1 kg`). La caché dura cuatro minutos y el parámetro `q` permite probar una búsqueda individual.
 
 La integración Python reconoce la clave `offers` en inglés y conserva el estado de salud de las fuentes reportado por el proxy. Esta implementación no garantiza ofertas en cada ejecución: la disponibilidad real debe confirmarse en el JSON de la Web App.
+
+
+## Reconstrucción Scrapling + Firecrawl (2026-11)
+
+### Arquitectura
+
+- `scrapers/api_stores.py` sigue siendo la capa API-first y conserva sus adaptadores aislados.
+- `monitor_ofertas.py` ejecuta primero APIs/JSON y solo después activa Scrapling para Amazon, Soriana o Liverpool cuando la API de esa tienda no devolvió productos; así la capa HTML no duplica una API que ya respondió.
+- `scrapers/tiendas_mexico.py` ejecuta un `Spider` asíncrono de Scrapling con sesiones HTTP reutilizables, concurrencia por dominio 1, `robots.txt` y AutoThrottle. La configuración desactiva expresamente la impersonación TLS (`impersonate=None`, `stealthy_headers=False`); no resuelve CAPTCHA, no muta identidades de apps, no rota proxies y no cambia a un proxy/renderizador para sortear un 403.
+- Las respuestas 403/412/429/503 terminan la tienda de ese ciclo y se guardan en `fuentes_cooldown.json` con razón y vencimiento. El resto de tiendas continúa.
+- `core/price_sanitizer.py` valida montos completos y repara historial corrupto en memoria. Un precio de referencia igual a un gramaje/tamaño nunca se convierte en descuento.
+- `tools/telegram_bot.py` genera MarkdownV2 con los rangos Bronce (🏷️), Plata (🔥), Oro (⚡) y Diamante (💣). Los porcentajes procedentes de texto de terceros se identifican como reportados cuando no existe un precio anterior matemático.
+- `scrapers/firecrawl_enrichment.py` es un adaptador opcional de Firecrawl v2 para exportar Markdown/JSONL como contexto RAG. Ese contenido nunca es fuente autoritativa del precio ni sustituye la API de una tienda.
+
+### Dependencias y entorno
+
+`requirements-browser.txt` instala `scrapling[fetchers]` y Playwright normal para la captura XHR existente. El Spider Scrapling usa sesiones HTTP sin impersonación ni browser stealth; Chromium se instala únicamente para `scrapers/browser_network.py`, que renderiza JavaScript de forma ordinaria y no intenta resolver desafíos. `FIRECRAWL_API_KEY` y `FIRECRAWL_RAG_URLS` habilitan el paso RAG opcional del workflow.
+
+Para preparar las skills de Firecrawl en una estación de desarrollo ejecuta `bash scripts/setup_firecrawl.sh`. El script instala `firecrawl-build` y ejecuta `npx -y firecrawl-cli@latest setup build --browser`. En Actions el setup de navegador es opt-in mediante `FIRECRAWL_CLI_SETUP=true`; la ejecución normal usa el endpoint REST v2 con `FIRECRAWL_API_KEY` y no necesita instalar skills en cada cron. Ninguna de estas funciones resuelve CAPTCHA ni evita WAF.
+
+### Secrets / variables
+
+- Requeridos para avisos: `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`.
+- Persistencia extrema entre ejecuciones: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`; sin ambos se usa `historial_ofertas.json`.
+- Firecrawl opcional: secreto `FIRECRAWL_API_KEY` y variable multilínea `FIRECRAWL_RAG_URLS` (una URL permitida por línea).
+- Scrapling legacy opcional: `LEGACY_SEARCH_URLS_JSON` como objeto JSON de tienda a URL HTTPS con `{q}`; solo se admiten URLs explícitas configuradas por el operador.
+
+El cron está fijado a `*/15 * * * *`. `historial_ofertas.json` y `fuentes_cooldown.json` se versionan al terminar el ciclo; Supabase aporta el registro central de alertas Diamante para sobrevivir a ejecuciones efímeras.
