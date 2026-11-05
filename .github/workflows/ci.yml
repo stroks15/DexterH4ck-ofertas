@@ -1,0 +1,43 @@
+name: CI - pruebas del monitor
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, "rebuild/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt -r requirements-browser.txt
+
+      - name: Instalar Chromium normal para pruebas de captura
+        run: python -m playwright install chromium
+
+      - name: Validar sintaxis
+        run: python -m compileall -q .
+
+      - name: Ejecutar suite completa
+        run: python -m unittest discover -s tests -p "test_*.py" -v
