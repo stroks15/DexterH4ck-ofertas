@@ -74,6 +74,12 @@ class HistoryRepairTests(unittest.TestCase):
 
 
 class ScraplingBlockTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from scrapers import tiendas_mexico
+        if not tiendas_mexico.SCRAPLING_AVAILABLE:
+            raise unittest.SkipTest("Scrapling no está instalado; instala requirements-browser.txt")
+
     def test_waf_response_is_recorded_without_retry(self):
         class Handler(BaseHTTPRequestHandler):
             def do_GET(self):
@@ -99,6 +105,12 @@ class ScraplingBlockTests(unittest.TestCase):
 
 
 class ApiFirstFallbackTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from scrapers import tiendas_mexico
+        if not tiendas_mexico.SCRAPLING_AVAILABLE:
+            raise unittest.SkipTest("Scrapling no está instalado; instala requirements-browser.txt")
+
     def test_scrapling_only_runs_for_stores_without_api_products(self):
         import monitor_ofertas as mon
         from monitor_ofertas import Fuente
