@@ -1,0 +1,13 @@
+name: 'Auto Push'
+description: 'Pushes local changes to GitHub automatically using GITHUB_TOKEN'
+inputs:
+  token:
+    description: 'GitHub token'
+    required: false
+    default: ${{ secrets.GITHUB_TOKEN }}
+runs:
+  using: 'workflow_dispatch'
+  inputs:
+    message:
+      description: 'Push message'
+      required: true
