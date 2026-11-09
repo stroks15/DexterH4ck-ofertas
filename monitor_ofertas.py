@@ -669,6 +669,15 @@ def definir_fuentes(sesion: requests.Session | None = None) -> list:
         fuentes.append(
             Fuente("browser:network_json", set(), _lazy("scrapers.browser_network", "buscar_network_browser"))
         )
+    if os.environ.get("HYBRID_DISCOVERY_ENABLED", "false").strip().lower() in ("1", "true", "yes", "si"):
+        fuentes.append(
+            Fuente(
+                "hybrid:structured_playwright",
+                set(),
+                _lazy("scrapers.hybrid_discovery", "discover_hybrid"),
+                _lazy_attr("scrapers.hybrid_discovery", "LAST_STATUS"),
+            )
+        )
     return fuentes
 
 
