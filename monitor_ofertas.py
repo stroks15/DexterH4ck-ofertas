@@ -874,8 +874,19 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
                         logger.debug("No se pudo verificar precio extremo (%s).", type(exc).__name__)
                 if publicable and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_enlace_producto_directo(url):
                     publicable = False
-            if publicable and 95 <= descuento <= 99 and not validar_y_filtrar_bomba(item, historial):
-                publicable = False
+            if publicable and 95 <= descuento <= 99:
+                # Telegram requiere consultar el registro central de forma explícita:
+                # su historial local puede ser efímero entre ejecuciones de Actions.
+                # Un resultado True bloquea el reenvío; None conserva el fallback local.
+                if es_telegram:
+                    central = supabase_history.ya_enviada(clave)
+                    if central is True:
+                        logger.info("[BOMBA OMITIDA] Ya registrada en Supabase: %s", clave)
+                        publicable = False
+                    elif not es_enlace_valido_sin_error(url):
+                        publicable = False
+                elif not validar_y_filtrar_bomba(item, historial):
+                    publicable = False
 
             if publicable:
                 if precio_extremo:
