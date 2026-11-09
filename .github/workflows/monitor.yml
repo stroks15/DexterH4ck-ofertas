@@ -66,12 +66,49 @@ jobs:
       - name: Verificar secretos de Telegram
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '38282317' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '8673946697' }}
         run: |
           test -n "$TELEGRAM_TOKEN" || { echo "::error::Falta el secret TELEGRAM_TOKEN"; exit 1; }
           test -n "$TELEGRAM_CHAT_ID" || { echo "::error::Falta el secret TELEGRAM_CHAT_ID"; exit 1; }
           echo "Secretos de Telegram detectados correctamente."
 
+      - name: Validar destino real del grupo Ofertas en Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '8673946697' }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          token = os.environ['TELEGRAM_TOKEN']
+          chat_id = os.environ['TELEGRAM_CHAT_ID']
+          url = 'https://api.telegram.org/bot' + token + '/getChat?chat_id=' + chat_id
+          try:
+              with urllib.request.urlopen(url, timeout=20) as response:
+                  payload = json.loads(response.read().decode('utf-8'))
+          except urllib.error.HTTPError as exc:
+              body = exc.read().decode('utf-8', 'replace')
+              try:
+                  detail = json.loads(body).get('description', body)
+              except Exception:
+                  detail = body
+              raise SystemExit('Telegram getChat rechazó TELEGRAM_CHAT_ID (HTTP %s): %s' % (exc.code, detail))
+          if not payload.get('ok'):
+              raise SystemExit('Telegram getChat falló: ' + str(payload.get('description', 'respuesta no válida')))
+          chat = payload.get('result', {})
+          actual_id = str(chat.get('id', ''))
+          title = chat.get('title', '')
+          kind = chat.get('type', '')
+          print('Telegram reconoce el destino: id=%s, título=%r, tipo=%r' % (actual_id, title, kind))
+          if actual_id != chat_id:
+              raise SystemExit('El ID devuelto por Telegram no coincide con TELEGRAM_CHAT_ID.')
+          if title.casefold() != 'ofertas' or kind not in ('group', 'supergroup'):
+              raise SystemExit('El destino no es un grupo/supergrupo llamado Ofertas. No se enviarán alertas.')
+          PY
       - name: Verificar credenciales de IA
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -140,7 +177,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '38282317' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '8673946697' }}
         run: python -m unittest discover -s tests -p "test_*.py" -v
 
       - name: Preflight - detectar errores antes del monitor
@@ -187,7 +224,7 @@ jobs:
       - name: Ejecutar monitor
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '38282317' }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID || '8673946697' }}
           GRUPO_FUENTE_CHAT_ID: ${{ secrets.GRUPO_FUENTE_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.8-flash
