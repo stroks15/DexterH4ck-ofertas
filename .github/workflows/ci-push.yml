@@ -1,93 +1,50 @@
-# .github/workflows/ci-push.yml
 name: CI Push y Validación
+
 on:
   push:
     branches: [main]
+    paths:
+      - "**/*.py"
+      - "requirements*.txt"
+      - "tests/**"
+      - ".github/workflows/**"
   pull_request:
     branches: [main]
-  schedule:
-    - cron: '*/15 * * * *'  # Cada 15 minutos detecta cambios locales no pushed
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  actions: read
+  contents: read
+
+concurrency:
+  group: ci-push-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.11"
+          cache: pip
 
-      - name: Install dependencies
+      - name: Instalar dependencias
+        shell: bash
         run: |
-          python3 -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest pytest-cov
-
-      - name: Run test suite
-        run: |
-          python3 -m unittest discover -s tests -p "test_*.py" -v 2>&1
-
-      - name: Validate .env exists
-        run: |
-          if [ ! -f ".env" ]; then
-            echo "ERROR: .env file not found"
-            exit 1
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          if [ -f requirements-browser.txt ]; then
+            python -m pip install -r requirements-browser.txt
           fi
-          echo ".env validated"
 
-      - name: Setup environment variables
-        run: |
-          echo "WALMART_GRAPHQL_URL=https://www.walmart.com.mx/graphql" >> $GITHUB_ENV
-          echo "BODEGA_GRAPHQL_URL=https://bodega-aurrera.com.mx/graphql" >> $GITHUB_ENV
-          echo "CHEDRAUI_VTEX_ENDPOINT=https://www.chedraui.com.mx/vtex" >> $GITHUB_ENV
-          echo "SORIANA_API_ENDPOINT=https://www.soriana.com/rest/api" >> $GITHUB_ENV
-          echo "COPPEL_API_ENDPOINT=https://www.coppel.com/mx/api" >> $GITHUB_ENV
-          echo "LIVERPOOL_VTEX_ENDPOINT=https://liverpool.com.mx/vtex" >> $GITHUB_ENV
-          echo "SUBURBIA_API_ENDPOINT=https://suburbia.com.mx/api" >> $GITHUB_ENV
-          echo "AMAZON_API_ENDPOINT=https://www.amazon.com.mx/AJ/API" >> $GITHUB_ENV
-          echo "MERCADOLIBRE_PUBLIC_API=https://api.mercadolibre.com" >> $GITHUB_ENV
-          echo "OFERSTOCK_API_ENDPOINT=https://www.oferstock.com.mx/api" >> $GITHUB_ENV
+      - name: Validar sintaxis Python
+        run: python -m compileall -q .
 
-      - name: Validate required configuration
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          # Check that required Telegram secrets are configured
-          if [ -z "$TELEGRAM_TOKEN" ]; then
-            echo "::notice::TELEGRAM_TOKEN no configurado (opcional: alertas desactivadas)"
-          fi
-          if [ -z "$TELEGRAM_CHAT_ID" ]; then
-            echo "::notice::TELEGRAM_CHAT_ID no configurado (opcional: alertas desactivadas)"
-          fi
-          # Check required env vars have safe defaults per code
-          if [ -z "$WALMART_GRAPHQL_URL" ]; then
-            echo "::warning::WALMART_GRAPHQL_URL vacío (usará fuentes omitidas)"
-          fi
-          echo "Validación de configuración completada"
-
-      - name: Check uncommitted changes
-        run: |
-          if [ -n "$(git diff origin/main HEAD)" ]; then
-            echo "WARNING: Hay cambios sin commitar"
-            git status
-            exit 1
-          fi
-          echo "All changes are committed"
-
-      - name: Configure Telegram (optional)
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          echo "TELEGRAM_TOKEN_SET=${TELEGRAM_TOKEN:+true}" >> $GITHUB_ENV
-          echo "TELEGRAM_CHAT_ID_SET=${TELEGRAM_CHAT_ID:+true}" >> $GITHUB_ENV
+      - name: Ejecutar suite completa
+        run: python -m unittest discover -s tests -p "test_*.py" -v
