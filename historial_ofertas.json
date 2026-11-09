@@ -5,6 +5,654 @@
     "url": "https://www.walmart.com.mx/ip/pantalla/111",
     "precio_actual": 50.0,
     "precio_alertado": 50.0,
-    "ultima_actualizacion": "2026-11-09T00:25:23.675653+00:00"
+    "ultima_actualizacion": "2026-11-09T09:36:41.016352+00:00"
+  },
+  "amazon|code:b0cv19bdd2": {
+    "tienda": "Amazon",
+    "titulo": "Levi'S Jeans 311 Skinny para Mujer",
+    "url": "https://www.amazon.com.mx/dp/B0CV19BDD2",
+    "precio_actual": 242.27,
+    "precio_maximo": 1149.0,
+    "ultima_actualizacion": "2026-11-09T09:40:42.686512+00:00",
+    "precio_alertado": 242.27
+  },
+  "amazon|code:b0f1t6lr2p": {
+    "tienda": "Amazon",
+    "titulo": "B0F1T6LR2P",
+    "url": "https://www.amazon.com.mx/dp/B0F1T6LR2P?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.0,
+    "precio_maximo": 395.0,
+    "ultima_actualizacion": "2026-11-09T09:40:46.635676+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b09jhs8db3": {
+    "tienda": "Amazon",
+    "titulo": "B09JHS8DB3",
+    "url": "https://www.amazon.com.mx/dp/B09JHS8DB3?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 114.5,
+    "precio_maximo": 429.0,
+    "ultima_actualizacion": "2026-11-09T09:40:50.615467+00:00",
+    "precio_alertado": 114.5
+  },
+  "amazon|code:b08znv8qlv": {
+    "tienda": "Amazon",
+    "titulo": "B08ZNV8QLV",
+    "url": "https://www.amazon.com.mx/dp/B08ZNV8QLV?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 65.0,
+    "precio_maximo": 214.5,
+    "ultima_actualizacion": "2026-11-09T09:40:54.565378+00:00",
+    "precio_alertado": 65.0
+  },
+  "amazon|code:b0dzssv1jg": {
+    "tienda": "Amazon MX",
+    "titulo": "Nailon‑elastano ultra ligero y cintura alta moldeadora, ideal para yoga sin restricciones — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0DZSSV1JG?tag=ofertasperr05-20",
+    "precio_actual": 99.0,
+    "precio_maximo": 309.61,
+    "ultima_actualizacion": "2026-11-09T09:40:14.901296+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b0ft37g8rs": {
+    "tienda": "Amazon",
+    "titulo": "B0FT37G8RS",
+    "url": "https://www.amazon.com.mx/dp/B0FT37G8RS",
+    "precio_actual": 99.0,
+    "precio_maximo": 295.0,
+    "ultima_actualizacion": "2026-11-09T09:40:58.547019+00:00",
+    "precio_alertado": 99.0
+  },
+  "amazon|code:b0b7qxy8zs": {
+    "tienda": "Amazon",
+    "titulo": "B0B7QXY8ZS",
+    "url": "https://www.amazon.com.mx/dp/B0B7QXY8ZS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 101.34,
+    "precio_maximo": 289.0,
+    "ultima_actualizacion": "2026-11-09T09:41:02.624332+00:00",
+    "precio_alertado": 101.34
+  },
+  "amazon|code:b0gw9nyd9s": {
+    "tienda": "Amazon",
+    "titulo": "B0GW9NYD9S",
+    "url": "https://www.amazon.com.mx/dp/B0GW9NYD9S?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 382.65,
+    "precio_maximo": 1099.0,
+    "ultima_actualizacion": "2026-11-09T09:41:06.612058+00:00",
+    "precio_alertado": 382.65
+  },
+  "amazon|code:b0gynn5x9f": {
+    "tienda": "Amazon MX",
+    "titulo": "Cintura alta y pierna flare de Levi’s que alarga tu silueta en cualquier salida — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0GYNN5X9F?tag=ofertasperr05-20",
+    "precio_actual": 347.65,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:18.879404+00:00",
+    "precio_alertado": 347.65
+  },
+  "amazon|code:b0fhywpqd9": {
+    "tienda": "Amazon",
+    "titulo": "B0FHYWPQD9",
+    "url": "https://www.amazon.com.mx/dp/B0FHYWPQD9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 689.75,
+    "precio_maximo": 1890.0,
+    "ultima_actualizacion": "2026-11-09T09:41:10.572484+00:00",
+    "precio_alertado": 689.75
+  },
+  "amazon|code:b0czcbxjpy": {
+    "tienda": "Amazon MX",
+    "titulo": "Algodón 100% con 50% reciclado, la gorra que mantiene fresco y eco en tu entrenamiento — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0CZCBXJPY?tag=ofertasperr05-20",
+    "precio_actual": 159.6,
+    "precio_maximo": 399.0,
+    "ultima_actualizacion": "2026-11-09T09:40:22.832560+00:00",
+    "precio_alertado": 159.6
+  },
+  "amazon|code:b00js0c83k": {
+    "tienda": "Amazon",
+    "titulo": "Fruit Of The Loom Sv7bb1m, Bóxers Ajustados Hombre, Negro/gris, G",
+    "url": "https://www.amazon.com.mx/dp/B00JS0C83K?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 254.35,
+    "precio_maximo": 589.0,
+    "ultima_actualizacion": "2026-11-09T09:41:14.640174+00:00",
+    "precio_alertado": 254.35
+  },
+  "amazon|code:b0fb7rpm1g": {
+    "tienda": "Amazon",
+    "titulo": "B0FB7RPM1G",
+    "url": "https://www.amazon.com.mx/dp/B0FB7RPM1G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 499.0,
+    "precio_maximo": 1099.0,
+    "ultima_actualizacion": "2026-11-09T09:41:18.611252+00:00",
+    "precio_alertado": 499.0
+  },
+  "mercadolibre|title:sudadera con capucha reflexivo proteccion de seguridad": {
+    "tienda": "Mercado Libre MX",
+    "titulo": "Sudadera Con Capucha Reflexivo Protección De Seguridad",
+    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BC%2FrHEQWtV3xCVanNh7Y37NAUwKGNO4mqVjN8MSJlNvI5e0sP0jlrbYxal5FlgMMZ8tmyasEFDE4lTlKzA6lzsW1Gh9NZ2gY94j0qogI5%2FKCJyvnatWkPXl0J5BBNPDRHY7iP10k8AmQLw9CRxbGwpCZicdyqcjpUEb6MYFh9QDaSlYQlziBa3eojX0kypWSNQshsVAY4J89QjghiXnpzZ%2BLF4K8q5yXKXCuKCEuDy9EdfG%2FjTp%2BHzYqm7i9lilrV8I0#origin=copy_link",
+    "precio_actual": 267.0,
+    "precio_maximo": 564.0,
+    "ultima_actualizacion": "2026-11-09T09:40:26.821650+00:00",
+    "precio_alertado": 267.0
+  },
+  "amazon|code:b0dpr5rz1t": {
+    "tienda": "Amazon MX",
+    "titulo": "Modular 1000W ATX 3.1 y ventilador ultra silencioso, perfecto para rigs de alta gama — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B0DPR5RZ1T?tag=ofertasperr05-20",
+    "precio_actual": 2.39,
+    "precio_maximo": 4.75,
+    "ultima_actualizacion": "2026-11-09T09:40:30.780360+00:00",
+    "precio_alertado": 2.39
+  },
+  "mercadolibre|title:liquidapromos": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquidapromos",
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BD9CAvyNrM9H6RgOjghe1Qq0vT0OUmGfNh59NkgzdZwvAfTQ4i0ViRTciAtT6poZMYIsX3MKXMk2KEN%2FQBc1dlNNy48hwWOg6O6ThKxDaVqQjKH3es16k43hRJ07eK2SLPnRuiMvxqWOI0%2F5p%2FZcSw9ztYAuMDC4Hcchmb2sDTAAu7XriEU8FLkLyp3VbxIyw6U%2Fw3g%3D",
+    "precio_actual": 1799.0,
+    "precio_maximo": 3000.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09pff6rrd": {
+    "tienda": "Amazon",
+    "titulo": "B09PFF6RRD",
+    "url": "https://www.amazon.com.mx/dp/B09PFF6RRD?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1861.4,
+    "precio_maximo": 2760.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0f6cr8h7x": {
+    "tienda": "Amazon",
+    "titulo": "B0F6CR8H7X",
+    "url": "https://www.amazon.com.mx/dp/B0F6CR8H7X?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 399.0,
+    "precio_maximo": 599.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b07hkwswg8": {
+    "tienda": "Amazon",
+    "titulo": "B07HKWSWG8",
+    "url": "https://www.amazon.com.mx/dp/B07HKWSWG8?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1509.0,
+    "precio_maximo": 2249.78,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cs5stb1g": {
+    "tienda": "Amazon",
+    "titulo": "B0CS5STB1G",
+    "url": "https://www.amazon.com.mx/dp/B0CS5STB1G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3239.0,
+    "precio_maximo": 4500.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0dvjx97pm": {
+    "tienda": "Amazon MX",
+    "titulo": "Wi‑Fi 6 y control por voz Alexa en un Fire TV Stick HD de precio básico — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥",
+    "url": "https://www.amazon.com.mx/dp/B0DVJX97PM?tag=ofertasperr05-20",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-11-09T09:40:34.753697+00:00",
+    "precio_alertado": 349.0
+  },
+  "amazon|code:b0114xlide": {
+    "tienda": "Amazon MX",
+    "titulo": "Con 1.5 M+ copias vendidas, Dixit Odyssey anima cualquier reunión de 3‑6 jugadores — PRECIO HISTÓRICO MÁS BAJO 🔥🔥",
+    "url": "https://www.amazon.com.mx/dp/B0114XLIDE?tag=ofertasperr05-20",
+    "precio_actual": 629.3,
+    "precio_maximo": 629.3,
+    "ultima_actualizacion": "2026-11-09T09:40:38.712098+00:00",
+    "precio_alertado": 629.3
+  },
+  "amazon|code:b0bgvssg9r": {
+    "tienda": "Amazon",
+    "titulo": "Big Red Gato Hidráulico de Piso 1.5 Toneladas con Maleta",
+    "url": "https://www.amazon.com.mx/gp/product/B0BGVSSG9R",
+    "precio_actual": 990.0,
+    "precio_maximo": 990.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0djwxmx2g": {
+    "tienda": "Amazon",
+    "titulo": "B0DJWXMX2G",
+    "url": "https://www.amazon.com.mx/dp/B0DJWXMX2G?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 193.07,
+    "precio_maximo": 193.07,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fbsx1vcm": {
+    "tienda": "Amazon",
+    "titulo": "B0FBSX1VCM",
+    "url": "https://www.amazon.com.mx/dp/B0FBSX1VCM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 10499.0,
+    "precio_maximo": 10499.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fy3xz8s7": {
+    "tienda": "Amazon",
+    "titulo": "B0FY3XZ8S7",
+    "url": "https://www.amazon.com.mx/dp/B0FY3XZ8S7?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 6929.0,
+    "precio_maximo": 6929.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ds2df5s5": {
+    "tienda": "Amazon",
+    "titulo": "B0DS2DF5S5",
+    "url": "https://www.amazon.com.mx/dp/B0DS2DF5S5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 4659.0,
+    "precio_maximo": 4659.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fy3xssdl": {
+    "tienda": "Amazon",
+    "titulo": "B0FY3XSSDL",
+    "url": "https://www.amazon.com.mx/dp/B0FY3XSSDL?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 5239.0,
+    "precio_maximo": 5239.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0cv16tx11": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i dl RVVS0M9KSC450TS7FWY3",
+    "url": "https://www.amazon.com.mx/dp/B0CV16TX11/ref=cm_sw_r_as_gl_api_gl_i_dl_RVVS0M9KSC450TS7FWY3?linkCode=ml1&tag=liquidahorros--20&linkId=a0051ee3aa8a96efc3d6bcf60068b54f&ascsubtag=srctok-489fef596f1a9b1e&btn_type=ss&btn_ref=srctok-489fef596f1a9b1e",
+    "precio_actual": 225.0,
+    "precio_maximo": 225.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ctqnkrf1": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i 0N5810AKJCFXSVC5A86E",
+    "url": "https://www.amazon.com.mx/dp/B0CTQNKRF1/ref=cm_sw_r_as_gl_api_gl_i_0N5810AKJCFXSVC5A86E?linkCode=ml1&tag=liquidahorros--20&linkId=727275f892577e7f72446bac92929676&ascsubtag=srctok-036eebefd277093e&btn_type=ss&btn_ref=srctok-036eebefd277093e",
+    "precio_actual": 1539.0,
+    "precio_maximo": 1539.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0frpdxjyc": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i dl 4BRT37J5Y6FTDFDEFP4P",
+    "url": "https://www.amazon.com.mx/dp/B0FRPDXJYC/ref=cm_sw_r_as_gl_api_gl_i_dl_4BRT37J5Y6FTDFDEFP4P?linkCode=ml1&tag=liquidahorros--20&linkId=18e07a78c8f432d88e1f614e9e8bd309&ascsubtag=srctok-681749e4cbe3d451&btn_type=ss&btn_ref=srctok-681749e4cbe3d451",
+    "precio_actual": 2999.0,
+    "precio_maximo": 2999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:liquid": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BGCfUrDebYoAY1IoDdUB5TJruAArIhH8Tt485MPRKAezhn2z0WPLuelRvulpzhy8MQGdjmlTVjL9a2TpTSV%2Frgsr94hU5XRBT9hyUomFxxUJLgFMZ04LkQRiYWPJPsgHi7s8pNMJLiZ2NEw5FJKEFqGwtW1k1DZByuDCX7FIlsAjJb%2FXhHgzGDCkLLYmJv6A1W%2BpNNmBhmCYyKeHQI2x%2F7fEeP%2F3ac%2FYOZtMAejBix%2BDtJYSnxhy7s0MZV82FAWcOSVIqA%3D%3D",
+    "precio_actual": 2640.0,
+    "precio_maximo": 2640.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0h7818rcm": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i KT45PNDV3Z362QJPN1QW",
+    "url": "https://www.amazon.com.mx/dp/B0H7818RCM/ref=cm_sw_r_as_gl_api_gl_i_KT45PNDV3Z362QJPN1QW?linkCode=ml1&tag=liquidahorros--20&linkId=98d5f800b3c2c92914794fca6ab85c57&ascsubtag=srctok-73508f14afc59dfd&btn_type=ss&btn_ref=srctok-73508f14afc59dfd",
+    "precio_actual": 770.0,
+    "precio_maximo": 770.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b083hzw2wv": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i dl CF4XZ5XDV198NKMGSDFX",
+    "url": "https://www.amazon.com.mx/dp/B083HZW2WV/ref=cm_sw_r_as_gl_api_gl_i_dl_CF4XZ5XDV198NKMGSDFX?linkCode=ml1&tag=liquidahorros--20&linkId=15840839450bcef281697308e2da7f6e&ascsubtag=srctok-1119e8a08a496bed&btn_type=ss&btn_ref=srctok-1119e8a08a496bed",
+    "precio_actual": 289.0,
+    "precio_maximo": 289.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|title:lists": {
+    "tienda": "Mercado Libre",
+    "titulo": "lists",
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos/lists",
+    "precio_actual": 469.0,
+    "precio_maximo": 469.0,
+    "ultima_actualizacion": "2026-11-09T09:41:22.571992+00:00",
+    "precio_alertado": 469.0
+  },
+  "amazon|code:b0h2134qdl": {
+    "tienda": "Amazon",
+    "titulo": "B0H2134QDL",
+    "url": "https://www.amazon.com.mx/dp/B0H2134QDL?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=160af7fac63adf0e9cfd14566c351904&ref_=as_li_ss_tl&ascsubtag=srctok-7e1470f9a0ec5e6f&btn_type=ss&btn_ref=srctok-7e1470f9a0ec5e6f",
+    "precio_actual": 373.0,
+    "precio_maximo": 373.0,
+    "ultima_actualizacion": "2026-11-09T09:41:26.512075+00:00",
+    "precio_alertado": 373.0
+  },
+  "amazon|code:b0g3ym8j19": {
+    "tienda": "Amazon",
+    "titulo": "B0G3YM8J19",
+    "url": "https://www.amazon.com.mx/dp/B0G3YM8J19?th=1&psc=1&linkCode=sl2&tag=axfire-20&linkId=ee4139b5c2075fac721cc5c5ace2f7c4&ref_=as_li_ss_tl&ascsubtag=srctok-10f3e36143a662e1&btn_type=ss&btn_ref=srctok-10f3e36143a662e1",
+    "precio_actual": 838.0,
+    "precio_maximo": 838.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fy6vf3q5": {
+    "tienda": "Amazon",
+    "titulo": "B0FY6VF3Q5",
+    "url": "https://www.amazon.com.mx/dp/B0FY6VF3Q5?ascsubtag=srctok-00f07f34a8e1ac55&btn_type=ss&btn_ref=srctok-29cc3d9c97248a3f&th=1&linkCode=sl2&tag=axfire-20&linkId=cebeeb3e139a434359e2d97d28db9196&ref_=as_li_ss_tl",
+    "precio_actual": 999.0,
+    "precio_maximo": 999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart lampara de escritorio inalambrica con luz led marca mainstays color negro con el 90 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Lámpara de escritorio inalámbrica con luz LED marca Mainstays / Color Negro con el 90% de descuento…",
+    "url": "https://liquidazona.com/ofertas/19-00-walmart-lampara-de-escritorio-inalambrica-con-luz-led-marca-mainstays-color-negro-con-el-90-de-descuento/",
+    "precio_actual": 19.0,
+    "precio_maximo": 950.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart balon de futbol marca voit disney pixar de toy story 3 con el 95 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Balón de fútbol marca Voit Disney Pixar De Toy Story #3 con el 95% de descuento…",
+    "url": "https://liquidazona.com/ofertas/9-00-walmart-balon-de-futbol-marca-voit-disney-pixar-de-toy-story-3-con-el-95-de-descuento/",
+    "precio_actual": 9.0,
+    "precio_maximo": 179.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart pelota de playa marca bluescape 50 8cm de diametro con el 90 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Pelota de playa marca Bluescape / 50.8cm de diámetro con el 90% de descuento…",
+    "url": "https://liquidazona.com/ofertas/8-00-walmart-pelota-de-playa-marca-bluescape-50-8cm-de-diametro-con-el-90-de-descuento/",
+    "precio_actual": 8.0,
+    "precio_maximo": 79.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart ventilador de pedestal marca lasko oscilante 16in con el 85 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Ventilador de pedestal marca Lasko Oscilante / 16in con el 85% de descuento…",
+    "url": "https://liquidazona.com/ofertas/115-00-walmart-ventilador-de-pedestal-marca-lasko-oscilante-16in-con-el-85-de-descuento/",
+    "precio_actual": 115.0,
+    "precio_maximo": 899.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart ventilador de torre marca navia vtn 004 48in blanco con el 85 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Ventilador de torre marca Navia VTN 004 / 48in Blanco con el 85% de descuento…",
+    "url": "https://liquidazona.com/ofertas/285-00-walmart-ventilador-de-torre-marca-navia-vtn-004-48in-blanco-con-el-85-de-descuento/",
+    "precio_actual": 285.0,
+    "precio_maximo": 1899.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart carritos marca bburago formula 1 racing a escala varios modelos coleccionable con el 70 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Carritos marca Bburago Formula 1 Racing a Escala / Varios Modelos Coleccionable con el 70% de descuento…",
+    "url": "https://liquidazona.com/ofertas/78-00-walmart-carritos-marca-bburago-formula-1-racing-a-escala-varios-modelos-coleccionable-con-el-70-de-descuento/",
+    "precio_actual": 78.0,
+    "precio_maximo": 269.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart crema hidratante para bebe marca johnsons para": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Crema hidratante para bebé marca Johnson’s para",
+    "url": "https://liquidazona.com/ofertas/30-00-walmart-crema-hidratante-para-bebe-marca-johnsons-para-antes-de-dormir-200ml-con-el-70-de-descuento/",
+    "precio_actual": 30.0,
+    "precio_maximo": 97.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart bocina portatil marca select sound novabass color negro con el 65 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Bocina portátil marca Select Sound NovaBass / Color Negro con el 65% de descuento…",
+    "url": "https://liquidazona.com/ofertas/1049-00-walmart-bocina-portatil-marca-select-sound-novabass-color-negro-con-el-65-de-descuento/",
+    "precio_actual": 1049.0,
+    "precio_maximo": 2998.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart balsamo labial marca vaseline therapy rosy lips levres rosees con el 50 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Bálsamo labial marca Vaseline Therapy Rosy Lips Lévres Rosées con el 50% de descuento…",
+    "url": "https://liquidazona.com/ofertas/34-00-walmart-balsamo-labial-marca-vaseline-therapy-rosy-lips-levres-rosees-con-el-50-de-descuento/",
+    "precio_actual": 35.0,
+    "precio_maximo": 69.99,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "walmart|title:walmart mantel marca way to celebrate de pvc para mesa diseno paletas con el 50 de": {
+    "tienda": "Walmart MX",
+    "titulo": "Walmart – Mantel marca Way to Celebrate de PVC para mesa / Diseño Paletas con el 50% de descuento…",
+    "url": "https://liquidazona.com/ofertas/59-00-walmart-producto-descripcion-con-el-de-descuento/",
+    "precio_actual": 59.0,
+    "precio_maximo": 111.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:colchon matrimonial spring air gran atenas": {
+    "tienda": "Coppel",
+    "titulo": "Colchón Matrimonial Spring Air Gran Atenas",
+    "url": "https://www.coppel.com/pdp/colchon-matrimonial-spring-air-gran-atenas-pm-3458813",
+    "precio_actual": 4499.0,
+    "precio_maximo": 4499.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:sala esquinera michelle contemporanea beige 5 piezas": {
+    "tienda": "Coppel",
+    "titulo": "Sala Esquinera Michelle Contemporánea Beige 5 Piezas",
+    "url": "https://www.coppel.com/pdp/sala-esquinera-michelle-contemporanea-beige-5-piezas-pm-4540543",
+    "precio_actual": 11899.0,
+    "precio_maximo": 11899.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:sandalias casuales timberland stone street de piel para mujer": {
+    "tienda": "Coppel",
+    "titulo": "Sandalias Casuales Timberland Stone Street de Piel para Mujer",
+    "url": "https://www.coppel.com/pdp/sandalias-casuales-timberland-stone-street-de-piel-para-mujer-pr-8911242",
+    "precio_actual": 1400.0,
+    "precio_maximo": 1400.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:pantalla smart tv lg qned ai 75 pulgadas 4k 75qned82asg": {
+    "tienda": "Coppel",
+    "titulo": "Pantalla Smart TV LG QNED AI 75 Pulgadas 4K 75QNED82ASG",
+    "url": "https://www.coppel.com/pdp/pantalla-smart-tv-lg-qned-ai-75-pulgadas-4k-75qned82asg-pm-2086413",
+    "precio_actual": 11999.0,
+    "precio_maximo": 11999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:tablet samsung galaxy tab a11 8 7 pulgadas 128 gb 8 gb ram": {
+    "tienda": "Coppel",
+    "titulo": "Tablet Samsung Galaxy Tab A11 8.7 Pulgadas 128 GB 8 GB RAM",
+    "url": "https://www.coppel.com/pdp/tablet-samsung-galaxy-tab-a11-87-pulgadas-128-gb-8-gb-ram-pm-2082673",
+    "precio_actual": 2799.0,
+    "precio_maximo": 2799.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:lavadora mabe automatica lma78112cbab0 18 kg blanca": {
+    "tienda": "Coppel",
+    "titulo": "Lavadora Mabe Automática LMA78112CBAB0 18 kg Blanca",
+    "url": "https://www.coppel.com/pdp/lavadora-mabe-automatica-lma78112cbab0-18-kg-blanca-pm-6326943",
+    "precio_actual": 7499.0,
+    "precio_maximo": 7499.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:chamarra negra forever 21 para mujer": {
+    "tienda": "Coppel",
+    "titulo": "Chamarra Negra Forever 21 para Mujer",
+    "url": "https://www.coppel.com/pdp/chamarra-negra-forever-21-para-mujer-pr-3316552",
+    "precio_actual": 600.0,
+    "precio_maximo": 600.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:celular samsung galaxy a17 liberado 128 gb gris": {
+    "tienda": "Coppel",
+    "titulo": "Celular Samsung Galaxy A17 Liberado 128 GB Gris",
+    "url": "https://www.coppel.com/pdp/celular-samsung-galaxy-a17-liberado-128-gb-gris-pm-2085013",
+    "precio_actual": 3299.0,
+    "precio_maximo": 3299.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:mini moto shahoma db03 premium 49cc miami blue": {
+    "tienda": "Coppel",
+    "titulo": "Mini Moto Shahoma Db03 Premium 49cc Miami Blue",
+    "url": "https://www.coppel.com/pdp/mini-moto-shahoma-db03-premium-49cc-miami-blue-mkp-747046647",
+    "precio_actual": 10999.0,
+    "precio_maximo": 10999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:jeans recto oggi iron vintage para hombre": {
+    "tienda": "Coppel",
+    "titulo": "Jeans Recto Oggi Iron Vintage para Hombre",
+    "url": "https://www.coppel.com/pdp/jeans-recto-oggi-iron-vintage-para-hombre-pr-1887402",
+    "precio_actual": 379.0,
+    "precio_maximo": 379.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:bateria de cocina t fal family cook de aluminio 20 piezas": {
+    "tienda": "Coppel",
+    "titulo": "Batería de Cocina T-Fal Family Cook de Aluminio 20 Piezas",
+    "url": "https://www.coppel.com/pdp/bateria-de-cocina-t-fal-family-cook-de-aluminio-20-piezas-pm-1347263",
+    "precio_actual": 1799.0,
+    "precio_maximo": 1799.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:anthelios uv fps50 mune la roche posay fluido invisible 50 ml": {
+    "tienda": "Coppel",
+    "titulo": "Anthelios Uv Fps50+ Mune La Roche-Posay Fluido Invisible 50 ml",
+    "url": "https://www.coppel.com/pdp/anthelios-uv-fps50-mune-la-roche-posay-fluido-invisible-50-ml-mkp-30591084",
+    "precio_actual": 349.0,
+    "precio_maximo": 349.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:the legend of zelda ocarina of time para nintendo switch 2": {
+    "tienda": "Coppel",
+    "titulo": "The Legend of Zelda: Ocarina Of Time para Nintendo Switch 2",
+    "url": "https://www.coppel.com/pdp/the-legend-of-zelda-ocarina-of-time-para-nintendo-switch-2-pm-2504943",
+    "precio_actual": 1449.0,
+    "precio_maximo": 1449.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:hielera con ruedas igloo 98 latas": {
+    "tienda": "Coppel",
+    "titulo": "Hielera con Ruedas Igloo 98 Latas",
+    "url": "https://www.coppel.com/pdp/hielera-con-ruedas-igloo-98-latas-pm-1074433",
+    "precio_actual": 1699.0,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:arracadas de oro 10k vieri": {
+    "tienda": "Coppel",
+    "titulo": "Arracadas de Oro 10k Vieri",
+    "url": "https://www.coppel.com/pdp/arracadas-de-oro-10k-vieri-pm-8225513",
+    "precio_actual": 2899.0,
+    "precio_maximo": 2899.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:bolso 3 en 1 westies con monedero": {
+    "tienda": "Coppel",
+    "titulo": "Bolso 3 en 1 Westies con Monedero",
+    "url": "https://www.coppel.com/pdp/bolso-3-en-1-westies-con-monedero-pr-3660672",
+    "precio_actual": 1150.0,
+    "precio_maximo": 1150.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:espejo redondo goreti 100 cm": {
+    "tienda": "Coppel",
+    "titulo": "Espejo Redondo Goreti 100 cm",
+    "url": "https://www.coppel.com/pdp/espejo-redondo-goreti-100-cm-pm-4691673",
+    "precio_actual": 1599.0,
+    "precio_maximo": 1599.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:zapatera mobi cienaga chocolate 16 pares": {
+    "tienda": "Coppel",
+    "titulo": "Zapatera Mobi Cienaga Chocolate 16 Pares",
+    "url": "https://www.coppel.com/pdp/zapatera-mobi-cienaga-chocolate-16-pares-pm-3654413",
+    "precio_actual": 2999.0,
+    "precio_maximo": 2999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:botas casuales jennifer lopez para mujer": {
+    "tienda": "Coppel",
+    "titulo": "Botas Casuales Jennifer Lopez para Mujer",
+    "url": "https://www.coppel.com/pdp/botas-casuales-jennifer-lopez-para-mujer-pr-8776302",
+    "precio_actual": 438.0,
+    "precio_maximo": 438.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:pantalla smart tv lg led 65 pulgadas 4k 65nu850": {
+    "tienda": "Coppel",
+    "titulo": "Pantalla Smart TV LG LED 65 Pulgadas 4K 65NU850",
+    "url": "https://www.coppel.com/pdp/pantalla-smart-tv-lg-led-65-pulgadas-4k-65nu850-pm-2381073",
+    "precio_actual": 7999.0,
+    "precio_maximo": 7999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:ipad 11 128 gb plata": {
+    "tienda": "Coppel",
+    "titulo": "iPad 11 128 GB Plata",
+    "url": "https://www.coppel.com/pdp/ipad-11-128-gb-plata-pm-2841823",
+    "precio_actual": 10399.0,
+    "precio_maximo": 10399.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:minisplit lg 1 tonelada 110v solo frio mw121c4 ssm0": {
+    "tienda": "Coppel",
+    "titulo": "Minisplit LG 1 Tonelada 110V Solo Frío MW121C4.SSM0",
+    "url": "https://www.coppel.com/pdp/minisplit-lg-1-tonelada-110v-solo-frio-mw121c4ssm0-pm-6625183",
+    "precio_actual": 4999.0,
+    "precio_maximo": 4999.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:tenis timberland de piel motion access para mujer": {
+    "tienda": "Coppel",
+    "titulo": "Tenis Timberland de Piel Motion Access para Mujer",
+    "url": "https://www.coppel.com/pdp/tenis-timberland-de-piel-motion-access-para-mujer-pr-8911172",
+    "precio_actual": 1920.0,
+    "precio_maximo": 1920.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
+  },
+  "coppel|title:celular samsung galaxy a17 liberado 128 gb negro": {
+    "tienda": "Coppel",
+    "titulo": "Celular Samsung Galaxy A17 Liberado 128 GB Negro",
+    "url": "https://www.coppel.com/pdp/celular-samsung-galaxy-a17-liberado-128-gb-negro-pm-2085183",
+    "precio_actual": 3299.0,
+    "precio_maximo": 3299.0,
+    "ultima_actualizacion": "2026-11-09T09:40:12.220229+00:00",
+    "precio_alertado": null
   }
 }
