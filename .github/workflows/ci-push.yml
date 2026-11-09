@@ -57,6 +57,24 @@ jobs:
           echo "MERCADOLIBRE_PUBLIC_API=https://api.mercadolibre.com" >> $GITHUB_ENV
           echo "OFERSTOCK_API_ENDPOINT=https://www.oferstock.com.mx/api" >> $GITHUB_ENV
 
+      - name: Validate required configuration
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Check that required Telegram secrets are configured
+          if [ -z "$TELEGRAM_TOKEN" ]; then
+            echo "::notice::TELEGRAM_TOKEN no configurado (opcional: alertas desactivadas)"
+          fi
+          if [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "::notice::TELEGRAM_CHAT_ID no configurado (opcional: alertas desactivadas)"
+          fi
+          # Check required env vars have safe defaults per code
+          if [ -z "$WALMART_GRAPHQL_URL" ]; then
+            echo "::warning::WALMART_GRAPHQL_URL vacío (usará fuentes omitidas)"
+          fi
+          echo "Validación de configuración completada"
+
       - name: Check uncommitted changes
         run: |
           if [ -n "$(git diff origin/main HEAD)" ]; then
