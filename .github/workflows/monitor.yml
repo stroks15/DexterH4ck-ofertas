@@ -188,6 +188,14 @@ jobs:
           cat preflight.env >> "$GITHUB_ENV"
 
       - name: Diagnosticar endpoints de tiendas
+        env:
+          WALMART_GRAPHQL_URL: ${{ vars.WALMART_GRAPHQL_URL }}
+          BODEGA_GRAPHQL_URL: ${{ vars.BODEGA_GRAPHQL_URL }}
+          CHEDRAUI_VTEX_ENDPOINT: ${{ vars.CHEDRAUI_VTEX_ENDPOINT }}
+          SORIANA_API_ENDPOINT: ${{ vars.SORIANA_API_ENDPOINT }}
+          COPPEL_API_ENDPOINT: ${{ vars.COPPEL_API_ENDPOINT }}
+          SUBURBIA_API_ENDPOINT: ${{ vars.SUBURBIA_API_ENDPOINT }}
+          AMAZON_API_ENDPOINT: ${{ vars.AMAZON_API_ENDPOINT }}
         run: python tools/diagnostico_fuentes.py
 
       - name: Guardar diagnóstico de fuentes
