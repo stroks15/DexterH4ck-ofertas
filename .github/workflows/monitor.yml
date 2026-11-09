@@ -170,6 +170,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Preparar contexto RAG con Firecrawl (opcional)
+        continue-on-error: true
         env:
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           FIRECRAWL_RAG_URLS: ${{ vars.FIRECRAWL_RAG_URLS }}
