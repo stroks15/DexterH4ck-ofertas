@@ -405,6 +405,41 @@ def enviar_telegram(texto, imagen=None, sticker_id=None) -> bool:
             _ultimo_envio_telegram = time.monotonic()
             if response.status_code == 200:
                 return True
+            # Un error de formato MarkdownV2 no debe bloquear la alerta:
+            # reintentar como texto plano si Telegram no puede parsear entidades.
+            if response.status_code == 400:
+                try:
+                    error_payload = response.json()
+                    description = str(error_payload.get('description', ''))
+                except (ValueError, AttributeError):
+                    description = ''
+                logger.error('Telegram HTTP 400 en %s: %s', metodo, description[:300] or 'sin descripción')
+                if "can't parse entities" in description.casefold() or 'parse entities' in description.casefold():
+                    try:
+                        plain_data = (
+                            {'chat_id': TELEGRAM_CHAT_ID, 'photo': imagen, 'caption': texto[:1000]}
+                            if metodo == 'sendPhoto'
+                            else {'chat_id': TELEGRAM_CHAT_ID, 'text': texto, 'disable_web_page_preview': False}
+                        )
+                        plain_response = session.post(
+                            _telegram_api(metodo), data=plain_data,
+                            timeout=25 if metodo == 'sendPhoto' else 20,
+                        )
+                        _ultimo_envio_telegram = time.monotonic()
+                        if plain_response.status_code == 200:
+                            logger.warning('Telegram: alerta enviada como texto plano tras error de MarkdownV2.')
+                            return True
+                        try:
+                            plain_detail = plain_response.json().get('description', '')
+                        except (ValueError, AttributeError):
+                            plain_detail = ''
+                        logger.error('Telegram reintento sin Markdown HTTP %s: %s', plain_response.status_code, str(plain_detail)[:300])
+                    except requests.RequestException as exc:
+                        logger.warning('Telegram reintento sin Markdown falló (%s).', type(exc).__name__)
+                if metodo == 'sendPhoto':
+                    metodo, imagen = 'sendMessage', None
+                    continue
+                return False
             if response.status_code == 429:
                 try:
                     retry_after = int(response.json().get("parameters", {}).get("retry_after", 5))
