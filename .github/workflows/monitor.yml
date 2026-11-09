@@ -106,8 +106,8 @@ jobs:
           print('Telegram reconoce el destino: id=%s, título=%r, tipo=%r' % (actual_id, title, kind))
           if actual_id != chat_id:
               raise SystemExit('El ID devuelto por Telegram no coincide con TELEGRAM_CHAT_ID.')
-          if title.casefold() != 'ofertas' or kind not in ('group', 'supergroup'):
-              raise SystemExit('El destino no es un grupo/supergrupo llamado Ofertas. No se enviarán alertas.')
+          if kind not in ('group', 'supergroup'):
+              raise SystemExit('El destino de Telegram no es un grupo/supergrupo. No se enviarán alertas.')
           PY
       - name: Verificar credenciales de IA
         env:
