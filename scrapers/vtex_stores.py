@@ -9,12 +9,14 @@ fuente se reporta como `not_configured` y no afecta a las demás tiendas.
 from __future__ import annotations
 
 import logging
+import math
 import os
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 import requests
 
+from core.price_sanitizer import parse_price, sanear_par_precios
 from core.scraper_base import BaseScraper, ScraperContext
 from core.source_resilience import classify_status
 from scrapers.discovery_utils import ESTADOS_CORTE, TERMINOS_LIQUIDACION, env_int, env_terminos
@@ -40,21 +42,23 @@ class VtexStoresScraper(BaseScraper):
         for sku in product.get("items") or []:
             for seller in sku.get("sellers") or []:
                 offer = seller.get("commertialOffer") or {}
-                if (offer.get("AvailableQuantity") or 0) <= 0:
+                raw_available = offer.get("AvailableQuantity")
+                if isinstance(raw_available, bool):
                     continue
                 try:
-                    price = float(offer.get("Price"))
-                except (TypeError, ValueError):
+                    available = float(raw_available or 0)
+                except (TypeError, ValueError, OverflowError):
                     continue
-                if price <= 0:
+                if not math.isfinite(available) or available <= 0:
+                    continue
+                # Aceptar solo montos financieros limpios, nunca bool/NaN/inf/unidades.
+                price = parse_price(offer.get("Price"))
+                if price is None:
                     continue
                 list_price = None
                 for campo in ("ListPrice", "PriceWithoutDiscount"):
-                    try:
-                        candidato = float(offer.get(campo))
-                    except (TypeError, ValueError):
-                        continue
-                    if candidato > price:
+                    candidato = parse_price(offer.get(campo))
+                    if candidato is not None and candidato > price:
                         list_price = candidato
                         break
                 descuento = (1 - price / list_price) if list_price else 0.0
@@ -75,7 +79,13 @@ class VtexStoresScraper(BaseScraper):
             title = str(product.get("productName") or "").strip()
             if price is None or not link or not title:
                 continue
-            reference = list_price if list_price and list_price > price else None
+            price, reference, _ = sanear_par_precios(
+                price,
+                list_price,
+                f"{title} {product.get('description') or ''} {product.get('productTitle') or ''}",
+            )
+            if price is None:
+                continue
             discount = round((1 - price / reference) * 100) if reference else 0
             fila = self.normalize(
                     title=title,
@@ -94,7 +104,13 @@ class VtexStoresScraper(BaseScraper):
     def _pedir_pagina(self, params: dict) -> tuple[str, Any]:
         """Devuelve (estado, payload). Nunca lanza."""
         try:
-            response = self.get(self.endpoint, params=params)
+            endpoint = self.endpoint
+            parsed = urlsplit(endpoint)
+            path = parsed.path.rstrip("/")
+            if parsed.scheme in ("http", "https") and parsed.netloc and path.lower().endswith("/vtex"):
+                path = path[:-len("/vtex")] + "/api/catalog_system/pub/products/search"
+                endpoint = urlunsplit((parsed.scheme, parsed.netloc, path, parsed.query, parsed.fragment))
+            response = self.get(endpoint, params=params)
         except requests.Timeout:
             return "timeout", None
         except requests.RequestException:

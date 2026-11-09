@@ -51,5 +51,40 @@ class WalmartGraphQLTests(unittest.TestCase):
         self.assertEqual(rows[0]["tienda"], "Bodega Aurrera")
 
 
+    def test_bodega_parser_keeps_current_and_reference_pair(self):
+        parser = BodegaGraphQLParser()
+        payload = {
+            "data": {"search": {"products": [{
+                "id": "BA-1",
+                "name": "Licuadora de prueba",
+                "canonicalUrl": "/ip/licuadora/BA-1",
+                "priceInfo": {
+                    "currentPrice": {"price": 100},
+                    "wasPrice": {"price": 200},
+                },
+            }]}}
+        }
+        rows = parser.parsear_respuesta_busqueda(payload)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["tienda"], "Bodega Aurrera")
+        self.assertEqual(rows[0]["precio_actual"], 100.0)
+        self.assertEqual(rows[0]["precio_anterior"], 200.0)
+        self.assertEqual(rows[0]["descuento"], 50)
+
+    def test_walmart_and_bodega_reject_boolean_current_price(self):
+        payload = {
+            "data": {"search": {"products": [{
+                "id": "BAD-1",
+                "name": "Producto de prueba",
+                "canonicalUrl": "/ip/producto/BAD-1",
+                "priceInfo": {
+                    "currentPrice": {"price": True},
+                    "wasPrice": {"price": 100},
+                },
+            }]}}
+        }
+        self.assertEqual(WalmartGraphQLParser().parsear_respuesta_busqueda(payload), [])
+        self.assertEqual(BodegaGraphQLParser().parsear_respuesta_busqueda(payload), [])
+
 if __name__ == "__main__":
     unittest.main()

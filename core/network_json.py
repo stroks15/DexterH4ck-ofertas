@@ -10,7 +10,7 @@ import re
 from typing import Any
 from urllib.parse import urljoin
 
-from core.price_sanitizer import coincide_con_medida, parse_price
+from core.price_sanitizer import parse_price, sanear_par_precios
 
 CURRENT_KEYS = (
     "price",
@@ -92,6 +92,41 @@ def discount(current, reference):
     return max(0, min(99, round((1 - current / reference) * 100)))
 
 
+
+
+def _price_pair(node: dict) -> tuple[float | None, float | None]:
+    """Obtiene actual/referencia del mismo nodo de precio u oferta.
+
+    Evita combinar el precio actual de un seller/variante con el precio de lista
+    de otro elemento de una lista ``offers`` o ``prices``.
+    """
+    if not isinstance(node, dict):
+        return None, None
+
+    current = number(_first(node, CURRENT_KEYS))
+    if current is not None:
+        reference = number(_first(node, REFERENCE_KEYS))
+        return current, reference if reference is not None and reference > current else None
+
+    candidates: list[tuple[float, float | None]] = []
+    for key in ("priceInfo", "prices", "priceData", "pricing", "offer", "offers"):
+        nested = node.get(key)
+        if isinstance(nested, dict):
+            pair = _price_pair(nested)
+            if pair[0] is not None:
+                candidates.append(pair)
+        elif isinstance(nested, list):
+            for item in nested:
+                if isinstance(item, dict):
+                    pair = _price_pair(item)
+                    if pair[0] is not None:
+                        candidates.append(pair)
+
+    if not candidates:
+        return None, None
+    return max(candidates, key=lambda pair: (discount(pair[0], pair[1]), -pair[0]))
+
+
 def extract_products(payload: Any, base_url="", store="JSON"):
     output = []
     seen = set()
@@ -99,22 +134,20 @@ def extract_products(payload: Any, base_url="", store="JSON"):
         if not isinstance(node, dict):
             continue
         title = _first(node, TITLE_KEYS)
-        current = _nested_price(node, CURRENT_KEYS)
+        current, reference = _price_pair(node)
         url = _first(node, URL_KEYS)
         if not title or current is None or not url:
             continue
         product_url = urljoin(base_url, str(url).strip())
         if not product_url.startswith(("http://", "https://")):
             continue
-        reference = _nested_price(node, REFERENCE_KEYS)
-        if reference is not None and reference <= current:
-            reference = None
-        if (
-            reference is not None
-            and coincide_con_medida(reference, f"{title} {node.get('description') or ''} {node.get('size') or ''}")
-            and (1 - current / reference) * 100 >= 50
-        ):
-            reference = None  # la "referencia" era un gramaje/medida del producto, no un precio
+        current, reference, _ = sanear_par_precios(
+            current,
+            reference,
+            f"{title} {node.get('description') or ''} {node.get('size') or ''}",
+        )
+        if current is None:
+            continue
         product_id = _first(node, ID_KEYS)
         brand = _first(node, ("brand", "brandName", "marca"))
         if isinstance(brand, dict):

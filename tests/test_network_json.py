@@ -32,6 +32,24 @@ class NetworkJsonTests(unittest.TestCase):
         self.assertEqual(rows[0]["precio_anterior"], None)
         self.assertEqual(rows[0]["descuento"], 0)
 
+    def test_offer_list_never_mixes_current_and_reference_from_different_sellers(self):
+        payload = {
+            "products": [{
+                "id": "SELLERS-1",
+                "name": "Pantalla Smart TV",
+                "url": "/p/tv",
+                "offers": [
+                    {"price": 1.0},
+                    {"price": 100.0, "listPrice": 200.0},
+                ],
+            }]
+        }
+        rows = extract_products(payload, "https://www.soriana.com", "Soriana")
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["precio_actual"], 100.0)
+        self.assertEqual(rows[0]["precio_anterior"], 200.0)
+        self.assertEqual(rows[0]["descuento"], 50)
+
     def test_discount_is_bounded(self):
         self.assertEqual(discount(10, 100), 90)
         self.assertEqual(discount(10, 1000), 99)
