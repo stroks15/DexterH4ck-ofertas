@@ -110,22 +110,34 @@ class MercadoLibreApi:
         except ValueError:
             return None, None
 
-        promotional_current = None
-        references: list[float] = []
+        promotions: list[tuple[float, float | None]] = []
         standard = None
         for row in prices:
+            if not isinstance(row, dict):
+                continue
             amount = _num(row.get("amount"))
             regular = _num(row.get("regular_amount"))
-            if row.get("type") == "promotion" and amount:
-                promotional_current = amount
-                if regular and regular > amount:
-                    references.append(regular)
-            elif row.get("type") == "standard" and amount:
+            if row.get("type") == "promotion" and amount is not None and amount > 0:
+                # El precio regular pertenece a ESTA promoción. Nunca combinar
+                # amount de una campaña con regular_amount de otra campaña.
+                reference = regular if regular is not None and regular > amount else None
+                promotions.append((amount, reference))
+            elif row.get("type") == "standard" and amount is not None and amount > 0:
                 standard = amount
 
-        current = promotional_current or standard
-        reference = max(references) if references else None
-        return current, reference
+        if promotions:
+            # Prioriza la mayor rebaja demostrable; a igualdad, el menor precio.
+            # Si ninguna promoción trae referencia, conserva el precio vigente
+            # sin inventar un descuento.
+            current, reference = max(
+                promotions,
+                key=lambda pair: (
+                    _discount(pair[0], pair[1]),
+                    -pair[0],
+                ),
+            )
+            return current, reference
+        return standard, None
 
     def search(self, query: str) -> list[dict[str, Any]]:
         if not self.circuit.can_continue():
@@ -189,11 +201,12 @@ class MercadoLibreApi:
                 if lookups < self.max_price_lookups:
                     api_current, api_reference = self._price_reference(item_id)
                     lookups += 1
-                    if api_current:
+                    if api_current is not None:
+                        # El endpoint /prices es una pareja atómica: si entrega
+                        # precio actual pero no referencia, no heredar original_price
+                        # de /search porque puede pertenecer a otra variante/campaña.
                         current = api_current
-                    if api_reference:
                         reference = api_reference
-                    if api_reference or api_current:
                         api_source = "mercadolibre_prices"
                     time.sleep(self.delay)
 
