@@ -3,8 +3,8 @@
   "reason": "HTTP 429 rate limit",
   "updated_at": "2026-11-14T20:41:02.274599+00:00",
   "amazon": {
-    "reason": "HTTP_503_SERVICE_UNAVAILABLE",
-    "updated_at": "2026-11-14T20:43:12.800693+00:00",
-    "blocked_until": "2026-11-14T21:13:12.800693+00:00"
+    "reason": "PERIMETER_CHALLENGE",
+    "updated_at": "2026-11-15T00:29:10.606505+00:00",
+    "blocked_until": "2026-11-15T06:29:10.606505+00:00"
   }
 }
