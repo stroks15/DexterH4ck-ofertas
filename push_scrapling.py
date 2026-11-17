@@ -3222,16 +3222,16 @@ python -m perimetro crawl --tiendas todas --q liquidacion --max 20 --out ofertas
 python -m perimetro report'''\n\n
 def extraer_payload() -> dict[str, str]:
     """Convierte los bloques <<<FILE:...>>> en un mapa ruta/contenido."""
-    patron = re.compile(r"^<<<FILE:(.+?)>>>\\r?\\n(.*?)^<<<ENDFILE>>>\\s*$", re.M | re.S)
+    patron = re.compile(r"^<<<FILE:(.+?)>>>\r?\n(.*?)^<<<ENDFILE>>>\s*$", re.M | re.S)
     archivos: dict[str, str] = {}
     for coincidencia in patron.finditer(PAYLOAD):
-        ruta = coincidencia.group(1).strip().replace("\\\\", "/")
+        ruta = coincidencia.group(1).strip().replace("\\", "/")
         contenido = coincidencia.group(2)
         if not ruta or ruta.startswith("/") or ".." in Path(ruta).parts:
             raise ValueError(f"Ruta insegura en PAYLOAD: {ruta!r}")
         if ruta in archivos:
             raise ValueError(f"Ruta duplicada en PAYLOAD: {ruta}")
-        archivos[ruta] = contenido.rstrip("\\n") + "\\n"
+        archivos[ruta] = contenido.rstrip("\n") + "\n"
     if not archivos:
         raise ValueError("PAYLOAD no contiene bloques <<<FILE:...>>> válidos.")
     return archivos
