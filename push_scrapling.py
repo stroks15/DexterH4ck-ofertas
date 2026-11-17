@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Instalador reparado: payload delimitado y CLI restaurada; validado por CI.
 # push_scrapling.py
 # Sube a stroks15/DexterH4ck-ofertas:
 #   1) capa perimetro (transporte stealth, WAF, CAPTCHA, proxies, extracción multi-estrategia)
