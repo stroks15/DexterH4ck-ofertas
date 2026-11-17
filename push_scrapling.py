@@ -3222,7 +3222,9 @@ python -m perimetro probe --tienda nike --q tenis
 python -m perimetro crawl --tiendas todas --q liquidacion --max 20 --out ofertas.json
 python -m perimetro report
 <<<ENDFILE>>>
-'''\n\n
+'''
+
+
 def extraer_payload() -> dict[str, str]:
     """Convierte los bloques <<<FILE:...>>> en un mapa ruta/contenido."""
     patron = re.compile(r"^<<<FILE:(.+?)>>>\r?\n(.*?)^<<<ENDFILE>>>\s*$", re.M | re.S)
