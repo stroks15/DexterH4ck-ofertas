@@ -1,0 +1,29 @@
+name: Validar instalador Scrapling
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "push_scrapling.py"
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Comprobar sintaxis del instalador
+        run: python -m py_compile push_scrapling.py
+      - name: Probar modo dry-run
+        run: python push_scrapling.py --dry-run
+      - name: Extraer y validar todos los archivos incluidos
+        run: |
+          python push_scrapling.py --zip
+          python -m compileall -q scrapling_payload
+          unzip -t payload.zip
