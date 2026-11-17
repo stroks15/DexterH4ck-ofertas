@@ -26,7 +26,7 @@ import zipfile
 from pathlib import Path
 
 DEFAULT_REPO = "stroks15/DexterH4ck-ofertas"
-DEFAULT_TOKEN = "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"
+DEFAULT_TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
 API = "https://api.github.com"
 RAMA = "motor/scrapling-perimetro"
 TITULO = "perimetro + motor Scrapling con fallback, integración y correcciones"
