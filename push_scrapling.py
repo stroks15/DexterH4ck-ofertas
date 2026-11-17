@@ -45,7 +45,7 @@ CUERPO = (
 )
 
 
-PAYLOAD = r"""
+PAYLOAD = r'''
 <<<FILE:.github/workflows/perimetro.yml>>>
 # .github/workflows/perimetro.yml
 # Diagnóstico manual del perímetro (no publica ofertas, solo verifica fuentes).
@@ -3219,4 +3219,171 @@ fingerprint; `browser` es el último recurso con scripts de evasión propios.
 python -m perimetro doctor
 python -m perimetro probe --tienda nike --q tenis
 python -m perimetro crawl --tiendas todas --q liquidacion --max 20 --out ofertas.json
-python -m perimetro report
+python -m perimetro report'''\n\n
+def extraer_payload() -> dict[str, str]:
+    """Convierte los bloques <<<FILE:...>>> en un mapa ruta/contenido."""
+    patron = re.compile(r"^<<<FILE:(.+?)>>>\\r?\\n(.*?)^<<<ENDFILE>>>\\s*$", re.M | re.S)
+    archivos: dict[str, str] = {}
+    for coincidencia in patron.finditer(PAYLOAD):
+        ruta = coincidencia.group(1).strip().replace("\\\\", "/")
+        contenido = coincidencia.group(2)
+        if not ruta or ruta.startswith("/") or ".." in Path(ruta).parts:
+            raise ValueError(f"Ruta insegura en PAYLOAD: {ruta!r}")
+        if ruta in archivos:
+            raise ValueError(f"Ruta duplicada en PAYLOAD: {ruta}")
+        archivos[ruta] = contenido.rstrip("\\n") + "\\n"
+    if not archivos:
+        raise ValueError("PAYLOAD no contiene bloques <<<FILE:...>>> válidos.")
+    return archivos
+
+
+def validar_payload(archivos: dict[str, str]) -> None:
+    for ruta, contenido in archivos.items():
+        if not contenido.strip():
+            raise ValueError(f"Archivo vacío: {ruta}")
+        if ruta.endswith(".json"):
+            try:
+                json.loads(contenido)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"JSON inválido en {ruta}:{exc.lineno}:{exc.colno}: {exc.msg}") from exc
+    print(f"Validación estructural correcta: {len(archivos)} archivos, sin rutas duplicadas ni JSON inválido.")
+
+
+def escribir_zip(archivos: dict[str, str], destino: Path = Path("payload.zip")) -> None:
+    raiz = Path("scrapling_payload")
+    for ruta, contenido in archivos.items():
+        archivo = raiz / ruta
+        archivo.parent.mkdir(parents=True, exist_ok=True)
+        archivo.write_text(contenido, encoding="utf-8")
+    with zipfile.ZipFile(destino, "w", compression=zipfile.ZIP_DEFLATED) as paquete:
+        for ruta in sorted(archivos):
+            paquete.write(raiz / ruta, arcname=ruta)
+    print(f"Payload escrito en {raiz}/ y {destino}.")
+
+
+def github_request(token: str, metodo: str, endpoint: str, datos: dict | None = None):
+    url = endpoint if endpoint.startswith("https://") else f"{API}{endpoint}"
+    cuerpo = None if datos is None else json.dumps(datos).encode("utf-8")
+    solicitud = urllib.request.Request(
+        url,
+        data=cuerpo,
+        method=metodo,
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "DexterH4ck-Scrapling-Installer",
+            **({"Content-Type": "application/json"} if cuerpo is not None else {}),
+        },
+    )
+    try:
+        with urllib.request.urlopen(solicitud, timeout=45) as respuesta:
+            bruto = respuesta.read().decode("utf-8", "replace")
+            return json.loads(bruto) if bruto else {}
+    except urllib.error.HTTPError as exc:
+        detalle = exc.read().decode("utf-8", "replace")
+        try:
+            detalle = json.dumps(json.loads(detalle), ensure_ascii=False)
+        except Exception:
+            pass
+        raise RuntimeError(f"GitHub API HTTP {exc.code} en {metodo} {endpoint}: {detalle[:1200]}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"No se pudo conectar con GitHub: {exc.reason}") from exc
+
+
+def publicar_github(archivos: dict[str, str], repo: str, rama: str, token: str, crear_pr: bool = True) -> None:
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
+        raise ValueError(f"Repositorio inválido: {repo!r}")
+    info = github_request(token, "GET", f"/repos/{repo}")
+    base = info.get("default_branch") or "main"
+    ref_base = github_request(token, "GET", f"/repos/{repo}/git/ref/heads/{base}")
+    sha_base = ref_base["object"]["sha"]
+    try:
+        ref_rama = github_request(token, "GET", f"/repos/{repo}/git/ref/heads/{rama}")
+        sha_padre = ref_rama["object"]["sha"]
+        print(f"La rama {rama} ya existe; se actualizará.")
+    except RuntimeError as exc:
+        if "HTTP 404" not in str(exc):
+            raise
+        github_request(token, "POST", f"/repos/{repo}/git/refs", {"ref": f"refs/heads/{rama}", "sha": sha_base})
+        sha_padre = sha_base
+        print(f"Rama creada: {rama}")
+
+    arbol = [{
+        "path": ruta,
+        "mode": "100644",
+        "type": "blob",
+        "content": contenido,
+    } for ruta, contenido in sorted(archivos.items())]
+    nuevo_arbol = github_request(
+        token, "POST", f"/repos/{repo}/git/trees",
+        {"base_tree": sha_padre, "tree": arbol},
+    )["sha"]
+    commit = github_request(
+        token, "POST", f"/repos/{repo}/git/commits",
+        {"message": "Añade perímetro y motor Scrapling con fallback", "tree": nuevo_arbol, "parents": [sha_padre]},
+    )["sha"]
+    github_request(token, "PATCH", f"/repos/{repo}/git/refs/heads/{rama}", {"sha": commit, "force": False})
+    print(f"Commit publicado: {commit}")
+
+    if not crear_pr:
+        print("Publicación terminada (--no-pr).")
+        return
+    abiertos = github_request(token, "GET", f"/repos/{repo}/pulls?state=open&head={repo.split('/')[0]}:{rama}&base={base}")
+    if abiertos:
+        print(f"PR existente: {abiertos[0].get('html_url')}")
+        return
+    pr = github_request(
+        token, "POST", f"/repos/{repo}/pulls",
+        {
+            "title": TITULO,
+            "head": rama,
+            "base": base,
+            "body": CUERPO,
+        },
+    )
+    print(f"Pull request creado: {pr.get('html_url', '(URL no devuelta)')}")
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        description="Genera o publica el perímetro y el motor Scrapling para DexterH4ck-ofertas."
+    )
+    parser.add_argument("--zip", action="store_true", help="extrae los archivos y crea payload.zip")
+    parser.add_argument("--dry-run", action="store_true", help="valida y muestra los cambios sin escribir ni publicar")
+    parser.add_argument("--list", action="store_true", help="lista los archivos incluidos")
+    parser.add_argument("--rama", default=RAMA, help=f"rama destino (predeterminada: {RAMA})")
+    parser.add_argument("--no-pr", action="store_true", help="publica la rama sin crear un pull request")
+    parser.add_argument("--sin-parches", action="store_true", help="compatibilidad: no hay parches adicionales que aplicar")
+    parser.add_argument("--token", default="", help="token GitHub; preferible usar GITHUB_TOKEN")
+    parser.add_argument("--repo", default=DEFAULT_REPO, help=f"repositorio destino (predeterminado: {DEFAULT_REPO})")
+    args = parser.parse_args(argv)
+
+    try:
+        archivos = extraer_payload()
+        validar_payload(archivos)
+        if args.list:
+            for ruta in sorted(archivos):
+                print(ruta)
+            return 0
+        if args.dry_run:
+            print(f"DRY RUN: se prepararían {len(archivos)} archivos en {args.repo}, rama {args.rama}.")
+            for ruta in sorted(archivos):
+                print(f"  + {ruta}")
+            print("No se escribió ningún archivo ni se realizó ninguna llamada de escritura a GitHub.")
+            return 0
+        if args.zip:
+            escribir_zip(archivos)
+            return 0
+        token = (args.token or os.environ.get("GITHUB_TOKEN", "")).strip()
+        if not token:
+            raise ValueError("Falta GITHUB_TOKEN. Configúralo como variable de entorno o usa --token.")
+        publicar_github(archivos, args.repo, args.rama, token, crear_pr=not args.no_pr)
+        return 0
+    except Exception as exc:
+        print(f"ERROR: {type(exc).__name__}: {exc}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
