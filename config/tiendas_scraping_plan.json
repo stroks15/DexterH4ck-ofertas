@@ -1,14 +1,7 @@
 {
-  "tiendas": [
-    "Walmart Mexico",
-    "Bodega Aurrera",
-    "Soriana",
-    "Chedraui",
-    "Coppel",
-    "Liverpool",
-    "Mercado Libre Mexico",
-    "Amazon Mexico"
-  ],
+  "tiendas": ["Walmart Mexico", "Bodega Aurrera", "Soriana", "Chedraui", "Sam's Club", "Coppel", "Elektra", "Liverpool", "Suburbia", "Sears", "Nike", "Adidas", "Palacio de Hierro", "Home Depot", "Office Depot", "La Comer", "Amazon Mexico", "Mercado Libre Mexico"],
   "prioridad": "liquidaciones",
-  "objetivo": "detectar descuentos reales y evitar duplicados"
+  "objetivo": "detectar descuentos reales y evitar duplicados",
+  "capa": "perimetro",
+  "nota": "Las 17 tiendas en línea se ejecutan desde config/perimetro_tiendas.json con la capa stealth; Mercado Libre sigue por scrapers/mercado_libre_api.py."
 }

@@ -1,0 +1,5 @@
+# Motor Scrapling (primario). Requiere además: scrapling install
+scrapling[fetchers]>=0.4.2
+curl_cffi>=0.7.4
+patchright>=1.48
+playwright>=1.48

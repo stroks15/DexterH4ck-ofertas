@@ -46,22 +46,38 @@ jobs:
           else
             echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
           fi
+          if [ -f requirements-scrapling.txt ]; then
+            python -m pip install -r requirements-scrapling.txt
+          fi
+          if [ -f requirements-perimetro.txt ]; then
+            python -m pip install -r requirements-perimetro.txt
+          fi
 
-      - name: Cachear Chromium para captura XHR normal
+      - name: Cachear navegadores para el motor
         uses: actions/cache@v4
-        id: playwright-cache
+        id: motor-cache
         with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements-browser.txt') }}
+          path: |
+            ~/.cache/ms-playwright
+            ~/.cache/scrapling
+          key: ${{ runner.os }}-scrapling-${{ hashFiles('requirements-scrapling.txt') }}
 
-      - name: Instalar Chromium para captura XHR (sin stealth)
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: python -m playwright install chromium
+      - name: Instalar navegadores del motor
+        if: steps.motor-cache.outputs.cache-hit != 'true'
+        continue-on-error: true
+        run: |
+          python -m playwright install chromium || true
+          scrapling install --force || scrapling install || true
 
       - name: Verificar Scrapling (sesiones HTTP respetuosas)
         shell: bash
         run: |
           python -c "from scrapling.spiders import Spider; from scrapling.fetchers import FetcherSession; print('Scrapling Spider disponible')"
+
+      - name: Verificar motor con fallback
+        continue-on-error: true
+        shell: bash
+        run: python tools/verificar_motor.py
 
       - name: Verificar secretos de Telegram
         env:
@@ -244,13 +260,11 @@ jobs:
           GROQ_MIN_DELAY: "1.5"
           MERCADOLIBRE_ACCESS_TOKEN: ${{ secrets.MERCADOLIBRE_ACCESS_TOKEN }}
           APPS_SCRIPT_PROXY_URL: ${{ secrets.APPS_SCRIPT_PROXY_URL }}
-          # Telegram (cuenta de usuario para leer el grupo privado; solo lectura)
           TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
           TELEGRAM_SESSION_STRING: ${{ secrets.TELEGRAM_SESSION_STRING }}
           TELEGRAM_WALMART_INVITE: ${{ secrets.TELEGRAM_WALMART_INVITE }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          # El módulo core.supabase_history lee SUPABASE_SERVICE_ROLE_KEY.
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
           FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
           FIRECRAWL_RAG_URLS: ${{ vars.FIRECRAWL_RAG_URLS }}
@@ -288,12 +302,22 @@ jobs:
           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
           NETWORK_BROWSER_WAIT_MS: "6500"
           NETWORK_BROWSER_MAX_RESPONSES: "20"
-          # Capa híbrida opcional: solo URLs públicas explícitamente verificadas.
           HYBRID_DISCOVERY_ENABLED: ${{ vars.HYBRID_DISCOVERY_ENABLED || 'true' }}
           HYBRID_STRUCTURED_SOURCES: ${{ vars.HYBRID_STRUCTURED_SOURCES }}
           HYBRID_PLAYWRIGHT_SOURCES: ${{ vars.HYBRID_PLAYWRIGHT_SOURCES }}
           HYBRID_PLAYWRIGHT_WAIT_MS: "2500"
           TELEGRAM_STICKER_LIQUIDACION: ${{ vars.TELEGRAM_STICKER_LIQUIDACION }}
+          # Motor Scrapling: primario, con fallback al pipeline actual.
+          SCRAPLING_MOTOR: ${{ vars.SCRAPLING_MOTOR || 'auto' }}
+          SCRAPLING_CONCURRENCIA: "4"
+          SCRAPLING_PERFILES: ${{ vars.SCRAPLING_PERFILES || 'desktop_chrome_win,android_chrome,movil_safari_ios' }}
+          SCRAPLING_ROTAR_CADA: "3"
+          SCRAPLING_SOLVE_CLOUDFLARE: ${{ vars.SCRAPLING_SOLVE_CLOUDFLARE || 'auto' }}
+          SCRAPLING_FALLBACK: "true"
+          PROXY_POOL: ${{ secrets.PROXY_POOL }}
+          PROXY_ESTRATEGIA: ${{ vars.PROXY_ESTRATEGIA || 'sticky' }}
+          CAPTCHA_PROVIDER: ${{ secrets.CAPTCHA_PROVIDER }}
+          CAPTCHA_API_KEY: ${{ secrets.CAPTCHA_API_KEY }}
         run: python monitor_ofertas.py
 
       - name: Guardar historial con commit directo seguro
@@ -307,12 +331,9 @@ jobs:
           git config user.name "bot-ofertas"
           git config user.email "bot-ofertas@users.noreply.github.com"
           git add historial_ofertas.json
-          if [ -f fuentes_cooldown.json ]; then
-            git add fuentes_cooldown.json
-          fi
-          if [ -f tg_grupo_offset.json ]; then
-            git add tg_grupo_offset.json
-          fi
+          for archivo in fuentes_cooldown.json tg_grupo_offset.json motor_cooldown.json perimetro_cooldown.json; do
+            if [ -f "$archivo" ]; then git add "$archivo"; fi
+          done
           if git diff --cached --quiet; then
             echo "Historial sin cambios."
             exit 0
@@ -331,9 +352,6 @@ jobs:
             echo "Push concurrente; sincronizando intento $intento..."
             git reset --soft HEAD~1
             git checkout -- historial_ofertas.json
-            if [ -f tg_grupo_offset.json ]; then
-              git checkout -- tg_grupo_offset.json 2>/dev/null || true
-            fi
             git fetch origin main
             git merge --ff-only origin/main 2>/dev/null || {
               echo "La rama avanzó mientras se ejecutaba el monitor; se conserva el historial local como siguiente ciclo."
@@ -352,4 +370,5 @@ jobs:
           path: |
             preflight_health.json
             monitor_health.json
+            motor_health.json
           if-no-files-found: ignore

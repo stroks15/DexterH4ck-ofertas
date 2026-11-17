@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "nota": "Parámetros del motor. Sobrescribible por entorno (SCRAPLING_*). Perfiles coherentes: UA, sec-ch-ua, plataforma, viewport y DPR casan entre sí.",
+  "modo": "auto",
+  "concurrencia": 4,
+  "rotar_perfil_cada": 3,
+  "fallback_habilitado": true,
+  "reintentos": 2,
+  "presupuesto": {"base_ms": 20000, "min_ms": 8000, "max_ms": 60000, "factor_ewma": 1.8, "alfa_ewma": 0.3, "tope_retry_after_s": 45},
+  "esperas": {"tras_carga_ms": 1200, "jitter_ms": 700},
+  "perfiles": [
+    {"id": "desktop_chrome_win", "dispositivo": "desktop", "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36", "plataforma": "Windows", "sec_ch_ua": "\"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\", \"Google Chrome\";v=\"131\"", "movil": false, "viewport": {"width": 1536, "height": 864}, "dpr": 1.0, "impersonate": "chrome"},
+    {"id": "desktop_chrome_mac", "dispositivo": "desktop", "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36", "plataforma": "macOS", "sec_ch_ua": "\"Chromium\";v=\"130\", \"Not_A Brand\";v=\"24\", \"Google Chrome\";v=\"130\"", "movil": false, "viewport": {"width": 1440, "height": 900}, "dpr": 2.0, "impersonate": "chrome130"},
+    {"id": "android_chrome", "dispositivo": "movil", "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36", "plataforma": "Android", "sec_ch_ua": "\"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\", \"Google Chrome\";v=\"131\"", "movil": true, "viewport": {"width": 412, "height": 915}, "dpr": 2.625, "impersonate": "chrome_android"},
+    {"id": "movil_safari_ios", "dispositivo": "movil", "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1", "plataforma": "iOS", "sec_ch_ua": "", "movil": true, "viewport": {"width": 393, "height": 852}, "dpr": 3.0, "impersonate": "safari_ios"},
+    {"id": "tablet_ipad", "dispositivo": "tablet", "ua": "Mozilla/5.0 (iPad; CPU OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1", "plataforma": "iOS", "sec_ch_ua": "", "movil": true, "viewport": {"width": 1024, "height": 1366}, "dpr": 2.0, "impersonate": "safari_ios"}
+  ],
+  "perfil_por_host": {"www.amazon.com.mx": "desktop_chrome_win", "www.nike.com": "desktop_chrome_mac", "www.adidas.mx": "android_chrome", "www.lacomer.com.mx": "android_chrome"},
+  "dominios": {
+    "requieren_navegador": ["www.walmart.com.mx", "www.bodegaaurrera.com.mx", "www.samsclub.com.mx", "www.homedepot.com.mx", "www.lacomer.com.mx", "www.adidas.mx", "www.liverpool.com.mx", "www.suburbia.com.mx"],
+    "nunca_navegador": ["api.mercadolibre.com", "api.telegram.org", "promodescuentos.com"],
+    "solve_cloudflare": ["www.amazon.com.mx", "www.nike.com"]
+  },
+  "tiendas": {
+    "walmart": {"perfil": "desktop_chrome_win", "navegador": true, "url": "https://www.walmart.com.mx/search?q={q}"},
+    "bodega": {"perfil": "desktop_chrome_win", "navegador": true, "url": "https://www.bodegaaurrera.com.mx/search?q={q}"},
+    "sams": {"perfil": "desktop_chrome_win", "navegador": true, "url": "https://www.samsclub.com.mx/search?q={q}"},
+    "chedraui": {"perfil": "desktop_chrome_mac", "navegador": false, "url": "https://www.chedraui.com.mx/search?q={q}"},
+    "soriana": {"perfil": "desktop_chrome_win", "navegador": false, "url": "https://www.soriana.com/search?q={q}"},
+    "coppel": {"perfil": "desktop_chrome_mac", "navegador": false, "url": "https://www.coppel.com/buscar?q={q}"},
+    "elektra": {"perfil": "desktop_chrome_win", "navegador": false, "url": "https://www.elektra.mx/search?q={q}"},
+    "liverpool": {"perfil": "desktop_chrome_mac", "navegador": true, "url": "https://www.liverpool.com.mx/tienda?s={q}"},
+    "suburbia": {"perfil": "android_chrome", "navegador": true, "url": "https://www.suburbia.com.mx/tienda?s={q}"},
+    "sears": {"perfil": "desktop_chrome_win", "navegador": false, "url": "https://www.sears.com.mx/tienda?s={q}"},
+    "nike": {"perfil": "desktop_chrome_mac", "navegador": false, "url": "https://www.nike.com/mx/w?q={q}"},
+    "adidas": {"perfil": "android_chrome", "navegador": true, "url": "https://www.adidas.mx/search?q={q}"},
+    "palacio": {"perfil": "desktop_chrome_mac", "navegador": false, "url": "https://www.elpalaciodehierro.com/buscar?q={q}"},
+    "homedepot": {"perfil": "desktop_chrome_win", "navegador": true, "url": "https://www.homedepot.com.mx/buscar?q={q}"},
+    "officedepot": {"perfil": "desktop_chrome_win", "navegador": false, "url": "https://www.officedepot.com.mx/search?q={q}"},
+    "lacomer": {"perfil": "android_chrome", "navegador": true, "url": "https://www.lacomer.com.mx/lacomer/#!/buscar?q={q}"},
+    "amazon": {"perfil": "desktop_chrome_win", "navegador": false, "url": "https://www.amazon.com.mx/s?k={q}"}
+  }
+}
