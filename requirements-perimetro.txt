@@ -1,0 +1,2 @@
+# La implementación base usa biblioteca estándar y requests (requirements.txt).
+# Proxies y navegador son opcionales y deben configurarse fuera del repositorio.

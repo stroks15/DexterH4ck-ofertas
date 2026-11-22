@@ -1,0 +1,16 @@
+{
+  "perfiles": {
+    "desktop_chrome_windows": {"user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","sec_ch_ua":"\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","plataforma":"Windows","viewport":{"width":1365,"height":768},"dpr":1,"impersonate":"chrome131","movil":false},
+    "desktop_chrome_macos": {"user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36","sec_ch_ua":"\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","plataforma":"macOS","viewport":{"width":1440,"height":900},"dpr":2,"impersonate":"chrome131","movil":false},
+    "android_chrome": {"user_agent":"Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36","sec_ch_ua":"\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"","plataforma":"Android","viewport":{"width":412,"height":915},"dpr":2.625,"impersonate":"chrome131_android","movil":true},
+    "iphone_safari": {"user_agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1","sec_ch_ua":"","plataforma":"iOS","viewport":{"width":393,"height":852},"dpr":3,"impersonate":"safari18_ios","movil":true},
+    "ipad": {"user_agent":"Mozilla/5.0 (iPad; CPU OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1","sec_ch_ua":"","plataforma":"iPadOS","viewport":{"width":1024,"height":1366},"dpr":2,"impersonate":"safari18_ios","movil":true}
+  },
+  "perfil_por_host": {"amazon.com.mx":"desktop_chrome_windows","walmart.com.mx":"desktop_chrome_windows","bodegaaurrera.com.mx":"desktop_chrome_windows","www.sams.com.mx":"desktop_chrome_windows"},
+  "dominios": {"requieren_navegador":[],"nunca_navegador":[],"solve_cloudflare":[]},
+  "presupuesto": {"base_ms":12000,"min_ms":5000,"max_ms":30000,"factor_ewma":2.5,"alfa_ewma":0.3,"tope_retry_after_s":45},
+  "concurrencia":4,
+  "tiendas": {
+    "walmart-mx":"https://www.walmart.com.mx/search?q={q}","bodega-aurrera":"https://www.bodegaaurrera.com.mx/search?q={q}","sams-club":"https://www.sams.com.mx/search?q={q}","chedraui":"https://www.chedraui.com.mx/busca?query={q}","soriana":"https://www.soriana.com/buscar?q={q}","coppel":"https://www.coppel.com/search/?q={q}","elektra":"https://www.elektra.mx/search/?q={q}","liverpool":"https://www.liverpool.com.mx/tienda?s={q}","suburbia":"https://www.suburbia.com.mx/search/?q={q}","sears":"https://www.sears.com.mx/resultados?q={q}","nike":"https://www.nike.com/mx/w?q={q}","adidas":"https://www.adidas.mx/search?q={q}","palacio-hierro":"https://www.elpalaciodehierro.com/search?q={q}","home-depot":"https://www.homedepot.com.mx/search?q={q}","office-depot":"https://www.officedepot.com.mx/search?q={q}","la-comer":"https://www.lacomer.com.mx/busca?query={q}","amazon-mx":"https://www.amazon.com.mx/s?k={q}"
+  }
+}
