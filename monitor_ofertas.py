@@ -57,6 +57,10 @@ TIENDAS_OBJETIVO = (
     "Suburbia",
     "Oferstock",
 )
+TIENDAS_OBJETIVO = tuple(dict.fromkeys(TIENDAS_OBJETIVO + (
+    "Sam's Club", "Elektra", "Sears", "Nike", "Adidas", "Palacio de Hierro",
+    "Home Depot", "Office Depot", "La Comer",
+)))
 
 
 def cargar_historial():
