@@ -194,7 +194,7 @@ class VtexCatalogAdapter(BaseScraper):
         return self.endpoint.rstrip("/") + "/api/catalog_system/pub/products/search"
 
     def _queries(self) -> list[str]:
-        prefix = self.endpoint_env.removesuffix("_ENDPOINT")
+        prefix = self.endpoint_env.removesuffix("_VTEX_ENDPOINT").removesuffix("_ENDPOINT")
         raw = os.environ.get(f"{prefix}_QUERIES", "").strip()
         return [q.strip() for q in raw.split("|") if q.strip()] if raw else list(TERMINOS_LIQUIDACION[:3])
 
@@ -273,7 +273,7 @@ class VtexCatalogAdapter(BaseScraper):
         if not endpoint:
             self.last_status = {"state": "invalid_endpoint", "count": 0}
             return []
-        prefix = self.endpoint_env.removesuffix("_VTEX_ENDPOINT")
+        prefix = self.endpoint_env.removesuffix("_VTEX_ENDPOINT").removesuffix("_ENDPOINT")
         try:
             pages = max(1, min(5, int(os.environ.get(f"{prefix}_PAGES", "1"))))
         except (TypeError, ValueError):
@@ -380,8 +380,21 @@ OferstockAdapter = _adapter("Oferstock", "OFERSTOCK_API", "https://www.oferstock
 ChedrauiJsonAdapter = _adapter("Chedraui", "CHEDRAUI_VTEX", "https://www.chedraui.com.mx")
 
 
-def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScraper]:
-    """Un adaptador independiente por cada tienda objetivo."""
+def _motor_adapters(context: ScraperContext | None = None) -> list[BaseScraper]:
+    """Carga el motor solo si está habilitado; sin él se conserva API-first íntegro."""
+    enabled = os.environ.get("SCRAPLING_MOTOR_ENABLED", "false").strip().lower() in {"1", "true", "yes", "si"}
+    if not enabled:
+        return []
+    try:
+        from scrapers.scrapling_adaptador import adaptadores_motor
+        return adaptadores_motor(context)
+    except Exception as exc:
+        logger.info("Motor opcional no disponible (%s); se mantiene API-first.", type(exc).__name__)
+        return []
+
+
+def api_first_scrapers(context: ScraperContext | None = None, include_motor: bool = True) -> list[BaseScraper]:
+    """Orden: motor por tienda primero, API/legacy actual como respaldo automático."""
     chedraui = VtexStoresScraper(context) if VtexStoresScraper else ChedrauiJsonAdapter(context)
     liverpool = (
         LiverpoolVtexAdapter(context)
@@ -398,7 +411,7 @@ def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScrape
         if os.environ.get("SUBURBIA_API_ENDPOINT", "").strip()
         else SuburbiaAdapter(context)
     )
-    return [
+    legacy = [
         WalmartAdapter(context),
         BodegaAdapter(context),
         chedraui,
@@ -410,6 +423,7 @@ def api_first_scrapers(context: ScraperContext | None = None) -> list[BaseScrape
         suburbia,
         OferstockAdapter(context),
     ]
+    return (_motor_adapters(context) if include_motor else []) + legacy
 
 
 class ApiStoresScraper:

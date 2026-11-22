@@ -42,6 +42,17 @@ TRACKING_PARAMS = {
 STORE_ALIASES = {
     "walmart": "walmart",
     "walmart mx": "walmart",
+    "sams club": "sams",
+    "sams": "sams",
+    "elektra": "elektra",
+    "sears": "sears",
+    "nike": "nike",
+    "adidas": "adidas",
+    "palacio de hierro": "palacio_hierro",
+    "el palacio de hierro": "palacio_hierro",
+    "home depot": "home_depot",
+    "office depot": "office_depot",
+    "la comer": "la_comer",
     "bodega aurrera": "bodega",
     "chedraui": "chedraui",
     "soriana": "soriana",
@@ -101,6 +112,8 @@ def product_code(url: object) -> str:
         r"/ip/[^/]+/([0-9]{6,})(?:/|$)",  # Walmart/Bodega
         r"/mlm-([0-9]+)(?:/|$)",  # Mercado Libre
         r"/p/[^/]+/([0-9]{6,})(?:/|$)",  # Chedraui/Soriana/etc.
+        r"/(?:product|producto|sku)/[^/]*-([0-9]{5,})(?:/|$)",  # catálogo público genérico
+        r"/([A-Z]{2,}[0-9][A-Z0-9-]{5,})(?:/|$)",  # SKU alfanumérico común
     )
     for pattern in patterns:
         match = re.search(pattern, path, re.I)

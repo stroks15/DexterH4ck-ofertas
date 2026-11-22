@@ -1,0 +1,2 @@
+# Opcional: el pipeline se degrada al API/legacy si no está instalado.
+scrapling>=0.3

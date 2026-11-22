@@ -46,6 +46,12 @@ jobs:
           else
             echo "::notice::requirements-browser.txt no existe; se omite la instalación de dependencias de navegador."
           fi
+          if [ -f requirements-scrapling.txt ]; then
+            python -m pip install -r requirements-scrapling.txt || echo "::warning::Scrapling opcional no pudo instalarse; se conservará API-first."
+          fi
+          if [ -f requirements-perimetro.txt ]; then
+            python -m pip install -r requirements-perimetro.txt
+          fi
 
       - name: Cachear Chromium para captura XHR normal
         uses: actions/cache@v4
@@ -58,10 +64,16 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: python -m playwright install chromium
 
-      - name: Verificar Scrapling (sesiones HTTP respetuosas)
+      - name: Instalar navegadores de Scrapling (opcional)
+        continue-on-error: true
+        run: scrapling install --force
+
+      - name: Verificar Scrapling y motor (opcionales)
         shell: bash
         run: |
-          python -c "from scrapling.spiders import Spider; from scrapling.fetchers import FetcherSession; print('Scrapling Spider disponible')"
+          python -c "from scrapling.spiders import Spider; from scrapling.fetchers import FetcherSession; print('Scrapling Spider disponible')" || echo "::warning::Scrapling no disponible; API-first continuará."
+          python tools/verificar_motor.py
+          python -m perimetro doctor
 
       - name: Verificar secretos de Telegram
         env:
@@ -285,6 +297,13 @@ jobs:
           SORIANA_PAGES: ${{ vars.SORIANA_PAGES }}
           LEGACY_SEARCH_URLS_JSON: ${{ vars.LEGACY_SEARCH_URLS_JSON }}
           NETWORK_BROWSER_ENABLED: "true"
+          # Motor opcional: secretos solo se inyectan aquí, nunca se registran.
+          SCRAPLING_MOTOR_ENABLED: "true"
+          SCRAPLING_CONCURRENCY: "4"
+          SCRAPLING_PROFILE: ${{ vars.SCRAPLING_PROFILE }}
+          PROXY_POOL: ${{ secrets.PROXY_POOL }}
+          CAPTCHA_PROVIDER: ${{ secrets.CAPTCHA_PROVIDER }}
+          CAPTCHA_API_KEY: ${{ secrets.CAPTCHA_API_KEY }}
           NETWORK_BROWSER_SOURCES: ${{ vars.NETWORK_BROWSER_SOURCES }}
           NETWORK_BROWSER_WAIT_MS: "6500"
           NETWORK_BROWSER_MAX_RESPONSES: "20"
