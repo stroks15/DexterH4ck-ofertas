@@ -69,7 +69,7 @@ def format_alert(alert: dict) -> str:
     previous_text = escape_markdown(f"${previous:,.2f}")
 
     lines = [
-        f"{emoji} *¡LIQUIDACIÓN DETECTADA EN {store}!*",
+        f"{emoji} *¡LIQUIDACIÓN DETECTADA EN {store}\\!*",
         "━━━━━━━━━━━━━━━━━━━━━━━━━━",
         f"📦 *Producto:* {title}",
         f"🏷️ *Marca:* {brand} {separator} 🗂️ *Categoría:* {category}",
