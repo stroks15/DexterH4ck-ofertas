@@ -44,7 +44,7 @@ MIN_DESCUENTO_GRUPO = 50
 MAX_DESCUENTO_GRUPO = 99
 OFFSET_FILE = "tg_grupo_offset.json"
 
-GRUPO_FUENTE_CHAT_ID = (os.environ.get("GRUPO_FUENTE_CHAT_ID") or os.environ.get("TELEGRAM_WALMART_CHAT_ID") or "").strip()
+GRUPO_FUENTE_CHAT_ID = os.environ.get("GRUPO_FUENTE_CHAT_ID", "").strip()
 
 DESCUENTO_RE = re.compile(r"-(\d{1,3})\s*%")
 PRECIO_RE = re.compile(r"Precio:\s*\$\s*([\d,]+\.?\d*)", re.I)
