@@ -924,13 +924,16 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
             if publicable and previo is not None and actual > _num(previo) * 0.90:
                 publicable = False
 
-            # Un precio online <= $10 MXN es anómalo para catálogos generalistas.
-            # No se publica solo por un porcentaje/historial: exige verificación oficial.
-            if publicable and 0 < actual <= 10 and str(item.get("tipo_fuente") or "").upper() != "FISICA":
+            # Un precio online <= $10 MXN solo se publica si la ficha oficial
+            # confirma el importe. También conserva el carril de liquidación extrema
+            # sin referencia cuando la verificación sí confirma el precio.
+            if 0 < actual <= 10 and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_telegram:
                 try:
                     verificacion_extremo = analizar_precio_extremo(item)
                     if verificacion_extremo.get("publicable_como_extremo"):
                         precio_extremo = verificacion_extremo
+                        if previo is None or actual <= _num(previo) * 0.90:
+                            publicable = True
                     else:
                         publicable = False
                         logger.warning(
