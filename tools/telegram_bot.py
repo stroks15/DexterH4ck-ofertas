@@ -79,7 +79,7 @@ def format_alert(alert: dict) -> str:
     else:
         lines.append(f"💰 *Precio Actual:* {current_text}")
     if 50 <= discount <= 99:
-        status = "REALES" if verified_discount else "(REPORTADO POR LA FUENTE)"
+        status = "CALCULADO CON LOS PRECIOS RECIBIDOS" if verified_discount else "(REPORTADO POR LA FUENTE)"
         lines.append(f"📉 *Descuento:* {discount}% {status}")
 
     extreme = alert.get("precio_extremo") or {}
