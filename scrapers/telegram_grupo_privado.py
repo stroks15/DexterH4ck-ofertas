@@ -44,7 +44,7 @@ MIN_DESCUENTO_GRUPO = 50
 MAX_DESCUENTO_GRUPO = 99
 OFFSET_FILE = "tg_grupo_offset.json"
 
-GRUPO_FUENTE_CHAT_ID = os.environ.get("GRUPO_FUENTE_CHAT_ID", "").strip()
+GRUPO_FUENTE_CHAT_ID = (os.environ.get("GRUPO_FUENTE_CHAT_ID") or os.environ.get("TELEGRAM_WALMART_CHAT_ID") or "").strip()
 
 DESCUENTO_RE = re.compile(r"-(\d{1,3})\s*%")
 PRECIO_RE = re.compile(r"Precio:\s*\$\s*([\d,]+\.?\d*)", re.I)
@@ -200,41 +200,46 @@ def revisar_grupo_privado(token: str, chat_id_destino: str) -> tuple[int, int]:
 
     enviadas = 0
     candidatos = 0
-    max_update_id = offset - 1
+    ultimo_confirmado = offset - 1
 
     for update in data.get("result", []):
         update_id = update.get("update_id", 0)
-        max_update_id = max(max_update_id, update_id)
 
         mensaje = update.get("message") or update.get("channel_post")
         if not mensaje:
+            ultimo_confirmado = max(ultimo_confirmado, update_id)
             continue
 
         chat = mensaje.get("chat", {})
         if str(chat.get("id")) != GRUPO_FUENTE_CHAT_ID:
+            ultimo_confirmado = max(ultimo_confirmado, update_id)
             continue
 
         texto = mensaje.get("text") or mensaje.get("caption")
         if not texto:
+            ultimo_confirmado = max(ultimo_confirmado, update_id)
             continue
 
         oferta = parsear_oferta(texto, mensaje)
         if not oferta:
+            ultimo_confirmado = max(ultimo_confirmado, update_id)
             continue
 
         if not (MIN_DESCUENTO_GRUPO <= oferta["descuento"] <= MAX_DESCUENTO_GRUPO):
+            ultimo_confirmado = max(ultimo_confirmado, update_id)
             continue
 
         candidatos += 1
         if _enviar(token, chat_id_destino, _formatear_alerta(oferta)):
             enviadas += 1
+            ultimo_confirmado = max(ultimo_confirmado, update_id)
         else:
-            print(f"[grupo_privado] No se pudo enviar la oferta del {oferta['descuento']}%.")
+            print(f"[grupo_privado] No se pudo enviar la oferta del {oferta['descuento']}%; se conservará para reintentar.")
+            break
 
-    # El offset se guarda siempre que avancemos, incluso si una oferta
-    # puntual falló al enviarse: Telegram no reenvía mensajes viejos y
-    # reintentar por siempre el mismo lote bloquearía los nuevos.
-    if max_update_id >= offset:
-        _guardar_offset(max_update_id + 1)
+    # Avanzar solo hasta el último update procesado correctamente; si falla un envío,
+    # ese update permanece pendiente para el siguiente ciclo.
+    if ultimo_confirmado >= offset:
+        _guardar_offset(ultimo_confirmado + 1)
 
     return enviadas, candidatos
