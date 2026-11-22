@@ -73,6 +73,18 @@ def cargar_historial():
 def _sanear_historial(historial: dict) -> dict:
     """Repara precios históricos contaminados por gramajes antes de usarlos."""
     historial, reparadas = sanitize_history(historial)
+    # Limpia registros Amazon contaminados por importes menores a $10 MXN:
+    # nunca deben convertirse en precio máximo ni bloquear una oferta real posterior.
+    for entrada in historial.values():
+        if not isinstance(entrada, dict):
+            continue
+        if canonical_store(entrada.get("tienda")) == "amazon":
+            actual = _num(entrada.get("precio_actual"))
+            if 0 < actual <= 10:
+                for campo in ("precio_actual", "precio_maximo", "precio_alertado", "precio_anterior", "precio_referencia"):
+                    if entrada.get(campo) is not None:
+                        entrada[campo] = None
+                        reparadas += 1
     if reparadas:
         logger.warning("Historial: %d campos contaminados fueron reparados.", reparadas)
     return historial
@@ -115,6 +127,12 @@ def guardar_historial(historial):
 
 def limpiar_titulo_producto(titulo, url=""):
     texto = html.unescape(str(titulo or ""))
+    texto = re.sub(
+        r"(?i)\s*[—|·-]?\s*(?:🔥\s*)?precio\s+más\s+bajo\s+de\s+los\s+últimos\s+30\s+días.*$",
+        "",
+        texto,
+    )
+    texto = re.sub(r"(?i)\s*[—|·-]?\s*(?:🔥\s*)?(?:oferta\s+del\s+día|precio\s+histórico\s+más\s+bajo).*?$", "", texto)
     texto = re.sub(r"\s+", " ", texto).strip(" \t\r\n-–—|·")
     texto = re.split(
         r"\b(?:precio\s+(?:actual|final|de\s+oferta)|antes|ahorra|hasta\s+\d+\s+mensualidades?|mensualidades?\s+fijas?|precio\s+anterior|precio\s+regular)\b",
@@ -900,22 +918,28 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
 
             publicable = MIN_DESCUENTO <= descuento <= MAX_DESCUENTO
             precio_extremo = None
-            # Evita repetir una misma alerta entre ciclos para todas las fuentes,
-            # incluyendo Telegram. Solo vuelve a alertar si el precio cae al menos 3%.
+            # Anti-spam transversal: solo repetir una oferta ya enviada si el precio
+            # baja al menos 10% respecto del último precio alertado.
             previo = (entrada or {}).get("precio_alertado")
-            if publicable and previo is not None and actual >= _num(previo) * 0.97:
+            if publicable and previo is not None and actual > _num(previo) * 0.90:
                 publicable = False
 
-            # Las validaciones comerciales adicionales se mantienen solo para fuentes no Telegram.
-            if not es_telegram:
-                if 0 < actual <= 10:
-                    try:
-                        verificacion_extremo = analizar_precio_extremo(item)
-                        if verificacion_extremo.get("publicable_como_extremo"):
-                            precio_extremo = verificacion_extremo
-                            publicable = True
-                    except Exception as exc:
-                        logger.debug("No se pudo verificar precio extremo (%s).", type(exc).__name__)
+            # Un precio online <= $10 MXN es anómalo para catálogos generalistas.
+            # No se publica solo por un porcentaje/historial: exige verificación oficial.
+            if publicable and 0 < actual <= 10 and str(item.get("tipo_fuente") or "").upper() != "FISICA":
+                try:
+                    verificacion_extremo = analizar_precio_extremo(item)
+                    if verificacion_extremo.get("publicable_como_extremo"):
+                        precio_extremo = verificacion_extremo
+                    else:
+                        publicable = False
+                        logger.warning(
+                            "[PRECIO SOSPECHOSO] Oferta online rechazada sin verificación oficial: %s | $%.2f",
+                            clave, actual,
+                        )
+                except Exception as exc:
+                    publicable = False
+                    logger.warning("[PRECIO SOSPECHOSO] No se pudo verificar %s (%s).", clave, type(exc).__name__)
                 if publicable and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_enlace_producto_directo(url):
                     publicable = False
             if publicable and 95 <= descuento <= 99:
@@ -1011,19 +1035,21 @@ def enviar_alertas(alertas: list, historial: dict) -> tuple[int, int]:
             "url": item.get("url"),
             "precio_actual": alerta.get("actual"),
             "precio_alertado": alerta.get("actual"),
+            "ultima_alerta": ahora,
             "ultima_actualizacion": ahora,
         })
 
-        if es_bomba_prioritaria:
-            # Guardar JSON de forma síncrona inmediatamente después de Telegram.
-            try:
-                guardar_historial(historial)
-            except OSError as exc:
-                logger.error(
-                    "[BOMBA] Telegram confirmó el envío, pero falló el JSON local (%s).",
-                    type(exc).__name__,
-                )
+        # Persistir TODAS las alertas confirmadas, no solo las bombas 95-99%.
+        # Así un reinicio de Actions no vuelve a publicarlas.
+        try:
+            guardar_historial(historial)
+        except OSError as exc:
+            logger.error(
+                "[ALERTA] Telegram confirmó el envío, pero falló el JSON local (%s).",
+                type(exc).__name__,
+            )
 
+        if es_bomba_prioritaria:
             # Registrar con la misma clave canónica que usa la deduplicación.
             try:
                 registrada = supabase_history.registrar_envio(
