@@ -233,7 +233,8 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          GRUPO_FUENTE_CHAT_ID: ${{ secrets.GRUPO_FUENTE_CHAT_ID }}
+          GRUPO_FUENTE_CHAT_ID: ${{ secrets.GRUPO_FUENTE_CHAT_ID || secrets.TELEGRAM_WALMART_CHAT_ID || vars.TELEGRAM_WALMART_CHAT_ID }}
+          TELEGRAM_WALMART_CHAT_ID: ${{ secrets.TELEGRAM_WALMART_CHAT_ID || vars.TELEGRAM_WALMART_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.8-flash
           GEMINI_MAX_CALLS: "6"
