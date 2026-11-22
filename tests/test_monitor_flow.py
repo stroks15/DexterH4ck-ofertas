@@ -75,6 +75,28 @@ class AlertRulesTests(unittest.TestCase):
         self.assertEqual(len(alertas), 1)
         self.assertFalse(alertas[0]["bomba"])
 
+    def test_online_price_below_10_requires_official_verification(self):
+        item = _item(1.66, 3.39, tienda="Amazon MX", ident="B01M6WUJT0")
+        item["titulo"] = "200 ml Le Male Eau de Toilette"
+        item["url"] = "https://www.amazon.com.mx/dp/B01M6WUJT0"
+        with patch.object(mon, "analizar_precio_extremo", return_value={"publicable_como_extremo": False}):
+            self.assertEqual(mon.procesar_candidatos([item], {}), [])
+
+    def test_realert_only_after_ten_percent_price_drop(self):
+        item = _item(97, 200)
+        key = mon.history_key(item)
+        history = {key: {"precio_alertado": 100.0}}
+        self.assertEqual(mon.procesar_candidatos([item], history), [])
+        item_lower = _item(89, 200)
+        self.assertEqual(len(mon.procesar_candidatos([item_lower], {key: {"precio_alertado": 100.0}})), 1)
+
+    def test_marketing_claim_removed_from_product_title(self):
+        title = mon.limpiar_titulo_producto(
+            "200 ml de Le Male entregan la firma aromática — PRECIO MÁS BAJO DE LOS ÚLTIMOS 30 DÍAS 🔥"
+        )
+        self.assertNotIn("PRECIO MÁS BAJO", title.upper())
+        self.assertIn("LE MALE", title.upper())
+
     def test_invalid_url_is_rejected(self):
         item = _item(50, 1000)
         item["url"] = "https://www.walmart.com.mx/ip/null"
