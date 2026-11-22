@@ -31,6 +31,7 @@ Formato de mensaje que entiende (ejemplo real):
     ▓▓▓▓░░░░░░ 36%
 """
 
+import html
 import json
 import os
 import re
@@ -44,7 +45,7 @@ MIN_DESCUENTO_GRUPO = 50
 MAX_DESCUENTO_GRUPO = 99
 OFFSET_FILE = "tg_grupo_offset.json"
 
-GRUPO_FUENTE_CHAT_ID = os.environ.get("GRUPO_FUENTE_CHAT_ID", "").strip()
+GRUPO_FUENTE_CHAT_ID = (os.environ.get("GRUPO_FUENTE_CHAT_ID") or os.environ.get("TELEGRAM_WALMART_CHAT_ID") or "").strip()
 
 DESCUENTO_RE = re.compile(r"-(\d{1,3})\s*%")
 PRECIO_RE = re.compile(r"Precio:\s*\$\s*([\d,]+\.?\d*)", re.I)
@@ -63,10 +64,18 @@ def _cargar_offset() -> int:
     return 0
 
 
-def _guardar_offset(offset: int) -> None:
+def _cargar_chat_id_guardado() -> str:
+    try:
+        with open(OFFSET_FILE, "r", encoding="utf-8") as fh:
+            return str(json.load(fh).get("chat_id") or "").strip()
+    except (OSError, json.JSONDecodeError, TypeError):
+        return ""
+
+
+def _guardar_offset(offset: int, chat_id: str = "") -> None:
     temporal = f"{OFFSET_FILE}.tmp"
     with open(temporal, "w", encoding="utf-8") as fh:
-        json.dump({"offset": offset}, fh)
+        json.dump({"offset": offset, "chat_id": str(chat_id or "")}, fh)
     os.replace(temporal, OFFSET_FILE)
 
 
@@ -127,19 +136,19 @@ def parsear_oferta(texto: str, mensaje: dict | None = None) -> dict | None:
 
 def _formatear_alerta(oferta: dict) -> str:
     lineas = [
-        f"🔥 <b>{oferta['descuento']}% de descuento</b> — {oferta['tienda']}",
+        f"🔥 <b>{oferta['descuento']}% de descuento</b> — {html.escape(str(oferta['tienda']))}",
         "",
-        oferta["titulo"],
+        html.escape(str(oferta["titulo"])),
         "",
     ]
     if oferta["precio"]:
-        lineas.append(f"Precio: ${oferta['precio']}")
+        lineas.append(f"Precio: ${html.escape(str(oferta['precio']))}")
     if oferta["antes"]:
-        lineas.append(f"(Antes: ${oferta['antes']})")
+        lineas.append(f"(Antes: ${html.escape(str(oferta['antes']))})")
     if oferta["sku"]:
-        lineas.append(f"SKU: {oferta['sku']}")
+        lineas.append(f"SKU: {html.escape(str(oferta['sku']))}")
     if oferta["url"]:
-        lineas.append(oferta["url"])
+        lineas.append(html.escape(str(oferta["url"]), quote=False))
     return "\n".join(lineas)
 
 
@@ -171,13 +180,14 @@ def _enviar(token: str, chat_id_destino: str, texto: str) -> bool:
 
 def revisar_grupo_privado(token: str, chat_id_destino: str) -> tuple[int, int]:
     """Devuelve (enviadas, candidatos_con_descuento_valido)."""
-    if not GRUPO_FUENTE_CHAT_ID:
-        print("[grupo_privado] GRUPO_FUENTE_CHAT_ID no configurado; se omite esta fuente.")
-        return 0, 0
     if not token:
+        print("[grupo_privado] TELEGRAM_TOKEN no configurado; se omite esta fuente.")
         return 0, 0
 
     offset = _cargar_offset()
+    chat_id_fuente = GRUPO_FUENTE_CHAT_ID or _cargar_chat_id_guardado()
+    if not chat_id_fuente:
+        print("[grupo_privado] Sin ID de origen: se intentará identificar el grupo por el título exacto en las actualizaciones nuevas.")
     try:
         resp = requests.get(
             f"https://api.telegram.org/bot{token}/getUpdates",
@@ -211,7 +221,13 @@ def revisar_grupo_privado(token: str, chat_id_destino: str) -> tuple[int, int]:
             continue
 
         chat = mensaje.get("chat", {})
-        if str(chat.get("id")) != GRUPO_FUENTE_CHAT_ID:
+        if not chat_id_fuente:
+            titulo = re.sub(r"[^a-z0-9]+", " ", str(chat.get("title") or "").casefold()).strip()
+            if "walmart oferstock" in titulo and "nacional" in titulo:
+                chat_id_fuente = str(chat.get("id") or "").strip()
+                if chat_id_fuente:
+                    print("[grupo_privado] Grupo Walmart Oferstock NACIONAL identificado automáticamente; ID guardado localmente.")
+        if not chat_id_fuente or str(chat.get("id")) != chat_id_fuente:
             ultimo_confirmado = max(ultimo_confirmado, update_id)
             continue
 
@@ -240,6 +256,6 @@ def revisar_grupo_privado(token: str, chat_id_destino: str) -> tuple[int, int]:
     # Avanzar solo hasta el último update procesado correctamente; si falla un envío,
     # ese update permanece pendiente para el siguiente ciclo.
     if ultimo_confirmado >= offset:
-        _guardar_offset(ultimo_confirmado + 1)
+        _guardar_offset(ultimo_confirmado + 1, chat_id_fuente)
 
     return enviadas, candidatos
