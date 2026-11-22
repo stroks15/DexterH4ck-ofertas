@@ -484,8 +484,13 @@ def formatear_alerta(alerta: dict) -> str:
     from tools.telegram_bot import format_alert
     evaluacion = alerta.get("evaluacion") or {}
     item = alerta.get("item") or {}
-    item.setdefault("marca", evaluacion.get("marca", ""))
-    item.setdefault("categoria", evaluacion.get("categoria", ""))
+    from core.liquidation_engine import detect_priority_brand, infer_category
+    if not item.get("marca"):
+        item["marca"] = evaluacion.get("marca") or detect_priority_brand({"titulo": item.get("titulo", "")})[0]
+    if not item.get("categoria"):
+        item["categoria"] = evaluacion.get("categoria") or infer_category(
+            {"titulo": item.get("titulo", ""), "marca": item.get("marca", "")}
+        )
     alerta["item"] = item
     return format_alert(alerta)
 
@@ -927,7 +932,7 @@ def procesar_candidatos(candidatos: list, historial: dict) -> list:
             # Un precio online <= $10 MXN solo se publica si la ficha oficial
             # confirma el importe. También conserva el carril de liquidación extrema
             # sin referencia cuando la verificación sí confirma el precio.
-            if 0 < actual <= 10 and str(item.get("tipo_fuente") or "").upper() != "FISICA" and not es_telegram:
+            if 0 < actual <= 10 and str(item.get("tipo_fuente") or "").upper() != "FISICA":
                 try:
                     verificacion_extremo = analizar_precio_extremo(item)
                     if verificacion_extremo.get("publicable_como_extremo"):
