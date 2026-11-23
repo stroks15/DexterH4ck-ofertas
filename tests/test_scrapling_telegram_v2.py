@@ -36,7 +36,7 @@ class TierTests(unittest.TestCase):
                  "actual": 99, "referencia": 2000, "descuento": 95, "evaluacion": {"puntuacion": 92}}
         text = format_alert(alert)
         self.assertTrue(text.startswith("💣 *¡LIQUIDACIÓN"))
-        self.assertIn("*Descuento:* 95% REALES", text)
+        self.assertIn("*Descuento:* 95% CALCULADO CON LOS PRECIOS RECIBIDOS", text)
         self.assertIn("$2,000\\.00", text)
         self.assertIn("[Ver Oferta en la Tienda]", text)
         self.assertIn("\\|", text)
