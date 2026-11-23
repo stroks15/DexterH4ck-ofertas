@@ -1,10 +1,10 @@
 {
-  "google_search_until": 1795358783.2991555,
+  "google_search_until": 1795424129.3507512,
   "reason": "HTTP 429 rate limit",
-  "updated_at": "2026-11-22T08:46:23.299157+00:00",
+  "updated_at": "2026-11-23T02:55:29.350754+00:00",
   "amazon": {
-    "reason": "HTTP_503_SERVICE_UNAVAILABLE",
-    "updated_at": "2026-11-22T10:58:00.130007+00:00",
-    "blocked_until": "2026-11-22T11:28:00.130007+00:00"
+    "reason": "PERIMETER_CHALLENGE",
+    "updated_at": "2026-11-23T02:58:32.153722+00:00",
+    "blocked_until": "2026-11-23T08:58:32.153722+00:00"
   }
 }
