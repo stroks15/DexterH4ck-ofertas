@@ -10,13 +10,23 @@ Adaptador: `scrapers/telegram_monitor_scraper.py` (dos workers aislados en `moni
 Se activan en `fuentes_liquidaciones.json` (`autolectura: true`, `estado: "activo"`).
 
 ## Configurar el grupo privado
-1. `TELEGRAM_API_ID` y `TELEGRAM_API_HASH` se crean en https://my.telegram.org (ya agregados como secrets).
-2. En tu equipo (nunca en CI): `python tools/telegram_session_setup.py --unirse` y copia la cadena al
-   secret `TELEGRAM_SESSION_STRING`. Usa una cuenta secundaria dedicada.
-3. Secret `TELEGRAM_WALMART_INVITE` con el enlace de invitación. **No lo pongas en el JSON: el repositorio es público** (una prueba falla si aparece `t.me/+`).
-   Alternativa: `TELEGRAM_WALMART_CHAT_ID`, o el título del grupo (`titulo_hint`: "walmart").
-4. Sin esas variables el grupo privado se omite (`estado=not_configured`) y los canales públicos siguen.
 
+Hay dos lectores independientes; no confundas sus credenciales:
+
+### A. Lector Bot API (`scrapers/telegram_grupo_privado.py`)
+- Usa `TELEGRAM_TOKEN` para consultar `getUpdates` y enviar las alertas al destino `TELEGRAM_CHAT_ID`.
+- Agrega **el bot asociado a `TELEGRAM_TOKEN`** al grupo privado `Walmart Oferstock NACIONAL`. Para leer todos los mensajes, hazlo administrador o desactiva Privacy Mode en BotFather (`/setprivacy` → `Disable`).
+- Opcional pero recomendado: configura `GRUPO_FUENTE_CHAT_ID` con el ID numérico del grupo. También admite `TELEGRAM_WALMART_CHAT_ID`. Si no se configura, intenta detectar el grupo por su título exacto a partir de actualizaciones nuevas.
+- El enlace de invitación no sustituye agregar el bot ni revela por sí solo el ID. Si el bot no está dentro del grupo, no podrá leerlo.
+- `getUpdates` requiere que no exista un webhook activo para ese mismo bot. El offset se guarda después de cada envío confirmado para reducir reenvíos si una ejecución falla.
+
+### B. Lector Telethon (cuenta de usuario, opcional)
+1. Crea `TELEGRAM_API_ID` y `TELEGRAM_API_HASH` en https://my.telegram.org.
+2. En tu equipo (nunca en CI): `python tools/telegram_session_setup.py --unirse` y copia la cadena al secret `TELEGRAM_SESSION_STRING`. Usa una cuenta secundaria dedicada.
+3. Opcional: `TELEGRAM_WALMART_INVITE` y/o `TELEGRAM_WALMART_CHAT_ID`.
+4. Sin `TELEGRAM_API_ID`, `TELEGRAM_API_HASH` y `TELEGRAM_SESSION_STRING`, solo se omite el lector Telethon; los canales públicos y el lector Bot API siguen su propio flujo.
+
+**Importante:** agregar tu cuenta personal al grupo no agrega automáticamente al bot. El bot y la cuenta Telethon son identidades distintas.
 ## Reglas
 - Solo URLs de Walmart, Bodega Aurrera, Chedraui, Soriana, Mercado Libre, Amazon, Coppel, Suburbia y Liverpool.
 - Precios por `core/price_sanitizer.py`: "875g" o "1 kg" nunca son precio de referencia.
