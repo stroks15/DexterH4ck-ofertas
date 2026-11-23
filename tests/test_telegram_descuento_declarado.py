@@ -1,6 +1,8 @@
 import json
+import tempfile
 import unittest
-from unittest.mock import patch
+from pathlib import Path
+from unittest.mock import MagicMock, patch
 
 import monitor_ofertas as mon
 from core.discount_text import descuento_declarado
@@ -153,6 +155,33 @@ class MonitorReglaTelegramTests(unittest.TestCase):
 
 
 class GrupoPrivadoFormatosTests(unittest.TestCase):
+    def test_checkpoint_se_guarda_tras_cada_envio_confirmado(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            offset_file = Path(tmp) / "tg_grupo_offset.json"
+            updates = {
+                "ok": True,
+                "result": [
+                    {"update_id": 10, "message": {"chat": {"id": -100123, "title": "Walmart Oferstock NACIONAL"},
+                     "text": "Walmart Oferstock NACIONAL\n70% OFF\nTV Samsung 55 pulgadas\nPrecio: $100\nAntes: $200"}},
+                    {"update_id": 11, "message": {"chat": {"id": -100123, "title": "Walmart Oferstock NACIONAL"},
+                     "text": "Walmart Oferstock NACIONAL\n70% OFF\nBocina Sony XB100\nPrecio: $100\nAntes: $200"}},
+                ],
+            }
+            response = MagicMock()
+            response.raise_for_status.return_value = None
+            response.json.return_value = updates
+            with (
+                patch.object(grupo, "OFFSET_FILE", str(offset_file)),
+                patch.object(grupo, "GRUPO_FUENTE_CHAT_ID", "-100123"),
+                patch.object(grupo.requests, "get", return_value=response),
+                patch.object(grupo, "_enviar", side_effect=[True, RuntimeError("fallo simulado posterior")]),
+            ):
+                with self.assertRaisesRegex(RuntimeError, "fallo simulado"):
+                    grupo.revisar_grupo_privado("token", "-100999")
+            saved = json.loads(offset_file.read_text(encoding="utf-8"))
+            self.assertEqual(saved["offset"], 11)
+            self.assertEqual(saved["chat_id"], "-100123")
+
     def test_entiende_formato_clasico_y_otros_formatos(self):
         clasico = "Walmart Oferstock NACIONAL\n-36%\n\nLabial\n\nPrecio: $190.00\n(Antes: $299.00)\nSKU: 00007124967483"
         otro = "Amazon MX\nBocina Sony XB100\nPrecio: $300\n70% OFF\nSKU: B0ABC"
