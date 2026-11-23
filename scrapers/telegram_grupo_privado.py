@@ -172,7 +172,19 @@ def _enviar(token: str, chat_id_destino: str, texto: str) -> bool:
                 data={"chat_id": chat_id_destino, "text": texto, "parse_mode": "HTML"},
                 timeout=20,
             )
-        return resp.status_code == 200
+        if resp.status_code != 200:
+            print(f"[grupo_privado] Telegram sendMessage HTTP {resp.status_code}.")
+            return False
+        try:
+            payload = resp.json()
+        except ValueError:
+            print("[grupo_privado] Telegram sendMessage devolvió una respuesta no JSON.")
+            return False
+        if not isinstance(payload, dict) or payload.get("ok") is not True:
+            detalle = payload.get("description", "respuesta no confirmada") if isinstance(payload, dict) else "respuesta inválida"
+            print(f"[grupo_privado] Telegram no confirmó sendMessage: {detalle}")
+            return False
+        return True
     except requests.RequestException as exc:
         print(f"[grupo_privado] Error enviando a Telegram: {exc}")
         return False
@@ -249,6 +261,9 @@ def revisar_grupo_privado(token: str, chat_id_destino: str) -> tuple[int, int]:
         if _enviar(token, chat_id_destino, _formatear_alerta(oferta)):
             enviadas += 1
             ultimo_confirmado = max(ultimo_confirmado, update_id)
+            # Checkpoint inmediato: evita reenviar ofertas ya confirmadas si una
+            # actualización posterior falla durante este mismo ciclo.
+            _guardar_offset(ultimo_confirmado + 1, chat_id_fuente)
         else:
             print(f"[grupo_privado] No se pudo enviar la oferta del {oferta['descuento']}%; se conservará para reintentar.")
             break
