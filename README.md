@@ -42,10 +42,11 @@ El normalizador reconoce fichas de producto de Chedraui con rutas tipo \`/.../p\
 
 ## Telegram
 
-Configura \`TELEGRAM_TOKEN\` y \`TELEGRAM_CHAT_ID\` en GitHub Actions.
+Configura `TELEGRAM_TOKEN` y `TELEGRAM_CHAT_ID` en GitHub Actions. Para leer el grupo privado con Bot API, agrega el bot asociado al token al grupo (administrador o Privacy Mode desactivado en BotFather) y configura `GRUPO_FUENTE_CHAT_ID` con el ID numérico. El lector privado también puede detectar el grupo por su título cuando el bot recibe una actualización nueva; el enlace de invitación por sí solo no concede acceso.
 
-El historial se guarda en \`historial_ofertas.json\`. Se mantiene el flujo sin SQLite para evitar cambios sin preparar durante el rebase de GitHub Actions.
+El lector opcional Telethon usa una cuenta de usuario independiente y requiere `TELEGRAM_API_ID`, `TELEGRAM_API_HASH` y `TELEGRAM_SESSION_STRING`. Consulta [docs/telegram_fuentes.md](docs/telegram_fuentes.md) para configurar ambas modalidades.
 
+El historial se guarda en `historial_ofertas.json`. Se mantiene el flujo sin SQLite para evitar cambios sin preparar durante el rebase de GitHub Actions.
 
 ## Respaldo de IA
 
