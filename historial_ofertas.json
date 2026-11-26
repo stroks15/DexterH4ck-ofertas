@@ -5,8 +5,8 @@
     "url": "https://www.walmart.com.mx/ip/pantalla/222",
     "precio_actual": 500.0,
     "precio_alertado": 500.0,
-    "ultima_alerta": "2026-11-26T04:35:23.725818+00:00",
-    "ultima_actualizacion": "2026-11-26T04:35:23.725818+00:00"
+    "ultima_alerta": "2026-11-26T14:26:30.820930+00:00",
+    "ultima_actualizacion": "2026-11-26T14:26:30.820930+00:00"
   },
   "chedraui|title:lector de tarjeta clip total 2": {
     "tienda": "Chedraui",
@@ -14,7 +14,26 @@
     "url": "https://www.chedraui.com.mx/lector-de-tarjeta-clip-total-2-3829931/p",
     "precio_actual": 295.0,
     "precio_maximo": 2195.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:accesorios para muneca barbie moditas paquete de 2": {
+    "tienda": "Chedraui",
+    "titulo": "Accesorios para muñeca Barbie Moditas paquete de 2",
+    "url": "https://www.chedraui.com.mx/accesorios-para-muneca-barbie-moditas-paquete-de-2-3736011/p",
+    "precio_actual": 42.0,
+    "precio_maximo": 249.0,
+    "ultima_actualizacion": "2026-11-26T14:29:17.532474+00:00",
+    "precio_alertado": 42.0,
+    "ultima_alerta": "2026-11-26T14:29:17.532474+00:00"
+  },
+  "chedraui|title:figura de accion marvel hulk rojo f9299": {
+    "tienda": "Chedraui",
+    "titulo": "Figura de acción Marvel Hulk Rojo F9299",
+    "url": "https://www.chedraui.com.mx/figura-de-accion-marvel-hulk-rojo-f9299-3847528/p",
+    "precio_actual": 79.1,
+    "precio_maximo": 429.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:perchero recibidor 3 en 1 bossa con zapatera banco y estante superior": {
@@ -23,18 +42,8 @@
     "url": "https://www.chedraui.com.mx/perchero-recibidor-3-en-1-bossa-con-zapatera-banco-y-estante-superior-6023602/p",
     "precio_actual": 899.0,
     "precio_maximo": 4499.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
-  },
-  "chedraui|title:accesorios para muneca barbie moditas paquete de 2": {
-    "tienda": "Chedraui",
-    "titulo": "Accesorios para muñeca Barbie Moditas paquete de 2",
-    "url": "https://www.chedraui.com.mx/accesorios-para-muneca-barbie-moditas-paquete-de-2-3736011/p",
-    "precio_actual": 60.0,
-    "precio_maximo": 249.0,
-    "ultima_actualizacion": "2026-11-26T04:38:44.218835+00:00",
-    "precio_alertado": 60.0,
-    "ultima_alerta": "2026-11-26T04:38:44.218835+00:00"
   },
   "chedraui|title:te mccormick 7 azahares con 25 sobres": {
     "tienda": "Chedraui",
@@ -42,16 +51,7 @@
     "url": "https://www.chedraui.com.mx/te-mccormick-7-azahares-con-25-sobres-3045561/p",
     "precio_actual": 9.0,
     "precio_maximo": 35.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "chedraui|title:figura de accion marvel hulk rojo f9299": {
-    "tienda": "Chedraui",
-    "titulo": "Figura de acción Marvel Hulk Rojo F9299",
-    "url": "https://www.chedraui.com.mx/figura-de-accion-marvel-hulk-rojo-f9299-3847528/p",
-    "precio_actual": 113.0,
-    "precio_maximo": 429.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:videojuego ea sports fc26 playstation 4": {
@@ -60,18 +60,9 @@
     "url": "https://www.chedraui.com.mx/videojuego-ea-sports-fc26-playstation-4-3881175/p",
     "precio_actual": 490.0,
     "precio_maximo": 1795.0,
-    "ultima_actualizacion": "2026-11-26T04:38:26.026740+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:59.265163+00:00",
     "precio_alertado": 490.0,
-    "ultima_alerta": "2026-11-26T04:38:26.026740+00:00"
-  },
-  "chedraui|title:chile jalapeno por kg": {
-    "tienda": "Chedraui",
-    "titulo": "Chile Jalapeño por Kg",
-    "url": "https://www.chedraui.com.mx/chile-jalapeno-por-kg-3109735/p",
-    "precio_actual": 12.0,
-    "precio_maximo": 43.9,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
+    "ultima_alerta": "2026-11-26T14:28:59.265163+00:00"
   },
   "chedraui|title:organizador de utensilios de cocina bossa marek negro compacto multiusos": {
     "tienda": "Chedraui",
@@ -79,7 +70,7 @@
     "url": "https://www.chedraui.com.mx/organizador-de-utensilios-de-cocina-bossa-marek-negro-compacto-multiusos-6024378/p",
     "precio_actual": 369.0,
     "precio_maximo": 1299.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:audifonos motorola moto buds bass negro": {
@@ -88,9 +79,9 @@
     "url": "https://www.chedraui.com.mx/audifonos-motorola-moto-buds-bass-negro-6027972/p",
     "precio_actual": 744.0,
     "precio_maximo": 2599.0,
-    "ultima_actualizacion": "2026-11-26T04:38:29.670168+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:02.912809+00:00",
     "precio_alertado": 744.0,
-    "ultima_alerta": "2026-11-26T04:38:29.670168+00:00"
+    "ultima_alerta": "2026-11-26T14:29:02.912809+00:00"
   },
   "chedraui|title:audifonos motorola moto buds bass verde": {
     "tienda": "Chedraui",
@@ -98,9 +89,9 @@
     "url": "https://www.chedraui.com.mx/audifonos-motorola-moto-buds-bass-verde-6027968/p",
     "precio_actual": 744.0,
     "precio_maximo": 2599.0,
-    "ultima_actualizacion": "2026-11-26T04:38:33.301473+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:06.541793+00:00",
     "precio_alertado": 744.0,
-    "ultima_alerta": "2026-11-26T04:38:33.301473+00:00"
+    "ultima_alerta": "2026-11-26T14:29:06.541793+00:00"
   },
   "chedraui|title:audifonos motorola moto buds bass azul": {
     "tienda": "Chedraui",
@@ -108,9 +99,9 @@
     "url": "https://www.chedraui.com.mx/audifonos-motorola-moto-buds-bass-azul-6027969/p",
     "precio_actual": 744.0,
     "precio_maximo": 2599.0,
-    "ultima_actualizacion": "2026-11-26T04:38:36.933835+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:10.180648+00:00",
     "precio_alertado": 744.0,
-    "ultima_alerta": "2026-11-26T04:38:36.933835+00:00"
+    "ultima_alerta": "2026-11-26T14:29:10.180648+00:00"
   },
   "chedraui|title:lanzador de agua super soaker power drench": {
     "tienda": "Chedraui",
@@ -118,9 +109,9 @@
     "url": "https://www.chedraui.com.mx/lanzador-de-agua-super-soaker-power-drench-3861573/p",
     "precio_actual": 172.2,
     "precio_maximo": 579.0,
-    "ultima_actualizacion": "2026-11-26T04:38:47.843232+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:21.158182+00:00",
     "precio_alertado": 172.2,
-    "ultima_alerta": "2026-11-26T04:38:47.843232+00:00"
+    "ultima_alerta": "2026-11-26T14:29:21.158182+00:00"
   },
   "chedraui|title:videojuego ea sports fc26 xbox series x": {
     "tienda": "Chedraui",
@@ -128,9 +119,28 @@
     "url": "https://www.chedraui.com.mx/videojuego-ea-sports-fc26-xbox-series-x-3882434/p",
     "precio_actual": 550.0,
     "precio_maximo": 1795.0,
-    "ultima_actualizacion": "2026-11-26T04:38:40.567506+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:13.811679+00:00",
     "precio_alertado": 550.0,
-    "ultima_alerta": "2026-11-26T04:38:40.567506+00:00"
+    "ultima_alerta": "2026-11-26T14:29:13.811679+00:00"
+  },
+  "chedraui|title:rompecabezas cardinal tubo bluey": {
+    "tienda": "Chedraui",
+    "titulo": "Rompecabezas Cardinal Tubo Bluey",
+    "url": "https://www.chedraui.com.mx/rompecabezas-cardinal-tubo-bluey-3772358/p",
+    "precio_actual": 58.8,
+    "precio_maximo": 189.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:barbie reveal muneca flores sorpresa 3 anos": {
+    "tienda": "Chedraui",
+    "titulo": "Barbie Reveal Muñeca Flores Sorpresa 3 años+",
+    "url": "https://www.chedraui.com.mx/barbie-reveal-muneca-flores-sorpresa-3-anos-3895373/p",
+    "precio_actual": 209.3,
+    "precio_maximo": 659.0,
+    "ultima_actualizacion": "2026-11-26T14:29:24.813113+00:00",
+    "precio_alertado": 209.3,
+    "ultima_alerta": "2026-11-26T14:29:24.813113+00:00"
   },
   "chedraui|title:barra de sonido fussion acustic sbar": {
     "tienda": "Chedraui",
@@ -138,9 +148,9 @@
     "url": "https://www.chedraui.com.mx/barra-de-sonido-fussion-acustic-sbar-3821324/p",
     "precio_actual": 795.0,
     "precio_maximo": 2495.0,
-    "ultima_actualizacion": "2026-11-26T04:38:55.123547+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:39.480585+00:00",
     "precio_alertado": 795.0,
-    "ultima_alerta": "2026-11-26T04:38:55.123547+00:00"
+    "ultima_alerta": "2026-11-26T14:29:39.480585+00:00"
   },
   "chedraui|title:fire tv amazon stick 4k select": {
     "tienda": "Chedraui",
@@ -148,7 +158,7 @@
     "url": "https://www.chedraui.com.mx/fire-tv-amazon-stick-4k-select-3887711/p",
     "precio_actual": 445.0,
     "precio_maximo": 1395.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 16r 1v freno v brake azul heroes": {
@@ -157,7 +167,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-16r-1v-freno-v-brake-azul-heroes-6017185/p",
     "precio_actual": 2299.0,
     "precio_maximo": 7198.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 16r 1v freno contrapedal naranja warriors": {
@@ -166,7 +176,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-16r-1v-freno-contrapedal-naranja-warriors-6005372/p",
     "precio_actual": 2299.0,
     "precio_maximo": 6998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nina 20r 1v freno v brakes morado heart beat": {
@@ -175,7 +185,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nina-20r-1v-freno-v-brakes-morado-heart-beat-6016687/p",
     "precio_actual": 1999.0,
     "precio_maximo": 5998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta veloci amore bmx rodada 16 rosa infantil": {
@@ -184,7 +194,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-veloci-amore-bmx-rodada-16-rosa-infantil-6032212/p",
     "precio_actual": 2299.0,
     "precio_maximo": 6798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci 16r 1v frenos v brake rojo riot": {
@@ -193,7 +203,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-16r-1v-frenos-v-brake-rojo-riot-6031574/p",
     "precio_actual": 2299.0,
     "precio_maximo": 6798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nina 16r 1v freno v brake azul heart beat": {
@@ -202,7 +212,26 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nina-16r-1v-freno-v-brake-azul-heart-beat-6016738/p",
     "precio_actual": 2299.0,
     "precio_maximo": 6798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:set barbie casa con resbaladilla": {
+    "tienda": "Chedraui",
+    "titulo": "Set Barbie Casa con Resbaladilla",
+    "url": "https://www.chedraui.com.mx/set-barbie-casa-con-resbaladilla-3919080/p",
+    "precio_actual": 1189.3,
+    "precio_maximo": 3499.0,
+    "ultima_actualizacion": "2026-11-26T14:29:28.446791+00:00",
+    "precio_alertado": 1189.3,
+    "ultima_alerta": "2026-11-26T14:29:28.446791+00:00"
+  },
+  "chedraui|title:play doh 8 pack": {
+    "tienda": "Chedraui",
+    "titulo": "Play-Doh 8 Pack",
+    "url": "https://www.chedraui.com.mx/play-doh-8-pack-3592665/p",
+    "precio_actual": 61.6,
+    "precio_maximo": 179.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon queen size spring air duo sleep fitness en caja": {
@@ -211,9 +240,9 @@
     "url": "https://www.chedraui.com.mx/colchon-queen-size-spring-air-duo-sleep-fitness-en-caja-6033842/p",
     "precio_actual": 6199.0,
     "precio_maximo": 17999.0,
-    "ultima_actualizacion": "2026-11-26T04:38:58.830371+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:43.116593+00:00",
     "precio_alertado": 6199.0,
-    "ultima_alerta": "2026-11-26T04:38:58.830371+00:00"
+    "ultima_alerta": "2026-11-26T14:29:43.116593+00:00"
   },
   "chedraui|title:roomi cama electrica lift individual": {
     "tienda": "Chedraui",
@@ -221,7 +250,7 @@
     "url": "https://www.chedraui.com.mx/roomi-cama-electrica-lift-individual-6034998/p",
     "precio_actual": 11399.0,
     "precio_maximo": 32999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:roomi cama electrica lift matrimonial": {
@@ -230,7 +259,7 @@
     "url": "https://www.chedraui.com.mx/roomi-cama-electrica-lift-matrimonial-6034984/p",
     "precio_actual": 12799.0,
     "precio_maximo": 36999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:set 4 almohada atlas colchoneta 5 zonas set de cama king size azul oso peluche": {
@@ -239,7 +268,7 @@
     "url": "https://www.chedraui.com.mx/set-4-almohada-atlas-colchoneta-5-zonas-set-de-cama-king-size-azul-oso-peluche-6034878/p",
     "precio_actual": 3899.0,
     "precio_maximo": 10999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:set 4 almohada atlas colchoneta 5 zonas set de cama king size rosa oso peluche": {
@@ -248,7 +277,7 @@
     "url": "https://www.chedraui.com.mx/set-4-almohada-atlas-colchoneta-5-zonas-set-de-cama-king-size-rosa-oso-peluche-6034871/p",
     "precio_actual": 3899.0,
     "precio_maximo": 10999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta veloci heart beat city rodada 20 azul infantil": {
@@ -257,7 +286,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-veloci-heart-beat-city-rodada-20-azul-infantil-6031606/p",
     "precio_actual": 1999.0,
     "precio_maximo": 5598.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta raider good girl bmx rodada 20 azul infantil": {
@@ -266,7 +295,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-raider-good-girl-bmx-rodada-20-azul-infantil-6031595/p",
     "precio_actual": 1999.0,
     "precio_maximo": 5598.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:juego de comedor alto bossa cala con mesa de madera maciza y 2 sillas": {
@@ -275,7 +304,7 @@
     "url": "https://www.chedraui.com.mx/juego-de-comedor-alto-bossa-cala-con-mesa-de-madera-maciza-y-2-sillas-6028958/p",
     "precio_actual": 6999.0,
     "precio_maximo": 19499.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:roomi colchon en caja smile 1 almohada ajustable estandar": {
@@ -284,9 +313,9 @@
     "url": "https://www.chedraui.com.mx/roomi-colchon-en-caja-smile--1-almohada-ajustable-estandar-6033820/p",
     "precio_actual": 3599.0,
     "precio_maximo": 9999.0,
-    "ultima_actualizacion": "2026-11-26T04:39:02.469905+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:46.769610+00:00",
     "precio_alertado": 3599.0,
-    "ultima_alerta": "2026-11-26T04:39:02.469905+00:00"
+    "ultima_alerta": "2026-11-26T14:29:46.769610+00:00"
   },
   "chedraui|title:mesa plegable para picnic bossa con 4 taburetes aluminio y tela oxford": {
     "tienda": "Chedraui",
@@ -294,7 +323,7 @@
     "url": "https://www.chedraui.com.mx/mesa-plegable-para-picnic-bossa-con-4-taburetes-aluminio-y-tela-oxford-6028943/p",
     "precio_actual": 829.0,
     "precio_maximo": 2299.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon queen size atlas del descanso infinity 24cm": {
@@ -303,9 +332,9 @@
     "url": "https://www.chedraui.com.mx/colchon-queen-size-atlas-del-descanso-infinity-24cm-6031897/p",
     "precio_actual": 5999.0,
     "precio_maximo": 16549.0,
-    "ultima_actualizacion": "2026-11-26T04:39:06.127554+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:50.405967+00:00",
     "precio_alertado": 5999.0,
-    "ultima_alerta": "2026-11-26T04:39:06.127554+00:00"
+    "ultima_alerta": "2026-11-26T14:29:50.405967+00:00"
   },
   "chedraui|title:cantina bossa rex con ruedas 360 estilo moderno multiusos": {
     "tienda": "Chedraui",
@@ -313,7 +342,7 @@
     "url": "https://www.chedraui.com.mx/cantina-bossa-rex-con-ruedas-360-estilo-moderno-multiusos-6023414/p",
     "precio_actual": 1379.0,
     "precio_maximo": 3799.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:licuadora black decker con vaso personal 1 5 l wm1140mb mx": {
@@ -322,7 +351,7 @@
     "url": "https://www.chedraui.com.mx/licuadora-blackdecker-con-vaso-personal-15-l-wm1140mb-mx-6034976/p",
     "precio_actual": 1059.0,
     "precio_maximo": 2869.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dos vistas rogga king size rosa gris perla con protector ultra sabanas basic crema y almohada frosty 2": {
@@ -331,7 +360,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dos-vistas-rogga-king-size-rosa-gris-perla-con-protector-ultra-sabanas-basic-crema-y-almohada-frosty-2-6027507/p",
     "precio_actual": 2909.0,
     "precio_maximo": 7800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon matrimonial atlas del descanso infinity 20cm": {
@@ -340,9 +369,9 @@
     "url": "https://www.chedraui.com.mx/colchon-matrimonial-atlas-del-descanso-infinity-20cm-6031885/p",
     "precio_actual": 4449.0,
     "precio_maximo": 11899.0,
-    "ultima_actualizacion": "2026-11-26T04:39:09.751012+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:54.048498+00:00",
     "precio_alertado": 4449.0,
-    "ultima_alerta": "2026-11-26T04:39:09.751012+00:00"
+    "ultima_alerta": "2026-11-26T14:29:54.048498+00:00"
   },
   "chedraui|title:colchon matrimonial atlas del descanso modelo zazi": {
     "tienda": "Chedraui",
@@ -350,9 +379,9 @@
     "url": "https://www.chedraui.com.mx/colchon-matrimonial-atlas-del-descanso-modelo-zazi-6024098/p",
     "precio_actual": 3499.0,
     "precio_maximo": 9349.0,
-    "ultima_actualizacion": "2026-11-26T04:39:13.417063+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:57.759902+00:00",
     "precio_alertado": 3499.0,
-    "ultima_alerta": "2026-11-26T04:39:13.417063+00:00"
+    "ultima_alerta": "2026-11-26T14:29:57.759902+00:00"
   },
   "chedraui|title:set 4 almohada atlas colchoneta 5 zonas set de cama matrimonial azul oso peluche": {
     "tienda": "Chedraui",
@@ -360,7 +389,7 @@
     "url": "https://www.chedraui.com.mx/set-4-almohada-atlas-colchoneta-5-zonas-set-de-cama-matrimonial-azul-oso-peluche-6034875/p",
     "precio_actual": 2999.0,
     "precio_maximo": 7999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:set 4 almohada atlas colchoneta 5 zonas set de cama matrimonial rosa oso peluche": {
@@ -369,7 +398,7 @@
     "url": "https://www.chedraui.com.mx/set-4-almohada-atlas-colchoneta-5-zonas-set-de-cama-matrimonial-rosa-oso-peluche-6034859/p",
     "precio_actual": 2999.0,
     "precio_maximo": 7999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon matrimonial spring air duo sleep fitness en caja": {
@@ -378,9 +407,9 @@
     "url": "https://www.chedraui.com.mx/colchon-matrimonial-spring-air-duo-sleep-fitness-en-caja-6033843/p",
     "precio_actual": 5999.0,
     "precio_maximo": 15999.0,
-    "ultima_actualizacion": "2026-11-26T04:39:17.049628+00:00",
+    "ultima_actualizacion": "2026-11-26T14:30:01.450081+00:00",
     "precio_alertado": 5999.0,
-    "ultima_alerta": "2026-11-26T04:39:17.049628+00:00"
+    "ultima_alerta": "2026-11-26T14:30:01.450081+00:00"
   },
   "chedraui|title:bicicleta infantil ghost unisex 12r 1v freno contrapedal azul revenge": {
     "tienda": "Chedraui",
@@ -388,7 +417,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-ghost-unisex-12r-1v-freno-contrapedal-azul-revenge-6017489/p",
     "precio_actual": 2924.0,
     "precio_maximo": 7798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon individual spring air duo sleep fitness en caja": {
@@ -397,9 +426,9 @@
     "url": "https://www.chedraui.com.mx/colchon-individual-spring-air-duo-sleep-fitness-en-caja-6033844/p",
     "precio_actual": 4899.0,
     "precio_maximo": 12999.0,
-    "ultima_actualizacion": "2026-11-26T04:39:20.678776+00:00",
+    "ultima_actualizacion": "2026-11-26T14:30:05.088645+00:00",
     "precio_alertado": 4899.0,
-    "ultima_alerta": "2026-11-26T04:39:20.678776+00:00"
+    "ultima_alerta": "2026-11-26T14:30:05.088645+00:00"
   },
   "chedraui|title:set 4 almohada atlas colchoneta 5 zonas set de cama queen size rosa oso peluche": {
     "tienda": "Chedraui",
@@ -407,7 +436,7 @@
     "url": "https://www.chedraui.com.mx/set-4-almohada-atlas-colchoneta-5-zonas-set-de-cama-queen-size-rosa-oso-peluche-6034843/p",
     "precio_actual": 3399.0,
     "precio_maximo": 8999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon queen size atlas del descanso infinity 20cm": {
@@ -416,9 +445,9 @@
     "url": "https://www.chedraui.com.mx/colchon-queen-size-atlas-del-descanso-infinity-20cm-6031890/p",
     "precio_actual": 4899.0,
     "precio_maximo": 12949.0,
-    "ultima_actualizacion": "2026-11-26T04:39:24.309849+00:00",
+    "ultima_actualizacion": "2026-11-26T14:30:08.721493+00:00",
     "precio_alertado": 4899.0,
-    "ultima_alerta": "2026-11-26T04:39:24.309849+00:00"
+    "ultima_alerta": "2026-11-26T14:30:08.721493+00:00"
   },
   "chedraui|title:edredon dos vistas rogga matri queen rosa gris perla con protector ultra sabanas basic qs crema y almohada frosty 2": {
     "tienda": "Chedraui",
@@ -426,7 +455,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dos-vistas-rogga-matriqueen-rosa-gris-perla-con-protector-ultra-sabanas-basic-qs-crema-y-almohada-frosty-2-6027491/p",
     "precio_actual": 2729.0,
     "precio_maximo": 7200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:base de cama matrimonial atlas del descanso vinipiel colo gris atlas del descanso": {
@@ -435,7 +464,7 @@
     "url": "https://www.chedraui.com.mx/base-de-cama-matrimonial-atlas-del-descanso-vinipiel-colo-gris-atlas-del-descanso-6031394/p",
     "precio_actual": 3799.0,
     "precio_maximo": 9999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa matrimonial couzy doble vista rosa menta con sabanas royal rosa protector rogga y almohada royal twin": {
@@ -444,7 +473,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-matrimonial-couzy-doble-vista-rosa-menta-con-sabanas-royal-rosa-protector-rogga-y-almohada-royal-twin-6027034/p",
     "precio_actual": 2519.0,
     "precio_maximo": 6600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon matrimonial dicasa couzy doble vista azul marino gris con sabanas royal gris protector rogga y almohada royal twin": {
@@ -453,7 +482,7 @@
     "url": "https://www.chedraui.com.mx/edredon-matrimonial-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-protector-rogga-y-almohada-royal-twin-6026693/p",
     "precio_actual": 2519.0,
     "precio_maximo": 6600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista rosa menta con sabanas royal rosa protector rogga y almohada royal twin": {
@@ -462,7 +491,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-rosa-menta-con-sabanas-royal-rosa-protector-rogga-y-almohada-royal-twin-6027030/p",
     "precio_actual": 2829.0,
     "precio_maximo": 7400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa couzy doble vista azul marino gris con sabanas royal gris protector rogga y almohada royal twin": {
@@ -471,7 +500,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-protector-rogga-y-almohada-royal-twin-6026691/p",
     "precio_actual": 2829.0,
     "precio_maximo": 7400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci 16r 1v freno v brake azul gran fx bmx": {
@@ -480,7 +509,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-16r-1v-freno-v-brake-azul-gran-fx-bmx-6031617/p",
     "precio_actual": 2299.0,
     "precio_maximo": 5998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta veloci madchen bmx rodada 16 rosa infantil": {
@@ -489,7 +518,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-veloci-madchen-bmx-rodada-16-rosa-infantil-6031608/p",
     "precio_actual": 2299.0,
     "precio_maximo": 5998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci 16r 1v freno v brake plata gran fx bmx": {
@@ -498,7 +527,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-16r-1v-freno-v-brake-plata-gran-fx-bmx-6031580/p",
     "precio_actual": 2299.0,
     "precio_maximo": 5998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 16r 1v freno v brake naranja racing": {
@@ -507,7 +536,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-16r-1v-freno-v-brake-naranja-racing-6016734/p",
     "precio_actual": 2299.0,
     "precio_maximo": 5998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista azul marino gris con sabanas softy platino protector cloud y almohada 2 pack": {
@@ -516,7 +545,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-azul-marino-gris-con-sabanas-softy-platino-protector-cloud-y-almohada-2-pack-6027128/p",
     "precio_actual": 2689.0,
     "precio_maximo": 7000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista lila gris con sabanas softy platino protector cloud y almohada 2 pack": {
@@ -525,7 +554,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-lila-gris-con-sabanas-softy-platino-protector-cloud-y-almohada-2-pack-6027120/p",
     "precio_actual": 2689.0,
     "precio_maximo": 7000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista rojo azul marino con sabanas softy platino protector cloud y almohada 2 pack": {
@@ -534,7 +563,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-rojo-azul-marino-con-sabanas-softy-platino-protector-cloud-y-almohada-2-pack-6027061/p",
     "precio_actual": 2689.0,
     "precio_maximo": 7000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon homy dicasa king size lila con protector ultra spring air sabanas softy platino y almohada 2 pack": {
@@ -543,7 +572,7 @@
     "url": "https://www.chedraui.com.mx/edredon-homy-dicasa-king-size-lila-con-protector-ultra-spring-air-sabanas-softy-platino-y-almohada-2-pack-6029505/p",
     "precio_actual": 2389.0,
     "precio_maximo": 6200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon homy dicasa king size azul marino con protector ultra spring air sabanas softy platino y almohada 2 pack": {
@@ -552,7 +581,7 @@
     "url": "https://www.chedraui.com.mx/edredon-homy-dicasa-king-size-azul-marino-con-protector-ultra-spring-air-sabanas-softy-platino-y-almohada-2-pack-6029497/p",
     "precio_actual": 2389.0,
     "precio_maximo": 6200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa couzy doble vista azul marino gris con sabanas royal gris y almohada royal twin": {
@@ -561,7 +590,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-y-almohada-royal-twin-6026706/p",
     "precio_actual": 2239.0,
     "precio_maximo": 5800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa queen size couzy doble vista rosa menta con sabanas royal rosa protector rogga y almohada royal twin": {
@@ -570,7 +599,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-queen-size-couzy-doble-vista-rosa-menta-con-sabanas-royal-rosa-protector-rogga-y-almohada-royal-twin-6027032/p",
     "precio_actual": 2549.0,
     "precio_maximo": 6600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon queen size dicasa couzy doble vista azul marino gris con sabanas royal gris protector rogga y almohada royal twin": {
@@ -579,7 +608,7 @@
     "url": "https://www.chedraui.com.mx/edredon-queen-size-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-protector-rogga-y-almohada-royal-twin-6026702/p",
     "precio_actual": 2549.0,
     "precio_maximo": 6600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dos vistas rogga matrimonial rosa gris perla con protector ultra sabanas basic crema y 2 almohadas frosty": {
@@ -588,7 +617,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dos-vistas-rogga-matrimonial-rosa-gris-perla-con-protector-ultra-sabanas-basic-crema-y-2-almohadas-frosty-6031139/p",
     "precio_actual": 2629.0,
     "precio_maximo": 6800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size atlas del descanso modelo zazi": {
@@ -597,8 +626,9 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-atlas-del-descanso-modelo-zazi-6024120/p",
     "precio_actual": 4799.0,
     "precio_maximo": 12399.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
+    "ultima_actualizacion": "2026-11-26T14:30:12.348007+00:00",
+    "precio_alertado": 4799.0,
+    "ultima_alerta": "2026-11-26T14:30:12.348007+00:00"
   },
   "chedraui|title:sillon decorativo bossa oasis beige en terciopelo con patas metalicas": {
     "tienda": "Chedraui",
@@ -606,7 +636,7 @@
     "url": "https://www.chedraui.com.mx/sillon-decorativo-bossa-oasis-beige-en-terciopelo-con-patas-metalicas-6028970/p",
     "precio_actual": 1899.0,
     "precio_maximo": 4899.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:sillon decorativo bossa oasis verde en terciopelo con patas metalicas": {
@@ -615,7 +645,7 @@
     "url": "https://www.chedraui.com.mx/sillon-decorativo-bossa-oasis-verde-en-terciopelo-con-patas-metalicas-6028937/p",
     "precio_actual": 1899.0,
     "precio_maximo": 4899.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa matrimonial couzy doble vista azul marino gris con sabanas softy platino protector cloud y almohada 2 pack": {
@@ -624,7 +654,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-matrimonial-couzy-doble-vista-azul-marino-gris-con-sabanas-softy-platino-protector-cloud-y-almohada-2-pack-6027130/p",
     "precio_actual": 2409.0,
     "precio_maximo": 6200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:set 4 almohada atlas colchoneta 5 zonas set de cama queen size azul oso peluche": {
@@ -633,7 +663,7 @@
     "url": "https://www.chedraui.com.mx/set-4-almohada-atlas-colchoneta-5-zonas-set-de-cama-queen-size-azul-oso-peluche-6034849/p",
     "precio_actual": 3499.0,
     "precio_maximo": 8999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista azul marino gris con sabanas softy platino y almohada 2 pack gris": {
@@ -642,7 +672,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-azul-marino-gris-con-sabanas-softy-platino-y-almohada-2-pack-gris-6027105/p",
     "precio_actual": 2179.0,
     "precio_maximo": 5600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista rojo azul marino con sabanas softy platino y almohada 2 pck gris": {
@@ -651,7 +681,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-rojo-azul-marino-con-sabanas-softy-platino-y-almohada-2-pck-gris-6027089/p",
     "precio_actual": 2179.0,
     "precio_maximo": 5600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy azul marino con sabanas royal gris almohada royal twin y protecor rogga": {
@@ -660,7 +690,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-azul-marino-con-sabanas-royal-gris-almohada-royal-twin-y-protecor-rogga-6026496/p",
     "precio_actual": 2569.0,
     "precio_maximo": 6600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy lila con sabanas royal rosa almohada royal twin y protecor rogga": {
@@ -669,7 +699,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-lila-con-sabanas-royal-rosa-almohada-royal-twin-y-protecor-rogga-6026469/p",
     "precio_actual": 2569.0,
     "precio_maximo": 6600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon individual atlas del descanso infinity 24cm": {
@@ -678,7 +708,7 @@
     "url": "https://www.chedraui.com.mx/colchon-individual-atlas-del-descanso-infinity-24cm-6031911/p",
     "precio_actual": 4199.0,
     "precio_maximo": 10749.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon matrimonial dicasa homy azul marino con sabanas royal gris almohada royal twin y protecor rogga": {
@@ -687,7 +717,7 @@
     "url": "https://www.chedraui.com.mx/edredon-matrimonial-dicasa-homy-azul-marino-con-sabanas-royal-gris-almohada-royal-twin-y-protecor-rogga-6026514/p",
     "precio_actual": 2269.0,
     "precio_maximo": 5800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon matrimonial dicasa homy lila con sabanas royal rosa almohada royal twin y protecor rogga": {
@@ -696,7 +726,7 @@
     "url": "https://www.chedraui.com.mx/edredon-matrimonial-dicasa-homy-lila-con-sabanas-royal-rosa-almohada-royal-twin-y-protecor-rogga-6026490/p",
     "precio_actual": 2269.0,
     "precio_maximo": 5800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy lila con sabanas softy platino protector cloud y almohada 2pack gris": {
@@ -705,7 +735,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-lila-con-sabanas-softy-platino-protector-cloud-y-almohada-2pack-gris-6026466/p",
     "precio_actual": 2429.0,
     "precio_maximo": 6200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy azul marino con sabanas softy platino protector cloud y almohada 2pack gris": {
@@ -714,7 +744,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-azul-marino-con-sabanas-softy-platino-protector-cloud-y-almohada-2pack-gris-6026398/p",
     "precio_actual": 2429.0,
     "precio_maximo": 6200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon matrimonial spring air loom sleep fitness en caja": {
@@ -723,7 +753,25 @@
     "url": "https://www.chedraui.com.mx/colchon-matrimonial-spring-air-loom-sleep-fitness-en-caja-6033827/p",
     "precio_actual": 5499.0,
     "precio_maximo": 13999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:audifonos soundcore p41i negro": {
+    "tienda": "Chedraui",
+    "titulo": "Audifonos Soundcore P41i Negro",
+    "url": "https://www.chedraui.com.mx/audifonos-soundcore-p41i-negro-3905102/p",
+    "precio_actual": 745.0,
+    "precio_maximo": 1895.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:juguete para bebes fisher price leon camina conmigo andadera": {
+    "tienda": "Chedraui",
+    "titulo": "Juguete para Bebés Fisher-Price León Camina Conmigo Andadera",
+    "url": "https://www.chedraui.com.mx/juguete-para-bebes-fisher-price-leon-camina-conmigo-andadera-3399308/p",
+    "precio_actual": 668.58,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:protector spring air ultra king size con sabanas softy platino y 2 almohadas frosty": {
@@ -732,7 +780,16 @@
     "url": "https://www.chedraui.com.mx/protector-spring-air-ultra-king-size-con-sabanas-softy-platino-y-2-almohadas-frosty-6031348/p",
     "precio_actual": 2049.0,
     "precio_maximo": 5200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:juguete para bebes fisher price telefono parlanchin": {
+    "tienda": "Chedraui",
+    "titulo": "Juguete para Bebés Fisher-Price Teléfono Parlanchín",
+    "url": "https://www.chedraui.com.mx/juguete-para-bebes-fisher-price-telefono-parlanchin-3378819/p",
+    "precio_actual": 90.3,
+    "precio_maximo": 229.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dos vistas rogga matri queen rosa gris perla con sabanas basic qs crema y almohada osos 2": {
@@ -741,7 +798,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dos-vistas-rogga-matriqueen-rosa-gris-perla-con-sabanas-basic-qs-crema-y-almohada-osos-2-6027212/p",
     "precio_actual": 1979.0,
     "precio_maximo": 5000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon individual dicasa couzy doble vista azul marino gris con sabanas royal gris protector rogga y almohada royal": {
@@ -750,7 +807,7 @@
     "url": "https://www.chedraui.com.mx/edredon-individual-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-protector-rogga-y-almohada-royal-6026695/p",
     "precio_actual": 1979.0,
     "precio_maximo": 5000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 12r 1v freno contrapedal negro brillante orion": {
@@ -759,7 +816,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-12r-1v-freno-contrapedal-negro-brillante-orion-6033423/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 12r 1v freno contrapedal azul orion": {
@@ -768,7 +825,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-12r-1v-freno-contrapedal-azul-orion-6033421/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nina 12r 1v freno contrapedal rosa haditas": {
@@ -777,7 +834,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nina-12r-1v-freno-contrapedal-rosa-haditas-6033158/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci 12r rosa 1v freno contrapedal sweet cat": {
@@ -786,7 +843,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-12r-rosa-1v-freno-contrapedal-sweet-cat-6031599/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infnatil veloci 12r 1v freno contrapedal rojo lithium": {
@@ -795,7 +852,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infnatil-veloci-12r-1v-freno-contrapedal-rojo-lithium-6031590/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta veloci princess r12 rosa infantil": {
@@ -804,7 +861,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-veloci-princess-r12-rosa-infantil-6031577/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta veloci dino rodada 12 azul infantil": {
@@ -813,7 +870,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-veloci-dino-rodada-12-azul-infantil-6031576/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 12r 1v freno contrapedal naranja lithium": {
@@ -822,7 +879,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-12r-1v-freno-contrapedal-naranja-lithium-6017409/p",
     "precio_actual": 1979.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon homy dicasa matrimonial lila con protector ultra spring air sabanas softy platino y almohada 2 pack": {
@@ -831,7 +888,7 @@
     "url": "https://www.chedraui.com.mx/edredon-homy-dicasa-matrimonial-lila-con-protector-ultra-spring-air-sabanas-softy-platino-y-almohada-2-pack-6029499/p",
     "precio_actual": 2139.0,
     "precio_maximo": 5400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon homy dicasa matrimonial azul marino con protector ultra spring air sabanas softy platino y almohada 2 pack": {
@@ -840,7 +897,7 @@
     "url": "https://www.chedraui.com.mx/edredon-homy-dicasa-matrimonial-azul-marino-con-protector-ultra-spring-air-sabanas-softy-platino-y-almohada-2-pack-6029496/p",
     "precio_actual": 2139.0,
     "precio_maximo": 5400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada one protector ultra y sabanas softy": {
@@ -849,7 +906,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-one-protector-ultra-y-sabanas-softy-6025291/p",
     "precio_actual": 8199.0,
     "precio_maximo": 20650.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon individual atlas del descanso modelo zazi": {
@@ -858,7 +915,7 @@
     "url": "https://www.chedraui.com.mx/colchon-individual-atlas-del-descanso-modelo-zazi-6024094/p",
     "precio_actual": 2999.0,
     "precio_maximo": 7549.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon matrimonial dicasa couzy doble vista azul marino gris con sabanas royal gris y almohada royal twin": {
@@ -867,7 +924,7 @@
     "url": "https://www.chedraui.com.mx/edredon-matrimonial-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-y-almohada-royal-twin-6026709/p",
     "precio_actual": 2069.0,
     "precio_maximo": 5200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon queen size atlas del descanso modelo zazi": {
@@ -876,7 +933,7 @@
     "url": "https://www.chedraui.com.mx/colchon-queen-size-atlas-del-descanso-modelo-zazi-6024123/p",
     "precio_actual": 3999.0,
     "precio_maximo": 10049.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy lila con sabanas royal rosa y almohada royal twin": {
@@ -885,7 +942,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-lila-con-sabanas-royal-rosa-y-almohada-royal-twin-6026508/p",
     "precio_actual": 2149.0,
     "precio_maximo": 5400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy azul marino con sabanas royal gris y almohada royal twin": {
@@ -894,7 +951,16 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-azul-marino-con-sabanas-royal-gris-y-almohada-royal-twin-6026439/p",
     "precio_actual": 2149.0,
     "precio_maximo": 5400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "chedraui|title:fisher price juguete tablet aprendizaje crece conmigo azul": {
+    "tienda": "Chedraui",
+    "titulo": "Fisher-Price Juguete Tablet Aprendizaje Crece Conmigo Azul",
+    "url": "https://www.chedraui.com.mx/fisher-price-juguete-tablet-aprendizaje-crece-conmigo-azul-3821718/p",
+    "precio_actual": 119.0,
+    "precio_maximo": 299.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon queen size dicasa homy azul marino con sabanas royal gris almohada royal twin y protecor rogga": {
@@ -903,7 +969,7 @@
     "url": "https://www.chedraui.com.mx/edredon-queen-size-dicasa-homy-azul-marino-con-sabanas-royal-gris-almohada-royal-twin-y-protecor-rogga-6026499/p",
     "precio_actual": 2309.0,
     "precio_maximo": 5800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon queen size dicasa homy lila con sabanas royal rosa almohada royal twin y protecor rogga": {
@@ -912,7 +978,7 @@
     "url": "https://www.chedraui.com.mx/edredon-queen-size-dicasa-homy-lila-con-sabanas-royal-rosa-almohada-royal-twin-y-protecor-rogga-6026473/p",
     "precio_actual": 2309.0,
     "precio_maximo": 5800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada oso protector ultra y sabanas basic": {
@@ -921,7 +987,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-oso-protector-ultra-y-sabanas-basic-6025359/p",
     "precio_actual": 7949.0,
     "precio_maximo": 19950.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada oso y protector ultra": {
@@ -930,7 +996,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-oso-y-protector-ultra-6025347/p",
     "precio_actual": 7399.0,
     "precio_maximo": 18550.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada royal twin protector lux y sabanas royal": {
@@ -939,7 +1005,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-royal-twin-protector-lux-y-sabanas-royal-6025353/p",
     "precio_actual": 8099.0,
     "precio_maximo": 20300.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada 2pack gris protector cloud y sabanas softy": {
@@ -948,7 +1014,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-2pack-gris-protector-cloud-y-sabanas-softy-6025319/p",
     "precio_actual": 8099.0,
     "precio_maximo": 20300.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada 2pack y sabanas softy": {
@@ -957,7 +1023,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-2pack-y-sabanas-softy-6025379/p",
     "precio_actual": 7549.0,
     "precio_maximo": 18900.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:sombrilla grande para jardin bossa catania gris de acero reforzado": {
@@ -966,7 +1032,7 @@
     "url": "https://www.chedraui.com.mx/sombrilla-grande-para-jardin-bossa-catania-gris-de-acero-reforzado-6034030/p",
     "precio_actual": 919.0,
     "precio_maximo": 2299.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon queen size dicasa homy lila con sabanas royal rosa y almohada royal twin": {
@@ -975,7 +1041,7 @@
     "url": "https://www.chedraui.com.mx/edredon-queen-size-dicasa-homy-lila-con-sabanas-royal-rosa-y-almohada-royal-twin-6026511/p",
     "precio_actual": 1839.0,
     "precio_maximo": 4600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon queen size dicasa homy azul marino con sabanas royal gris y almohada royal twin": {
@@ -984,7 +1050,7 @@
     "url": "https://www.chedraui.com.mx/edredon-queen-size-dicasa-homy-azul-marino-con-sabanas-royal-gris-y-almohada-royal-twin-6026449/p",
     "precio_actual": 1839.0,
     "precio_maximo": 4600.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista azul marino gris con sabanas softy platino": {
@@ -993,7 +1059,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-azul-marino-gris-con-sabanas-softy-platino-6027037/p",
     "precio_actual": 1919.0,
     "precio_maximo": 4800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista lila gris con sabanas softy platino": {
@@ -1002,7 +1068,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-lila-gris-con-sabanas-softy-platino-6026912/p",
     "precio_actual": 1919.0,
     "precio_maximo": 4800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa king size couzy doble vista rojo azul marino con sabanas softy platino": {
@@ -1011,7 +1077,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-king-size-couzy-doble-vista-rojo-azul-marino-con-sabanas-softy-platino-6026906/p",
     "precio_actual": 1919.0,
     "precio_maximo": 4800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa couzy doble vista azul marino gris con sabanas royal gris": {
@@ -1020,7 +1086,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-6026677/p",
     "precio_actual": 1919.0,
     "precio_maximo": 4800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy azul marino con sabanas softy platino y almohada 2pack gris": {
@@ -1029,7 +1095,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-azul-marino-con-sabanas-softy-platino-y-almohada-2pack-gris-6026521/p",
     "precio_actual": 1919.0,
     "precio_maximo": 4800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon king size dicasa homy lila con sabanas softy platino y almohada 2pack gris": {
@@ -1038,7 +1104,7 @@
     "url": "https://www.chedraui.com.mx/edredon-king-size-dicasa-homy-lila-con-sabanas-softy-platino-y-almohada-2pack-gris-6026413/p",
     "precio_actual": 1919.0,
     "precio_maximo": 4800.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:mesa auxiliar bossa radnick gris con infinity led rgb moderna": {
@@ -1047,7 +1113,7 @@
     "url": "https://www.chedraui.com.mx/mesa-auxiliar-bossa-radnick-gris-con-infinity-led-rgb-moderna-6024390/p",
     "precio_actual": 1199.0,
     "precio_maximo": 2999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:carrito organizador multiusos de 5 niveles con ruedas 360 para cocina": {
@@ -1056,7 +1122,7 @@
     "url": "https://www.chedraui.com.mx/carrito-organizador-multiusos-de-5-niveles-con-ruedas-360-para-cocina-6023418/p",
     "precio_actual": 1199.0,
     "precio_maximo": 2999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:mesa de centro bossa jandal con espejo infinity led": {
@@ -1065,7 +1131,7 @@
     "url": "https://www.chedraui.com.mx/mesa-de-centro-bossa-jandal-con-espejo-infinity-led-6023412/p",
     "precio_actual": 1799.0,
     "precio_maximo": 4499.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:mesa de centro bossa salisbury cafe con infinity led rgb moderna": {
@@ -1074,7 +1140,7 @@
     "url": "https://www.chedraui.com.mx/mesa-de-centro-bossa-salisbury-cafe-con-infinity-led-rgb-moderna-6024389/p",
     "precio_actual": 1799.0,
     "precio_maximo": 4499.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:estanteria infantil bossa pio estilo organizador tipo librero": {
@@ -1083,7 +1149,7 @@
     "url": "https://www.chedraui.com.mx/estanteria-infantil-bossa-pio-estilo-organizador-tipo-librero-6023411/p",
     "precio_actual": 1839.0,
     "precio_maximo": 4599.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:set 2 almohada atlas colchoneta 5 zonas set de cama individual rosa oso peluche": {
@@ -1092,7 +1158,7 @@
     "url": "https://www.chedraui.com.mx/set-2-almohada-atlas-colchoneta-5-zonas-set-de-cama-individual-rosa-oso-peluche-6034851/p",
     "precio_actual": 2599.0,
     "precio_maximo": 6499.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci para nino 12r 1v freno contrapedal rojo lithium": {
@@ -1101,7 +1167,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-para-nino-12r-1v-freno-contrapedal-rojo-lithium-6017231/p",
     "precio_actual": 1999.0,
     "precio_maximo": 4998.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon queen size roomi freedom 30 cm firmeza media smartblocks activesoft": {
@@ -1110,7 +1176,7 @@
     "url": "https://www.chedraui.com.mx/colchon-queen-size-roomi-freedom-30-cm-firmeza-media-smartblocks-activesoft-6035018/p",
     "precio_actual": 13999.0,
     "precio_maximo": 35000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil veloci 20r 7v frenos v brake rojo riot": {
@@ -1119,7 +1185,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-veloci-20r-7v-frenos-v-brake-rojo-riot-6031582/p",
     "precio_actual": 3119.0,
     "precio_maximo": 7798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta infantil ghost unisex 16r 1v freno v brakes azul mark": {
@@ -1128,7 +1194,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-infantil-ghost-unisex-16r-1v-freno-v-brakes-azul-mark-6011087/p",
     "precio_actual": 3119.0,
     "precio_maximo": 7798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size roomi freedom 30 cm firmeza media smartblocks activesoft": {
@@ -1137,7 +1203,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-roomi-freedom-30-cm-firmeza-media-smartblocks-activesoft-6034990/p",
     "precio_actual": 17599.0,
     "precio_maximo": 44000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta ghost revenge rodada 16 verde infantil": {
@@ -1146,7 +1212,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-ghost-revenge-rodada-16-verde-infantil-6031578/p",
     "precio_actual": 3679.0,
     "precio_maximo": 9198.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta de montana ghost unisex r20 azul revenge": {
@@ -1155,7 +1221,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-de-montana-ghost-unisex-r20-azul-revenge-6017902/p",
     "precio_actual": 4159.0,
     "precio_maximo": 10398.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta de montana ghost unisex r20 rojo revenge": {
@@ -1164,7 +1230,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-de-montana-ghost-unisex-r20-rojo-revenge-6018971/p",
     "precio_actual": 4159.0,
     "precio_maximo": 10398.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta veloci nuke rodada 26 amarillo de montana": {
@@ -1173,7 +1239,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-veloci-nuke-rodada-26-amarillo-de-montana-6034892/p",
     "precio_actual": 4639.0,
     "precio_maximo": 11598.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta ghost revenge rodada 26 negro de montana": {
@@ -1182,7 +1248,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-ghost-revenge-rodada-26-negro-de-montana-6032214/p",
     "precio_actual": 5439.0,
     "precio_maximo": 13598.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta de montana ghost unisex 27 5r 21v freno disco azul scrow": {
@@ -1191,7 +1257,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-de-montana-ghost-unisex-275r-21v-freno-disco-azul-scrow-6031604/p",
     "precio_actual": 6079.0,
     "precio_maximo": 15198.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:bicicleta ghost scrow rodada 29 rojo de montana": {
@@ -1200,7 +1266,7 @@
     "url": "https://www.chedraui.com.mx/bicicleta-ghost-scrow-rodada-29-rojo-de-montana-6031591/p",
     "precio_actual": 6079.0,
     "precio_maximo": 15198.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:figura hasbro nano mals base 1 pieza": {
@@ -1209,9 +1275,19 @@
     "url": "https://www.chedraui.com.mx/figura-hasbro-nano-mals-base-1-pieza-3898405/p",
     "precio_actual": 179.6,
     "precio_maximo": 449.0,
-    "ultima_actualizacion": "2026-11-26T04:38:51.488259+00:00",
+    "ultima_actualizacion": "2026-11-26T14:29:32.089056+00:00",
     "precio_alertado": 179.6,
-    "ultima_alerta": "2026-11-26T04:38:51.488259+00:00"
+    "ultima_alerta": "2026-11-26T14:29:32.089056+00:00"
+  },
+  "chedraui|title:lanzador agua soa hydro fr supersoaker": {
+    "tienda": "Chedraui",
+    "titulo": "Lanzador Agua Soa Hydro Fr. Supersoaker",
+    "url": "https://www.chedraui.com.mx/lanzador-agua-soa-hydro-fr-supersoaker-3737728/p",
+    "precio_actual": 142.1,
+    "precio_maximo": 355.01,
+    "ultima_actualizacion": "2026-11-26T14:29:35.710218+00:00",
+    "precio_alertado": 142.1,
+    "ultima_alerta": "2026-11-26T14:29:35.710218+00:00"
   },
   "chedraui|title:colchon king size dicasa inabox con almohada one protector ultra y sabanas basic": {
     "tienda": "Chedraui",
@@ -1219,7 +1295,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-one-protector-ultra-y-sabanas-basic-6025297/p",
     "precio_actual": 7999.0,
     "precio_maximo": 19950.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con sabanas softy": {
@@ -1228,7 +1304,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-sabanas-softy-6025400/p",
     "precio_actual": 7299.0,
     "precio_maximo": 18200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:colchon king size dicasa inabox con almohada one y sabanas softy": {
@@ -1237,7 +1313,7 @@
     "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-one-y-sabanas-softy-6025324/p",
     "precio_actual": 7449.0,
     "precio_maximo": 18550.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:galletas bombon pan de muerto 12 140g": {
@@ -1246,7 +1322,7 @@
     "url": "https://www.chedraui.com.mx/galletas-bombon-pan-de-muerto-12140g-3883849/p",
     "precio_actual": 10.0,
     "precio_maximo": 24.9,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon matrimonial dicasa homy azul marino con sabanas softy platino protector cloud y almohada 2pack gris": {
@@ -1255,7 +1331,7 @@
     "url": "https://www.chedraui.com.mx/edredon-matrimonial-dicasa-homy-azul-marino-con-sabanas-softy-platino-protector-cloud-y-almohada-2pack-gris-6026424/p",
     "precio_actual": 2169.0,
     "precio_maximo": 5400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon matrimonial dicasa homy lila con sabanas softy platino protector cloud y almohada 2pack gris": {
@@ -1264,7 +1340,7 @@
     "url": "https://www.chedraui.com.mx/edredon-matrimonial-dicasa-homy-lila-con-sabanas-softy-platino-protector-cloud-y-almohada-2pack-gris-6026393/p",
     "precio_actual": 2169.0,
     "precio_maximo": 5400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dos vistas rogga king size rosa gris perla con sabanas basic crema y almohada osos 2": {
@@ -1273,7 +1349,7 @@
     "url": "https://www.chedraui.com.mx/edredon-dos-vistas-rogga-king-size-rosa-gris-perla-con-sabanas-basic-crema-y-almohada-osos-2-6027209/p",
     "precio_actual": 2089.0,
     "precio_maximo": 5200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon queen size dicasa couzy doble vista azul marino gris con sabanas royal gris y almohada royal twin": {
@@ -1282,7 +1358,7 @@
     "url": "https://www.chedraui.com.mx/edredon-queen-size-dicasa-couzy-doble-vista-azul-marino-gris-con-sabanas-royal-gris-y-almohada-royal-twin-6026715/p",
     "precio_actual": 2089.0,
     "precio_maximo": 5200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "chedraui|title:edredon dicasa matrimonial couzy doble vista azul marino gris con sabanas softy platino y almohada 2 pack gris": {
@@ -1291,418 +1367,423 @@
     "url": "https://www.chedraui.com.mx/edredon-dicasa-matrimonial-couzy-doble-vista-azul-marino-gris-con-sabanas-softy-platino-y-almohada-2-pack-gris-6026909/p",
     "precio_actual": 2009.0,
     "precio_maximo": 5000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "chedraui|title:colchon king size dicasa inabox con 2 almohadas oso y protector ultra": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón King Size Dicasa InaBox con 2 Almohadas Oso y Protector Ultra",
-    "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-2-almohadas-oso-y-protector-ultra-6025402/p",
-    "precio_actual": 7599.0,
-    "precio_maximo": 18900.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0h4j42v4v": {
+    "tienda": "Amazon",
+    "titulo": "B0H4J42V4V",
+    "url": "https://www.amazon.com.mx/dp/B0H4J42V4V?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1549.0,
+    "precio_maximo": 6198.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "chedraui|title:colchon king size dicasa inabox con almohada royal twin y sabanas royal": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón King Size Dicasa InaBox con Almohada Royal Twin y Sábanas Royal",
-    "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-royal-twin-y-sabanas-royal-6025365/p",
-    "precio_actual": 7599.0,
-    "precio_maximo": 18900.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0h4sgg1sp": {
+    "tienda": "Amazon",
+    "titulo": "B0H4SGG1SP",
+    "url": "https://www.amazon.com.mx/dp/B0H4SGG1SP",
+    "precio_actual": 3500.0,
+    "precio_maximo": 12089.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "chedraui|title:colchon queen size dicasa inabox con 2 almohadas oso y sabanas basic": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón Queen Size Dicasa InaBox con 2 Almohadas Oso y Sábanas Basic",
-    "url": "https://www.chedraui.com.mx/colchon-queen-size-dicasa-inabox-con-2-almohadas-oso-y-sabanas-basic-6025350/p",
-    "precio_actual": 6199.0,
-    "precio_maximo": 15400.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0cmdgp5kc": {
+    "tienda": "Amazon",
+    "titulo": "B0CMDGP5KC",
+    "url": "https://www.amazon.com.mx/dp/B0CMDGP5KC?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 229.99,
+    "precio_maximo": 665.66,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "chedraui|title:colchon king size dicasa inabox con protector ultra y sabanas softy": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón King Size Dicasa InaBox con Protector Ultra y Sábanas Softy",
-    "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-protector-ultra-y-sabanas-softy-6025398/p",
-    "precio_actual": 7749.0,
-    "precio_maximo": 19250.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0cwkk9lbh": {
+    "tienda": "Amazon",
+    "titulo": "B0CWKK9LBH",
+    "url": "https://www.amazon.com.mx/dp/B0CWKK9LBH?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 380.99,
+    "precio_maximo": 1089.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "chedraui|title:colchon king size dicasa inabox con almohada 2pack gris": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón King Size Dicasa InaBox con Almohada 2Pack Gris",
-    "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-almohada-2pack-gris-6025306/p",
-    "precio_actual": 7049.0,
-    "precio_maximo": 17500.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0009oahim": {
+    "tienda": "Amazon",
+    "titulo": "B0009OAHIM",
+    "url": "https://www.amazon.com.mx/dp/B0009OAHIM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 681.66,
+    "precio_maximo": 1805.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "chedraui|title:colchon matrimonial roomi freedom 30 cm firmeza media smartblocks activesoft": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón Matrimonial Roomi Freedom 30 cm Firmeza Media SmartBlocks ActiveSoft",
-    "url": "https://www.chedraui.com.mx/colchon-matrimonial-roomi-freedom-30-cm-firmeza-media-smartblocks-activesoft-6034992/p",
-    "precio_actual": 12499.0,
-    "precio_maximo": 31000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "chedraui|title:colchon queen size dicasa inabox con almohada 2pack gris protector cloud y sabanas softy": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón Queen Size Dicasa InaBox con Almohada 2Pack Gris, Protector Cloud y Sábanas Softy",
-    "url": "https://www.chedraui.com.mx/colchon-queen-size-dicasa-inabox-con-almohada-2pack-gris-protector-cloud-y-sabanas-softy-6025325/p",
-    "precio_actual": 6499.0,
-    "precio_maximo": 16100.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "chedraui|title:colchon king size dicasa inabox con sabanas basic": {
-    "tienda": "Chedraui",
-    "titulo": "Colchón King Size Dicasa InaBox con Sábanas Basic",
-    "url": "https://www.chedraui.com.mx/colchon-king-size-dicasa-inabox-con-sabanas-basic-6025392/p",
-    "precio_actual": 7349.0,
-    "precio_maximo": 18200.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|title:amazon cargador gan anker 140w 4 puertos pd 3 1 pantalla inteligente cable usb c 240w": {
+  "amazon|code:b0g2mwmy6x": {
     "tienda": "Amazon MX",
-    "titulo": "Amazon: Cargador GaN Anker 140W (4 Puertos PD 3.1, Pantalla Inteligente + Cable USB-C 240W)",
-    "url": "https://www.promodescuentos.com/ofertas/amazon-cargador-gan-anker-140w-4-puertos-pd-31-pantalla-inteligente-cable-usb-c-240w-1213436",
-    "precio_actual": 1199.0,
-    "precio_maximo": 1199.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "Amazon: Philips TAB6200 Barra de Sonido de 2.1 Canales",
+    "url": "https://www.amazon.com.mx/dp/B0G2MWMY6X?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2.8,
+    "precio_maximo": 6.99,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "mercadolibre|title:nuevo cupon relampago en mercado libre corran que no duran nada": {
-    "tienda": "Mercado Libre",
-    "titulo": "NUEVO CUPON RELAMPAGO EN MERCADO LIBRE, CORRAN QUE NO DURAN NADA",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico/lists/be9820b7-a6b3-4e4a-9dc5-2e74e3c39906?matt_tool=35824865&forceInApp=true",
-    "precio_actual": 200.0,
-    "precio_maximo": 2000.0,
-    "ultima_actualizacion": "2026-11-26T04:37:59.690040+00:00",
-    "precio_alertado": 200.0,
-    "ultima_alerta": "2026-11-26T04:37:59.690040+00:00"
-  },
-  "amazon|code:b0h1tr6kgy": {
-    "tienda": "Amazon MX",
-    "titulo": "Con certificación IP67 y 5 h de batería, lleva tu música sin miedo al clima",
-    "url": "https://www.amazon.com.mx/dp/B0H1TR6KGY?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 262.0,
-    "precio_maximo": 699.0,
-    "ultima_actualizacion": "2026-11-26T04:38:11.300925+00:00",
-    "precio_alertado": 262.0,
-    "ultima_alerta": "2026-11-26T04:38:11.300925+00:00"
-  },
-  "amazon|code:b0fdg4mmc9": {
+  "amazon|code:b07kvnbsbw": {
     "tienda": "Amazon",
-    "titulo": "B0FDG4MMC9",
-    "url": "https://www.amazon.com.mx/dp/B0FDG4MMC9?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 130.13,
-    "precio_maximo": 314.76,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B07KVNBSBW",
+    "url": "https://www.amazon.com.mx/dp/B07KVNBSBW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 769.97,
+    "precio_maximo": 1699.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0b37qh6lt": {
-    "tienda": "Amazon MX",
-    "titulo": "Con 234 piezas y 216 pistas, tu hijo crea infinitas pistas y puentes a su gusto",
-    "url": "https://www.amazon.com.mx/dp/B0B37QH6LT?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 158.0,
-    "precio_maximo": 378.0,
-    "ultima_actualizacion": "2026-11-26T04:38:14.953152+00:00",
-    "precio_alertado": 158.0,
-    "ultima_alerta": "2026-11-26T04:38:14.953152+00:00"
-  },
-  "mercadolibre|title:ofertonesmexico": {
-    "tienda": "Mercado Libre",
-    "titulo": "ofertonesmexico",
-    "url": "https://www.mercadolibre.com.mx/social/ofertonesmexico?matt_word=ofertonesmexico&matt_tool=35824865&forceInApp=true&ref=BLfEK78JZw2YeRVBUBcSb3JHpMfeqODFBeEG6%2ByDPvpsVWGdTy54XUYhGfxLPL7mUQyDMRmvExTYuYDOORUKhy9h8kqgVa2A%2B%2Fkg4W%2BjsAnYTNzxrvfzDdRAM9X%2Bhv7WOL%2FsoNr0kmK7amCOIaBCBW3dDRKVWni01jQeqLiJmFAnX8iWsYNhcagl82GhuNyxuuszMyRcsRdYiPvaz0EfN1yj9EOsUxlpGIiNrlNo5zGTVA%2FARuVj91PFG4qeC17uQS5a%2Fw%3D%3D",
-    "precio_actual": 1649.0,
-    "precio_maximo": 3798.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0g6mdjg8z": {
+  "amazon|code:b08psqjs5n": {
     "tienda": "Amazon",
-    "titulo": "B0G6MDJG8Z",
-    "url": "https://www.amazon.com.mx/dp/B0G6MDJG8Z?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 650.03,
-    "precio_maximo": 1390.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B08PSQJS5N",
+    "url": "https://www.amazon.com.mx/dp/B08PSQJS5N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 649.96,
+    "precio_maximo": 1344.15,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0f1wzd4ls": {
+  "amazon|code:b0gwm8z6cb": {
     "tienda": "Amazon",
-    "titulo": "B0F1WZD4LS",
-    "url": "https://www.amazon.com.mx/dp/B0F1WZD4LS?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 676.73,
-    "precio_maximo": 1399.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B0GWM8Z6CB",
+    "url": "https://www.amazon.com.mx/dp/B0GWM8Z6CB?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3399.0,
+    "precio_maximo": 6999.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0g4sqmqlm": {
+  "amazon|code:b0fskjj2hl": {
     "tienda": "Amazon",
-    "titulo": "B0G4SQMQLM",
-    "url": "https://www.amazon.com.mx/dp/B0G4SQMQLM?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 685.3,
-    "precio_maximo": 1390.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "ANBIUX 2.4GHz WiFi 2K Camara de Seguridad Interior | Cámara de Seguridad con Audio Bidireccional, AI Detección de Movimiento, Camara Para Bebe/Mascotas/Mayor (2pcs)",
+    "url": "https://www.amazon.com.mx/dp/B0FSKJJ2HL",
+    "precio_actual": 299.0,
+    "precio_maximo": 599.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b09k2fhd3j": {
-    "tienda": "Amazon MX",
-    "titulo": "Amazon: Revlon Waver Jumbo Triple Barril Mediano de Cerámica Rosa",
-    "url": "https://www.amazon.com.mx/dp/B09K2FHD3J?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 399.0,
-    "precio_maximo": 795.0,
-    "ultima_actualizacion": "2026-11-26T04:38:07.645386+00:00",
-    "precio_alertado": 399.0,
-    "ultima_alerta": "2026-11-26T04:38:07.645386+00:00"
-  },
-  "amazon|code:b07n3xj66n": {
+  "amazon|code:b0cg7bwg7j": {
     "tienda": "Amazon",
-    "titulo": "B07N3XJ66N",
-    "url": "https://www.amazon.com.mx/dp/B07N3XJ66N?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 3092.0,
-    "precio_maximo": 5059.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B0CG7BWG7J",
+    "url": "https://www.amazon.com.mx/dp/B0CG7BWG7J?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 2499.0,
+    "precio_maximo": 4299.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b07hnk3qgq": {
+  "amazon|code:b08vzr6xzx": {
     "tienda": "Amazon",
-    "titulo": "B07HNK3QGQ",
-    "url": "https://www.amazon.com.mx/dp/B07HNK3QGQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 587.98,
-    "precio_maximo": 837.78,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "Mattel Hot Wheels Mario Kart, Circuito empaque SIOC, Pista de Juguete para niños a Partir de 5 años",
+    "url": "https://www.amazon.com.mx/dp/B08VZR6XZX?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1419.0,
+    "precio_maximo": 2352.2,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b015sr9i4i": {
+  "amazon|code:b0bvd2gy4h": {
     "tienda": "Amazon",
-    "titulo": "B015SR9I4I",
-    "url": "https://www.amazon.com.mx/dp/B015SR9I4I",
-    "precio_actual": 296.0,
-    "precio_maximo": 405.9,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B0BVD2GY4H",
+    "url": "https://www.amazon.com.mx/dp/B0BVD2GY4H?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 549.0,
+    "precio_maximo": 899.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0fd5ld6lq": {
+  "amazon|code:b000gozxa2": {
     "tienda": "Amazon",
-    "titulo": "B0FD5LD6LQ",
-    "url": "https://www.amazon.com.mx/dp/B0FD5LD6LQ?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 749.25,
-    "precio_maximo": 999.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B000GOZXA2",
+    "url": "https://www.amazon.com.mx/dp/B000GOZXA2?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 99.29,
+    "precio_maximo": 151.1,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0hpl9pctj": {
+  "amazon|code:b0g77tnzzr": {
     "tienda": "Amazon",
-    "titulo": "PEQUEÑOS EN MOVIMIENTO! CAMINADORA INFANTIL BLUELANDER",
-    "url": "https://www.amazon.com.mx/dp/B0HPL9PCTJ",
+    "titulo": "B0G77TNZZR",
+    "url": "https://www.amazon.com.mx/dp/B0G77TNZZR",
+    "precio_actual": 1052.99,
+    "precio_maximo": 1466.74,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0fvx7brhn": {
+    "tienda": "Amazon",
+    "titulo": "B0FVX7BRHN",
+    "url": "https://www.amazon.com.mx/dp/B0FVX7BRHN?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 1455.48,
+    "precio_maximo": 1971.32,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b01lxw9iwr": {
+    "tienda": "Amazon",
+    "titulo": "B01LXW9IWR",
+    "url": "https://www.amazon.com.mx/dp/B01LXW9IWR?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 398.99,
+    "precio_maximo": 499.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0ds2df5s5": {
+    "tienda": "Amazon",
+    "titulo": "B0DS2DF5S5",
+    "url": "https://www.amazon.com.mx/dp/B0DS2DF5S5?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 3500.0,
+    "precio_maximo": 4364.1,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09t2gp2xx": {
+    "tienda": "Amazon",
+    "titulo": "B09T2GP2XX",
+    "url": "https://www.amazon.com.mx/dp/B09T2GP2XX?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 169.0,
+    "precio_maximo": 212.28,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b002dyizhg": {
+    "tienda": "Amazon",
+    "titulo": "B002DYIZHG",
+    "url": "https://www.amazon.com.mx/dp/B002DYIZHG?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 934.15,
+    "precio_maximo": 1099.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00ngv4506": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i HKB4NKRYZ0GKCESHMQJD",
+    "url": "https://www.amazon.com.mx/dp/B00NGV4506/ref=cm_sw_r_as_gl_api_gl_i_HKB4NKRYZ0GKCESHMQJD?linkCode=ml1&tag=liquidahorros--20&linkId=5b4450b8979d2b4bbea3e41ee0b59224&ascsubtag=srctok-44368df74ce72aab&btn_type=ss&btn_ref=srctok-44368df74ce72aab",
+    "precio_actual": 1113.0,
+    "precio_maximo": 1252.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b00hczsfzi": {
+    "tienda": "Amazon",
+    "titulo": "B00HCZSFZI",
+    "url": "https://www.amazon.com.mx/dp/B00HCZSFZI?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
     "precio_actual": 1799.0,
-    "precio_maximo": 2199.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0h9r11cdw": {
-    "tienda": "Amazon",
-    "titulo": "B0H9R11CDW",
-    "url": "https://www.amazon.com.mx/dp/B0H9R11CDW?tag=ofertones03-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 2672.87,
-    "precio_maximo": 3090.26,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "precio_maximo": 1999.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b082x1cz6l": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i ZQTGJ6XCD1AR12ET7CV1",
-    "url": "https://www.amazon.com.mx/dp/B082X1CZ6L/ref=cm_sw_r_as_gl_api_gl_i_ZQTGJ6XCD1AR12ET7CV1?linkCode=ml1&tag=liquidahorros--20&linkId=c858f39345710b5c3aa2e1cd4f7be233&ascsubtag=srctok-308a775f8a3cdd13&btn_type=ss&btn_ref=srctok-308a775f8a3cdd13",
+    "url": "https://www.amazon.com.mx/dp/B082X1CZ6L/ref=cm_sw_r_as_gl_api_gl_i_ZQTGJ6XCD1AR12ET7CV1?linkCode=ml1&tag=liquidahorros--20&linkId=c858f39345710b5c3aa2e1cd4f7be233&ascsubtag=srctok-60ced487ed52eea9&btn_type=ss&btn_ref=srctok-60ced487ed52eea9",
     "precio_actual": 49.0,
     "precio_maximo": 52.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b004q47n5g": {
+  "amazon|code:b0dgj7mdgw": {
     "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i 2NBB5HJEZC6EF3QM4W8N",
-    "url": "https://www.amazon.com.mx/dp/B004Q47N5G/ref=cm_sw_r_as_gl_api_gl_i_2NBB5HJEZC6EF3QM4W8N?linkCode=ml1&tag=liquidahorros--20&linkId=45c14ae974b391470c0a011d1602a1b4&ascsubtag=srctok-1fd233cbf81e1d8d&btn_type=ss&btn_ref=srctok-1fd233cbf81e1d8d",
-    "precio_actual": 277.0,
-    "precio_maximo": 293.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "ref=cm sw r as gl api gl i dl 6F8QZDSVW23V5ASMVP1D",
+    "url": "https://www.amazon.com.mx/dp/B0DGJ7MDGW/ref=cm_sw_r_as_gl_api_gl_i_dl_6F8QZDSVW23V5ASMVP1D?linkCode=ml1&tag=liquidahorros--20&linkId=48d3c0968841b241421b13e114ec2ebb&ascsubtag=srctok-0cb4e3b3eb5ead5a&btn_type=ss&btn_ref=srctok-0cb4e3b3eb5ead5a",
+    "precio_actual": 1749.0,
+    "precio_maximo": 1844.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0034xjk2o": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i dl 6H518K92D44WENAC0APR",
+    "url": "https://www.amazon.com.mx/dp/B0034XJK2O/ref=cm_sw_r_as_gl_api_gl_i_dl_6H518K92D44WENAC0APR?linkCode=ml1&tag=liquidahorros--20&linkId=c97adc31e0903973220906b276001e0e&ascsubtag=srctok-145141d3060f49d3&btn_type=ss&btn_ref=srctok-145141d3060f49d3",
+    "precio_actual": 145.0,
+    "precio_maximo": 151.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b08jnjj3l4": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i XWECMAP7THQF7S7M0BMG",
-    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_XWECMAP7THQF7S7M0BMG?linkCode=ml1&tag=liquidahorros--20&linkId=d9cf7c58813f43ce7afc2ab1b7e62748&ascsubtag=srctok-46b8a8aeab50d54d&btn_type=ss&btn_ref=srctok-46b8a8aeab50d54d",
+    "url": "https://www.amazon.com.mx/dp/B08JNJJ3L4/ref=cm_sw_r_as_gl_api_gl_i_XWECMAP7THQF7S7M0BMG?linkCode=ml1&tag=liquidahorros--20&linkId=d9cf7c58813f43ce7afc2ab1b7e62748&ascsubtag=srctok-2d8b242c9d7fe0fd&btn_type=ss&btn_ref=srctok-2d8b242c9d7fe0fd",
     "precio_actual": 175.0,
     "precio_maximo": 179.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b0czzhpqyp": {
+  "amazon|code:b0gchq8lnm": {
     "tienda": "Amazon MX",
-    "titulo": "1 L de capacidad perfecta para tus esenciales de noche sin sobrecargar tu look",
-    "url": "https://www.amazon.com.mx/dp/B0CZZHPQYP?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
-    "precio_actual": 469.84,
-    "precio_maximo": 469.84,
-    "ultima_actualizacion": "2026-11-26T04:38:18.675595+00:00",
-    "precio_alertado": 469.84,
-    "ultima_alerta": "2026-11-26T04:38:18.675595+00:00"
+    "titulo": "Su diseño ligero y ergonómico la hace cómoda todo el día, perfecta para viajes",
+    "url": "https://www.amazon.com.mx/dp/B0GCHQ8LNM?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 893.1,
+    "precio_maximo": 893.1,
+    "ultima_actualizacion": "2026-11-26T14:28:51.866416+00:00",
+    "precio_alertado": 893.1,
+    "ultima_alerta": "2026-11-26T14:28:51.866416+00:00"
   },
-  "mercadolibre|title:arbol navidad lapiz 2 20 metros pino navideno frondoso alto color verde": {
-    "tienda": "Mercado Libre MX",
-    "titulo": "Arbol Navidad Lapiz 2.20 Metros Pino Navideño Frondoso Alto Color Verde",
-    "url": "https://www.mercadolibre.com.mx/social/ofertasperronasmx?matt_word=ofertasperronasmx&matt_tool=11154996&forceInApp=true&ref=BOKy8hi8QL8GcYUgoHj1UWigolwSFlp%2F3SKl4Sk4nhskEqmtpnRqGl5F3AhXq7Jys2olUHW01BRGNFvCo41AY21XqzZIu2AQq4JHCGMvw9kEOMqVwZ%2F2YbJymnfc9mheULyIy%2BwvcqPjXhbUCXz9zHuGR6Ug7ZmQ7UAv4VchGGZwL0F6IWOafjTQWBlEqjGsxPw7h%2FA8ElZFucGqxzaZXh68NjEZnsFI00Yj7sJfXNbIepXVjjeqOI8Qr90oyPxgqSbvRw%3D%3D",
-    "precio_actual": 2563.0,
-    "precio_maximo": 2563.0,
-    "ultima_actualizacion": "2026-11-26T04:38:22.400809+00:00",
-    "precio_alertado": 2563.0,
-    "ultima_alerta": "2026-11-26T04:38:22.400809+00:00"
+  "amazon|code:b0cts7223w": {
+    "tienda": "Amazon MX",
+    "titulo": "Amazon: Stanley Quencher H2.0 Vaso",
+    "url": "https://www.amazon.com.mx/dp/B0CTS7223W?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 438.99,
+    "precio_maximo": 438.99,
+    "ultima_actualizacion": "2026-11-26T14:28:55.603623+00:00",
+    "precio_alertado": 438.99,
+    "ultima_alerta": "2026-11-26T14:28:55.603623+00:00"
   },
-  "amazon|code:b00ivhq0ki": {
+  "amazon|code:b00gf9zbja": {
     "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i DBSB5FFTRYWZMH00RCZ0",
-    "url": "https://www.amazon.com.mx/dp/B00IVHQ0KI/ref=cm_sw_r_as_gl_api_gl_i_DBSB5FFTRYWZMH00RCZ0?linkCode=ml1&tag=liquidahorros--20&linkId=ee2fbc19d28f2a4c4560192bccbe6fa5&ascsubtag=srctok-33976412574b0557&btn_type=ss&btn_ref=srctok-33976412574b0557",
-    "precio_actual": 1729.0,
-    "precio_maximo": 1729.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "ref=cm sw r as gl api gl i dl ZT3Q2QY4FKHCGFH2AEJ3",
+    "url": "https://www.amazon.com.mx/dp/B00GF9ZBJA/ref=cm_sw_r_as_gl_api_gl_i_dl_ZT3Q2QY4FKHCGFH2AEJ3?linkCode=ml1&tag=liquidahorros--20&linkId=5bb1ce3936625f2da406d9db2aa767f8&ascsubtag=srctok-6eea394ee70e4f77&btn_type=ss&btn_ref=srctok-6eea394ee70e4f77",
+    "precio_actual": 171.0,
+    "precio_maximo": 171.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "mercadolibre|title:liquidahorrosoficial": {
-    "tienda": "Mercado Libre",
-    "titulo": "liquidahorrosoficial",
-    "url": "https://www.mercadolibre.com.mx/social/liquidahorrosoficial?matt_word=liquidahorros&matt_tool=62446720&forceInApp=true&ref=BB4jJXO3VHe9A9sNsVZVekIxAaXHr8KEc4qIJDo%2BVN8n3U%2BEmHAvYekz1DlUWUjDMnfemgO%2BwK7zwzRRpYQ9sXkXdyYR3l9DT8o%2FcjdJRnNCpKciOnxiiVk1NlTS5emO%2FVdYgvEpT%2B748AJI4d%2BGPe%2Bf1mNVNSWyH9dBcYhEutbGowJj2SqKYnQd6hjEgR5eRmv4wA%3D%3D",
-    "precio_actual": 1281.0,
-    "precio_maximo": 1281.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0h5gbc34m": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i 9HPW6JMJPPVYWCK9FZ23",
+    "url": "https://www.amazon.com.mx/dp/B0H5GBC34M/ref=cm_sw_r_as_gl_api_gl_i_9HPW6JMJPPVYWCK9FZ23?linkCode=ml1&tag=liquidahorros--20&linkId=922acb16aca84db77aa8d0173382b972&ascsubtag=srctok-27ac14755604563f&btn_type=ss&btn_ref=srctok-27ac14755604563f",
+    "precio_actual": 553.0,
+    "precio_maximo": 553.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "mercadolibre|title:liquid": {
-    "tienda": "Mercado Libre",
-    "titulo": "liquid",
-    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BMxum9bOZchwYi1VtyKFEd6uSrYahNe2NczHlgepMQoHiienwWKtw4f0%2BNO2uC7i6Z0HB7HywGJ4ipvKbgSILNwO2kD3EUgoyjGHPRHEoKCHtyxBUy%2F0EkajvMl8PjJPOs5epaafQ1aQgr1r8XgrhpBH%2BtxEQs%2F0gAEkjHr%2FoYi3aM9OKOdAutlC2ZpDvst%2FNpaJHb66waADMRKhWw4eGjfN1kEtpZspVip9USQlXjOZhYvWn9nlR8RC2tDVNt55%2FmG7CQ%3D%3D",
-    "precio_actual": 2430.0,
-    "precio_maximo": 2430.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+  "amazon|code:b0hjgvk1y8": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i dl YF4M42VWGZKT2FD31WXG",
+    "url": "https://www.amazon.com.mx/dp/B0HJGVK1Y8/ref=cm_sw_r_as_gl_api_gl_i_dl_YF4M42VWGZKT2FD31WXG?linkCode=ml1&tag=liquidahorros--20&linkId=eb57118179aee9e48cfea02c6a38acb0&ascsubtag=srctok-0d4135ea1379df8e&btn_type=ss&btn_ref=srctok-0d4135ea1379df8e",
+    "precio_actual": 729.0,
+    "precio_maximo": 729.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "mercadolibre|title:lists": {
     "tienda": "Mercado Libre",
     "titulo": "lists",
     "url": "https://www.mercadolibre.com.mx/social/liquid/lists",
-    "precio_actual": 178.0,
-    "precio_maximo": 178.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b01m6wujt0": {
-    "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i J0606DZVV3MCXX91WHR0",
-    "url": "https://www.amazon.com.mx/dp/B01M6WUJT0/ref=cm_sw_r_as_gl_api_gl_i_J0606DZVV3MCXX91WHR0?linkCode=ml1&tag=liquidahorros--20&linkId=f23ae8642eabb67f14b1cb17dda9588e&ascsubtag=srctok-372b186e6a801275&btn_type=ss&btn_ref=srctok-372b186e6a801275",
-    "precio_actual": 1528.0,
-    "precio_maximo": 1528.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b00gf9zbja": {
-    "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i dl ZT3Q2QY4FKHCGFH2AEJ3",
-    "url": "https://www.amazon.com.mx/dp/B00GF9ZBJA/ref=cm_sw_r_as_gl_api_gl_i_dl_ZT3Q2QY4FKHCGFH2AEJ3?linkCode=ml1&tag=liquidahorros--20&linkId=5bb1ce3936625f2da406d9db2aa767f8&ascsubtag=srctok-478208a8e08c72d9&btn_type=ss&btn_ref=srctok-478208a8e08c72d9",
-    "precio_actual": 171.0,
-    "precio_maximo": 171.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0h5gbc34m": {
-    "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i 9HPW6JMJPPVYWCK9FZ23",
-    "url": "https://www.amazon.com.mx/dp/B0H5GBC34M/ref=cm_sw_r_as_gl_api_gl_i_9HPW6JMJPPVYWCK9FZ23?linkCode=ml1&tag=liquidahorros--20&linkId=922acb16aca84db77aa8d0173382b972&ascsubtag=srctok-6b04b7e0c06dceb7&btn_type=ss&btn_ref=srctok-6b04b7e0c06dceb7",
-    "precio_actual": 553.0,
-    "precio_maximo": 553.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
-    "precio_alertado": null
-  },
-  "amazon|code:b0hjgvk1y8": {
-    "tienda": "Amazon",
-    "titulo": "ref=cm sw r as gl api gl i dl YF4M42VWGZKT2FD31WXG",
-    "url": "https://www.amazon.com.mx/dp/B0HJGVK1Y8/ref=cm_sw_r_as_gl_api_gl_i_dl_YF4M42VWGZKT2FD31WXG?linkCode=ml1&tag=liquidahorros--20&linkId=eb57118179aee9e48cfea02c6a38acb0&ascsubtag=srctok-5a541cb20701213b&btn_type=ss&btn_ref=srctok-5a541cb20701213b",
-    "precio_actual": 729.0,
-    "precio_maximo": 729.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "precio_actual": 298.0,
+    "precio_maximo": 298.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0cnb7mlww": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i dl 3FDBHCEKM92E9HMQWTQV",
-    "url": "https://www.amazon.com.mx/dp/B0CNB7MLWW/ref=cm_sw_r_as_gl_api_gl_i_dl_3FDBHCEKM92E9HMQWTQV?linkCode=ml1&tag=liquidahorros--20&linkId=9c2f9dd20c70e2a3c3d27c79419a0989&ascsubtag=srctok-202aa4d47f89da55&btn_type=ss&btn_ref=srctok-202aa4d47f89da55",
+    "url": "https://www.amazon.com.mx/dp/B0CNB7MLWW/ref=cm_sw_r_as_gl_api_gl_i_dl_3FDBHCEKM92E9HMQWTQV?linkCode=ml1&tag=liquidahorros--20&linkId=9c2f9dd20c70e2a3c3d27c79419a0989&ascsubtag=srctok-2d49dcbe950d11b2&btn_type=ss&btn_ref=srctok-2d49dcbe950d11b2",
     "precio_actual": 269.0,
     "precio_maximo": 269.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0968xhfqy": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i Z1NB3DVSH73BZAHTPPXQ",
-    "url": "https://www.amazon.com.mx/dp/B0968XHFQY/ref=cm_sw_r_as_gl_api_gl_i_Z1NB3DVSH73BZAHTPPXQ?linkCode=ml1&tag=liquidahorros--20&linkId=1343bd7a1c65a9a11965ed7b265f61bc&ascsubtag=srctok-31590859971bf4bc&btn_type=ss&btn_ref=srctok-31590859971bf4bc",
+    "url": "https://www.amazon.com.mx/dp/B0968XHFQY/ref=cm_sw_r_as_gl_api_gl_i_Z1NB3DVSH73BZAHTPPXQ?linkCode=ml1&tag=liquidahorros--20&linkId=1343bd7a1c65a9a11965ed7b265f61bc&ascsubtag=srctok-52e3bd803b0cf0d0&btn_type=ss&btn_ref=srctok-52e3bd803b0cf0d0",
     "precio_actual": 119.0,
     "precio_maximo": 119.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b06wrvfrjv": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i TFVPFR3RVNQC0Q4AMXQZ",
-    "url": "https://www.amazon.com.mx/dp/B06WRVFRJV/ref=cm_sw_r_as_gl_api_gl_i_TFVPFR3RVNQC0Q4AMXQZ?linkCode=ml1&tag=liquidahorros--20&linkId=c1e5726dfd0a3424fe7da7fa76a7d4e3&ascsubtag=srctok-1f04456f6e71803a&btn_type=ss&btn_ref=srctok-1f04456f6e71803a",
+    "url": "https://www.amazon.com.mx/dp/B06WRVFRJV/ref=cm_sw_r_as_gl_api_gl_i_TFVPFR3RVNQC0Q4AMXQZ?linkCode=ml1&tag=liquidahorros--20&linkId=c1e5726dfd0a3424fe7da7fa76a7d4e3&ascsubtag=srctok-20ac045aa0eea91c&btn_type=ss&btn_ref=srctok-20ac045aa0eea91c",
     "precio_actual": 199.0,
     "precio_maximo": 199.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0f7m3lvn8": {
     "tienda": "Amazon",
     "titulo": "ref=cm sw r as gl api gl i 6QWRZW2JFDJJNTNKFCJZ",
-    "url": "https://www.amazon.com.mx/dp/B0F7M3LVN8/ref=cm_sw_r_as_gl_api_gl_i_6QWRZW2JFDJJNTNKFCJZ?linkCode=ml1&tag=liquidahorros--20&linkId=84f984229ac941451a82343934604795&ascsubtag=srctok-2fea2b62b658ac92&btn_type=ss&btn_ref=srctok-2fea2b62b658ac92",
+    "url": "https://www.amazon.com.mx/dp/B0F7M3LVN8/ref=cm_sw_r_as_gl_api_gl_i_6QWRZW2JFDJJNTNKFCJZ?linkCode=ml1&tag=liquidahorros--20&linkId=84f984229ac941451a82343934604795&ascsubtag=srctok-0e9b573d5f577c63&btn_type=ss&btn_ref=srctok-0e9b573d5f577c63",
     "precio_actual": 1369.0,
     "precio_maximo": 1369.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b07y3b7k92": {
+  "mercadolibre|title:liquid": {
+    "tienda": "Mercado Libre",
+    "titulo": "liquid",
+    "url": "https://www.mercadolibre.com.mx/social/liquid?matt_word=liquidahorros&matt_tool=68721872&forceInApp=true&ref=BPYc9%2FyBhQ1MtzPsuYuDlhBiJaeuL8cbWkJuVHHNqWaUnm1eHSSZGjmKslXtFaa6nDZvvSHBgsGRv5fWScEhC%2BZJVVtMqd5SAaf%2FM5xExnC1yVVZb%2FJEcelXM7QWNpPzSJOnWf2lVQGpV736ptwidtHh%2FqBcx68kUKNYIQg5To%2BaqOTX2ZNU9gGB5sN%2BxpGRoYNHLc8%3D",
+    "precio_actual": 1799.0,
+    "precio_maximo": 1799.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|code:b0f2543hlq": {
+    "tienda": "Mercado Libre",
+    "titulo": "ref=cm sw r as gl api gl i dl PRCNBT2JRZPG1GG1JZ2X",
+    "url": "https://www.amazon.com.mx/dp/B0F2543HLQ/ref=cm_sw_r_as_gl_api_gl_i_dl_PRCNBT2JRZPG1GG1JZ2X?linkCode=ml1&tag=liquidahorros--20&linkId=0264c3cdedd9d92dafe652e4746f3e4a&ascsubtag=srctok-42b22e84d17adf70&btn_type=ss&btn_ref=srctok-42b22e84d17adf70",
+    "precio_actual": 9799.0,
+    "precio_maximo": 9799.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hpv758px": {
     "tienda": "Amazon",
-    "titulo": "B07Y3B7K92",
-    "url": "https://www.amazon.com.mx/dp/B07Y3B7K92?th=1&linkCode=sl2&tag=axfire-20&linkId=642fd5f0cbeb6666f28e49e2fffc778d&ref_=as_li_ss_tl&ascsubtag=srctok-5ceca4a5094d9c6b&btn_type=ss&btn_ref=srctok-5ceca4a5094d9c6b",
-    "precio_actual": 40.0,
-    "precio_maximo": 40.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "ref=cm sw r as gl api gl i 4PPEHSWCFRQWGQ3CWRVY",
+    "url": "https://www.amazon.com.mx/dp/B0HPV758PX/ref=cm_sw_r_as_gl_api_gl_i_4PPEHSWCFRQWGQ3CWRVY?linkCode=ml1&tag=liquidahorros--20&linkId=52bea3638eeb15d01a01cffd8c5a5966&ascsubtag=srctok-70e77a2eafd76e65&btn_type=ss&btn_ref=srctok-70e77a2eafd76e65",
+    "precio_actual": 1399.0,
+    "precio_maximo": 1399.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0hptvmh7p": {
+    "tienda": "Amazon",
+    "titulo": "ref=cm sw r as gl api gl i 3R8R76EQB6YPXN8CFQA4",
+    "url": "https://www.amazon.com.mx/dp/B0HPTVMH7P/ref=cm_sw_r_as_gl_api_gl_i_3R8R76EQB6YPXN8CFQA4?linkCode=ml1&tag=liquidahorros--20&linkId=ab7b54e743e3209b3c3bc91f415453a6&ascsubtag=srctok-4ccafe3f09a84b28&btn_type=ss&btn_ref=srctok-4ccafe3f09a84b28",
+    "precio_actual": 1399.0,
+    "precio_maximo": 1399.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "mercadolibre|code:b0dntx93tx": {
+    "tienda": "Mercado Libre",
+    "titulo": "ref=cm sw r as gl api gl i dl TRR0K1Q8QDAFED29QCWE",
+    "url": "https://www.amazon.com.mx/dp/B0DNTX93TX/ref=cm_sw_r_as_gl_api_gl_i_dl_TRR0K1Q8QDAFED29QCWE?linkCode=ml1&tag=liquidahorros--20&linkId=52c80bc144257147d65621780dc12113&ascsubtag=srctok-0a7745e7df88b8d8&btn_type=ss&btn_ref=srctok-0a7745e7df88b8d8",
+    "precio_actual": 13498.0,
+    "precio_maximo": 13498.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "mercadolibre|title:liquidapromos": {
     "tienda": "Mercado Libre",
     "titulo": "liquidapromos",
-    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BDJpBb7%2FmpUdMqW%2FkybmNtmiy4S6nqCFkox2pbmJmITT%2F75Mt0aehnjIy%2BMwNUnBvCYQ03ojYLPaImYv%2F4IF7pytwxPwQ6HxcbtoUCFfmMAQdtf1YFqTR0SVvfrzOi1FryChB3gKgyBJuQ1Fw3XETNV%2B4sbi0IlX4auZVXB%2BLVEST3Gdt69wUaFcnUU%2BUy472UORvUTGT21mkMb04T9JKnMmppf6oORc5fo%2BH9Xh%2Fiw5m7M0DYCmm6FgEbYOPv93T%2F22cQ%3D%3D",
-    "precio_actual": 699.0,
-    "precio_maximo": 699.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "url": "https://www.mercadolibre.com.mx/social/liquidapromos?matt_word=liquidapromosmex&matt_tool=34796773&forceInApp=true&ref=BN6W%2BUaoXrS%2Byy6fjZusgxrInpDVbmuySWA1tAUIxnPgJTxfb5IwYOgTqlKhSBTHjd3jVraGVc8UjMR96gYXKiLXbP%2BMJdb6sI9nNGiS7Tu3S0OeBavEbmjbF%2B5MGjRMM%2Bd0RCCzNWNWmTvghBRCGUUexDneZcbJh3m62yT4LF5CrZa5A5Ma1oRKd2Wqc8yUw9H%2FDbVKEwLjJT8S2G2VP9KINNOuL9KdcWjvonVLJJCTP%2BzjScglE0drIF90KsEQrRHL",
+    "precio_actual": 338.0,
+    "precio_maximo": 338.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "amazon|code:b0dghm2qzw": {
     "tienda": "Amazon",
     "titulo": "B0DGHM2QZW",
-    "url": "https://www.amazon.com.mx/dp/B0DGHM2QZW?th=1&ascsubtag=srctok-10e110a6d9ff5c0c&btn_type=ss&btn_ref=srctok-3fa174abbcdf89ff&linkCode=sl2&tag=axfire-20&linkId=8d8a1283699aec82c4b2cf8b09bf8833&ref_=as_li_ss_tl",
+    "url": "https://www.amazon.com.mx/dp/B0DGHM2QZW?th=1&ascsubtag=srctok-10e110a6d9ff5c0c&btn_type=ss&btn_ref=srctok-5eb85f0d28bcdcf4&linkCode=sl2&tag=axfire-20&linkId=8d8a1283699aec82c4b2cf8b09bf8833&ref_=as_li_ss_tl",
     "precio_actual": 424.0,
     "precio_maximo": 424.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
-  "amazon|code:b08psqjs5n": {
+  "amazon|code:b0cxkv7wmj": {
     "tienda": "Amazon",
-    "titulo": "B08PSQJS5N",
-    "url": "https://www.amazon.com.mx/dp/B08PSQJS5N?th=1&ascsubtag=srctok-3637db88739b79bb&btn_type=ss&btn_ref=srctok-20e052e3e5165f57&psc=1&linkCode=sl2&tag=axfire-20&linkId=c0b6b3ea43898b7612e7251d42280934&ref_=as_li_ss_tl",
-    "precio_actual": 649.0,
-    "precio_maximo": 649.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "titulo": "B0CXKV7WMJ",
+    "url": "https://www.amazon.com.mx/dp/B0CXKV7WMJ?th=1&ascsubtag=srctok-10df28b234ce6bfd&btn_type=ss&btn_ref=srctok-527250ee0e433d59&linkCode=sl2&tag=axfire-20&linkId=26285f4f65937a5b45c5e9c473aed860&ref_=as_li_ss_tl",
+    "precio_actual": 1547.0,
+    "precio_maximo": 1547.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b09x1zk293": {
+    "tienda": "Amazon",
+    "titulo": "B09X1ZK293",
+    "url": "https://www.amazon.com.mx/dp/B09X1ZK293?ascsubtag=srctok-7edde9e919f616c3&btn_type=ss&btn_ref=srctok-3f7a5895a28bba01&linkCode=sl2&tag=axfire-20&linkId=95466ee8a42b1a48a774ef61d57d2db3&ref_=as_li_ss_tl",
+    "precio_actual": 77.0,
+    "precio_maximo": 77.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b08b1yr7l4": {
+    "tienda": "Amazon",
+    "titulo": "B08B1YR7L4",
+    "url": "https://www.amazon.com.mx/dp/B08B1YR7L4?ascsubtag=srctok-30ee7bc6113fe8bf&btn_type=ss&btn_ref=srctok-007d491b8c8ec5b7&linkCode=sl2&tag=axfire-20&linkId=caaaab7df49762a2fdffa4e6dcb7e648&ref_=as_li_ss_tl",
+    "precio_actual": 91.0,
+    "precio_maximo": 91.0,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "telegram|title:tvs sbd 4000": {
@@ -1711,7 +1792,16 @@
     "url": "https://tv.apple.com/mx/channel/tvs.sbd.4000?itscg=30200&itsct=webediamexico_tv&at=1001l3cmU",
     "precio_actual": 199.0,
     "precio_maximo": 199.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
+    "precio_alertado": null
+  },
+  "amazon|code:b0033vhdk8": {
+    "tienda": "Amazon MX",
+    "titulo": "24 crayones sin afilar con metálicos y neón que brillan en papel blanco y oscuro",
+    "url": "https://www.amazon.com.mx/dp/B0033VHDK8?tag=ofertasperr05-20&linkCode=ogi&th=1&psc=1",
+    "precio_actual": 160.55,
+    "precio_maximo": 160.55,
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart toallas de cocina marca mainstays 2pzas blanco y vino con el 95 de": {
@@ -1720,7 +1810,7 @@
     "url": "https://liquidazona.com/ofertas/3-00-walmart-toallas-de-cocina-marca-mainstays-2pzas-blanco-y-vino-con-el-95-de-descuento/",
     "precio_actual": 3.0,
     "precio_maximo": 99.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart luz de noche infantil marca disney star wars y transformer con el 95 de": {
@@ -1729,7 +1819,7 @@
     "url": "https://liquidazona.com/ofertas/3-00-walmart-luz-de-noche-infantil-marca-disney-star-wars-y-transformer-con-el-95-de-descuento/",
     "precio_actual": 3.0,
     "precio_maximo": 99.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart dispensador de pasta dental y porta cepillo marca art home con el 95 de": {
@@ -1738,7 +1828,7 @@
     "url": "https://liquidazona.com/ofertas/5-00-walmart-dispensador-de-pasta-dental-y-porta-cepillo-marca-art-home-con-el-95-de-descuento/",
     "precio_actual": 5.0,
     "precio_maximo": 99.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart cuchillo dentado marca tramontina churrasco con el 90 de": {
@@ -1747,9 +1837,9 @@
     "url": "https://liquidazona.com/ofertas/19-00-walmart-cuchillo-dentado-marca-tramontina-churrasco-con-el-90-de-descuento/",
     "precio_actual": 19.0,
     "precio_maximo": 190.0,
-    "ultima_actualizacion": "2026-11-26T04:38:03.997985+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:48.164401+00:00",
     "precio_alertado": 19.0,
-    "ultima_alerta": "2026-11-26T04:38:03.997985+00:00"
+    "ultima_alerta": "2026-11-26T14:28:48.164401+00:00"
   },
   "walmart|title:walmart organizador de ropa con 6 cajones marca mainstays color negro con el 90 de": {
     "tienda": "Walmart MX",
@@ -1757,9 +1847,9 @@
     "url": "https://liquidazona.com/ofertas/52-00-walmart-producto-descripcion-con-el-de-descuento/",
     "precio_actual": 52.0,
     "precio_maximo": 520.0,
-    "ultima_actualizacion": "2026-11-26T04:37:56.053831+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:44.509580+00:00",
     "precio_alertado": 52.0,
-    "ultima_alerta": "2026-11-26T04:37:56.053831+00:00"
+    "ultima_alerta": "2026-11-26T14:28:44.509580+00:00"
   },
   "walmart|title:walmart esmalte de unas marca renova clasico matte itzel 13ml rojo claro con el 75 de": {
     "tienda": "Walmart MX",
@@ -1767,7 +1857,7 @@
     "url": "https://liquidazona.com/ofertas/20-00-walmart-esmalte-de-unas-renova-clasico-matte-itzel-13-ml-rojo-claro-con-el-de-descuento/",
     "precio_actual": 20.0,
     "precio_maximo": 85.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart perfiladores para cejas marca cosmetic lab total beauty 2pzas con el 70 de": {
@@ -1776,7 +1866,7 @@
     "url": "https://liquidazona.com/ofertas/10-00-walmart-perfiladores-para-cejas-marca-cosmetic-lab-total-beauty-2pzas-con-el-70-de-descuento/",
     "precio_actual": 10.0,
     "precio_maximo": 29.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart cepillo para ducha marca hello beauty mango largo con el 50 de": {
@@ -1785,7 +1875,7 @@
     "url": "https://liquidazona.com/ofertas/30-00-walmart-cepillo-para-ducha-marca-hello-beauty-mango-largo-con-el-50-de-descuento/",
     "precio_actual": 30.0,
     "precio_maximo": 59.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   },
   "walmart|title:walmart variedad de ventiladores de torre marca vertex y navia hasta con el 70 de": {
@@ -1794,7 +1884,7 @@
     "url": "https://liquidazona.com/ofertas/265-00-walmart-variedad-de-ventiladores-de-torre-marca-vertex-y-navia-hasta-con-el-70-de-descuento/",
     "precio_actual": 265.0,
     "precio_maximo": 265.0,
-    "ultima_actualizacion": "2026-11-26T04:37:52.878844+00:00",
+    "ultima_actualizacion": "2026-11-26T14:28:42.470877+00:00",
     "precio_alertado": null
   }
 }
